@@ -4,8 +4,10 @@ This archive holds every transcript, verdict and locked rubric behind the test r
 (prompt library, data report and methodology page). Everything in it is fictional test material: the sample inputs
 were written for the bench and contain no real clients, patients or cases.
 
-Licence: everything in this repository (prompts, inputs, rubrics, transcripts, verdicts, results and the Claude Skills texts) is published under Creative Commons
-Attribution 4.0 International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). Credit: AI Professions (aiprofessions.ai).
+Licence: everything in this archive (prompts, inputs, rubrics, transcripts, verdicts, results and the Claude Skills
+texts) is published under Creative Commons Attribution 4.0 International (CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/). Credit: AI Professions (aiprofessions.ai). Also on GitHub:
+https://github.com/aiprofessions/prompt-benchmark
 
 ## What is inside
 

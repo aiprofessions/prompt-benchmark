@@ -1,0 +1,29 @@
+{
+  "title": "AI Professions prompt benchmark: profession prompts, hash-locked rubrics and graded LLM runs",
+  "upload_type": "dataset",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "AI Professions"
+    }
+  ],
+  "description": "100 prompts for real tasks in ten professions plus Excel / Microsoft 365 in English, Spanish, French and Brazilian Portuguese, run on 5 models x 3 runs and graded criterion by criterion by a cross-family LLM judge (1,500 runs, 7,500 verdicts). Rubrics were hash-locked before the first run. Includes every transcript, per-criterion verdicts, judge-swap calibration and spot-checks. Method: https://aiprofessions.ai/methodology/",
+  "keywords": [
+    "LLM evaluation",
+    "benchmark",
+    "prompts",
+    "LLM-as-a-judge",
+    "professions",
+    "Claude",
+    "GPT",
+    "Gemini"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://aiprofessions.ai/methodology/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}
