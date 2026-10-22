@@ -1,0 +1,542 @@
+{
+ "prompt_id": "sm-en-pipeline-review-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Weighted forecast for in-quarter deals = $172,500 (60,000 + 60,000 + 12,000 + 40,500), excluding Example Foods (closes Feb 2027)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Gap to remaining quota = $77,500."
+  },
+  {
+   "id": "C3",
+   "criterion": "Flags Example Clinics (stale since Sep 20 and champion left) as at risk."
+  },
+  {
+   "id": "C4",
+   "criterion": "Flags Sample Retail Group's close date (Oct 10) as already past while unsigned."
+  },
+  {
+   "id": "C5",
+   "criterion": "Gives a coaching question per flagged deal and invents no data."
+  }
+ ],
+ "rubric_sha256": "ee20aefc916108ca723f9023394faebdb1eceb6302e90fc061224655aa67d19f",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and explicitly excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Computes the gap as $250,000 minus $172,500 equals $77,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics as high risk, citing 29 days without activity since September 20 and the champion's departure."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group because its October 10 close date passed nine days ago and it remains unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions for every flagged deal, but asserts Northwind is 'on track,' which the supplied data does not establish."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly calculates all four in-quarter weighted amounts totaling $172,500 and excludes Example Foods."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly subtracts $172,500 from $250,000 to show a $77,500 gap."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics as high risk, citing the departed champion and 29 days without activity since September 20."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as unsigned with its October 10 close date nine days past."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions, but invents assumptions underlying the 75% probability and a required stage progression for Testa Logistics."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calculates the quota shortfall as $250,000 minus $172,500, equaling $77,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics as high risk, citing September 20 last activity and the champion leaving the company."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as high risk because its October 10 close date passed and it remains unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions but assumes no internal sponsor and mandatory stage progression; neither is established by the supplied data."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four required weighted amounts totaling $172,500 and excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calculates $250,000 minus $172,500 as a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for its departed champion and stale activity since September 20."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as unsigned with an October 10 close date already nine days past."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides coaching questions for all three flagged deals; risk assessments use supplied dates, stages, and facts without inventing deal data."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes all four in-quarter weighted values totaling $172,500 and excludes Example Foods."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Shows $250,000 minus $172,500 equals a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for activity stale since September 20 and the champion leaving."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as unsigned with its October 10 close date already nine days past."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions, but invents unconfirmed accelerators and an unsupported generalization that early-stage deals rarely close within two months."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and explicitly excludes Example Foods."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calculates $250,000 minus $172,500 as a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for activity stale since September 20 and its champion leaving the company."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group's October 10 close date as nine days overdue while still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides coaching questions for all three flagged deals; factual amounts, dates, stages, and elapsed days derive from supplied data."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total $172,500 from 60,000+60,000+12,000+40,500, with Example Foods excluded for its Feb 2027 close."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States shortfall $250,000 − $172,500 = $77,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for the departed champion and 29 days of inactivity since Sep 20."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags the Oct 10 close date as 9 days past while still unsigned despite Commit stage."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Each deal has a coaching question; derived day counts are correct and no outside data is introduced."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total $172,500 shown with arithmetic; Example Foods explicitly excluded as Feb 2027 close."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Shortfall = $250,000 − $172,500 = $77,500 stated."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Example Clinics flagged: champion left, last activity 29 days ago (Sep 20)."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Sample Retail Group flagged: close date 9 days overdue (Oct 10), still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Every deal has a coaching question; computed day counts and figures derive correctly from the given data, nothing invented."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total $172,500 from 60,000+60,000+12,000+40,500; Example Foods excluded for its Feb 2027 close."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Shortfall stated as $250,000 − $172,500 = $77,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Example Clinics flagged for 29 days of inactivity since Sep 20 and departed champion."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Sample Retail Group flagged as 9 days past its Oct 10 close date and still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Every deal gets a coaching question; day counts check out and no data is invented."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Subtracts $172,500 from the $250,000 remaining quota and reports a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for its departed champion and September 20 last activity, correctly calculated as 29 days stale."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as unsigned with an October 10 close date already nine days past."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions for every flagged deal, but asserts no contact and no current champion, neither explicitly established by the supplied data."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly calculates all four in-quarter weighted values totaling $172,500 and excludes Example Foods."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly states a $77,500 shortfall against the $250,000 remaining quota."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for 29 days of stale activity since September 20 and its champion leaving."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly flags Sample Retail Group as unsigned with an October 10 close date nine days in the past."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions, but asserts no contact for Retail and incorrectly calls Clinics the single biggest exposure despite Northwind’s equal weighted value."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly calculates $250,000 minus $172,500 as a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for its departed champion and activity stale since September 20, correctly calculated as 29 days."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group as unsigned with an October 10 close date already nine days past."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides questions for all flagged deals but asserts Example Clinics lacks a sponsor; the data establishes only that its champion left."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter calculations totaling $172,500 and explicitly excludes Example Foods because it closes in February 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly calculates $250,000 minus $172,500 as a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for stale activity since September 20 and the departure of its champion."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Sample Retail Group's October 10 close date as nine days overdue while the deal remains unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions for all flagged deals but invents an October 17 conversation for Example Foods; the data specifies only activity."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly calculates all four in-quarter weighted amounts, totals $172,500, and excludes Example Foods."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Shows $250,000 minus $172,500 equals a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for stale activity since September 20 and its champion leaving the company."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly flags Sample Retail Group's October 10 close date as nine days past while still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions but invents an October 12 conversation and characterizes October 16 activity as proposal-related; neither detail is given."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows all four in-quarter weighted amounts totaling $172,500 and excludes Example Foods from that total."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly calculates $250,000 minus $172,500 as a $77,500 shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Example Clinics for stale activity since September 20 and the champion leaving the company."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly flags October 10 as a past close date and states Sample Retail Group remains unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Provides coaching questions, but invents an October 17 conversation for Example Foods; the data specifies only last activity."
+    }
+   ],
+   "transcript": "prompts/sm-en-pipeline-review-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

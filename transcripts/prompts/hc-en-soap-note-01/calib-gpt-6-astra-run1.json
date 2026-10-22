@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-en-soap-note-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Uses explicitly labeled Subjective, Objective, Assessment, and Plan sections."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Records all vitals exactly as transcribed, including SpO2 99% on room air, equivalent to RA."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Adds no unstated exam findings, history, or test results; clearly identifies strep as unconfirmed and testing as planned."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Places penicillin rash allergy first; includes rapid strep testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marks the note as a draft requiring clinician review and signature and ends with a Missing / to confirm list."
+  }
+ ]
+}

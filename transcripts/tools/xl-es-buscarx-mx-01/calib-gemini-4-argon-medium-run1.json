@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-es-buscarx-mx-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Uses BUSCARX(B2, Facturas!B2:B7, Facturas!C2:C7, \"No encontrado\") in Spanish; the alternative also uses Spanish SI.ERROR/BUSCARV."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "SUMAR.SI.CONJUNTO over Facturas!D2:D7 with RFC=B2 and Estado=\"Pendiente\" criteria."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "States 1760.00, IVA 281.60, total 2041.60; excludes row 7 as Pagada."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "All formulas use comma separators; amounts use decimal point."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No retentions, other rates, CFDI or RFC validity claims; all amounts derived correctly from the table."
+  }
+ ]
+}

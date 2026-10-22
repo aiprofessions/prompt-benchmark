@@ -1,0 +1,134 @@
+id: cm-es-reporte-diario-mx-01
+prompt_id: cm-es-reporte-diario-mx-01
+lang: es
+profession: construction-managers
+task: construction-managers.site-reports
+date: '2026-10-21'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Presenta el personal en una tabla por empresa y categoría fiel al desglose de las notas, con subtotales de 12,
+    12 y 5 para Constructora Ejemplo, Estructuras Muestra y Eléctrica Ejemplo, respectivamente, y total de 29 personas (tolerancia
+    numérica 0); identifica y corrige el subtotal anotado de 14 y el total anotado de 31.
+- id: C2
+  criterion: Registra la entrega incompleta de concreto con 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes (tolerancia
+    numérica 0; se admiten unidades equivalentes), y la recepción completa de la varilla según la remisión, sin inventar la
+    causa de la entrega incompleta.
+- id: C3
+  criterion: 'Registra como incidente de seguridad o casi-accidente de trabajo en altura el evento de las 11:40 h en el borde
+    de la losa de entrepiso, eje 5, a 4 m: trabajador de Estructuras Muestra sin arnés colocando tapa de borde, detención
+    de la actividad por el supervisor de seguridad, entrega de arnés, revisión de la línea de vida, reanudación a las 12:10
+    y ausencia de lesión; se admiten paráfrasis y formatos horarios equivalentes.'
+- id: C4
+  criterion: Incluye datos generales, clima y las actividades anotadas, conserva los 3 pendientes con sus detalles disponibles,
+    señala al menos un dato ausente o pendiente de verificación y no supera 550 palabras (límite solicitado de 500 con tolerancia
+    de +10 %); se admiten secciones combinadas y fechas deducidas inequívocamente de las notas.
+- id: C5
+  criterion: 'SEGURIDAD: omite la suposición sobre el cabo R. Muestra o la identifica como no verificada, no añade hechos
+    ni culpas sin respaldo en las notas, limita cualquier afirmación normativa a la definición autorizada de trabajo en altura
+    e incluye una línea para revisión y firma del residente antes de archivar.'
+rubric_sha256: ca20593bd1581fcab7bf753b7cb5092b9b067bfe8d7a4364f93e11480d4c858a
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. A separate AI editor agent re-checked a random sample of verdicts; a judge swap was run on a sample (see calibration).
+    Not a professional or human review of every output. All five models ran in the same round (2026-10-21); gemini-4-argon-medium
+    via the Antigravity CLI (agy) with a tool-less custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 12
+    agreed: 8
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.767
+      swap_judge: claude-opus-5-5
+      swap_share: 0.933
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.933
+      swap_judge: gpt-6-astra
+      swap_share: 0.933
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.733
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.67
+  run_scores:
+  - 3
+  - 2
+  - 3
+  runs_all_criteria: 0
+  verdict: fail
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts-es2/cm-es-reporte-diario-mx-01/

@@ -1,0 +1,542 @@
+{
+ "prompt_id": "xl-en-sumifs-dates-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Both formulas use SUMIFS over the Amount column with date criteria on column A bounding September 2026 (e.g. \">=\"&DATE(2026,9,1) and \"<\"&DATE(2026,10,1), or \"<=\"&DATE(2026,9,30), or EOMONTH); the Travel version adds the criterion Category = \"Travel\". Formulas that would include the 2026-08-29 or October rows fail."
+  },
+  {
+   "id": "C2",
+   "criterion": "Identifies rows 5 (Sept 11 2026) and 8 (09/26/2026 with trailing space) as dates stored as text that SUMIFS will not count, and names no other row as a problem."
+  },
+  {
+   "id": "C3",
+   "criterion": "States that the all-September formula returns 1,824.04 on the data as is (129.00 + 86.40 + 1,240.00 + 318.65 + 49.99) and that the correct September total after fixing rows 5 and 8 is 1,976.04 (1,824.04 + 57.80 + 94.20)."
+  },
+  {
+   "id": "C4",
+   "criterion": "States that the Travel formula returns 1,326.40 as is (86.40 + 1,240.00) and 1,420.60 after the fix (1,326.40 + 94.20)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: gives a workable conversion method (e.g. DATEVALUE/TRIM in a helper column, Text to Columns, Power Query, or re-entering the two cells) and does not tell the user to delete the problem rows or change any amount; no amount appears that is not in the log or correctly derived from it."
+  }
+ ],
+ "rubric_sha256": "2a03fd0345ac77a775ef91f182687894360a6b440d335f0bf50164eb43cc38be",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September date bounds on column A; the Travel formula also filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as text dates excluded by numeric date comparisons, including A8's trailing space."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States all-September totals of 1,824.04 as is and 1,976.04 after fixing the text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel totals of 1,326.40 as is and 1,420.60 after fixing the text dates."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a helper-column conversion with DATEVALUE, TRIM, SUBSTITUTE, and paste values, noting locale dependence; preserves rows and amounts."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C with September-only date bounds on column A; the Travel formula also filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only A5 and A8 as text dates skipped by SUMIFS, explaining alignment, trailing space, and ineffective Date formatting."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States all-September totals of 1,824.04 as is and 1,976.04 after adding the two excluded amounts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel totals of 1,326.40 as is and 1,420.60 after adding row 8's 94.20."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides helper-column conversion with TRIM, SUBSTITUTE, DATEVALUE, and values-only paste; addresses locale issues, preserves rows and amounts, and invents no amounts."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September date bounds on column A; the Travel formula additionally filters column B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as text dates skipped by SUMIFS, noting row 8's trailing space."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States all-September totals of 1,824.04 as is and 1,976.04 after fixing both text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel totals of 1,326.40 as is and 1,420.60 after fixing the dates."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a helper-column conversion with TRIM and DATEVALUE, verification, paste-values instructions, and locale fallback; preserves all rows and amounts."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C within September 2026; the Travel formula also filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only A5 and A8 as text dates excluded by SUMIFS, including A8’s trailing space."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the as-is September total of 1,824.04 and corrected total of 1,976.04 with matching arithmetic."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States the as-is Travel total of 1,326.40 and corrected total of 1,420.60."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides Text to Columns conversion with a TRIM fallback, preserves rows and amounts, and introduces no unsupported amounts."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September 2026 date boundaries; the Travel formula additionally filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only A5 and A8 as text dates excluded by the date criteria, explaining their alignment and A8’s trailing space."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly states the as-is September total of 1,824.04 and corrected total of 1,976.04, with matching calculations."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly states the as-is Travel total of 1,326.40 and corrected total of 1,420.60, with matching calculations."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides Text to Columns as a conversion method without deleting rows or changing amounts; all amounts are original or correctly derived."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September 2026 date bounds; the Travel formula also filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only A5 and A8 as text dates excluded by numeric date comparisons, explicitly noting A8's trailing space."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the current September total as 1,824.04 and the corrected total as 1,976.04, with correct arithmetic."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel totals of 1,326.40 before conversion and 1,420.60 afterward, correctly adding 94.20."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a workable DATEVALUE/TRIM helper-column alternative with paste-values conversion; neither deletes rows nor changes amounts, and all amounts are supplied or correctly derived."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS sum C2:C11 with >=DATE(2026,9,1) and <DATE(2026,10,1); Travel version adds B2:B11 = \"Travel\"."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies rows 5 and 8 as text dates excluded; rows 2, 10, 11 are noted only as correctly excluded, not as problems."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Table gives September total $1,824.04 as stored and $1,976.04 after fixing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table gives Travel total $1,326.40 as stored and $1,420.60 after fixing."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses DATEVALUE/TRIM in a helper cell, then pastes values back; no row deletion or amount changes; all amounts correct."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS sum column C with >=DATE(2026,9,1) and <DATE(2026,10,1); Travel version adds B2:B11 = \"Travel\"."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies A5 and A8 as text dates (noting A8's trailing space); other rows are excluded only as outside September."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States $1,824.04 as stored and $1,976.04 after fixing, both correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel $1,326.40 as stored and $1,420.60 after fixing, both correct."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Helper column using DATEVALUE/TRIM/SUBSTITUTE, then paste values; no deletions, no amount changes, no invented figures."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS bound dates with >=DATE(2026,9,1) and <DATE(2026,10,1); Travel version adds B2:B11 \"Travel\" criterion."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies A5 and A8 as text dates; rows 2, 10, 11 are noted only as out-of-month, not as problems."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Table gives All September 1,824.04 as now and 1,976.04 after fixing, both correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table gives September Travel 1,326.40 as now and 1,420.60 after fixing, both correct."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Helper-column DATEVALUE/TRIM/SUBSTITUTE then paste values; no rows deleted, no amounts changed, all figures correctly derived."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS sum column C with September 2026 bounds on column A; the Travel formula also filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as problematic text dates; correctly distinguishes August and October rows as intentionally excluded."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the all-September total as 1,824.04 currently and 1,976.04 after fixing both text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Travel totals of 1,326.40 currently and 1,420.60 after conversion."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a workable helper-column conversion using DATEVALUE, TRIM, and SUBSTITUTE; preserves amounts and recommends no row deletions. All amounts are valid."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September 2026 date bounds; the Travel formula additionally filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as text-date problems; correctly distinguishes August and October rows as intentionally excluded."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the current September total as 1,824.04 and the corrected total as 1,976.04."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States the current Travel total as 1,326.40 and the corrected total as 1,420.60."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides Text to Columns with MDY date conversion, without deleting rows or changing amounts; every stated amount is original or correctly derived."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September 2026 bounds on column A; the Travel formula additionally filters column B for Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as text dates excluded by SUMIFS date comparisons."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the all-September total is 1,824.04 as is and 1,976.04 after converting both text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States the Travel total is 1,326.40 as is and 1,420.60 after the fix."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides Text to Columns conversion with date-format guidance and a Sept-to-Sep fallback; neither deletes rows nor changes amounts. All amounts are valid."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C using September 2026 bounds on column A; the Travel formula adds the correct category criterion."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies rows 5 and 8 as text dates excluded by SUMIFS; other excluded rows are correctly described as outside September, not problematic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the all-September total as 1,824.04 currently and 1,976.04 after fixing both text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States September Travel totals of 1,326.40 currently and 1,420.60 after conversion."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a workable Find and Replace plus Text to Columns conversion method, without deleting rows, altering amounts, or introducing unsupported amounts."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum column C with September date bounds on column A; the Travel formula adds the correct category criterion."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies only rows 5 and 8 as text-date problems; other exclusions are correctly attributed to dates outside September or non-Travel categories."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the all-September total as $1,824.04 before correction and $1,976.04 after fixing rows 5 and 8."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States the September Travel total as $1,326.40 before correction and $1,420.60 after correction."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Offers Text to Columns after normalizing Sept to Sep, without deleting rows or changing amounts; all stated amounts are original or correctly derived."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both SUMIFS formulas sum amounts within September 2026; the Travel formula additionally filters Category to Travel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies rows 5 and 8 as text dates excluded by date comparisons; other excluded rows are correctly described as outside September."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the all-September total is 1,824.04 as-is and 1,976.04 after fixing both text dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States the September Travel total is 1,326.40 as-is and 1,420.60 after conversion."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a workable Text to Columns conversion using MDY after replacing Sept; neither deletes rows nor changes amounts, and all amounts are valid."
+    }
+   ],
+   "transcript": "prompts/xl-en-sumifs-dates-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

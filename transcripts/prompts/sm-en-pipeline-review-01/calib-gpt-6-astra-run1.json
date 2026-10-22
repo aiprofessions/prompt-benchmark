@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-en-pipeline-review-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Correctly totals in-quarter weighted values to $172,500 and excludes Example Foods closing in February 2027."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates the remaining-quota shortfall as $250,000 minus $172,500, equaling $77,500."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags Example Clinics for its departed champion and 29 days of inactivity, corresponding to September 20."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Sample Retail Group as unsigned with its October 10 close date nine days overdue."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a coaching question for every flagged deal; calculations and risk assessments use supplied data without inventing facts."
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+id: hc-es-hoja-paciente-01
+lang: es
+translation_key: hc-patient-handout
+title: Hoja informativa en lenguaje claro para un medicamento nuevo (España)
+scenario: Convierte las indicaciones del médico en una hoja de una página en lenguaje claro, sin añadir dosis ni objetivos
+  que el médico no dio.
+profession: healthcare
+task: healthcare.patient-education
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- ES
+prompt: 'Escribe una hoja informativa para el paciente (máx. 300 palabras) con los datos del médico de abajo, para un centro
+  de salud en España.
+
+  - Lenguaje claro: frases cortas, palabras de uso común; explica cualquier término médico la primera vez.
+
+  - Dosis y horario exactamente como se indican; no añadas otras dosis, objetivos ni valores de analítica que no estén en
+  los datos.
+
+  - Incluye un apartado "Cuándo llamar o acudir a tu centro de salud".
+
+  - Termina indicando que consulte cualquier duda con su médico o enfermera; esta hoja no sustituye su consejo.
+
+  Datos:
+
+  [Pega los datos del médico: diagnóstico, medicamento con dosis y horario exactos, analíticas comunicadas y seguimiento]
+
+  '
+sample_input: '[Paciente ficticio] Diagnóstico nuevo: hipertensión arterial.
+
+  Inicia: enalapril 10 mg, un comprimido al día por la mañana.
+
+  Efectos comentados: tos seca persistente (avisar si aparece), mareo al levantarse los primeros días.
+
+  Control de tensión en enfermería en 2 semanas; analítica de sangre (función renal y potasio) en 2–4 semanas.
+
+  Consejos dados: reducir sal, caminar 30 minutos al día.
+
+  '
+page: https://aiprofessions.ai/es/salud/prompts/#hc-es-hoja-paciente-01
+results_file: results/hc-es-hoja-paciente-01.yaml

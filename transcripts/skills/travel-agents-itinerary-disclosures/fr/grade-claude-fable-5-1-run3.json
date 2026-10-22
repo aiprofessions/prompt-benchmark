@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:55:59+00:00",
+ "attempt": 1,
+ "skill_sha256": "4c49e71106a0dab259a6bdfca46b6a056c1a2e47d2b98ba26f03abdfdfd447fd",
+ "rubric_sha256": "7a88dc37f202e549b414409b51212a2c066abbdece81d50910cbd838c9b2b666",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Dates complètes, trois nuits dans chaque ville, transfert Lisbonne→Porto le 8, retour depuis Porto le 11 et aucune location de voiture."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Allergie signalée avec confirmation écrite demandée aux restaurants ; une visite principale par jour hors transferts ; journée plage prévue le 7."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Conditions reproduites mot pour mot, sans ajout de condition de réservation ; choix écrit de l’assurance laissé à recueillir."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucun prix, horaire, durée de train ou condition d’entrée précis n’est affirmé ; les informations correspondantes restent à confirmer."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termine par une liste « À réserver / à confirmer » et renvoie aux sources officielles gouvernementales pour passeport, visa et entrée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Dates complètes, trois nuits dans chaque ville, transfert Lisbonne→Porto le 8, retour depuis Porto le 11 et aucune location de voiture.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Allergie signalée avec confirmation écrite demandée aux restaurants ; une visite principale par jour hors transferts ; journée plage prévue le 7.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Conditions reproduites mot pour mot, sans ajout de condition de réservation ; choix écrit de l’assurance laissé à recueillir.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucun prix, horaire, durée de train ou condition d’entrée précis n’est affirmé ; les informations correspondantes restent à confirmer.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termine par une liste « À réserver / à confirmer » et renvoie aux sources officielles gouvernementales pour passeport, visa et entrée.\"}]}"
+}

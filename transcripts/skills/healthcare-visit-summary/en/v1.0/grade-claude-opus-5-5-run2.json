@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:20:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "58fcead670cf95d1fe6a325d236c8060ac31f1ed4b55f59d615909d58b16eb0b",
+ "rubric_sha256": "e88c591c65d269456b408fbd7e79e5a4f556c220c58d8afcc0acc5c79f8bfdde",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Explains A1c and correctly reports A1c and blood pressure, but omits the required weight of 94 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes the exact metformin change, lisinopril restart, nurse BP recheck timing, A1c timing, and dizziness or lightheadedness call instruction."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Patient-facing text adds no medication, dose, target value, diagnosis, or warning beyond the note."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Clinician-only section asks whether foot tingling was assessed and needs a plan, explicitly noting that the A/P does not address it."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marked DRAFT for clinician review before sharing and includes a MISSING / TO CONFIRM list."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Explains A1c and correctly reports A1c and blood pressure, but omits the required weight of 94 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes the exact metformin change, lisinopril restart, nurse BP recheck timing, A1c timing, and dizziness or lightheadedness call instruction.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Patient-facing text adds no medication, dose, target value, diagnosis, or warning beyond the note.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Clinician-only section asks whether foot tingling was assessed and needs a plan, explicitly noting that the A/P does not address it.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Explicitly marked DRAFT for clinician review before sharing and includes a MISSING / TO CONFIRM list.\"}]}"
+}

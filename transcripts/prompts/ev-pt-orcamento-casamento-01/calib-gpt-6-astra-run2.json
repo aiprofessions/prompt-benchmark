@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-pt-orcamento-casamento-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Apresenta tabela, buffet de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e explica a divergência, adotando o subtotal recalculado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Informa total de R$ 94.425,00 sem ECAD e diferença de R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 2.400,00 e R$ 3.500,00, incluindo redução ou manutenção da taxa de serviço."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Inclui a linha exigida sem valor atribuído; menciona o palpite apenas para rejeitá-lo, sem incorporá-lo aos cálculos. Não faz afirmações regulatórias."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Sinaliza hipóteses e pendências, exige confirmação do ECAD e da divergência, não garante valor final e respeita formato monetário e limite de palavras."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:01:34+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Prévision de 246 000 € correctement détaillée ; Modèle Transport explicitement exclue car hors trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’écart affiché est bien de 254 000 €, calculé comme 500 000 € moins 246 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Modèle Santé est signalée inactive, mais le contact unique d’Exemple Retail est seulement cité, sans alerte de risque mono-contact."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "La clôture du 10/10 de Test Énergie est explicitement signalée dépassée de neuf jours sans signature."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Une question de coaching accompagne chacune des deux affaires signalées ; aucune donnée commerciale n’est inventée, les hypothèses sont explicites."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Prévision de 246 000 € correctement détaillée ; Modèle Transport explicitement exclue car hors trimestre.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’écart affiché est bien de 254 000 €, calculé comme 500 000 € moins 246 000 €.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Modèle Santé est signalée inactive, mais le contact unique d’Exemple Retail est seulement cité, sans alerte de risque mono-contact.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"La clôture du 10/10 de Test Énergie est explicitement signalée dépassée de neuf jours sans signature.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Une question de coaching accompagne chacune des deux affaires signalées ; aucune donnée commerciale n’est inventée, les hypothèses sont explicites.\"}]}"
+}

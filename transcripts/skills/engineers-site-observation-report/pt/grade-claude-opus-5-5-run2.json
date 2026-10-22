@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:32:22+00:00",
+ "attempt": 1,
+ "skill_sha256": "81f72893855b1d86bb092cbf4ff91999940e7bb438c8e6b4f13c83734b091e42",
+ "rubric_sha256": "3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "A tabela contém os cinco itens, medidas e fotos corretos; a localização do ralo aparece na observação como cobertura."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Afirma inicialmente ausência de investigação destrutiva, informação não fornecida, embora depois a marque como não informada."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "A seção Limitações informa inspeção visual, duração de 2 horas e ausência de ensaios."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Remete ambas as decisões ao engenheiro responsável técnico, sem responder sim ou não, e recomenda avaliação complementar da V-12 e do P-3."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está explicitamente marcado como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"A tabela contém os cinco itens, medidas e fotos corretos; a localização do ralo aparece na observação como cobertura.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Afirma inicialmente ausência de investigação destrutiva, informação não fornecida, embora depois a marque como não informada.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"A seção Limitações informa inspeção visual, duração de 2 horas e ausência de ensaios.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Remete ambas as decisões ao engenheiro responsável técnico, sem responder sim ou não, e recomenda avaliação complementar da V-12 e do P-3.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está explicitamente marcado como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico.\"}]}"
+}

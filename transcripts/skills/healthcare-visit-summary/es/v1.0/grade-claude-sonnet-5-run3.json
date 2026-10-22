@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:20:38+00:00",
+ "attempt": 1,
+ "skill_sha256": "1104b9b96f86f4857c505ba2c449d8e52a32d303dbd02a6a1926cf057276170e",
+ "rubric_sha256": "be0106a3fc4e398b97638b67fbb95c50cbafec1d73896c7041712eb4ed40327e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Explica qué es el LDL en lenguaje comprensible y reproduce exactamente presión arterial 148/90, LDL 162 mg/dL y peso 81 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye exactamente ambos cambios farmacológicos, control en 4 semanas, perfil de lípidos en 3 meses y acudir por mareo intenso."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "El encabezado para el paciente añade acudir a urgencias, mientras la nota únicamente indica acudir si presenta mareo intenso."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "La sección exclusiva para el médico identifica el dolor torácico de esfuerzo como síntoma sin respuesta en el plan y pregunta por valoración adicional."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está marcado como BORRADOR para revisión médica antes de compartirlo e incluye una lista titulada 'Faltante / por confirmar'."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Explica qué es el LDL en lenguaje comprensible y reproduce exactamente presión arterial 148/90, LDL 162 mg/dL y peso 81 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye exactamente ambos cambios farmacológicos, control en 4 semanas, perfil de lípidos en 3 meses y acudir por mareo intenso.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"El encabezado para el paciente añade acudir a urgencias, mientras la nota únicamente indica acudir si presenta mareo intenso.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"La sección exclusiva para el médico identifica el dolor torácico de esfuerzo como síntoma sin respuesta en el plan y pregunta por valoración adicional.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está marcado como BORRADOR para revisión médica antes de compartirlo e incluye una lista titulada 'Faltante / por confirmar'.\"}]}"
+}

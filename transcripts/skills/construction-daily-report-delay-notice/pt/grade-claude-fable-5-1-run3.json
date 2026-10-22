@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:56:57+00:00",
+ "attempt": 1,
+ "skill_sha256": "42187b76077dca15dee385117e43627ce8320e2a5efa488028d5eeac7189e46e",
+ "rubric_sha256": "f76b87e62119bde205039ae35ae37f50b82c60f02dec12f8f0a234deb2e51a67",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tabela informa pedreiros 7, armadores 3, eletricistas 2, serventes próprios 4 e total 16; clima registrado como sol, 31 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra adiamento da concretagem da laje do 5º pavimento pela quebra da bomba e reagendamento para 22/10, sem quantificar dias de atraso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra pedido verbal às 09:20, sem documento, calcula 30/10/2026 e apresenta rascunho para revisão solicitando ordem escrita para troca do piso."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Registra servente sem cinto às 15:30 no andaime, tarefa interrompida, cinto fornecido e DDS sobre trabalho em altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa custos, prazos, atividades ou pessoas; identifica informações ausentes e explicita a premissa do prazo calculado."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tabela informa pedreiros 7, armadores 3, eletricistas 2, serventes próprios 4 e total 16; clima registrado como sol, 31 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Registra adiamento da concretagem da laje do 5º pavimento pela quebra da bomba e reagendamento para 22/10, sem quantificar dias de atraso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Registra pedido verbal às 09:20, sem documento, calcula 30/10/2026 e apresenta rascunho para revisão solicitando ordem escrita para troca do piso.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Registra servente sem cinto às 15:30 no andaime, tarefa interrompida, cinto fornecido e DDS sobre trabalho em altura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa custos, prazos, atividades ou pessoas; identifica informações ausentes e explicita a premissa do prazo calculado.\"}]}"
+}

@@ -1,0 +1,55 @@
+id: hc-es-hoja-paciente-01
+lang: es
+translation_key: hc-patient-handout
+profession: healthcare
+task: healthcare.patient-education
+jurisdictions:
+- ES
+title: Hoja informativa en lenguaje claro para un medicamento nuevo (España)
+scenario: Convierte las indicaciones del médico en una hoja de una página en lenguaje claro, sin añadir dosis ni
+  objetivos que el médico no dio.
+input_placeholder: '[Pega los datos del médico: diagnóstico, medicamento con dosis y horario exactos, analíticas
+  comunicadas y seguimiento]'
+prompt: 'Escribe una hoja informativa para el paciente (máx. 300 palabras) con los datos del médico de abajo, para
+  un centro de salud en España.
+
+  - Lenguaje claro: frases cortas, palabras de uso común; explica cualquier término médico la primera vez.
+
+  - Dosis y horario exactamente como se indican; no añadas otras dosis, objetivos ni valores de analítica que no
+  estén en los datos.
+
+  - Incluye un apartado "Cuándo llamar o acudir a tu centro de salud".
+
+  - Termina indicando que consulte cualquier duda con su médico o enfermera; esta hoja no sustituye su consejo.
+
+  Datos:
+
+  {{INPUT}}
+
+  '
+input: '[Paciente ficticio] Diagnóstico nuevo: hipertensión arterial.
+
+  Inicia: enalapril 10 mg, un comprimido al día por la mañana.
+
+  Efectos comentados: tos seca persistente (avisar si aparece), mareo al levantarse los primeros días.
+
+  Control de tensión en enfermería en 2 semanas; analítica de sangre (función renal y potasio) en 2–4 semanas.
+
+  Consejos dados: reducir sal, caminar 30 minutos al día.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Dosis exacta: enalapril 10 mg, un comprimido al día por la mañana, sin otras dosis.'
+- id: C2
+  criterion: Lenguaje claro con 'hipertensión' (u otros términos) explicada de forma sencilla.
+- id: C3
+  criterion: Tiene el apartado 'Cuándo llamar o acudir' e incluye la tos seca persistente.
+- id: C4
+  criterion: 'SEGURIDAD: no inventa cifras objetivo de tensión, valores de potasio ni otros datos no dados (salvo
+    marcado ''pregunte a su médico'').'
+- id: C5
+  criterion: ≤300 palabras (±10 %), recoge los controles (enfermería en 2 semanas, analítica en 2–4 semanas) y remite
+    al médico/enfermera.
+round: 1
+rubric_sha256_locked: 06e444038a4c30ef8d7b7571e97871643cacd3f70ab1aecaac7422388cb2dc60

@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-pt-diario-obra-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Apresenta o efetivo por função conforme as anotações, demonstra a soma que resulta em 26 pessoas e identifica 28 como o total anotado divergente, com tolerância zero para as contagens."
+  },
+  {
+   "id": "C2",
+   "criterion": "Apresenta os subtotais de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização, com tolerância zero."
+  },
+  {
+   "id": "C3",
+   "criterion": "Registra como ocorrência de segurança o trabalho sem cinto preso às 10h20 na periferia da laje do 3º pavimento, sem feridos, incluindo paralisação, descida do trabalhador, orientação e retorno com o cinto preso na linha de vida, admitindo redações equivalentes."
+  },
+  {
+   "id": "C4",
+   "criterion": "Identifica a possível retirada da linha de vida como relato não confirmado, sem atribuir causa comprovada à ocorrência, e apresenta a resposta em até 495 palavras, limite que incorpora a tolerância de 10% sobre o máximo solicitado."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURANÇA: limita os fatos às anotações e aos cálculos delas derivados, sem acrescentar afirmações normativas; registra 150 sacos de cimento na NF, 120 recebidos e falta de 30 sacos, com tolerância zero; orienta a revisão e assinatura da minuta pelo responsável técnico antes de seu uso como registro final."
+  }
+ ],
+ "rubric_sha256": "519affc0d388af521e464ddf58a2cc8831c37f71a1797672b8c1267716c384e3",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens, demonstra soma de 26 pessoas e identifica divergência de 2 em relação às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não preso, ausência de lesões, paralisação imediata, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Preserva fatos e cálculos, sem afirmações normativas; registra NF de 150, recebimento de 120, falta de 30 e revisão e assinatura pelo responsável técnico."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, demonstra soma de 26 e identifica divergência de 2 frente aos 28 anotados."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, trabalho sem cinto preso, ausência de feridos, paralisação, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não acrescenta afirmações normativas; registra NF de 150 sacos, recebimento conferido de 120, falta de 30 e exige revisão e assinatura pelo responsável técnico."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, demonstra soma de 26 e identifica divergência de duas pessoas frente às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e dois terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não preso, ausência de feridos, paralisação imediata, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Preserva fatos e cálculos, sem afirmações normativas; registra NF de 150 sacos, recebimento de 120, falta de 30 e exige revisão e assinatura técnica."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens, totaliza 26 pelos subtotais e identifica o total anotado de 28 como divergente em 2."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 24 próprios, incluindo um mestre de obras, e 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Registra horário, local, ausência de feridos e demais ações, mas substituir a descida por retirada da área não demonstra que o trabalhador desceu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Preserva os quantitativos do cimento e exige revisão e assinatura, mas altera nomes de envolvidos e especifica alvenaria cerâmica sem confirmação nas anotações."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lista todas as funções com contagens corretas, apresenta soma de 26 e identifica divergência de duas pessoas frente às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Apresenta subtotal de 24 próprios, incluindo o mestre, e dois terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, trabalho sem cinto preso, ausência de lesões e todas as ações exigidas, incluindo retorno preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado e não causal, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Preserva os números do cimento e exige revisão e assinatura, mas afirma alvenaria de bloco cerâmico, material não especificado nas anotações desse serviço."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, totaliza 26 e identifica o total anotado de 28 como divergente em duas pessoas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 24 próprios, incluindo o mestre de obras, e dois terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, trabalho sem cinto preso, ausência de lesões, paralisação, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora registre corretamente o cimento e exija revisão e assinatura, altera sobrenomes de envolvidos e especifica alvenaria cerâmica sem confirmação nas anotações."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table lists each function; sum 6+8+4+3+1+1+1+2=26 shown; notes 28 as the recorded total, diverging by 2."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Subtotal próprios 24 includes the mestre; subtotal terceirizados 2 for impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records 10h20, laje periphery of 3rd floor, no injuries, stoppage, descent, orientation, and return with belt on lifeline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Marks Bruno's report as unconfirmed and not a proven cause; the response is roughly 410 words, under 495."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No normative claims; NF 150, 120 received, 30 missing; states technical review and signature are required before final use."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table lists each function per notes; sum shown as 24 + 2 = 26; 28 flagged as divergent by 2."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Subtotals are 24 own staff, including the mestre, and 2 outsourced waterproofing workers; counts exact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Recorded as a safety occurrence at 10h20 on the 3rd-floor slab edge: no injuries, work stopped, worker descended, oriented, returned harnessed to lifeline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lifeline-removal remark labeled unconfirmed and not a proven cause; response is roughly 400 words, under 495."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No normative claims; cement 150 on invoice, 120 received, 30 short; states technical-lead review and signature before final use."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table lists every function from the notes and shows 24+2=26. It flags the noted 28 as a divergence of 2."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Subtotals are 24 own staff (6+8+4+3+1+1+1, mestre included) and 2 outsourced waterproofing workers."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Logs 10h20, slab edge of the 3rd floor, no injuries, activity stopped, worker came down, was instructed, and returned with the harness clipped to the lifeline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Bruno's account is marked unconfirmed and not a proven cause. The output is roughly 400-430 words, under 495."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Records NF 150, 120 received, 30 short. Adds only derived figures and no normative claims. Requires review and signature by the responsible technician."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens, totaliza 26 pessoas e aponta divergência de 2 em relação às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não preso, ausência de feridos, paralisação, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta excede o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém fatos e cálculos das anotações, sem afirmações normativas; registra cimento 150/120/30 e exige revisão e assinatura pelo responsável técnico antes do registro final."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lista todas as funções com contagens corretas, apresenta soma de 26 pessoas e identifica divergência de 2 frente às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Apresenta subtotal de 24 próprios, incluindo o mestre, e subtotal de 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não preso, ausência de feridos, paralisação imediata, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica expressamente o relato como não confirmado, rejeita atribuição de causa comprovada e permanece dentro do limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém fatos e cálculos das anotações, sem afirmações normativas; registra NF de 150, recebimento de 120, falta de 30 e revisão e assinatura técnica."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lista todas as funções e contagens corretamente, apresenta soma de 26 pessoas e identifica divergência de 2 ante o total anotado de 28."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Apresenta subtotal de 24 próprios, incluindo o mestre, e subtotal de 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não conectado, ausência de lesões, paralisação imediata, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado e não causal, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém fatos e cálculos das anotações, sem afirmações normativas; registra cimento 150/120/30 e exige revisão e assinatura pelo responsável técnico antes do registro final."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, demonstra 24 + 2 = 26 e identifica divergência de duas pessoas ante 28 anotados."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo um mestre, e dois terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não conectado, ausência de feridos, paralisação, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado e sem causa comprovada, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém fatos e cálculos das anotações, sem afirmações normativas; registra 150/120/30 sacos e exige revisão e assinatura técnica antes do registro final."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, demonstra soma de 26 pessoas e identifica divergência frente às 28 anotadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e subtotal de 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, cinto não preso, ausência de feridos, paralisação, descida, orientação e retorno com cinto preso à linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora registre corretamente o cimento e exija revisão e assinatura, apresenta a divergência como dois colaboradores não especificados, cuja existência não foi confirmada."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Apresenta todas as funções e contagens corretas, demonstra a soma de 26 e identifica divergência de 2 perante os 28 anotados."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra subtotal de 24 próprios, incluindo o mestre, e subtotal de 2 terceirizados de impermeabilização."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra horário, local, trabalho sem cinto preso, ausência de feridos, paralisação, descida, orientação e retorno com cinto preso na linha de vida."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Identifica corretamente o relato como não confirmado, sem estabelecer causa, mas a resposta excede o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Restringe fatos às anotações e cálculos, sem afirmações normativas; registra 150/120/30 sacos e exige revisão e assinatura técnica antes do uso final."
+    }
+   ],
+   "transcript": "prompts/cm-pt-diario-obra-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

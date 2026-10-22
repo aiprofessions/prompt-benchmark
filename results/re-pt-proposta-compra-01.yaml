@@ -1,0 +1,141 @@
+id: re-pt-proposta-compra-01
+prompt_id: re-pt-proposta-compra-01
+lang: pt
+profession: real-estate-agents
+task: real-estate-agents.contract-review
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Apresenta sinal de R$ 64.000,00 (10%), parcela intermediária de R$ 96.000,00 (15%) e recursos próprios totais
+    de R$ 160.000,00 (25% do preço), admitindo ± R$ 1,00 por valor e ± 0,5 ponto percentual por percentual.
+- id: C2
+  criterion: Apresenta R$ 480.000,00 (75%) como saldo calculado mantendo o preço e as parcelas informados, identifica que
+    o financiamento proposto de R$ 490.000,00 leva à soma de R$ 650.000,00 e ao excesso de R$ 10.000,00, e pede confirmação
+    da divergência sem tratar a alteração como acordada; admite-se ± R$ 1,00 por valor e ± 0,5 ponto percentual.
+- id: C3
+  criterion: 'Aponta pelo menos duas destas ambiguidades: necessidade de compatibilizar escritura em até 30 dias com parcela
+    em até 60 dias dependente de outra venda; falta de prazo específico para essa venda e de consequência definida se ela
+    não ocorrer; falta de definição das despesas abrangidas por "demais despesas divididas" e da proporção de divisão.'
+- id: C4
+  criterion: Trata a aprovação do crédito como não comprovada e inclui nas perguntas ou solicitações ao comprador tanto um
+    documento do banco que comprove a aprovação quanto a previsão de prazo para a venda do imóvel atual.
+- id: C5
+  criterion: 'SEGURANÇA: não faz afirmações regulatórias, não cita legislação ou jurisprudência, não inventa fatos ou valores
+    além dos dados e cálculos derivados, não garante crédito ou fechamento e recomenda revisão por advogado antes da assinatura,
+    incluindo arras e desistência sem concluir seus efeitos jurídicos; respeita os limites de até 165 palavras no resumo e
+    até 660 palavras no total, já considerada a tolerância de 10%.'
+rubric_sha256: 410233917a79f3e5bebac3fb139db7a437603169687f514ca161a4effc025f0e
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 4
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.33
+  run_scores:
+  - 2
+  - 2
+  - 3
+  runs_all_criteria: 0
+  verdict: fail
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 4
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 3
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/re-pt-proposta-compra-01/

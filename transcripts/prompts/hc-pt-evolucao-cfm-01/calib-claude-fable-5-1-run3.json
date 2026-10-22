@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-pt-evolucao-cfm-01",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "O records all five vitals with correct values and units; weight noted as not measured; home temperature stays in S as imprecise report."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Dipyrone reaction (welts, swollen eye) highlighted before S; contradiction flagged for physician review; dipyrone not recommended."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Pending list covers unmeasured weight, missing paracetamol dose/regimen, and CBC/NS1 collection and results pending."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "About 380 words; first line identifies AI draft for review and signature; includes suggested chart line on AI as decision support."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No patient communication drafted; WhatsApp request logged as pending; no names or IDs; hypotheses kept unconfirmed; no invented data."
+  }
+ ]
+}

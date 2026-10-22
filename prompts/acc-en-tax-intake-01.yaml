@@ -1,0 +1,52 @@
+id: acc-en-tax-intake-01
+lang: en
+translation_key: acc-tax-intake
+title: Tax-season document checklist from last year's return summary
+scenario: Turn a returning client's prior-year return summary into a document checklist and question list for this season
+  — without the model quoting this year's limits from memory.
+profession: accountants
+task: accountants.tax-filing
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'You are assisting a US tax preparer before filing season.
+
+  From the prior-year return summary below, produce:
+
+  A) a document request checklist for the coming return, one line per income/deduction item, naming the form or record to
+  request;
+
+  B) a short list of "life change" questions for the client;
+
+  C) a list of items that need the preparer''s professional judgment (do not decide them).
+
+  Do NOT state any current-year dollar limit, threshold, rate or deadline as fact. If something depends on a current-year
+  figure, write "[verify current-year figure]".
+
+  Prior-year summary:
+
+  [Paste the prior-year return summary: forms, schedules, income sources, deductions, life events you know about]
+
+  '
+sample_input: 'Client: "Jordan Sample" (fictional), single, prior return = tax year 2025.
+
+  - W-2 wages from Example Health Systems.
+
+  - Schedule C: freelance UX consulting; claimed a home office.
+
+  - 1099-INT from Example Online Bank.
+
+  - 1099-B: sold shares in a brokerage account (Sample Brokerage).
+
+  - Schedule E: one rental condo, depreciation started 2023.
+
+  - Form 1098-E student loan interest.
+
+  - Moved from New York to North Carolina in July 2026 (current year).
+
+  '
+page: https://aiprofessions.ai/accountants/prompts/#acc-en-tax-intake-01
+results_file: results/acc-en-tax-intake-01.yaml

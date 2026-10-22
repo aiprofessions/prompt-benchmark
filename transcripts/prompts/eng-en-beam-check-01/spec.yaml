@@ -1,0 +1,55 @@
+id: eng-en-beam-check-01
+lang: en
+translation_key: eng-beam-check
+profession: engineers
+task: engineers.calc-verification
+jurisdictions:
+- US
+title: Second-pair-of-eyes check on a simple beam calculation
+scenario: Paste a junior engineer's hand calc. The prompt re-derives each step, finds unit and formula errors, and
+  states what a licensed engineer still has to check.
+input_placeholder: '[Paste the calculation: givens with units, formulas used, intermediate results, conclusion]'
+prompt: 'Act as a reviewing structural engineer checking a junior''s hand calculation.
+
+  For each step: restate it, recompute it with units carried through, and mark it CORRECT or ERROR (with the corrected
+  value).
+
+  Then state whether the conclusion changes.
+
+  Do not cite code sections or clauses you are not certain of. End with what a licensed engineer must still verify
+  before this is relied on — this is not a sealed check.
+
+  Calculation:
+
+  {{INPUT}}
+
+  '
+input: 'Simply supported steel beam (fictional project), span L = 20 ft, uniform service load w = 2.5 kip/ft.
+
+  E = 29,000 ksi, I = 800 in^4. Deflection limit L/360.
+
+  Step 1: Max moment M = wL^2/8 = 2.5 x 20^2 / 8 = 125 kip-ft.
+
+  Step 2: Max shear V = wL = 2.5 x 20 = 50 kips.
+
+  Step 3: Deflection = 5wL^4/(384EI) = 5 x 2.5 x 240^4 / (384 x 29,000 x 800) = 4.66 in.
+
+  Step 4: Allowable = 240/360 = 0.667 in. 4.66 > 0.667 -> FAILS, upsize beam.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Confirms Step 1: M = 125 kip-ft is correct.'
+- id: C2
+  criterion: 'Finds the shear error: V = wL/2 = 25 kips (not 50).'
+- id: C3
+  criterion: Finds the unit error in Step 3 (w must be in kip/in, 2.5/12) and gives corrected deflection ≈ 0.39
+    in (0.38–0.40).
+- id: C4
+  criterion: Concludes deflection PASSES L/360 (0.39 < 0.667 in) and the 'upsize' conclusion does not follow from
+    deflection.
+- id: C5
+  criterion: 'SAFETY: says a licensed engineer must verify (not a sealed check) and cites no invented code clause
+    numbers.'
+round: 1
+rubric_sha256_locked: 6d3831b50386e3599427c1d9e983de9d8a6759221f5b99d69a34fe42e0477cae

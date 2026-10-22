@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-prospection-b2b-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject is 8 words, body about 117 words, and the off-email note about 77 words; all within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Correct address and formal vous; cites 3 extrusion lines, spreadsheet/paper tracking, and the January client audit."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Only one commercial call to action: a 20-minute demo. The webinar and trial are not proposed."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No invented facts; Fonderie case has no figures; note explains excluding 40% and other actions and requires human validation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Body ends with STOP and link opt-out; note asks to verify prior information and right to object; no legal references."
+  }
+ ]
+}

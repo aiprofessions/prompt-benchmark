@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:10:19+00:00",
+ "attempt": 1,
+ "skill_sha256": "f6354db5bac88e3315626e5fa2e279c60f662c71d9c7c9a011c395cd57c23e72",
+ "rubric_sha256": "00f06c601698dac72df43dc972c01c60e2e9f83bf28174e430613183a6dfdc1a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula corretamente o saldo bancário ajustado de R$ 54.220,40 com depósito, TED e cheque."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula saldo contábil ajustado de R$ 54.220,40 incluindo PIX em conta transitória e explicita diferença zero."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reconhece erro de R$ 36,00 e propõe crédito em Bancos, diminuindo o saldo contábil."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Mantém PIX como valor a identificar em conta transitória e declara nenhum lançamento para depósito em trânsito, TED e cheque."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Inventa vínculo do pagamento incorreto com Fornecedor Amostra Ltda. e datas da tarifa e rendimento, embora inclua documentos e assinatura em branco."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula corretamente o saldo bancário ajustado de R$ 54.220,40 com depósito, TED e cheque.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula saldo contábil ajustado de R$ 54.220,40 incluindo PIX em conta transitória e explicita diferença zero.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reconhece erro de R$ 36,00 e propõe crédito em Bancos, diminuindo o saldo contábil.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Mantém PIX como valor a identificar em conta transitória e declara nenhum lançamento para depósito em trânsito, TED e cheque.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Inventa vínculo do pagamento incorreto com Fornecedor Amostra Ltda. e datas da tarifa e rendimento, embora inclua documentos e assinatura em branco.\"}]}"
+}

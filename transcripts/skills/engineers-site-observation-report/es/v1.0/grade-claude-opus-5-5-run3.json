@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:57+00:00",
+ "attempt": 1,
+ "skill_sha256": "292c1e7d4942598975a310942332027d7f1c0496828fbf42e727e1b73e445d19",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Enumera los cinco puntos, pero no presenta una tabla y deja pendiente la interpretación de algunas medidas."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No inventa medidas, ensayos, normativa ni observaciones; plantea los datos desconocidos como preguntas y conserva las observaciones aportadas."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No incluye un apartado de Limitaciones ni recoge explícitamente el carácter visual de la inspección."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No responde sí/no; remite ambas decisiones al ingeniero responsable tras evaluación y plantea valorar la atención pronta del pilar."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "No está marcado como BORRADOR para revisión y firma del técnico responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Enumera los cinco puntos, pero no presenta una tabla y deja pendiente la interpretación de algunas medidas.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No inventa medidas, ensayos, normativa ni observaciones; plantea los datos desconocidos como preguntas y conserva las observaciones aportadas.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No incluye un apartado de Limitaciones ni recoge explícitamente el carácter visual de la inspección.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No responde sí/no; remite ambas decisiones al ingeniero responsable tras evaluación y plantea valorar la atención pronta del pilar.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"No está marcado como BORRADOR para revisión y firma del técnico responsable.\"}]}"
+}

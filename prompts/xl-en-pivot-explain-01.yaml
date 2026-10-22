@@ -1,0 +1,50 @@
+id: xl-en-pivot-explain-01
+lang: en
+translation_key: xl-pivot-explain
+title: Explain a PivotTable to your manager in 150 words, with exact numbers
+scenario: Turn a pasted PivotTable (region by quarter) into a short, accurate summary for a manager, flagging the (blank)
+  row instead of hiding it.
+profession: any
+task: any.document-summary
+tools:
+- excel
+model: claude
+tested_with: claude-sonnet-5
+tested_date: '2026-10-20'
+jurisdictions: []
+prompt: 'You are helping an analyst explain an Excel PivotTable to a manager who will not open the file.
+
+
+  Write a summary of at most 150 words based ONLY on the PivotTable output below:
+
+  - Give the grand total and each region''s full-year total exactly as shown.
+
+  - Say which quarter had the highest and which the lowest total.
+
+  - If something in the table looks like a data problem, say what it is and what to check.
+
+  - Do not calculate percentages or growth rates, and do not guess reasons (seasonality, campaigns, staffing…) for any number.
+
+
+  [Paste the PivotTable output as text: row labels, column labels, values and the Grand Total. Remove client names.]
+
+  '
+sample_input: 'PivotTable "Sales by region" — Sum of Net Sales (USD), fiscal year 2026, fictional company Example Supplies
+  Inc.
+
+
+  Row Labels | Q1 | Q2 | Q3 | Q4 | Grand Total
+
+  North | 48,200 | 51,900 | 47,300 | 55,600 | 203,000
+
+  South | 39,750 | 42,100 | 44,800 | 46,350 | 173,000
+
+  West | 61,400 | 58,200 | 63,900 | 66,500 | 250,000
+
+  (blank) | 1,150 | 0 | 3,400 | 950 | 5,500
+
+  Grand Total | 150,500 | 152,200 | 159,400 | 169,400 | 631,500
+
+  '
+page: https://aiprofessions.ai/accountants/prompts/#xl-en-pivot-explain-01
+results_file: results/xl-en-pivot-explain-01.yaml

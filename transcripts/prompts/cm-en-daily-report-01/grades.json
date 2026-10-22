@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-en-daily-report-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Manpower table lists framers 6, electricians 4, plumbers 2, laborers 3 with total 15."
+  },
+  {
+   "id": "C2",
+   "criterion": "Records the drywall delivery delay (8:00 scheduled, 13:30 actual) and possible one-day slip for the drywall crew."
+  },
+  {
+   "id": "C3",
+   "criterion": "Lists RFI #027 (unmarked conduit at B-3) with the Friday deadline and impact on room 205 rough-in, and suggests considering contractual notice."
+  },
+  {
+   "id": "C4",
+   "criterion": "Safety section records the missing guardrail at stair 2 fixed by 11:00 and the ladder-safety toolbox talk."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: invents no activities, people, quantities or durations; weather recorded as given."
+  }
+ ],
+ "rubric_sha256": "c799073cd7712fee9f9bb604c0593cfce86a051f0a7f99285e5e323250fbd728",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 08:00 delivery, actual 13:30 arrival, and possible one-day slip for the drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records missing guardrail at stair 2 landing, correction by 11:00, and ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations are invented. Added calculations follow from supplied information."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 08:00 and actual 13:30 delivery, with a possible one-day slip for the drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and advice to consider notice and check contract."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing stair 2 landing guardrail corrected by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations are invented. Added dates and delivery lateness are calculable from provided information."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists framers 6, electricians 4, plumbers 2, laborers 3, and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records drywall scheduled at 8:00, arriving at 13:30, and a possible one-day slip for the crew planned to start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists RFI #027 for unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing stair 2 landing guardrail corrected by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; added dates, delay duration, and photo count are derived correctly. No unsupported activities, people, quantities, or durations are invented."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records 8:00 scheduled delivery, 13:30 arrival, and possible one-day slip from the drywall crew’s planned start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, fixed by 11:00, and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations appear. The 5.5-hour delay is correctly calculated from stated times."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with headcounts 6, 4, 2, and 3, totaling 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records 8:00 scheduled delivery, 13:30 arrival, and a possible one-day slip from the drywall crew’s planned start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes RFI #027 for unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, fixed by 11:00, and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations. The 5.5-hour delay is correctly calculated from stated times."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 8:00 delivery, actual 13:30 arrival, and possible one-day slip from the drywall crew's planned start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage risk, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing corrected by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no activities, people, quantities, or durations are invented. The 5.5-hour delivery delay is correctly calculated."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table lists framers 6, electricians 4, plumbers 2, laborers 3, and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Deliveries gives 8:00 scheduled and 13:30 actual; Delays notes the possible one-day slip for the drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "RFI #027, B-3 conduit, Friday deadline and room 205 impact all listed, with 'consider notice — check contract' on the conduit item."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety records the stair 2 guardrail fixed by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches verbatim; no invented activities, people, quantities or durations. 'Impact is not confirmed' is a hedge, not a fabrication."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table lists framers 6, electricians 4, plumbers 2, laborers 3, total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records 8:00 scheduled, 13:30 arrival, and possible one-day slip for drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "RFI #027, conduit at B-3, Friday deadline, room 205 impact, and 'consider notice — check contract' all present."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Guardrail at stair 2 fixed by 11:00 and ladder-safety toolbox talk both recorded."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather verbatim; 5h30m is derived from given times; no invented people, activities or quantities."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table lists framers 6, electricians 4, plumbers 2, laborers 3, total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Deliveries and Delays sections record 8:00 scheduled, 13:30 arrival, and a possible one-day drywall crew slip."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "RFI #027, B-3 conduit, Friday deadline, room 205 impact listed; delays entry flags 'consider notice — check contract'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Records stair 2 missing guardrail fixed by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented activities, people or durations; weather verbatim. 'Impact not confirmed' is a hedge, not invention."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records 8:00 scheduled delivery, 13:30 arrival, and a possible one-day slip for the drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, fixed by 11:00, and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes. No unsupported activities, people, quantities, or durations; added dates and delivery lateness are correctly derived."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with the specified headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 08:00 and actual 13:30 delivery, with a possible one-day slip for the drywall crew planned to start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, correction by 11:00, and ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations are introduced. Delivery lateness is correctly calculated from supplied times."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with correct headcounts and total 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 8:00 delivery, actual 13:30 arrival, and possible one-day slip for the drywall crew."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and consideration of contractual notice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing stair 2 landing guardrail corrected by 11:00 and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no unsupported activities, people, quantities, or durations are invented. The 5.5-hour delay follows directly from stated times."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with headcounts 6, 4, 2, and 3, totaling 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records scheduled 8:00 and actual 13:30 delivery, plus a possible one-day slip for the drywall crew planned to start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes RFI #027, unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage risk, and the contractual notice consideration."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, fixed by 11:00, and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Weather matches the notes; no activities, people, quantities, or durations are invented. Weather-related work impacts are explicitly conditional, not asserted."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with headcounts 6, 4, 2, and 3, totaling 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records drywall scheduled at 8:00, arriving at 13:30, and a possible one-day slip for the crew planned to start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies RFI #027 for unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage risk, and contractual notice consideration."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records the missing guardrail at stair 2 landing, fixed by 11:00, and the ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No activities, people, quantities, or durations are invented. Weather matches the notes; weather notice consideration is conditional, not an asserted delay."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Manpower table lists all four trades with headcounts 6, 4, 2, and 3, totaling 15."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records drywall delivery scheduled at 8:00, actual arrival at 13:30, and possible one-day slip for the crew planned to start tomorrow."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists RFI #027 for unmarked conduit at B-3, Friday deadline, room 205 rough-in stoppage, and 'consider notice — check contract'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Safety section records missing guardrail at stair 2 landing, fixed by 11:00, and ladder-safety toolbox talk."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No activities, people, quantities, or durations are invented. Weather matches the notes; rain impacts are conditional, not asserted."
+    }
+   ],
+   "transcript": "prompts/cm-en-daily-report-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

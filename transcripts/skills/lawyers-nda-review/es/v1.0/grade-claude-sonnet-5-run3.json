@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:19:09+00:00",
+ "attempt": 1,
+ "skill_sha256": "6d346a4ad27c8e7ce9691097288405e614773dece2a879e7090aa2dfb0183018",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Señala la cláusula 3 y propone utilizar la información únicamente para evaluar la integración tecnológica, sin otros fines."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala la cláusula 5 y propone tres años desde la firma, con protección de secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala la cláusula 8 y propone devolución o destrucción a solicitud de la Reveladora, incluyendo copias y constancia por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifica ambas previsiones faltantes y acepta la cláusula 7, pero considera la cláusula 1 pendiente de aclaración, no conforme."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Aunque presenta un borrador sujeto al abogado, introduce una referencia jurisprudencial específica no sustentada; no puede confirmarse que cumpla la prohibición de inventar citas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Señala la cláusula 3 y propone utilizar la información únicamente para evaluar la integración tecnológica, sin otros fines.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Señala la cláusula 5 y propone tres años desde la firma, con protección de secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala la cláusula 8 y propone devolución o destrucción a solicitud de la Reveladora, incluyendo copias y constancia por escrito.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifica ambas previsiones faltantes y acepta la cláusula 7, pero considera la cláusula 1 pendiente de aclaración, no conforme.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Aunque presenta un borrador sujeto al abogado, introduce una referencia jurisprudencial específica no sustentada; no puede confirmarse que cumpla la prohibición de inventar citas.\"}]}"
+}

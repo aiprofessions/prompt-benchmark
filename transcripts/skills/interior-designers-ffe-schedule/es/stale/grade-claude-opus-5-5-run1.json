@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:24:33+00:00",
+ "attempt": 1,
+ "skill_sha256": "b681b56b673159271f0369c3a40739d57fc86e503b94544859222ae41d262a82",
+ "rubric_sha256": "97ac72d08175cf5ad204a1273025ff85553bbb55a79fbac8d5aba375b13dd779",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye todas las piezas y cantidades solicitadas, además del aparador de roble identificado como existente y reutilizado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente una alfombra de 5,6 × 4,2 m, equivalente a la medida requerida."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye blanco puro y terciopelo; exige verificar resistencia a arañazos, enganches, abrasión y otros riesgos relacionados con el gato."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduce los 18.000 € con IVA, transporte y montaje; fija el pedido para el 7/12/2026 menos el margen acordado."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "No inventa marcas, modelos ni clasificaciones, pero no presenta partidas estimadas: declara «Asignaciones estimadas: ninguna» y deja los importes pendientes."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye todas las piezas y cantidades solicitadas, además del aparador de roble identificado como existente y reutilizado.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente una alfombra de 5,6 × 4,2 m, equivalente a la medida requerida.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Excluye blanco puro y terciopelo; exige verificar resistencia a arañazos, enganches, abrasión y otros riesgos relacionados con el gato.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduce los 18.000 € con IVA, transporte y montaje; fija el pedido para el 7/12/2026 menos el margen acordado.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"No inventa marcas, modelos ni clasificaciones, pero no presenta partidas estimadas: declara «Asignaciones estimadas: ninguna» y deja los importes pendientes.\"}]}"
+}

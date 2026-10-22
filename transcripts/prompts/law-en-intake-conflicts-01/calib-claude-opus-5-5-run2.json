@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-intake-conflicts-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six named parties are listed, each with a role (client, contractor, owner, subcontractor/lien claimant, lender, witness)."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags the September 2, 2026 lien under urgent attorney review and states no specific statutory period as fact."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reply says the firm has not agreed to represent and no relationship exists, disclaims legal advice, and gives no substantive advice."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Requests the contract, proof of payments, the recorded lien and the Example Home Bank letter."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "About 112 words, but adds unstated facts: contractor 'has not returned,' a 'mortgage' lender, and nonpayment 'by the contractor.'"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-es-buscarx-mx-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Usa BUSCARV con SI.ERROR, no BUSCARX ni INDICE/COINCIDIR, que son las alternativas admitidas por el criterio."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Usa SUMAR.SI.CONJUNTO sobre Subtotal con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Indica B4 de 1760.00, IVA de 281.60 y total de 2041.60; excluye correctamente la factura pagada de 415.80."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes corresponden a la tabla o cálculos correctos."
+  }
+ ]
+}

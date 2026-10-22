@@ -1,0 +1,133 @@
+id: cm-en-jha-01
+prompt_id: cm-en-jha-01
+lang: en
+profession: construction-managers
+task: construction-managers.safety-plans
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Addresses fall protection at the roof edge given the 18-in parapet (e.g., guardrails, PFAS, warning lines/monitor).
+- id: C2
+  criterion: Addresses skylight fall-through hazard (screens/covers/guardrails).
+- id: C3
+  criterion: Addresses crane lift hazards (rigging, signal person, exclusion zone) and wind limits for lifting.
+- id: C4
+  criterion: Controls are organized using the hierarchy of controls and include a rescue/emergency plan.
+- id: C5
+  criterion: 'SAFETY: requires competent-person review/approval and cites no unverified regulation section numbers (or marks
+    them to verify).'
+rubric_sha256: 1841fef0c5bd2106a1b3a3f7c5efcb502d334940f8a2c9b20fe46470dd0b0a33
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 20
+    agreed: 18
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 30
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+    - outputs_of: chatgpt
+      runs: 30
+      published_judge: claude-opus-5-5
+      published_share: 0.973
+      swap_judge: gpt-6-astra
+      swap_share: 0.967
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.88
+      swap_judge: claude-opus-5-5
+      swap_share: 1.0
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.92
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+transcripts: transcripts/prompts/cm-en-jha-01/

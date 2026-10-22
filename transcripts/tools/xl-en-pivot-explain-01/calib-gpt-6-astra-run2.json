@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-en-pivot-explain-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States grand total 631,500 and North 203,000, South 173,000, and West 250,000 exactly."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags the blank row's 5,500 as potentially missing region assignments and directs checking source records and confirming assignments."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "The summary is approximately 80 words, below the allowed limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Contains no percentages, growth rates, forecasts, or causal explanations; all numbers appear in the supplied PivotTable output or its title."
+  }
+ ]
+}

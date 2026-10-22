@@ -1,0 +1,90 @@
+id: cm-fr-planning-retard-01
+lang: fr
+translation_key: cm-schedule-delay
+title: Chemin critique sur 7 tâches et impact d'un retard sur la date de fin
+scenario: 'Sept tâches, des liens fin-début et un retard annoncé : calculez les dates au plus tôt, les marges, le chemin critique
+  et le décalage de fin en jours ouvrés.'
+profession: construction-managers
+task: construction-managers.scheduling
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- FR
+prompt: 'Vous êtes conducteur de travaux en France. Établissez le planning à partir des données ci-dessous, puis analysez
+  l''effet du retard annoncé.
+
+  1. Planning initial : présentez un tableau avec, pour chaque tâche, la durée en jours ouvrés, les début et fin au plus tôt
+  (numéro de jour ouvré, date et jour de la semaine), la marge totale et la marge libre.
+
+  2. Indiquez le chemin critique, la durée totale en jours ouvrés et la date de fin du projet.
+
+  3. Après le retard : présentez le même tableau recalculé, le nouveau chemin critique, la durée totale, la date de fin et
+  le décalage en jours ouvrés.
+
+  4. Contrôlez les données : explicitez les conversions d''unités et signalez toute incohérence ou affirmation contredite
+  par vos calculs ; montrez les calculs des dates et des marges.
+
+  5. Rédigez une note au maître d''ouvrage de 150 mots maximum, en le vouvoyant : constat, conséquence sur la date de fin
+  et points à confirmer.
+
+  Utilisez uniquement les données fournies et les résultats qui en découlent. Appliquez la convention indiquée, numérotez
+  les jours ouvrés à partir de 1 et signalez les informations manquantes sans les inventer.
+
+  N''ajoutez aucune hypothèse de durée, date, coût, pénalité, clause contractuelle ou règle juridique ou technique ; ne garantissez
+  aucun délai de rattrapage.
+
+  Précisez que le responsable du chantier doit vérifier et valider le planning avant toute diffusion.
+
+  Données du chantier :
+
+  [Collez les tâches, leurs durées et prédécesseurs, la date de début, la convention de calcul et le retard annoncé ; anonymisez
+  le chantier et les intervenants]
+
+  '
+sample_input: 'Toutes les données ci-dessous sont fictives.
+
+  Chantier : Résidence Exemple, 12 logements. Maître d''ouvrage : SCI Exemple Habitat (fictive).
+
+  Conducteur de travaux : Martin Exemple (martin.exemple@btp-exemple.test).
+
+  Date de début des travaux : lundi 1er février 2027.
+
+  Convention de calcul : jours ouvrés du lundi au vendredi, pas de jours fériés à considérer. Une tâche démarre le jour ouvré
+  qui suit la fin de son prédécesseur (le plus tardif s''il y en a plusieurs). Le jour de début compte dans la durée. Les
+  tâches sans prédécesseur démarrent à la date de début des travaux.
+
+
+  Tâches (liens fin-début) :
+
+  - A. Installation de chantier : 3 jours ouvrés. Prédécesseur : aucun.
+
+  - B. Terrassement : 5 jours ouvrés. Prédécesseur : A.
+
+  - C. Fondations : 8 jours ouvrés. Prédécesseur : B.
+
+  - D. Réseaux enterrés (VRD) : 4 jours ouvrés. Prédécesseur : B.
+
+  - E. Élévation des murs : 2 semaines de 5 jours ouvrés, soit 10 jours ouvrés. Prédécesseur : C.
+
+  - F. Dallage : 3 jours ouvrés. Prédécesseur : D.
+
+  - G. Charpente et couverture : 6 jours ouvrés. Prédécesseurs : E et F.
+
+  La fin du projet correspond à la fin de G.
+
+
+  Planning transmis par la SCI : « Fin du projet prévue le vendredi 12 mars 2027 » (calcul non détaillé).
+
+
+  Retard annoncé : le sous-traitant VRD (fictif) indique que les réseaux enterrés (D) dureront 18 jours ouvrés au lieu de
+  4, soit un allongement de 14 jours ouvrés, en raison d''une canalisation existante non repérée. Les autres durées et les
+  liens restent inchangés.
+
+  Commentaire du conducteur de travaux : « Les réseaux ne sont pas sur le chemin critique, donc aucun impact sur la date de
+  fin. »
+
+  '
+page: https://aiprofessions.ai/fr/conducteurs-de-travaux/prompts/#cm-fr-planning-retard-01
+results_file: results/cm-fr-planning-retard-01.yaml

@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:16:15+00:00",
+ "attempt": 1,
+ "skill_sha256": "3bb7803d82c4e33bfd86f758674c67ec8cbadb083685b0842938613de85fc6b3",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers all dates, four Rome nights and three Florence nights, explicit June 18 train transfer, and no rental car."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags tree-nut checks for meals, gelato, and workshops; limits each day to one major activity and reserves afternoons for downtime."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduces all agency booking terms verbatim and adds no additional booking terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unverified prices, opening hours, train times, or age limits are stated as facts; relevant details are marked for confirmation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Ends with a to-book/to-confirm checklist and explicitly directs passport, visa, and entry checks to official government sources."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers all dates, four Rome nights and three Florence nights, explicit June 18 train transfer, and no rental car.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags tree-nut checks for meals, gelato, and workshops; limits each day to one major activity and reserves afternoons for downtime.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduces all agency booking terms verbatim and adds no additional booking terms.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No unverified prices, opening hours, train times, or age limits are stated as facts; relevant details are marked for confirmation.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Ends with a to-book/to-confirm checklist and explicitly directs passport, visa, and entry checks to official government sources.\"}]}"
+}

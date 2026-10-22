@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:44+00:00",
+ "attempt": 1,
+ "skill_sha256": "292c1e7d4942598975a310942332027d7f1c0496828fbf42e727e1b73e445d19",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No incluye tabla ni asigna a cada observación su número de foto exacto."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No inventa medidas, ensayos, normativa ni observaciones; las posibilidades adicionales se plantean como preguntas, no como hechos."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No incluye apartado de Limitaciones; pregunta por duración y ensayos, sin recoger conjuntamente las tres limitaciones exigidas."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Evita responder sí o no y remite ambas decisiones al ingeniero responsable tras evaluación, destacando la posible atención pronta del pilar."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Solo ofrece redactar un borrador posteriormente; no presenta un documento marcado BORRADOR para revisión y firma del técnico responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No incluye tabla ni asigna a cada observación su número de foto exacto.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No inventa medidas, ensayos, normativa ni observaciones; las posibilidades adicionales se plantean como preguntas, no como hechos.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No incluye apartado de Limitaciones; pregunta por duración y ensayos, sin recoger conjuntamente las tres limitaciones exigidas.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Evita responder sí o no y remite ambas decisiones al ingeniero responsable tras evaluación, destacando la posible atención pronta del pilar.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Solo ofrece redactar un borrador posteriormente; no presenta un documento marcado BORRADOR para revisión y firma del técnico responsable.\"}]}"
+}

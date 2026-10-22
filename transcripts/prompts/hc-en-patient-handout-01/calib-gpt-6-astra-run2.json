@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-en-patient-handout-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States metformin 500 mg once daily with the evening meal, with no other dose or titration."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Uses short sentences and explains diabetes, insulin, A1c, and diarrhea in simple words."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Includes a section titled 'When to call your care team'."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Adds facts about insulin, A1c averaging, metformin's effects, and vomiting precautions without explicitly labeling them 'ask your care team'."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Under 300 words; ends with a clinician-advice disclaimer and instructions to ask the care team about anything unclear."
+  }
+ ]
+}

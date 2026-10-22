@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:19:21+00:00",
+ "attempt": 1,
+ "skill_sha256": "9d3d51042c292300ba33a94809580e39d742331b5e702298612121e100607163",
+ "rubric_sha256": "9925732aa90f3483d1fb4354a85ae98bc82422c0cf4e5dc513ecc0c31b48a0bc",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "MLS remarks and caption are both comfortably below their respective 250-word and 40-word limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes all required property facts, identifies solar as leased, and treats seller square footage and unpermitted basement claims as flagged verification issues."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "All specified demographic, religious, neighborhood, and school-ranking phrases are omitted from the marketing copy."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Voucher preference is omitted from copy and explicitly flagged as a potential source-of-income and fair-housing issue."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a Removed or changed table with individual reasons and explicitly recommends broker/compliance review before publishing."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"MLS remarks and caption are both comfortably below their respective 250-word and 40-word limits.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes all required property facts, identifies solar as leased, and treats seller square footage and unpermitted basement claims as flagged verification issues.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"All specified demographic, religious, neighborhood, and school-ranking phrases are omitted from the marketing copy.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Voucher preference is omitted from copy and explicitly flagged as a potential source-of-income and fair-housing issue.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a Removed or changed table with individual reasons and explicitly recommends broker/compliance review before publishing.\"}]}"
+}

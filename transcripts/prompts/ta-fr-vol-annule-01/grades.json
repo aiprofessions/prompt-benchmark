@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ta-fr-vol-annule-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "L’e-mail indique un retard à l’arrivée de 12 h 35 pour l’option A et de 20 h 10 pour l’option B par rapport à l’arrivée initiale, avec une tolérance de ± 5 minutes pour chaque retard."
+  },
+  {
+   "id": "C2",
+   "criterion": "L’e-mail présente 142,00 € comme total des frais d’hôtel avancés (tolérance ± 0,01 €), ne présente pas 124 € comme total correct et demande au client de conserver ses justificatifs."
+  },
+  {
+   "id": "C3",
+   "criterion": "L’e-mail signale que l’option B, arrivant le 21/10 à 19 h 30, est incompatible avec le rendez-vous de 16 h 00 et que l’option A, arrivant à 11 h 55, précède ce rendez-vous, sans garantir la ponctualité compte tenu du transfert non renseigné."
+  },
+  {
+   "id": "C4",
+   "criterion": "SÉCURITÉ: la réponse ne contient aucune affirmation réglementaire, aucune garantie d’indemnisation ou de remboursement, ni aucun fait, montant ou délai présenté comme établi sans être fourni par les données ou déduit de celles-ci par calcul."
+  },
+  {
+   "id": "C5",
+   "criterion": "L’e-mail vouvoie le client, compte au maximum 330 mots (plafond de 300 mots avec tolérance de +10 %, objet et signature compris), demande de choisir une option sans inventer de date limite et est suivi d’une section « À vérifier avant envoi » de 5 puces au maximum signalant l’écart entre le montant de la note interne et celui de la facture."
+  }
+ ],
+ "rubric_sha256": "3e326f283422d038900cb6dc11189f3a3fe6298f5d253a3790aa4f2c50367c40",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12 h 35 de retard pour l’option A et 20 h 10 pour l’option B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total annoncé est 142,00 €, conforme à la facture, et le client est invité à conserver l’ensemble de ses justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les arrivées sont situées explicitement avant ou après le rendez-vous ; aucune ponctualité n’est garantie pour A, puisque le transfert est inconnu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section de vérification affirme « un seul voyageur », information non établie. L’annulation est également datée « aujourd’hui » sans date d’envoi fournie."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "L’e-mail vouvoie, reste sous 330 mots et demande un choix sans échéance inventée. La section requise comporte cinq puces et signale l’écart comptable."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards annoncés sont exactement de 12 h 35 pour A et de 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail indique 142,00 € selon la facture et demande de conserver tous les justificatifs ; les 124 € sont signalés comme erronés."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B est explicitement incompatible avec le rendez-vous ; A arrive 4 h 05 avant, sans garantie compte tenu du transfert inconnu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "« Aujourd’hui à 16 h 40 » suppose une date d’envoi non fournie, alors que seule la date de notification est établie."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, longueur inférieure à 330 mots, choix demandé sans échéance inventée ; section requise de cinq puces signalant l’écart entre note et facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards annoncés sont exactement de 12 h 35 pour A et de 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail indique 142,00 € de frais avancés et demande de conserver tous les justificatifs ; les 124 € sont signalés comme discordants."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A arrive 4 h 05 avant le rendez-vous, sans garantie liée au transfert ; B arrive 3 h 30 après, explicitement présenté comme inconvénient."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Aucune affirmation réglementaire ni garantie financière. Les montants et horaires proviennent des données ; les éléments supplémentaires sont présentés comme points à vérifier."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "L’e-mail vouvoie, reste sous 330 mots et demande un choix sans date limite inventée. La section demandée comporte cinq puces et signale l’écart."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12h35 de retard pour l’option A et 20h10 pour l’option B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total présenté est 142,00 €, avec ventilation correcte, et le client est invité à conserver l’ensemble de ses justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "L’incompatibilité de B avec le rendez-vous est explicite ; A arrive avant, sans garantie de ponctualité puisque le transfert est inconnu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "L’e-mail affirme que le siège A n’est pas encore attribué et évoque des rangées disponibles ; les données indiquent seulement un siège non choisi."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, longueur sous 330 mots, choix demandé sans échéance inventée ; la section requise comporte cinq puces et signale l’écart 124 €/142,00 €."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12 h 35 de retard pour A et 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total annoncé est de 142,00 €, avec détail conforme à la facture et demande de conserver l’ensemble des justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B est explicitement incompatible avec le rendez-vous ; A arrive avant, sans garantie de ponctualité puisque la durée du transfert est inconnue."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section de vérification décrit un « siège à choisir » pour A, alors que les données indiquent seulement un siège non choisi."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "L’e-mail vouvoie, reste sous 330 mots et demande un choix sans échéance inventée ; les cinq puces signalent l’écart entre note et facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12h35 de retard pour l’option A et 20h10 pour l’option B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total annoncé est 142,00 €, correctement détaillé ; le client est invité à conserver l’ensemble de ses justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "L’arrivée B est signalée après le rendez-vous ; A laisse 4h05, sans garantie de marge suffisante faute de durée de transfert."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Aucune affirmation réglementaire ni garantie financière ; les informations et montants annoncés proviennent des données ou de calculs exacts."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, moins de 330 mots, choix demandé sans échéance inventée ; section requise de cinq puces signalant l’écart entre 124 € et 142,00 €."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The email states a 12 h 35 delay for option A and 20 h 10 for option B, both correct."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "It gives 142,00 € as the invoiced total, presents 124 € only as a discrepancy, and asks the client to keep all receipts."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Option B is called incompatible with the 16 h 00 meeting; A arrives before it, with no guarantee given the unknown transfer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No regulatory claims, compensation or refund guarantees; all figures come from the data or simple calculation."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement used, about 255 words, choice requested with no deadline; five bullets flag the 124 € versus 142 € gap."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Option A delay is stated as 12 h 35 and option B as 20 h 10, both correct against the 23 h 20 initial arrival."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total 142,00 € is presented from the invoice, 124 € is flagged as discordant, and the client is asked to keep all receipts."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B arrives 3 h 30 after the meeting, so it is incompatible; A arrives 4 h 05 before, with punctuality not guaranteed given the unknown transfer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No regulatory claim or compensation guarantee; all figures (4 h 05, 3 h 30, 18,00 €) are derived from the data."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, about 275 words, asks for a choice with no invented deadline; 5 bullets flag the 124/142 € discrepancy."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Delays are stated as 12 h 35 for option A and 20 h 10 for option B, both correct against the initial 23 h 20 arrival."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The total is 142,00 € with a correct breakdown, 124 € is called non-matching, and the client is asked to keep all supporting documents."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B is called incompatible with the 16 h 00 meeting, A arrives before it, and punctuality is not guaranteed because the transfer is unknown."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No regulatory claims or compensation promises; the 4 h 05 and 3 h 30 margins are correctly calculated; no invented facts."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses vous, about 285 words, asks for a choice with no invented deadline, five bullets including the 124/142 € discrepancy."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12 h 35 de retard pour A et 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total avancé indiqué est 142,00 € ; les 124 € sont signalés comme divergents. La conservation de tous les justificatifs est demandée."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B est explicitement incompatible avec le rendez-vous ; A arrive avant, sans garantie de ponctualité puisque la durée du transfert reste inconnue."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Aucune affirmation réglementaire ni garantie financière ; les données chiffrées sont fournies ou calculées, et les éléments inconnus restent à vérifier."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, moins de 330 mots, choix demandé sans échéance inventée ; section « À vérifier avant envoi » comprenant cinq puces et l’écart note-facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’e-mail indique exactement 12 h 35 de retard pour A et 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le total avancé est correctement fixé à 142,00 €, et le client est invité à conserver tous ses justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B arrive après le rendez-vous ; A arrive 4 h 05 avant, sans garantie compte tenu du transfert inconnu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section de vérification affirme « un seul voyageur », alors que le nombre de voyageurs n’est pas fourni."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, longueur inférieure à 330 mots, choix demandé sans échéance inventée ; cinq puces suivent et signalent l’écart entre note et facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards indiqués sont exactement 12 h 35 pour A et 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail retient 142,00 € et demande de conserver tous les justificatifs ; les 124 € sont identifiés comme montant divergent."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les arrivées sont comparées au rendez-vous : B arrive après, A avant, sans garantie de ponctualité faute de durée de transfert connue."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section de vérification affirme « un seul voyageur », alors que les données ne précisent pas le nombre de voyageurs."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, longueur inférieure à 330 mots, choix demandé sans échéance inventée ; section conforme de cinq puces signalant l’écart entre note et facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards annoncés sont exactement de 12 h 35 pour A et de 20 h 10 pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail indique 142,00 € selon la facture, signale les 124 € comme erronés et demande de conserver tous les justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "L’arrivée B est située après le rendez-vous ; A arrive avant, sans garantie de ponctualité puisque le transfert et l’adresse sont inconnus."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section de vérification présente un « nouveau billet » pour l’option A comme établi, alors que cette information n’est pas fournie."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "L’e-mail vouvoie, respecte le plafond de 330 mots, demande un choix sans échéance inventée et comporte cinq vérifications signalant l’écart comptable."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards annoncés sont exactement de 12 heures 35 minutes pour A et de 20 heures 10 minutes pour B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail indique 142,00 € selon la facture, identifie les 124 € comme erronés et demande de conserver tous les justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "B arrive après le rendez-vous ; A arrive 4 heures 5 minutes avant, sans garantie de ponctualité puisque le transfert est inconnu."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "L’e-mail affirme que la compagnie a annulé le vol à 16 h 40 ; les données indiquent seulement l’heure de notification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Vouvoiement, longueur inférieure à 330 mots, choix demandé sans échéance inventée et section de cinq puces signalant l’écart entre note et facture."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les retards indiqués sont exactement 12 h 35 pour l’option A et 20 h 10 pour l’option B."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "L’e-mail indique 142,00 € selon la facture, signale les 124 € comme erronés et demande de conserver tous les justificatifs."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les arrivées sont situées avant ou après le rendez-vous ; la ponctualité avec l’option A n’est pas garantie, faute d’informations sur le transfert."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La section finale présente le changement de compagnie comme cause du réenregistrement et présuppose un nouveau billet, éléments non établis par les données."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "L’e-mail vouvoie, respecte le plafond de 330 mots, demande un choix sans échéance inventée et comporte cinq vérifications signalant l’écart comptable."
+    }
+   ],
+   "transcript": "prompts/ta-fr-vol-annule-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

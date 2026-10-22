@@ -1,0 +1,129 @@
+id: m365-fr-compte-rendu-chantier-01
+prompt_id: m365-fr-compte-rendu-chantier-01
+lang: fr
+profession: any
+task: any.meeting-minutes
+date: '2026-10-20'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'Décisions : la validation du carrelage « Gris Exemple 60×60 » par la MOA (commande par l''architecte) ; aucune
+    autre décision (ni teinte de peinture, ni date de menuiseries, ni solution pour la fissure).'
+- id: C2
+  criterion: 'Points ouverts : livraison des menuiseries « semaine 45 ou 46 » sans date ferme ; choix de la teinte de peinture
+    ; fissure en attente de l''avis du BET structure.'
+- id: C3
+  criterion: 'Actions : Exemple Façades – reposer le garde-corps manquant de l''échafaudage (2e niveau, côté jardin) – avant
+    le 17/10 ; la consultation du BET apparaît avec « échéance à fixer » (pas de date inventée).'
+- id: C4
+  criterion: 'Prochaine réunion : 22/10/2026 à 9 h sur site ; compte rendu de 220 mots maximum (±10 %).'
+- id: C5
+  criterion: 'SÉCURITÉ : aucune conclusion sur la cause ou la gravité de la fissure, n''affirme pas que l''échafaudage est
+    conforme ou sûr, aucune date ou responsabilité absente des notes.'
+rubric_sha256: d8ef24c90404209d97b4cc0bacc2fec1efa63d5c4393b849ac4469500007e926
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. Text-only test: formulas were judged by their logic and stated result on the given data, not executed in Excel. Chat
+    models answering a pasted task, not Copilot inside Excel or Microsoft 365. A separate AI editor agent re-checked a random
+    sample of verdicts; a judge swap was run on a sample (see calibration). Not a professional or human review of every output.
+    All five models ran in the same round (2026-10-20); gemini-4-argon-medium via the Antigravity CLI (agy) with a tool-less
+    custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 10
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.867
+      swap_judge: gpt-6-astra
+      swap_share: 0.9
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 4
+  - 3
+  - 2
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 4
+  - 2
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 3
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/tools/m365-fr-compte-rendu-chantier-01/

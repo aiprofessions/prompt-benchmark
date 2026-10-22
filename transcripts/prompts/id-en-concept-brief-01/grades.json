@@ -1,0 +1,542 @@
+{
+ "prompt_id": "id-en-concept-brief-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Includes all requested sections."
+  },
+  {
+   "id": "C2",
+   "criterion": "Keeps the constraints: condo no plumbing/structural changes and works only 9–17 on weekdays."
+  },
+  {
+   "id": "C3",
+   "criterion": "Lists conflicts to resolve: white sofa vs dog/child durability and/or warm-minimal vs bold color."
+  },
+  {
+   "id": "C4",
+   "criterion": "Functional must-haves include durable dog-friendly floors, toy storage and a WFH corner."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: invents no budget figure or product prices."
+  }
+ ],
+ "rubric_sha256": "be94462ec33f780e1ec8dca3f30cd5b92e5f9d9fca78708fe06842b85d2d25a6",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts works to 9:00–17:00 on weekdays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus child/dog practicality and bold color versus warm-minimal/Japandi as conflicts for client resolution."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the unspecified mid-range budget and invents no budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and limits works to 9:00–17:00 on weekdays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and bold color versus warm-minimal/Japandi as conflicts requiring client resolution."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, accessible toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the unquantified mid-range budget and invents no budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts works to 9:00–17:00 on weekdays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and bold color versus warm-minimal/Japandi as conflicts requiring client decisions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable large-dog-friendly flooring, toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the unquantified mid-range budget and requests clarification without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and limits construction/installation work to 9:00–17:00 on weekdays only."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and warm-minimal/Japandi versus bold color as conflicts requiring client alignment."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-resistant flooring, dedicated toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the client's mid-range budget description without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with two design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts works to weekdays, 9:00–17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and warm minimal/Japandi versus substantial bold color as unresolved client conflicts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-proof flooring, dedicated toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the qualitative mid-range budget without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with two design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts on-site work to weekdays, 9:00–17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists white sofa versus large-dog durability and bold color versus warm-minimal/Japandi preferences as conflicts requiring client resolution."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, dedicated toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Invents no budget figures or product prices; retains the mid-range description and requests budget clarification."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All seven requested sections present with matching headings."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constraints list no plumbing/structure changes and weekday 9:00–17:00 works window."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists white sofa vs child/dog and warm minimal vs bold color as conflicts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Must-haves include dog-durable flooring, toy storage, and WFH corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No budget figures or product prices invented; budget kept as 'mid-range'."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All seven requested sections are present; Design direction has two sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constraints list no plumbing or structural changes and works only weekdays 9:00–17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Conflicts include warm minimal vs bold color and white sofa vs child/dog use."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Must-haves list durable dog-suitable flooring, accessible toy storage, and a WFH corner."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No budget figures or product prices appear; budget is stated as unspecified mid-range."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All seven requested sections present; design direction has two sentences plus five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constraints list no plumbing/structure changes and works weekdays 9:00–17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Conflicts list both white sofa vs child/dog and warm minimal vs bold color, without choosing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Must-haves include durable dog flooring, toy storage, and a WFH corner."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No budget figures or product prices; budget stated only as 'mid-range'."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with two design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts works to weekdays, 9–17."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child maintenance and warm-minimal/Japandi versus bold color under conflicts to resolve."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, accessible toy storage, and a dedicated work-from-home corner."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the undefined mid-range budget, requests client clarification, and invents no budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly preserves no plumbing or structural changes and limits works to 9:00–17:00 on weekdays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and warm-minimal/Japandi versus bold color as unresolved client conflicts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-proof flooring, dedicated toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the qualitative mid-range budget, requests clarification, and invents no budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly retains no plumbing or structural changes and restricts works to 9–17 on weekdays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both white sofa versus dog/child durability and bold color versus warm-minimal/Japandi as conflicts for client resolution."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly floors, accessible toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the client's mid-range budget description without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and limits construction and installation work to weekdays between 9:00 and 17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both warm-minimal versus bold-color preferences and white-sofa durability concerns involving the child and large dog."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, toy storage, and a dedicated work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the unspecified mid-range budget without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections, with three design-direction sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts construction and installation to weekdays between 9:00 and 17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both warm-minimal versus bold-color preferences and white-sofa practicality with a child and large dog as conflicts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, dedicated toy storage, and a work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the unspecified mid-range budget without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all seven requested sections; Design direction contains three sentences and five keywords."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly prohibits plumbing and structural changes and restricts construction and installation work to weekdays from 9:00 to 17:00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists both warm-minimal/Japandi versus bold color and white sofa versus child and large-dog durability conflicts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Functional must-haves explicitly include durable dog-friendly flooring, toy storage, and a dedicated work-from-home corner for one adult."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Retains the qualitative mid-range budget without inventing budget figures or product prices."
+    }
+   ],
+   "transcript": "prompts/id-en-concept-brief-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

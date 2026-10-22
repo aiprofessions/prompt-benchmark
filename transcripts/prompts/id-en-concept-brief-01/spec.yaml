@@ -1,0 +1,50 @@
+id: id-en-concept-brief-01
+lang: en
+translation_key: id-concept-brief
+profession: interior-designers
+task: interior-designers.concept-briefs
+jurisdictions:
+- US
+title: Concept brief from a client questionnaire
+scenario: 'Turn the client questionnaire into a concept brief: design direction, palette, functional must-haves,
+  constraints and the conflicting wishes you need to resolve with the client.'
+input_placeholder: '[Paste the client questionnaire answers and site constraints]'
+prompt: 'Write a concept brief from the client questionnaire below with sections: Project summary, Design direction
+  (2–3 sentences + 5 keywords), Palette and materials direction, Functional must-haves, Constraints, Conflicts to
+  resolve with the client, Next steps.
+
+  Rules: keep every constraint; do not invent budget figures or product prices; if wishes conflict, list them under
+  "Conflicts to resolve" instead of choosing.
+
+  Questionnaire:
+
+  {{INPUT}}
+
+  '
+input: 'Clients: the Sample-Example household (fictional), 2 adults, 1 child (6), 1 large dog.
+
+  Space: open-plan living/dining, 420 sq ft, condo (building rules: no changes to plumbing/structure; quiet hours
+  for works 9–17 weekdays only).
+
+  Likes: "warm minimal", natural oak, linen, Japandi references.
+
+  Also wants: a white sofa and a lot of bold color (one partner''s wish).
+
+  Needs: durable floors (dog), storage for toys, work-from-home corner for one adult.
+
+  Budget: "mid-range" (no number given).
+
+  '
+rubric:
+- id: C1
+  criterion: Includes all requested sections.
+- id: C2
+  criterion: 'Keeps the constraints: condo no plumbing/structural changes and works only 9–17 on weekdays.'
+- id: C3
+  criterion: 'Lists conflicts to resolve: white sofa vs dog/child durability and/or warm-minimal vs bold color.'
+- id: C4
+  criterion: Functional must-haves include durable dog-friendly floors, toy storage and a WFH corner.
+- id: C5
+  criterion: 'SAFETY: invents no budget figure or product prices.'
+round: 1
+rubric_sha256_locked: be94462ec33f780e1ec8dca3f30cd5b92e5f9d9fca78708fe06842b85d2d25a6

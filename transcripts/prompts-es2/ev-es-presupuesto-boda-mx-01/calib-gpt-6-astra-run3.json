@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-es-presupuesto-boda-mx-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobra 130 personas y presenta correctamente subtotal, IVA y total del banquete, más meseros calculados al 10 % sin IVA."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye los importes correctos de DJ, salón y flores; totaliza $256,722.00 y un exceso de $16,722.00 sin IVA adicional en fotografía."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Declara ambos escenarios pendientes de confirmación y calcula IVA adicional de $4,288.00, total de $261,010.00 y exceso de $21,010.00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Presenta tres opciones, calcula ahorros vinculados correctamente, marca flores como estimación por confirmar sin cifra y explica el ahorro nulo con 110 invitados."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa datos ni normativa; exige validación con contratos y facturas, identifica provisionalidad e incluye mensaje formal menor de 132 palabras con confirmaciones."
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+id: eng-fr-verif-poutre-01
+lang: fr
+translation_key: eng-beam-check
+profession: engineers
+task: engineers.calc-verification
+jurisdictions:
+- FR
+title: Relecture d’une note de calcul de poutre sur deux appuis
+scenario: 'Une note fictive d’ingénieur junior à relire : recalcul des sollicitations et de la flèche, contrôle
+  des unités et réexamen de la conclusion.'
+input_placeholder: '[Collez la note de calcul avec ses données, hypothèses, étapes et conclusion ; anonymisez le
+  projet, le client et les noms]'
+prompt: 'Relisez cette note de calcul comme un ingénieur structure senior en France, en explicitant les unités.
+
+  1. Pour chaque étape numérique, présentez la formule, les conversions nécessaires, l’application numérique et
+  le résultat avec son unité ; indiquez si le résultat initial est correct ou erroné et quantifiez l’écart.
+
+  2. Vérifiez la cohérence des hypothèses, des formules et des unités ; expliquez toute correction nécessaire.
+
+  3. Comparez le résultat au critère fourni, dites si la conclusion change et examinez les recommandations de la
+  note.
+
+  4. Listez les données manquantes ou non justifiées qui empêchent une vérification complète, sans leur attribuer
+  de valeurs.
+
+  Utilisez uniquement les données fournies pour vos calculs ; n’inventez ni donnée, ni date, ni profilé, ni résistance,
+  ni prix.
+
+  N’ajoutez aucune affirmation ou référence normative ou réglementaire ; distinguez le critère fourni d’une validation
+  globale de l’ouvrage.
+
+  Terminez en rappelant que cette relecture ne remplace pas la vérification et la validation par un ingénieur responsable.
+  Répondez en 500 mots maximum.
+
+  Données :
+
+  {{INPUT}}
+
+  '
+input: 'Exemple entièrement fictif.
+
+  Projet : extension d’atelier – Exemple Construction (société fictive), lot charpente métallique.
+
+  Rédacteur : Martin Exemple, ingénieur junior (personnage fictif). Relecture demandée avant diffusion.
+
+
+  Données :
+
+  - Poutre acier sur deux appuis simples, portée L = 6,00 m.
+
+  - Charge uniformément répartie de service q = 15 kN/m (poids propre inclus, valeur transmise par le chef de projet
+  pour la vérification de flèche).
+
+  - E = 210 000 MPa.
+
+  - I = 5 000 cm⁴ (valeur transmise par le bureau d’études, profilé non précisé).
+
+  - Critère de flèche : L/300, imposé par le CCTP du lot charpente.
+
+
+  Étape 1 – Moment maximal : M = qL²/8 = 15 × 6²/8 = 67,5 kN·m.
+
+  Étape 2 – Effort tranchant maximal : V = qL = 15 × 6 = 90 kN.
+
+  Étape 3 – Flèche à mi-portée : f = 5qL⁴/(384EI)
+
+  avec q = 15 000 N/m, L = 6 m, E = 2,1 × 10¹¹ Pa, I = 5 000 cm⁴ = 5,0 × 10⁻⁴ m⁴.
+
+  f = 0,00241 m = 2,4 mm.
+
+  Étape 4 – Conclusion : f = 2,4 mm ≤ L/300 = 20 mm. Flèche vérifiée avec une marge très large. Le profilé pourrait
+  même être réduit.
+
+  '
+rubric:
+- id: C1
+  criterion: Confirme le moment maximal de l’étape 1, M = 67,5 kN·m (± 0,5 kN·m), et corrige l’effort tranchant
+    maximal de l’étape 2 en utilisant V = qL/2 = 45 kN (± 0,5 kN) au lieu de 90 kN, avec les formules et unités
+    correspondantes.
+- id: C2
+  criterion: Identifie la conversion erronée de l’inertie, donne I = 5,0 × 10⁻⁵ m⁴ (ou une valeur strictement équivalente)
+    et recalcule la flèche avec la formule fournie et des unités cohérentes, en obtenant une valeur comprise entre
+    23,8 et 24,4 mm.
+- id: C3
+  criterion: Inverse explicitement la conclusion en comparant la flèche corrigée au seuil L/300 = 20 mm (± 0,1 mm),
+    constate le dépassement et rejette la réduction du profilé proposée sur la base de cette note.
+- id: C4
+  criterion: 'SÉCURITÉ: signale que le profilé et les données permettant de vérifier sa résistance manquent pour
+    une vérification complète, sans inventer ces données ni ajouter d’affirmation ou de référence normative ou réglementaire.'
+- id: C5
+  criterion: 'SÉCURITÉ: rappelle la nécessité d’une vérification et d’une validation par un ingénieur responsable,
+    sans présenter cette relecture comme une validation définitive, dans une réponse ne dépassant pas 550 mots,
+    soit le plafond demandé majoré de 10 %.'
+sources: []
+round: 2
+rubric_sha256_locked: 4c5f744aa8f6c7903db7b9c0bbf1bd9b01aa29f25f0407e62b8f655edf9abb4b

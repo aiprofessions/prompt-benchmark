@@ -1,0 +1,61 @@
+# Transcript — cm-en-jha-01 — gpt-6-astra — run 1
+
+- model_id: `gpt-6-astra` (provider `openai`)
+- started_utc: 2026-10-19T11:43:58+00:00
+- duration_s: 82.6
+- exit_code: 0
+- attempts: 1
+- completed: True
+- rubric_sha256: 1841fef0c5bd2106a1b3a3f7c5efcb502d334940f8a2c9b20fe46470dd0b0a33
+
+## Query (verbatim, from query file)
+
+```text
+Draft a Job Hazard Analysis (JHA) for the task below as a table: Step | Hazards | Controls (ordered by the hierarchy of controls: elimination, substitution, engineering, administrative, PPE) | Responsible.
+Include fall protection, materials handling, weather and emergency/rescue planning where relevant.
+Do not cite specific regulation section numbers unless you are certain; prefer "[verify applicable OSHA standard]". State that a competent person must review and approve the JHA before work.
+Task:
+Site: Example Warehouse (fictional), single-storey, flat roof ~24 ft high, parapet only 18 in.
+Task: replace 6 rooftop exhaust fans; each old unit ~180 lb. Lift by small crane from the parking lot; crew of 4 roofers + 1 crane operator + 1 signal person.
+Existing skylights on the roof (12 units, no screens).
+Forecast: wind gusts up to 25 mph in the afternoon.
+```
+
+## Output (verbatim stdout, session metadata stripped)
+
+Job Hazard Analysis — Rooftop Exhaust Fan Replacement
+
+Site: Example Warehouse (fictional)
+Scope: Replace 6 rooftop exhaust fans on a flat roof approximately 24 ft high. Each existing fan weighs approximately 180 lb; verify actual weights, including attached components.
+Crew: 4 roofers, 1 crane operator, 1 signal person.
+Critical conditions: 18-in parapet is not adequate fall protection; 12 unscreened skylights must be treated as fall-through hazards. Afternoon wind gusts may reach 25 mph.
+
+A competent person must review and approve this JHA before work. Confirm site conditions, equipment instructions, applicable requirements [verify applicable OSHA standard], and the rescue plan. This draft is not authorization to proceed.
+
+Controls below are ordered by hierarchy: elimination → substitution → engineering → administrative → PPE. Levels without a practicable control are omitted.
+
+Step | Hazards | Controls (hierarchy order) | Responsible
+-----|---------|----------------------------|------------
+1. Survey roof and plan work | Falls during inspection; fragile skylights; weak decking; unknown fan weights, utilities and roof capacity | Elimination: Perform initial assessment from drawings and ground-level observation where possible; keep people off unassessed roof areas. Engineering: Establish protected access before roof inspection; have structural capacity, crane setup bearing capacity and any fall-protection anchorages verified by qualified personnel. Administrative: Map all 12 skylights, roof edges, fan openings, access points and load routes; verify replacement weights, rigging weight, lift radius and crane capacity; assign named roles and conduct pre-job briefing. PPE: Select task-specific protection following assessment. | Competent person/site supervisor; qualified structural and fall-protection personnel as needed; crane operator
+2. Establish crane and ground work zones | Crane overturn; overhead power contact; struck-by loads; public/vehicle entry; crushed hands/feet during setup | Elimination: Close affected parking spaces and remove vehicles and pedestrians from setup and load-path areas. Engineering: Use suitable outrigger support/mats and manufacturer-specified setup; install barriers; establish required clearance from utilities and obstructions. Administrative: Verify underground hazards and ground support; develop lift plan using actual radius and configuration; inspect crane and rigging; designate a qualified signal person and qualified rigger, confirming qualifications rather than assuming them from job titles. PPE: Hard hats, safety footwear, high-visibility clothing and task-appropriate gloves. | Crane operator; site supervisor; signal person; qualified rigger
+3. Establish roof access and fall protection | 24-ft falls; falls through skylights; ladder/access falls; unprotected workers installing protection | Elimination: Keep workers away from unprotected edges and skylights; do not carry materials while climbing. Substitution: Use a protected stair access system rather than a ladder where feasible. Engineering: Provide compliant edge guardrails and secured, load-rated skylight covers/screens or guardrails around all exposed skylights; identify covers and secure them against displacement. Provide protected access routes. Where collective protection is impracticable, use an engineered restraint system that prevents reaching hazards, or a suitable personal fall-arrest system with verified anchors, clearance and swing-fall limits. Administrative: Plan protected installation/removal of these systems; inspect before use; do not rely on the 18-in parapet, skylight glazing, warning tape or a safety monitor alone. PPE: Compatible harness, connectors and restraint/arrest equipment where required. | Competent person; designated fall-protection installer; all roofers
+4. Isolate fans and prepare work areas | Unexpected startup; electrical shock; moving blades; hazardous exhaust residues; trips and falling tools | Elimination: Shut down, isolate and lock/tag all energy sources; verify zero energy and prevent automatic restart. Coordinate shutdown of processes served by fans. Engineering: Protect nearby skylights and edges; secure tools and loose materials; establish barriers below roof work. Administrative: Authorized personnel verify isolation; identify exhaust contaminants and cleaning needs before opening systems; establish housekeeping and tool-control procedures. PPE: Eye protection, suitable gloves and footwear; electrical or respiratory PPE only as determined by the assessed hazard and applicable program. | Authorized isolation personnel/electrician; facility representative; roofing lead
+5. Disconnect and rig each old fan | Strains from 180-lb units; sharp sheet metal; unstable equipment; dropped fan; pinch points; newly exposed roof opening | Elimination: Do not manually carry or team-lift whole fans; use mechanical lifting. Engineering: Rig using verified lifting points or an approved method; support and stabilize fan before releasing final attachments; provide opening protection arranged so workers remain protected throughout removal. Administrative: Confirm all fasteners, wiring and duct connections are released before hoisting; never use the crane to tear free a stuck unit; inspect corrosion and lifting-point integrity; keep hands out of pinch points. PPE: Cut-resistant gloves, eye protection, hard hats and safety footwear. | Roofing lead; qualified rigger; authorized electrician; crane operator
+6. Lift old units down and replacements up | Falling/swinging loads; crane overload; wind-driven load rotation; workers trapped at edges; falls through open fan curbs | Elimination: Clear everyone from beneath loads and keep nonessential workers out of landing zones. Engineering: Use suitable rated rigging and lifting accessories; use tag lines only where safe, never wrapped around a body; maintain collective fall protection and immediately secure/load-rate cover or guard each vacated opening. Administrative: Use one designated signal person, agreed radio/hand signals and a test lift; obey anyone’s emergency-stop signal; stop if communication is lost; keep load path away from people and skylights; no reaching beyond protection or standing between a load and fixed object. PPE: Hard hats, gloves, safety footwear and required fall-protection equipment. | Crane operator; signal person; qualified rigger; roofing lead
+7. Land, position and secure replacement fans | Pinch/crush injuries; unstable or rolling loads; roof overload; ergonomic strain; displaced opening protection | Elimination: Minimize roof storage and avoid manual repositioning of whole fans. Engineering: Use suitable positioning aids and verified load-distribution/staging areas; secure fans against movement; retain crane support until fan is stable and adequately secured under the installation plan. Maintain guarded/protected openings throughout landing. Administrative: Confirm roof and curb capacity and attachment requirements; keep hands clear using positioning tools; restrict access during any necessary change in opening protection; disconnect rigging only when instructed by the responsible rigger. PPE: Gloves, eye protection, safety footwear and required fall-protection equipment. | Roofing lead; qualified rigger; crane operator; competent person
+8. Monitor weather throughout work | Gusts rotate fans and destabilize workers; lightning; slippery roof; heat/cold stress; poor visibility | Elimination: Schedule lifts before forecast afternoon gusts where feasible; suspend lifting and roof work when conditions become unsafe. Engineering: Monitor wind at representative operating height/location; secure loose materials and staged fans. Administrative: Before starting, set wind/gust and other weather stop-work criteria using crane and rigging instructions, load sail area, roof conditions and fall-protection limitations; apply the most restrictive limit. Forecast 25-mph gusts are not automatic permission to lift. Establish who monitors weather and orders shutdown; allow time to land loads safely and evacuate before deterioration. PPE: Weather-appropriate clothing and slip-resistant footwear; PPE does not make unsafe weather acceptable. | Crane operator for lifting limits; competent person for roof work; designated weather monitor
+9. Reconnect, test and demobilize | Shock; unexpected rotation; exposed openings; dropped debris; falls while removing temporary protection | Elimination: Remove waste and unused materials mechanically; keep unnecessary personnel clear during testing. Engineering: Install fan guards and permanent closures; maintain protected access, edge and skylight protection until exposure ends. Administrative: Authorized personnel restore energy under the isolation procedure after checks and notification; inspect mounting, guards and roof seals; account for tools; remove temporary protection only under a protected sequence, with permanent site hazards handed over to the facility. PPE: Task-specific eye, hand, foot and fall protection. | Authorized electrician/isolation personnel; roofing lead; competent person; facility representative
+10. Emergency readiness and response — established before roof access | Suspended-worker injury; fall through skylight; medical emergency; electrical incident; crane incident; delayed rescue | Elimination: Stop work and isolate the incident area; prevent secondary casualties. Engineering: Provide suitable, ready rescue equipment and independently suitable rescue anchorages/access; maintain clear emergency access. Administrative: Develop a site-specific rescue plan for edge falls, skylight falls and incapacitated roof workers; identify trained rescuers, first-aid personnel, communications, exact site address, emergency contacts and ambulance access. Verify rescue can actually be performed with available equipment and staffing; brief/rehearse roles before work. Do not rely solely on calling emergency services or on an improvised crane rescue. Account for everyone after evacuation. PPE: Rescue-rated fall protection and task-specific responder protection. | Site supervisor/competent person; designated trained rescue team; first-aid personnel; all crew members
+
+Release-to-work conditions:
+    Named competent person approval recorded.
+    Roof/skylight/opening protection and safe access installed or a protected installation method approved.
+    Lift plan, verified weights/capacities, ground support and qualified personnel confirmed.
+    Energy isolation, exclusion zones and communication checks completed.
+    Weather stop criteria and a workable, staffed rescue plan confirmed.
+
+Competent person: ____________________  Approval/date: ____________________
+Crew briefing/sign-on: __________________________________________________
+
+Reassess and reapprove if equipment, staffing, roof conditions, lift configuration or weather conditions change materially.
+

@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:23:30+00:00",
+ "attempt": 1,
+ "skill_sha256": "67cbf3ce943301bd0d1a7b0d1baa9442dc41fe1468e6b8b22c1007337936cd35",
+ "rubric_sha256": "12dde3d1f2528099a3595986d77a9df002effd62debb25ca324723fad087c14c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye tabla con albañiles 5, fontaneros 2, electricistas 3, peones propios 2, total 12 y clima exacto."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra aplazamiento del hormigonado de la losa de escalera por lluvia y reprogramación al 23/10, sin cuantificar días de retraso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra orden verbal de dirección facultativa a las 09:30, carpintería planta 1, ausencia en Libro, vencimiento 31/10/2026 y borrador solicitando orden escrita."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Recoge trabajador sin arnés a las 13:10, paralización de tarea, dotación de arnés y charla sobre trabajos en altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa costes, plazos, actividades ni personas; identifica datos ausentes y presenta como provisional la posible aplicación contractual al aplazamiento."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye tabla con albañiles 5, fontaneros 2, electricistas 3, peones propios 2, total 12 y clima exacto.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Registra aplazamiento del hormigonado de la losa de escalera por lluvia y reprogramación al 23/10, sin cuantificar días de retraso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Registra orden verbal de dirección facultativa a las 09:30, carpintería planta 1, ausencia en Libro, vencimiento 31/10/2026 y borrador solicitando orden escrita.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Recoge trabajador sin arnés a las 13:10, paralización de tarea, dotación de arnés y charla sobre trabajos en altura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa costes, plazos, actividades ni personas; identifica datos ausentes y presenta como provisional la posible aplicación contractual al aplazamiento.\"}]}"
+}

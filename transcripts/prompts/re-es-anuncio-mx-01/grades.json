@@ -1,0 +1,542 @@
+{
+ "prompt_id": "re-es-anuncio-mx-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Descripción de portal ≤200 palabras y texto de redes ≤40 palabras (±10 %)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Incluye los datos objetivos (2 rec., 2 baños, piso 4 con elevador, 1 cajón, cocina 2025, renta $18,500 + mantenimiento $1,200) y no presenta los 85 m² como verificados (o los marca 'según propietario')."
+  },
+  {
+   "id": "C3",
+   "criterion": "Elimina 'solo parejas sin hijos' y 'de preferencia extranjeros' y explica que son discriminatorias."
+  },
+  {
+   "id": "C4",
+   "criterion": "Elimina la promesa de plusvalía del 20 % anual y explica por qué."
+  },
+  {
+   "id": "C5",
+   "criterion": "Tiene la lista 'Quitado o modificado' con motivos y recomienda verificar documentación/superficie. (La política de mascotas puede mantenerse como condición del inmueble.)"
+  }
+ ],
+ "rubric_sha256": "1551b3239220832b7e012c1eb1e9c941edfe1eae3c351c0e48d56d5bf049fabc",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal y el texto de redes están dentro de los límites de palabras establecidos."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos exigidos y atribuye los 85 m² al propietario, indicando que están pendientes de verificación documental."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas restricciones y explica su carácter discriminatorio por estado civil, situación familiar y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase de plusvalía del 20 % anual y explica que constituye una promesa no verificable."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista «Quitado o modificado» con motivos y recomienda verificar escrituras, titularidad y superficie, además del uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal y el texto de redes están dentro de los límites de 200 y 40 palabras, respectivamente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos exigidos y atribuye los 85 m² al propietario, indicando que están pendientes de verificación."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas frases y explica explícitamente su carácter discriminatorio por estado civil, condición familiar y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la afirmación del 20 % anual y explica que constituye una promesa de plusvalía sin sustento."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista «Quitado o modificado» con motivos y recomienda verificar documentación, superficie y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal y el texto de redes están dentro de los límites de palabras establecidos."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos solicitados y atribuye los 85 m² al propietario, pendientes de verificación documental."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica su carácter discriminatorio por estado civil, hijos, nacionalidad u origen."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina el 20% anual y la afirmación de plusvalía, explicando que son promesas sin sustento o afirmaciones no verificadas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista Quitado o modificado con motivos y recomienda verificar documentación, superficie y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción tiene menos de 200 palabras y el texto para redes tiene aproximadamente 33 palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos exigidos y atribuye los 85 m² al propietario, aclarando que no están verificados."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas restricciones del anuncio y explica que discriminan por estado civil, condición familiar y origen o nacionalidad."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la promesa del 20 % anual y explica que constituye una promesa de plusvalía futura no verificable y no permitida."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta la lista Quitado o modificado con motivos y recomienda verificar documentación de propiedad y superficie real."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Ambos textos están dentro de los límites de palabras, aunque los conteos declarados no sean exactos."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos enumerados; el portal atribuye la superficie al propietario y exige verificarla, mientras redes la marca aproximada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica la discriminación por estructura familiar y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la promesa del 20 % anual y la identifica como especulativa, no verificable y prohibida por las reglas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista solicitada con motivos y recomienda verificar documentación de propiedad, superficie real y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal tiene menos de 200 palabras y el texto para redes tiene aproximadamente 40."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Incluye los datos objetivos, pero en redes presenta «~85 m²» sin atribución al propietario ni aclaración de que la superficie está pendiente de verificar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica expresamente su carácter discriminatorio por estado civil, composición familiar y origen o nacionalidad."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase sobre plusvalía y el 20 % anual porque promete rendimientos futuros que no pueden garantizarse ni afirmarse como hechos."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista «Quitado o modificado» con motivos y recomienda verificar documentación, superficie exacta, situación legal y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Portal description is about 90 words and the social text about 32, both within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all objective data and presents 85 m² as reported by the owner, pending verification."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Removes both phrases, explaining they restrict by marital status/family and by origin/nationality, i.e., discriminatory."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Removes the 20% appreciation claim as an unverified assertion and a promise of appreciation."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes the list with reasons and recommends verifying documentation, floor area, and land use."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Portal description is about 90 words; social text is about 31 words. Both are within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Portal includes all objective data. The 85 m² is attributed to the owner and flagged as pending verification."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Both phrases removed, explained as restricting by family/civil status and preferring by origin or nationality."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The plusvalía claim and the 20% annual increase are removed as unsupported promises of future appreciation."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The 'Quitado o modificado' list gives reasons; the portal text recommends verifying documentation, surface area and land use."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Portal description is about 90 words; social text is about 34 words. Both are within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Portal text includes every objective datum; 85 m² is marked as reported by the owner and pending verification."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Removes both phrases, citing marital status/family composition and origin/nationality as discriminatory grounds."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Removes the plusvalía claim and the 20% annual rise, explaining they are unverified and unsupported promises."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "List gives reasons for each change; portal tells the agent to verify documentation, surface area and land use."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal tiene menos de 200 palabras y el texto para redes menos de 40."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos enumerados y atribuye los 85 m² al propietario, pendientes de confirmar con escrituras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Retira ambas preferencias y explica su carácter discriminatorio por estado civil, condición familiar y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase de plusvalía y el 20 % anual, explicando que constituye una promesa de rendimiento no verificable y prohibida."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista «Quitado o modificado» con motivos y recomienda verificar superficie, escrituras, acreditación de propiedad y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal tiene menos de 200 palabras, incluso contando la nota interna; el texto de redes tiene menos de 40."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos solicitados y atribuye los 85 m² al propietario, pendientes de confirmación."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica su carácter discriminatorio por estado civil, situación familiar y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase completa de plusvalía y el 20% anual, explicando que promete rendimiento sin verificar y puede constituir publicidad engañosa."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista 'Quitado o modificado' con motivos y recomienda verificar documentación, superficie y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal y el texto para redes están dentro de los límites de palabras permitidos."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos solicitados; el portal atribuye los 85 m² al propietario y señala que están pendientes de confirmación documental."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica su carácter discriminatorio por estado civil, situación familiar y origen o nacionalidad."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la promesa del 20 % anual y explica que constituye una promesa de rendimiento no verificada e información engañosa."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista «Quitado o modificado» con motivos y recomienda verificar superficie, documentación de propiedad, facultad para rentar y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción tiene menos de 200 palabras y el texto para redes aproximadamente 41, dentro de la tolerancia del 10 %."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos requeridos y atribuye los 85 m² al propietario, pendientes de verificación en escrituras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica su carácter discriminatorio por estado civil, situación familiar, edad y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la promesa del 20 % anual y explica que promete rendimientos futuros y constituye una afirmación especulativa no verificada."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta la lista «Quitado o modificado» con motivos y recomienda verificar documentación legal, superficie y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción del portal y el texto de redes están dentro de los límites de palabras establecidos."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos enumerados y atribuye los 85 m² al propietario, indicando que están pendientes de verificación."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica explícitamente su carácter discriminatorio por estado civil, condición familiar, edad y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase de plusvalía y el 20 % anual; explica que está prohibido prometer rendimientos futuros y que carece de sustento."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta la lista «Quitado o modificado» con motivos y recomienda verificar documentación legal, superficie y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La descripción tiene menos de 200 palabras y el texto de redes aproximadamente 39, dentro del límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Incluye todos los datos objetivos exigidos y atribuye los 85 m² al propietario, pendientes de verificación."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Elimina ambas preferencias y explica su carácter discriminatorio por estado civil, condición familiar, edad y origen nacional."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Elimina la frase de plusvalía y explica que infringe la prohibición de prometer plusvalía o rendimientos futuros."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye la lista solicitada con motivos y recomienda verificar documentación legal, superficie real y uso de suelo."
+    }
+   ],
+   "transcript": "prompts/re-es-anuncio-mx-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

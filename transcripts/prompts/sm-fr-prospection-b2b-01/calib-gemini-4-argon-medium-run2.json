@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-prospection-b2b-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject is about 7 words, body about 121 words and the note about 78 words, all within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sent to the correct address with vouvoiement; uses the January audit, 3 extrusion lines, 4 technicians, and spreadsheet and paper tracking."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Single commercial CTA: the 20-minute demo; webinar and trial are not proposed in the email."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Nothing invented; foundry case has no figures; note explains the 40% and non-chosen CTA exclusions and requires human validation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Body ends with STOP and the provided link; note asks to verify prior information and opt-out; no legal references added."
+  }
+ ]
+}

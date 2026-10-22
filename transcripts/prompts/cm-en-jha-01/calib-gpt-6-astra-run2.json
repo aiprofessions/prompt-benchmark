@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-en-jha-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Explicitly rejects the 18-inch parapet as adequate protection and specifies edge guardrails, restraint, or properly designed personal fall-arrest systems."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Treats skylights as openings and requires secured, load-rated screens/covers or guardrails around skylights exposed to work and access routes."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Addresses rated rigging, qualified signal person, exclusion zones, crane capacity, and wind stop-work limits based on equipment instructions and site conditions."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Controls explicitly follow hierarchy order; written rescue planning includes trained rescuers, equipment, anchors, communications, EMS access, and prompt casualty retrieval."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Requires competent-person review and approval before work, provides an approval field, and uses the verification placeholder without citing regulation section numbers."
+  }
+ ]
+}

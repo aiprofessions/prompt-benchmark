@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-revue-pipeline-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six rows match the export; weighted amounts 60k/60k/9k/20k/54k/14k; totals 540 000 € gross and 217 000 € weighted."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 400 000 − 0 − 217 000 = 183 000 € and flags the CRM's 248 000 € as 31 000 € over the recalculated total."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags exactly Démo Santé (30/09) and Specimen BTP (10/10) as overdue, and Fictif Industrie (47 days) and Specimen BTP (48 days) as inactive."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Two questions per salesperson, each tied to a named deal; text outside the table is about 480 words, under 550."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "States as fact an unlogged phone call between 12/10 and 17/10; this is unsupported, since it may be the logged 12/10 call."
+  }
+ ]
+}

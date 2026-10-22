@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-pt-proposta-compra-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Shows sinal R$ 64.000,00 (10%), intermediária R$ 96.000,00 (15%) and recursos próprios R$ 160.000,00 (25,00%)."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows saldo R$ 480.000,00 (75%), sum R$ 650.000,00 and R$ 10.000,00 excess; asks the buyer to clarify without deciding."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags the 30- versus 60-day conflict, no deadline or consequence for the sale, and undefined 'demais despesas'."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Treats credit as an unproven verbal claim; requests a formal bank letter and asks for the maximum sale deadline and a listing date."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No laws cited, no guarantees, lawyer review covers arras and desistência; summary about 125 words, total about 620."
+  }
+ ]
+}

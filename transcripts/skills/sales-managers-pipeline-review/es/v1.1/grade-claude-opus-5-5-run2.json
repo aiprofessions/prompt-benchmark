@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:02+00:00",
+ "attempt": 1,
+ "skill_sha256": "5803ee82a74dc65ff532177c30effd225ab22eb39b328db77ffe93c92fb00c23",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Declara la previsión no calculable y no presenta los $1,730,000 MXN ni los cuatro componentes ponderados."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Declara la brecha no calculable en lugar de indicar $1,270,000 MXN."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Alerta sobre la salida del impulsor, pero declara la inactividad no evaluable y solo menciona el 02/03 en una nota condicional."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Reconoce que está sin firmar, pero rechaza evaluar el vencimiento; únicamente lo menciona como posibilidad condicionada a confirmar el año."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye preguntas de coaching para Ejemplo Farma, la única oportunidad señalada como riesgo, sin inventar datos de la oportunidad."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Declara la previsión no calculable y no presenta los $1,730,000 MXN ni los cuatro componentes ponderados.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Declara la brecha no calculable en lugar de indicar $1,270,000 MXN.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Alerta sobre la salida del impulsor, pero declara la inactividad no evaluable y solo menciona el 02/03 en una nota condicional.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Reconoce que está sin firmar, pero rechaza evaluar el vencimiento; únicamente lo menciona como posibilidad condicionada a confirmar el año.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye preguntas de coaching para Ejemplo Farma, la única oportunidad señalada como riesgo, sin inventar datos de la oportunidad.\"}]}"
+}

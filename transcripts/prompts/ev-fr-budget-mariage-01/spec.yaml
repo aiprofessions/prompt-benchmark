@@ -1,0 +1,108 @@
+id: ev-fr-budget-mariage-01
+lang: fr
+translation_key: ev-wedding-budget
+profession: event-planners
+task: event-planners.budgeting
+jurisdictions:
+- FR
+title: Budget de mariage à partir des devis et écart au budget du couple
+scenario: 'Devis traiteur HT, lieu TTC, DJ, fleurs, photographe : obtenez un budget TTC recalculé au centime, l’écart
+  avec le budget du couple et trois pistes d’économie.'
+input_placeholder: '[Collez le nombre d’invités, le budget du couple et chaque devis (quantités, HT ou TTC, taux
+  indiqués, options), en anonymisant les noms et coordonnées]'
+prompt: 'Vous organisez des mariages en France. Préparez le budget du mariage ci-dessous, au centime près pour les
+  montants documentés.
+
+  1. Tableau poste par poste : prestataire, base de calcul, taux indiqué, HT, TVA et TTC ; pour un montant uniquement
+  TTC, indiquez « TTC du devis, HT non détaillé ».
+
+  2. Total recalculé des devis écrits et écart avec le budget du couple (dépassement ou marge) ; listez séparément
+  les estimations sans devis et donnez un second total indicatif les incluant, avec son écart au budget.
+
+  3. Recalculez chaque devis avec ses propres taux et quantités ; signalez les incohérences et utilisez votre recalcul
+  pour le budget, sous réserve de confirmation du prestataire.
+
+  4. Proposez exactement trois pistes d’économie : évaluez les variantes proposées dans les données, puis complétez
+  si nécessaire par une autre piste, en tenant compte des préférences du couple.
+
+  Pour chaque piste, montrez le calcul de l’économie TTC à partir des données ; faute de base chiffrée, indiquez
+  « estimation à confirmer » sans inventer de montant. Toute suppression de poste reste soumise à confirmation de
+  sa faisabilité et des frais éventuels.
+
+  5. Rédigez une note de synthèse au couple, en vouvoiement, de 150 mots maximum.
+
+  6. Listez les informations manquantes et les vérifications avant validation par le professionnel ; demandez une
+  correction écrite des devis incohérents et un devis écrit pour les estimations orales.
+
+  Utilisez uniquement les données : appliquez exactement les taux et règles des devis, sans inventer de prix, taux,
+  remise, date ou fait ni formuler d’affirmation réglementaire. Ne garantissez aucune économie. Montants au format
+  1 234,56 €.
+
+  Données :
+
+  {{INPUT}}
+
+  '
+input: 'Mariage de Camille Exemple et Martin Exemple (fictifs) : samedi 12 juin 2027, 90 invités adultes.
+
+  Budget total fixé par le couple : 20 000,00 € TTC.
+
+
+  Devis traiteur « Saveurs Exemple (fictive) » (contact@saveurs-exemple.test), devis n° D-0000 :
+
+  - Menu repas : 68,00 € HT par personne × 90, TVA 10 %
+
+  - Forfait boissons : 22,00 € HT par personne × 90, TVA 20 %
+
+  - Service (serveurs, 6 h) : forfait 1 350,00 € HT, TVA 20 %
+
+  - Total TTC indiqué en bas du devis : 10 395,00 €
+
+  - Option proposée : forfait boissons allégé à 16,00 € HT par personne (TVA 20 %) au lieu de 22,00 €
+
+
+  Lieu « Domaine Exemple (fictif) » : location de la salle 4 800,00 € TTC + ménage 300,00 € TTC.
+
+  DJ « Son Exemple (fictif) » : 1 150,00 € TTC, forfait soirée.
+
+  Fleuriste « Pétales Exemple (fictive) » : 1 450,00 € HT, TVA 20 % selon le devis.
+
+  Photographe « Ana Exemplo (fictive) » : formule complète avec album 2 100,00 € TTC ; formule sans album 1 750,00
+  € TTC.
+
+  Papeterie (faire-part, menus) : 380,00 € TTC, devis signé.
+
+  Location de vaisselle : « environ 600 € », montant donné par téléphone, aucun devis reçu.
+
+
+  Message du couple : « On aimerait rester dans les 20 000 €, si possible sans toucher au photographe… mais on est
+  ouverts. »
+
+  '
+rubric:
+- id: C1
+  criterion: Le traiteur est recalculé à 10 728,00 € TTC, avec repas à 6 732,00 €, boissons à 2 376,00 € et service
+    à 1 620,00 € TTC (tolérance de ±0,01 € sur chaque montant calculé), et le total annoncé de 10 395,00 € est signalé
+    comme incohérent et écarté du calcul du budget.
+- id: C2
+  criterion: Le budget présente un total recalculé des devis écrits de 21 198,00 € et un dépassement de 1 198,00
+    € par rapport au budget de 20 000,00 €, puis un total indicatif d’environ 21 798,00 € et un dépassement d’environ
+    1 798,00 € incluant la vaisselle, isolée comme estimation orale d’environ 600 € sans devis (tolérance arithmétique
+    de ±0,01 € sur chaque résultat).
+- id: C3
+  criterion: La réponse propose exactement trois pistes, dont les boissons allégées pour une économie de 648,00
+    € TTC et la formule photographique sans album pour 350,00 € TTC, calculs montrés (tolérance de ±0,01 €) ; la
+    troisième comporte soit un calcul fondé sur les données, avec confirmation de la faisabilité et des frais éventuels
+    en cas de suppression, soit la mention « estimation à confirmer » sans montant inventé.
+- id: C4
+  criterion: La réponse comprend un tableau couvrant repas, boissons, service, salle, ménage, DJ, fleurs, photographe
+    et papeterie, regroupements autorisés si les composantes restent identifiables, avec base de calcul, HT, TVA
+    et TTC lorsqu’ils sont disponibles, sans décomposition inventée des montants uniquement TTC, des montants au
+    format français et une note au couple en vouvoiement d’au plus 165 mots.
+- id: C5
+  criterion: 'SÉCURITÉ: la réponse n’invente aucun prix, taux, remise ou fait, ne formule aucune affirmation réglementaire,
+    conserve les taux des devis, ne garantit aucune économie et demande un total corrigé par écrit au traiteur ainsi
+    qu’un devis écrit pour la vaisselle avant validation par le professionnel.'
+sources: []
+round: 2
+rubric_sha256_locked: 94c8696eee45755cb0a90fe97ff7b6a0c290edb7f29af4cdb2bcb0638abc7321

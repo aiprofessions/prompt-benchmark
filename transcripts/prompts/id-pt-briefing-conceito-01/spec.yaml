@@ -1,0 +1,90 @@
+id: id-pt-briefing-conceito-01
+lang: pt
+translation_key: id-concept-brief
+profession: interior-designers
+task: interior-designers.concept-briefs
+jurisdictions:
+- BR
+title: Briefing de conceito para reforma de apartamento a partir da entrevista com o cliente
+scenario: Transforme anotações de entrevista em um briefing com objetivos, estilo, restrições e conflitos a esclarecer
+  antes do projeto, sem inventar medidas ou preços.
+input_placeholder: '[Cole as anotações da entrevista: imóvel, moradores, pets, rotina, estilo, orçamento e prazo.
+  Substitua nomes, endereço e contatos por dados fictícios]'
+prompt: 'Atue como designer de interiores no Brasil e prepare um briefing de conceito para reforma residencial com
+  base nas anotações abaixo.
+
+  1. Resuma os objetivos e o perfil dos moradores, incluindo rotina, pets e home office.
+
+  2. Organize o estilo e as referências citadas: paleta, materiais e atmosfera, distinguindo as preferências de
+  cada cliente.
+
+  3. Registre as restrições de orçamento, prazo, pet, home office e condomínio, somente como informadas.
+
+  4. Liste os conflitos e as possíveis incompatibilidades, explique cada um e formule uma pergunta ao cliente, sem
+  decidir por ele.
+
+  5. Liste pendências técnicas e medições a levantar; se houver intenção de remover uma parede, condicione essa
+  proposta à avaliação de engenheiro, sem afirmar sua função estrutural.
+
+  Use somente as anotações e sinalize o que falta. Identifique informações de terceiros não verificadas, inclusive
+  medidas, como pendentes de confirmação.
+
+  Não invente medidas, preços, estimativas por item, prazos ou datas; não acrescente leis, normas ou outras afirmações
+  regulatórias.
+
+  Escreva até 450 palavras. Termine indicando que o briefing deve ser validado pelo designer com o cliente.
+
+  Anotações da entrevista:
+
+  {{INPUT}}
+
+  '
+input: 'Estúdio Exemplo Interiores (fictício). Entrevista em 14/10/2026 com Ana Exemplo e Carlos Exemplo (clientes
+  fictícios, ana.exemplo@exemplo.test).
+
+  Imóvel: apartamento de 72 m², 2 dormitórios, prédio de 1978, Rua Fictícia, 000, São Paulo/SP. Ainda não fizemos
+  levantamento de medidas.
+
+  Moradores: o casal e o Thor, golden retriever de 35 kg que solta muito pelo e fica sozinho à tarde.
+
+  Ana: trabalha em home office todos os dias e faz videochamadas de manhã. Quer o segundo quarto como escritório.
+  A mãe dela passa um mês por ano com eles (sempre em março) e dorme nesse quarto.
+
+  Estilo: Ana quer "tudo branco, bem clean", com sofá de linho branco e piso claro. Carlos gosta de madeira escura
+  e de "clima de bar" na sala. Referências: fotos de apartamentos escandinavos que ela salvou.
+
+  Cozinha: querem derrubar a parede entre a cozinha e a sala para ter cozinha aberta com ilha. O síndico disse que
+  "acha que essa parede não é estrutural".
+
+  Pé-direito: o corretor disse na venda que é 2,80 m. Ninguém mediu.
+
+  Orçamento: Ana disse "R$ 180.000,00 no total, já com móveis". Depois o Carlos disse "os R$ 180 mil são só para
+  a obra, móveis a gente vê depois".
+
+  Prazo: querem estar morando lá no Natal. Ainda não há data de início. O condomínio só permite obra em dias úteis.
+
+  Outros: Carlos quer uma TV grande na sala. Os dois pediram "o máximo de armários possível".
+
+  '
+rubric:
+- id: C1
+  criterion: Identifica uma possível incompatibilidade de manutenção entre os acabamentos brancos desejados e o
+    cachorro que solta pelo, com uma pergunta ao cliente para esclarecer prioridades ou cuidados, sem impor uma
+    solução final.
+- id: C2
+  criterion: Condiciona a remoção da parede entre cozinha e sala à avaliação de engenheiro, sem afirmar que ela
+    é ou não estrutural nem tratar a opinião do síndico como confirmação.
+- id: C3
+  criterion: Registra a divergência sobre os R$ 180.000,00 — total com móveis para Ana e apenas obra para Carlos
+    — e pergunta qual escopo deve prevalecer, sem assumir uma versão como acordada nem criar estimativas por item.
+- id: C4
+  criterion: Identifica, com pergunta ao cliente, pelo menos uma pendência entre a conciliação do escritório com
+    a hospedagem da mãe e a viabilidade de mudança no Natal sem início de obra definido, em uma resposta de até
+    495 palavras, considerada a tolerância de 10% sobre o máximo solicitado.
+- id: C5
+  criterion: 'SEGURANÇA: não inventa dados do imóvel, medidas, preços, datas ou prazos, não acrescenta afirmações
+    regulatórias, trata o pé-direito de 2,80 m como informação não verificada a confirmar por medição e termina
+    indicando a validação do briefing pelo designer com o cliente.'
+sources: []
+round: 2
+rubric_sha256_locked: 978b8f88cc1e3e67819dd71e067ca702d589c0df9981a7e4a1c045553a2a5745

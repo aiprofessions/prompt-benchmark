@@ -1,0 +1,542 @@
+{
+ "prompt_id": "xl-pt-procx-nfe-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "A fórmula de B3 usa PROCX (nome em português) buscando Resumo!B2 na coluna B da aba NFe e retornando a coluna C, com \"Não encontrado\" como 4º argumento (ou SEERRO em volta); ÍNDICE/CORRESP com SEERRO aceito. XLOOKUP/VLOOKUP em inglês = falha."
+  },
+  {
+   "id": "C2",
+   "criterion": "A fórmula de B4 usa SOMASES ou SOMASE (em português) sobre a coluna D com o critério CNPJ = B2."
+  },
+  {
+   "id": "C3",
+   "criterion": "Informa que B4 retorna 7.000,00 (3.480,00 + 2.915,35 + 604,65 = 7.000,00)."
+  },
+  {
+   "id": "C4",
+   "criterion": "As fórmulas usam ponto e vírgula como separador e os valores usam vírgula decimal (ex.: R$ 7.000,00); a dica diz que o CNPJ deve estar como texto no mesmo formato nas duas abas (com máscara, ou ambos sem), em no máximo ~2 frases."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURANÇA: não calcula nem menciona impostos (ICMS, ISS, PIS/COFINS etc.), não afirma que os CNPJs ou as notas são válidos/ativos; nenhum valor inventado."
+  }
+ ],
+ "rubric_sha256": "adaf4a9737eecacad4d7abe80d40af958a7d0eea0c25e5c93a5c70248761a16d",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Usa PROCX com B2, busca em NFe!B2:B6, retorna NFe!C2:C6 e inclui \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE em português, somando NFe!D2:D6 conforme o CNPJ de B2 em NFe!B2:B6."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa B4 = 7.000,00 e mostra corretamente 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Usa separadores e decimais corretos e recomenda texto no mesmo formato, mas a dica contém três frases, ultrapassando o limite."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos documentos e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A alternativa usa PROCX em português, buscando B2 na coluna B de NFe, retornando C e incluindo \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE em português, com critério B2 na coluna B e soma dos valores da coluna D de NFe."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa B4 igual a 7.000,00 e mostra corretamente a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Fórmulas usam ponto e vírgula; valores usam vírgula decimal. A dica tem duas frases e exige CNPJ como texto no mesmo formato nas abas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Inclui PROCX em português buscando B2 em NFe!B2:B6, retornando NFe!C2:C6 e usando \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE em português, somando NFe!D2:D6 quando o CNPJ em NFe!B2:B6 corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa que B4 retorna 7.000,00 e mostra corretamente 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Fórmulas usam ponto e vírgula; valores usam vírgula decimal; dica em duas frases orienta armazenar CNPJ como texto com mesma máscara."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa PROCV com SEERRO, não PROCX nem ÍNDICE/CORRESP com SEERRO, as alternativas aceitas pelo critério."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A fórmula corrigida usa SOMASE(NFe!B2:B6;B2;NFe!D2:D6), somando os valores da coluna D pelo CNPJ de B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa B4 = 7.000,00 e mostra a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa ponto e vírgula nas fórmulas, vírgula decimal nos valores e recomenda CNPJ como texto com formato idêntico em uma frase."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa PROCV com SEERRO, não PROCX nem ÍNDICE/CORRESP com SEERRO, as alternativas aceitas pelo critério."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE para somar NFe!D:D quando NFe!B:B corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa B4 = 7.000,00 e mostra a conta 3.480,00 + 2.915,35 + 604,65."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Separadores e decimais corretos, mas a dica exige texto explicitamente apenas em B2, não nas duas abas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa PROCV com SEERRO, não PROCX nem ÍNDICE/CORRESP, que são as alternativas aceitas pelo critério."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE em português, somando NFe!D:D quando NFe!B:B corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Mostra 3.480,00 + 2.915,35 + 604,65 = 7.000,00 e informa que B4 retorna R$ 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Usa separadores e valores corretos; a dica tem duas frases, mas não determina claramente que ambos os CNPJs devem ser armazenados como texto."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona impostos, não afirma validade ou situação ativa dos documentos e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses SEERRO(PROCV...). The criterion requires PROCX or ÍNDICE/CORRESP; PROCV is not among the accepted options."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SOMASE sums NFe column D where column B equals B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States R$ 7.000,00 with the sum 3.480,00 + 2.915,35 + 604,65."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Uses semicolons and decimal commas; two-sentence tip says text in the same format, with mask, in both sheets."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No taxes, no validity claims about CNPJs or invoices, no invented values."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses SEERRO(PROCV(...)), which works but is not PROCX or ÍNDICE/CORRESP, the only accepted options."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SOMASE(NFe!B2:B6;B2;NFe!D2:D6) sums column D where the CNPJ equals B2, using the Portuguese function name."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States B4 returns 7.000,00 and shows 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Uses semicolon separators and comma decimals; two-sentence tip says store CNPJ as text with the same format in both sheets."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No taxes mentioned, no validity claims about CNPJs or invoices, and no invented values."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses SEERRO(PROCV(...)), which works but is neither PROCX nor ÍNDICE/CORRESP, the only accepted options."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Uses SOMASE over NFe!D2:D6 with CNPJ criterion B2 against NFe!B2:B6."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States B4 returns R$ 7.000,00 with 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Semicolon separators and comma decimals; two-sentence tip says store CNPJ as text, same formatting, in both sheets."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No taxes mentioned, no validity claims about CNPJs or invoices, no invented values."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A alternativa usa PROCX em português, buscando B2 em NFe!B:B, retornando NFe!C:C e indicando \"Não encontrado\" no quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A fórmula usa SOMASE em português, com critério B2 na coluna B e soma dos valores da coluna D."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa 7.000,00 e mostra corretamente a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa ponto e vírgula nas fórmulas e vírgula decimal nos valores; a dica exige texto no mesmo formato nas duas abas em duas frases."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou situação ativa dos documentos e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Usa ÍNDICE/CORRESP com SEERRO e também PROCX, buscando B2 na coluna B de NFe e retornando C com \"Não encontrado\"."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SOMASE soma NFe!D2:D6 quando o CNPJ em NFe!B2:B6 corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa B4 igual a 7.000,00 e mostra a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Fórmulas usam ponto e vírgula, valores usam vírgula decimal e a dica exige texto com pontuação idêntica nas duas abas, em duas frases."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos documentos e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "B3 usa ÍNDICE/CORRESP com SEERRO e oferece PROCX, buscando B2 em NFe!B:B e retornando NFe!C:C com \"Não encontrado\"."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "B4 usa SOMASE em português, somando NFe!D:D quando NFe!B:B corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa que B4 retorna 7.000,00 e mostra corretamente 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Fórmulas usam ponto e vírgula, valores usam vírgula decimal e a dica exige texto com formato idêntico nas duas abas em duas frases."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A alternativa com PROCX busca B2 em NFe!B2:B6, retorna NFe!C2:C6 e usa \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A fórmula SOMASE soma NFe!D2:D6 usando o critério B2 sobre NFe!B2:B6."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa 7.000,00 e mostra a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa ponto e vírgula nas fórmulas, vírgula decimal nos valores e recomenda texto com formato idêntico nas duas abas em duas frases."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Inclui fórmula alternativa com PROCX, buscando B2 em NFe!B2:B6, retornando NFe!C2:C6 e usando \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SOMASE com NFe!B2:B6 como intervalo de critério, B2 como critério e NFe!D2:D6 como intervalo de soma."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa 7.000,00 e mostra corretamente a conta 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Fórmulas usam ponto e vírgula, valores usam vírgula decimal e a dica, em duas frases, orienta armazenar CNPJ como texto no mesmo formato."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou situação ativa dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A alternativa usa PROCX em português, buscando B2 em NFe!B2:B6, retornando NFe!C2:C6 e incluindo \"Não encontrado\" como quarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A fórmula usa SOMASE em português, somando NFe!D2:D6 quando o CNPJ em NFe!B2:B6 corresponde a B2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Informa 7.000,00 e mostra corretamente a conta: 3.480,00 + 2.915,35 + 604,65 = 7.000,00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa ponto e vírgula nas fórmulas e vírgula decimal nos valores; a dica exige texto com formato idêntico nas duas abas, em duas frases."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não menciona nem calcula impostos, não afirma validade ou atividade dos CNPJs ou notas e não inventa valores."
+    }
+   ],
+   "transcript": "prompts/xl-pt-procx-nfe-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

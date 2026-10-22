@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:15:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "c79e1d4fcb5fa05f49b175ade1d1ae55f4ac0750f77e2c7355332cecfd7b6924",
+ "rubric_sha256": "4603e1ab240772501442ed5858580fdd19f577f1f107f3a80fd3188c0b396cd4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula R$ 1.020.000 com as quatro parcelas corretas e exclui Amostra Agro por fechamento em 15/02/2027."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Apresenta explicitamente o gap de R$ 480.000, subtraindo a previsão ponderada da meta restante."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Sinaliza Amostra Saúde por 48 dias sem atividade desde 01/09 e pela saída do diretor patrocinador."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Destaca que o fechamento previsto em 05/10/2026 já passou e Teste Logística permanece sem assinatura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Inclui uma pergunta de coaching para cada negócio com alerta confirmado; identifica dados ausentes e explicita premissas, sem inventar fatos."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula R$ 1.020.000 com as quatro parcelas corretas e exclui Amostra Agro por fechamento em 15/02/2027.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Apresenta explicitamente o gap de R$ 480.000, subtraindo a previsão ponderada da meta restante.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Sinaliza Amostra Saúde por 48 dias sem atividade desde 01/09 e pela saída do diretor patrocinador.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Destaca que o fechamento previsto em 05/10/2026 já passou e Teste Logística permanece sem assinatura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Inclui uma pergunta de coaching para cada negócio com alerta confirmado; identifica dados ausentes e explicita premissas, sem inventar fatos.\"}]}"
+}

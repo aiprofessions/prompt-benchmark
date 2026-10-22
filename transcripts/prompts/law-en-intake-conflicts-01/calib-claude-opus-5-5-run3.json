@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-intake-conflicts-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six named persons and entities are listed, each with a role such as client, contractor, owner, subcontractor/lien claimant, lender or witness."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sept 2, 2026 lien listed; lien enforcement, contest and lender deadlines flagged for urgent attorney review with no periods stated as fact."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reply says the firm has not agreed to represent, no attorney-client relationship exists, and it is not legal advice; it offers only general caution."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Includes the construction contract, proof of payments, recorded mechanic's lien and the Example Home Bank letter."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "About 115 words, neutral and marked unverified. Its inferences ('mortgage lender', 'not paid by the contractor') are reasonable, not invented facts."
+  }
+ ]
+}

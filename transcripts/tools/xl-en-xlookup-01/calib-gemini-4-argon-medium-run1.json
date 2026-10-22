@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-en-xlookup-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "IFERROR around VLOOKUP(B2, Clients!$A$2:$B$6, 2, FALSE) with \"Not found\" fallback; range absolute, B2 relative."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Lists only Row 7, INV-1006, client ID C-118."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "SUMIF(B2:B13, \"C-104\", C2:C13) stated to return 6,156.00, which is correct."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explanation is present and runs about 96-99 words, within the 120-word limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented name for C-118; note says to verify it as a typo or a new client; all figures come from the tables."
+  }
+ ]
+}

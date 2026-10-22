@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-pt-prospeccao-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject has 8 words; email body is about 113 words, within the 132-word limit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Addresses Ana and uses CDs, 180 deliveries, spreadsheet, rework and the December contract. Single request: 20-min video call in week of 26/10."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Clear opt-out ('responda \"não\" e encerro o contato'); consistently uses 'você'."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "30% claim excluded and 11%/4 months preserved, but email asserts unsourced capability ('RotaCerta automatiza') that the output itself flags as unconfirmed."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Script ~71 words and 0303 cited, but it adds other regulatory checks (time restrictions, Não Me Perturbe/Procon-SP), against the criterion."
+  }
+ ]
+}

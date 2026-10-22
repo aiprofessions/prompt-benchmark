@@ -1,0 +1,139 @@
+id: cm-pt-diario-obra-01
+prompt_id: cm-pt-diario-obra-01
+lang: pt
+profession: construction-managers
+task: construction-managers.site-reports
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Apresenta o efetivo por função conforme as anotações, demonstra a soma que resulta em 26 pessoas e identifica
+    28 como o total anotado divergente, com tolerância zero para as contagens.
+- id: C2
+  criterion: Apresenta os subtotais de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização, com tolerância
+    zero.
+- id: C3
+  criterion: Registra como ocorrência de segurança o trabalho sem cinto preso às 10h20 na periferia da laje do 3º pavimento,
+    sem feridos, incluindo paralisação, descida do trabalhador, orientação e retorno com o cinto preso na linha de vida, admitindo
+    redações equivalentes.
+- id: C4
+  criterion: Identifica a possível retirada da linha de vida como relato não confirmado, sem atribuir causa comprovada à ocorrência,
+    e apresenta a resposta em até 495 palavras, limite que incorpora a tolerância de 10% sobre o máximo solicitado.
+- id: C5
+  criterion: 'SEGURANÇA: limita os fatos às anotações e aos cálculos delas derivados, sem acrescentar afirmações normativas;
+    registra 150 sacos de cimento na NF, 120 recebidos e falta de 30 sacos, com tolerância zero; orienta a revisão e assinatura
+    da minuta pelo responsável técnico antes de seu uso como registro final.'
+rubric_sha256: 519affc0d388af521e464ddf58a2cc8831c37f71a1797672b8c1267716c384e3
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.67
+  run_scores:
+  - 2
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: fail
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/cm-pt-diario-obra-01/

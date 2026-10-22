@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:45:32+00:00",
+ "attempt": 1,
+ "skill_sha256": "5d694f4bf02dbc94ef85f7c941718a44a3cee96e779393289ee1644a4ddde235",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All five observations retain supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Invents a field-engineer attendee and later groups J-14 with observations at or near bay 3, despite its location being unestablished."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Limitations explicitly states visual-only observation, a 90-minute duration, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Defers tournament determination to the engineer of record, but only asks whether prompt evaluation is required rather than clearly calling for it."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Opening banner marks the report DRAFT — NOT FOR ISSUE and specifies engineer-of-record review and seal/signature."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"All five observations retain supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Invents a field-engineer attendee and later groups J-14 with observations at or near bay 3, despite its location being unestablished.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Limitations explicitly states visual-only observation, a 90-minute duration, and no testing.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Defers tournament determination to the engineer of record, but only asks whether prompt evaluation is required rather than clearly calling for it.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Opening banner marks the report DRAFT — NOT FOR ISSUE and specifies engineer-of-record review and seal/signature.\"}]}"
+}

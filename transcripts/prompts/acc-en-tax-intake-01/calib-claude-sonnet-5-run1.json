@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-tax-intake-01",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Requests W-2, Schedule C income/expense and home office records, 1099-INT, 1099-B, rental income/expense records, and 1098-E."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Covers move date, part-year residency, state apportionment, state withholding, and the multi-state credit between NY and NC."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Asks about marital status, dependents, home purchase/sale, accounts, freelance work changes, retirement, and health coverage."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States no dollar limits, rates, thresholds or deadlines; current-year dependencies are marked [verify current-year figure]."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Section C lists home office method, rental depreciation, and state allocation as open items without deciding them."
+  }
+ ]
+}

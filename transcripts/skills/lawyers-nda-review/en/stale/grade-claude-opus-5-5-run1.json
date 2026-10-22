@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:18:34+00:00",
+ "attempt": 1,
+ "skill_sha256": "0c1c8e62616805511cf8325055992147e661b4a9e93bf6875f0b371a29a03d71",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and proposes disclosure only to need-to-know Representatives bound by written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Proposes five years in I-2 and protection for as long as information remains a trade secret in I-3."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags §8 as contrary to the playbook and replaces its substance with '[Reserved.]'."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but explicitly treats §10 as only partly compliant and its forum provision as unresolved."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Cites an actual ABA opinion, leaves judgment calls to supervising counsel, and explicitly labels the output a draft, not legal advice."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and proposes disclosure only to need-to-know Representatives bound by written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Proposes five years in I-2 and protection for as long as information remains a trade secret in I-3.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags §8 as contrary to the playbook and replaces its substance with '[Reserved.]'.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but explicitly treats §10 as only partly compliant and its forum provision as unresolved.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Cites an actual ABA opinion, leaves judgment calls to supervising counsel, and explicitly labels the output a draft, not legal advice.\"}]}"
+}

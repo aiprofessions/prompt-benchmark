@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-en-schedule-delay-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Critical path A-B-D-F-G identified, totaling 40 working days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Baseline finish Friday Dec 25, 2026 (day 40); Christmas noted, but date kept per the no-holidays instruction."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Delayed C EF day 19; F ES stays 31 because D EF is 30; finish unchanged, slip 0."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Float listed: C 19 days baseline and 11 after the delay; E 3 days."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Work shown in tables with merge calculations; no resource or calendar assumptions added."
+  }
+ ]
+}

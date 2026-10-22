@@ -1,0 +1,40 @@
+id: eng-en-spec-standards-01
+lang: en
+translation_key: eng-spec-standards
+title: Referenced-standards check on a spec section
+scenario: Extract every standard a spec section references, catch missing and conflicting editions, and build a verification
+  list — without the model inventing clause text.
+profession: engineers
+task: engineers.standards-lookup
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'From the specification excerpt below, build a table: Standard | Edition cited | Where cited | Issue | What to verify.
+
+  Flag every standard with no edition/year and every standard cited with conflicting editions.
+
+  Do not summarize or quote requirements of any standard beyond what the excerpt says, and do not invent clause numbers.
+
+  End with a note on checking which code edition the Authority Having Jurisdiction has adopted.
+
+  Excerpt:
+
+  [Paste the spec section text]
+
+  '
+sample_input: 'SECTION 05 12 00 — STRUCTURAL STEEL FRAMING (fictional project)
+
+  1.2 References: AISC 360-16; ASTM A992; ASTM A325; AWS D1.1/D1.1M:2020; ACI 318-14.
+
+  2.1 Materials: W-shapes ASTM A992. HSS ASTM A500 Grade C. Anchor rods ASTM F1554 Grade 36.
+
+  3.4 Grout and embedment per ACI 318-19.
+
+  3.6 Welding per AWS D1.1.
+
+  '
+page: https://aiprofessions.ai/engineers/prompts/#eng-en-spec-standards-01
+results_file: results/eng-en-spec-standards-01.yaml

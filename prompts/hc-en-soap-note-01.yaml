@@ -1,0 +1,49 @@
+id: hc-en-soap-note-01
+lang: en
+translation_key: hc-soap-note
+title: SOAP note draft from a de-identified visit transcript
+scenario: Draft a SOAP note strictly from what was said in the visit, with missing items flagged — the clinician reviews and
+  signs. Use only de-identified text.
+profession: healthcare
+task: healthcare.clinical-notes
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Draft a SOAP note from the de-identified primary-care transcript below.
+
+  Rules:
+
+  - Use only information stated in the transcript. Do not add exam findings, history or diagnoses that were not said.
+
+  - Record vitals and medication instructions exactly as stated.
+
+  - Put allergies where the clinician will see them first.
+
+  - End with "Missing / to confirm" listing anything a complete note would need that the transcript does not contain.
+
+  - Mark the note as a draft requiring clinician review and signature.
+
+  Transcript:
+
+  [Paste a DE-IDENTIFIED visit transcript or dictation — no names, dates of birth, MRNs or addresses]
+
+  '
+sample_input: '[De-identified, fictional] Adult patient, 34.
+
+  Patient: Sore throat for 3 days, hurts to swallow, fever last night. No cough. Kid at home had strep last week.
+
+  Clinician: Any allergies? Patient: Penicillin — I got a rash as a kid.
+
+  Nurse vitals: Temp 38.4 °C, HR 96, BP 122/78, SpO2 99% on room air.
+
+  Clinician exam (spoken): Tonsils swollen with white exudate. No rash.
+
+  Clinician: Let''s do a rapid strep test now. If positive, we''ll pick an antibiotic that isn''t penicillin-based. Meanwhile
+  ibuprofen 400 mg every 6 hours as needed with food. Come back or call if you can''t swallow liquids or have trouble breathing.
+
+  '
+page: https://aiprofessions.ai/healthcare/prompts/#hc-en-soap-note-01
+results_file: results/hc-en-soap-note-01.yaml

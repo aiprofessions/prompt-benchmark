@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:31+00:00",
+ "attempt": 1,
+ "skill_sha256": "0155cc7b3d265d962b835ef0071482fa4415c7d41fd09d0e32cc03aeb1addf68",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The proposed table includes all five locations, supplied sizes, and correct photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No measurements, results, code sections, or observations are invented. Possible relationships are framed as questions, not factual causes."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "There is no Limitations section, and the output omits the 90-minute duration."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "It avoids a yes/no answer, assigns safety determination to the engineer of record, and urges involvement before drafting, flagging J-14 for prompt evaluation."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "It only promises a future DRAFT watermark; the output is not marked DRAFT for engineer-of-record review and seal/signature."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"The proposed table includes all five locations, supplied sizes, and correct photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No measurements, results, code sections, or observations are invented. Possible relationships are framed as questions, not factual causes.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"There is no Limitations section, and the output omits the 90-minute duration.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"It avoids a yes/no answer, assigns safety determination to the engineer of record, and urges involvement before drafting, flagging J-14 for prompt evaluation.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"It only promises a future DRAFT watermark; the output is not marked DRAFT for engineer-of-record review and seal/signature.\"}]}"
+}

@@ -1,0 +1,79 @@
+id: sm-pt-prospeccao-01
+lang: pt
+translation_key: sm-cold-email
+title: E-mail de prospecção B2B com roteiro de ligação (Brasil)
+scenario: Transforme notas comerciais em um e-mail curto, personalizado e com opção de descadastro. Quando solicitado, inclua
+  um roteiro de ligação e os pontos a verificar antes do contato.
+profession: sales-managers
+task: sales-managers.outreach
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Atue como gerente de vendas B2B no Brasil e prepare uma prospecção para o software descrito nas notas.
+
+  1. Escreva um assunto com no máximo 8 palavras.
+
+  2. Escreva um e-mail de até 120 palavras, sem assunto nem assinatura; dirija-se à pessoa pelo nome e personalize com pelo
+  menos dois fatos do contexto ou da conversa.
+
+  Faça um único pedido comercial, preservando modalidade, duração e período indicados nas notas, e inclua uma opção clara
+  para não receber mais mensagens; essa opção não conta como pedido comercial.
+
+  3. Somente se houver pedido de ligação nas notas, escreva um roteiro de até 80 palavras e informe, fora dele, o requisito
+  de identificação do número para telemarketing ativo no Brasil.
+
+  4. Inclua uma lista "Antes de enviar": informações ausentes, afirmações sem comprovação, ajustes necessários no contato
+  e verificações que dependem da minha revisão e aprovação antes de enviar ou ligar.
+
+  Use apenas os dados comerciais das notas; o único case que pode citar é o autorizado, sem alterar seus resultados ou apresentá-los
+  como garantia.
+
+  Deixe afirmações promocionais sem fonte fora do e-mail e do roteiro e sinalize-as na lista; informações relatadas sobre
+  o contato e sua operação podem ser usadas.
+
+  Não invente números, datas, clientes, preços, prazos, leis, artigos, decisões judiciais, normas ou multas; se não puder
+  confirmar um requisito regulatório, sinalize a dúvida.
+
+  Use português brasileiro, tratamento por "você" e tom direto, sem promessas de resultado nem dados pessoais adicionais.
+
+  Notas:
+
+  [Cole contato, cargo, empresa, contexto, case autorizado, pedido de ação e necessidade de ligação; substitua nomes, e-mails
+  e telefones reais por dados fictícios e não inclua CPF]
+
+  '
+sample_input: 'Amostra inteiramente fictícia: pessoas, empresas, evento, dados operacionais e resultados foram criados para
+  este exercício.
+
+  Produto: software de roteirização de entregas.
+
+  Remetente: Martin Exemplo, gerente comercial, RotaCerta Software (fictícia), martin@rotacerta.test
+
+  Contato: Ana Exemplo, gerente de compras, Distribuidora Exemplo Alimentos Ltda. (fictícia), ana.exemplo@distribuidoraexemplo.test
+
+  Origem do contato: conversamos uns 5 min no estande da feira Logística Exemplo 2026 (fictícia) em 08/10/2026. Ela me deu
+  o cartão e disse "pode me mandar material".
+
+  Contexto da empresa: 3 CDs no interior de SP (Campinas, Ribeirão Preto e Bauru), cerca de 180 entregas por dia, frota própria
+  de 42 caminhões leves. Hoje a roteirização é feita em planilha. Ela reclamou do retrabalho quando um motorista falta.
+
+  Gatilho: o contrato com a transportadora terceirizada vence em dezembro/2026 e ela está revisando os custos de frete.
+
+  Case AUTORIZADO (aprovado por escrito pelo cliente no cenário fictício): Atacado Modelo Ltda. (fictícia) reduziu 11 % dos
+  km rodados em 4 meses após a implantação.
+
+  O pessoal do marketing fala que "nossos clientes economizam até 30 % de combustível". Seria bom colocar no e-mail, mas não
+  tenho a fonte.
+
+  Pedido de ação: reunião de 20 min por videochamada na semana de 26/10.
+
+  Também quero um roteiro de ligação: se ela não responder, ligo do meu celular comum [CELULAR FICTÍCIO] na quinta-feira.
+
+  Assinatura: Martin Exemplo | Gerente comercial | RotaCerta Software (fictícia) | martin@rotacerta.test
+
+  '
+page: https://aiprofessions.ai/pt/gerentes-de-vendas/prompts/#sm-pt-prospeccao-01
+results_file: results/sm-pt-prospeccao-01.yaml

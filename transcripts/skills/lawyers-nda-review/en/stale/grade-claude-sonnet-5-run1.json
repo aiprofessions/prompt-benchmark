@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:18:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "0c1c8e62616805511cf8325055992147e661b4a9e93bf6875f0b371a29a03d71",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §5 and proposes five years from the Effective Date, with trade-secret confidentiality continuing as long as trade-secret status persists."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags §8 as prohibited by the playbook and proposes deleting it entirely without replacement."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but explicitly declines to mark all of §10 compliant, reserving venue for attorney review."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no legal authorities, reserves judgment calls for supervising counsel, and explicitly labels the output a draft for attorney review, not legal advice."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags §5 and proposes five years from the Effective Date, with trade-secret confidentiality continuing as long as trade-secret status persists.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags §8 as prohibited by the playbook and proposes deleting it entirely without replacement.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but explicitly declines to mark all of §10 compliant, reserving venue for attorney review.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no legal authorities, reserves judgment calls for supervising counsel, and explicitly labels the output a draft for attorney review, not legal advice.\"}]}"
+}

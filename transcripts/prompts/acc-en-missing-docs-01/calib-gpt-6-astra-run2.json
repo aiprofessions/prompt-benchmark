@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-missing-docs-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Numbered checklist includes all four missing items with required details and no additional items."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly links the March 20, 2027 internal deadline to filing by April 15, 2027."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Directs uploads to portal.example-cpa.test and explicitly prohibits sending tax documents by regular email or email attachments."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Email is comfortably below 220 words, uses plain language, explains EIN and HSA, and reassures Dana about uploading imperfect documents."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Contains no unlisted dates, dollar amounts, tax rates, penalties, or credit limits."
+  }
+ ]
+}

@@ -1,0 +1,542 @@
+{
+ "prompt_id": "hc-en-cdi-query-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Identifies the gap as missing heart-failure type and acuity."
+  },
+  {
+   "id": "C2",
+   "criterion": "Query cites clinical indicators from the excerpt (e.g., BNP 1,240, EF 30%, IV furosemide, symptoms)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Query is non-leading: multiple options including 'other' and 'clinically unable to determine' (or equivalent), no single answer suggested."
+  },
+  {
+   "id": "C4",
+   "criterion": "Query contains no mention of reimbursement, DRG, payment or financial impact."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: assigns no final ICD-10 code; any code mentioned is marked for coder verification."
+  }
+ ],
+ "rubric_sha256": "237e485fc4b9fef5c56d27c7e18ad8a2d8a18f4680d5f423a84eb9948df87812",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide, oxygen, and documented CHF improving with diuresis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Provides multiple type and acuity options, including other and clinically unable to determine, without suggesting a particular answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The physician query contains no reimbursement, DRG, payment, or financial-impact language; those terms appear only outside the query."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final codes and explicitly marks category I50 as for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies missing heart-failure type and acuity in the documentation gap."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, heart-failure history, BNP 1,240, EF 30%, IV furosemide dosing, and supplemental oxygen."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, including other and clinically unable to determine, without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The physician query contains no financial terminology; reimbursement and DRG appear only in the separate compliance commentary."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final codes and explicitly marks all mentioned code ranges and codes for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity in two sentences."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240, EF 30%, IV furosemide dosage, oxygen, and improvement with diuresis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, each including other and clinically unable to determine, without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final codes; referenced I50.- and I11.-/I13.- coding possibilities are qualified for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies missing heart-failure type and acuity explicitly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites BNP 1,240, EF 30%, symptoms, IV furosemide, oxygen, and the progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, each including other and clinically unable to determine, without suggesting a preferred answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No ICD-10 codes are mentioned or assigned; any future coding reference is designated for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide, oxygen, and the progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, each including other and clinically unable to determine, without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRG, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final code and explicitly states the referenced I50.xx category requires coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies missing heart-failure type and acuity explicitly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240, EF 30%, IV furosemide, oxygen, and documented improvement with diuresis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, including other and clinically unable to determine, without suggesting a preferred answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final code; the I50.xx reference is explicitly marked for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Gap is stated as heart failure documented without its type or acuity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites the symptoms, BNP 1,240, EF 30%, IV furosemide, oxygen, and the day 2 note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Multiple options in each category, including Other and Clinically unable to determine; no answer is suggested."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No mention of reimbursement, DRG, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No ICD-10 codes are assigned or mentioned."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States heart failure type and acuity are unspecified."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites BNP 1,240, EF 30%, IV furosemide, oxygen, symptoms, and the progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple options per category, including 'Other' and 'Clinically unable to determine'; no single answer suggested."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No mention of reimbursement, DRG, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No ICD-10 codes are assigned or mentioned."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States heart failure is documented but its type and acuity are not specified."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites BNP 1,240, EF 30%, IV furosemide, oxygen, symptoms, and the day 2 progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, each including 'Other' and 'Clinically unable to determine'; no single answer suggested."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No mention of reimbursement, DRG, payment, or financial impact anywhere in the output."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No ICD-10 or other codes are mentioned or assigned."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity in the documentation gap."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide, oxygen, and improvement with diuresis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Provides multiple type and acuity options, each including other and clinically unable to determine, without suggesting a preferred answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final codes and explicitly marks the mentioned ICD-10-CM I50.- category for coder verification only."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies both missing heart-failure type and acuity in the documentation gap."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240, EF 30%, IV furosemide, oxygen therapy, and the progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, including other and clinically unable to determine, without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query does not mention reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final code and explicitly marks the mentioned I50.- category for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240, EF 30%, IV furosemide, oxygen, and documented improvement with diuresis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, each including other and clinically unable to determine, without suggesting a preferred answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no reference to reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly assigns no final codes; all mentioned codes are marked for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies missing heart-failure type and acuity explicitly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide, oxygen, and the day-two progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type-and-acuity combinations, other specified type or acuity, and clinically unable to determine without directing a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRG, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final code; the I50.- category reference is explicitly marked for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies both missing heart-failure type and acuity explicitly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide, oxygen, and the progress note."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity combinations, unspecified heart failure, other, and clinically unable to determine without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Assigns no final codes and explicitly marks all mentioned ICD-10-CM categories for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies missing heart-failure type and acuity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Query cites symptoms, BNP 1,240 pg/mL, EF 30%, IV furosemide dosing, and supplemental oxygen."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Offers multiple type and acuity options, other, and clinically unable to determine without suggesting a single answer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Query contains no mention of reimbursement, DRGs, payment, or financial impact."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No final code is assigned; the illustrative ICD-10-CM I50.9 code is explicitly marked for coder verification."
+    }
+   ],
+   "transcript": "prompts/hc-en-cdi-query-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

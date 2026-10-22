@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-en-beam-check-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Recomputes maximum moment as 125 kip-ft and explicitly marks Step 1 CORRECT."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifies 50 kip as total load and corrects maximum shear to wL/2 = 25 kip."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifies inconsistent load units, converts 2.5 kip/ft to 0.208333 kip/in, and computes corrected deflection of 0.3879 in."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly concludes 0.3879 in is below 0.6667 in, passes L/360, and does not require upsizing for deflection."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Lists required licensed-engineer verifications, states this is not a sealed engineering check, and cites no code clause numbers."
+  }
+ ]
+}

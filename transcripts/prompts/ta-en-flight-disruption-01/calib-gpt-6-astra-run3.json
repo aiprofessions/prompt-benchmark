@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-en-flight-disruption-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes both options, their JFK arrival times, and pros and cons, including B’s tight 55-minute connection."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Names EU Regulation 261/2004 and explains its applicability to departures from Lisbon regardless of US residency."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Guarantees neither compensation nor reimbursement; explains eligibility factors and states the carrier initially decides claims."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly requests keeping the $189 hotel receipt, other itemized expense receipts, and all boarding passes."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Within the permitted word limit, with a calm, factual tone and no invented disruption details."
+  }
+ ]
+}

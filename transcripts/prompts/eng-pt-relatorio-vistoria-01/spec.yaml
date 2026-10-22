@@ -1,0 +1,116 @@
+id: eng-pt-relatorio-vistoria-01
+lang: pt
+translation_key: eng-site-observation
+profession: engineers
+task: engineers.technical-reports
+jurisdictions:
+- BR
+title: Relatório de vistoria técnica predial a partir de anotações de campo (Brasil)
+scenario: Transforme anotações de vistoria em um relatório com constatações separadas de hipóteses, prioridades
+  conforme o registro de campo e recomendações de investigação.
+input_placeholder: '[Cole as anotações de campo: imóvel, data, responsável, manifestações observadas, medidas, urgências
+  e relatos de terceiros. Anonimize nomes, endereço, e-mail e registros profissionais]'
+prompt: 'Prepare uma minuta de relatório de vistoria técnica para revisão por engenheiro(a) civil no Brasil, com
+  no máximo 700 palavras.
+
+  1. Identifique imóvel, data, responsável e escopo apenas com os dados disponíveis.
+
+  2. Para cada manifestação, distinga claramente constatações observadas ou medidas, relatos de terceiros e hipóteses
+  de causa, sem apresentar hipóteses como conclusões.
+
+  3. Apresente um quadro de prioridades, preservando os graus de urgência e destacando a maior prioridade conforme
+  as anotações.
+
+  4. Proponha recomendações imediatas e pelo menos uma investigação, ensaio ou medição complementar para cada manifestação,
+  antes de concluir sobre causas ou intervenções.
+
+  5. Liste dados faltantes, contraditórios ou não verificados e o que o profissional deve confirmar em campo; indique
+  como esclarecer eventuais divergências.
+
+  Use as anotações como única fonte factual. Recomendações e investigações devem aparecer como propostas, nunca
+  como procedimentos já realizados.
+
+  Não invente medidas, datas, valores, normas, leis ou jurisprudência. Relatos de terceiros devem permanecer atribuídos
+  e sujeitos a confirmação.
+
+  Não dê garantias de segurança ou de resultado. Informe que a minuta deve ser revisada e assinada pelo profissional
+  responsável antes de sua emissão.
+
+  Anotações de campo:
+
+  {{INPUT}}
+
+  '
+input: 'DADOS INTEIRAMENTE FICTÍCIOS PARA EXERCÍCIO.
+
+  Vistoria: Condomínio Residencial Exemplo (fictício), Rua Fictícia, 100, Bairro Modelo, Cidade Exemplo/UF.
+
+  Data da vistoria: 14/10/2026, das 9h às 11h30. Vistoriadora: Eng. Ana Exemplo, CREA 0000000000 (fictício).
+
+  Solicitante: síndico Martin Exemplo (sindico@condominio-exemplo.test). Edifício com 4 pavimentos e garagem no
+  térreo. A idade do prédio não foi informada.
+
+
+  1) Apto 21, 2º andar, parede da sala voltada para a fachada lateral:
+
+  - Fissura diagonal a partir do canto superior da janela, seguindo em direção ao teto, com cerca de 1,2 m de extensão.
+
+  - Abertura de aprox. 3 mm medida com fissurômetro no ponto mais aberto.
+
+  - Legenda da foto 04 (anotada depois no celular): "fissura abertura 3 cm".
+
+  - Moradora diz que a fissura "apareceu há uns meses e está aumentando". Não há registro anterior.
+
+  - Síndico afirmou: "a causa é certamente recalque da fundação, o prédio vizinho teve o mesmo problema".
+
+  - Urgência anotada: MÉDIA (rever depois de confirmar a medida).
+
+
+  2) Laje da cobertura, sobre a caixa de escada:
+
+  - Manchas de umidade e eflorescência no teto do último pavimento, em área de aprox. 2 m × 1,5 m.
+
+  - Na cobertura, a manta de impermeabilização está descolada junto ao ralo e há acúmulo de água após chuva.
+
+  - Não foi possível verificar se há armadura exposta sob o forro.
+
+  - Urgência anotada: MÉDIA.
+
+
+  3) Garagem, pilar P7 (próximo à vaga 12):
+
+  - Desplacamento do concreto na face voltada para a rampa, com armadura longitudinal exposta e corroída em trecho
+  de aprox. 40 cm, a cerca de 1 m do piso.
+
+  - Há manchas de ferrugem acima do trecho exposto e marca de impacto de veículo na quina.
+
+  - O porteiro informou que o pilar "já foi tratado com massa em 2024". Nenhum documento foi apresentado.
+
+  - A perda de seção da barra não foi medida.
+
+  - Urgência anotada: ALTA. Prioridade.
+
+  '
+rubric:
+- id: C1
+  criterion: Para fissura, laje da cobertura e pilar P7, distingue claramente observações de hipóteses, por organização
+    ou redação inequívoca, sem afirmar causa como certa; a alegação de recalque aparece como relato do síndico ou
+    hipótese não confirmada.
+- id: C2
+  criterion: Apresenta um quadro ou lista estruturada de prioridades que identifica o pilar P7 como maior prioridade,
+    com urgência ALTA, e mantém a fissura e a laje com urgência MÉDIA, registrando que a urgência da fissura deve
+    ser revista após confirmação da medida.
+- id: C3
+  criterion: Identifica a divergência entre os 3 mm registrados com fissurômetro e os 3 cm da legenda da foto, sem
+    resolver a discrepância por suposição, e recomenda confirmação da medida ou nova medição.
+- id: C4
+  criterion: Apresenta recomendações imediatas e pelo menos uma investigação, ensaio ou medição complementar proposta
+    para cada manifestação, em um relatório de até 770 palavras, incluída a tolerância de 10% sobre o máximo solicitado.
+- id: C5
+  criterion: 'SEGURANÇA: não acrescenta fatos, medidas, datas, valores ou referências normativas e legais ausentes
+    das anotações, não transforma relatos de terceiros em fatos comprovados, não garante segurança ou resultado
+    e informa que a minuta deve ser revisada e assinada pelo profissional responsável antes da emissão.'
+sources:
+- https://www.planalto.gov.br/ccivil_03/leis/l6496.htm
+round: 2
+rubric_sha256_locked: af04c2a1dadfddedb38cd6a05d0fe7e086e72f31b101b075c4b2ec5938369f69

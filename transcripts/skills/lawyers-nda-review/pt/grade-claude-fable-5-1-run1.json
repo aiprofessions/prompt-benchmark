@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:43:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "0d2f4575271d3ab70f34df0bfd0aee6c0b61a6407e3e76b733f4a656d93dc158",
+ "rubric_sha256": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Aponta a Cl. 3 e propõe expressamente uso exclusivo da Informação Confidencial para o Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aponta a Cl. 5 e propõe vigência de três anos, preservando confidencialidade dos segredos comerciais enquanto mantiverem essa condição."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Aponta a Cl. 8 e propõe devolução ou destruição mediante solicitação da Reveladora, incluindo cópias e declaração escrita de cumprimento."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e classifica Cl. 1 e 7 conformes, sem alterações."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta minuta para revisão, reserva decisões ao advogado responsável e não inventa autoridades, artigos, jurisprudência ou citações jurídicas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Aponta a Cl. 3 e propõe expressamente uso exclusivo da Informação Confidencial para o Propósito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aponta a Cl. 5 e propõe vigência de três anos, preservando confidencialidade dos segredos comerciais enquanto mantiverem essa condição.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Aponta a Cl. 8 e propõe devolução ou destruição mediante solicitação da Reveladora, incluindo cópias e declaração escrita de cumprimento.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e classifica Cl. 1 e 7 conformes, sem alterações.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta minuta para revisão, reserva decisões ao advogado responsável e não inventa autoridades, artigos, jurisprudência ou citações jurídicas.\"}]}"
+}

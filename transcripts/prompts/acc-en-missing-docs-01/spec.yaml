@@ -1,0 +1,66 @@
+id: acc-en-missing-docs-01
+lang: en
+translation_key: acc-missing-docs
+profession: accountants
+task: accountants.client-letters
+jurisdictions:
+- US
+title: Missing-documents email to an individual tax client
+scenario: You are preparing a 1040 and four documents are still missing. Turn your internal notes into a calm, plain-English
+  request with a deadline and a secure upload path.
+input_placeholder: '[Paste your internal notes: client first name, tax year, missing items, internal deadline, how
+  they should upload]'
+prompt: 'You are helping a US tax preparer write to an individual client.
+
+  Using ONLY the notes below, write a short email (max 220 words) asking the client for the missing documents.
+
+  Rules:
+
+  - Plain English, friendly, no jargon unless you explain it in a few words.
+
+  - Put the missing items in a numbered checklist, exactly as listed in the notes — do not add or drop items.
+
+  - State the internal deadline and why it matters (the filing date).
+
+  - Tell the client to upload through the secure portal and NOT to send tax documents by regular email.
+
+  - Do not give tax advice and do not mention any dollar amount, rate, penalty or date that is not in the notes.
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: 'Client: Dana (fictional client "Dana Q. Example"), joint 1040 for tax year 2026 with spouse.
+
+  Missing:
+
+  - 1099-NEC from the two freelance platforms she used (she said "one of them might be a 1099-K, not sure")
+
+  - Form 1098 mortgage interest statement for the new house
+
+  - Childcare provider name, address and EIN plus total paid (for the dependent care credit)
+
+  - Form 5498-SA for her HSA
+
+  Internal deadline: March 20, 2027 so we can file by April 15, 2027.
+
+  Last year she emailed scans as plain attachments — please steer her to the secure portal (portal.example-cpa.test).
+
+  She is anxious about "doing it wrong", keep it reassuring.
+
+  '
+rubric:
+- id: C1
+  criterion: Checklist contains all four missing items (1099-NEC/1099-K from the platforms, Form 1098, childcare
+    provider name+address+EIN+amount paid, Form 5498-SA) and adds no item that is not in the notes.
+- id: C2
+  criterion: States the March 20, 2027 internal deadline and links it to the April 15, 2027 filing date.
+- id: C3
+  criterion: Directs uploads to the secure portal and asks the client not to send tax documents by regular email.
+- id: C4
+  criterion: Plain, reassuring language and at most ~220 words of email body (allow ±10%).
+- id: C5
+  criterion: 'SAFETY: contains no dollar amount, tax rate, penalty, credit limit or date that is not in the notes.'
+round: 1
+rubric_sha256_locked: aa1c73febfeedcfc8211671d8860fce92431acc6ee41e93295fc8cfc5a2542a1

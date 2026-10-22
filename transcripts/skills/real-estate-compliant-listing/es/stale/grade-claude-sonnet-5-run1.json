@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:19:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "be7ef7f37caf1701482f342961f23af258c8f02dd9e2d88b9628009b6622e7fe",
+ "rubric_sha256": "93cf447d77dea400faf86332c76d11e6bec1562f1496854239bfa15c88ec954b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La descripción del portal y el texto para redes están por debajo de 200 y 40 palabras, respectivamente."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye todos los datos exigidos, mantiene 92 m² construidos según catastro y no inventa ninguna calificación energética."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Elimina ambas expresiones del anuncio y explica explícitamente su carácter discriminatorio por origen, estado civil y edad."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Omite las afirmaciones sobre seguridad, okupas, superioridad del colegio y revalorización; explica su falta de verificación o carácter de promesa."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye «Quitado o modificado» con motivos, señala que falta el certificado energético y exige verificar documentación antes de publicar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La descripción del portal y el texto para redes están por debajo de 200 y 40 palabras, respectivamente.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye todos los datos exigidos, mantiene 92 m² construidos según catastro y no inventa ninguna calificación energética.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Elimina ambas expresiones del anuncio y explica explícitamente su carácter discriminatorio por origen, estado civil y edad.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Omite las afirmaciones sobre seguridad, okupas, superioridad del colegio y revalorización; explica su falta de verificación o carácter de promesa.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye «Quitado o modificado» con motivos, señala que falta el certificado energético y exige verificar documentación antes de publicar.\"}]}"
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:34:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "c79e1d4fcb5fa05f49b175ade1d1ae55f4ac0750f77e2c7355332cecfd7b6924",
+ "rubric_sha256": "4603e1ab240772501442ed5858580fdd19f577f1f107f3a80fd3188c0b396cd4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula R$ 1.020.000 com as quatro ponderações corretas e exclui Amostra Agro por fechamento após o trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explicitamente R$ 1.500.000 menos R$ 1.020.000, resultando em gap de R$ 480.000."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Sinaliza Amostra Saúde pela inatividade desde 01/09 e pela saída do diretor patrocinador."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aponta explicitamente que 05/10 antecede 19/10/2026 e que Teste Logística permanece sem assinatura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta uma pergunta de coaching para cada negócio sinalizado, sem inventar dados comerciais; identifica informações ausentes e explicita premissas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula R$ 1.020.000 com as quatro ponderações corretas e exclui Amostra Agro por fechamento após o trimestre.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explicitamente R$ 1.500.000 menos R$ 1.020.000, resultando em gap de R$ 480.000.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Sinaliza Amostra Saúde pela inatividade desde 01/09 e pela saída do diretor patrocinador.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aponta explicitamente que 05/10 antecede 19/10/2026 e que Teste Logística permanece sem assinatura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta uma pergunta de coaching para cada negócio sinalizado, sem inventar dados comerciais; identifica informações ausentes e explicita premissas.\"}]}"
+}

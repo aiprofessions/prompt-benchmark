@@ -1,0 +1,76 @@
+id: cm-pt-apr-01
+lang: pt
+translation_key: cm-jha
+title: APR para montagem de andaime fachadeiro e reboco externo com rede elétrica próxima
+scenario: Prepare uma APR com base em notas fictícias de montagem de andaime e reboco externo a 9 m. Identifique riscos críticos,
+  controles e pendências para validação pelo responsável técnico/SESMT.
+profession: construction-managers
+task: construction-managers.safety-plans
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Atue como apoio à elaboração de uma Análise Preliminar de Risco (APR) para a atividade de construção descrita nas
+  notas.
+
+  1. Apresente uma tabela: Etapa | Perigo | Risco | Medida de controle | Responsável, cobrindo preparação, montagem, uso/execução
+  e desmontagem.
+
+  2. Destaque os riscos críticos e indique quais condições devem ser verificadas antes da execução das etapas afetadas.
+
+  3. Liste pendências e inconsistências, a providência para cada uma e quais impedem o início de etapas ou a participação
+  de trabalhadores até sua resolução.
+
+  4. Encerre informando que a APR está sujeita à validação do responsável técnico/SESMT antes da liberação da atividade.
+
+  Use somente as notas como fonte de dados; proponha controles para os perigos identificados, sem apresentá-los como já implantados
+  ou validados.
+
+  Para informações ausentes ou não verificadas, indique "a confirmar"; não transforme relatos da equipe em fatos comprovados.
+
+  Não invente números, datas, leis, jurisprudência, normas, preços, distâncias, cargas ou prazos; não cite itens ou subitens
+  normativos.
+
+  Não acrescente exigências regulatórias; se mencionar a NR-18, limite-se a dizer que estabelece requisitos de segurança e
+  saúde no trabalho na indústria da construção.
+
+  Atribua responsáveis por função ou pelos nomes informados, indicando "a confirmar" quando necessário; não garanta segurança
+  nem autorize a execução.
+
+  Limite o texto fora da tabela a 250 palavras.
+
+  Notas da atividade:
+
+  [Cole as notas da atividade: etapas, altura, equipe, equipamentos, entorno, cronograma e pendências; anonimize nomes, CPF,
+  registros profissionais e endereços]
+
+  '
+sample_input: 'Todos os nomes, locais, identificadores e demais dados deste exemplo são fictícios.
+
+  Obra: Residencial Exemplo — Construtora Exemplo Ltda. (fictícia), Rua Fictícia, 100, Cidade Exemplo/SP.
+
+  Responsável técnico: Eng. Ana Exemplo (CREA 0000000000 fictício). Técnico de segurança: Martin Exemplo.
+
+  Atividade: montagem de andaime fachadeiro na fachada frontal, até 9 m de altura, e reboco externo da fachada.
+
+  Equipe: 4 montadores da Andaimes Exemplo Ltda. (fictícia) e 3 pedreiros da construtora. Argamassa içada por guincho de coluna.
+
+  Entorno: rede de média tensão da concessionária passa em frente à fachada, "uns 2 m" do alinhamento (estimativa do encarregado,
+  não medida). Calçada com desnível e passagem de pedestres.
+
+  Cronograma: montagem do andaime prevista para iniciar em 10/11/2026. Desligamento da rede solicitado à concessionária (protocolo
+  fictício 0000-TESTE), previsto para 14/11/2026.
+
+  Documentos: projeto do andaime e ART do fornecedor "serão enviados"; ainda não recebidos.
+
+  Capacitação: montador João Exemplo com certificado de trabalho em altura "em emissão".
+
+  Relato não verificado do mestre de obras por mensagem: "Pela NR-35, até 10 m não precisa de cinto, o guarda-corpo já resolve."
+
+  Previsão de chuva na semana de 10/11.
+
+  '
+page: https://aiprofessions.ai/pt/gestores-de-obras/prompts/#cm-pt-apr-01
+results_file: results/cm-pt-apr-01.yaml

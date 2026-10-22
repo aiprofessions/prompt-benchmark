@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ev-fr-budget-mariage-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Le traiteur est recalculé à 10 728,00 € TTC, avec repas à 6 732,00 €, boissons à 2 376,00 € et service à 1 620,00 € TTC (tolérance de ±0,01 € sur chaque montant calculé), et le total annoncé de 10 395,00 € est signalé comme incohérent et écarté du calcul du budget."
+  },
+  {
+   "id": "C2",
+   "criterion": "Le budget présente un total recalculé des devis écrits de 21 198,00 € et un dépassement de 1 198,00 € par rapport au budget de 20 000,00 €, puis un total indicatif d’environ 21 798,00 € et un dépassement d’environ 1 798,00 € incluant la vaisselle, isolée comme estimation orale d’environ 600 € sans devis (tolérance arithmétique de ±0,01 € sur chaque résultat)."
+  },
+  {
+   "id": "C3",
+   "criterion": "La réponse propose exactement trois pistes, dont les boissons allégées pour une économie de 648,00 € TTC et la formule photographique sans album pour 350,00 € TTC, calculs montrés (tolérance de ±0,01 €) ; la troisième comporte soit un calcul fondé sur les données, avec confirmation de la faisabilité et des frais éventuels en cas de suppression, soit la mention « estimation à confirmer » sans montant inventé."
+  },
+  {
+   "id": "C4",
+   "criterion": "La réponse comprend un tableau couvrant repas, boissons, service, salle, ménage, DJ, fleurs, photographe et papeterie, regroupements autorisés si les composantes restent identifiables, avec base de calcul, HT, TVA et TTC lorsqu’ils sont disponibles, sans décomposition inventée des montants uniquement TTC, des montants au format français et une note au couple en vouvoiement d’au plus 165 mots."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ: la réponse n’invente aucun prix, taux, remise ou fait, ne formule aucune affirmation réglementaire, conserve les taux des devis, ne garantit aucune économie et demande un total corrigé par écrit au traiteur ainsi qu’un devis écrit pour la vaisselle avant validation par le professionnel."
+  }
+ ],
+ "rubric_sha256": "94c8696eee45755cb0a90fe97ff7b6a0c290edb7f29af4cdb2bcb0638abc7321",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les quatre montants recalculés sont exacts ; le total annoncé est signalé comme incohérent et remplacé dans le budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation téléphonique sans devis et intégrée au total indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes : boissons à 648,00 € et album à 350,00 €, calculs montrés ; fleurs avec « estimation à confirmer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes, bases et ventilations disponibles sans décomposition inventée ; formats français et note en vouvoiement sous 165 mots."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Taux conservés, aucune économie garantie ni affirmation réglementaire ; correction écrite du traiteur et devis vaisselle demandés avant validation professionnelle."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois postes et le total traiteur sont correctement recalculés ; le total incohérent de 10 395,00 € est écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis et son inclusion reste indicative."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Exactement trois pistes sont proposées, mais celle du ménage annonce 300,00 € sans montrer le calcul demandé ni porter la mention « estimation à confirmer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes requis avec les données disponibles, sans décomposition TTC inventée ; la note emploie le vouvoiement et respecte la limite."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Les taux sont conservés, les économies conditionnelles ; correction écrite du traiteur et devis écrit de vaisselle sont demandés avant validation."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois lignes et le total traiteur sont correctement recalculés ; le total incohérent de 10 395,00 € est écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis et le second total qualifié d’indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes : boissons et photo correctement calculées ; suppression du ménage chiffrée selon le devis, conditionnée à sa faisabilité et aux frais éventuels."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes requis sans ventilation inventée ; les montants suivent globalement le format français et la note respecte vouvoiement et longueur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note affirme une « erreur de TVA », alors que seule l’incohérence du total est établie ; son origine reste une hypothèse."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois lignes et le total traiteur sont exacts ; le total incohérent est signalé et remplacé dans le budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes sont présentées ; les économies sont calculées à partir des montants fournis, la troisième restant explicitement conditionnelle."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Les postes sont présentés en listes, non dans un tableau ; la note respecte néanmoins le vouvoiement et la limite de mots."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Les taux sont conservés, aucune économie n’est garantie ; correction écrite du traiteur et devis écrit de vaisselle sont demandés."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois composantes et le total traiteur sont exacts ; le total incohérent est signalé et remplacé dans le budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis et le second total reste indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes ; économies boissons et photo correctement calculées ; troisième marquée « estimation à confirmer », avec vérification de faisabilité et frais."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Les postes sont présentés en liste détaillée, pas dans un tableau couvrant les prestations et les colonnes demandées."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L'estimation orale de vaisselle est qualifiée de TTC alors que les données ne précisent pas son statut fiscal."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois lignes et le total traiteur sont exacts ; le total imprimé incohérent est explicitement écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis et le second total est indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes : boissons 648,00 €, album 350,00 €, ménage 300,00 €, avec bases chiffrées et confirmation de faisabilité et frais."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les tableaux couvrent tous les postes requis sans inventer de décomposition fiscale ; montants français et note en vouvoiement inférieure à 165 mots."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La réponse attribue au couple un souhait de conserver l’album, alors que les données expriment seulement une préférence pour préserver le photographe."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Repas 6 732,00, boissons 2 376,00, service 1 620,00, total 10 728,00 € recalculé; 10 395,00 € flagged as inconsistent and not used."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Written quotes total 21 198,00 €, 1 198,00 € over; vaisselle kept separate; indicative 21 798,00 €, about 1 798,00 € over."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactly three options: boissons 648,00 € and photo 350,00 € with workings; papeterie 380,00 € from data, feasibility and fees to confirm."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table covers all items, TTC-only lines marked as required, French number format, note uses vous and runs about 127 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or regulatory claims, quote rates kept, no guarantee; requests corrected catering quote and written vaisselle quote."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Traiteur recalculated to 10 728,00 € (6 732,00 / 2 376,00 / 1 620,00); 10 395,00 € flagged as inconsistent; recalculated amount used."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Written quotes total 21 198,00 €, 1 198,00 € over; vaisselle kept separate; indicative total about 21 798,00 €, about 1 798,00 € over."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactly three options: drinks 648,00 €, no album 350,00 €; dropping florist calculated at 1 740,00 € subject to feasibility and fees."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table covers every item, TTC-only amounts not broken down, French number format; vouvoiement note is about 121 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Nothing invented, no regulatory claim, quote rates kept, savings not guaranteed; written caterer correction and written vaisselle quote requested."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Repas 6 732,00, boissons 2 376,00, service 1 620,00, total 10 728,00 € recalculés; 10 395,00 € flagged as incoherent and excluded."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "21 198,00 € and 1 198,00 € overrun; vaisselle isolated as oral estimate; indicative 21 798,00 € and 1 798,00 € overrun."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactly three pistes: boissons 648,00 €, photo 350,00 €, papeterie 380,00 €, all calculated; feasibility and fees flagged for confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table covers all posts, TTC-only amounts not decomposed, French format; vouvoiement note is about 130 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or regulatory claims, devis rates kept, savings not guaranteed; written caterer correction and vaisselle devis requested."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les quatre montants recalculés sont exacts ; le total imprimé est signalé incohérent et remplacé dans le budget retenu."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les totaux et dépassements demandés sont exacts ; la vaisselle est isolée comme estimation téléphonique sans devis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exactement trois pistes, calculs corrects pour boissons et photographie ; suppression du ménage chiffrée et conditionnée à sa faisabilité sans frais."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes requis sans décomposition inventée ; montants français et note en vouvoiement respectant la limite."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune invention factuelle ni affirmation réglementaire ; taux conservés, économies non garanties, devis traiteur corrigé et devis vaisselle écrit demandés avant validation."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois lignes et le total traiteur sont correctement recalculés ; le total incohérent est exclu du budget retenu."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "La piste ménage annonce 300,00 € sans montrer le calcul de cette économie ni porter la mention « estimation à confirmer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes et leurs données disponibles, sans décomposition inventée ; la note en vouvoiement respecte 165 mots."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Les taux sont conservés, aucune économie n’est garantie ; correction écrite du traiteur et devis écrit de vaisselle sont demandés."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les quatre montants recalculés sont exacts ; le total imprimé incohérent est explicitement remplacé par 10 728,00 € pour le budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale sans devis et intégrée au second total indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Trois pistes figurent, avec calculs exacts pour boissons et photographie, mais l’économie ménage est annoncée sans calcul ni mention « estimation à confirmer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes requis sans ventilation inventée ; les montants sont au format français et la note en vouvoiement respecte 165 mots."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Les confirmations écrites sont demandées, mais affirmer que l’estimation orale « n’est pas une base contractuelle » ajoute une qualification juridique non documentée."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois lignes et le total traiteur sont correctement recalculés ; le total incohérent de 10 395,00 € est écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont corrects ; la vaisselle est isolée comme estimation téléphonique sans devis et le second total est indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Quatre leviers distincts sont proposés : boissons, ménage, fleurs et album. Regrouper ménage et fleurs sous une piste ne respecte pas exactement trois pistes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes avec les données disponibles, sans ventilation inventée ; les montants sont français et la note respecte vouvoiement et longueur."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Les taux sont conservés, les économies conditionnelles, sans affirmation réglementaire ; une correction écrite du traiteur et un devis vaisselle sont demandés."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois composantes et le total traiteur sont correctement recalculés ; le total incohérent de 10 395,00 € est écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les deux totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation orale approximative sans devis."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Quatre pistes distinctes sont proposées : boissons, ménage, fleurs et album, malgré leur regroupement sous trois numéros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes requis sans décomposition inventée ; les montants sont au format français et la note respecte vouvoiement et longueur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’affirmation « le ménage étant souvent obligatoire » ajoute un fait absent des données, malgré les demandes correctes de devis écrits."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois postes et le total traiteur sont correctement recalculés ; le total annoncé incohérent est écarté du budget."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les totaux et dépassements sont exacts ; la vaisselle est isolée comme estimation téléphonique sans devis, incluse seulement dans le total indicatif."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Malgré trois rubriques numérotées, la deuxième propose trois actions distinctes : ménage, fleurs et DJ, dépassant exactement trois pistes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Le tableau couvre tous les postes, détaille les montants disponibles sans ventilation inventée ; la note en vouvoiement reste sous 165 mots."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note affirme une « erreur d’addition » du traiteur, alors que les données établissent seulement une incohérence, sans en déterminer la cause."
+    }
+   ],
+   "transcript": "prompts/ev-fr-budget-mariage-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

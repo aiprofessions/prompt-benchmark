@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-pt-evolucao-cfm-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "O lists all five vitals with correct values and units; weight noted as not measured; home '39 e pouco' kept in S as patient report."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Dipyrone reaction is highlighted before S, the contradiction is flagged for physician verification, and dipyrone is not recommended."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Pending list covers unmeasured weight, undefined paracetamol dose/posology, and collection/results pending for hemogram and NS1."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "About 400 words; first line identifies the AI draft for review/signature; includes a suggested chart line on AI use with physician's final decision."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Attributes atestado/declaração decisions to the CFM resolution, an added regulatory claim; also labels the reaction 'angioedema' and 'importante' beyond the transcript."
+  }
+ ]
+}

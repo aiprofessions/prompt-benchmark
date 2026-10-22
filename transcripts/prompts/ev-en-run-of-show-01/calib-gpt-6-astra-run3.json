@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-en-run-of-show-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Table includes all five required columns and every scheduled item, with flight and venue arrival times included in keynote notes."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly flags venue arrival at 9:40 as 10 minutes after the 9:30 keynote start."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly identifies Sam’s simultaneous 12:00 Room B sponsor demo setup and Main Stage reset as double-booking."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "All given times remain unchanged in the table; suggested adjustments are labelled Proposed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No unprovided people, rooms, or times are invented; missing assignments are marked Not specified and recommendations labelled Proposed."
+  }
+ ]
+}

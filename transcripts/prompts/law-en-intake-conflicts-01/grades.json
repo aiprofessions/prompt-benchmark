@@ -1,0 +1,542 @@
+{
+ "prompt_id": "law-en-intake-conflicts-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Conflicts list includes Jamie Example, Sample Builders LLC, Pat Sample, Example Electric, Example Home Bank and Chris Testa, each with a role."
+  },
+  {
+   "id": "C2",
+   "criterion": "Flags the September 2, 2026 lien as raising time-sensitive issues for urgent attorney review without stating a specific limitations/response period as fact."
+  },
+  {
+   "id": "C3",
+   "criterion": "Reply to the prospect states no attorney-client relationship exists yet / firm has not agreed to represent and gives no legal advice."
+  },
+  {
+   "id": "C4",
+   "criterion": "Document request list includes the contract, payment records, lien filing and the lender's letter."
+  },
+  {
+   "id": "C5",
+   "criterion": "Summary is neutral and at most ~120 words (allow ±10%) and contains no invented facts."
+  }
+ ],
+ "rubric_sha256": "66f5b9cb9150081d2a98483b08096bdb928923ab3dab6632381115eb90935fe5",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags the September 2 lien foreclosure deadline and recording timeliness for urgent attorney review without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply explicitly states the firm has not agreed to represent Jamie and no attorney-client relationship exists; it provides no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, proof of payments, recorded mechanic's lien, and Example Home Bank letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within the word limit, but identifies the lender as a mortgage lender, which the prospect did not specify."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list with roles."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the September 2 lien and flags enforcement and related deadlines for urgent attorney evaluation without asserting a specific legal period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply explicitly states the firm has not agreed to represent Jamie, disclaims an attorney-client relationship, and gives no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the contract, proof of payments, recorded mechanic's lien, and Example Home Bank letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within length limits but adds unsupported assertions that the contractor has not returned and the lender is a mortgage lender."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lists all six named people and entities, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the September 2 lien and flags related deadlines for urgent attorney review without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply explicitly states the firm has not agreed to represent Jamie and no attorney-client relationship exists; it provides no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the construction contract, payment records, recorded mechanic's lien, and Example Home Bank's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within length limits, but adds unsupported specifics: a mortgage lender and nonpayment specifically by the contractor."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list with roles."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists the September 2, 2026 lien and calls for immediate attorney verification of foreclosure deadlines without asserting a specific period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply explicitly denies an existing attorney-client relationship and representation agreement; provides intake requests and general deadline cautions, not substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded mechanic's lien, and lender's letter."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Summary is approximately 89 words, neutrally attributes the allegations, and contains no invented facts."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags the September 2 lien for urgent attorney review without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Despite representation disclaimers, the reply gives legal advice by directing Jamie to avoid additional payments, agreements, or admissions pending attorney consultation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded mechanic's lien, and Example Home Bank's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "The summary is neutral and within the word limit, but identifies the lender as a mortgage lender without that fact being provided."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named persons and entities appear in the conflicts list with roles."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists the September 2, 2026 lien and flags lien deadlines for immediate attorney review without asserting a specific period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly disclaims representation and an attorney-client relationship; provides no substantive legal advice, only intake guidance and encouragement to consult counsel."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded lien, and lender's letter."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Summary is approximately 82 words, neutrally attributes allegations, and contains no invented facts."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named persons/entities are listed, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags the September 2, 2026 lien and related deadlines for prompt attorney review; no specific period stated as fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply says the firm has not agreed to represent and that no attorney-client relationship or legal advice exists."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment proof, recorded lien and lender letter."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "About 94 words, neutral wording with 'reportedly', and no invented facts."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named persons/entities are listed, each with a stated role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists the September 2, 2026 lien and urges prompt attorney review of deadlines without stating any specific period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the firm has not agreed to represent, no attorney-client relationship, no legal advice; advice to seek counsel is standard caution."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded lien, and lender letter."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "About 90 words, neutral 'reportedly' framing, no invented facts."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named persons/entities are listed, each with a stated role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists the Sept 2 lien under urgent attorney review and asks for prompt evaluation of lien requirements; explicitly assumes no limitations period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Says the firm has not agreed to represent, no attorney-client relationship is created, and no legal advice is given; none is given."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded lien, and bank letter."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "About 87 words, neutral wording, and no invented facts beyond the message."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lists all six named people and entities, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags the September 2, 2026 lien for urgent attorney review without stating a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Acknowledgement expressly disclaims representation and an attorney-client relationship; provides only intake guidance and encouragement to seek counsel."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment proof, recorded mechanic's lien, and Example Home Bank's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within word tolerance, but adds unsupported assertions that the lender is a mortgage lender and the general contractor withheld payment."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lists all six named people and entities, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags lien enforcement as time-sensitive, ties attorney review to September 2, 2026, and leaves the applicable enforcement period for verification."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Acknowledgement explicitly states the firm has not agreed to represent Jamie and no attorney-client relationship exists; it provides no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded mechanic's lien, and Example Home Bank's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Within the word tolerance, but adds unsupported facts identifying the lender as a mortgage lender and the contractor as responsible for nonpayment."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lists all six named people and entities, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the September 2, 2026 lien and flags related deadlines for immediate attorney evaluation without asserting a specific period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Acknowledgement explicitly disclaims representation and an attorney-client relationship; provides no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the signed contract, payment records, recorded mechanic's lien, and lender's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within the word limit, but adds that the lender is a mortgage lender and the contractor owed subcontractor payment."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Lists all six named people and entities, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the September 2, 2026 lien and flags lien deadlines for urgent attorney review without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Expressly disclaims an attorney-client relationship and representation; provides intake requests and general deadline cautions rather than substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the construction contract, payment records, recorded lien, and lender's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary is neutral and within the word limit, but identifies Example Home Bank as a mortgage lender, which the message does not establish."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags the September 2 lien for urgent attorney evaluation of validity and enforcement deadlines without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The reply expressly disclaims an attorney-client relationship and agreed representation, requests intake documents, and gives no substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Requests the construction contract, payment records, recorded mechanic's lien, and Example Home Bank's letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "The summary is neutral and within the word limit, but identifies the bank as a mortgage lender, which the message does not establish."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All six named people and entities appear in the conflicts list, each with a role."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Expressly flags September 2 lien enforcement and contest timelines for urgent attorney review without asserting a specific limitations or response period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reply expressly disclaims an attorney-client relationship and accepted representation; requests documents and recommends attorney consultation without substantive legal advice."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Document requests include the remodeling contract, payment records, recorded mechanic’s lien, and lender’s letter."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Within the word limit, but characterizes the witnessed departure as abandonment and identifies a mortgage lender when the message specifies only a lender."
+    }
+   ],
+   "transcript": "prompts/law-en-intake-conflicts-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

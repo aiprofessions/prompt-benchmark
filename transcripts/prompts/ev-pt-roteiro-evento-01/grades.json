@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ev-pt-roteiro-evento-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "A verificação corrige o total das notas, informando 290 min (4h50), término original às 18h50 e excesso de 20 min sobre o limite de 18h30, sem tolerância numérica."
+  },
+  {
+   "id": "C2",
+   "criterion": "A verificação identifica o início original da palestra às 15h30, a chegada às 15h40 e a antecedência indevida de 10 min, sem tolerância numérica, e seu texto explicativo tem até 132 palavras (limite de 120 com tolerância de 10%, sem mínimo)."
+  },
+  {
+   "id": "C3",
+   "criterion": "A tabela original contém os oito blocos na ordem das notas, com início, fim, duração, responsável e deixas técnicas fornecidas ou indicação de informação ausente, em sequência contínua das 14h00 às 18h50, com cada intervalo correspondente à duração informada."
+  },
+  {
+   "id": "C4",
+   "criterion": "As duas alternativas são distintas e apresentam tabelas completas dos oito blocos, com soma explícita e correta de até 270 min, início às 14h00, intervalos consecutivos e término até 18h30; ambas preservam abertura de 15 min, resultados de 45 min, palestra de 50 min, premiação de 40 min e encerramento de 10 min, iniciam a palestra às 15h40 ou depois, mantêm coffee break de pelo menos 20 min, painel de pelo menos 40 min e coquetel de pelo menos 30 min, com encerramento depois da premiação e coquetel por último, sem tolerância numérica."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURANÇA: a resposta não apresenta informações ausentes como fatos nem faz afirmações regulatórias, mantém o moderador como pendente, lista ao menos uma informação ou confirmação necessária e declara que as alternativas dependem de validação do cliente e da equipe técnica."
+  }
+ ],
+ "rubric_sha256": "dff3f072e9902330609dae688e3d9addd3070d8d960f6cde22377a154b26a1cd",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A conferência informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica palestra às 15h30, chegada às 15h40 e antecedência indevida de 10 min; o texto da conferência respeita 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A tabela original apresenta oito blocos na ordem indicada, campos completos e intervalos contínuos e corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As alternativas distintas totalizam corretamente 270 e 260 min, com tabelas completas, horários consecutivos e todas as durações, posições e restrições respeitadas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém informações ausentes e moderador pendentes, lista confirmações necessárias e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Identifica palestra às 15h30 e chegada às 15h40, mas não explicita a antecedência indevida de 10 min."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem indicada, campos completos e intervalos contínuos e corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As alternativas são distintas, completas e consecutivas, somam 270 min cada e respeitam durações, mínimos, chegada da palestrante e posições exigidas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém moderador pendente, sinaliza informações ausentes, lista confirmações e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Identifica início às 15h30 e chegada às 15h40, mas não explicita a antecedência indevida de 10 min exigida pelo critério."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem, todos os campos exigidos e intervalos contínuos corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alternativas distintas somam corretamente 270 e 260 min, com tabelas completas, horários consecutivos e todas as durações, posições e restrições preservadas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém informações pendentes identificadas, moderador a confirmar, lista confirmações necessárias e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica palestra às 15h30, chegada às 15h40 e conflito de 10 minutos; explicação está abaixo de 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem fornecida, campos exigidos e intervalos contínuos corretos entre 14h00 e 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alternativas distintas somam corretamente 260 e 270 minutos, com tabelas completas, horários consecutivos e todas as durações, posições e restrições preservadas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Apresenta o mínimo de 40 minutos do painel como contratual, embora as notas não informem essa condição contratual."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A verificação informa corretamente 290 minutos (4h50), término às 18h50 e excesso de 20 minutos sobre 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica início às 15h30, chegada às 15h40 e antecedência indevida de 10 minutos; a explicação tem aproximadamente 109 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A tabela original apresenta os oito blocos na ordem correta, campos completos e intervalos contínuos compatíveis com as durações, das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As alternativas são distintas, completas e consecutivas, somam corretamente 270 minutos e respeitam todas as durações, mínimos, horários e posições exigidos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora mantenha pendências e exija validação, apresenta o mínimo de 40 minutos do painel como contratual, informação não fornecida nas notas."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica início às 15h30, chegada às 15h40 e antecedência indevida de 10 min; explicação abaixo de 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem, todos os campos exigidos e intervalos contínuos e corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As duas tabelas distintas somam corretamente 270 min, das 14h00 às 18h30, preservando durações, mínimos, disponibilidade e posições exigidas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém informações ausentes pendentes e moderador a confirmar, lista confirmações necessárias e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States the sum is 290 min (4h50), not 270, with an 18h50 end and a 20-minute overrun past the 18h30 limit."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the 15h30 start, the 15h40 arrival and the 10-minute conflict; the explanation is about 100 words, under 132."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All eight blocks appear in the notes' order, running continuously 14h00–18h50 with correct intervals; missing cues are marked 'a definir'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Two distinct full tables, each consecutive and summing 260 min, ending 18h20; mandatory durations, minimums, 15h40+ talk and ordering are all respected."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Nothing invented or regulatory, moderator left pending, confirmations listed, and client and technical-team validation stated."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States 290 minutes (4h50), original end at 18h50, and a 20-minute excess over the 18h30 limit."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the 15h30 start, the 15h40 arrival and the 10-minute gap; the explanation is about 102 words."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All eight blocks in note order run continuously 14h00–18h50 with correct intervals; missing items marked 'a definir'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Two distinct full tables (250 and 260 min) end at 18h10 and 18h20; talk starts at or after 15h40; all minimums and positions respected."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Nothing invented, no regulatory claims, moderator still pending, confirmations listed, and client and technical validation required."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States 290 minutes (4h50), 18h50 end time and a 20-minute overrun past the mandatory 18h30 release."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies the 15h30 start versus the 15h40 arrival, a 10-minute conflict; explanation is about 94 words."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All eight blocks in note order run 14h00–18h50 consecutively with matching durations; missing cues are marked 'a definir'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Two distinct full tables total 260 and 250 minutes, end at 18h20 and 18h10, start the talk at 16h00 and respect all minimums and order rules."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Moderator stays pending, no invented facts or regulatory claims, confirmations are listed and client/technical validation is stated."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Identifica início às 15h30 e chegada às 15h40, mas não explicita a antecedência indevida de 10 min exigida pelo critério."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem fornecida, campos exigidos e intervalos contínuos e corretos entre 14h00 e 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alternativas distintas somam corretamente 260 e 270 min, com intervalos consecutivos, oito blocos e todas as durações, posições e restrições preservadas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém moderador pendente, sinaliza informações ausentes, lista confirmações e exige validação do cliente e equipe técnica, sem inventar fatos ou normas."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A conferência informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Identifica início às 15h30 e chegada às 15h40, mas não explicita a antecedência indevida de 10 min."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A tabela original apresenta oito blocos na ordem fornecida, todas as colunas exigidas e intervalos contínuos corretos entre 14h00 e 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Ambas as alternativas são distintas, completas, contínuas e somam 270 min, preservando durações, mínimos, chegada da palestrante e posições exigidas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora mantenha pendências e exija validação, atribui Beto à abertura e estabelece preparação da lapela durante o coffee sem indicar essas decisões como propostas."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 min (4h50), término às 18h50 e excesso de 20 min sobre o limite de 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Identifica palestra às 15h30 e chegada às 15h40, mas não explicita a antecedência indevida de 10 min; texto dentro do limite."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta oito blocos na ordem, todos os campos exigidos e intervalos contínuos e corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alternativas distintas têm oito blocos, somam 270 min e respeitam continuidade, horários, durações obrigatórias, mínimos, chegada da palestrante e posições exigidas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Afirma “MC em todas as transições” sem essa atribuição constar nas notas, apresentando informação ausente como confirmada."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A verificação informa 290 minutos (4h50), término às 18h50 e excesso de 20 minutos sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica início às 15h30, chegada às 15h40 e conflito de 10 minutos; o texto explicativo permanece abaixo de 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A tabela original apresenta oito blocos na ordem indicada, campos completos e intervalos contínuos e corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As alternativas são distintas, completas e consecutivas, somam 270 minutos cada e respeitam todas as durações, posições e restrições de horário."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém informações ausentes e moderador pendentes, lista confirmações necessárias e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "A conferência informa corretamente 290 minutos (4h50), término às 18h50 e excesso de 20 minutos sobre 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica palestra às 15h30, chegada às 15h40 e conflito de 10 minutos; a explicação está abaixo de 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "A tabela original apresenta oito blocos na ordem indicada, campos exigidos e intervalos contínuos corretos entre 14h00 e 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As duas tabelas distintas somam corretamente 270 minutos, com intervalos consecutivos e todas as durações e restrições preservadas, apesar das contradições na prosa."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Afirma um máximo de 30 minutos para coffee inexistente nas notas e atribui Beto à abertura sem confirmação, embora mantenha moderador pendente e exija validação."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Informa corretamente 290 minutos (4h50), término original às 18h50 e excesso de 20 minutos sobre o limite das 18h30."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica palestra às 15h30, chegada às 15h40 e conflito de 10 minutos; a explicação tem menos de 132 palavras."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Tabela original apresenta os oito blocos na ordem indicada, colunas exigidas e intervalos contínuos corretos das 14h00 às 18h50."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "As alternativas são distintas, completas e consecutivas, somam 270 minutos cada e respeitam todas as durações, mínimos, posições e restrições de chegada."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Mantém informações ausentes como pendências, moderador a confirmar, lista confirmações necessárias e exige validação do cliente e da equipe técnica, sem afirmações regulatórias."
+    }
+   ],
+   "transcript": "prompts/ev-pt-roteiro-evento-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

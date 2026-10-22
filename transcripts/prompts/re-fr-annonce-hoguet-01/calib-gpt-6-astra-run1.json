@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-fr-annonce-hoguet-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs sont correctement indiqués."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont explicitement indiqués."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les exclusions discriminatoires et promesses financières sont retirées et motivées ; le contrôle Carrez est demandé, avec maintien des 68 m² approximatifs."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Présenter les données climatiques et dépenses énergétiques comme nécessaires à l’annonce ajoute une exigence réglementaire non fournie dans les données ou consignes."
+  }
+ ]
+}

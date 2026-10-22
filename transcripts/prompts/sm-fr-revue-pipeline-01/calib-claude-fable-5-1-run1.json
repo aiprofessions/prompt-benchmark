@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-revue-pipeline-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six opportunities match the export. Weighted values are 60k, 60k, 9k, 20k, 54k, 14k; totals 540 000 € gross and 217 000 € weighted."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 400 000 − 0 − 217 000 = 183 000 € and flags the CRM's 248 000 € as 31 000 € above the recalculation."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags exactly Démo Santé (30/09) and Specimen BTP (10/10) as overdue, and Fictif Industrie (47 days) and Specimen BTP (48 days) as inactive."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Martin has 4 questions, Ana 3, Léa 3, each tied to a named deal. Text outside the table is about 450 words, under 550."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "180 000 € is flagged unconfirmed and kept out of the main calculation; the scenario is labelled non retenue. No regulatory claim or guarantee; validation requested at end."
+  }
+ ]
+}

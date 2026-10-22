@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:53:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "5803ee82a74dc65ff532177c30effd225ab22eb39b328db77ffe93c92fb00c23",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Presenta $1,730,000 solo como escenario condicional y niega explícitamente que sea la previsión; declara la previsión no calculable."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Presenta $1,270,000 únicamente como brecha condicional; la brecha de la revisión se declara no calculable."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica la salida del impulsor como riesgo y señala 41 días de inactividad desde el 02/03, aunque condiciona el año."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Señala el cierre del 05/04 como vencido sin firma, tanto en alertas como en coaching, aunque condiciona el año."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye una pregunta de coaching para Ejemplo Farma y otra para Test Logística, basadas en datos aportados, sin inventar hechos comerciales."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Presenta $1,730,000 solo como escenario condicional y niega explícitamente que sea la previsión; declara la previsión no calculable.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Presenta $1,270,000 únicamente como brecha condicional; la brecha de la revisión se declara no calculable.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica la salida del impulsor como riesgo y señala 41 días de inactividad desde el 02/03, aunque condiciona el año.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Señala el cierre del 05/04 como vencido sin firma, tanto en alertas como en coaching, aunque condiciona el año.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye una pregunta de coaching para Ejemplo Farma y otra para Test Logística, basadas en datos aportados, sin inventar hechos comerciales.\"}]}"
+}

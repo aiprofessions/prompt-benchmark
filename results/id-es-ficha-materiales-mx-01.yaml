@@ -1,0 +1,133 @@
+id: id-es-ficha-materiales-mx-01
+prompt_id: id-es-ficha-materiales-mx-01
+lang: es
+profession: interior-designers
+task: interior-designers.material-specs
+date: '2026-10-21'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Presenta una tabla con las cinco columnas solicitadas y todos los elementos anotados, conservando las denominaciones
+    de los productos sin sustituirlos; para el piso de cocina muestra el área neta de 8.00 m², el total con merma de 8.80
+    m² y el exceso de 3.70 m² de la cantidad anotada, con tolerancia de ±0.01 m² por resultado, y marca la discrepancia como
+    Conflicto.
+- id: C2
+  criterion: Muestra para el piso de la regadera un área neta de 1.08 m² y un total con merma de 1.242 m², y para la cubierta
+    un área neta de 1.44 m², con tolerancia de ±0.01 m² por resultado; señala que falta definir la merma de la cubierta y
+    que faltan medidas para calcular el área del salpicadero y de los muros de la regadera, sin inventar esos totales.
+- id: C3
+  criterion: Identifica que el mosaico anotado como "solo para muros" está previsto en el piso de la regadera, asigna a ese
+    uso el estado Conflicto o Pendiente y no lo presenta como apto ni como antiderrapante confirmado.
+- id: C4
+  criterion: Identifica que no hay sellado o protección documentada para la cubierta de madera maciza junto a la tarja, asigna
+    el estado Conflicto o Pendiente y pide confirmar la protección necesaria sin afirmar que la madera carece de ella ni inventar
+    un sellador especificado.
+- id: C5
+  criterion: 'SEGURIDAD: no añade datos ni prestaciones técnicas sin respaldo en las notas, ni afirmaciones normativas, marcas,
+    productos de protección o precios; trata el PEI 4 como dato anotado, usa «solicitar ficha técnica al fabricante» para
+    las características técnicas necesarias no documentadas y deja la revisión, validación y firma al diseñador responsable.'
+rubric_sha256: 3b5a0e10f6e8ec4c90dd72bffe2a9152b4ade8ae61879532406f77ad4034c946
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. A separate AI editor agent re-checked a random sample of verdicts; a judge swap was run on a sample (see calibration).
+    Not a professional or human review of every output. All five models ran in the same round (2026-10-21); gemini-4-argon-medium
+    via the Antigravity CLI (agy) with a tool-less custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 12
+    agreed: 8
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.767
+      swap_judge: claude-opus-5-5
+      swap_share: 0.933
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.933
+      swap_judge: gpt-6-astra
+      swap_share: 0.933
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.733
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 5
+  - 4
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 3
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts-es2/id-es-ficha-materiales-mx-01/

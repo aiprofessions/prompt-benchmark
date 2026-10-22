@@ -1,0 +1,65 @@
+id: law-es-nda-es-01
+lang: es
+translation_key: law-nda-redline
+profession: lawyers
+task: lawyers.contract-drafting
+jurisdictions:
+- ES
+title: Revisión de un acuerdo de confidencialidad contra la política del cliente (España)
+scenario: 'Cláusulas del NDA de la contraparte frente a las posiciones de tu cliente: tabla de incidencias, riesgo
+  y redacción alternativa, más lo que falta. Con la protección de datos en mente.'
+input_placeholder: '[Pega las cláusulas del acuerdo y las posiciones (playbook) de tu cliente]'
+prompt: 'Asistes al abogado de la parte indicada en el playbook. Revisa las cláusulas del acuerdo de confidencialidad
+  frente al playbook.
+
+  Entrega una tabla: Cláusula | Incidencia | Riesgo (Alto/Medio/Bajo) | Redacción alternativa propuesta.
+
+  Después, lista lo que falta según el playbook.
+
+  Redacción breve y coherente con el playbook. No asumas hechos; señala lo que debe decidir el abogado responsable.
+  No cites jurisprudencia.
+
+  Material:
+
+  {{INPUT}}
+
+  '
+input: 'Nuestro cliente: Ejemplo Robótica, S.L. (ficticia), parte reveladora y receptora (acuerdo mutuo). Objeto:
+  evaluar un piloto conjunto.
+
+  Borrador de la contraparte:
+
+  Cl. 2 Información Confidencial: la marcada como "Confidencial" en el momento de su entrega.
+
+  Cl. 4 Duración: las obligaciones subsisten 1 año desde la entrega.
+
+  Cl. 6 Responsabilidad: la responsabilidad total de cada parte no excederá de 5.000 €.
+
+  Cl. 8 La parte receptora podrá compartir la información con cualquier sociedad de su grupo y con proveedores.
+
+  Cl. 9 Ley aplicable: española; tribunales de Madrid.
+
+  Playbook: incluir información oral/visual si se resume por escrito en 30 días; duración 3 años y secretos empresariales
+  mientras conserven tal condición; sin límite de responsabilidad por incumplimiento de confidencialidad; terceros
+  solo con necesidad de conocer y obligados por escrito a confidencialidad equivalente; si se intercambian datos
+  personales, cláusula conforme al RGPD (encargo de tratamiento si procede); ley española y Madrid aceptables; devolución/destrucción
+  a solicitud.
+
+  '
+rubric:
+- id: C1
+  criterion: Señala la Cl. 2 (solo marcada) y propone incluir información oral/visual resumida por escrito en 30
+    días.
+- id: C2
+  criterion: Señala la Cl. 4 y propone 3 años y protección de secretos empresariales mientras mantengan esa condición.
+- id: C3
+  criterion: Señala la Cl. 6 (límite 5.000 €) y la Cl. 8 (difusión a grupo/proveedores) como riesgo alto, con alternativa
+    de necesidad de conocer y obligación escrita.
+- id: C4
+  criterion: Identifica que faltan la devolución/destrucción y la previsión RGPD para datos personales; NO objeta
+    la ley española ni Madrid.
+- id: C5
+  criterion: 'SEGURIDAD: no inventa jurisprudencia ni artículos concretos y deja al abogado responsable las decisiones
+    de criterio.'
+round: 1
+rubric_sha256_locked: cb7d90010c6540868efc93435cc250cd47f6060a7f40b61806541f153394ee8e

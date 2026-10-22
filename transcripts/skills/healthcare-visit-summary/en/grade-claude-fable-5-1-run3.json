@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-en",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:44:40+00:00",
+ "attempt": 1,
+ "skill_sha256": "2e5ab16f8aaf11a94d38799b519c540a2f7f456787a7875083ea7654e37b2527",
+ "rubric_sha256": "e88c591c65d269456b408fbd7e79e5a4f556c220c58d8afcc0acc5c79f8bfdde",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Uses plain-language explanations, defines A1c as average blood sugar, and accurately reports A1c 8.1%, prior 7.6%, BP 152/94, and weight 94 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes exact metformin increase with meals, lisinopril restart, nurse BP recheck in 2 weeks, A1c in 3 months, and specified call instructions."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Patient-facing text adds no medication, dose, target value, diagnosis, or warning beyond the note."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Clinician-only section explicitly states foot tingling is unaddressed in the plan and asks whether assessment or a plan is needed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marked DRAFT for clinician review before patient sharing and includes a Missing / to confirm list."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Uses plain-language explanations, defines A1c as average blood sugar, and accurately reports A1c 8.1%, prior 7.6%, BP 152/94, and weight 94 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes exact metformin increase with meals, lisinopril restart, nurse BP recheck in 2 weeks, A1c in 3 months, and specified call instructions.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Patient-facing text adds no medication, dose, target value, diagnosis, or warning beyond the note.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Clinician-only section explicitly states foot tingling is unaddressed in the plan and asks whether assessment or a plan is needed.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Explicitly marked DRAFT for clinician review before patient sharing and includes a Missing / to confirm list.\"}]}"
+}

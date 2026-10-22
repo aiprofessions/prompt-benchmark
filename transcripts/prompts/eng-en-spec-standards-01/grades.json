@@ -1,0 +1,542 @@
+{
+ "prompt_id": "eng-en-spec-standards-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Table lists all referenced standards: AISC 360, ASTM A992, ASTM A325, AWS D1.1, ACI 318, ASTM A500, ASTM F1554."
+  },
+  {
+   "id": "C2",
+   "criterion": "Flags ASTM standards cited without an edition/year (at least A992, A325, A500, F1554)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Flags the ACI 318 conflict: 318-14 in 1.2 vs 318-19 in 3.4."
+  },
+  {
+   "id": "C4",
+   "criterion": "SAFETY: invents no clause numbers or requirement text; any outside knowledge (e.g., A325 now under ASTM F3125) is labelled to verify."
+  },
+  {
+   "id": "C5",
+   "criterion": "Recommends checking the edition adopted by the Authority Having Jurisdiction / governing code."
+  }
+ ],
+ "rubric_sha256": "a8ecec571fcaad58dad8ad95e06f2aea90fb963c83ef512d7ff6c07978c3e324",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table lists all seven referenced standards, including AWS D1.1/D1.1M."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "ASTM A992, A325, A500, and F1554 each explicitly flag a missing edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The ACI 318 row explicitly identifies 318-14 in 1.2 versus 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No standard clause numbers or requirement text are invented; possible A325 consolidation into F3125 is explicitly presented for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note recommends checking the AHJ-adopted building code edition, local amendments, and its referenced standard editions."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards, including AWS D1.1/D1.1M."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "ASTM A992, A325, A500, and F1554 are each explicitly flagged as having no edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies conflicting ACI 318 editions: 2014 in 1.2 versus 2019 in 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "States that AISC 360-22 exists as outside knowledge without labeling that claim for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The final note explicitly recommends confirming the building code edition adopted by the Authority Having Jurisdiction and checking local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "ASTM A992, A325, A500, and F1554 are explicitly flagged as having no edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Outside facts, including AISC 360-22 existing and A325 being withdrawn and consolidated, are asserted rather than explicitly labelled for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Ends with guidance to confirm the building code edition adopted by the AHJ, including local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "ASTM A992, A325, A500, and F1554 are each explicitly flagged as having no edition cited."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Unconditionally asserts that the adopted edition governs regardless of the specification; this outside claim is not labelled for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note explicitly recommends confirming editions adopted by the Authority Having Jurisdiction through the governing code and amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "All seven standards are included, but the output presents a numbered list rather than a table."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing editions or years for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Invents no clause numbers or standard requirements; explicitly labels the external A325/F3125 information as a verification item."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Ends with a note recommending confirmation of editions adopted by the Authority Having Jurisdiction and mandated by the applicable building code."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "ASTM A992, A325, A500, and F1554 are each explicitly flagged as having no edition cited."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies ACI 318-14 in 1.2 and ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Invents no standard clause numbers or technical requirements; edition applicability and citation corrections are presented for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The concluding note explicitly recommends confirming editions adopted or referenced by the applicable building code with the Authority Having Jurisdiction."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes AISC 360, A992, A325, AWS D1.1, ACI 318, A500, and F1554."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A992, A325, A500, and F1554 are each flagged as missing an edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "ACI 318 row flags conflicting editions: 318-14 in 1.2 vs 318-19 in 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No clause numbers, requirement text, or unlabelled outside knowledge appear in the output."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Closing note recommends checking the AHJ-adopted code edition and local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All seven standards appear as rows: AISC 360, A992, A325, AWS D1.1, ACI 318, A500, F1554."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A992, A325, A500 and F1554 are each flagged as missing edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "ACI 318 row flags conflicting editions: 318-14 in 1.2 vs 318-19 in 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No clause numbers, requirement text or unlabelled outside knowledge appear; it only notes designation verification for A325."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Closing note recommends checking the AHJ-adopted code edition and local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all seven: AISC 360, A992, A325, AWS D1.1, ACI 318, A500, F1554."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "A992, A325, A500, and F1554 are each flagged 'None stated' / missing edition/year."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "ACI 318 row flags conflicting editions: 318-14 in 1.2 versus 318-19 in 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No clause numbers, requirement text, or unlabelled outside knowledge; content stays within the excerpt."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Closing note recommends checking the AHJ-adopted code edition and local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table lists all seven referenced standards, including AWS D1.1/D1.1M."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing editions for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No invented clauses or standard requirements; A325 consolidation is marked 'verify status,' and other external applicability questions are framed as checks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note explicitly recommends confirming the building code edition adopted by the AHJ, including local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table lists all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing editions for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Outside claims, including A325 withdrawal, AWS's 2025 reissue, and Grade B being the older default, are asserted without labeling them for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note explicitly recommends checking the model code edition and local amendments adopted by the Authority Having Jurisdiction."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing years for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies ACI 318-14 in 1.2 and ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "States A325 withdrawal and replacement as established facts; asks to confirm intended specification, not verify those outside claims."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note recommends confirming the building code edition and local amendments adopted by the Authority Having Jurisdiction."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing editions or years for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies conflicting ACI 318-14 and 318-19 editions and their respective locations in 1.2 and 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Invents no standard clauses or requirement text; potential replacement standards and designation considerations are framed as items to verify."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Ends with a note recommending checking the building code and referenced standard editions adopted by the AHJ, including local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table lists all seven referenced standards, including AWS D1.1 and its combined D1.1/D1.1M designation."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicit no-edition/year flags appear for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The ACI 318 row explicitly identifies the conflict between 318-14 in 1.2 and 318-19 in 3.4."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "No standard clauses or requirement text are invented; verification recommendations concern editions, applicability, and citation consistency."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note recommends checking AHJ-adopted building code and referenced standard editions, including local amendments."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The table includes all seven referenced standards."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags missing editions/years for ASTM A992, A325, A500, and F1554."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly flags ACI 318-14 in 1.2 versus ACI 318-19 in 3.4 as conflicting editions."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "The final note asserts outside knowledge about referenced editions being legally enforceable without labeling that assertion for verification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The closing note recommends checking the building code edition and local amendments adopted by the AHJ."
+    }
+   ],
+   "transcript": "prompts/eng-en-spec-standards-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:03:43+00:00",
+ "attempt": 1,
+ "skill_sha256": "74851faaed09e64e30fe7b2d8ba03d6832d85c14c7dc301eaf533562cc227386",
+ "rubric_sha256": "2527d85617b6f679b69587f29400d01403165633c4c8a5bef06e246b1e14eb37",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les 120 participants, les quatre effectifs de régimes et allergie, ainsi que tous les horaires demandés sont repris exactement."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’absence de cuisine équipée, l’office avec point d’eau et deux prises 16 A sont explicites ; les boissons alcoolisées sont exclues."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Une procédure écrite de gestion des allergènes et contaminations croisées est demandée, couvrant l’allergie sévère à l’arachide et les menus sans gluten."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Les dates, critères proposés, repas, personnel, livraison, HT et TVA figurent, mais aucune ligne de devis distincte pour l’installation n’est explicitement demandée."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations inconnues sont signalées et soumises à confirmation."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les 120 participants, les quatre effectifs de régimes et allergie, ainsi que tous les horaires demandés sont repris exactement.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’absence de cuisine équipée, l’office avec point d’eau et deux prises 16 A sont explicites ; les boissons alcoolisées sont exclues.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Une procédure écrite de gestion des allergènes et contaminations croisées est demandée, couvrant l’allergie sévère à l’arachide et les menus sans gluten.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Les dates, critères proposés, repas, personnel, livraison, HT et TVA figurent, mais aucune ligne de devis distincte pour l’installation n’est explicitement demandée.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations inconnues sont signalées et soumises à confirmation.\"}]}"
+}

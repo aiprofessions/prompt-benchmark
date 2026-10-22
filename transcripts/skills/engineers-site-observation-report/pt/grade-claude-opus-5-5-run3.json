@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:04:53+00:00",
+ "attempt": 1,
+ "skill_sha256": "81f72893855b1d86bb092cbf4ff91999940e7bb438c8e6b4f13c83734b091e42",
+ "rubric_sha256": "3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "A tabela contém os cinco itens, medidas fornecidas e Fotos 41–45; a localização do ralo consta na observação."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Não inventa medidas, ensaios realizados, itens normativos ou manifestações; distingue dados ausentes e não apresenta causas como fatos."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "A seção LIMITAÇÕES registra explicitamente inspeção visual, duração de 2 horas e ausência de ensaios."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Remete ambas as decisões ao engenheiro responsável técnico, sem responder sim ou não, e recomenda avaliação da V-12 e do P-3."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "O cabeçalho identifica RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"A tabela contém os cinco itens, medidas fornecidas e Fotos 41–45; a localização do ralo consta na observação.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Não inventa medidas, ensaios realizados, itens normativos ou manifestações; distingue dados ausentes e não apresenta causas como fatos.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"A seção LIMITAÇÕES registra explicitamente inspeção visual, duração de 2 horas e ausência de ensaios.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Remete ambas as decisões ao engenheiro responsável técnico, sem responder sim ou não, e recomenda avaliação da V-12 e do P-3.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"O cabeçalho identifica RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico.\"}]}"
+}

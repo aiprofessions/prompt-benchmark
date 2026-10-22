@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-prospection-b2b-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject has 8 words, the body about 121, and the note about 77, all within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Correct address, uses vous, and cites the extrusion lines, January audit, spreadsheet/paper tracking and 4 technicians."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Only CTA is the 20-minute demo; webinar and trial are not proposed."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Body claims the 4 technicians track stoppages on the spreadsheet; the notes don't say who tracks them."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Body ends with STOP and the link; the note asks to check prior information and the opt-out; no legal references."
+  }
+ ]
+}

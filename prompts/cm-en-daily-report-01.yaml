@@ -1,0 +1,45 @@
+id: cm-en-daily-report-01
+lang: en
+translation_key: cm-daily-report
+title: Daily site report from foreman voice notes
+scenario: 'Turn rambling end-of-day notes into a structured daily report: manpower table, work done, delays with cause, safety
+  items and the RFI that needs an answer.'
+profession: construction-managers
+task: construction-managers.site-reports
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Turn the notes below into a construction daily report with sections: Weather, Manpower (table by trade with headcount
+  and total), Work performed, Deliveries, Delays & impacts, Safety observations, Open RFIs / decisions needed, Photos referenced.
+
+  Keep every number exactly as stated; compute totals; do not invent activities, people or durations. Note any item that may
+  require formal notice under the contract as "consider notice — check contract".
+
+  Notes:
+
+  [Paste the foreman''s notes for the day]
+
+  '
+sample_input: 'Project: Example Library renovation (fictional). Date: Oct 14, 2026.
+
+  Rain until 10:00, then cloudy, 58°F.
+
+  Crews: framers 6, electricians 4, plumbers 2, our laborers 3.
+
+  Framing 2nd floor east wing walls finished; electrical rough-in started in rooms 201–204.
+
+  Drywall delivery was scheduled 8:00, truck came 13:30, so the drywall crew (planned start tomorrow) may slip one day.
+
+  Found an unmarked conduit in the wall at grid B-3 not on drawings — sent RFI #027, need answer by Friday or electrical rough-in
+  in 205 stops.
+
+  Safety: one guardrail missing at stair 2 landing — fixed by 11:00. Toolbox talk on ladder safety.
+
+  Photos 14–19.
+
+  '
+page: https://aiprofessions.ai/construction-managers/prompts/#cm-en-daily-report-01
+results_file: results/cm-en-daily-report-01.yaml

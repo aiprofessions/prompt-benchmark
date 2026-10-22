@@ -1,0 +1,44 @@
+id: hc-en-patient-handout-01
+lang: en
+translation_key: hc-patient-handout
+title: Plain-language handout for a newly started medication
+scenario: Turn the clinician's discharge facts into a one-page handout at roughly a 6th-grade reading level that never adds
+  doses or targets the clinician didn't give.
+profession: healthcare
+task: healthcare.patient-education
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Write a patient handout (max 300 words) from the clinician''s facts below.
+
+  - Reading level about 6th grade: short sentences, everyday words, explain any medical term the first time.
+
+  - Use the medication dose and timing exactly as given; do not add other doses, targets or lab goals unless they are in the
+  facts.
+
+  - Include a "When to call your care team" section.
+
+  - End by telling the patient to ask their care team about anything unclear. This handout does not replace their clinician''s
+  advice.
+
+  Facts:
+
+  [Paste the clinician''s facts: diagnosis, medication + exact dose and timing, labs given to the patient, follow-up]
+
+  '
+sample_input: '[Fictional patient] New diagnosis: type 2 diabetes.
+
+  A1c today: 7.4%.
+
+  Started: metformin 500 mg once daily with the evening meal.
+
+  Common side effects discussed: upset stomach, diarrhea — usually better after a few weeks.
+
+  Follow-up visit in 3 months with a repeat A1c. Referral to diabetes education class.
+
+  '
+page: https://aiprofessions.ai/healthcare/prompts/#hc-en-patient-handout-01
+results_file: results/hc-en-patient-handout-01.yaml

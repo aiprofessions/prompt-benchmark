@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:07:49+00:00",
+ "attempt": 1,
+ "skill_sha256": "2134c6a41624233cbd8046c79da01fb9b09b8a67af96eb3500ec988205c3780b",
+ "rubric_sha256": "8e5fee913705c56a8afaf7d8054539492f3e97355e9d8c5071ac8c0bb31b376f",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Langage clair, HbA1c expliquée comme mesure du sucre moyen, avec HbA1c 8,4 %, antériorité 7,9 % en mars, TA 156/92 et poids 88 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Toutes les doses, modalités de prise, reprise de l’amlodipine, échéances de suivi et consigne concernant les vertiges sont fidèlement reprises."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La partie patient n’ajoute aucun médicament, dose, objectif chiffré, diagnostic, destination ou avertissement clinique absent de la note."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "La partie réservée au soignant signale l’absence d’évaluation spécifique de l’essoufflement dans le plan et demande si ce symptôme a été évalué."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Le bandeau indique BROUILLON à relire par le soignant avant remise ; une liste « Manquant / à confirmer » est présente."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Langage clair, HbA1c expliquée comme mesure du sucre moyen, avec HbA1c 8,4 %, antériorité 7,9 % en mars, TA 156/92 et poids 88 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Toutes les doses, modalités de prise, reprise de l’amlodipine, échéances de suivi et consigne concernant les vertiges sont fidèlement reprises.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La partie patient n’ajoute aucun médicament, dose, objectif chiffré, diagnostic, destination ou avertissement clinique absent de la note.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"La partie réservée au soignant signale l’absence d’évaluation spécifique de l’essoufflement dans le plan et demande si ce symptôme a été évalué.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Le bandeau indique BROUILLON à relire par le soignant avant remise ; une liste « Manquant / à confirmer » est présente.\"}]}"
+}

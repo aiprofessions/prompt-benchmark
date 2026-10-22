@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-es-propuesta-honorarios-es-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All three phases' scope matches the notes. Table shows 1.710,00, 3.040,00 and 1.800,00 € with bases, unit prices and 150 € per additional visit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 6.550,00 € excl. VAT, 1.375,50 € VAT and 7.925,50 € incl. VAT with calculations; internal section notes +550,00 € versus the 6.000 € phone figure."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Milestones are 30/30/40 % on a 4.750 € base, with VAT-exclusive and VAT-inclusive amounts. Sum checked at 100 %; visits billed separately monthly in arrears."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "All exclusions listed; render ambiguity flagged internally without inventing scope or price. Uses usted; client text is about 470 words."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No cost or duration guarantee; contractor budget pending and timeframe unconfirmed. Internal 8 versus 10–12 week gap quantified; approval required before sending."
+  }
+ ]
+}

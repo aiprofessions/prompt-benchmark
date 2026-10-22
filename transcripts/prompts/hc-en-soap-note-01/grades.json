@@ -1,0 +1,542 @@
+{
+ "prompt_id": "hc-en-soap-note-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Uses S/O/A/P structure."
+  },
+  {
+   "id": "C2",
+   "criterion": "Vitals exactly as given: 38.4 °C, HR 96, BP 122/78, SpO2 99% RA."
+  },
+  {
+   "id": "C3",
+   "criterion": "Adds no exam findings, history or test results not in the transcript (e.g., no lymph node findings, no strep result)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Penicillin allergy (rash) is prominently recorded, and the plan matches the transcript: rapid strep pending, non-penicillin antibiotic if positive, ibuprofen 400 mg q6h PRN with food, return precautions."
+  },
+  {
+   "id": "C5",
+   "criterion": "Includes a 'missing / to confirm' list and marks the note as a draft requiring clinician review/signature."
+  }
+ ],
+ "rubric_sha256": "c5d314dbf109d419f9ad162e2514af98c75fa3c24572c2cab3a18908bca2c0ca",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses clearly labeled Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records temperature 38.4 °C, HR 96, BP 122/78, and SpO2 99% on room air exactly as provided."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unsupported exam findings, history, or test results are asserted; additional information is explicitly listed as missing or requiring confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin rash allergy appears prominently; plan includes pending rapid strep, non-penicillin antibiotic if positive, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and explicitly marks the note as a draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicit Subjective, Objective, Assessment, and Plan sections provide S/O/A/P structure."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records Temp 38.4 °C, HR 96, BP 122/78, and SpO2 99% on room air exactly as transcribed."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unsupported exam findings, history, or test results are asserted; additional information is explicitly listed as missing or needing confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with childhood rash appears prominently; plan includes pending rapid strep, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and explicitly marks the note as a draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses explicit Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records temperature 38.4 °C, HR 96, BP 122/78, and SpO2 99% on room air exactly as stated."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Adds no unsupported exam findings, history, or test results; additional clinical details are explicitly listed as missing or needing confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Prominently records penicillin allergy with childhood rash; includes rapid strep testing awaiting result, conditional non-penicillin antibiotic, exact ibuprofen instructions, and return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Clearly marks the note as a draft requiring clinician review and signature and ends with a Missing / to confirm list."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses explicit Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records all four vital values accurately, including oxygen saturation on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unstated findings, history, or test results are asserted; additional information is listed only as missing or needing confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy and childhood rash appear prominently; plan includes rapid testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly marked draft requiring clinician review and signature, and ends with a Missing / to confirm list."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses explicit Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All vital values match: 38.4°C, HR 96, BP 122/78, and SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reported history and exam match the transcript; no test result or additional findings are asserted."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin rash allergy appears first after draft notice; plan includes rapid testing awaiting result, conditional non-penicillin antibiotic, exact ibuprofen instructions, and return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and explicitly labels the note a draft pending clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Clearly includes labeled Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records all four vitals exactly as stated, including room air for SpO2."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unstated exam findings, history, or test results are added; absent information is explicitly identified as missing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin rash allergy is prominent; plan includes rapid strep testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Ends with a Missing / to confirm list and explicitly marks the note as a draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Note has clearly labeled S, O, A, and P sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vitals match exactly: Temp 38.4 °C, HR 96, BP 122/78, SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Adds no findings, history or results; states strep is not confirmed and testing is planned."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Allergy is the first line; plan has rapid strep, non-penicillin antibiotic if positive, quoted ibuprofen instruction, return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and a DRAFT label requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Clear S, O, A, P sections are present."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vitals match exactly: Temp 38.4 °C, HR 96, BP 122/78, SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Only transcript findings are used; no added exam, history, or strep result; the assessment avoids an unstated diagnosis."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Allergy appears first; plan matches transcript: rapid strep, non-penicillin antibiotic if positive, ibuprofen dosing, return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and a DRAFT banner requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Clear S, O, A, P sections are present and labeled."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vitals recorded exactly: Temp 38.4 °C, HR 96, BP 122/78, SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No added exam findings or history; strep result explicitly noted as not provided."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Allergy listed first; plan quotes rapid strep, non-penicillin antibiotic, ibuprofen dosing, and return precautions verbatim."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Missing / to confirm list present; note marked draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses explicit Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records all vitals exactly as transcribed, including SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unsupported findings, history, or test results are asserted; additional information is explicitly listed as missing or needing confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with childhood rash appears prominently; plan includes pending rapid strep testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly marked as a draft requiring clinician review and signature, and ends with a Missing / to confirm list."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicit Subjective, Objective, Assessment, and Plan sections provide SOAP structure."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All vital values match exactly; “on room air” is equivalent to RA and matches the transcript."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No additional exam findings, history, or test results are asserted; absent information is listed for confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with childhood rash is prominent; plan includes rapid testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Ends with a Missing / to confirm list and explicitly requires clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicit Subjective, Objective, Assessment, and Plan sections provide S/O/A/P structure."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All vitals match: 38.4 °C, HR 96, BP 122/78, and SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reports only transcript-supported history and exam findings; no test result is invented. Additional information is explicitly listed as missing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with childhood rash is prominent; plan includes pending rapid strep, conditional non-penicillin antibiotic, exact ibuprofen instructions, and return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Clearly marked draft requiring clinician review and signature, and ends with a Missing / to confirm list."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes clearly labeled Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records Temp 38.4 °C, HR 96, BP 122/78, and SpO2 99% on room air exactly as stated."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unstated exam findings, history, or test results are asserted; additional items are explicitly identified as missing or requiring confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with childhood rash appears prominently; plan includes rapid strep testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a 'Missing / to confirm' list and explicitly marks the note as a draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses clearly labeled Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records temperature, heart rate, blood pressure, and oxygen saturation exactly as given, including room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unstated exam findings, patient history, or test results are asserted; additional clinical details are listed only as missing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Prominently records penicillin allergy with rash; includes rapid testing awaiting results, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and explicitly marks the note as an unsigned draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Uses explicit Subjective, Objective, Assessment, and Plan sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records all four vitals exactly as stated, including SpO2 99% on room air."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No unstated findings, history, or test results are asserted; additional items are explicitly listed as missing or needing confirmation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin rash allergy is prominent; plan includes rapid strep testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a Missing / to confirm list and explicitly labels the note a draft requiring clinician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-en-soap-note-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+id: ta-fr-vol-annule-01
+prompt_id: ta-fr-vol-annule-01
+lang: fr
+profession: travel-agents
+task: travel-agents.client-emails
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: L’e-mail indique un retard à l’arrivée de 12 h 35 pour l’option A et de 20 h 10 pour l’option B par rapport à
+    l’arrivée initiale, avec une tolérance de ± 5 minutes pour chaque retard.
+- id: C2
+  criterion: L’e-mail présente 142,00 € comme total des frais d’hôtel avancés (tolérance ± 0,01 €), ne présente pas 124 €
+    comme total correct et demande au client de conserver ses justificatifs.
+- id: C3
+  criterion: L’e-mail signale que l’option B, arrivant le 21/10 à 19 h 30, est incompatible avec le rendez-vous de 16 h 00
+    et que l’option A, arrivant à 11 h 55, précède ce rendez-vous, sans garantir la ponctualité compte tenu du transfert non
+    renseigné.
+- id: C4
+  criterion: 'SÉCURITÉ: la réponse ne contient aucune affirmation réglementaire, aucune garantie d’indemnisation ou de remboursement,
+    ni aucun fait, montant ou délai présenté comme établi sans être fourni par les données ou déduit de celles-ci par calcul.'
+- id: C5
+  criterion: L’e-mail vouvoie le client, compte au maximum 330 mots (plafond de 300 mots avec tolérance de +10 %, objet et
+    signature compris), demande de choisir une option sans inventer de date limite et est suivi d’une section « À vérifier
+    avant envoi » de 5 puces au maximum signalant l’écart entre le montant de la note interne et celui de la facture.
+rubric_sha256: 3e326f283422d038900cb6dc11189f3a3fe6298f5d253a3790aa4f2c50367c40
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 5
+  - 4
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/ta-fr-vol-annule-01/

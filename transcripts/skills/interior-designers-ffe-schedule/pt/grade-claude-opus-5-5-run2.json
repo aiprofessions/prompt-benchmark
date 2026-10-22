@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:36:34+00:00",
+ "attempt": 1,
+ "skill_sha256": "c1d805ecb9976ca07b271238cc45ba50605eac8f43c2c789ec54fc43f2328f52",
+ "rubric_sha256": "aafddc6b50a1ad3c79dd2ecc8149cb7d0708a2cb399a47887c29ebc0301f07fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Inclui todas as peças e quantidades solicitadas e identifica o aparador de madeira de demolição como existente a reaproveitar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explicitamente o tapete de 3,2 m × 5,2 m, descontando 40 cm em cada lado."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exclui branco puro e veludo; exige verificação de tecidos, superfícies, limpeza e estabilidade considerando os gatos que arranham."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduz R$ 85.000 incluindo frete e montagem; adota pedido até 21/12/2026, contemplando oito semanas de fabricação mais duas de margem."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa marcas, modelos ou classificações técnicas; apresenta desempenho como pendência de verificação e todas as verbas como estimativas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Inclui todas as peças e quantidades solicitadas e identifica o aparador de madeira de demolição como existente a reaproveitar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explicitamente o tapete de 3,2 m × 5,2 m, descontando 40 cm em cada lado.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Exclui branco puro e veludo; exige verificação de tecidos, superfícies, limpeza e estabilidade considerando os gatos que arranham.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduz R$ 85.000 incluindo frete e montagem; adota pedido até 21/12/2026, contemplando oito semanas de fabricação mais duas de margem.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa marcas, modelos ou classificações técnicas; apresenta desempenho como pendência de verificação e todas as verbas como estimativas.\"}]}"
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-es-ley-aplicable-mx-01",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "P1 directly frames the 2-year national no-compete clause against constitutional freedom of work as the central question."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "P3-P5 treat the USB client list separately as trade secret, unfair competition, administrative, civil or criminal matters."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "No tesis, registry or article numbers cited; laws are named only generally and [FUENTE POR LOCALIZAR] is used throughout."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Section 3 covers the full contract, compensation, how the list was taken, evidence, and employment relationship and finiquito."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Gives concrete SJF and SCJN priorities, filters and search terms; repeatedly requires verification by a licensed attorney."
+  }
+ ]
+}

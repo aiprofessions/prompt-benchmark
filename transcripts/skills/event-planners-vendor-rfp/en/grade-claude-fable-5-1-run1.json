@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:45:04+00:00",
+ "attempt": 1,
+ "skill_sha256": "3b6da89ddf3fb21f976faf74270b77a1f6e008ab6c0ce75f6220f0c8bd65791d",
+ "rubric_sha256": "c4a9629f8e15385f7fb80cf0168ef081201eec103279521fae4d1d1d66b3c488",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Explicitly states all specified stage dimensions, screen and microphone quantities, confidence monitor, and speeches-only livestream excluding the auction."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States mandatory in-house rigger, load-in from 07:00, load-out complete by 01:00, and band-provided backline."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Requires separate equipment, labor, delivery, service charge, and tax lines; requests certificate of insurance, deposit schedule, and cancellation terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States February 1, 2027 proposal deadline and February 12, 2027 decision date, with explicit proposed evaluation criteria."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no budget, prices, contacts, or venue capabilities; unknown details are marked TBD or requested for confirmation."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Explicitly states all specified stage dimensions, screen and microphone quantities, confidence monitor, and speeches-only livestream excluding the auction.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"States mandatory in-house rigger, load-in from 07:00, load-out complete by 01:00, and band-provided backline.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Requires separate equipment, labor, delivery, service charge, and tax lines; requests certificate of insurance, deposit schedule, and cancellation terms.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"States February 1, 2027 proposal deadline and February 12, 2027 decision date, with explicit proposed evaluation criteria.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no budget, prices, contacts, or venue capabilities; unknown details are marked TBD or requested for confirmation.\"}]}"
+}

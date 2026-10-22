@@ -1,0 +1,56 @@
+id: m365-fr-compte-rendu-chantier-01
+lang: fr
+translation_key: m365-meeting-minutes
+title: 'Compte rendu de réunion de chantier : décisions, points ouverts, actions'
+scenario: Transformez des notes brutes de réunion de chantier en compte rendu qui sépare ce qui est décidé de ce qui reste
+  ouvert, sans inventer de date ni de conclusion technique.
+profession: any
+task: any.meeting-minutes
+tools:
+- microsoft-365
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-20'
+jurisdictions:
+- FR
+prompt: 'À partir UNIQUEMENT des notes brutes ci-dessous, rédigez le compte rendu de la réunion de chantier, à diffuser par
+  e-mail (Outlook).
+
+
+  Structure imposée : 1. Décisions ; 2. Points ouverts ; 3. Actions (responsable – action – échéance) ; 4. Prochaine réunion.
+
+  - Une décision n''est notée comme telle que si les notes montrent qu''elle a été prise.
+
+  - Une échéance non donnée dans les notes s''écrit « échéance à fixer ».
+
+  - Aucune conclusion technique, de sécurité ou de responsabilité qui ne figure pas dans les notes.
+
+  - 220 mots maximum.
+
+
+  [Collez vos notes de réunion (participants, sujets, ce qui a été dit). Anonymisez le maître d''ouvrage et les entreprises
+  si besoin.]
+
+  '
+sample_input: 'Réunion de chantier n° 7 — 15/10/2026 — rénovation maison Exemple (fictif), 12 rue de l''Exemple.
+
+  Présents : Mme Exemple (MOA), J. Martin (architecte), Exemple Façades, Exemple Menuiseries, L. Durand (coordonnateur SPS).
+
+
+  - Carrelage RDC : la MOA valide la réf. « Gris Exemple 60×60 ». OK pour commande par l''architecte.
+
+  - Menuiseries : livraison annoncée « semaine 45, peut-être 46 » par Exemple Menuiseries, pas de date ferme.
+
+  - Fissure mur cuisine (côté nord) : constatée par l''architecte. On demande l''avis d''un BET structure avant toute reprise.
+  Pas d''avis pour l''instant.
+
+  - Échafaudage côté jardin : L. Durand signale un garde-corps manquant au 2e niveau. Exemple Façades doit le reposer avant
+  le 17/10.
+
+  - Peinture : la MOA hésite entre deux teintes, à revoir.
+
+  - Prochaine réunion : 22/10/2026 à 9 h sur site.
+
+  '
+page: https://aiprofessions.ai/fr/agents-de-voyage/prompts/#m365-fr-compte-rendu-chantier-01
+results_file: results/m365-fr-compte-rendu-chantier-01.yaml

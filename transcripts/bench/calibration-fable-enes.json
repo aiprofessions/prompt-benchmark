@@ -1,0 +1,132 @@
+{
+ "seed": 20261021,
+ "langs": [
+  "en",
+  "es"
+ ],
+ "models": [
+  "claude-fable-5-1"
+ ],
+ "per_family": 10,
+ "summary": {
+  "anthropic": {
+   "runs": 10,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.88,
+   "swap_share": 1.0
+  }
+ },
+ "rows": [
+  {
+   "prompt_id": "cm-en-schedule-delay-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "law-en-nda-redline-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "sm-en-cold-email-01",
+   "model_key": "claude-fable-5-1",
+   "run": 3,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "hc-es-nota-soap-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "acc-en-missing-docs-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "law-en-nda-redline-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "law-en-intake-conflicts-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "eng-en-site-observation-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "id-en-concept-brief-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "id-en-concept-brief-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  }
+ ]
+}

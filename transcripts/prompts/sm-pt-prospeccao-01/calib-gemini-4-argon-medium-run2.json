@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-pt-prospeccao-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject has 7 words; email body is about 112 words, within the 132-word limit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Addresses Ana, uses several facts (fair, 180 deliveries, CDs, spreadsheets, contract) and makes one request: a 20-min video call the week of 26/10."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicit opt-out by replying to the email; uses 'você' throughout."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "The 30% claim is excluded and flagged as unsourced; the 11% km in 4 months is preserved; the list asks for review and approval."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Script is about 81 words, but the requirement note never states the 0303 prefix; it only says 'prefixo específico'."
+  }
+ ]
+}

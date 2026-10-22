@@ -1,0 +1,97 @@
+id: eng-pt-relatorio-vistoria-01
+lang: pt
+translation_key: eng-site-observation
+title: Relatório de vistoria técnica predial a partir de anotações de campo (Brasil)
+scenario: Transforme anotações de vistoria em um relatório com constatações separadas de hipóteses, prioridades conforme o
+  registro de campo e recomendações de investigação.
+profession: engineers
+task: engineers.technical-reports
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Prepare uma minuta de relatório de vistoria técnica para revisão por engenheiro(a) civil no Brasil, com no máximo
+  700 palavras.
+
+  1. Identifique imóvel, data, responsável e escopo apenas com os dados disponíveis.
+
+  2. Para cada manifestação, distinga claramente constatações observadas ou medidas, relatos de terceiros e hipóteses de causa,
+  sem apresentar hipóteses como conclusões.
+
+  3. Apresente um quadro de prioridades, preservando os graus de urgência e destacando a maior prioridade conforme as anotações.
+
+  4. Proponha recomendações imediatas e pelo menos uma investigação, ensaio ou medição complementar para cada manifestação,
+  antes de concluir sobre causas ou intervenções.
+
+  5. Liste dados faltantes, contraditórios ou não verificados e o que o profissional deve confirmar em campo; indique como
+  esclarecer eventuais divergências.
+
+  Use as anotações como única fonte factual. Recomendações e investigações devem aparecer como propostas, nunca como procedimentos
+  já realizados.
+
+  Não invente medidas, datas, valores, normas, leis ou jurisprudência. Relatos de terceiros devem permanecer atribuídos e
+  sujeitos a confirmação.
+
+  Não dê garantias de segurança ou de resultado. Informe que a minuta deve ser revisada e assinada pelo profissional responsável
+  antes de sua emissão.
+
+  Anotações de campo:
+
+  [Cole as anotações de campo: imóvel, data, responsável, manifestações observadas, medidas, urgências e relatos de terceiros.
+  Anonimize nomes, endereço, e-mail e registros profissionais]
+
+  '
+sample_input: 'DADOS INTEIRAMENTE FICTÍCIOS PARA EXERCÍCIO.
+
+  Vistoria: Condomínio Residencial Exemplo (fictício), Rua Fictícia, 100, Bairro Modelo, Cidade Exemplo/UF.
+
+  Data da vistoria: 14/10/2026, das 9h às 11h30. Vistoriadora: Eng. Ana Exemplo, CREA 0000000000 (fictício).
+
+  Solicitante: síndico Martin Exemplo (sindico@condominio-exemplo.test). Edifício com 4 pavimentos e garagem no térreo. A
+  idade do prédio não foi informada.
+
+
+  1) Apto 21, 2º andar, parede da sala voltada para a fachada lateral:
+
+  - Fissura diagonal a partir do canto superior da janela, seguindo em direção ao teto, com cerca de 1,2 m de extensão.
+
+  - Abertura de aprox. 3 mm medida com fissurômetro no ponto mais aberto.
+
+  - Legenda da foto 04 (anotada depois no celular): "fissura abertura 3 cm".
+
+  - Moradora diz que a fissura "apareceu há uns meses e está aumentando". Não há registro anterior.
+
+  - Síndico afirmou: "a causa é certamente recalque da fundação, o prédio vizinho teve o mesmo problema".
+
+  - Urgência anotada: MÉDIA (rever depois de confirmar a medida).
+
+
+  2) Laje da cobertura, sobre a caixa de escada:
+
+  - Manchas de umidade e eflorescência no teto do último pavimento, em área de aprox. 2 m × 1,5 m.
+
+  - Na cobertura, a manta de impermeabilização está descolada junto ao ralo e há acúmulo de água após chuva.
+
+  - Não foi possível verificar se há armadura exposta sob o forro.
+
+  - Urgência anotada: MÉDIA.
+
+
+  3) Garagem, pilar P7 (próximo à vaga 12):
+
+  - Desplacamento do concreto na face voltada para a rampa, com armadura longitudinal exposta e corroída em trecho de aprox.
+  40 cm, a cerca de 1 m do piso.
+
+  - Há manchas de ferrugem acima do trecho exposto e marca de impacto de veículo na quina.
+
+  - O porteiro informou que o pilar "já foi tratado com massa em 2024". Nenhum documento foi apresentado.
+
+  - A perda de seção da barra não foi medida.
+
+  - Urgência anotada: ALTA. Prioridade.
+
+  '
+page: https://aiprofessions.ai/pt/engenheiros/prompts/#eng-pt-relatorio-vistoria-01
+results_file: results/eng-pt-relatorio-vistoria-01.yaml

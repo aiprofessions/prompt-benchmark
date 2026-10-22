@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:01:30+00:00",
+ "attempt": 1,
+ "skill_sha256": "0d2f4575271d3ab70f34df0bfd0aee6c0b61a6407e3e76b733f4a656d93dc158",
+ "rubric_sha256": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Identifica a Cl. 3 e propõe expressamente uso da Informação Confidencial exclusivamente para o Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifica a Cl. 5 e propõe três anos, mantendo obrigações sobre segredos comerciais enquanto conservarem essa condição."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica a Cl. 8 e propõe devolução ou destruição mediante solicitação da Reveladora, inclusive cópias, com declaração por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ambas as cláusulas ausentes, relaciona LGPD à amostra de clientes e classifica Cl. 1 e Cl. 7 como conformes, sem alteração."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta o resultado como minuta para revisão, reserva decisões ao advogado responsável e não inventa autoridades jurídicas ou citações."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Identifica a Cl. 3 e propõe expressamente uso da Informação Confidencial exclusivamente para o Propósito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Identifica a Cl. 5 e propõe três anos, mantendo obrigações sobre segredos comerciais enquanto conservarem essa condição.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica a Cl. 8 e propõe devolução ou destruição mediante solicitação da Reveladora, inclusive cópias, com declaração por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ambas as cláusulas ausentes, relaciona LGPD à amostra de clientes e classifica Cl. 1 e Cl. 7 como conformes, sem alteração.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta o resultado como minuta para revisão, reserva decisões ao advogado responsável e não inventa autoridades jurídicas ou citações.\"}]}"
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "5803ee82a74dc65ff532177c30effd225ab22eb39b328db77ffe93c92fb00c23",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Declara la previsión no calculable y no presenta los $1,730,000 MXN requeridos, aunque excluye Ejemplo Agro."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Declara la brecha no calculable en lugar de indicar $1,270,000 MXN."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica Ejemplo Farma como riesgo por inactividad desde el 02/03 y salida del director impulsor."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Señala explícitamente que Test Logística tiene el cierre del 05/04/2027 vencido y continúa sin firmar."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye una pregunta de coaching para Test Logística y otra para Ejemplo Farma, basadas en datos aportados, sin inventar hechos comerciales."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Declara la previsión no calculable y no presenta los $1,730,000 MXN requeridos, aunque excluye Ejemplo Agro.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Declara la brecha no calculable en lugar de indicar $1,270,000 MXN.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica Ejemplo Farma como riesgo por inactividad desde el 02/03 y salida del director impulsor.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Señala explícitamente que Test Logística tiene el cierre del 05/04/2027 vencido y continúa sin firmar.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye una pregunta de coaching para Test Logística y otra para Ejemplo Farma, basadas en datos aportados, sin inventar hechos comerciales.\"}]}"
+}

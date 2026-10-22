@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:15:50+00:00",
+ "attempt": 1,
+ "skill_sha256": "0ffe07570204e2286e773347e36282056cef65c9f6ac24ec688edfecc3fa04dd",
+ "rubric_sha256": "be0106a3fc4e398b97638b67fbb95c50cbafec1d73896c7041712eb4ed40327e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Usa lenguaje claro, explica qué es el LDL y reproduce TA 148/90, LDL 162 mg/dL y peso 81 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye exactamente el cambio de losartán, inicio de atorvastatina, control en 4 semanas, lípidos en 3 meses y acudir por mareo intenso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La parte para el paciente no añade medicamentos, dosis, metas, diagnósticos ni advertencias ajenos a la nota."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "La sección exclusiva para el médico señala que el dolor torácico de esfuerzo carece de plan y pregunta cómo valorarlo."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está marcado BORRADOR para revisión médica antes de compartirlo e incluye una lista titulada «Faltante / por confirmar»."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Usa lenguaje claro, explica qué es el LDL y reproduce TA 148/90, LDL 162 mg/dL y peso 81 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye exactamente el cambio de losartán, inicio de atorvastatina, control en 4 semanas, lípidos en 3 meses y acudir por mareo intenso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La parte para el paciente no añade medicamentos, dosis, metas, diagnósticos ni advertencias ajenos a la nota.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"La sección exclusiva para el médico señala que el dolor torácico de esfuerzo carece de plan y pregunta cómo valorarlo.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está marcado BORRADOR para revisión médica antes de compartirlo e incluye una lista titulada «Faltante / por confirmar».\"}]}"
+}

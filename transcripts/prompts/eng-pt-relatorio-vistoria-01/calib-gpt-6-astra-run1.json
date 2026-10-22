@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-pt-relatorio-vistoria-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Separa constatações, relatos e hipóteses nas três manifestações; atribui recalque ao síndico e explicita ausência de diagnóstico confirmado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Quadro identifica P7 como maior prioridade ALTA, mantém demais urgências MÉDIAS e prevê revisão da fissura após confirmação da medida."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Expõe divergência entre 3 mm medidos e 3 cm na legenda, sem presumir correção; propõe nova medição e conferência documental."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Dentro de 770 palavras, apresenta propostas imediatas e investigações complementares específicas para fissura, cobertura e pilar P7."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não acrescenta fatos comprovados indevidos; mantém relatos atribuídos, hipóteses condicionais e propostas futuras, nega garantias e exige revisão e assinatura antes da emissão."
+  }
+ ]
+}

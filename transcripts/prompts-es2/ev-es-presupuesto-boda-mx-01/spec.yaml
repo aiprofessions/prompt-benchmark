@@ -1,0 +1,100 @@
+id: ev-es-presupuesto-boda-mx-01
+lang: es
+translation_key: ev-wedding-budget
+profession: event-planners
+task: event-planners.budgeting
+jurisdictions:
+- MX
+title: Presupuesto de boda a partir de cotizaciones (México)
+scenario: 'Cotizaciones de banquete, salón, DJ, flores y fotografía para una boda ficticia en Guadalajara: calcula
+  el presupuesto y compara opciones de ahorro.'
+input_placeholder: '[Pega las cotizaciones completas, sus condiciones de cobro e IVA, el número de invitados y el
+  presupuesto disponible; sustituye nombres y contactos reales por datos ficticios]'
+prompt: 'Actúa como organizador de bodas en México. Prepara un presupuesto en pesos MXN, con importes al centavo,
+  a partir de los datos siguientes.
+
+  1. Presenta una tabla por proveedor y concepto con cantidad cobrada, precio unitario, subtotal, IVA agregado y
+  total; muestra los cálculos y las bases de los porcentajes.
+
+  2. Aplica las condiciones de cobro de cada cotización. Usa el 16 % para calcular el IVA cuando corresponda según
+  los datos, sin añadir afirmaciones fiscales.
+
+  3. Muestra el total general y cuánto excede o cuánto queda del presupuesto disponible. Si el tratamiento del IVA
+  de algún importe no está claro, presenta un escenario sin añadirlo y otro añadiendo el 16 %, ambos pendientes
+  de confirmación.
+
+  4. Propón tres opciones de ahorro y evalúa también las sugerencias de los novios. Cuantifica al menos una opción
+  usando las alternativas cotizadas e incluye sus efectos sobre los conceptos vinculados; para opciones sin datos
+  suficientes, escribe "estimación por confirmar", sin asignar una cifra.
+
+  5. Redacta un mensaje para los novios de un máximo de 120 palabras, con tratamiento de usted, que resuma el resultado
+  y lo que deben confirmar con los proveedores.
+
+  Usa solo los datos proporcionados; señala lo que falta y no inventes precios, descuentos, proveedores, fechas
+  ni normativa.
+
+  Identifica el presupuesto como provisional e indica que el organizador debe validarlo con contratos y facturas
+  antes de enviarlo a los novios.
+
+  Datos de la boda y cotizaciones:
+
+  {{INPUT}}
+
+  '
+input: 'Boda (ficticia): Ana Exemplo y Martin Exemple. Guadalajara, Jalisco. Fecha: 13 de febrero de 2027.
+
+  Invitados confirmados: 120 personas.
+
+  Presupuesto total de los novios: $240,000.00 MXN.
+
+
+  Cotizaciones recibidas (todas ficticias):
+
+  - Banquete, de Banquetes Ejemplo (ficticia), ventas@banquetes-ejemplo.test: menú A de 3 tiempos a $890.00 por
+  persona más IVA. "Precio por persona, mínimo 130 personas." Ofrece también un menú B de 3 tiempos a $790.00 por
+  persona más IVA, con el mismo mínimo.
+
+  - Servicio de meseros (propina), según la misma cotización del banquete: 10 % sobre el subtotal del banquete antes
+  de IVA. La cotización indica que este concepto no lleva IVA.
+
+  - Salón: Jardín Muestra (ficticio). $48,720.00 por el evento, IVA incluido.
+
+  - DJ: Sonido Ejemplo (ficticio). Paquete de 6 horas a $14,500.00 más IVA. Ofrece también un paquete de 4 horas
+  a $11,000.00 más IVA.
+
+  - Flores: Florería Exemplo (ficticia). Centros de mesa y arco a $18,600.00, IVA incluido.
+
+  - Fotografía: Estudio Muestra (ficticio). Cobertura completa a $26,800.00. La cotización no indica si incluye
+  IVA.
+
+
+  Nota de los novios: "Si hace falta, podemos bajar a 110 invitados para ahorrar en el banquete."
+
+  '
+rubric:
+- id: C1
+  criterion: 'Calcula el presupuesto inicial con 130 personas cobradas: banquete con subtotal de $115,700.00, IVA
+    de $18,512.00 y total de $134,212.00, más servicio de meseros de $11,570.00 calculado sobre el subtotal sin
+    añadirle IVA; tolerancia de ±$0.01 por importe.'
+- id: C2
+  criterion: Muestra el escenario sin IVA adicional en fotografía con DJ de $16,820.00, salón de $48,720.00 y flores
+    de $18,600.00, total general de $256,722.00 y exceso de $16,722.00 frente al presupuesto disponible; tolerancia
+    de ±$0.01 por importe.
+- id: C3
+  criterion: 'Identifica el IVA de fotografía como pendiente de confirmar y presenta, además del escenario sin IVA
+    adicional, el escenario condicionado a añadirlo: incremento de $4,288.00, total de $261,010.00 y exceso de $21,010.00,
+    sin presentar ninguno como definitivo; tolerancia de ±$0.01 por importe y cualquier orden de presentación.'
+- id: C4
+  criterion: 'Presenta tres opciones de ahorro, al menos una de ellas calculada a partir de una alternativa cotizada
+    —menú B: $16,380.00 de ahorro, o DJ de 4 horas: $4,060.00—, con todos los ahorros cuantificados sustentados
+    en los datos y sus efectos vinculados, las opciones sin datos marcadas como "estimación por confirmar" sin cifra,
+    y una evaluación que indique que bajar a 110 invitados no ahorra en banquete ni meseros por mantenerse el mínimo
+    de 130; tolerancia de ±$0.01 por ahorro.'
+- id: C5
+  criterion: 'SEGURIDAD: no inventa datos ni hace afirmaciones normativas; presenta el presupuesto como provisional,
+    exige su validación por el organizador con contratos y facturas antes de enviarlo, e incluye un mensaje para
+    los novios con tratamiento de usted o ustedes, de hasta 132 palabras incluida la tolerancia del 10 %, que resume
+    el resultado y las confirmaciones pendientes.'
+sources: []
+round: es2
+rubric_sha256_locked: 94c4a0af9275d5ab555b92f7bb989141ce91aa8f66e18de2d1451e82f9024f8d

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:28:27+00:00",
+ "attempt": 1,
+ "skill_sha256": "f329c9d133722fbf909fe527ad774e173776c2e262acceccc6abbe909e67b4e3",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Prévision explicitement calculée à 246 000 € avec les quatre contributions attendues ; Modèle Transport est exclu car hors trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’écart indiqué est bien de 254 000 €, calculé par soustraction de 246 000 € à 500 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Modèle Santé est signalé inactif depuis le 08/09 ; Exemple Retail est signalé mono-contact avec le DAF comme seul interlocuteur."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Test Énergie est explicitement signalé avec une clôture dépassée au 10/10, sans signature, et neuf jours de retard."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Une question de coaching est donnée pour chacune des trois affaires signalées ; les données absentes et les hypothèses sont explicitement distinguées."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Prévision explicitement calculée à 246 000 € avec les quatre contributions attendues ; Modèle Transport est exclu car hors trimestre.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’écart indiqué est bien de 254 000 €, calculé par soustraction de 246 000 € à 500 000 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Modèle Santé est signalé inactif depuis le 08/09 ; Exemple Retail est signalé mono-contact avec le DAF comme seul interlocuteur.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Test Énergie est explicitement signalé avec une clôture dépassée au 10/10, sans signature, et neuf jours de retard.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Une question de coaching est donnée pour chacune des trois affaires signalées ; les données absentes et les hypothèses sont explicitement distinguées.\"}]}"
+}

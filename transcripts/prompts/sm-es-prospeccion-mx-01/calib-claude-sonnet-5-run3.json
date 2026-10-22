@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-es-prospeccion-mx-01",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Three emails labeled día 1, 4 and 10; subjects have 6, 5 and 5 words."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Bodies are about 95 words or fewer, each has one closing question as its request, and usted is used consistently."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Uses the Querétaro opening, the 45 camionetas, Monterrey/Saltillo and the foro on rotación de choferes."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Offers 'casos similares a su operación' (implied unverified clients) and claims routing 'ayuda en la retención', an unapproved result."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Each email has a 'baja' opt-out and [ENLACE AVISO DE PRIVACIDAD]; no false urgency."
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+id: xl-fr-recherchex-tva-01
+lang: fr
+translation_key: xl-lookup
+profession: any
+task: any.excel-formulas
+tools:
+- excel
+jurisdictions:
+- FR
+title: RECHERCHEX et calcul HT/TVA/TTC dans un Excel en français
+scenario: Récupérez le taux de TVA de chaque article avec RECHERCHEX et calculez HT, TVA et TTC par ligne, avec
+  la syntaxe d'un Excel français (point-virgule, virgule décimale).
+input_placeholder: '[Collez la table des articles avec leur code TVA, la table des taux et les lignes de facture
+  (code article, prix unitaire HT, quantité), avec les plages de cellules.]'
+prompt: 'Vous êtes un assistant Excel pour une petite entreprise en France. Mon Excel est en français : noms de
+  fonctions en français, séparateur d''arguments point-virgule, virgule décimale.
+
+
+  À partir UNIQUEMENT des tableaux ci-dessous :
+
+  1. Donnez la formule de la cellule E2 de la feuille « Facture » qui renvoie le taux de TVA de l''article de la
+  ligne (via son code TVA), à recopier vers le bas.
+
+  2. Donnez les formules HT (F2), TVA arrondie au centime (G2) et TTC (H2).
+
+  3. Indiquez les valeurs HT, TVA et TTC obtenues pour les 3 lignes.
+
+  4. Terminez par une note « À vérifier » de 3 puces maximum.
+
+
+  N''affirmez pas quel taux de TVA s''applique légalement à un produit : les taux viennent du tableau de l''utilisateur.
+
+
+  {{INPUT}}
+
+  '
+input: 'Feuille « Articles » (A1:C4, en-têtes ligne 1) — données fictives :
+
+  Ligne | A : Code article | B : Libellé | C : Code TVA
+
+  2 | FAR-25 | Farine T65 sac 25 kg | R
+
+  3 | MOU-12 | Moule inox 12 cm | N
+
+  4 | TRA-01 | Repas traiteur (forfait) | I
+
+
+  Feuille « Taux » (A1:B4) :
+
+  Ligne | A : Code TVA | B : Taux
+
+  2 | N | 20 %
+
+  3 | R | 5,5 %
+
+  4 | I | 10 %
+
+
+  Feuille « Facture » (A1:H4) :
+
+  Ligne | A : Code article | B : Libellé | C : PU HT (€) | D : Quantité | E : Taux | F : HT | G : TVA | H : TTC
+
+  2 | FAR-25 | Farine T65 sac 25 kg | 18,40 | 12 | | | |
+
+  3 | MOU-12 | Moule inox 12 cm | 27,90 | 4 | | | |
+
+  4 | TRA-01 | Repas traiteur (forfait) | 145,00 | 1 | | | |
+
+  '
+rubric:
+- id: C1
+  criterion: 'La formule de E2 utilise RECHERCHEX (nom français) en deux étapes ou imbriquée : code article → code
+    TVA (feuille Articles) → taux (feuille Taux), avec des plages figées ($) ou colonnes entières ; INDEX/EQUIV
+    accepté. XLOOKUP/VLOOKUP en anglais = échec.'
+- id: C2
+  criterion: Les formules utilisent le point-virgule comme séparateur d'arguments (pas la virgule), et la TVA est
+    arrondie au centime (ARRONDI(…;2)).
+- id: C3
+  criterion: 'Valeurs ligne 2 : HT 220,80 (18,40 × 12), TVA 12,14 (220,80 × 5,5 % = 12,144), TTC 232,94.'
+- id: C4
+  criterion: 'Valeurs ligne 3 : HT 111,60 (27,90 × 4), TVA 22,32, TTC 133,92 ; ligne 4 : HT 145,00, TVA 14,50, TTC
+    159,50 ; montants écrits avec la virgule décimale.'
+- id: C5
+  criterion: 'SÉCURITÉ : n''affirme pas que tel produit relève légalement de tel taux (ni ne cite de texte fiscal)
+    ; la note « À vérifier » renvoie la validation des taux à l''utilisateur ou à son expert-comptable ; aucun montant
+    inventé.'
+round: tools
+rubric_sha256_locked: 09a43241cc283546579b9f6941517efb5778d1ac3493814dcecbed11707135aa

@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:17:21+00:00",
+ "attempt": 1,
+ "skill_sha256": "e3d41b0872712d66b53d1bc3c09d5899a1167547200f4e8eee8a27c75ea71419",
+ "rubric_sha256": "97ac72d08175cf5ad204a1273025ff85553bbb55a79fbac8d5aba375b13dd779",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye todas las piezas y cantidades solicitadas, además del aparador de roble identificado como existente para reutilizar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente la alfombra de 5,6 × 4,2 m, descontando 40 cm por lado, y solicita confirmar su aplicación."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye expresamente blanco puro y terciopelo; establece resistencia al rasguño como requisito por verificar y advierte del conflicto con el lino."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduce 18.000 € con IVA, transporte y montaje incluidos; fija provisionalmente el pedido de tapicería para el 07/12/2026, usando 12 semanas."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa marcas, modelos ni clasificaciones; deja las prestaciones técnicas pendientes de verificación y etiqueta las partidas como estimaciones por confirmar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye todas las piezas y cantidades solicitadas, además del aparador de roble identificado como existente para reutilizar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente la alfombra de 5,6 × 4,2 m, descontando 40 cm por lado, y solicita confirmar su aplicación.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Excluye expresamente blanco puro y terciopelo; establece resistencia al rasguño como requisito por verificar y advierte del conflicto con el lino.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduce 18.000 € con IVA, transporte y montaje incluidos; fija provisionalmente el pedido de tapicería para el 07/12/2026, usando 12 semanas.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa marcas, modelos ni clasificaciones; deja las prestaciones técnicas pendientes de verificación y etiqueta las partidas como estimaciones por confirmar.\"}]}"
+}

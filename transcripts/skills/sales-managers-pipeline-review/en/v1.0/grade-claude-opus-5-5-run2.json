@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:23:41+00:00",
+ "attempt": 1,
+ "skill_sha256": "4a6b2f2bc158740a377dcf2b462eaa55ad32e955efd247262dfb2c26181e8905",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Withholds the weighted forecast instead of reporting $247,000, although individual weighted amounts and Elm's exclusion are correct."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Withholds the gap instead of reporting $153,000."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Flags Bluefin's inactivity, but does not identify Orion's CFO-only contact as a single-threading risk; flags missing next steps instead."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar as unsigned with its Jan 10 close date already before Jan 18."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a coaching question for every flagged deal, uses supplied deal details, and labels date assumptions and missing information."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Withholds the weighted forecast instead of reporting $247,000, although individual weighted amounts and Elm's exclusion are correct.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Withholds the gap instead of reporting $153,000.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Flags Bluefin's inactivity, but does not identify Orion's CFO-only contact as a single-threading risk; flags missing next steps instead.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar as unsigned with its Jan 10 close date already before Jan 18.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a coaching question for every flagged deal, uses supplied deal details, and labels date assumptions and missing information.\"}]}"
+}

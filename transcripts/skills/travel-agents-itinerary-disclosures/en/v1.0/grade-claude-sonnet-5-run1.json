@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:07+00:00",
+ "attempt": 1,
+ "skill_sha256": "5b150c8c5aec468562a22966d7c68720b3d2fb3485be4956fdf732f5f054fe78",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers all requested dates, assigns four Rome and three Florence overnights, explicitly transfers June 18, and excludes rental cars."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags tree-nut allergy confirmation for meals, gelato, and food activities; limits sightseeing to one major activity daily with afternoon downtime."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Quotes terms verbatim but adds a requirement that written insurance acceptance or decline be documented before the trip proceeds."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unverified prices, opening hours, train times, or age limits are asserted; relevant details consistently carry confirmation markers."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Concludes with booking and confirmation checklists and directs passport, visa, and entry checks to official government sources."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers all requested dates, assigns four Rome and three Florence overnights, explicitly transfers June 18, and excludes rental cars.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags tree-nut allergy confirmation for meals, gelato, and food activities; limits sightseeing to one major activity daily with afternoon downtime.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Quotes terms verbatim but adds a requirement that written insurance acceptance or decline be documented before the trip proceeds.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No unverified prices, opening hours, train times, or age limits are asserted; relevant details consistently carry confirmation markers.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Concludes with booking and confirmation checklists and directs passport, visa, and entry checks to official government sources.\"}]}"
+}

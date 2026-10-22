@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-es-anuncio-mx-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La descripción tiene menos de 200 palabras y el texto para redes menos de 40."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye todos los datos objetivos requeridos y atribuye los 85 m² al propietario, señalando que están pendientes de verificación."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Elimina ambas restricciones y explica que restringen por estado civil o composición familiar y expresan preferencia por origen o nacionalidad."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Elimina la frase de plusvalía y el 20% anual por constituir una afirmación no verificada y una promesa de apreciación."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye la lista 'Quitado o modificado' con motivos y recomienda verificar documentación, superficie y uso de suelo."
+  }
+ ]
+}

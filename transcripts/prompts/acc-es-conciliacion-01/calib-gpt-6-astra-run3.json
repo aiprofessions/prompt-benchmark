@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-es-conciliacion-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula el saldo bancario ajustado de 13.390,00 € sumando 1.900,00 € y restando 1.150,00 € a 12.640,00 €."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula 13.964,40 − 18,00 − 640,00 − 6,40 + 90,00 = 13.390,00 € y declara que cuadra, con diferencia cero."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica el exceso contabilizado de 90,00 €, explica que aumenta la 572 y propone cargar dicha cuenta."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Propone únicamente asientos para comisión, devolución y gastos, y corrección del pago; excluye expresamente ambas partidas en tránsito."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa partidas, importes ni normativa. Utiliza cuentas coherentes y condiciona la contrapartida 400 a comprobar el asiento original."
+  }
+ ]
+}

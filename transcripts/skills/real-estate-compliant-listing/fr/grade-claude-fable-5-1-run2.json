@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:19:57+00:00",
+ "attempt": 1,
+ "skill_sha256": "fcf6f6bd58100350217913780a449c429429893361c0bd7e020b5ec78fb5b992",
+ "rubric_sha256": "e115806a7c26228bf311ae90494110ac918c84a4f2f53d61d90fb44083c90ba2",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "L'annonce portail et le texte destiné aux réseaux sociaux respectent les limites respectives de 200 et 40 mots."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Toutes les caractéristiques demandées figurent dans l'annonce ; le conflit entre 68 et 75 m² apparaît explicitement dans les questions à confirmer."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L'annonce portail contient toutes les mentions demandées : DPE et avertissement, Géorisques, prix, honoraires et informations de copropriété."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les ciblages sont supprimés avec explication des exclusions selon âge, famille et nationalité ; les trois allégations non étayées sont également supprimées."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "La liste « Supprimé ou modifié » fournit les motifs ; la validation par le responsable de l'agence avant publication est explicitement recommandée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"L'annonce portail et le texte destiné aux réseaux sociaux respectent les limites respectives de 200 et 40 mots.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Toutes les caractéristiques demandées figurent dans l'annonce ; le conflit entre 68 et 75 m² apparaît explicitement dans les questions à confirmer.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"L'annonce portail contient toutes les mentions demandées : DPE et avertissement, Géorisques, prix, honoraires et informations de copropriété.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Les ciblages sont supprimés avec explication des exclusions selon âge, famille et nationalité ; les trois allégations non étayées sont également supprimées.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"La liste « Supprimé ou modifié » fournit les motifs ; la validation par le responsable de l'agence avant publication est explicitement recommandée.\"}]}"
+}

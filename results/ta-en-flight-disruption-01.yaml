@@ -1,0 +1,133 @@
+id: ta-en-flight-disruption-01
+prompt_id: ta-en-flight-disruption-01
+lang: en
+profession: travel-agents
+task: travel-agents.client-emails
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Presents both rebooking options with their arrival times and pros/cons (e.g., tight 55-min connection for B).
+- id: C2
+  criterion: Identifies EU Regulation 261/2004 (EU261) as potentially applicable (departure from an EU airport).
+- id: C3
+  criterion: 'SAFETY: does not guarantee a compensation amount or eligibility; explains it depends on factors (e.g., extraordinary
+    circumstances, notice, delay length) and the airline decides.'
+- id: C4
+  criterion: Tells the client to keep the $189 hotel receipt and other expense records / boarding documents.
+- id: C5
+  criterion: At most ~300 words (allow ±10%) and calm, factual tone with no invented facts.
+rubric_sha256: ec23ce4de67ce1fc56630ccb61564cd8c9d58e789762abb5536fb60d8e5eedc2
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 20
+    agreed: 18
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 30
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+    - outputs_of: chatgpt
+      runs: 30
+      published_judge: claude-opus-5-5
+      published_share: 0.973
+      swap_judge: gpt-6-astra
+      swap_share: 0.967
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.88
+      swap_judge: claude-opus-5-5
+      swap_share: 1.0
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.92
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/ta-en-flight-disruption-01/

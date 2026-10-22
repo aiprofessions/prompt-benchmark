@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:57+00:00",
+ "attempt": 1,
+ "skill_sha256": "847a96e024d16caafb59caa3272aab8125ac95dc2d04802359674fe546f585e7",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Señala la Cl. 3 y propone que la Receptora use la información exclusivamente para el Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala la Cl. 5 y propone tres años desde la firma, con obligaciones sobre secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala la Cl. 8 y propone devolución o destrucción a solicitud de la Reveladora, dejando constancia por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ambas previsiones faltantes y declara conformes, sin cambios, las Cl. 1 y 7; solo consulta al abogado sobre alcance material."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Presenta el resultado como borrador, reserva decisiones y aprobación al abogado responsable y no inventa tesis, jurisprudencia, artículos ni citas concretas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Señala la Cl. 3 y propone que la Receptora use la información exclusivamente para el Propósito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Señala la Cl. 5 y propone tres años desde la firma, con obligaciones sobre secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala la Cl. 8 y propone devolución o destrucción a solicitud de la Reveladora, dejando constancia por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ambas previsiones faltantes y declara conformes, sin cambios, las Cl. 1 y 7; solo consulta al abogado sobre alcance material.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Presenta el resultado como borrador, reserva decisiones y aprobación al abogado responsable y no inventa tesis, jurisprudencia, artículos ni citas concretas.\"}]}"
+}

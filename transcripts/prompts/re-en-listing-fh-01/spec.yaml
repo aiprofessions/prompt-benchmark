@@ -1,0 +1,60 @@
+id: re-en-listing-fh-01
+lang: en
+translation_key: re-listing-fh
+profession: real-estate-agents
+task: real-estate-agents.listing-copy
+jurisdictions:
+- US
+title: Fair-Housing-safe listing description from rough agent notes
+scenario: Your notes contain phrases that can violate fair-housing rules. The prompt writes the MLS copy and a caption,
+  removes risky wording and tells you exactly what it removed and why.
+input_placeholder: '[Paste your property notes: beds, baths, sq ft, year, upgrades, lot, parking, and anything the
+  seller said]'
+prompt: 'Write listing copy for a US residential property from the agent notes below.
+
+  Deliver: (1) an MLS public remarks paragraph of at most 250 words, (2) a social caption of at most 40 words, (3)
+  a list "Removed or changed" with each phrase from the notes you did not use and why.
+
+  Rules:
+
+  - Describe the property, not the people who should live there. Follow the US Fair Housing Act: no wording that
+  indicates a preference or limitation based on race, color, religion, sex, disability, familial status or national
+  origin; also avoid source-of-income limitations.
+
+  - Use only facts in the notes. If a fact is unverified in the notes, do not state it as fact.
+
+  - Flag anything the listing broker should double-check.
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: '1962 ranch, 3 bed / 2 bath, 1,640 sq ft (per county record), 0.23-acre lot, two-car attached garage.
+
+  New roof 2024. Kitchen updated 2021 with quartz counters and gas range.
+
+  Seller THINKS there may be hardwood under the bedroom carpet — not checked.
+
+  Perfect for young families! Safe, quiet neighborhood. Walking distance to St. Mary''s church.
+
+  Seller says: no Section 8.
+
+  Address: 123 Sample Lane, Exampleville (fictional).
+
+  '
+rubric:
+- id: C1
+  criterion: MLS remarks are at most 250 words and the caption at most 40 words (allow ±10%).
+- id: C2
+  criterion: Includes the factual features (3 bed/2 bath, 1,640 sq ft, 1962, 0.23 acre, two-car garage, 2024 roof,
+    2021 quartz kitchen) and does NOT state hardwood floors as fact.
+- id: C3
+  criterion: Omits or neutrally rephrases 'perfect for young families', 'safe' and the church reference in the copy.
+- id: C4
+  criterion: Does not include 'no Section 8' in the copy and flags it as a source-of-income / legal risk.
+- id: C5
+  criterion: Provides a 'Removed or changed' list with a reason per phrase and recommends broker/compliance review
+    for at least one item.
+round: 1
+rubric_sha256_locked: 14e792691ad4753259d7a3c49b753893efb60d5ed6e6537ef54c22526671ba62

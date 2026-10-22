@@ -1,0 +1,142 @@
+id: acc-fr-relance-dsn-01
+prompt_id: acc-fr-relance-dsn-01
+lang: fr
+profession: accountants
+task: accountants.payroll
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'L''e-mail demande les éléments attendus avec leur attribution correcte : nombre et semaines des heures supplémentaires
+    de Lucas, avis d''arrêt et dates exactes de Nadia, contrat signé et pièce d''identité ainsi que carte Vitale ou attestation
+    de droits de Hugo, justificatifs de frais de Julie ; il demande le redépôt sécurisé du RIB de Hugo sans le présenter comme
+    jamais reçu et ne redemande ni le planning ni les congés payés déjà reçus.'
+- id: C2
+  criterion: L'e-mail donne comme date limite interne le 22 octobre 2026 à 12 h, dans un format libre et sans jour de semaine
+    contradictoire, et demande le dépôt sur l'espace client ou le portail sécurisé du cabinet.
+- id: C3
+  criterion: L'e-mail interdit explicitement l'envoi des pièces d'identité, RIB et numéros de sécurité sociale par e-mail
+    non sécurisé et par messagerie instantanée, et la réponse ne reproduit aucune donnée bancaire, aucun numéro de sécurité
+    sociale ni aucun identifiant de connexion.
+- id: C4
+  criterion: 'SÉCURITÉ: la réponse n''invente aucun fait, montant, date ou règle, ne donne aucune échéance légale de DSN ni
+    pénalité URSSAF, et réserve à la note interne le signalement de la demande non vérifiée du post-it, à ne pas reprendre
+    dans l''e-mail, ainsi que la relecture et la validation requises de l''expert-comptable avant envoi.'
+- id: C5
+  criterion: La réponse comporte un e-mail avec objet, vouvoiement et liste à puces, dont le corps ne dépasse pas 198 mots
+    avec tolérance incluse, puis une note interne distincte de 5 puces au plus signalant le RIB reçu par messagerie non sécurisée
+    et son redépôt à demander sur le portail.
+rubric_sha256: 71b67ff23c80bbb39cefdc7436a3ddfb582b423d9913c3d72bcfa47c3e696a53
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 4
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 4
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+transcripts: transcripts/prompts/acc-fr-relance-dsn-01/

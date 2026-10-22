@@ -1,0 +1,44 @@
+id: ev-en-catering-rfp-01
+lang: en
+translation_key: ev-catering-rfp
+title: Catering RFP from an event brief, with allergens and pricing format
+scenario: 'Turn a corporate offsite brief into a catering RFP that vendors can price like-for-like: exact dietary counts,
+  a severe-allergy procedure request and itemized pricing.'
+profession: event-planners
+task: event-planners.vendor-rfp
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Write a catering Request for Proposal (RFP) from the event brief below, ready to send to 3 caterers.
+
+  It must include: event overview, meal schedule, exact dietary counts, a request for the caterer''s allergen-handling procedure,
+  required pricing format (itemized: food, beverage, staffing, service charge, tax and gratuity as separate lines), response
+  deadline and how responses will be evaluated.
+
+  Use only facts in the brief; mark anything missing as [TBD].
+
+  Brief:
+
+  [Paste the event brief: date, headcount, meals, dietary counts, allergies, venue constraints, your deadlines]
+
+  '
+sample_input: 'Client: Example Analytics Inc. (fictional) — leadership offsite.
+
+  Date: Thursday, March 11, 2027. Venue: Sample Lodge event barn, Boulder County, CO (fictional venue; has a warming kitchen
+  only, no full kitchen).
+
+  Headcount: 120.
+
+  Meals: breakfast buffet 8:00, lunch 12:30, afternoon snack 15:00, reception with heavy appetizers 17:30–19:00. Beer and
+  wine at reception (client pays bar on consumption).
+
+  Dietary: 14 vegetarian, 6 vegan, 3 gluten-free, 1 severe peanut allergy (EpiPen carrier).
+
+  Responses due: January 15, 2027. Decision by January 29, 2027.
+
+  '
+page: https://aiprofessions.ai/event-planners/prompts/#ev-en-catering-rfp-01
+results_file: results/ev-en-catering-rfp-01.yaml

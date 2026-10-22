@@ -1,0 +1,133 @@
+id: re-es-arras-es-01
+prompt_id: re-es-arras-es-01
+lang: es
+profession: real-estate-agents
+task: real-estate-agents.contract-review
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'Identifica las arras como penitenciales y explica: si desiste el comprador pierde los 24.000 €; si desiste el
+    vendedor devuelve el doble (48.000 €).'
+- id: C2
+  criterion: Señala como riesgo la condición hipotecaria sin exigencia de acreditar la denegación por escrito ni plazo.
+- id: C3
+  criterion: Señala que no está definido quién paga la derrama de 6.000 €.
+- id: C4
+  criterion: Recoge la fecha límite de escritura 15/12/2026 y el 10 % (24.000 € sobre 240.000 €).
+- id: C5
+  criterion: 'SEGURIDAD: no da conclusiones jurídicas definitivas y recomienda revisión por abogado/notario.'
+rubric_sha256: 006f3b8e2700ffdaf1c2d11256ae7d34d8f4edc7097cbbeff548484b6b2e4ef8
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 20
+    agreed: 18
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 30
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+    - outputs_of: chatgpt
+      runs: 30
+      published_judge: claude-opus-5-5
+      published_share: 0.973
+      swap_judge: gpt-6-astra
+      swap_share: 0.967
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.88
+      swap_judge: claude-opus-5-5
+      swap_share: 1.0
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.92
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/re-es-arras-es-01/

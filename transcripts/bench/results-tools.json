@@ -1,0 +1,1272 @@
+{
+ "xl-en-xlookup-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    4,
+    5,
+    5
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    5,
+    5,
+    4
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ },
+ "xl-en-sumifs-dates-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ },
+ "xl-en-pivot-explain-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    5,
+    5,
+    4
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.33,
+   "run_scores": [
+    4,
+    5,
+    4
+   ],
+   "runs_all_criteria": 1,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 1
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ },
+ "m365-en-minutes-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    4,
+    3,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 1,
+    "C3": 3,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 0,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    4,
+    3,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 2,
+    "C2": 0,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.33,
+   "run_scores": [
+    4,
+    5,
+    4
+   ],
+   "runs_all_criteria": 1,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 1,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  }
+ },
+ "xl-es-buscarx-mx-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    4,
+    4,
+    2
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 2,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ },
+ "m365-es-correo-descuento-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    5,
+    4,
+    5
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  }
+ },
+ "xl-fr-recherchex-tva-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    4,
+    5,
+    5
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 2,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    3,
+    3,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 1
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.0,
+   "run_scores": [
+    3,
+    3,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.67,
+   "run_scores": [
+    3,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 2,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  }
+ },
+ "m365-fr-compte-rendu-chantier-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.0,
+   "run_scores": [
+    4,
+    3,
+    2
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 2,
+    "C5": 1
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    3,
+    3,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 1,
+    "C4": 3,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.0,
+   "run_scores": [
+    4,
+    2,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 1,
+    "C2": 3,
+    "C3": 3,
+    "C4": 2,
+    "C5": 0
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.0,
+   "run_scores": [
+    3,
+    3,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 1,
+    "C4": 2,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  }
+ },
+ "xl-pt-procx-nfe-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    4,
+    5,
+    5
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 2,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 3.33,
+   "run_scores": [
+    4,
+    3,
+    3
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 1,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.0,
+   "run_scores": [
+    4,
+    4,
+    4
+   ],
+   "runs_all_criteria": 0,
+   "per_criterion_passes": {
+    "C1": 0,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "partial",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ },
+ "m365-pt-resumo-locacao-01": {
+  "claude-opus-5-5": {
+   "model_id": "claude-opus-5-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 4.67,
+   "run_scores": [
+    4,
+    5,
+    5
+   ],
+   "runs_all_criteria": 2,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 2
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-sonnet-5": {
+   "model_id": "claude-sonnet-5",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gpt-6-astra": {
+   "model_id": "gpt-6-astra",
+   "provider": "openai",
+   "taxonomy_model": "chatgpt",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "claude-fable-5-1": {
+   "model_id": "claude-fable-5-1",
+   "provider": "anthropic",
+   "taxonomy_model": "claude",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  },
+  "gemini-4-argon-medium": {
+   "model_id": "gemini-4-argon-medium",
+   "provider": "google",
+   "taxonomy_model": "gemini",
+   "runs_attempted": 3,
+   "runs_completed": 3,
+   "runs_graded": 3,
+   "criteria_total": 5,
+   "criteria_passed_avg": 5.0,
+   "run_scores": [
+    5,
+    5,
+    5
+   ],
+   "runs_all_criteria": 3,
+   "per_criterion_passes": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 3,
+    "C4": 3,
+    "C5": 3
+   },
+   "verdict": "pass",
+   "tested": true
+  }
+ }
+}

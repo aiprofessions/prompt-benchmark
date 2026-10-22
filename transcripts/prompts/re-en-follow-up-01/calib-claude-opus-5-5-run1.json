@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-follow-up-01",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Three separate lead sections reference the fence/HOA question, the water heater age, and the spring relocation plus school question."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Priya's SMS is about 275 characters; the emails run roughly 85, 70 and 110 words, all within limits."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Marcus's SMS is explicitly not drafted; his email promises email-only contact and contains no call request."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Points to the district site, state report cards and school tours; declines to judge schools as good or bad."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No price, rate, HOA rule or water-heater age is stated; unknowns are promised as follow-up."
+  }
+ ]
+}

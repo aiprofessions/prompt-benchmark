@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-en-site-observation-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All five items appear with exact locations, measurements as noted, and photos 01-05; item 4 measurement correctly marked not recorded."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No invented measurements, locations, test results or observations; inferences are labeled as opinion or limitations."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Limitations section states visual observation only, no testing, approximate measurements and limited scope."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Discussion uses hedged language, states the cause cannot be determined, and recommendations propose further investigation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Marked 'DRAFT — FOR REVIEW BY THE ENGINEER OF RECORD' at both the top and the bottom."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:46:51+00:00",
+ "attempt": 1,
+ "skill_sha256": "14fdac82ea61db5537f937b401f42057f6acdefeb64d3ff301c4eaaa166dc47e",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calculates $247,000 from the four specified weighted amounts and explicitly excludes Elm because its April 20 close is outside the quarter."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly calculates $400,000 minus $247,000 as a $153,000 shortfall."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags Bluefin as stale since December 10 and Orion as single-threaded with the CFO as its only contact."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar’s January 10 close date as past January 18 while the deal remains unsigned."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a coaching question for every flagged deal; missing information is identified, and assumptions are disclosed rather than invented deal facts."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calculates $247,000 from the four specified weighted amounts and explicitly excludes Elm because its April 20 close is outside the quarter.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Explicitly calculates $400,000 minus $247,000 as a $153,000 shortfall.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags Bluefin as stale since December 10 and Orion as single-threaded with the CFO as its only contact.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar’s January 10 close date as past January 18 while the deal remains unsigned.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a coaching question for every flagged deal; missing information is identified, and assumptions are disclosed rather than invented deal facts.\"}]}"
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-en-minutes-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Open questions lists November 16 for Priya and November 23 for Marco; no go-live date is recorded as decided."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Decisions includes the 90-day read-only period but also go-live deferral, licence budget deferral, and the patient FAQ update."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "All three required actions appear with the correct owners and October 28 or no date set as specified."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "The FAQ update is an action assigned to 'owner not assigned'; the output is within 250 words."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No dates, amounts, deadlines, or commitments are invented; the FAQ deadline 'before go-live' is explicitly stated in the transcript."
+  }
+ ]
+}

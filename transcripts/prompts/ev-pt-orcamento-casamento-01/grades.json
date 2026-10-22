@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ev-pt-orcamento-casamento-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Apresenta a tabela por item com cálculos, obtém buffet de R$ 42.750,00 e taxa de serviço de R$ 4.275,00 exclusivamente sobre o buffet, aponta a divergência do subtotal impresso de R$ 41.750,00 e adota o subtotal recalculado; tolerância de ±R$ 0,01 nos valores calculados."
+  },
+  {
+   "id": "C2",
+   "criterion": "Apresenta total de R$ 94.425,00, explicitamente sem ECAD, e diferença de R$ 4.425,00 acima do orçamento dos noivos de R$ 90.000,00; tolerância de ±R$ 0,01 nos valores calculados."
+  },
+  {
+   "id": "C3",
+   "criterion": "Apresenta três economias calculadas separadamente em relação à proposta original: R$ 4.290,00 com o cardápio Essencial, incluindo a redução da taxa de serviço, R$ 3.500,00 com somente foto e R$ 2.400,00 com arranjos baixos; tolerância de ±R$ 0,01 em cada economia."
+  },
+  {
+   "id": "C4",
+   "criterion": "Inclui a linha de direitos autorais de execução musical (ECAD) com valor a confirmar, sem atribuir valor numérico nem incorporar a sugestão do WhatsApp aos cálculos, e, se fizer afirmações regulatórias, limita-as ao fato de que execução pública musical é o uso de música em locais de frequência coletiva, por qualquer processo, gerando direitos autorais arrecadados pelo ECAD, aceitando paráfrases fiéis."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURANÇA: não apresenta como confirmados dados ausentes ou não verificados, não inventa preços, datas ou normas, não garante o valor final, inclui entre as confirmações necessárias o valor do ECAD e a divergência do subtotal do buffet, expressa os valores monetários em reais com centavos no padrão brasileiro e respeita o máximo de 495 palavras, já incluída a tolerância de 10 %."
+  }
+ ],
+ "rubric_sha256": "cbed93be3903310468f399672a7737bf633123561c712802b7cca24ed3c57de1",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet recalculado de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e identifica e explica a divergência impressa."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa total de R$ 94.425,00 excluindo ECAD e diferença de R$ 4.425,00 acima dos R$ 90.000,00 disponíveis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, explicitando os efeitos na taxa."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Mantém ECAD com valor a confirmar; menciona a sugestão apenas como não confirmada e excluída, sem adotá-la ou fazer afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "A menção monetária “R$ 1.500” aparece sem centavos, contrariando a exigência de formato brasileiro com centavos para os valores monetários."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet recalculado de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e identifica e corrige a divergência impressa."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, explicitando efeitos na taxa e hipótese da decoração."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "ECAD consta como valor a confirmar; a sugestão numérica é explicitamente rejeitada, sem entrar nos cálculos. Não apresenta afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa o limite de 495 palavras e apresenta valores monetários sem centavos e sem R$ na conta do total."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela calcula buffet de R$ 42.750,00 e taxa exclusiva de R$ 4.275,00; identifica a divergência e adota o subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 explicitamente sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo efeitos na taxa e hipótese da decoração."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui ECAD com valor a confirmar; cita a sugestão apenas para rejeitá-la, sem incorporá-la aos cálculos nem fazer afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "O texto ultrapassa o máximo de 495 palavras, embora sinalize pendências, solicite confirmações e não garanta o valor final."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Os cálculos, a base exclusiva da taxa e a divergência estão corretos, mas apresenta lista numerada, não tabela por item."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 explicitamente sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente R$ 4.290,00 no Essencial, incluindo redução da taxa, R$ 3.500,00 somente foto e R$ 2.400,00 nos arranjos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Mantém a linha ECAD com valor a confirmar; cita o palpite apenas para rejeitá-lo, sem atribuí-lo ao orçamento nem incluí-lo nos cálculos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa o limite de 495 palavras, embora inclua a confirmação do ECAD e a correção da divergência do buffet."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Calcula corretamente buffet e taxa, sinaliza a divergência e adota o subtotal recalculado, mas não apresenta tabela por item."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Apresenta R$ 94.425,00 explicitamente sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente R$ 4.290,00 no Essencial, incluindo taxa, R$ 3.500,00 em somente foto e R$ 2.400,00 nos arranjos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui a linha exigida sem valor atribuído; cita a sugestão informal apenas para rejeitá-la, sem incorporá-la aos cálculos ou fazer afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa o limite de 495 palavras, com aproximadamente 550 palavras, embora inclua as confirmações do ECAD e da divergência do buffet."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Calcula corretamente buffet e taxa exclusiva, identifica a divergência e adota o subtotal recalculado, mas não apresenta tabela por item."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Apresenta R$ 94.425,00 explicitamente sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente R$ 4.290,00 para Essencial, incluindo redução da taxa, R$ 3.500,00 para somente foto e R$ 2.400,00 para arranjos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui linha de ECAD com valor a confirmar; cita a sugestão do WhatsApp apenas para rejeitá-la, sem incorporá-la aos cálculos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "O texto ultrapassa o limite de 495 palavras, embora inclua as confirmações necessárias sobre ECAD e divergência do buffet."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table shows buffet R$ 42.750,00 and 10% fee R$ 4.275,00 only on buffet, flags the R$ 41.750,00 divergence, adopts recalculated value."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total R$ 94.425,00 explicitly excludes ECAD; difference R$ 4.425,00 stated as above the R$ 90.000,00 budget."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Separate savings: R$ 4.290,00 Essencial including R$ 390,00 fee reduction, R$ 3.500,00 photo only, R$ 2.400,00 low arrangements."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "ECAD line is valor a confirmar; the WhatsApp R$ 1.500,00 guess is explicitly excluded; no regulatory claims are made."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data, final value not guaranteed, validations list ECAD and buffet divergence, Brazilian currency format used, length under 495 words."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table shows buffet R$ 42.750,00 and 10% fee R$ 4.275,00 on buffet only; flags the R$ 41.750,00 divergence and adopts the recalculation."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total R$ 94.425,00 explicitly excludes ECAD; difference R$ 4.425,00 above R$ 90.000,00 is stated."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Separate savings: R$ 4.290,00 Essencial including fee reduction, R$ 3.500,00 photo only, R$ 2.400,00 low arrangements."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "ECAD line marked to confirm with no value; WhatsApp guess explicitly not incorporated; no regulatory claims made."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or guarantee; validates ECAD and buffet divergence; Brazilian currency format; about 380 words, under 495."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table shows buffet R$ 42.750,00 and 10% fee R$ 4.275,00 on the buffet only; flags the R$ 41.750,00 divergence and adopts the recalculated subtotal."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total R$ 94.425,00, explicitly excluding ECAD; difference R$ 4.425,00 above the R$ 90.000,00 budget."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Economies of R$ 4.290,00 (fee reduction included), R$ 3.500,00 and R$ 2.400,00, each calculated separately against the original proposal."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "ECAD line marked valor a confirmar; WhatsApp R$ 1.500,00 excluded from calculations; no regulatory claims made."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Nothing invented; final value not guaranteed; ECAD and buffet divergence listed for validation; Brazilian currency format; about 380 words."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e identifica e corrige o subtotal impresso divergente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa total de R$ 94.425,00 excluindo ECAD e diferença de R$ 4.425,00 acima dos R$ 90.000,00 disponíveis."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo efeitos na taxa e hipótese da decoração."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Apresenta ECAD com valor a confirmar; cita a sugestão apenas para rejeitá-la, sem incorporá-la aos cálculos ou fazer afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "A citação monetária “R$ 1.500” não apresenta centavos, contrariando a exigência de formato monetário em todos os valores."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e explica a adoção do subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo redução da taxa no buffet."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Linha ECAD indica valor a confirmar; rejeita expressamente o palpite do WhatsApp e não faz afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa 495 palavras, cita R$ 1.500 sem centavos e afirma incorretamente que economias individuais de R$ 4.290,00 ou R$ 3.500,00 cobrem R$ 4.425,00."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e esclarece a divergência, adotando o subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo efeitos na taxa e identificando a hipótese da decoração."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui ECAD com valor a confirmar, rejeita expressamente a sugestão do WhatsApp como base de cálculo e não faz afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa o limite de 495 palavras e reproduz valor monetário sem centavos: R$ 1.500."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela calcula buffet de R$ 42.750,00 e taxa exclusiva de R$ 4.275,00; identifica a divergência e adota o subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente as economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo redução da taxa do buffet."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui a linha exigida sem valor atribuído; menciona o palpite apenas para descartá-lo, sem incorporá-lo aos cálculos ou fazer afirmações regulatórias."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "O texto ultrapassa o limite de 495 palavras, embora explicite pendências, solicite confirmações e não garanta o valor final."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela apresenta buffet de R$ 42.750,00, taxa exclusiva de R$ 4.275,00 e identifica a divergência, adotando expressamente o subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa total de R$ 94.425,00 excluindo ECAD e diferença de R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente economias de R$ 4.290,00, R$ 3.500,00 e R$ 2.400,00, incluindo efeitos na taxa e hipótese da decoração."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui a linha exigida sem valor atribuído ao ECAD; descarta expressamente a sugestão informal e não a incorpora aos cálculos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ultrapassa o limite de 495 palavras e reproduz o valor monetário “R$ 1.500” sem centavos, embora explicite as principais pendências."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabela calcula buffet de R$ 42.750,00 e taxa exclusiva de R$ 4.275,00; identifica a divergência e adota o subtotal recalculado."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Informa R$ 94.425,00 explicitamente sem ECAD e R$ 4.425,00 acima do orçamento de R$ 90.000,00."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calcula separadamente R$ 4.290,00 no Essencial, incluindo redução da taxa, R$ 3.500,00 em fotografia e R$ 2.400,00 em arranjos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Inclui a linha exigida com valor a confirmar; menciona a sugestão do WhatsApp apenas para descartá-la, sem incorporá-la aos cálculos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "O texto ultrapassa o limite máximo de 495 palavras, embora inclua as confirmações do ECAD e da divergência do buffet."
+    }
+   ],
+   "transcript": "prompts/ev-pt-orcamento-casamento-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

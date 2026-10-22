@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:52:32+00:00",
+ "attempt": 1,
+ "skill_sha256": "5d694f4bf02dbc94ef85f7c941718a44a3cee96e779393289ee1644a4ddde235",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Table includes all five items, supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Groups RD-2 within bay 3 without supporting notes and refers to ponding and 'resulting ceiling staining,' implying an unestablished causal relationship."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Limitations explicitly states visual-only floor and roof walk-through, 90-minute duration, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Defers tournament use to the engineer of record without yes/no clearance and explicitly flags J-14 and ponding as possible prompt-attention concerns."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Opening explicitly marks the report DRAFT, not for issue, for review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Table includes all five items, supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Groups RD-2 within bay 3 without supporting notes and refers to ponding and 'resulting ceiling staining,' implying an unestablished causal relationship.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Limitations explicitly states visual-only floor and roof walk-through, 90-minute duration, and no testing.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Defers tournament use to the engineer of record without yes/no clearance and explicitly flags J-14 and ponding as possible prompt-attention concerns.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Opening explicitly marks the report DRAFT, not for issue, for review and seal/signature by the engineer of record.\"}]}"
+}

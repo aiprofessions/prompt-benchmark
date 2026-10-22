@@ -1,0 +1,542 @@
+{
+ "prompt_id": "sm-es-pipeline-es-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Previsión ponderada del trimestre = 143.500 € (45.000 + 52.500 + 10.000 + 36.000), excluyendo Alimentación Ejemplo."
+  },
+  {
+   "id": "C2",
+   "criterion": "Brecha frente a la cuota = 56.500 €."
+  },
+  {
+   "id": "C3",
+   "criterion": "Señala Clínicas Ejemplo (parada desde 18/09 y se fue el impulsor) como riesgo."
+  },
+  {
+   "id": "C4",
+   "criterion": "Señala que Grupo Retail Muestra tiene la fecha de cierre (10/10) vencida sin firmar."
+  },
+  {
+   "id": "C5",
+   "criterion": "Pregunta de coaching por oportunidad señalada y sin datos inventados."
+  }
+ ],
+ "rubric_sha256": "6bae46b15186f7f0eb158cbf19eeea4c3c4f86aaa3568a34ac67354f928b5bed",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Muestra la brecha correcta: 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo alto por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad en riesgo, pero afirma «sin interlocutor» sin evidencia: la salida del impulsor no demuestra ausencia de otros interlocutores."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Indica la brecha de 56.500 € mediante 200.000 − 143.500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo alto por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Señala explícitamente el cierre del 10/10 vencido hace nueve días y la ausencia de firma."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad, pero introduce un umbral de inactividad no dado y afirma ausencia de interlocutor sin evidencia suficiente."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo por cierre fuera del trimestre."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Indica correctamente una brecha de 56.500 € frente a los 200.000 € de cuota pendiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo por actividad parada desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad señalada, pero afirma sin respaldo ausencia total de interlocutor y una secuencia obligatoria de fases para Logística Testa."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo del total."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula correctamente el déficit: 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica Clínicas Ejemplo como riesgo por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Señala expresamente que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firma."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas para cada riesgo, pero afirma ausencia de interlocutor y presupone un ciclo comercial insuficiente sin datos que lo acrediten."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula correctamente la brecha: 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica Clínicas Ejemplo como riesgo por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Señala expresamente que el cierre del 10/10 de Grupo Retail Muestra está vencido y continúa sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas para cada riesgo, pero presupone una desalineación del ciclo comercial de Logística Testa sin datos sobre su duración."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica explícitamente un déficit de 56.500 €, aunque introduce un signo negativo incorrecto en la resta mostrada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo por actividad parada desde el 18/09 y salida del director de compras que impulsaba la operación."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y continúa sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas para cada riesgo, pero afirma sin datos suficientes que el 20 % de Logística Testa es optimista por su plazo."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total 143.500 € with the four calculations shown; Alimentación Ejemplo is excluded."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the gap: 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Clínicas Ejemplo for no activity since 18/09 and the departure of the purchasing director."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags Grupo Retail Muestra's 10/10 close date as overdue and still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Each flagged opportunity has a coaching question; day counts and figures match the given data, nothing invented."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total 143.500 € from 45.000+52.500+10.000+36.000; Alimentación Ejemplo explicitly excluded."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the gap as 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags Clínicas Ejemplo for 31 days without activity since 18/09 and the departed purchasing director."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "States Grupo Retail Muestra's close date is 9 days overdue and still unsigned."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Each opportunity has a coaching question; day counts check out and no data is invented."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Total 143.500 € from 45.000+52.500+10.000+36.000; Alimentación Ejemplo explicitly excluded as closing 15/02/2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Brecha calculated as 200.000 − 143.500 = 56.500 € por cubrir."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Clínicas Ejemplo flagged: 31 days inactive since 18/09 and the director de compras who drove it has left."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Grupo Retail Muestra flagged: cierre 10/10 vencido hace 9 días y sin firma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Each flagged opportunity has a coaching question; day counts verified correct; no invented contacts or figures."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula los cuatro ponderados correctamente, suma 143.500 € y excluye Alimentación Ejemplo por cerrar fuera del trimestre."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica explícitamente un déficit de 56.500 €, aunque la ecuación mostrada contiene un error de signo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo alto por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firma."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad, pero afirma sin respaldo que Clínicas carece de interlocutor e inventa una secuencia obligatoria de fases para Logística."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula los cuatro ponderados correctamente, suma 143.500 € y excluye Alimentación Ejemplo por cerrar fuera del trimestre."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "El resumen identifica correctamente que faltan 56.500 €, aunque la operación anterior muestra erróneamente un resultado negativo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo alto por 31 días sin actividad desde el 18/09 y la salida del impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica explícitamente el cierre del 10/10 como vencido y señala que Grupo Retail Muestra sigue sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad, pero inventa que Logística debe recorrer tres fases y que hacerlo en ese plazo es poco habitual."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica al cierre una brecha de 56.500 €, aunque la resta presentada antes contiene un error de signo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo alto por actividad parada desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica explícitamente que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas para cada riesgo, pero afirma sin respaldo que Clínicas carece de interlocutor y ha retrocedido de fase."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € en el escenario A y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Indica que faltan 56.500 € frente a la cuota de 200.000 € en el escenario A."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como alto riesgo por actividad parada desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y continúa sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas para todas, pero convierte actividad en contacto y afirma ausencia de interlocutor, datos no establecidos en el pipeline."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo por cierre fuera del trimestre."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula correctamente la brecha: 200.000 € − 143.500 € = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica Clínicas Ejemplo como riesgo por actividad parada desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica que Grupo Retail Muestra tiene el cierre del 10/10 vencido y continúa sin firmar."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye una pregunta de coaching para cada oportunidad señalada en riesgo, basada en los datos proporcionados, sin añadir hechos externos."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula 45.000 + 52.500 + 10.000 + 36.000 = 143.500 € y excluye Alimentación Ejemplo."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula correctamente la brecha: 200.000 − 143.500 = 56.500 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala Clínicas Ejemplo como riesgo por inactividad desde el 18/09 y salida del director de compras impulsor."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Indica explícitamente que Grupo Retail Muestra tiene el cierre del 10/10 vencido y sigue sin firmarse."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Incluye preguntas por oportunidad, pero inventa contactos: convierte última actividad en conversación o contacto confirmado, como el de Muestra Industrial del 16/10."
+    }
+   ],
+   "transcript": "prompts/sm-es-pipeline-es-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-fr-compte-rendu-visite-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La sécurité ouvre les points de fond : risque de chute, urgence immédiate, rubalise et interdiction d’accès précèdent les autres désordres."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Constats et hypothèses sont séparés ; les causes restent incertaines et la certitude de Mme Exemplo est explicitement distinguée d’un constat technique."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La contradiction 2 mm/2 cm impose une nouvelle mesure ; l’agrandissement reste rapporté et non vérifié ; les 28 % comportent la réserve d’étalonnage."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Moins de 660 mots hors tableau ; urgences conservées, examen structurel prévu et actions requises présentes, sans responsable ni délai inventé."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun fait ou référentiel inventé, aucune cause certaine ni conclusion de stabilité ; références à compléter par l’ingénieur et mention finale conforme."
+  }
+ ]
+}

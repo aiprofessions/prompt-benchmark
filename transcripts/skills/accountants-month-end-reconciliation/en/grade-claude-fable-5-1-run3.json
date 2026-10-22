@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-en",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:14+00:00",
+ "attempt": 1,
+ "skill_sha256": "4dcfbee80358bd21532840700dddfa91551e9b14596a855ed3e861a610296c5b",
+ "rubric_sha256": "e5af919d713a29dad248b394abf604f5c0e8f1cba0dfebeb70369a19f8a16ac0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Adjusted bank balance is $40,280.50, correctly incorporating the deposit in transit and both outstanding checks."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Adjusted books equal $40,280.50 including the provisional ACH suspense adjustment; explicitly states a $0.00 difference and explains its dependency."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifies check #2201 as an under-recorded payment and decreases book cash by $45.00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Holds the ACH credit in unidentified receipts suspense pending evidence, not revenue; explicitly proposes no entries for the three timing items."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Introduces no additional reconciliation items, unsupported amounts, or account numbers; includes an evidence-needed list and blank responsible-accountant review and sign-off fields."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Adjusted bank balance is $40,280.50, correctly incorporating the deposit in transit and both outstanding checks.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Adjusted books equal $40,280.50 including the provisional ACH suspense adjustment; explicitly states a $0.00 difference and explains its dependency.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifies check #2201 as an under-recorded payment and decreases book cash by $45.00.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Holds the ACH credit in unidentified receipts suspense pending evidence, not revenue; explicitly proposes no entries for the three timing items.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Introduces no additional reconciliation items, unsupported amounts, or account numbers; includes an evidence-needed list and blank responsible-accountant review and sign-off fields.\"}]}"
+}

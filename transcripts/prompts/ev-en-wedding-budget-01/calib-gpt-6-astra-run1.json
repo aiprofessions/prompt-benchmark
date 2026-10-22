@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-en-wedding-budget-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Food and beverage, service charge, and tax are correctly listed as $10,450.00, $2,299.00, and $1,051.79, totaling $13,800.79."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Grand total is explicitly stated as $41,400.79."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly calculates $41,400.79 minus $38,000.00 as $3,400.79 over budget."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Three options quantify savings: $5,800.00, $3,763.85, and $3,900.00; the new-package savings are labeled estimate — confirm with vendor."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Tax applies only to food and beverage plus service charge. Proposed vendor prices are explicitly targets requiring quotes; free music is conditional."
+  }
+ ]
+}

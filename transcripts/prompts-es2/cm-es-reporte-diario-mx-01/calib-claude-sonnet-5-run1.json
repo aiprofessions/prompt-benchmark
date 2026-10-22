@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-reporte-diario-mx-01",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Plain-text table lists each company's categories with subtotals 12, 12 and 5 and total 29. It flags the noted 14 and 31 as inconsistent."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Concrete shown as 35 m³ programmed, 28 m³ received, 7 m³ missing; varilla complete per remisión; no cause invented."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "All incident elements present and classified as work at height: 11:40, eje 5, 4 m, no harness, stop, harness, lifeline, 12:10, no injury."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "General data, weather, activities and all three pendientes with details included. Missing data flagged; about 510 words, under the 550 limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "The cabo assumption is marked unverified opinion. Normative claim stays within the 1.80 m definition, and a signature line is included."
+  }
+ ]
+}

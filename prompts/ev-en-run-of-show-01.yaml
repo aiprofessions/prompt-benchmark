@@ -1,0 +1,49 @@
+id: ev-en-run-of-show-01
+lang: en
+translation_key: ev-run-of-show
+title: Run-of-show table from messy notes, with conflicts flagged
+scenario: Messy planning notes in, a minute-by-minute run-of-show out — and the two scheduling conflicts hidden in the notes
+  called out instead of silently 'fixed'.
+profession: event-planners
+task: event-planners.run-of-show
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Turn the notes below into a run-of-show table with columns: Time | Segment | Location | Owner | Cue / notes.
+
+  Then list every scheduling conflict or risk you find in the notes. Do not silently change any time; if you propose a fix,
+  label it "Proposed".
+
+  Do not invent people, rooms or times that are not in the notes.
+
+  Notes:
+
+  [Paste your planning notes: times, sessions, speakers, crew, rooms]
+
+  '
+sample_input: 'Sample Summit 2027 (fictional), one day, Main Stage + Room B.
+
+  7:30 doors / registration (lead: Ana, registration desk).
+
+  9:00 welcome by host Lee (Main Stage), AV tech: Sam.
+
+  9:30 keynote — Dr. Rivera; her flight lands 8:15, car says arrival at venue 9:40.
+
+  10:30 coffee break.
+
+  10:45 panel (Main Stage), moderator Lee, 3 panelists, 4 handheld mics — AV: Sam.
+
+  12:00 lunch. Also 12:00 Room B sponsor demo needs AV setup — Sam again.
+
+  12:00 Main Stage AV reset for afternoon — Sam.
+
+  13:00 breakouts Main Stage + Room B.
+
+  16:30 closing remarks Lee. 17:00 reception.
+
+  '
+page: https://aiprofessions.ai/event-planners/prompts/#ev-en-run-of-show-01
+results_file: results/ev-en-run-of-show-01.yaml

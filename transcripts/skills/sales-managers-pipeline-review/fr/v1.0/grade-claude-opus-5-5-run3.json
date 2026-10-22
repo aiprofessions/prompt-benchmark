@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:07:21+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La prévision est de 246 000 €, avec les quatre contributions attendues et exclusion explicite de Modèle Transport."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’écart indiqué est bien de 254 000 €, calculé par soustraction de la prévision à l’objectif restant."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Modèle Santé est signalé comme inactif, mais le mono-contact d’Exemple Retail n’est pas présenté comme une alerte."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Test Énergie est explicitement signalé avec une clôture dépassée au 10/10, sans signature, et neuf jours de retard."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Une question de coaching accompagne chacune des deux affaires effectivement signalées. Les hypothèses sont explicites, sans données commerciales inventées."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La prévision est de 246 000 €, avec les quatre contributions attendues et exclusion explicite de Modèle Transport.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’écart indiqué est bien de 254 000 €, calculé par soustraction de la prévision à l’objectif restant.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Modèle Santé est signalé comme inactif, mais le mono-contact d’Exemple Retail n’est pas présenté comme une alerte.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Test Énergie est explicitement signalé avec une clôture dépassée au 10/10, sans signature, et neuf jours de retard.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Une question de coaching accompagne chacune des deux affaires effectivement signalées. Les hypothèses sont explicites, sans données commerciales inventées.\"}]}"
+}

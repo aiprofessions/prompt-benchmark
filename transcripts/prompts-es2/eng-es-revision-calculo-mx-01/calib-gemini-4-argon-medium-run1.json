@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-es-revision-calculo-mx-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Confirms RA = RB = 10 kN as correct; corrects Mmax to PL/4 = 20 kN·m and flags PL/8 as incorrect for this case."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States 1 cm⁴ = 10^4 mm⁴, gets I = 1.0×10^7 mm⁴, notes the 10^5 error, and recalculates δ = 13.33 mm."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L/360 = 11.11 mm; states 13.33 > 11.11, conclusion changes, NO CUMPLE under the stated criterion."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Formulas, substitutions and units shown; table covers reactions, moment and deflection; ~430 words outside table; note ~57 words."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented data or norms; limited to deflection; lists pending items; refuses issuance without responsible engineer's review and signature."
+  }
+ ]
+}

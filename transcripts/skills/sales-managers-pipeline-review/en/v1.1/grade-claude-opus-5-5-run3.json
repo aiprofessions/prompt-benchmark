@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:53:41+00:00",
+ "attempt": 1,
+ "skill_sha256": "1465ce74591fa0a36ee3c3ed983ce401dbd34fd0b49a8c44e37c7eb16abc43d7",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Shows $247,000 only as conditional arithmetic; explicitly declares the weighted forecast unavailable and calculable subtotal zero."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Shows $153,000 only as conditional arithmetic; explicitly declares the gap unavailable."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags Bluefin's 39-day inactivity and explicitly identifies Orion's CFO-only contact as single-threading."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar's January 10 close as before January 18 while the deal remains unsigned."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides coaching questions for all five flagged deals; distinguishes assumptions and missing information from supplied deal facts."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Shows $247,000 only as conditional arithmetic; explicitly declares the weighted forecast unavailable and calculable subtotal zero.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Shows $153,000 only as conditional arithmetic; explicitly declares the gap unavailable.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags Bluefin's 39-day inactivity and explicitly identifies Orion's CFO-only contact as single-threading.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar's January 10 close as before January 18 while the deal remains unsigned.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides coaching questions for all five flagged deals; distinguishes assumptions and missing information from supplied deal facts.\"}]}"
+}

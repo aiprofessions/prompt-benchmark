@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:20:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "3c25f94a1a7932aff88dfc2e5eefc8d19e74871ef9644eead608b49a55726afd",
+ "rubric_sha256": "c4a9629f8e15385f7fb80cf0168ef081201eec103279521fae4d1d1d66b3c488",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Lists the exact stage dimensions, screen and microphone counts, confidence monitor, and speeches-only livestream explicitly excluding the auction."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States the in-house rigger requirement, load-in from 07:00, load-out complete by 01:00, and band-provided backline."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Requires separate equipment, labor, delivery, service charge, and tax lines; requests a certificate of insurance and deposit/cancellation terms."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "States both required dates, but evaluation criteria are TBD rather than supplied."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no budget, prices, contact details, or venue capabilities; unknowns are marked TBD or explicitly presented as questions requiring confirmation."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Lists the exact stage dimensions, screen and microphone counts, confidence monitor, and speeches-only livestream explicitly excluding the auction.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"States the in-house rigger requirement, load-in from 07:00, load-out complete by 01:00, and band-provided backline.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Requires separate equipment, labor, delivery, service charge, and tax lines; requests a certificate of insurance and deposit/cancellation terms.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"States both required dates, but evaluation criteria are TBD rather than supplied.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no budget, prices, contact details, or venue capabilities; unknowns are marked TBD or explicitly presented as questions requiring confirmation.\"}]}"
+}

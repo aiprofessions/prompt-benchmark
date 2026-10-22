@@ -1,0 +1,42 @@
+id: eng-en-site-observation-01
+lang: en
+translation_key: eng-site-observation
+title: Site observation report draft from field notes
+scenario: Turn field notes from a visual walk-through into a structured draft report that separates what was seen from what
+  it might mean, with limitations stated.
+profession: engineers
+task: engineers.technical-reports
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Draft a site observation report from the field notes below with sections: Purpose & scope, Observations (table: ID
+  | Location | Observation | Measurement | Photo), Discussion, Recommendations, Limitations.
+
+  Rules: keep every observation and measurement exactly as noted; separate observations (facts) from opinions; do not state
+  a definitive cause of deterioration; recommendations may suggest further investigation.
+
+  Mark the report "DRAFT — for review by the engineer of record".
+
+  Field notes:
+
+  [Paste your field notes: locations, measurements, photos referenced, scope of the visit]
+
+  '
+sample_input: 'Visit: Example Plaza parking garage (fictional), level P2, visual walk-through only, 2 hours, no testing.
+
+  1. Grid C-4 soffit: concrete spall approx. 18 in x 10 in, exposed bottom rebar with surface corrosion. Photo 01.
+
+  2. Grid C-5 soffit: hairline cracking with white efflorescence, ~6 ft long. Photo 02.
+
+  3. Ramp P2-P1 expansion joint: seal torn over ~12 ft, water staining below. Photo 03.
+
+  4. Column D-6: vehicle impact scrape at base, no exposed rebar. Photo 04.
+
+  5. Drain at grid E-2 clogged, ponding approx. 8 ft diameter after rain. Photo 05.
+
+  '
+page: https://aiprofessions.ai/engineers/prompts/#eng-en-site-observation-01
+results_file: results/eng-en-site-observation-01.yaml

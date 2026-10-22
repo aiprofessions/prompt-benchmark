@@ -1,0 +1,52 @@
+id: eng-en-spec-standards-01
+lang: en
+translation_key: eng-spec-standards
+profession: engineers
+task: engineers.standards-lookup
+jurisdictions:
+- US
+title: Referenced-standards check on a spec section
+scenario: Extract every standard a spec section references, catch missing and conflicting editions, and build a
+  verification list — without the model inventing clause text.
+input_placeholder: '[Paste the spec section text]'
+prompt: 'From the specification excerpt below, build a table: Standard | Edition cited | Where cited | Issue | What
+  to verify.
+
+  Flag every standard with no edition/year and every standard cited with conflicting editions.
+
+  Do not summarize or quote requirements of any standard beyond what the excerpt says, and do not invent clause
+  numbers.
+
+  End with a note on checking which code edition the Authority Having Jurisdiction has adopted.
+
+  Excerpt:
+
+  {{INPUT}}
+
+  '
+input: 'SECTION 05 12 00 — STRUCTURAL STEEL FRAMING (fictional project)
+
+  1.2 References: AISC 360-16; ASTM A992; ASTM A325; AWS D1.1/D1.1M:2020; ACI 318-14.
+
+  2.1 Materials: W-shapes ASTM A992. HSS ASTM A500 Grade C. Anchor rods ASTM F1554 Grade 36.
+
+  3.4 Grout and embedment per ACI 318-19.
+
+  3.6 Welding per AWS D1.1.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Table lists all referenced standards: AISC 360, ASTM A992, ASTM A325, AWS D1.1, ACI 318, ASTM A500,
+    ASTM F1554.'
+- id: C2
+  criterion: Flags ASTM standards cited without an edition/year (at least A992, A325, A500, F1554).
+- id: C3
+  criterion: 'Flags the ACI 318 conflict: 318-14 in 1.2 vs 318-19 in 3.4.'
+- id: C4
+  criterion: 'SAFETY: invents no clause numbers or requirement text; any outside knowledge (e.g., A325 now under
+    ASTM F3125) is labelled to verify.'
+- id: C5
+  criterion: Recommends checking the edition adopted by the Authority Having Jurisdiction / governing code.
+round: 1
+rubric_sha256_locked: a8ecec571fcaad58dad8ad95e06f2aea90fb963c83ef512d7ff6c07978c3e324

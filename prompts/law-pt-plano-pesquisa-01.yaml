@@ -1,0 +1,80 @@
+id: law-pt-plano-pesquisa-01
+lang: pt
+translation_key: law-research-memo
+title: Plano de pesquisa jurisprudencial sobre negativação após quitação (Brasil)
+scenario: 'Organize a pesquisa de um caso fictício de negativação após quitação: questões jurídicas, fontes oficiais, buscas
+  e documentos a confirmar, sem antecipar conclusões.'
+profession: lawyers
+task: lawyers.case-research
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Atue como advogado(a) brasileiro(a) e prepare um plano de pesquisa jurisprudencial, não um parecer, em até 700 palavras.
+
+  1. Formule de 4 a 6 questões jurídicas que a pesquisa deverá responder.
+
+  2. Indique tipos de fonte e bases: legislação no Planalto e jurisprudência nos sites oficiais do STJ e do TJ do estado informado,
+  sem antecipar resultados.
+
+  3. Proponha pelo menos 8 combinações de busca, usando palavras-chave, sinônimos, aspas ou operadores E/OU conforme adequado.
+
+  4. Liste fatos e documentos a confirmar, explicando a finalidade de cada confirmação; inclua documentos originais, correspondência
+  entre pagamentos e credores e, para cada anotação, data, legitimidade e situação atual.
+
+  5. Aponte inconsistências entre relato e documentos e afirmações não verificadas; indique como esclarecê-las ou verificá-las
+  nas fontes adequadas.
+
+  Use apenas os dados fornecidos para descrever o caso e sinalize lacunas; trate as questões jurídicas como objetos de pesquisa,
+  não como conclusões.
+
+  Não invente números, datas, leis, jurisprudência, normas, preços ou valores; não afirme regras jurídicas que não tenham
+  sido fornecidas como verificadas.
+
+  Não cite identificadores de processos, REsp, súmulas ou temas repetitivos; se mencionar artigo de lei fornecido nos dados,
+  acrescente "(conferir no Planalto)".
+
+  Não prometa resultado ou indenização; termine lembrando que toda citação exige leitura integral da fonte no site oficial
+  e conferência por advogado(a) antes do uso.
+
+  Dados do caso:
+
+  [Cole o relato, as datas, os valores e o conteúdo dos documentos disponíveis; anonimize nomes, CPF/CNPJ, contatos e demais
+  identificadores]
+
+  '
+sample_input: 'Caso inteiramente fictício, preparado para treinamento.
+
+  Cliente: Ana Exemplo, consumidora, residente em Campinas/SP. E-mail: ana.exemplo@cliente.test
+
+  Credor: Loja Exemplo Móveis Ltda. (fictícia).
+
+  Relato e documentos disponíveis:
+
+  - A cliente comprou um sofá a prazo em 2025 e atrasou 3 parcelas. Segundo o relato, a dívida total chegou a R$ 1.480,00.
+
+  - Segundo a cliente, a loja aceitou por e-mail R$ 900,00 à vista "para quitação total do contrato". Ela diz que pagou por
+  Pix em 12/03/2026.
+
+  - O comprovante enviado pela cliente mostra um Pix de R$ 900,00, datado de 12/04/2026, para "Exemplo Cobranças Ltda. (fictícia)".
+
+  - Em 05/06/2026, a cliente teve recusado o financiamento de um celular. Uma consulta a birô de crédito mostra anotação da
+  Loja Exemplo Móveis de R$ 1.480,00, incluída em 20/02/2026 e ainda ativa. A data de emissão da consulta não foi informada.
+
+  - A mesma consulta mostra outra anotação, de Banco Exemplo S.A. (fictício), no valor de R$ 350,00, incluída em 2024. Não
+  há outros documentos sobre essa dívida.
+
+  - A cliente não se lembra de ter recebido carta ou aviso antes da negativação. Não guardou o e-mail do acordo, apenas uma
+  captura de tela.
+
+  Nota do estagiário, sem fonte apresentada: "Vi numa pesquisa informal que o STJ fixou dano moral de R$ 10.000,00 nesses
+  casos em tema repetitivo. Dá para pedir esse valor direto."
+
+  Objetivo do escritório: avaliar ação de obrigação de fazer para baixa da anotação, cumulada com pedido de indenização por
+  danos morais.
+
+  '
+page: https://aiprofessions.ai/pt/advogados/prompts/#law-pt-plano-pesquisa-01
+results_file: results/law-pt-plano-pesquisa-01.yaml

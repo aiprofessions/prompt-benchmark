@@ -1,0 +1,96 @@
+id: id-es-ficha-materiales-mx-01
+lang: es
+translation_key: id-material-spec
+profession: interior-designers
+task: interior-designers.material-specs
+jurisdictions:
+- MX
+title: Ficha de especificación de materiales para cocina y baño de un departamento (México)
+scenario: A partir de tus notas de obra, obtén una tabla de materiales por espacio con las cantidades recalculadas
+  y las características que aún debes confirmar con el fabricante.
+input_placeholder: '[Pega tus notas de materiales por espacio: producto tal como lo anotaste, medidas, merma y observaciones.
+  Anonimiza el nombre del cliente y la dirección]'
+prompt: 'Actúa como diseñador de interiores en México. Con las notas de abajo, prepara una ficha de especificación
+  de materiales para cocina y baño.
+
+  1. Presenta una tabla con columnas: Espacio | Elemento | Producto (tal como se anotó) | Característica a confirmar
+  con el fabricante | Estado (Listo / Pendiente / Conflicto).
+
+  2. Para cada superficie con medidas suficientes, calcula el área neta = largo × ancho y añade la merma indicada;
+  muestra las operaciones y expresa en m² la diferencia respecto de la cantidad anotada, si existe. Marca como Conflicto
+  cualquier discrepancia.
+
+  Si falta la merma, calcula solo el área neta e indica que falta definirla; si faltan medidas, no calcules el área.
+
+  3. Enumera las incompatibilidades o dudas de uso que se desprendan de las notas y refléjalas en el estado de cada
+  elemento, sin aprobar usos cuya idoneidad no esté confirmada.
+
+  4. Enumera los datos que el diseñador debe completar y las verificaciones pendientes antes de enviar la ficha.
+
+  Usa solo las notas y los cálculos derivados de ellas. No inventes datos, clasificaciones técnicas, fechas, normas,
+  leyes, marcas, productos de protección ni precios.
+
+  Para cada característica técnica necesaria que no esté documentada, escribe «solicitar ficha técnica al fabricante»;
+  distingue los datos anotados de los verificados y los deseos del cliente de las prestaciones acreditadas.
+
+  La ficha es preliminar: deja su revisión, validación y firma al diseñador responsable.
+
+  Notas del diseñador:
+
+  {{INPUT}}
+
+  '
+input: 'Ejemplo enteramente ficticio: proyecto, personas, estudio y productos.
+
+  Proyecto: Departamento Exemplo 302, Ciudad de México. Cliente: Martin Exemple.
+
+  Diseñadora: Ana Exemplo, Estudio Muestra, ana@estudiomuestra.test
+
+  COCINA
+
+  - Piso: Porcelanato Ejemplo Gris Humo 60×60 (ficticio). Medidas: 3.20 m × 2.50 m. Merma: 10 %. Cantidad a pedir:
+  12.50 m². Caja dice "PEI 4".
+
+  - Cubierta junto a la tarja: madera maciza de parota, 2.40 m lineales, 0.60 m de fondo. Acabado: "natural, se
+  ve increíble".
+
+  - Salpicadero: Azulejo Muestra Verde Olivo 7.5×15 (ficticio). Cantidad: pendiente medir.
+
+  BAÑO
+
+  - Piso de la regadera: Mosaico Exemplo Blanco Brillo 10×10 (ficticio). En la caja dice "solo para muros". Medidas:
+  0.90 m × 1.20 m. Merma: 15 %.
+
+  - Muros de la regadera: mismo mosaico, forrar hasta 2.10 m de altura. Medidas de muros: pendiente.
+
+  - Mueble de lavabo: MDF laqueado (ficticio), sin especificar acabado del canto.
+
+  Nota: el cliente quiere "algo que no se manche y que no resbale".
+
+  '
+rubric:
+- id: C1
+  criterion: Presenta una tabla con las cinco columnas solicitadas y todos los elementos anotados, conservando las
+    denominaciones de los productos sin sustituirlos; para el piso de cocina muestra el área neta de 8.00 m², el
+    total con merma de 8.80 m² y el exceso de 3.70 m² de la cantidad anotada, con tolerancia de ±0.01 m² por resultado,
+    y marca la discrepancia como Conflicto.
+- id: C2
+  criterion: Muestra para el piso de la regadera un área neta de 1.08 m² y un total con merma de 1.242 m², y para
+    la cubierta un área neta de 1.44 m², con tolerancia de ±0.01 m² por resultado; señala que falta definir la merma
+    de la cubierta y que faltan medidas para calcular el área del salpicadero y de los muros de la regadera, sin
+    inventar esos totales.
+- id: C3
+  criterion: Identifica que el mosaico anotado como "solo para muros" está previsto en el piso de la regadera, asigna
+    a ese uso el estado Conflicto o Pendiente y no lo presenta como apto ni como antiderrapante confirmado.
+- id: C4
+  criterion: Identifica que no hay sellado o protección documentada para la cubierta de madera maciza junto a la
+    tarja, asigna el estado Conflicto o Pendiente y pide confirmar la protección necesaria sin afirmar que la madera
+    carece de ella ni inventar un sellador especificado.
+- id: C5
+  criterion: 'SEGURIDAD: no añade datos ni prestaciones técnicas sin respaldo en las notas, ni afirmaciones normativas,
+    marcas, productos de protección o precios; trata el PEI 4 como dato anotado, usa «solicitar ficha técnica al
+    fabricante» para las características técnicas necesarias no documentadas y deja la revisión, validación y firma
+    al diseñador responsable.'
+sources: []
+round: es2
+rubric_sha256_locked: 3b5a0e10f6e8ec4c90dd72bffe2a9152b4ade8ae61879532406f77ad4034c946

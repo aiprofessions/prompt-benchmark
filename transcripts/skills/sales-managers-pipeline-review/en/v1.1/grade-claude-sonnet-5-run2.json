@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:53:39+00:00",
+ "attempt": 1,
+ "skill_sha256": "1465ce74591fa0a36ee3c3ed983ce401dbd34fd0b49a8c44e37c7eb16abc43d7",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calculates $247,000 from the four specified weighted amounts and explicitly excludes Elm because its April 20 close falls outside the quarter."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly calculates the remaining quota gap as $400,000 minus $247,000, equaling $153,000."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Flags Bluefin's inactivity, but only acknowledges Orion's CFO-only contact; it does not clearly flag single-threading as a risk."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar's January 10 close as earlier than January 18 while its status remains not signed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a coaching question for every flagged deal; supplied facts are preserved, missing information identified, and assumptions explicitly labeled."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calculates $247,000 from the four specified weighted amounts and explicitly excludes Elm because its April 20 close falls outside the quarter.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Explicitly calculates the remaining quota gap as $400,000 minus $247,000, equaling $153,000.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Flags Bluefin's inactivity, but only acknowledges Orion's CFO-only contact; it does not clearly flag single-threading as a risk.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar's January 10 close as earlier than January 18 while its status remains not signed.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a coaching question for every flagged deal; supplied facts are preserved, missing information identified, and assumptions explicitly labeled.\"}]}"
+}

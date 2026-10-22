@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-offer-review-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Computes inspection as October 11, 2026 and financing as October 22, 2026, explicitly using calendar days with acceptance as day zero."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifies the unlisted buyer home and missing sale deadlines as the biggest concern and a major closing risk."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags unresolved post-closing occupancy terms, including rent, deposit, insurance, damage responsibility, utilities, and late departure arrangements."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explains escalation at $2,000 above a bona fide competing offer, states the $512,000 cap, and requires clear competing-offer verification rules."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Avoids definitive legal conclusions, identifies the summary as not legal advice, and ends with required attorney or managing-broker review."
+  }
+ ]
+}

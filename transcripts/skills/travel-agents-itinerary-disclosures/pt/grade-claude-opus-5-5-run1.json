@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:59:50+00:00",
+ "attempt": 1,
+ "skill_sha256": "73cf1e9fd3483a1fb7410bf40a99551edf68bfd04df5fa81dbcb27838ab3bd26",
+ "rubric_sha256": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobre todas as datas, quatro noites em Buenos Aires, três em Bariloche, voo em 14/07, retorno de Bariloche e ausência de carro alugado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sinaliza alergia grave e confirmação de ingredientes e contaminação cruzada, inclusive em doces; limita passeios principais e mantém tardes livres."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Transcreve integralmente as três condições fornecidas, sem acrescentar condições de reserva; cálculo do prazo é apresentado como premissa."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não afirma preços, horários, durações ou exigências documentais como fatos; itens operacionais dependem de confirmação e documentos remetem a fontes oficiais."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina com lista de reservas e confirmações, incluindo orientação para consultar fontes oficiais governamentais sobre entrada e documentação de menores."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cobre todas as datas, quatro noites em Buenos Aires, três em Bariloche, voo em 14/07, retorno de Bariloche e ausência de carro alugado.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Sinaliza alergia grave e confirmação de ingredientes e contaminação cruzada, inclusive em doces; limita passeios principais e mantém tardes livres.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Transcreve integralmente as três condições fornecidas, sem acrescentar condições de reserva; cálculo do prazo é apresentado como premissa.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não afirma preços, horários, durações ou exigências documentais como fatos; itens operacionais dependem de confirmação e documentos remetem a fontes oficiais.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina com lista de reservas e confirmações, incluindo orientação para consultar fontes oficiais governamentais sobre entrada e documentação de menores.\"}]}"
+}

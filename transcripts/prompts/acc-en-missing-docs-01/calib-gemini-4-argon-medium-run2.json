@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-missing-docs-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All four items are listed: 1099-NEC/1099-K, Form 1098, childcare name/address/EIN/amount, and 5498-SA. No extra items added."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States the March 20, 2027 internal deadline and ties it to filing by April 15, 2027."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Says not to send tax documents by regular email and to upload through portal.example-cpa.test."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Body is about 225 words, within the ±10% tolerance. Language is plain, terms are explained, and the tone is reassuring."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No dollar amounts, rates, penalties, limits or dates beyond those in the notes."
+  }
+ ]
+}

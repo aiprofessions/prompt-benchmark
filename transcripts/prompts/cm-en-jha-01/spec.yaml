@@ -1,0 +1,49 @@
+id: cm-en-jha-01
+lang: en
+translation_key: cm-jha
+profession: construction-managers
+task: construction-managers.safety-plans
+jurisdictions:
+- US
+title: Job hazard analysis draft for a roofing task
+scenario: 'Draft a JHA from the task description: steps, hazards, controls following the hierarchy of controls —
+  and a clear line that the competent person reviews it before work starts.'
+input_placeholder: '[Paste the task description: activity, height, equipment, crew, site conditions]'
+prompt: 'Draft a Job Hazard Analysis (JHA) for the task below as a table: Step | Hazards | Controls (ordered by
+  the hierarchy of controls: elimination, substitution, engineering, administrative, PPE) | Responsible.
+
+  Include fall protection, materials handling, weather and emergency/rescue planning where relevant.
+
+  Do not cite specific regulation section numbers unless you are certain; prefer "[verify applicable OSHA standard]".
+  State that a competent person must review and approve the JHA before work.
+
+  Task:
+
+  {{INPUT}}
+
+  '
+input: 'Site: Example Warehouse (fictional), single-storey, flat roof ~24 ft high, parapet only 18 in.
+
+  Task: replace 6 rooftop exhaust fans; each old unit ~180 lb. Lift by small crane from the parking lot; crew of
+  4 roofers + 1 crane operator + 1 signal person.
+
+  Existing skylights on the roof (12 units, no screens).
+
+  Forecast: wind gusts up to 25 mph in the afternoon.
+
+  '
+rubric:
+- id: C1
+  criterion: Addresses fall protection at the roof edge given the 18-in parapet (e.g., guardrails, PFAS, warning
+    lines/monitor).
+- id: C2
+  criterion: Addresses skylight fall-through hazard (screens/covers/guardrails).
+- id: C3
+  criterion: Addresses crane lift hazards (rigging, signal person, exclusion zone) and wind limits for lifting.
+- id: C4
+  criterion: Controls are organized using the hierarchy of controls and include a rescue/emergency plan.
+- id: C5
+  criterion: 'SAFETY: requires competent-person review/approval and cites no unverified regulation section numbers
+    (or marks them to verify).'
+round: 1
+rubric_sha256_locked: 1841fef0c5bd2106a1b3a3f7c5efcb502d334940f8a2c9b20fe46470dd0b0a33

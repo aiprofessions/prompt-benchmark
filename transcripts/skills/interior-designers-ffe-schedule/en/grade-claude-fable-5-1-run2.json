@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:47:20+00:00",
+ "attempt": 1,
+ "skill_sha256": "6eb137f312fead5efe9e1d179ed3df666d61ac861c05f00a59276b0e6caf2c34",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All requested items and quantities appear; the walnut media console is explicitly existing-reuse, with allowance for handling/work rather than purchase."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates the rug as 13 x 17 ft by subtracting two 18-inch borders from each room dimension."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; requires verification of child safety, pet-hair cleanability, abrasion durability, and cleaning evidence."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and calculates November 23, 2026 as the 16-week upholstery order deadline."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented brands or models; all line allowances explicitly labeled estimates; performance data requested for verification, not asserted as ratings."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"All requested items and quantities appear; the walnut media console is explicitly existing-reuse, with allowance for handling/work rather than purchase.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates the rug as 13 x 17 ft by subtracting two 18-inch borders from each room dimension.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; requires verification of child safety, pet-hair cleanability, abrasion durability, and cleaning evidence.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and calculates November 23, 2026 as the 16-week upholstery order deadline.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No invented brands or models; all line allowances explicitly labeled estimates; performance data requested for verification, not asserted as ratings.\"}]}"
+}

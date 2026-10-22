@@ -1,0 +1,44 @@
+# Round-1 revision findings (v1.0 -> v1.1) from the skill bench, 2026-10-19.
+# Each fix is a GENERAL behaviour rule (no test-input facts), so the re-test on the same locked input is not teaching to the answer key.
+healthcare-visit-summary:
+  en: |
+    BENCH FINDING (v1.0): (a) in 2 of 6 runs the patient summary dropped a measurement given in the note (weight) — rule must be: every vital sign, measurement and lab value in the note appears in Part A with its exact value and unit; (b) keep precautions literal: never add a destination ("go to the ER/urgent care/911") or a condition the clinician did not state, including in headings or labels.
+    REQUIRED FIX: add both rules as explicit procedure steps and make the Part A template use a neutral heading such as "When to call or come back" whose content is the clinician's words only.
+  es: |
+    HALLAZGO (v1.0): en 6 de 6 ejecuciones el texto para el paciente añadió «urgencias» como destino (en un encabezado), aunque la nota solo decía «acudir si presenta mareo intenso». Además, conviene asegurar que todas las cifras de la nota aparezcan.
+    CORRECCIÓN OBLIGATORIA: (a) el encabezado de la plantilla para las precauciones debe ser neutro, p. ej. «Cuándo volver a consultar o llamar», y su contenido solo las palabras del médico; nunca añadas destino (urgencias, 911, 112), plazo ni condición que no estén en la nota, tampoco en títulos o etiquetas; (b) todo signo vital, medida y resultado de laboratorio de la nota aparece en la Parte A con su valor y unidad exactos.
+lawyers-nda-review:
+  en: |
+    BENCH FINDING (v1.0): output quality was good. One general rule to make explicit: the official sources in this skill's Hard limits are for the attorney's own reading — the review OUTPUT must not cite any authority, regulator guidance, case or statute unless the user's input contains it; the Limits section of the output only says the supervising attorney verifies applicable law and professional rules.
+    REQUIRED FIX: add that rule as a procedure step and to the Output format's "Limits" section.
+  es: |
+    HALLAZGO (v1.0): en 5 de 6 ejecuciones la salida citó el amparo directo 6/2025 de la SCJN (que la skill lista como fuente para el abogado) y el juez lo trató como cita no sustentada por el encargo.
+    CORRECCIÓN OBLIGATORIA: las fuentes oficiales de los Límites de la skill son lectura para el abogado; la SALIDA no cita resoluciones, normas, artículos ni guías salvo que figuren en lo que pegó el usuario. En el apartado «Límites» de la salida basta con indicar que el abogado responsable verifica la normativa y las reglas profesionales aplicables. Añádelo como paso del procedimiento y en la plantilla.
+event-planners-vendor-rfp:
+  en: |
+    BENCH FINDING (v1.0): in 12 of 12 runs the evaluation criteria were left "TBD" because the brief gave none, so vendors would not know how they are scored.
+    REQUIRED FIX: when the brief gives no evaluation criteria, the RFP proposes a short default set clearly labelled "Proposed evaluation criteria — confirm with the client before sending" (e.g. compliance with stated requirements, completeness and clarity of itemized pricing, relevant experience/references, operational plan for the venue constraints, allergen/safety procedures where relevant, insurance and terms). Keep every other rule.
+  es: |
+    HALLAZGO (v1.0): en 6 de 6 ejecuciones los criterios de evaluación quedaron «por confirmar» y en la mayoría el formato de precio no pidió el IVA ni el montaje/traslado como líneas separadas.
+    CORRECCIÓN OBLIGATORIA: (a) si el briefing no trae criterios, la RFP propone un conjunto breve marcado «Criterios de evaluación propuestos — confirmar con el cliente antes de enviar» (cumplimiento de requisitos, claridad del precio desglosado, experiencia/referencias, plan operativo ante las restricciones del lugar, protocolo de alérgenos/seguridad si aplica, seguro y condiciones); (b) el formato de precio enumera siempre como líneas separadas: alimentos/servicio, personal, traslado y montaje/desmontaje, cargo por servicio y propina si aplican, e IVA (MX/ES) desglosado; (c) el protocolo de alérgenos debe nombrar cada alergia o dieta médica del briefing.
+real-estate-compliant-listing:
+  en: |
+    BENCH FINDING (v1.0): in 3 of 3 Opus runs the copy left out the documented square footage because the seller claimed a larger figure. Rule must be: when a documented figure (public record, survey, appraisal) conflicts with a seller claim, the copy states the DOCUMENTED figure with its source ("per county record") and the conflict goes to "Facts to verify"; drop a figure only if no documented value exists.
+    REQUIRED FIX: add this as a procedure step. Keep every other rule.
+  es: |
+    HALLAZGO (v1.0): en una ejecución el anuncio omitió datos objetivos aportados (terraza, año de reforma) por precaución. Regla: los datos objetivos aportados por el usuario se incluyen; si un dato documentado (catastro, escritura, tasación) choca con lo que dice el propietario, el anuncio usa el documentado con su fuente («según catastro») y el conflicto va a «Datos por verificar»; solo se omite un dato si no hay valor documentado.
+    CORRECCIÓN OBLIGATORIA: añádelo como paso del procedimiento.
+travel-agents-itinerary-disclosures:
+  en: |
+    BENCH FINDING (v1.0): (a) several runs ended with questions/notes after the checklist; (b) two runs added a condition to the agency's terms (e.g. when the insurance decision must be made). Rules: the "To book / to confirm" checklist is ALWAYS the final section (open questions go inside it as checklist items); booking terms are quoted verbatim and nothing — deadline, condition or consequence — is added to them; the stated pace (e.g. one major sight per day) is a hard cap per day.
+    REQUIRED FIX: add these as procedure steps and reflect them in the template.
+  es: |
+    HALLAZGO (v1.0): algunas ejecuciones terminaron con preguntas o notas internas después de la lista y una añadió una condición a las del seguro. Reglas: la lista «Por reservar / por confirmar» es SIEMPRE el último apartado (las preguntas abiertas van dentro como casillas); las condiciones de la agencia se citan literalmente sin añadir plazos, condiciones ni consecuencias; el ritmo indicado por el cliente es un tope diario.
+    CORRECCIÓN OBLIGATORIA: añádelo como pasos del procedimiento y en la plantilla.
+interior-designers-ffe-schedule:
+  en: |
+    BENCH FINDING (v1.0): EN passed; keep consistency with the ES fix: budget allowances must always be filled as a proportional split of the client's stated total, labelled "allowance — estimate, confirm with quotes" (never "none"/blank); and the lead-time check must give a concrete order-by date = install date minus the longest quoted lead time, showing the calculation.
+    REQUIRED FIX: make both explicit procedure steps.
+  es: |
+    HALLAZGO (v1.0): en 2 de 6 ejecuciones el listado dejó las partidas en blanco («Asignaciones estimadas: ninguna») y en otras 2 no dio fecha límite de pedido. Reglas: las partidas se rellenan siempre como reparto proporcional del total indicado por el cliente, marcadas «partida estimada — confirmar con presupuestos» (nunca «ninguna» ni vacías); el control de plazos da una fecha concreta de pedido = fecha de montaje menos el plazo más largo indicado, mostrando el cálculo.
+    CORRECCIÓN OBLIGATORIA: añádelo como pasos del procedimiento.

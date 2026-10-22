@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-en-jha-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Addresses fall protection at the roof edge given the 18-in parapet (e.g., guardrails, PFAS, warning lines/monitor)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Addresses skylight fall-through hazard (screens/covers/guardrails)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Addresses crane lift hazards (rigging, signal person, exclusion zone) and wind limits for lifting."
+  },
+  {
+   "id": "C4",
+   "criterion": "Controls are organized using the hierarchy of controls and include a rescue/emergency plan."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: requires competent-person review/approval and cites no unverified regulation section numbers (or marks them to verify)."
+  }
+ ],
+ "rubric_sha256": "1841fef0c5bd2106a1b3a3f7c5efcb502d334940f8a2c9b20fe46470dd0b0a33",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly rejects the 18-inch parapet as fall protection and specifies temporary guardrails, conditional warning lines, and PFAS."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires covering or screening all 12 skylights before roof work, or individually guardrailing them, with secured load-capable covers."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes qualified riggers, inspected rated rigging, designated signal person, exclusion zones, and monitored wind stop thresholds tied to manufacturer limits."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls are explicitly labeled and ordered by hierarchy; a dedicated emergency section requires written rescue planning, equipment, trained rescuers, and rehearsal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; cites no regulation section numbers and uses verification placeholders."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly rejects the 18-inch parapet as fall protection and specifies perimeter guardrails, PFAS, and conditional warning-line arrangements."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies all 12 unscreened skylights as fall-through hazards and requires secured, load-rated covers or guardrails before other work."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Requires inspected rated rigging, a designated qualified signal person, exclusion zones, and manufacturer-based wind limits with a proposed lower site threshold."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Each step organizes controls in elimination, substitution, engineering, administrative, and PPE order; a dedicated section provides emergency and fall-arrest rescue planning."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; regulatory references use verification placeholders without citing specific section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Treats the 18-inch parapet as no edge protection and specifies temporary guardrails, protected zones, and personal fall arrest systems."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies all 12 unscreened skylights as fall-through hazards and specifies secured rated screens, covers, or guardrails."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Requires inspected rated rigging, a qualified signal person, barricaded load zones, and wind limits based on manufacturer and lift-plan requirements."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists controls in elimination, substitution, engineering, administrative, and PPE order, and includes a dedicated emergency and fall-arrest rescue plan."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; cites no regulation section numbers and uses verification placeholders."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies the 18-inch parapet as inadequate and requires PFAS or compliant perimeter guardrails."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires covers or screens over all 12 skylights and explicitly identifies fall-through hazards."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Addresses rated, inspected rigging, qualified signal person, barricaded exclusion zones, and suspension of lifts at established manufacturer-based wind limits."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Organizes controls under hierarchy labels and includes site-specific emergency and suspended-worker rescue planning, despite some control misclassifications."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person JHA sign-off before work and uses verification placeholders rather than specific regulation section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies the 18-inch parapet as inadequate and specifies engineered temporary guardrails or rated PFAS anchors with harness connections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires rigid covers or screens on all 12 skylights before other roof work and protection throughout the work."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes rated and inspected rigging, designated signal person, barricaded exclusion zones, and manufacturer-based wind limits with stop-work requirements."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls are explicitly organized in hierarchy order, and a dedicated emergency step includes rescue equipment, trained personnel, communications, and written procedures."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person review and signed approval before work; uses verification placeholders rather than specific regulation section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies the 18-inch parapet as inadequate and specifies temporary guardrails or anchored personal fall arrest protection."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies skylight fall-through hazards and requires rigid covers or guardrails for all 12 skylights."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Addresses rated and inspected rigging, designated signal person, exclusion zones, wind monitoring, and manufacturer-based lifting stop thresholds."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls are labeled in hierarchy order, and a dedicated emergency/rescue step specifies equipment, communications, first aid, and suspended-worker rescue planning."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person review and sign-off before work and uses verification placeholders rather than specific regulation section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States the 18-in parapet is inadequate; requires edge guardrails, restraint or PFAS, and rejects relying on warning tape or a monitor alone."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires load-rated, secured skylight covers, screens or guardrails for all 12 skylights; lift paths kept away from skylights."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Covers rigging, qualified rigger, signal person, exclusion zones, lift plan, test lift and wind stop-work criteria for lifting."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls in each step follow hierarchy order; Step 10 gives a detailed site-specific rescue and emergency plan."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval; cites no section numbers and uses [verify applicable OSHA standard]."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States 18-in parapet is inadequate; requires guardrails, engineered restraint, or PFAS with anchors, clearance, and swing-fall checks."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires secured load-rated skylight screens/covers or guardrails; treats skylights as openings; rejects tape or warning lines alone."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Covers rigging, qualified signal person, barricaded exclusion zones, and wind stop-work limits, with specific assessment of 25-mph gusts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Each step's controls are ordered elimination to PPE; includes a written rescue plan for suspended worker and skylight falls."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person review and approval before work; uses '[verify applicable OSHA standard]' and cites no section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States the 18-in parapet is inadequate; requires edge protection, guardrails, travel restraint or fall arrest with verified anchors."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires secured, load-rated covers/screens or guardrails on all 12 skylights; warns against treating glazing as a walking surface."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Covers rated rigging, a designated signal person, exclusion zones, no one under loads, and wind stop limits before lifting."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls are ordered elimination through PPE in each step; step 10 gives a detailed rescue and emergency plan."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person approval before work; cites no section numbers and uses the [verify applicable OSHA standard] placeholder."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly treats the 18-inch parapet as unprotected and specifies guardrails, warning lines, anchors, and PFAS for roof-edge exposure."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies all 12 skylights as fall-through hazards and requires rated, secured covers/screens or guardrails, with competent-person inspections."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Addresses inspected rigging, qualified signal person, exclusion zones, load control, and a lifting wind limit of manufacturer maximum or 20 mph, whichever lower."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls use ordered hierarchy labels within steps, and a dedicated emergency/rescue plan specifies equipment, trained rescuers, communications, and prompt retrieval."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; regulatory references use verification placeholders without citing specific section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies the 18-inch parapet as inadequate and specifies guardrails, fall restraint, or personal fall arrest for exposed roof workers."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires rated screens, secured covers, or guardrails for skylights, with all 12 protected before other work begins."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Addresses inspected rigging, qualified rigger, designated signal person, exclusion zones, and written manufacturer-based wind limits for lifting."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls follow labeled hierarchy categories in order; a dedicated emergency section includes rescue equipment, trained crew, EMS coordination, and written planning."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person review and signature before work, includes approval fields, and uses verification placeholders without citing regulation section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies the 18-inch parapet as inadequate and specifies guardrails, warning lines, anchors, and personal fall arrest protection."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires rated, secured screens or covers on all 12 skylights and identifies their fall-through hazard."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Addresses rated rigging, qualified riggers, designated signal person, exclusion zones, wind monitoring, and manufacturer-based lifting stop limits."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls use labeled hierarchy categories in order; a dedicated emergency section specifies rescue equipment, trained personnel, communications, and responder coordination."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Requires competent-person review and approval before work, provides sign-offs, and uses verification placeholders without citing specific regulation section numbers."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies the 18-inch parapet as inadequate and specifies temporary guardrails, fall restraint/arrest anchors, harnesses, and tie-off."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Addresses fall-through hazards at all 12 skylights with rated covers, screens, or temporary guardrails."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Requires rated and inspected rigging, a designated qualified signal person, barricaded crane areas, and stopping lifts above manufacturer wind limits."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Each step orders controls by the five hierarchy categories; planning requires a written fall rescue plan and on-site rescue equipment."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; cites no regulation section numbers and uses verification placeholders."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies the 18-inch parapet as insufficient and specifies perimeter guardrails, anchors, PFAS clearance checks, and fall restraint."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Requires load-rated covers/screens or compliant guardrails for all 12 unscreened skylights."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes inspected rated rigging, a qualified signal person, barricaded lift zones, suspended-load exclusion, and monitored wind stop-work limits."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Each step orders controls by the five hierarchy levels; requires a written rescue plan, staged retrieval equipment, emergency contacts, and emergency access."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; cites no regulation section numbers and uses verification placeholders."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies the 18-inch parapet as insufficient and specifies perimeter guardrails, anchors, restraint/arrest systems, warning lines, and tie-off."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies all 12 unscreened skylights and requires load-rated covers, screens, or temporary guardrails."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Includes inspected rated rigging, a designated signal person, exclusion zones, wind monitoring, and stopping lifts at manufacturer limits or instability."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Controls follow labeled hierarchy categories in order and require a written site-specific fall rescue plan with prompt rescue equipment."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Explicitly requires competent-person review and approval before work; cites no regulation section numbers and includes OSHA verification placeholders."
+    }
+   ],
+   "transcript": "prompts/cm-en-jha-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

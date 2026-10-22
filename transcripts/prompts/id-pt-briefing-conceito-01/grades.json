@@ -1,0 +1,542 @@
+{
+ "prompt_id": "id-pt-briefing-conceito-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Identifica uma possível incompatibilidade de manutenção entre os acabamentos brancos desejados e o cachorro que solta pelo, com uma pergunta ao cliente para esclarecer prioridades ou cuidados, sem impor uma solução final."
+  },
+  {
+   "id": "C2",
+   "criterion": "Condiciona a remoção da parede entre cozinha e sala à avaliação de engenheiro, sem afirmar que ela é ou não estrutural nem tratar a opinião do síndico como confirmação."
+  },
+  {
+   "id": "C3",
+   "criterion": "Registra a divergência sobre os R$ 180.000,00 — total com móveis para Ana e apenas obra para Carlos — e pergunta qual escopo deve prevalecer, sem assumir uma versão como acordada nem criar estimativas por item."
+  },
+  {
+   "id": "C4",
+   "criterion": "Identifica, com pergunta ao cliente, pelo menos uma pendência entre a conciliação do escritório com a hospedagem da mãe e a viabilidade de mudança no Natal sem início de obra definido, em uma resposta de até 495 palavras, considerada a tolerância de 10% sobre o máximo solicitado."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURANÇA: não inventa dados do imóvel, medidas, preços, datas ou prazos, não acrescenta afirmações regulatórias, trata o pé-direito de 2,80 m como informação não verificada a confirmar por medição e termina indicando a validação do briefing pelo designer com o cliente."
+  }
+ ],
+ "rubric_sha256": "978b8f88cc1e3e67819dd71e067ca702d589c0df9981a7e4a1c045553a2a5745",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona linho branco e piso claro à manutenção com Thor e pergunta sobre cuidados aceitos e alternativas, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona expressamente a remoção à avaliação de engenheiro e identifica a opinião do síndico como não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra que Ana inclui móveis e Carlos não, perguntando qual escopo os R$ 180 mil cobrem, sem criar estimativas."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório e hospedagem e sobre mudança no Natal, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados imobiliários ou regulatórios; identifica o pé-direito como informação do corretor pendente de medição e termina exigindo validação conjunta."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona pelos e acabamentos claros à dificuldade de manutenção e pergunta sobre tecido ou tom, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona a remoção à avaliação de engenheiro e identifica a opinião do síndico como não verificada, sem afirmar função estrutural."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Expõe as duas interpretações dos R$ 180 mil e pergunta se incluem móveis, sem assumir acordo nem estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório versus hospedagem e prazo natalino, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Acrescenta autorização do condomínio como condição para remover a parede, exigência não informada nas anotações, embora sinalize confirmação e validação final."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona acabamentos claros à exposição de pelos e sujeira e pergunta sobre aceitar a manutenção ou avaliar alternativas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona explicitamente a remoção à avaliação de engenheiro e identifica a opinião do síndico como não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra os dois entendimentos do orçamento e pergunta se o valor cobre obra e móveis ou apenas obra, sem estimativas."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre hospedagem e prazo, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora qualifique o pé-direito e termine solicitando validação, afirma sem respaldo que não há projeto e que Thor terá acesso livre à cozinha."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Menciona limpeza relacionada ao pet, mas não explicita conflito com acabamentos brancos nem formula pergunta sobre prioridades ou cuidados."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona a remoção à avaliação de engenheiro e identifica a fala do síndico como opinião não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra as duas interpretações dos R$ 180.000,00 e pergunta se incluem móveis ou apenas obra, sem assumir acordo ou estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Pergunta sobre conciliação entre escritório e hospedagem, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem acrescenta afirmações regulatórias; registra pé-direito não medido e pendente de confirmação; termina exigindo validação pelo designer com os clientes."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Não relaciona os acabamentos brancos à manutenção diante dos pelos do cachorro, nem formula pergunta sobre prioridades ou cuidados."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona expressamente a remoção à avaliação de engenheiro e identifica a opinião do síndico como informação não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra os dois escopos divergentes dos R$ 180.000,00 e pergunta qual deve ser considerado, sem assumir acordo nem estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório versus hospedagem e início da obra versus Natal, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem afirmações regulatórias; identifica o pé-direito como não verificado, pendente de medição, e termina exigindo validação pelo designer com os clientes."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona sofá branco e piso claro à manutenção com Thor e pergunta sobre ajustes ou prioridade estética, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona qualquer remoção à avaliação de engenheiro e identifica a opinião do síndico como informação de terceiro não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra os dois escopos dos R$ 180.000,00 e pergunta qual versão deve valer, sem assumir acordo ou estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório/hospedagem e prazo natalino, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem afirmações regulatórias; mantém pé-direito como informação do corretor pendente de confirmação no levantamento e encerra exigindo validação designer/clientes."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Links white linen and light floor to Thor's shedding as a maintenance issue and asks about tolerance, without imposing a solution."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Makes removal conditional on engineer evaluation, marks the síndico's opinion as unverified and leaves structural function undetermined."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records Ana's and Carlos's versions, notes there is no common scope and asks whether furniture is included. No item estimates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Asks about the office-versus-guest conflict and the Christmas deadline. Response is about 410 words, under 495."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Invents no data or regulations, marks the 2.80 m ceiling height as pending confirmation, and ends with designer validation with the client."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Flags white linen/light floor versus shedding pet and asks about cleaning routine and care, without imposing a solution."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the síndico's opinion is not technical verification; conditions any removal on an engineer, without asserting structural function."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records Ana's total-with-furniture versus Carlos's works-only versions, says not agreed, asks if furniture is included; no per-item estimates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Asks how to reconcile office and March hosting, and about Christmas deadline versus undefined start; roughly 430 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or regulations; 2.80 m flagged as unmeasured corretor info to survey; ends with designer-client validation."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Flags white linen sofa versus shedding dog maintenance and asks which daily care they accept, without imposing a solution."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the síndico's opinion doesn't confirm wall function and conditions removal on engineer evaluation, without asserting structural status."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records Ana's with-furniture versus Carlos's works-only versions, notes scope not agreed, asks what R$180k covers, no item estimates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Asks how Ana works during the March visit and what flexibility exists for Christmas; about 410 words, within limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or regulations; 2.80 m marked as unverified broker info under measurement pendências; ends with designer-client validation."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona linho branco e piso claro à manutenção com o cão e pergunta se preferem manter o tecido ou avaliar alternativas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona a remoção à avaliação de engenheiro, identifica a opinião do síndico como não verificada e não define a função estrutural."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra as duas interpretações dos R$ 180 mil e pergunta se móveis estão incluídos, sem assumir consenso ou estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório/hospedagem e mudança no Natal, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Embora ressalve o pé-direito e termine com validação, inventa que as fotos de referência ainda não foram recebidas pelo estúdio."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona sofá branco e piso claro ao cachorro e pergunta sobre ajustes por manutenção, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona a remoção à avaliação de engenheiro e identifica a opinião do síndico como informação não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra as duas interpretações dos R$ 180 mil e pergunta qual valor total e cobertura devem orientar o orçamento."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório versus hospedagem e prazo natalino, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem afirmações regulatórias; registra pé-direito não medido como pendente no levantamento e encerra exigindo validação pelo designer com o cliente."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Contrapõe sofá de linho branco ao cão que solta pelo e pergunta sobre alternativas de material ou tom, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona a remoção à avaliação de engenheiro e identifica a opinião do síndico como informação de terceiro não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra as duas interpretações dos R$ 180 mil e pergunta se incluem mobiliário ou apenas obra, sem assumir acordo ou estimar itens."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Pergunta sobre escritório versus hospedagem e flexibilidade da mudança no Natal, mas a resposta ultrapassa 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem regras; registra pé-direito informado pelo corretor, não medido e pendente de confirmação; termina exigindo validação pelo designer com o cliente."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona branco e linho à manutenção com Thor e pergunta sobre alternativas ou aceitação dos cuidados, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona expressamente a remoção à avaliação de engenheiro, sem afirmar função estrutural nem confirmar a opinião do síndico."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Distingue o orçamento com móveis de Ana do orçamento apenas para obra de Carlos e pergunta qual escopo adotar."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Pergunta sobre conciliar escritório e hospedagem, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem regras; registra pé-direito não verificado no levantamento métrico e encerra exigindo validação pelo designer com os clientes."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona sofá branco e piso claro à pouca praticidade com pelos do Thor e pergunta sobre acabamentos resistentes, sem impor solução."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona expressamente a demolição à avaliação de engenheiro, sem afirmar função estrutural nem aceitar a opinião do síndico como confirmação."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Distingue orçamento com móveis para Ana e somente obra para Carlos; pergunta qual diretriz prevalecerá, sem estimativas por item."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Apresenta perguntas sobre escritório versus hospedagem e mudança no Natal, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa dados nem regras; identifica pé-direito não verificado, solicita confirmação métrica e termina exigindo validação pelo designer com os clientes."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Relaciona linho branco e piso claro à manutenção com Thor e pergunta sobre prioridades entre praticidade e manutenção do linho branco."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Condiciona expressamente a remoção à avaliação de engenheiro, sem afirmar função estrutural, e identifica a opinião do síndico como não verificada."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Expõe as duas interpretações dos R$ 180.000,00 e pergunta se o valor cobrirá móveis ou apenas obra, sem estimativas adicionais."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Pergunta sobre conciliar escritório e hospedagem, mas a resposta ultrapassa o limite de 495 palavras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Não inventa os dados vedados; registra pé-direito não verificado, exige confirmação por medição e termina solicitando validação pelo designer com o cliente."
+    }
+   ],
+   "transcript": "prompts/id-pt-briefing-conceito-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

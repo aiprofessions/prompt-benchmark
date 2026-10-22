@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-offer-review-01",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States calendar days with acceptance as Day 0; inspection Oct 11, 2026 and financing Oct 22, 2026."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Risk 1 flags the open-ended home-sale contingency on an unlisted home as the single biggest risk."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Risk 3 notes rent-back has no agreed rate, deposit, insurance or default remedy."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explains the +$2,000 escalation, notes the $512,000 cap, and asks what proof verifies a bona fide competing offer."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Disclaims legal advice, avoids legal conclusions, and requires review by the managing broker and seller's attorney."
+  }
+ ]
+}

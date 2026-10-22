@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-en-pipeline-review-01",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Total $172,500 from 60,000+60,000+12,000+40,500, with Example Foods excluded for its Feb 2027 close."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Gap stated as $250,000 - $172,500 = $77,500."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Example Clinics flagged high risk for departed champion and no activity since Sep 20."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Notes Oct 10 close date passed nine days ago while the deal remains unsigned."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Each of three flagged deals has one coaching question; all figures are derived from the given data."
+  }
+ ]
+}

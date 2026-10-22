@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:53:25+00:00",
+ "attempt": 1,
+ "skill_sha256": "634a1a57fbbe0f4a44f9977d7c37d4f5093e580597c9e7bf2862ed68b61f5284",
+ "rubric_sha256": "d6b28ce786fc373ecdff6663dcaa7fe611130e4992b474b726071b2e94e311d9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cubre las fechas y noches exactas, explicita todos los traslados y el regreso desde Málaga, sin coche de alquiler."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aplica celiaquía con confirmación escrita de proveedores, propone cero a dos actividades diarias e incluye un día completo de spa."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduce literalmente las condiciones de la agencia, sin añadir condiciones de reserva adicionales."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No afirma precios, horarios ni tiempos concretos; los marca [confirm] y deja entradas y disponibilidad de la Alhambra pendientes."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Finaliza con listas de reservas, confirmaciones y preguntas pendientes; remite a fuentes gubernamentales oficiales sobre pasaporte, visa y entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cubre las fechas y noches exactas, explicita todos los traslados y el regreso desde Málaga, sin coche de alquiler.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aplica celiaquía con confirmación escrita de proveedores, propone cero a dos actividades diarias e incluye un día completo de spa.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduce literalmente las condiciones de la agencia, sin añadir condiciones de reserva adicionales.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No afirma precios, horarios ni tiempos concretos; los marca [confirm] y deja entradas y disponibilidad de la Alhambra pendientes.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Finaliza con listas de reservas, confirmaciones y preguntas pendientes; remite a fuentes gubernamentales oficiales sobre pasaporte, visa y entrada.\"}]}"
+}

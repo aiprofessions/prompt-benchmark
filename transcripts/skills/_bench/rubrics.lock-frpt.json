@@ -1,0 +1,25 @@
+{
+ "locked_at": "2026-10-21T05:10:36.159388+00:00",
+ "hashes": {
+  "accountants-month-end-reconciliation-fr": "41ec1d90007b8c06fbe4b733c80ce61d1e81f3f2b77614a0e2886cb12a629f01",
+  "accountants-month-end-reconciliation-pt": "00f06c601698dac72df43dc972c01c60e2e9f83bf28174e430613183a6dfdc1a",
+  "lawyers-nda-review-fr": "fedca4f8577f197bd01ad603962a443ad542a8ef958d899feb9c939765c6c33a",
+  "lawyers-nda-review-pt": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+  "real-estate-compliant-listing-fr": "e115806a7c26228bf311ae90494110ac918c84a4f2f53d61d90fb44083c90ba2",
+  "real-estate-compliant-listing-pt": "e849fa3b01569513fb260a73b8bb004ad7ba324d3ef752b983a99ba6ff541933",
+  "healthcare-visit-summary-fr": "8e5fee913705c56a8afaf7d8054539492f3e97355e9d8c5071ac8c0bb31b376f",
+  "healthcare-visit-summary-pt": "be809fa3846bf99dbf3cad0c4d5bc6433b12569d48eee7045eae4ea7f774d87c",
+  "event-planners-vendor-rfp-fr": "2527d85617b6f679b69587f29400d01403165633c4c8a5bef06e246b1e14eb37",
+  "event-planners-vendor-rfp-pt": "0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5",
+  "engineers-site-observation-report-fr": "318dafad1f31559a272ea19d42db6ffec988f5de19e7aa756565970f3ea86a8e",
+  "engineers-site-observation-report-pt": "3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936",
+  "travel-agents-itinerary-disclosures-fr": "7a88dc37f202e549b414409b51212a2c066abbdece81d50910cbd838c9b2b666",
+  "travel-agents-itinerary-disclosures-pt": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+  "construction-daily-report-delay-notice-fr": "bf7fef2700a801368eccbe2ac3e90173e94335bcf1cc2c57ef3aad0dba1cb8d4",
+  "construction-daily-report-delay-notice-pt": "f76b87e62119bde205039ae35ae37f50b82c60f02dec12f8f0a234deb2e51a67",
+  "sales-managers-pipeline-review-fr": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+  "sales-managers-pipeline-review-pt": "4603e1ab240772501442ed5858580fdd19f577f1f107f3a80fd3188c0b396cd4",
+  "interior-designers-ffe-schedule-fr": "ea7c361bc780b7b113a5f39623e158f7a87c25e44e9a3912575f3a40925b201a",
+  "interior-designers-ffe-schedule-pt": "aafddc6b50a1ad3c79dd2ecc8149cb7d0708a2cb399a47887c29ebc0301f07fd"
+ }
+}

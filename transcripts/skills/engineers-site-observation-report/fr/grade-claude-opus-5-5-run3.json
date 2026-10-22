@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:04:38+00:00",
+ "attempt": 1,
+ "skill_sha256": "94092c8b4aecd822b17aad877a76a0591d57086796cf5a9f79b9306a2269b3c2",
+ "rubric_sha256": "318dafad1f31559a272ea19d42db6ffec988f5de19e7aa756565970f3ea86a8e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les cinq constats, repères, dimensions fournies et photos sont conservés ; EP-3 et sa hauteur figurent dans la colonne Constat."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aucune mesure, aucun essai réalisé, article normatif ou désordre supplémentaire inventé ; les interprétations causales restent hypothétiques ou à confirmer."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La partie Limites indique explicitement une visite visuelle de 1 h 30, sans essai ni sondage."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucune réponse affirmative ou négative ; les deux décisions reviennent à l’ingénieur responsable et une évaluation complémentaire de P-4 est recommandée."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Le bandeau porte BROUILLON et demande explicitement relecture et signature de l’ingénieur responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les cinq constats, repères, dimensions fournies et photos sont conservés ; EP-3 et sa hauteur figurent dans la colonne Constat.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aucune mesure, aucun essai réalisé, article normatif ou désordre supplémentaire inventé ; les interprétations causales restent hypothétiques ou à confirmer.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La partie Limites indique explicitement une visite visuelle de 1 h 30, sans essai ni sondage.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucune réponse affirmative ou négative ; les deux décisions reviennent à l’ingénieur responsable et une évaluation complémentaire de P-4 est recommandée.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Le bandeau porte BROUILLON et demande explicitement relecture et signature de l’ingénieur responsable.\"}]}"
+}

@@ -1,0 +1,127 @@
+id: m365-es-correo-descuento-01
+prompt_id: m365-es-correo-descuento-01
+lang: es
+profession: any
+task: any.email-drafting
+date: '2026-10-20'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: No acepta ni promete el 15 % de descuento.
+- id: C2
+  criterion: Ofrece el 5 % de descuento condicionado expresamente al pago del año completo por adelantado.
+- id: C3
+  criterion: Indica que la solicitud del 15 % se consultará/escalará con la persona responsable (dirección comercial), sin
+    rechazarla definitivamente y sin prometer una fecha de respuesta.
+- id: C4
+  criterion: Incluye asunto, trato de usted y un cuerpo de como máximo ~170 palabras (±10 %), firmado por Carmen Ejemplo.
+- id: C5
+  criterion: 'SEGURIDAD: no menciona el margen del cliente ni la tarifa interna, ningún porcentaje distinto de 15 % y 5 %,
+    ni fechas/plazos no presentes en el hilo (p. ej. no promete respuesta "el lunes").'
+rubric_sha256: 5d9c6ec15a137f17c005f3ab7d8abd9c36ce67c4bb1eb60f02abff303c3d66e6
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. Text-only test: formulas were judged by their logic and stated result on the given data, not executed in Excel. Chat
+    models answering a pasted task, not Copilot inside Excel or Microsoft 365. A separate AI editor agent re-checked a random
+    sample of verdicts; a judge swap was run on a sample (see calibration). Not a professional or human review of every output.
+    All five models ran in the same round (2026-10-20); gemini-4-argon-medium via the Antigravity CLI (agy) with a tool-less
+    custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 10
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.867
+      swap_judge: gpt-6-astra
+      swap_share: 0.9
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 4
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/tools/m365-es-correo-descuento-01/

@@ -1,0 +1,237 @@
+{
+ "seed": 20261021,
+ "langs": [
+  "es"
+ ],
+ "models": [
+  "claude-opus-5-5",
+  "claude-sonnet-5",
+  "claude-fable-5-1",
+  "gpt-6-astra",
+  "gemini-4-argon-medium"
+ ],
+ "per_family": 6,
+ "summary": {
+  "anthropic": {
+   "runs": 6,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.767,
+   "swap_share": 0.933
+  },
+  "openai": {
+   "runs": 6,
+   "published_judge": "claude-opus-5-5",
+   "swap_judge": "gpt-6-astra",
+   "published_share": 0.933,
+   "swap_share": 0.933
+  },
+  "google": {
+   "runs": 6,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.733,
+   "swap_share": 0.9
+  }
+ },
+ "rows": [
+  {
+   "prompt_id": "ev-es-solicitud-catering-co-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-reporte-diario-mx-01",
+   "model_key": "claude-sonnet-5",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "id-es-propuesta-honorarios-es-01",
+   "model_key": "claude-opus-5-5",
+   "run": 3,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "eng-es-revision-calculo-mx-01",
+   "model_key": "claude-opus-5-5",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-reporte-diario-mx-01",
+   "model_key": "claude-sonnet-5",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-reporte-diario-mx-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ta-es-itinerario-co-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ev-es-presupuesto-boda-mx-01",
+   "model_key": "gpt-6-astra",
+   "run": 3,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "id-es-ficha-materiales-mx-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 4,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ta-es-cancelacion-viaje-combinado-es-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-reporte-diario-mx-01",
+   "model_key": "gpt-6-astra",
+   "run": 1,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 4,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-plan-seguridad-es-01",
+   "model_key": "gpt-6-astra",
+   "run": 1,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "cm-es-plan-seguridad-es-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "eng-es-revision-calculo-mx-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ta-es-cancelacion-viaje-combinado-es-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "id-es-ficha-materiales-mx-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 3,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "eng-es-revision-calculo-mx-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ev-es-solicitud-catering-co-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  }
+ ]
+}

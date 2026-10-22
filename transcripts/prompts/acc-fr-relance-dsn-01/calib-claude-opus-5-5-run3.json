@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-fr-relance-dsn-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All items correctly attributed; RIB marked as received and to be redeposited; planning and leave acknowledged, not re-requested."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Deadline is Thursday 22/10/2026 at 12 h, and 22 October 2026 is a Thursday; filing is requested on the secure client portal."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly prohibits ID, RIB and social security number by e-mail or instant messaging; no sensitive data reproduced."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No invented facts or rules; no legal DSN deadline or URSSAF penalty; post-it and accountant validation kept in internal note."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Subject, formal address and bullets present; body about 183 words; separate 5-bullet note flags the RIB and its redeposit."
+  }
+ ]
+}

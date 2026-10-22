@@ -1,0 +1,42 @@
+id: id-en-concept-brief-01
+lang: en
+translation_key: id-concept-brief
+title: Concept brief from a client questionnaire
+scenario: 'Turn the client questionnaire into a concept brief: design direction, palette, functional must-haves, constraints
+  and the conflicting wishes you need to resolve with the client.'
+profession: interior-designers
+task: interior-designers.concept-briefs
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Write a concept brief from the client questionnaire below with sections: Project summary, Design direction (2–3 sentences
+  + 5 keywords), Palette and materials direction, Functional must-haves, Constraints, Conflicts to resolve with the client,
+  Next steps.
+
+  Rules: keep every constraint; do not invent budget figures or product prices; if wishes conflict, list them under "Conflicts
+  to resolve" instead of choosing.
+
+  Questionnaire:
+
+  [Paste the client questionnaire answers and site constraints]
+
+  '
+sample_input: 'Clients: the Sample-Example household (fictional), 2 adults, 1 child (6), 1 large dog.
+
+  Space: open-plan living/dining, 420 sq ft, condo (building rules: no changes to plumbing/structure; quiet hours for works
+  9–17 weekdays only).
+
+  Likes: "warm minimal", natural oak, linen, Japandi references.
+
+  Also wants: a white sofa and a lot of bold color (one partner''s wish).
+
+  Needs: durable floors (dog), storage for toys, work-from-home corner for one adult.
+
+  Budget: "mid-range" (no number given).
+
+  '
+page: https://aiprofessions.ai/interior-designers/prompts/#id-en-concept-brief-01
+results_file: results/id-en-concept-brief-01.yaml

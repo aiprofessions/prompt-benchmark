@@ -1,0 +1,83 @@
+id: eng-fr-compte-rendu-visite-01
+lang: fr
+translation_key: eng-site-observation
+title: Compte rendu de visite technique à partir de notes dictées sur site (France)
+scenario: 'Transformez vos notes de visite en compte rendu : sécurité des personnes, constats séparés des hypothèses, urgences
+  notées et vérifications à confier à un bureau d’études structure.'
+profession: engineers
+task: engineers.technical-reports
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- FR
+prompt: 'Vous assistez un ingénieur en bâtiment en France. À partir des notes ci-dessous, rédigez un projet de compte rendu
+  de visite technique de 600 mots maximum hors tableau.
+
+  1. En-tête : lieu, date, présents et demandeur tels que fournis, sinon « non précisé ».
+
+  2. Premier point de fond, « Sécurité des personnes » : présentez les risques signalés, en donnant priorité aux urgences
+  les plus fortes, avec toutes les mesures conservatoires notées.
+
+  3. Pour chaque désordre, distinguez « Constats », « Hypothèses à vérifier » et « Niveau d’urgence » ; reprenez les hypothèses
+  consignées au conditionnel et l’urgence telle que notée, sinon indiquez « non noté ».
+
+  4. Tableau des actions demandées : action, responsable, délai ; reprenez les informations fournies et indiquez « à définir
+  » pour celles qui manquent.
+
+  5. Listez les vérifications à confier à un bureau d’études ou à un ingénieur structure, en lien avec les désordres signalés.
+
+  6. Formulez les questions nécessaires pour clarifier les informations manquantes, ambiguës ou contradictoires.
+
+  Utilisez uniquement les notes. Séparez les observations des propos rapportés et signalez les réserves sur les mesures ;
+  ne tranchez pas une contradiction et demandez sa vérification.
+
+  N’affirmez aucune cause comme certaine et ne concluez pas sur la stabilité de l’ouvrage. N’inventez aucun chiffre, date,
+  délai, coût ou fait ; n’ajoutez aucune loi, jurisprudence, norme ou affirmation réglementaire. Pour une référence ou exigence
+  demandée mais absente, indiquez « à compléter par l’ingénieur ».
+
+  Terminez par la mention : « Projet à relire et à valider par l’ingénieur signataire avant diffusion. »
+
+  Notes de visite :
+
+  [Collez vos notes de visite : lieu, date, présents, désordres, mesures, urgences et actions. Anonymisez les noms, adresses,
+  coordonnées et numéros de lot.]
+
+  '
+sample_input: 'Visite du 14/10/2026, 9 h 30. Résidence Les Exemples (copropriété fictive), 12 rue de l''Exemple, 00000 Exempleville,
+  bâtiment B.
+
+  Présents : Martin Exemple (ingénieur, Exemple Ingénierie, fictive, m.exemple@exemple-ingenierie.test), Mme Ana Exemplo (représentante
+  du syndic, Syndic Exemple Gestion, fictif), M. Paul Exemple (gardien).
+
+  Demande du syndic, suite à des signalements de copropriétaires.
+
+
+  Point 1, sous-sol, cave 07 : mur de refend central, fissure en escalier dans les joints des parpaings, longueur environ
+  1,80 m, part de l''angle de la porte et monte vers le plafond. Ouverture environ 2 mm au plus large… non, deux centimètres,
+  enfin à reprendre. Pas de témoin en place. Le gardien dit que ça s''est agrandi depuis l''été, pas vérifié. Mme Exemplo
+  dit que c''est le tassement des fondations, c''est sûr, pas besoin d''étude. Moi je pense plutôt à un tassement différentiel
+  possible ou à un mouvement lié à l''humidité, à voir. Urgence : à surveiller. Action : poser des témoins / jauges ; le syndic
+  doit missionner un BE structure.
+
+
+  Point 2, sous-sol, couloir des caves côté nord : traces d''humidité en pied de mur sur environ 0,80 m de haut, salpêtre,
+  peinture cloquée. Humidimètre : 28 % (appareil pas étalonné récemment). Vu de l''extérieur, descente d''eau pluviale côté
+  nord fissurée au niveau du regard. Cause possible : remontées capillaires ou fuite de la descente, rien de sûr. Urgence
+  : moyenne. Action : le syndic fait réparer la descente EP par l''entreprise de plomberie, délai pas fixé.
+
+
+  Point 3, terrasse accessible du 5e étage, logement 52 : garde-corps métallique côté rue, deux platines sur quatre sans fixation,
+  le garde-corps bouge à la main d''environ 5 cm. Terrasse utilisée par la famille, il y a des enfants. Rubalise posée, j''ai
+  demandé à l''occupante de ne plus aller sur la terrasse. Urgence : immédiate. Action : le syndic fait intervenir un serrurier
+  sous 48 h.
+
+  Mettre dans le CR la norme garde-corps, je ne l''ai plus en tête, et la hauteur réglementaire aussi.
+
+
+  Divers : prochaine visite à caler. Photos 1 à 14 à joindre.
+
+  '
+page: https://aiprofessions.ai/fr/ingenieurs/prompts/#eng-fr-compte-rendu-visite-01
+results_file: results/eng-fr-compte-rendu-visite-01.yaml

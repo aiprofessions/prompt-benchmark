@@ -1,0 +1,58 @@
+id: re-es-anuncio-mx-01
+lang: es
+translation_key: re-listing-fh
+profession: real-estate-agents
+task: real-estate-agents.listing-copy
+jurisdictions:
+- MX
+title: Anuncio inmobiliario sin frases discriminatorias ni datos sin verificar (México)
+scenario: Tus notas tienen frases que excluyen a personas y datos no confirmados. El prompt redacta el anuncio para
+  portales y redes, quita lo riesgoso y te dice qué quitó y por qué.
+input_placeholder: '[Pega tus notas del inmueble: recámaras, baños, m², antigüedad, amenidades y lo que dijo el
+  propietario]'
+prompt: 'Redacta el anuncio de un inmueble en México con las notas del asesor.
+
+  Entrega: (1) descripción para portal (máx. 200 palabras); (2) texto para redes (máx. 40 palabras); (3) lista "Quitado
+  o modificado" con cada frase de las notas que no usaste y por qué.
+
+  Reglas:
+
+  - Describe el inmueble, no a quién debería habitarlo. Nada que excluya o prefiera a personas por origen, sexo,
+  edad, religión, estado civil, discapacidad u otra condición (principio de no discriminación).
+
+  - Usa solo datos de las notas; lo no verificado no se afirma como hecho.
+
+  - No prometas plusvalía ni rendimientos.
+
+  - Señala lo que el asesor debe verificar (documentación, superficie, uso de suelo).
+
+  Notas:
+
+  {{INPUT}}
+
+  '
+input: 'Departamento en renta, colonia Ejemplo, Guadalajara (ficticio). 2 recámaras, 2 baños, 85 m² según el propietario
+  (no hay escrituras a la vista). Piso 4 con elevador, 1 cajón de estacionamiento, cocina integral nueva 2025.
+
+  Renta: $18,500 MXN mensuales + mantenimiento $1,200.
+
+  Propietario: "Solo parejas sin hijos, nada de mascotas, de preferencia extranjeros que pagan puntual."
+
+  "Zona con muchísima plusvalía, te va a subir 20% al año."
+
+  '
+rubric:
+- id: C1
+  criterion: Descripción de portal ≤200 palabras y texto de redes ≤40 palabras (±10 %).
+- id: C2
+  criterion: Incluye los datos objetivos (2 rec., 2 baños, piso 4 con elevador, 1 cajón, cocina 2025, renta $18,500
+    + mantenimiento $1,200) y no presenta los 85 m² como verificados (o los marca 'según propietario').
+- id: C3
+  criterion: Elimina 'solo parejas sin hijos' y 'de preferencia extranjeros' y explica que son discriminatorias.
+- id: C4
+  criterion: Elimina la promesa de plusvalía del 20 % anual y explica por qué.
+- id: C5
+  criterion: Tiene la lista 'Quitado o modificado' con motivos y recomienda verificar documentación/superficie.
+    (La política de mascotas puede mantenerse como condición del inmueble.)
+round: 1
+rubric_sha256_locked: 1551b3239220832b7e012c1eb1e9c941edfe1eae3c351c0e48d56d5bf049fabc

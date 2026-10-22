@@ -1,0 +1,86 @@
+# Transcript — xl-en-xlookup-01 — gemini-4-argon-medium — run 1
+
+- model_id: `gemini-4-argon-medium` (provider `google`)
+- started_utc: 2026-10-20T12:33:20+00:00
+- duration_s: 16.9
+- exit_code: 0
+- attempts: 1
+- completed: True
+- rubric_sha256: f7065f27ff0dadfa4c10d9fa2ee8cbe393e22a1f62a1ecc481f5ab5f7fd214a6
+- agy_usage: {"input_tokens": 1222, "output_tokens": 628, "thinking_tokens": 0, "cache_read_tokens": 0, "total_tokens": 1850}
+- agy_num_turns: 1
+- agy_tool_calls: 0 (transcript steps 2)
+
+## Query (verbatim, from query file)
+
+```text
+You are an Excel helper for a small-business bookkeeper. Work ONLY from the two tables below.
+
+1. Write ONE formula for cell D2 of the Invoices sheet that returns the client name for the client ID in B2 and can be filled down to D13. When the client ID is not in the Clients sheet, the cell must show the text "Not found" instead of an error.
+2. List every invoice row (row number and invoice number) that will show "Not found".
+3. Write a formula that returns the total amount of all invoices for client ID C-104, and state the result it returns on this data.
+4. Explain in plain English, in at most 120 words, how the lookup formula works.
+5. End with a short "Check before using" note for anything in the data a person should verify.
+
+Do not invent client names, IDs or amounts that are not in the tables.
+
+Sheet "Invoices" (A1:C13, header in row 1):
+Row | A: Invoice | B: Client ID | C: Amount (USD)
+2 | INV-1001 | C-101 | 1,250.00
+3 | INV-1002 | C-104 | 980.50
+4 | INV-1003 | C-102 | 4,350.00
+5 | INV-1004 | C-101 | 615.25
+6 | INV-1005 | C-105 | 2,200.00
+7 | INV-1006 | C-118 | 1,740.00
+8 | INV-1007 | C-104 | 3,125.75
+9 | INV-1008 | C-103 | 890.00
+10 | INV-1009 | C-105 | 1,505.40
+11 | INV-1010 | C-102 | 760.00
+12 | INV-1011 | C-104 | 2,049.75
+13 | INV-1012 | C-103 | 1,310.60
+
+Sheet "Clients" (A1:B6, header in row 1):
+Row | A: Client ID | B: Client name
+2 | C-101 | Northwind Example Bakery
+3 | C-102 | Harbor Example Dental
+4 | C-103 | Pine Example Studio
+5 | C-104 | Summit Example Plumbing
+6 | C-105 | Lakeside Example Vet
+
+Column D of "Invoices" is empty and should hold the client name.
+```
+
+## Output (verbatim stdout, session metadata stripped)
+
+### 1. Lookup Formula for Cell D2
+```excel
+=IFERROR(VLOOKUP(B2, Clients!$A$2:$B$6, 2, FALSE), "Not found")
+```
+*(Note: If you use Excel 365 or Excel 2021+, you can also use `=XLOOKUP(B2, Clients!$A$2:$A$6, Clients!$B$2:$B$6, "Not found")`)*
+
+---
+
+### 2. Invoices Showing "Not found"
+* **Row 7 — Invoice INV-1006** (Client ID `C-118` is not listed in the Clients sheet)
+
+---
+
+### 3. Total Amount for Client ID C-104
+**Formula:**
+```excel
+=SUMIF(B2:B13, "C-104", C2:C13)
+```
+**Result on this data:**
+**6,156.00** (calculated from rows 3, 8, and 12: `980.50 + 3,125.75 + 2,049.75`)
+
+---
+
+### 4. How the Lookup Formula Works
+The `VLOOKUP` function takes the Client ID in cell `B2` and searches for an exact match (indicated by `FALSE`) in the first column of the `Clients!$A$2:$B$6` table. The dollar signs (`$`) lock that table range in place so it doesn't shift when you copy the formula down to row 13. When a match is found, the `2` tells Excel to return the corresponding client name from the second column. If the Client ID is missing from the Clients table, `VLOOKUP` produces an error; the outer `IFERROR` function catches that error and displays `"Not found"` instead. (99 words)
+
+---
+
+### 5. Check Before Using
+* **Missing Client ID (`C-118`):** Verify whether `C-118` on Row 7 (`INV-1006` for 1,740.00 USD) is a typo for an existing client (C-101 through C-105) or a new client whose details need to be added to the `Clients` sheet.
+* **Expanding the Clients Table:** If you add new clients to row 7 or below on the `Clients` sheet, remember to update the locked range `$A$2:$B$6` in your formula (or convert the `Clients` list into an official Excel Table) so new rows are included.
+* **Formatting & Spaces:** Ensure that the values in `C2:C13` are formatted as numbers rather than text so `SUMIF` calculates properly, and watch out for hidden leading/trailing spaces in the Client ID cells.

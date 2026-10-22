@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "5803ee82a74dc65ff532177c30effd225ab22eb39b328db77ffe93c92fb00c23",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Presenta $1,730,000 MXN solo como referencia condicionada y declara expresamente que no constituye la previsión; excluye todas las oportunidades."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Declara la brecha no calculable; $1,270,000 MXN aparece únicamente como resultado condicionado, no como brecha efectiva."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala Ejemplo Farma como riesgo por salida del impulsor e identifica la última actividad del 02/03 y 41 días de inactividad condicionados."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Clasifica la fecha vencida como comprobación no evaluable y condiciona su reconocimiento a confirmar el año, aunque menciona que sigue sin firmar."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye preguntas de coaching para Ejemplo Farma y Test Logística, las oportunidades señaladas, sin inventar datos sobre ellas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Presenta $1,730,000 MXN solo como referencia condicionada y declara expresamente que no constituye la previsión; excluye todas las oportunidades.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Declara la brecha no calculable; $1,270,000 MXN aparece únicamente como resultado condicionado, no como brecha efectiva.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala Ejemplo Farma como riesgo por salida del impulsor e identifica la última actividad del 02/03 y 41 días de inactividad condicionados.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Clasifica la fecha vencida como comprobación no evaluable y condiciona su reconocimiento a confirmar el año, aunque menciona que sigue sin firmar.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye preguntas de coaching para Ejemplo Farma y Test Logística, las oportunidades señaladas, sin inventar datos sobre ellas.\"}]}"
+}

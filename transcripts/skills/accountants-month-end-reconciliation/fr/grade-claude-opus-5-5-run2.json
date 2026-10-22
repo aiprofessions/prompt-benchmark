@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:28:49+00:00",
+ "attempt": 1,
+ "skill_sha256": "609553aa0f0dcfc7398f4f660940226eceda4413fa67e0d686dc26b3de5a932b",
+ "rubric_sha256": "41ec1d90007b8c06fbe4b733c80ce61d1e81f3f2b77614a0e2886cb12a629f01",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Le solde bancaire rectifié est explicitement de 19 024,60 €, avec les trois ajustements et les signes attendus."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le calcul comptable inclut les 350,00 €, aboutit à 19 024,60 € et présente un écart nul, sous réserves explicites."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L'erreur de saisie de 180,00 € est identifiée et diminue explicitement le 512, avec une écriture au crédit du 512."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le virement reste à identifier, avec affectation provisoire proposée en 471, sans produit. Aucune écriture n'est proposée pour les trois décalages bancaires."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune opération, montant, norme ou coordonnée bancaire complète inventés ; hypothèses explicites, justificatifs détaillés et bloc de revue vierge présents."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Le solde bancaire rectifié est explicitement de 19 024,60 €, avec les trois ajustements et les signes attendus.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Le calcul comptable inclut les 350,00 €, aboutit à 19 024,60 € et présente un écart nul, sous réserves explicites.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"L'erreur de saisie de 180,00 € est identifiée et diminue explicitement le 512, avec une écriture au crédit du 512.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le virement reste à identifier, avec affectation provisoire proposée en 471, sans produit. Aucune écriture n'est proposée pour les trois décalages bancaires.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune opération, montant, norme ou coordonnée bancaire complète inventés ; hypothèses explicites, justificatifs détaillés et bloc de revue vierge présents.\"}]}"
+}

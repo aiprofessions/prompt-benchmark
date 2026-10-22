@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:17+00:00",
+ "attempt": 1,
+ "skill_sha256": "5b150c8c5aec468562a22966d7c68720b3d2fb3485be4956fdf732f5f054fe78",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers June 14–21 with four Rome nights, three Florence nights, an explicit June 18 train transfer, and no rental car."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags tree-nut allergy and supplier confirmation for meals and gelato; schedules one headline activity daily with afternoon downtime."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduces all agency booking terms verbatim. Separate verification notes introduce no additional booking terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unverified prices, opening hours, train times, or age limits are asserted; relevant details are marked for confirmation."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Directs readers to official government sources and includes booking checklists, but ends with a MISSING INPUTS paragraph rather than the checklist."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers June 14–21 with four Rome nights, three Florence nights, an explicit June 18 train transfer, and no rental car.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags tree-nut allergy and supplier confirmation for meals and gelato; schedules one headline activity daily with afternoon downtime.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduces all agency booking terms verbatim. Separate verification notes introduce no additional booking terms.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No unverified prices, opening hours, train times, or age limits are asserted; relevant details are marked for confirmation.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Directs readers to official government sources and includes booking checklists, but ends with a MISSING INPUTS paragraph rather than the checklist.\"}]}"
+}

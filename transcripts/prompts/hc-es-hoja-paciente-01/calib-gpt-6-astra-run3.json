@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-es-hoja-paciente-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Indica enalapril 10 mg, un comprimido al día por la mañana, sin añadir otras dosis."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explica hipertensión, tos seca, función renal y potasio con palabras sencillas y frases cortas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Incluye el apartado exacto solicitado y recomienda llamar si aparece tos seca persistente."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Añade síntomas de alarma, llamada al 112 y criterios de consulta por mareo no proporcionados, sin marcarlos como «pregunte a su médico»."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Tiene menos de 300 palabras, incluye ambos controles con sus plazos y termina remitiendo al médico o enfermera."
+  }
+ ]
+}

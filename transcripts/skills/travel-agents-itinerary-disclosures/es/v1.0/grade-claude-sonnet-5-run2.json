@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:36+00:00",
+ "attempt": 1,
+ "skill_sha256": "2984943e3fe8b610e32e71dc9e827bcfa8d41561c6edfae41df2f03b5e85a781",
+ "rubric_sha256": "d6b28ce786fc373ecdff6663dcaa7fe611130e4992b474b726071b2e94e311d9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cubre las fechas y las siete noches solicitadas, explicita traslados entre destinos y salida desde Málaga, sin coche de alquiler."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige confirmar la celiaquía con restaurantes por escrito, contempla descanso y jornadas ligeras e incluye día de spa con servicio de medio día."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduce literalmente las tres condiciones de reserva sin añadir condiciones contractuales adicionales."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Horarios, precios, duración de trenes y entrada a la Alhambra quedan marcados con [confirm] o expresamente pendientes de confirmación."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina con listas por reservar y por confirmar, incluyendo consulta de fuentes gubernamentales oficiales sobre pasaporte, visado y entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cubre las fechas y las siete noches solicitadas, explicita traslados entre destinos y salida desde Málaga, sin coche de alquiler.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige confirmar la celiaquía con restaurantes por escrito, contempla descanso y jornadas ligeras e incluye día de spa con servicio de medio día.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduce literalmente las tres condiciones de reserva sin añadir condiciones contractuales adicionales.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Horarios, precios, duración de trenes y entrada a la Alhambra quedan marcados con [confirm] o expresamente pendientes de confirmación.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina con listas por reservar y por confirmar, incluyendo consulta de fuentes gubernamentales oficiales sobre pasaporte, visado y entrada.\"}]}"
+}

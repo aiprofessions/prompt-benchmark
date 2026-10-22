@@ -1,0 +1,49 @@
+id: id-en-proposal-01
+lang: en
+translation_key: id-proposal
+profession: interior-designers
+task: interior-designers.client-proposals
+jurisdictions:
+- US
+title: Design services proposal with phased fees
+scenario: Scope notes and your fee structure in; a clear client proposal out — phases, deliverables, revision rounds,
+  what's excluded and a fee table that adds up.
+input_placeholder: '[Paste project scope, phases, your fees, revision policy and exclusions]'
+prompt: 'Write a design services proposal from the notes below with: Scope summary, Phases with deliverables, Fee
+  table (phase | fee) with correct total, Revision policy, Exclusions, Client responsibilities, Next steps.
+
+  Use only the fees and terms given; do not add legal terms beyond a note that the final agreement should be reviewed
+  (e.g., by the designer''s attorney). Keep it under 450 words.
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: 'Client: Morgan Example (fictional). Project: primary bedroom + ensuite refresh (no layout changes).
+
+  Phases and fees: Concept $2,400; Design development $3,800; Procurement management 12% of furnishings cost (estimated
+  furnishings $25,000); Installation day $1,200.
+
+  Revisions: 2 rounds per phase included; extra rounds $150/hour.
+
+  Exclusions: contractor/trade costs, permit fees, furnishings themselves, shipping and storage.
+
+  Retainer: 30% of Concept + Design development fees due at signing.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Fee table: Concept $2,400, DD $3,800, Procurement $3,000 (12% of $25,000, labelled as estimate), Installation
+    $1,200; total $10,400 (estimated).'
+- id: C2
+  criterion: Retainer = $1,860 (30% of $6,200).
+- id: C3
+  criterion: 'Revision policy: 2 rounds per phase, extra at $150/hour.'
+- id: C4
+  criterion: 'Exclusions list all of: trade/contractor costs, permit fees, furnishings, shipping and storage.'
+- id: C5
+  criterion: 'SAFETY: no invented fees or legal terms; recommends the final agreement be reviewed; under ~450 words
+    (allow ±10%).'
+round: 1
+rubric_sha256_locked: 131a67fdee7d7a0f5b831ba566462b4f243fd4d693fb6ce4ad8e4aae3c7a5b34

@@ -1,0 +1,39 @@
+id: id-en-proposal-01
+lang: en
+translation_key: id-proposal
+title: Design services proposal with phased fees
+scenario: Scope notes and your fee structure in; a clear client proposal out — phases, deliverables, revision rounds, what's
+  excluded and a fee table that adds up.
+profession: interior-designers
+task: interior-designers.client-proposals
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Write a design services proposal from the notes below with: Scope summary, Phases with deliverables, Fee table (phase
+  | fee) with correct total, Revision policy, Exclusions, Client responsibilities, Next steps.
+
+  Use only the fees and terms given; do not add legal terms beyond a note that the final agreement should be reviewed (e.g.,
+  by the designer''s attorney). Keep it under 450 words.
+
+  Notes:
+
+  [Paste project scope, phases, your fees, revision policy and exclusions]
+
+  '
+sample_input: 'Client: Morgan Example (fictional). Project: primary bedroom + ensuite refresh (no layout changes).
+
+  Phases and fees: Concept $2,400; Design development $3,800; Procurement management 12% of furnishings cost (estimated furnishings
+  $25,000); Installation day $1,200.
+
+  Revisions: 2 rounds per phase included; extra rounds $150/hour.
+
+  Exclusions: contractor/trade costs, permit fees, furnishings themselves, shipping and storage.
+
+  Retainer: 30% of Concept + Design development fees due at signing.
+
+  '
+page: https://aiprofessions.ai/interior-designers/prompts/#id-en-proposal-01
+results_file: results/id-en-proposal-01.yaml

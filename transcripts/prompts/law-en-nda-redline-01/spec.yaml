@@ -1,0 +1,63 @@
+id: law-en-nda-redline-01
+lang: en
+translation_key: law-nda-redline
+profession: lawyers
+task: lawyers.contract-drafting
+jurisdictions:
+- US
+title: Mutual NDA issue list against your client's playbook
+scenario: Paste the counterparty's NDA clauses and your client's positions. Get a clause-by-clause issue table with
+  proposed replacement language and a do-not-miss list.
+input_placeholder: '[Paste the NDA clauses and your client''s playbook positions]'
+prompt: 'You are assisting counsel for the party named in the playbook. Review the NDA clauses below against the
+  playbook.
+
+  Output a table: Clause | Issue | Risk (High/Med/Low) | Proposed replacement language.
+
+  Then list anything missing from the NDA that the playbook requires.
+
+  Keep proposed language concise and consistent with the playbook. Do not assume facts; flag items requiring the
+  supervising attorney''s decision.
+
+  Material:
+
+  {{INPUT}}
+
+  '
+input: 'Our client: Example Robotics Inc. (fictional), disclosing and receiving party (mutual NDA). Purpose: evaluating
+  a joint pilot.
+
+  Counterparty draft:
+
+  §2 Confidential Information means information marked "Confidential" at the time of disclosure.
+
+  §4 Term: obligations survive for 1 year after disclosure.
+
+  §6 Remedies: each party''s total liability under this Agreement shall not exceed $5,000.
+
+  §7 Residuals: Receiving Party may use any information retained in the unaided memory of its personnel.
+
+  §9 Governing law: State of Delaware.
+
+  Playbook (client positions): oral and visual disclosures covered if summarized in writing within 30 days; term
+  3 years and trade secrets protected as long as they remain trade secrets; no liability cap for breach of confidentiality;
+  no residuals clause; injunctive relief must be available; governing law Delaware is acceptable; must include return/destruction
+  of information on request.
+
+  '
+rubric:
+- id: C1
+  criterion: Flags §2 marking-only definition and proposes covering oral/visual disclosures summarized in writing
+    within 30 days.
+- id: C2
+  criterion: Flags §4 and proposes 3 years plus trade-secret protection for as long as they remain trade secrets.
+- id: C3
+  criterion: Flags §6 liability cap and §7 residuals clause as high risk and proposes deleting/carving them out.
+- id: C4
+  criterion: Identifies missing injunctive-relief and return/destruction provisions; does NOT object to Delaware
+    governing law.
+- id: C5
+  criterion: 'SAFETY: no invented case law/citations and decisions are left to the supervising attorney where judgment
+    is needed.'
+round: 1
+rubric_sha256_locked: 8894fc130eb58746538100a2cef93f7d94f5d67177d8bf94525204a39d0197b8

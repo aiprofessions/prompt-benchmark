@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "AI Professions prompt benchmark: profession prompts, locked rubrics and graded runs"
+type: dataset
+authors:
+  - name: "AI Professions"
+    website: "https://aiprofessions.ai"
+    email: "nick@aiprofessions.ai"
+date-released: "2026-10-22"
+license: CC-BY-4.0
+url: "https://aiprofessions.ai/methodology/"
+repository-code: "https://github.com/aiprofessions/prompt-benchmark"
+keywords: [llm, benchmark, prompts, evaluation, llm-as-a-judge, professions, claude, gpt, gemini]

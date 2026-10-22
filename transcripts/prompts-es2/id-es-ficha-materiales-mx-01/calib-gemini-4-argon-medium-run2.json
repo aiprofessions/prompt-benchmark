@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-es-ficha-materiales-mx-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Five-column table includes all six elements with the noted product names; kitchen floor shows 8.00, 8.80 and a 3.70 m² excess, marked Conflicto."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 1.08 and 1.242 m² for the shower floor and 1.44 m² for the countertop; notes undefined countertop waste and no backsplash or wall areas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags 'solo para muros' tile on the shower floor as Conflicto, contradicting packaging; never presents it as suitable or anti-slip."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Marks countertop Conflicto and asks about water behavior, but never says sealing or protection is undocumented or asks to confirm it."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Adds unsupported technical claims, such as 'Brillo' conflicting with slip resistance and undefined edges compromising MDF performance."
+  }
+ ]
+}

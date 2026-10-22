@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-fr-compte-rendu-chantier-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Décisions lists the fissure BET request as a second decision; only the carrelage validation should appear."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Open points cover menuiseries week 45/46 with no firm date, the paint colour choice, and the fissure awaiting the BET opinion."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Garde-corps action is correct, but the BET consultation is missing from Actions with « échéance à fixer »."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Next meeting is 22/10/2026 at 9 h on site; total is about 205 words, within the limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No cause or severity given for the fissure, no claim the scaffold is safe, and no invented dates or responsibilities."
+  }
+ ]
+}

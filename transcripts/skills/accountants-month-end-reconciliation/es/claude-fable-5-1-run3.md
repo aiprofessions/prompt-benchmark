@@ -1,0 +1,236 @@
+# Transcript — skill accountants-month-end-reconciliation [es] — claude-fable-5-1 — run 3
+
+- model_id: `claude-fable-5-1` (provider `anthropic`)
+- started_utc: 2026-10-20T10:36:17+00:00
+- duration_s: 48.4
+- exit_code: 0
+- attempts: 1
+- completed: True
+- rubric_sha256: 29cdb067fff9aa2258c7bbf35952915c65c2ba9d124c5d593b950aa9b42df7b9
+- skill_sha256: 1e4d70d8231c7a0f7f2715f619e84f3c485dfe6fd89ebbf08ea79ddaf8628f72
+
+## Query (verbatim, from query file)
+
+````text
+<skill_instructions>
+---
+name: accountants-month-end-reconciliation
+description: "Úsala cuando pegues los saldos bancario y contable y las partidas pendientes para obtener una memoria de conciliación de cierre con cálculos, asientos propuestos y soportes."
+---
+# Memoria de conciliación bancaria de cierre
+
+## Qué hace
+Prepara una memoria de conciliación bancaria de cierre para el expediente. Concilia por separado el saldo del extracto (ES) o estado de cuenta (MX) y el saldo de la cuenta 572 del PGC (ES) o de bancos (MX). Muestra los cálculos y deja visible cualquier diferencia sin explicar. Propone asientos solo para partidas del lado contable e indica qué soportes deben revisarse antes de contabilizar.
+
+## Qué necesita
+- País: España o México; entidad identificada con un alias.
+- Saldo final del extracto bancario (ES) o estado de cuenta (MX), con fecha de corte.
+- Saldo del mayor de la cuenta 572 (ES) o de bancos (MX) a la misma fecha.
+- Partidas pendientes: concepto, importe, fecha, soporte disponible y si figuran en el banco, en el mayor o en ambos.
+- Para errores: importe registrado, importe correcto, si es cobro o pago y contrapartida original, si se conoce.
+- Moneda y formato de importes; cuentas del catálogo de la entidad si se solicitan asientos.
+- Identificación bancaria opcional, con los últimos cuatro dígitos como máximo; terceros anonimizados.
+
+Si falta información, reúne las preguntas en una sola solicitud. Si no se aporta, continúa solo con lo comprobable y marca «FALTA: …»; no supongas datos. Si falta un saldo o un importe necesario, muestra la operación incompleta como «no calculable» y no declares conciliada la cuenta.
+
+## Procedimiento
+1. Identifica país, moneda y fecha de corte. Comprueba que ambos saldos corresponden a esa fecha; si no, solicita saldos comparables y deja la conciliación pendiente.
+2. Reproduce fielmente los importes facilitados y conserva su moneda y formato. Usa únicamente esos datos de entrada; permite solo resultados aritméticos derivados de ellos. No conviertas monedas ni mezcles cuentas.
+3. Sustituye cualquier identificación bancaria por una máscara con un máximo de cuatro dígitos finales. No reproduzcas IBAN, CLABE ni números completos; sustituye nombres identificables por alias.
+4. Asigna un identificador a cada partida y comprueba dónde está registrada. No ajustes dos veces una partida ni vuelvas a ajustar un movimiento correctamente reflejado en ambos saldos.
+5. Clasifica cada partida y explica su efecto:
+   - Temporal, lado banco: cheques o transferencias emitidos, registrados en libros y pendientes de cargo bancario; depósitos registrados en libros y en tránsito.
+   - Lado contable: comisiones, intereses, devoluciones y errores que requieran corregir el mayor.
+   - No identificada: cargo o abono bancario cuyo origen no consta. Comprueba si ya está contabilizado antes de incluirlo como ajuste.
+   - Si no puede determinarse el lado o el signo, déjala pendiente de aclaración; no le atribuyas un efecto supuesto.
+6. Para cada error, muestra «importe registrado − importe correcto = diferencia» y el importe de la corrección:
+   - Pago registrado de más: aumenta bancos; pago registrado de menos: disminuye bancos.
+   - Cobro registrado de más: disminuye bancos; cobro registrado de menos: aumenta bancos.
+   - Si falta alguno de los importes o no consta si es cobro o pago, no calcules la corrección.
+7. Calcula el lado banco: saldo del extracto + depósitos en tránsito − cheques o transferencias pendientes. Muestra una línea por partida, con operación y saldo acumulado, y el saldo banco ajustado final.
+8. Calcula el lado contable: saldo del mayor ± cada ajuste contable. Muestra una línea por partida, con operación, motivo del signo y saldo acumulado, y el saldo contable ajustado final.
+   - Comisiones y cargos omitidos disminuyen bancos; intereses acreedores y abonos omitidos lo aumentan.
+   - Para devoluciones, comprueba si se devuelve un cobro o un pago y aplica el signo acreditado por el movimiento.
+9. Si consta un cargo o abono bancario no identificado y no registrado, inclúyelo una sola vez en el lado contable como «ajuste provisional en suspenso, pendiente de soporte».
+   - Explica que el saldo ajustado depende de ese tratamiento provisional y no acredita que el origen esté resuelto.
+   - No lo atribuyas como hecho a ingresos, gastos, clientes o proveedores. Si ni siquiera consta el movimiento o su registro, no calcules un ajuste supuesto.
+10. Calcula y muestra «saldo banco ajustado − saldo contable ajustado = diferencia».
+   - Si no es cero, indica «Diferencia no explicada», importe, signo y qué saldo es mayor.
+   - Si es cero pero hay partidas en suspenso, indica «cuadre aritmético con partidas pendientes de identificar».
+   - No inventes partidas, redondeos ni reclasificaciones para cuadrar.
+11. Propón asientos exclusivamente para ajustes del lado contable; ninguno para partidas temporales.
+   - Indica identificador de partida, cuenta, Debe, Haber, importe y concepto. Comprueba que Debe y Haber suman lo mismo.
+   - (ES) Usa 572 bancos, 626 servicios bancarios, 430 clientes y 400 proveedores solo cuando proceda.
+   - (MX) Usa el catálogo facilitado por la entidad. No inventes códigos; si falta una contrapartida, déjala pendiente de confirmar.
+   - Todo asiento en suspenso debe decir «PENDIENTE DE SOPORTE — propuesta provisional, no contabilizar sin validación del responsable».
+12. Vincula cada asiento con los documentos que deben comprobarse antes de contabilizar; distingue soporte aportado de soporte pendiente. Incluye también la evidencia necesaria para aclarar partidas no identificadas y diferencias residuales.
+13. Añade el bloque «Preparado por / Revisado por (contable o contador responsable) / Fecha», siempre en blanco para cumplimentación humana.
+14. Antes de entregar, recalcula saldos acumulados, totales y diferencia; comprueba que cada ajuste aparece una sola vez y que todos los asientos tienen soporte requerido.
+
+## Formato de salida
+```markdown
+## Resumen de la conciliación
+Entidad: [alias] · País: […] · Cuenta: [enmascarada o no aportada]
+Fecha de corte: […] · Moneda: […]
+Banco ajustado: […] · Contabilidad ajustada: […] · Estado: […]
+Datos que faltan y tratamientos provisionales: […]
+
+## Lado banco
+Saldo según extracto (ES) / estado de cuenta (MX): […]
+[ID — temporal — concepto: saldo anterior +/− importe = saldo acumulado]
+Saldo banco ajustado: […]
+
+## Lado contable
+Saldo según mayor de 572 (ES) / bancos (MX): […]
+[ID — tipo — concepto: saldo anterior +/− importe = saldo acumulado]
+[Error: registrado − correcto = diferencia; corrección: importe y aumento/disminución]
+[No identificada: ajuste provisional en suspenso, pendiente de soporte]
+Saldo contable ajustado: […]
+
+## Diferencia
+Saldo banco ajustado − saldo contable ajustado = […]
+[Resultado: sin diferencia / diferencia no explicada con signo / no calculable]
+[Si hay suspenso: cuadre aritmético no equivale a identificación resuelta]
+
+## Asientos propuestos (solo lado contable)
+[ID: Debe — cuenta e importe / Haber — cuenta e importe; concepto]
+[Contrapartidas pendientes de confirmar, si las hay]
+[Suspenso: PENDIENTE DE SOPORTE — propuesta provisional, no contabilizar sin validación del responsable]
+Las partidas temporales del lado banco no generan asiento.
+
+## Soportes necesarios antes de contabilizar
+[ID/asiento: documento requerido; aportado o pendiente; comprobación necesaria]
+[Partidas no identificadas y diferencia residual: evidencia que debe obtenerse]
+
+## Revisión y firma
+Preparado por: ____________ Fecha: ____________
+Revisado por (contable o contador responsable): ____________ Fecha: ____________
+```
+
+## Límites
+- No inventes datos, soportes, cuentas, normas ni conclusiones de cumplimiento. No ejecutes registros ni presentes propuestas como asientos contabilizados.
+- No declares resuelta una conciliación con datos esenciales ausentes, diferencia residual o partidas sin identificar. Distingue el cuadre aritmético de la resolución documental.
+- El contable o contador responsable de la entidad, con habilitación cuando corresponda, debe verificar saldos originales, corte, integridad de partidas, signos, cálculos, contrapartidas, soportes y autorización antes de contabilizar y firmar.
+- El responsable debe validar expresamente cualquier uso de una cuenta de suspenso y el seguimiento hasta identificar y aplicar la partida; la memoria no sustituye su juicio profesional.
+- Privacidad: solicita datos desidentificados y usa únicamente herramientas aprobadas por el despacho o la empresa. No reproduzcas identificadores personales ni números bancarios completos; muestra como máximo cuatro dígitos finales.
+- (MX) Los datos personales de clientes están sujetos a la nueva LFPDPPP 2025. No se pegan datos de contribuyentes identificables sin base legal; el responsable debe comprobar la base legal y la autorización del tratamiento.
+- (ES) Verifactu regula los sistemas de facturación; esta conciliación no lo sustituye ni acredita su cumplimiento. El profesional debe verificar por separado las obligaciones aplicables.
+- No se ha verificado ninguna guía oficial de IA para contables en España ni en México. Consulta con tu colegio profesional o autoridad competente antes de atribuir carácter oficial a recomendaciones de uso.
+- Fuentes oficiales; no las presentes como guías específicas de IA:
+  - AEAT — Preguntas frecuentes sobre sistemas informáticos de facturación (Verifactu) — https://sede.agenciatributaria.gob.es/Sede/en_gb/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes.html (consultado 2026-10-19)
+  - Ley Federal de Protección de Datos Personales en Posesión de los Particulares (nueva ley, DOF 20.03.2025) — Cámara de Diputados — https://www.diputados.gob.mx/LeyesBiblio/ref/lfpdppp.htm (DOF 20.03.2025; consultado 2026-10-19)
+- Antes de enviar o firmar, consulta references/checklist.md.
+
+## Ejemplo
+Entrada ficticia; todos los nombres e importes son de muestra:
+```text
+Entidad Muestra (ES), cuenta terminada en 0000; ambos saldos al mismo cierre; fecha no aportada.
+Extracto: 1.000,00 €; mayor 572: 850,00 €.
+Transferencia registrada en libros, pendiente de cargo bancario: 100,00 €.
+Pago a Proveedor Muestra: registrado por 150,00 € contra 400; correcto: 120,00 €.
+Abono bancario de 20,00 € no registrado, origen desconocido; soportes no aportados.
+```
+Salida abreviada:
+```text
+Resumen de la conciliación: banco 900,00 €; contabilidad 900,00 €; cuadre provisional. FALTA: fecha de corte y soportes.
+Lado banco:
+1.000,00 € − 100,00 € (transferencia temporal) = 900,00 €.
+Lado contable:
+Error: 150,00 € − 120,00 € = 30,00 €; pago registrado de más: aumenta bancos.
+850,00 € + 30,00 € = 880,00 €; corrección del pago.
+880,00 € + 20,00 € (abono en suspenso) = 900,00 €.
+Diferencia: 900,00 € − 900,00 € = 0,00 €; origen del abono pendiente de identificar.
+Asientos propuestos (solo lado contable):
+Error: Debe 572 / Haber 400: 30,00 €. Transferencia temporal: sin asiento.
+Abono: Debe 572 / Haber cuenta de suspenso por confirmar: 20,00 €; PENDIENTE DE SOPORTE — no contabilizar sin validación del responsable.
+Soportes necesarios antes de contabilizar: error, mayor y justificante del pago; abono, extracto y documentación de su origen; todos pendientes.
+Revisión y firma:
+Preparado por: ____________ Fecha: ____________
+Revisado por (contable responsable): ____________ Fecha: ____________
+```
+</skill_instructions>
+
+Follow the skill instructions above for the user's request below.
+
+User request:
+Prepárame la memoria de conciliación bancaria del cierre de septiembre para el expediente.
+Empresa: Ejemplo Talleres S.L. (ficticia), España. Cierre: 30 de septiembre de 2026. Cuenta terminada en 0932.
+Saldo según extracto bancario: 25.480,30 €
+Saldo contable cuenta 572: 26.861,80 €
+Partidas pendientes:
+- Transferencia emitida a Proveedor Muestra S.A. por 2.300,00 €, contabilizada el 30/09; el banco la carga el 01/10.
+- Cheque de cliente ingresado el 30/09 por 3.150,00 €, contabilizado, no aparece en el extracto.
+- Comisión por transferencias 12,50 € en el extracto, no contabilizada.
+- Recibo domiciliado de un cliente devuelto por 1.020,00 € más 9,00 € de gastos de devolución, cargado por el banco, no contabilizado.
+- Cobro de cliente contabilizado por 1.540,00 €; el banco abonó 1.450,00 €; la factura es de 1.450,00 €.
+- Abono de 600,00 € el 22/09 con concepto "TRANSF. REF 4471": nadie sabe todavía de qué es.
+````
+
+## Output (verbatim stdout, session metadata stripped)
+
+MEMORIA DE CONCILIACIÓN BANCARIA DE CIERRE
+
+RESUMEN DE LA CONCILIACIÓN
+Entidad: Ejemplo Talleres S.L. (alias; entidad ficticia) · País: España · Cuenta: ****0932
+Fecha de corte: 30/09/2026 · Moneda: EUR
+Banco ajustado: 26.330,30 € · Contabilidad ajustada: 26.330,30 € · Estado: cuadre aritmético con partidas pendientes de identificar (P6 en suspenso)
+Datos que faltan y tratamientos provisionales:
+  - FALTA: soportes de todas las partidas (no se indica ninguno como aportado).
+  - FALTA: cuentas del catálogo de la entidad; se usan cuentas genéricas del PGC, pendientes de confirmar (en especial 430 vs. 4315 para el recibo devuelto y la cuenta de suspenso).
+  - FALTA: confirmación de si los 9,00 € de gastos de devolución se repercuten al cliente o se asumen como gasto.
+  - P6 (abono 600,00 €): tratado como ajuste provisional en suspenso; el cuadre depende de ese tratamiento.
+
+PARTIDAS IDENTIFICADAS
+  P1 — Transferencia emitida a Proveedor Muestra, 2.300,00 €: en mayor (30/09), no en banco (cargo 01/10). Temporal, lado banco.
+  P2 — Cheque de cliente ingresado 30/09, 3.150,00 €: en mayor, no en banco. Depósito en tránsito, lado banco.
+  P3 — Comisión por transferencias, 12,50 €: en banco, no en mayor. Lado contable.
+  P4 — Recibo domiciliado de cliente devuelto, 1.020,00 €: en banco (cargo), no en mayor. Lado contable (devolución de un cobro).
+  P5 — Gastos de devolución, 9,00 €: en banco (cargo), no en mayor. Lado contable.
+  P6 — Error en cobro de cliente: mayor 1.540,00 €, banco 1.450,00 €, factura 1.450,00 €. Lado contable.
+  P7 — Abono 22/09 "TRANSF. REF 4471", 600,00 €: en banco, no en mayor, origen desconocido. No identificada.
+  (Se ha comprobado que ninguna partida está reflejada en ambos saldos; ninguna se ajusta dos veces.)
+
+LADO BANCO
+Saldo según extracto: 25.480,30 €
+  P2 — temporal — cheque de cliente en tránsito: 25.480,30 + 3.150,00 = 28.630,30 €
+  P1 — temporal — transferencia pendiente de cargo: 28.630,30 − 2.300,00 = 26.330,30 €
+Saldo banco ajustado: 26.330,30 €
+
+LADO CONTABLE
+Saldo según mayor de 572: 26.861,80 €
+  P3 — comisión omitida (cargo bancario no registrado, disminuye bancos): 26.861,80 − 12,50 = 26.849,30 €
+  P4 — devolución de un cobro (el banco retira el abono previamente registrado, disminuye bancos): 26.849,30 − 1.020,00 = 25.829,30 €
+  P5 — gastos de devolución (cargo bancario no registrado, disminuye bancos): 25.829,30 − 9,00 = 25.820,30 €
+  P6 — error: registrado 1.540,00 − correcto 1.450,00 = 90,00 €; cobro registrado de más: disminuye bancos en 90,00 €: 25.820,30 − 90,00 = 25.730,30 €
+  P7 — no identificada: ajuste provisional en suspenso, pendiente de soporte (abono bancario no registrado, aumenta bancos): 25.730,30 + 600,00 = 26.330,30 €
+Saldo contable ajustado: 26.330,30 €
+
+DIFERENCIA
+Saldo banco ajustado − saldo contable ajustado = 26.330,30 − 26.330,30 = 0,00 €
+Resultado: sin diferencia aritmética.
+Advertencia: el cuadre depende del tratamiento provisional de P7 (600,00 €). El cuadre aritmético no equivale a identificación resuelta; sin aclarar P7 la conciliación no puede darse por cerrada documentalmente.
+
+ASIENTOS PROPUESTOS (solo lado contable; propuestas, no contabilizados)
+  P3: Debe 626 Servicios bancarios 12,50 € / Haber 572 Bancos 12,50 €. Concepto: comisión por transferencias, extracto 09/2026. Cuadre 12,50 = 12,50.
+  P4: Debe 430 Clientes 1.020,00 € / Haber 572 Bancos 1.020,00 €. Concepto: devolución de recibo domiciliado. Contrapartida pendiente de confirmar: si la entidad usa 4315 (efectos comerciales impagados) o el subgrupo que tenga definido para impagados. Cuadre 1.020,00 = 1.020,00.
+  P5: Debe 626 Servicios bancarios 9,00 € / Haber 572 Bancos 9,00 €. Concepto: gastos de devolución de recibo. Contrapartida pendiente de confirmar: si los gastos se repercuten al cliente, el Debe iría a 430 en lugar de 626. Cuadre 9,00 = 9,00.
+  P6: Debe 430 Clientes 90,00 € / Haber 572 Bancos 90,00 €. Concepto: corrección de cobro registrado de más (1.540,00 contabilizados frente a 1.450,00 abonados y facturados). Cuadre 90,00 = 90,00.
+  P7: Debe 572 Bancos 600,00 € / Haber cuenta de suspenso por confirmar (p. ej. 555 Partidas pendientes de aplicación, según catálogo de la entidad) 600,00 €. Concepto: abono 22/09 "TRANSF. REF 4471", origen no identificado. PENDIENTE DE SOPORTE — propuesta provisional, no contabilizar sin validación del responsable. Cuadre 600,00 = 600,00.
+  P1 y P2 son partidas temporales del lado banco: no generan asiento. Se darán por conciliadas cuando aparezcan en el extracto de octubre.
+
+SOPORTES NECESARIOS ANTES DE CONTABILIZAR (todos pendientes; no se ha aportado ninguno)
+  P1: extracto de octubre con el cargo de 2.300,00 € el 01/10; orden de transferencia; comprobar que el importe cargado coincide con el contabilizado.
+  P2: resguardo de ingreso del cheque de 30/09; extracto de octubre con el abono de 3.150,00 €; comprobar que no resulta devuelto.
+  P3/asiento: línea del extracto con la comisión de 12,50 €; liquidación o detalle de comisiones; comprobar que no exista factura/liquidación con IVA ya registrada.
+  P4/asiento: adeudo de devolución del banco con identificación del recibo y motivo; mayor del cliente afectado para confirmar que el cobro original estaba registrado por 1.020,00 €; confirmar cuenta de impagados del catálogo.
+  P5/asiento: detalle del cargo de 9,00 € en el extracto; política de la entidad sobre repercusión de gastos al cliente.
+  P6/asiento: mayor de 572 y de 430 con el apunte de 1.540,00 €; factura de 1.450,00 €; línea del extracto con el abono de 1.450,00 €; comprobar que no haya un segundo cobro parcial que explique la diferencia.
+  P7 (suspenso): línea del extracto del 22/09; solicitar al banco detalle del ordenante de la ref. 4471; cruzar con cuentas a cobrar abiertas por 600,00 €, anticipos, devoluciones de proveedores o subvenciones; confirmar que no se trata de un abono erróneo del banco. Hasta su identificación, el asiento de suspenso no debe contabilizarse sin validación expresa del responsable, que debe también validar el seguimiento hasta aplicar la partida.
+  Diferencia residual: ninguna aritmética; la única partida abierta es P7.
+
+REVISIÓN Y FIRMA
+Preparado por: ____________ Fecha: ____________
+Revisado por (contable responsable): ____________ Fecha: ____________
+
+Nota: cálculos, signos, contrapartidas y soportes deben ser verificados por el contable responsable antes de contabilizar. Esta memoria no acredita cumplimiento de Verifactu ni sustituye el juicio profesional. Antes de firmar, consultar references/checklist.md.
+

@@ -1,0 +1,542 @@
+{
+ "prompt_id": "law-es-nda-es-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Señala la Cl. 2 (solo marcada) y propone incluir información oral/visual resumida por escrito en 30 días."
+  },
+  {
+   "id": "C2",
+   "criterion": "Señala la Cl. 4 y propone 3 años y protección de secretos empresariales mientras mantengan esa condición."
+  },
+  {
+   "id": "C3",
+   "criterion": "Señala la Cl. 6 (límite 5.000 €) y la Cl. 8 (difusión a grupo/proveedores) como riesgo alto, con alternativa de necesidad de conocer y obligación escrita."
+  },
+  {
+   "id": "C4",
+   "criterion": "Identifica que faltan la devolución/destrucción y la previsión RGPD para datos personales; NO objeta la ley española ni Madrid."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no inventa jurisprudencia ni artículos concretos y deja al abogado responsable las decisiones de criterio."
+  }
+ ],
+ "rubric_sha256": "cb7d90010c6540868efc93435cc250cd47f6060a7f40b61806541f153394ee8e",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la limitación a información marcada y propone incluir información oral o visual resumida por escrito dentro de treinta días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Propone tres años para la confidencialidad y protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; excluye el límite por confidencialidad y exige necesidad de conocer y obligaciones escritas equivalentes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque reserva decisiones al abogado, introduce artículos concretos y cita incorrectamente la fecha de la Ley 1/2019 como 23 de febrero."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la restricción a información marcada y propone incluir información oral o visual resumida por escrito dentro de 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala la duración insuficiente y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite para confidencialidad y exige necesidad de conocer y obligaciones escritas equivalentes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes, y acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: las referencias normativas son reales. Remite expresamente las decisiones de criterio al abogado responsable."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Señala la limitación a información marcada y propone incluir información oral o visual resumida por escrito en 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica la duración insuficiente y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto, elimina el límite para confidencialidad y exige necesidad de conocer y obligaciones escritas equivalentes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: el artículo 28 RGPD citado corresponde al encargo de tratamiento. Reserva decisiones de criterio al abogado."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Señala la limitación a información marcada e incluye información oral y visual resumida por escrito dentro de 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Propone tres años desde la divulgación y protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto, elimina el límite para confidencialidad y exige necesidad de conocer y obligaciones escritas equivalentes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes; considera conformes la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: el artículo 28 RGPD citado corresponde al encargo de tratamiento. Remite decisiones de criterio al abogado responsable."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la restricción a información marcada y propone incluir información oral y visual confirmada mediante resumen escrito en 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala la Cl. 4 y propone tres años, con protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; exceptúa confidencialidad del límite y exige necesidad de conocer y obligaciones escritas equivalentes para terceros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica la falta de devolución/destrucción y previsión RGPD condicional; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cita jurisprudencia ni artículos concretos; remite al abogado responsable las decisiones sobre otros topes, datos personales y simetría."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Señala la limitación e incluye información oral/visual, pero exige confirmar su carácter confidencial, no resumirla por escrito en 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica la Cl. 4 y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite y exige necesidad de conocer y obligaciones escritas de confidencialidad equivalente."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica la devolución/destrucción y la previsión RGPD como faltantes; acepta expresamente la ley española y Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: el artículo 28 RGPD citado regula el encargo de tratamiento. Reserva decisiones al abogado responsable."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Flags Cl. 2 and proposes including oral/visual information summarised in writing within 30 days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags Cl. 4 and proposes 3 years plus protection of trade secrets while they keep that status."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Rates Cl. 6 and Cl. 8 as Alto; the Cl. 8 alternative requires need-to-know and a prior written equivalent confidentiality obligation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists return/destruction and a GDPR clause as missing; accepts Spanish law and Madrid courts without objection."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No case law; GDPR art. 28 is real and correctly applied, not invented; leaves start of term and GDPR roles to the lawyer."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Flags Cl. 2 as covering only marked information and proposes oral/visual information summarised in writing within 30 days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags Cl. 4 and proposes 3 years, with trade secrets protected while they keep that status."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Rates Cl. 6 and Cl. 8 Alto; Cl. 8 alternative requires need-to-know and an equivalent written confidentiality obligation."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists return/destruction and the GDPR clause as missing; Cl. 9 accepted unchanged as compliant with the playbook."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No case law or specific articles cited; leaves data roles and term start date to the responsible lawyer."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Flags marking-only requirement in Cl. 2 and proposes including oral/visual information summarized in writing within 30 days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Flags the 1-year term and proposes 3 years, with trade secrets protected while they keep that status."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Rates Cl. 6 and Cl. 8 high risk; Cl. 8 alternative requires need-to-know and prior written equivalent confidentiality."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists return/destruction and GDPR provision as missing; accepts Spanish law and Madrid courts unchanged."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Cites no case law or specific articles; defers start of the term and data roles to the responsible lawyer."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la cobertura limitada a información marcada y propone incluir información oral y visual resumida por escrito en treinta días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala la duración insuficiente y propone tres años desde cada revelación, manteniendo protegidos los secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite y exige necesidad de conocer y obligaciones escritas equivalentes para terceros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cita jurisprudencia ni artículos concretos; remite expresamente al abogado decisiones sobre excepciones, datos personales, roles de tratamiento y propiedad intelectual."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la limitación a información marcada y propone cubrir información oral o visual resumida por escrito en 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala la duración insuficiente y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite y exige necesidad de conocer y confidencialidad equivalente por escrito para terceros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y previsión RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque remite decisiones al abogado, incluye el art. 28 RGPD; no satisface claramente la restricción relativa a artículos concretos."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la limitación de Cl. 2 y propone cubrir información oral y visual resumida por escrito en 30 días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala Cl. 4 y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica Cl. 6 y Cl. 8 como riesgo alto; exige necesidad de conocer y obligaciones escritas de confidencialidad equivalente."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica como ausentes devolución/destrucción y previsión RGPD; acepta expresamente ley española y tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: el artículo 28 RGPD citado regula el encargo. Explicita decisiones reservadas al abogado responsable."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica la limitación a información marcada e incluye información oral o visual resumida por escrito dentro de treinta días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Propone tres años desde la entrega y mantener las obligaciones para secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite y exige necesidad de conocer y obligaciones escritas equivalentes para terceros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución/destrucción y protección de datos como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa jurisprudencia ni artículos: el artículo 28 RGPD citado corresponde al encargo. Reserva al abogado plazos, excepciones y decisiones sobre datos."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Señala la limitación a información marcada y propone cubrir revelaciones orales y visuales resumidas por escrito en treinta días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica la Cl. 4 y propone tres años, manteniendo la protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto; elimina el límite y exige necesidad de conocer y obligaciones escritas equivalentes para terceros."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica la devolución/destrucción y la previsión RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cita jurisprudencia ni artículos concretos y reserva al abogado decisiones sobre devolución, datos personales y verificación del resto del acuerdo."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Señala la limitación a información marcada y propone incluir información oral o visual resumida por escrito en treinta días."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica el plazo insuficiente y propone tres años, manteniendo protección de secretos empresariales mientras conserven esa condición."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Califica ambas cláusulas como riesgo alto y exige necesidad de conocer y compromisos escritos de confidencialidad equivalentes para grupo y proveedores."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Identifica devolución o destrucción y regulación RGPD como faltantes; acepta expresamente la ley española y los tribunales de Madrid."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cita jurisprudencia ni artículos concretos y reserva expresamente al abogado responsable decisiones sobre responsabilidad, secretos empresariales y tratamiento de datos."
+    }
+   ],
+   "transcript": "prompts/law-es-nda-es-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

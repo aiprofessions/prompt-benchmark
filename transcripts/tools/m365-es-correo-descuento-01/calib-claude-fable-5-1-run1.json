@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-es-correo-descuento-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Does not accept or promise the 15 %; says it must be evaluated by the commercial director."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Offers 5 % applicable only if the full year is paid in advance."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Will forward to Lucía, the commercial director, with no definitive rejection; no response date promised, only that it may not be this week."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Has subject, uses usted, body about 110 words, signed Carmen Ejemplo."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No margin, no 48 000 MXN figure, no other percentages, no Monday or new dates."
+  }
+ ]
+}

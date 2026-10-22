@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-intake-conflicts-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six named persons and entities are listed, each with a role."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags the 9/2/2026 lien enforcement window for urgent attorney review without stating a specific period."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reply says the firm hasn't agreed to represent, no attorney-client relationship exists, and it isn't legal advice."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Lists the contract, proof of payments, recorded lien, and Example Home Bank's letter."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "About 118 words, neutral attributions; 'mortgage' and 'by the general contractor' are minor reasonable inferences."
+  }
+ ]
+}

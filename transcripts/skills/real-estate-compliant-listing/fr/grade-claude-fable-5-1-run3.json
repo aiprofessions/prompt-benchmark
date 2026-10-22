@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:52:08+00:00",
+ "attempt": 1,
+ "skill_sha256": "fcf6f6bd58100350217913780a449c429429893361c0bd7e020b5ec78fb5b992",
+ "rubric_sha256": "e115806a7c26228bf311ae90494110ac918c84a4f2f53d61d90fb44083c90ba2",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "L’annonce portail et le texte Instagram respectent les limites de 200 et 40 mots, avec la tolérance autorisée."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Toutes les caractéristiques demandées sont reprises ; le conflit de surface et la loggia font explicitement partie des vérifications avant publication."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L’annonce portail contient toutes les mentions exigées concernant le DPE, Géorisques, les prix, les honoraires et la copropriété."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les formulations sont supprimées ; les motifs identifient le ciblage par âge et situation familiale, l’exclusion par origine/nationalité et les allégations invérifiables."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "La liste « Supprimé ou modifié » fournit un motif pour chaque phrase et recommande explicitement la validation du responsable avant publication."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"L’annonce portail et le texte Instagram respectent les limites de 200 et 40 mots, avec la tolérance autorisée.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Toutes les caractéristiques demandées sont reprises ; le conflit de surface et la loggia font explicitement partie des vérifications avant publication.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"L’annonce portail contient toutes les mentions exigées concernant le DPE, Géorisques, les prix, les honoraires et la copropriété.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Les formulations sont supprimées ; les motifs identifient le ciblage par âge et situation familiale, l’exclusion par origine/nationalité et les allégations invérifiables.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"La liste « Supprimé ou modifié » fournit un motif pour chaque phrase et recommande explicitement la validation du responsable avant publication.\"}]}"
+}

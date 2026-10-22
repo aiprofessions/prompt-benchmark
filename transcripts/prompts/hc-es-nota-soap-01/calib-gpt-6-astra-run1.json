@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-es-nota-soap-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Presenta secciones explícitas S — Subjetivo, O — Objetivo, A — Análisis y P — Plan."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Reproduce exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "No agrega hallazgos, antecedentes ni resultados; identifica los datos ausentes como pendientes de confirmar."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Destaca alergia a penicilina con ronchas; conserva prueba pendiente, antibiótico condicionado no penicilínico, ibuprofeno con pauta exacta y ambos datos de alarma."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante y termina con la sección Faltante / por confirmar."
+  }
+ ]
+}

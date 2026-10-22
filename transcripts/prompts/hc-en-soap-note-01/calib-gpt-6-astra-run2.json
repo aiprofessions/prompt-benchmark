@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-en-soap-note-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Explicit Subjective, Objective, Assessment, and Plan sections provide S/O/A/P structure."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "All vitals match exactly; 'on room air' is equivalent to RA and preserves transcript wording."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "No unstated exam findings, history, or test results are added; testing is identified as planned."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Penicillin rash allergy appears first; plan includes rapid testing, conditional non-penicillin antibiotic, exact ibuprofen instructions, and both return precautions."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marked draft requiring clinician review and signature, and ends with a Missing / to confirm list."
+  }
+ ]
+}

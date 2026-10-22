@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-fr-itineraire-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Point 1 flags the 10h00 Lisbon visit as incompatible with the 09h12→12h05 train; both bookings are kept, none moved or arbitrated."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Counts 3 Lisbon and 2 Porto nights, 5 total versus 4 stay nights; identifies the 17/04 night as booked in both hotels."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "5 days, dates 15–19/04 covered, all refs and eight times kept, no times added; programme (~280 words) and box (~130) are within limits."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "All five wishes marked non réservé without price or time; transfer explicitly not confirmed as included."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Meeting point keeps dossier wording 'communiqué par le guide' without marking it 'à confirmer' or equivalent; other safety requirements are met."
+  }
+ ]
+}

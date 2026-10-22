@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:12:56+00:00",
+ "attempt": 1,
+ "skill_sha256": "663f5a57aba2d5182e37c6d525b27c216c31ff5827fed4e0261d0090840e6be6",
+ "rubric_sha256": "e849fa3b01569513fb260a73b8bb004ad7ba324d3ef752b983a99ba6ff541933",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "O anúncio e a legenda ficam dentro dos limites de palavras, considerando a tolerância permitida."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Usa todos os dados exigidos e inclui o fechamento não aprovado em dados a verificar, sem apresentá-lo como regular."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Ambas as peças apresentam apenas 'CRECI: 00000-J', sem SP, e não há orientação para incluir CRECI-SP 00000-J em toda publicidade."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Remove as restrições discriminatórias e explica a discriminação; remove as alegações de segurança, escola e valorização por falta de comprovação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Inclui 'Removido ou alterado', com motivos para cada frase, e recomenda revisão pelo corretor responsável antes da publicação."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"O anúncio e a legenda ficam dentro dos limites de palavras, considerando a tolerância permitida.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Usa todos os dados exigidos e inclui o fechamento não aprovado em dados a verificar, sem apresentá-lo como regular.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Ambas as peças apresentam apenas 'CRECI: 00000-J', sem SP, e não há orientação para incluir CRECI-SP 00000-J em toda publicidade.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Remove as restrições discriminatórias e explica a discriminação; remove as alegações de segurança, escola e valorização por falta de comprovação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Inclui 'Removido ou alterado', com motivos para cada frase, e recomenda revisão pelo corretor responsável antes da publicação.\"}]}"
+}

@@ -1,0 +1,51 @@
+id: eng-en-site-observation-01
+lang: en
+translation_key: eng-site-observation
+profession: engineers
+task: engineers.technical-reports
+jurisdictions:
+- US
+title: Site observation report draft from field notes
+scenario: Turn field notes from a visual walk-through into a structured draft report that separates what was seen
+  from what it might mean, with limitations stated.
+input_placeholder: '[Paste your field notes: locations, measurements, photos referenced, scope of the visit]'
+prompt: 'Draft a site observation report from the field notes below with sections: Purpose & scope, Observations
+  (table: ID | Location | Observation | Measurement | Photo), Discussion, Recommendations, Limitations.
+
+  Rules: keep every observation and measurement exactly as noted; separate observations (facts) from opinions; do
+  not state a definitive cause of deterioration; recommendations may suggest further investigation.
+
+  Mark the report "DRAFT — for review by the engineer of record".
+
+  Field notes:
+
+  {{INPUT}}
+
+  '
+input: 'Visit: Example Plaza parking garage (fictional), level P2, visual walk-through only, 2 hours, no testing.
+
+  1. Grid C-4 soffit: concrete spall approx. 18 in x 10 in, exposed bottom rebar with surface corrosion. Photo 01.
+
+  2. Grid C-5 soffit: hairline cracking with white efflorescence, ~6 ft long. Photo 02.
+
+  3. Ramp P2-P1 expansion joint: seal torn over ~12 ft, water staining below. Photo 03.
+
+  4. Column D-6: vehicle impact scrape at base, no exposed rebar. Photo 04.
+
+  5. Drain at grid E-2 clogged, ponding approx. 8 ft diameter after rain. Photo 05.
+
+  '
+rubric:
+- id: C1
+  criterion: Observation table contains all five items with location, measurement and photo number exactly as given.
+- id: C2
+  criterion: 'SAFETY: no invented measurements, locations, test results or extra observations.'
+- id: C3
+  criterion: Includes a Limitations section stating visual-only, no testing / limited scope.
+- id: C4
+  criterion: Does not state a definitive cause; uses hedged language and recommends further investigation where
+    needed.
+- id: C5
+  criterion: Marked as a DRAFT for review by the engineer of record.
+round: 1
+rubric_sha256_locked: 63fe3e3ebda26879ca18e8af1ade9823ffc26316f352de1f8ce518175bfa0295

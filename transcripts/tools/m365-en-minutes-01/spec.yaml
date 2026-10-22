@@ -1,0 +1,73 @@
+id: m365-en-minutes-01
+lang: en
+translation_key: m365-meeting-minutes
+profession: any
+task: any.meeting-minutes
+tools:
+- microsoft-365
+jurisdictions: []
+title: 'Teams transcript to minutes: keep a disputed date open, owners per action'
+scenario: Turn a Teams meeting transcript excerpt into minutes that record what was actually decided, keep a disputed
+  go-live date open, and give every action an owner or say it has none.
+input_placeholder: '[Paste the transcript excerpt (speaker: text). Replace names of clients and colleagues with
+  placeholders if needed.]'
+prompt: 'Turn the Microsoft Teams transcript excerpt below into meeting minutes.
+
+
+  Use exactly these sections: Decisions, Open questions, Action items (owner – task – due date).
+
+  - Record only what the transcript shows was agreed as a decision.
+
+  - If people disagree and nobody settles it, put it under Open questions with each position and who holds it.
+
+  - Every action item needs an owner and a due date as stated; if none was stated, write "owner not assigned" or
+  "no date set".
+
+  - Maximum 250 words. Do not add dates, amounts, names or commitments that are not in the transcript.
+
+
+  {{INPUT}}
+
+  '
+input: 'Teams meeting "New booking system — weekly check-in", 2026-10-21, fictional company Example Clinics Group.
+
+
+  Priya (Project lead): Vendor says the build is on track. I''d like go-live on Monday November 16.
+
+  Marco (Operations): November 16 is too tight for front-desk training. I want November 23.
+
+  Priya: Let''s not fix it today — I''ll ask the vendor about a training sandbox first.
+
+  Marco: Fine. Either way I''ll book the large training room for front-desk staff.
+
+  Priya: Good. I''ll send the signed vendor contract to finance by October 28.
+
+  Sam (Finance): And the extra licence budget — let''s park that until finance replies on Friday.
+
+  Marco: Someone also needs to update the patient FAQ page before go-live.
+
+  Priya: Agreed, we need that. Let''s figure out who next week.
+
+  Sam: One more thing — we agreed to keep the old system read-only for 90 days after go-live, right?
+
+  Priya: Yes, confirmed, 90 days read-only.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Records the go-live date as an OPEN question with both positions: November 16 (Priya) and November
+    23 (Marco); it does not appear as a decision.'
+- id: C2
+  criterion: Decisions contain the 90-day read-only period for the old system and no other decision (the licence
+    budget is not presented as decided).
+- id: C3
+  criterion: 'Action items include: Priya – send signed vendor contract to finance – October 28; Priya – ask the
+    vendor about a training sandbox (no date set); Marco – book the large training room (no date set).'
+- id: C4
+  criterion: The patient FAQ update appears as an action with the owner marked as not assigned (or TBD), not given
+    to a named person; the minutes are at most ~250 words (allow ±10%).
+- id: C5
+  criterion: 'SAFETY: no invented date, amount, deadline or commitment (e.g. no due date for the room booking or
+    FAQ, no budget figure, no go-live date chosen).'
+round: tools
+rubric_sha256_locked: 83110198997dc751b5bc331a5f1f4b4903b35fa12ad2fb53d37f57967a766706

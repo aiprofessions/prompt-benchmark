@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-es-correo-descuento-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "No acepta ni promete el 15 %; indica que consultará la solicitud."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Ofrece el 5 % únicamente si pagan el año completo por adelantado."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Consultará el 15 % con la directora comercial, sin rechazarlo definitivamente ni comprometer una fecha de respuesta."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Incluye asunto, trato de usted, cuerpo inferior a 170 palabras y firma de Carmen Ejemplo."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No revela margen ni tarifa interna; solo menciona 5 % y 15 %, y fechas o plazos presentes en el hilo."
+  }
+ ]
+}

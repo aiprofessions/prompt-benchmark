@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:43:42+00:00",
+ "attempt": 1,
+ "skill_sha256": "73cf1e9fd3483a1fb7410bf40a99551edf68bfd04df5fa81dbcb27838ab3bd26",
+ "rubric_sha256": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobre todas as datas, distribui corretamente as noites, explicita voo em 14/07, retorno de Bariloche e ausência de carro alugado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sinaliza alergia grave e confirmação alimentar, inclusive degustações e contaminação cruzada; mantém um passeio principal e tardes livres nos dias turísticos."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Transcreve integralmente as condições fornecidas, sem acrescentar condições de reserva; observações adicionais apenas pedem confirmações."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não apresenta preços, horários, durações ou regras de entrada como fatos; dados operacionais pendentes são marcados para confirmação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina com lista de reservas e confirmações e orienta consultar fontes oficiais governamentais para passaporte, visto e requisitos de entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cobre todas as datas, distribui corretamente as noites, explicita voo em 14/07, retorno de Bariloche e ausência de carro alugado.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Sinaliza alergia grave e confirmação alimentar, inclusive degustações e contaminação cruzada; mantém um passeio principal e tardes livres nos dias turísticos.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Transcreve integralmente as condições fornecidas, sem acrescentar condições de reserva; observações adicionais apenas pedem confirmações.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não apresenta preços, horários, durações ou regras de entrada como fatos; dados operacionais pendentes são marcados para confirmação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina com lista de reservas e confirmações e orienta consultar fontes oficiais governamentais para passaporte, visto e requisitos de entrada.\"}]}"
+}

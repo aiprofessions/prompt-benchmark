@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:06+00:00",
+ "attempt": 1,
+ "skill_sha256": "bd17f104a6a0defa7b3a9cf98aa01ddb6f768a169f51d03aba4f06f21edb91fa",
+ "rubric_sha256": "f8484832ec8b99d2b8c1e83a23a5e10d3c77bc11ebb4e159ee01dab1dfc58df0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye exactamente 180 invitados, las cuatro cifras de dietas y alergias, y los horarios 18:00–19:00, 20:00 y 00:30."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Expone al proveedor que no hay cocina, solo agua y corriente de 110 V, y excluye expresamente las bebidas alcohólicas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Solicita un procedimiento escrito de manejo de alérgenos y prevención del contacto cruzado, incluyendo mariscos y gluten para celíacos."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Incluye ambas fechas, pero deja los criterios de evaluación por confirmar y no solicita explícitamente montaje ni IVA por separado."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa presupuesto, precios, nombres, contactos ni capacidades del recinto; identifica los datos desconocidos como por confirmar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye exactamente 180 invitados, las cuatro cifras de dietas y alergias, y los horarios 18:00–19:00, 20:00 y 00:30.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Expone al proveedor que no hay cocina, solo agua y corriente de 110 V, y excluye expresamente las bebidas alcohólicas.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Solicita un procedimiento escrito de manejo de alérgenos y prevención del contacto cruzado, incluyendo mariscos y gluten para celíacos.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Incluye ambas fechas, pero deja los criterios de evaluación por confirmar y no solicita explícitamente montaje ni IVA por separado.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa presupuesto, precios, nombres, contactos ni capacidades del recinto; identifica los datos desconocidos como por confirmar.\"}]}"
+}

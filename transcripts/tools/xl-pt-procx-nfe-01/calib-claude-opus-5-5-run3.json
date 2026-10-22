@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-pt-procx-nfe-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes PROCX(B2;NFe!$B$2:$B$6;NFe!$C$2:$C$6;\"Não encontrado\"); the primary is PROCV wrapped in SEERRO. All function names are Portuguese."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Uses SOMASE over NFe!D2:D6 with criterion range NFe!B2:B6 equal to B2."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Shows 3.480,00 + 2.915,35 + 604,65 = 7.000,00 and states B4 returns 7.000,00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Uses semicolon separators and decimal commas. The two-sentence tip says the CNPJ must be text in the same format on both sheets."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No taxes mentioned, no claims about CNPJ or invoice validity, and no invented values."
+  }
+ ]
+}

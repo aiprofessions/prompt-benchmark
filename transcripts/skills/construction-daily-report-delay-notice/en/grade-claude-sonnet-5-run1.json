@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:48+00:00",
+ "attempt": 1,
+ "skill_sha256": "f3425f392497f45ccf9e59b70df0f66398cb8dd8e97b3aafc1d6c601be562fd6",
+ "rubric_sha256": "69da1dc3fac514053395665cf2acdb93884a04eb512bf9d6eade00274a427c0f",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Manpower table lists concrete 8, ironworkers 5, electricians 3, laborers 4, and total 20."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Records the 10:15 verbal lobby wall relocation, no written direction received, and the passed 14:00 level 2 deck inspection."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Calculates October 27, 2026, provisionally pending contract interpretation; includes a PM/contract-review draft requesting written direction and a change order."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Safety section records the 11:30 plywood near-miss, nobody hurt, barricading, and tying down remaining sheets."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no costs, schedule days, extra performed activities, or people; explicitly attributes the 110 cy quantity to the foreman."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Manpower table lists concrete 8, ironworkers 5, electricians 3, laborers 4, and total 20.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Records the 10:15 verbal lobby wall relocation, no written direction received, and the passed 14:00 level 2 deck inspection.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Calculates October 27, 2026, provisionally pending contract interpretation; includes a PM/contract-review draft requesting written direction and a change order.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Safety section records the 11:30 plywood near-miss, nobody hurt, barricading, and tying down remaining sheets.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no costs, schedule days, extra performed activities, or people; explicitly attributes the 110 cy quantity to the foreman.\"}]}"
+}

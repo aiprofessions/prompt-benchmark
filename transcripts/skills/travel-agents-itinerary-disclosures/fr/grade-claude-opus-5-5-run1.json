@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:59:28+00:00",
+ "attempt": 1,
+ "skill_sha256": "4c49e71106a0dab259a6bdfca46b6a056c1a2e47d2b98ba26f03abdfdfd447fd",
+ "rubric_sha256": "7a88dc37f202e549b414409b51212a2c066abbdece81d50910cbd838c9b2b666",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Dates du 5 au 11 mai respectées, trois nuits par ville, transfert explicite le 8, retour depuis Porto et aucune location."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Allergie sévère signalée avec confirmation écrite demandée aux restaurants ; une visite principale quotidienne au maximum et journée plage prévue."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Conditions reproduites mot pour mot, sans condition supplémentaire de réservation ; échéance calculée explicitement soumise à confirmation."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucun prix, horaire, durée de train ou condition d’entrée concrète présenté comme fait ; informations manquantes signalées et confirmations demandées."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Se termine par une liste à réserver et à confirmer, renvoyant aux sources officielles gouvernementales pour passeport, visa et entrée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Dates du 5 au 11 mai respectées, trois nuits par ville, transfert explicite le 8, retour depuis Porto et aucune location.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Allergie sévère signalée avec confirmation écrite demandée aux restaurants ; une visite principale quotidienne au maximum et journée plage prévue.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Conditions reproduites mot pour mot, sans condition supplémentaire de réservation ; échéance calculée explicitement soumise à confirmation.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucun prix, horaire, durée de train ou condition d’entrée concrète présenté comme fait ; informations manquantes signalées et confirmations demandées.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Se termine par une liste à réserver et à confirmer, renvoyant aux sources officielles gouvernementales pour passeport, visa et entrée.\"}]}"
+}

@@ -1,0 +1,56 @@
+id: acc-en-missing-docs-01
+lang: en
+translation_key: acc-missing-docs
+title: Missing-documents email to an individual tax client
+scenario: You are preparing a 1040 and four documents are still missing. Turn your internal notes into a calm, plain-English
+  request with a deadline and a secure upload path.
+profession: accountants
+task: accountants.client-letters
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'You are helping a US tax preparer write to an individual client.
+
+  Using ONLY the notes below, write a short email (max 220 words) asking the client for the missing documents.
+
+  Rules:
+
+  - Plain English, friendly, no jargon unless you explain it in a few words.
+
+  - Put the missing items in a numbered checklist, exactly as listed in the notes — do not add or drop items.
+
+  - State the internal deadline and why it matters (the filing date).
+
+  - Tell the client to upload through the secure portal and NOT to send tax documents by regular email.
+
+  - Do not give tax advice and do not mention any dollar amount, rate, penalty or date that is not in the notes.
+
+  Notes:
+
+  [Paste your internal notes: client first name, tax year, missing items, internal deadline, how they should upload]
+
+  '
+sample_input: 'Client: Dana (fictional client "Dana Q. Example"), joint 1040 for tax year 2026 with spouse.
+
+  Missing:
+
+  - 1099-NEC from the two freelance platforms she used (she said "one of them might be a 1099-K, not sure")
+
+  - Form 1098 mortgage interest statement for the new house
+
+  - Childcare provider name, address and EIN plus total paid (for the dependent care credit)
+
+  - Form 5498-SA for her HSA
+
+  Internal deadline: March 20, 2027 so we can file by April 15, 2027.
+
+  Last year she emailed scans as plain attachments — please steer her to the secure portal (portal.example-cpa.test).
+
+  She is anxious about "doing it wrong", keep it reassuring.
+
+  '
+page: https://aiprofessions.ai/accountants/prompts/#acc-en-missing-docs-01
+results_file: results/acc-en-missing-docs-01.yaml

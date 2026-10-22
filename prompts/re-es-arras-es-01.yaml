@@ -1,0 +1,43 @@
+id: re-es-arras-es-01
+lang: es
+translation_key: re-offer-review
+title: Resumen de un contrato de arras para el vendedor (España)
+scenario: 'Convierte las condiciones de un contrato de arras en una ficha para el vendedor: términos clave, fechas, qué pasa
+  si alguien se echa atrás, y lo que debe revisar un abogado o notario.'
+profession: real-estate-agents
+task: real-estate-agents.contract-review
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- ES
+prompt: 'Apoyas a un agente inmobiliario en España. Resume para el vendedor el borrador de contrato de arras de abajo.
+
+  Incluye: tabla de términos clave; fechas calculadas desde la firma; qué ocurre si desiste el comprador y si desiste el vendedor,
+  según el TIPO de arras que diga el texto (cita el texto, no supongas); 3–5 riesgos en lenguaje claro; preguntas para la
+  parte compradora.
+
+  No des conclusiones jurídicas definitivas; termina con lo que debe revisar un abogado o el notario.
+
+  Borrador:
+
+  [Pega las condiciones del contrato de arras y la fecha de firma]
+
+  '
+sample_input: 'Vivienda: calle Ejemplo 12, 3.º B, Valencia (ficticia). Precio: 240.000 €.
+
+  Arras: 24.000 € a la firma, "en concepto de arras penitenciales conforme al artículo 1454 del Código Civil".
+
+  Escritura ante notario como máximo el 15 de diciembre de 2026.
+
+  El comprador solicitará hipoteca; "si el banco la deniega, el comprador recuperará las arras" (no se exige acreditar la
+  denegación por escrito).
+
+  La vivienda tiene una derrama aprobada por la comunidad de 6.000 €; el borrador no dice quién la paga.
+
+  Firma prevista del contrato de arras: 20 de octubre de 2026.
+
+  '
+page: https://aiprofessions.ai/es/agentes-inmobiliarios/prompts/#re-es-arras-es-01
+results_file: results/re-es-arras-es-01.yaml

@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:15:56+00:00",
+ "attempt": 1,
+ "skill_sha256": "81f72893855b1d86bb092cbf4ff91999940e7bb438c8e6b4f13c83734b091e42",
+ "rubric_sha256": "3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "A tabela apresenta os cinco locais, as quatro medidas fornecidas e as fotos 41 a 45 corretamente; dimensão do ralo consta como não informada."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Não inventa medidas, ensaios ou normas; preserva os achados informados e apresenta possíveis mecanismos e consequências com ressalvas, sem afirmar causas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "A seção Limitações informa expressamente inspeção visual de 2 horas, sem ensaios."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não responde sim ou não; atribui a decisão ao engenheiro responsável técnico e recomenda avaliação complementar da V-12 e do P-3."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está explicitamente marcado como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"A tabela apresenta os cinco locais, as quatro medidas fornecidas e as fotos 41 a 45 corretamente; dimensão do ralo consta como não informada.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Não inventa medidas, ensaios ou normas; preserva os achados informados e apresenta possíveis mecanismos e consequências com ressalvas, sem afirmar causas.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"A seção Limitações informa expressamente inspeção visual de 2 horas, sem ensaios.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não responde sim ou não; atribui a decisão ao engenheiro responsável técnico e recomenda avaliação complementar da V-12 e do P-3.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está explicitamente marcado como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico.\"}]}"
+}

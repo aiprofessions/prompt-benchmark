@@ -1,0 +1,73 @@
+id: xl-fr-recherchex-tva-01
+lang: fr
+translation_key: xl-lookup
+title: RECHERCHEX et calcul HT/TVA/TTC dans un Excel en français
+scenario: Récupérez le taux de TVA de chaque article avec RECHERCHEX et calculez HT, TVA et TTC par ligne, avec la syntaxe
+  d'un Excel français (point-virgule, virgule décimale).
+profession: any
+task: any.excel-formulas
+tools:
+- excel
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-20'
+jurisdictions:
+- FR
+prompt: 'Vous êtes un assistant Excel pour une petite entreprise en France. Mon Excel est en français : noms de fonctions
+  en français, séparateur d''arguments point-virgule, virgule décimale.
+
+
+  À partir UNIQUEMENT des tableaux ci-dessous :
+
+  1. Donnez la formule de la cellule E2 de la feuille « Facture » qui renvoie le taux de TVA de l''article de la ligne (via
+  son code TVA), à recopier vers le bas.
+
+  2. Donnez les formules HT (F2), TVA arrondie au centime (G2) et TTC (H2).
+
+  3. Indiquez les valeurs HT, TVA et TTC obtenues pour les 3 lignes.
+
+  4. Terminez par une note « À vérifier » de 3 puces maximum.
+
+
+  N''affirmez pas quel taux de TVA s''applique légalement à un produit : les taux viennent du tableau de l''utilisateur.
+
+
+  [Collez la table des articles avec leur code TVA, la table des taux et les lignes de facture (code article, prix unitaire
+  HT, quantité), avec les plages de cellules.]
+
+  '
+sample_input: 'Feuille « Articles » (A1:C4, en-têtes ligne 1) — données fictives :
+
+  Ligne | A : Code article | B : Libellé | C : Code TVA
+
+  2 | FAR-25 | Farine T65 sac 25 kg | R
+
+  3 | MOU-12 | Moule inox 12 cm | N
+
+  4 | TRA-01 | Repas traiteur (forfait) | I
+
+
+  Feuille « Taux » (A1:B4) :
+
+  Ligne | A : Code TVA | B : Taux
+
+  2 | N | 20 %
+
+  3 | R | 5,5 %
+
+  4 | I | 10 %
+
+
+  Feuille « Facture » (A1:H4) :
+
+  Ligne | A : Code article | B : Libellé | C : PU HT (€) | D : Quantité | E : Taux | F : HT | G : TVA | H : TTC
+
+  2 | FAR-25 | Farine T65 sac 25 kg | 18,40 | 12 | | | |
+
+  3 | MOU-12 | Moule inox 12 cm | 27,90 | 4 | | | |
+
+  4 | TRA-01 | Repas traiteur (forfait) | 145,00 | 1 | | | |
+
+  '
+page: https://aiprofessions.ai/fr/agents-de-voyage/prompts/#xl-fr-recherchex-tva-01
+results_file: results/xl-fr-recherchex-tva-01.yaml

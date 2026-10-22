@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-missing-docs-01",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All four items listed, including the 1099-K possibility from the notes; no extra items added."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Asks for documents by March 20, 2027 so the return can be filed by April 15, 2027."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Directs uploads to portal.example-cpa.test and says not to attach them to regular email."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Plain, reassuring tone; jargon explained; body is roughly 185 words, under the limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No dollar amounts, rates, penalties or limits; only dates and the tax year from the notes appear."
+  }
+ ]
+}

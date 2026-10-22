@@ -1,0 +1,132 @@
+{
+ "seed": 20261021,
+ "langs": [
+  "fr",
+  "pt"
+ ],
+ "models": [
+  "claude-fable-5-1"
+ ],
+ "per_family": 10,
+ "summary": {
+  "anthropic": {
+   "runs": 10,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.82,
+   "swap_share": 0.9
+  }
+ },
+ "rows": [
+  {
+   "prompt_id": "re-pt-proposta-compra-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "sm-fr-prospection-b2b-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "hc-pt-evolucao-cfm-01",
+   "model_key": "claude-fable-5-1",
+   "run": 3,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "sm-pt-prospeccao-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 3,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "acc-fr-relance-dsn-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "sm-fr-prospection-b2b-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "sm-fr-revue-pipeline-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ta-fr-itineraire-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ev-pt-roteiro-evento-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "ev-pt-roteiro-evento-01",
+   "model_key": "claude-fable-5-1",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  }
+ ]
+}

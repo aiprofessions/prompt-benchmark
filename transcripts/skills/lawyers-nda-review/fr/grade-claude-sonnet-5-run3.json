@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:11:53+00:00",
+ "attempt": 1,
+ "skill_sha256": "e60e5b35d88c9d6f92cdb588668ceee4e5519cf62381364b6f01795d180f57a7",
+ "rubric_sha256": "fedca4f8577f197bd01ad603962a443ad542a8ef958d899feb9c939765c6c33a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Signale l’article 3 et conditionne la communication au besoin d’en connaître et à un engagement écrit de confidentialité au moins équivalent."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifie la durée insuffisante de l’article 5 et propose cinq ans à compter de la signature."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Propose de supprimer intégralement l’article 9 conformément à l’interdiction de non-sollicitation prévue par la politique."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifie les deux clauses manquantes et propose leur rédaction ; déclare les articles 1 et 7 conformes sans modification."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Présente un projet sans consultation juridique, ne cite aucune autorité inventée et soumet les arbitrages et validations à l’avocat responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Signale l’article 3 et conditionne la communication au besoin d’en connaître et à un engagement écrit de confidentialité au moins équivalent.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Identifie la durée insuffisante de l’article 5 et propose cinq ans à compter de la signature.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Propose de supprimer intégralement l’article 9 conformément à l’interdiction de non-sollicitation prévue par la politique.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifie les deux clauses manquantes et propose leur rédaction ; déclare les articles 1 et 7 conformes sans modification.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Présente un projet sans consultation juridique, ne cite aucune autorité inventée et soumet les arbitrages et validations à l’avocat responsable.\"}]}"
+}

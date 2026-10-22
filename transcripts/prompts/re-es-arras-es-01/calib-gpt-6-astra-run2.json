@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-es-arras-es-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Identifica las arras como penitenciales y explica la pérdida de 24.000 € por el comprador y devolución de 48.000 € por el vendedor."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala como riesgos la falta de prueba escrita de denegación y la ausencia de plazos para solicitar financiación y comunicar la denegación."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Indica expresamente que no se asigna quién paga la derrama de 6.000 € y lo incluye entre los riesgos."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Recoge el 15 de diciembre de 2026 como fecha máxima de escritura y los 24.000 € como el 10 % del precio."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Matiza las consecuencias como ordinarias y sujetas a revisión; termina indicando los aspectos que debe revisar un abogado o notario."
+  }
+ ]
+}

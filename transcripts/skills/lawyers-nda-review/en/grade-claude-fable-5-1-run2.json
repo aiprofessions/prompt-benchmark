@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:45+00:00",
+ "attempt": 1,
+ "skill_sha256": "e44ff2e1596842c06a940bb6f03e6272f621c592a3014738e44a9beb4e74e036",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §5 and proposes five years plus protection for trade secrets for as long as they remain trade secrets."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags the non-solicitation prohibition and explicitly proposes deleting §8 in its entirety."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and treats §1 as compliant, but expressly treats §10 as only partially compliant, leaving forum selection unassessed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Contains no invented authorities, explicitly labels the output a draft and not legal advice, and refers judgment calls to the supervising attorney."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags §5 and proposes five years plus protection for trade secrets for as long as they remain trade secrets.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags the non-solicitation prohibition and explicitly proposes deleting §8 in its entirety.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and treats §1 as compliant, but expressly treats §10 as only partially compliant, leaving forum selection unassessed.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Contains no invented authorities, explicitly labels the output a draft and not legal advice, and refers judgment calls to the supervising attorney.\"}]}"
+}

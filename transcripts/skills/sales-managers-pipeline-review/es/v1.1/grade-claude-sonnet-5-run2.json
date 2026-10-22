@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:02+00:00",
+ "attempt": 1,
+ "skill_sha256": "5803ee82a74dc65ff532177c30effd225ab22eb39b328db77ffe93c92fb00c23",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula 1,730,000 MXN con los cuatro componentes correctos y excluye Ejemplo Agro por cerrar fuera del trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente la brecha de 1,270,000 MXN frente a la cuota pendiente."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica Ejemplo Farma como riesgo por inactividad desde el 02/03 y salida del director impulsor."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Señala explícitamente que Test Logística tiene el cierre del 05/04 vencido y sigue sin firmar."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye una pregunta de coaching para cada oportunidad marcada como riesgo; distingue los supuestos de los datos aportados."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula 1,730,000 MXN con los cuatro componentes correctos y excluye Ejemplo Agro por cerrar fuera del trimestre.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente la brecha de 1,270,000 MXN frente a la cuota pendiente.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica Ejemplo Farma como riesgo por inactividad desde el 02/03 y salida del director impulsor.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Señala explícitamente que Test Logística tiene el cierre del 05/04 vencido y sigue sin firmar.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye una pregunta de coaching para cada oportunidad marcada como riesgo; distingue los supuestos de los datos aportados.\"}]}"
+}

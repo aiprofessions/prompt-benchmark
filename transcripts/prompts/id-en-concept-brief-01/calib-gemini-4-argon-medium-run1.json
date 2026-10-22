@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-en-concept-brief-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All seven requested sections are present, and Design Direction has 3 sentences plus 5 keywords."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Constraints state no plumbing/structural changes and work limited to weekdays 9:00–17:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Conflicts listed: warm minimal/Japandi vs bold color, and white sofa/linen vs child and large dog."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Must-haves include pet-proof durable flooring, toy storage, and a dedicated WFH corner."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Budget is described only as mid-range with no figure, and no product prices are given."
+  }
+ ]
+}

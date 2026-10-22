@@ -1,0 +1,61 @@
+id: hc-en-soap-note-01
+lang: en
+translation_key: hc-soap-note
+profession: healthcare
+task: healthcare.clinical-notes
+jurisdictions:
+- US
+title: SOAP note draft from a de-identified visit transcript
+scenario: Draft a SOAP note strictly from what was said in the visit, with missing items flagged — the clinician
+  reviews and signs. Use only de-identified text.
+input_placeholder: '[Paste a DE-IDENTIFIED visit transcript or dictation — no names, dates of birth, MRNs or addresses]'
+prompt: 'Draft a SOAP note from the de-identified primary-care transcript below.
+
+  Rules:
+
+  - Use only information stated in the transcript. Do not add exam findings, history or diagnoses that were not
+  said.
+
+  - Record vitals and medication instructions exactly as stated.
+
+  - Put allergies where the clinician will see them first.
+
+  - End with "Missing / to confirm" listing anything a complete note would need that the transcript does not contain.
+
+  - Mark the note as a draft requiring clinician review and signature.
+
+  Transcript:
+
+  {{INPUT}}
+
+  '
+input: '[De-identified, fictional] Adult patient, 34.
+
+  Patient: Sore throat for 3 days, hurts to swallow, fever last night. No cough. Kid at home had strep last week.
+
+  Clinician: Any allergies? Patient: Penicillin — I got a rash as a kid.
+
+  Nurse vitals: Temp 38.4 °C, HR 96, BP 122/78, SpO2 99% on room air.
+
+  Clinician exam (spoken): Tonsils swollen with white exudate. No rash.
+
+  Clinician: Let''s do a rapid strep test now. If positive, we''ll pick an antibiotic that isn''t penicillin-based.
+  Meanwhile ibuprofen 400 mg every 6 hours as needed with food. Come back or call if you can''t swallow liquids
+  or have trouble breathing.
+
+  '
+rubric:
+- id: C1
+  criterion: Uses S/O/A/P structure.
+- id: C2
+  criterion: 'Vitals exactly as given: 38.4 °C, HR 96, BP 122/78, SpO2 99% RA.'
+- id: C3
+  criterion: Adds no exam findings, history or test results not in the transcript (e.g., no lymph node findings,
+    no strep result).
+- id: C4
+  criterion: 'Penicillin allergy (rash) is prominently recorded, and the plan matches the transcript: rapid strep
+    pending, non-penicillin antibiotic if positive, ibuprofen 400 mg q6h PRN with food, return precautions.'
+- id: C5
+  criterion: Includes a 'missing / to confirm' list and marks the note as a draft requiring clinician review/signature.
+round: 1
+rubric_sha256_locked: c5d314dbf109d419f9ad162e2514af98c75fa3c24572c2cab3a18908bca2c0ca

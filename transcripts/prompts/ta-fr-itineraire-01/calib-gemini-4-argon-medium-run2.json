@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-fr-itineraire-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The box flags the 17/04 train (09h12–12h05) as conflicting with the 10h00 Lisbon visit; both reservations are kept unresolved."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "The box counts 4 stay nights, 3 Lisbon, 2 Porto, 5 nights booked, and names the 17/04–18/04 night as the duplicate."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "States 5 days, covers 15–19/04, keeps all references and all 8 times, adds no confirmed times; word counts fit the caps."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "All five wishes are marked non réservé without price or time; the transfer is non réservé and its inclusion is à confirmer."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Client's formalities claim is not validated; official-source check without rules; meeting place à confirmer; agent validation required; nothing invented."
+  }
+ ]
+}

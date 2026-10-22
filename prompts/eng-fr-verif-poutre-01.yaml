@@ -1,0 +1,76 @@
+id: eng-fr-verif-poutre-01
+lang: fr
+translation_key: eng-beam-check
+title: Relecture d’une note de calcul de poutre sur deux appuis
+scenario: 'Une note fictive d’ingénieur junior à relire : recalcul des sollicitations et de la flèche, contrôle des unités
+  et réexamen de la conclusion.'
+profession: engineers
+task: engineers.calc-verification
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- FR
+prompt: 'Relisez cette note de calcul comme un ingénieur structure senior en France, en explicitant les unités.
+
+  1. Pour chaque étape numérique, présentez la formule, les conversions nécessaires, l’application numérique et le résultat
+  avec son unité ; indiquez si le résultat initial est correct ou erroné et quantifiez l’écart.
+
+  2. Vérifiez la cohérence des hypothèses, des formules et des unités ; expliquez toute correction nécessaire.
+
+  3. Comparez le résultat au critère fourni, dites si la conclusion change et examinez les recommandations de la note.
+
+  4. Listez les données manquantes ou non justifiées qui empêchent une vérification complète, sans leur attribuer de valeurs.
+
+  Utilisez uniquement les données fournies pour vos calculs ; n’inventez ni donnée, ni date, ni profilé, ni résistance, ni
+  prix.
+
+  N’ajoutez aucune affirmation ou référence normative ou réglementaire ; distinguez le critère fourni d’une validation globale
+  de l’ouvrage.
+
+  Terminez en rappelant que cette relecture ne remplace pas la vérification et la validation par un ingénieur responsable.
+  Répondez en 500 mots maximum.
+
+  Données :
+
+  [Collez la note de calcul avec ses données, hypothèses, étapes et conclusion ; anonymisez le projet, le client et les noms]
+
+  '
+sample_input: 'Exemple entièrement fictif.
+
+  Projet : extension d’atelier – Exemple Construction (société fictive), lot charpente métallique.
+
+  Rédacteur : Martin Exemple, ingénieur junior (personnage fictif). Relecture demandée avant diffusion.
+
+
+  Données :
+
+  - Poutre acier sur deux appuis simples, portée L = 6,00 m.
+
+  - Charge uniformément répartie de service q = 15 kN/m (poids propre inclus, valeur transmise par le chef de projet pour
+  la vérification de flèche).
+
+  - E = 210 000 MPa.
+
+  - I = 5 000 cm⁴ (valeur transmise par le bureau d’études, profilé non précisé).
+
+  - Critère de flèche : L/300, imposé par le CCTP du lot charpente.
+
+
+  Étape 1 – Moment maximal : M = qL²/8 = 15 × 6²/8 = 67,5 kN·m.
+
+  Étape 2 – Effort tranchant maximal : V = qL = 15 × 6 = 90 kN.
+
+  Étape 3 – Flèche à mi-portée : f = 5qL⁴/(384EI)
+
+  avec q = 15 000 N/m, L = 6 m, E = 2,1 × 10¹¹ Pa, I = 5 000 cm⁴ = 5,0 × 10⁻⁴ m⁴.
+
+  f = 0,00241 m = 2,4 mm.
+
+  Étape 4 – Conclusion : f = 2,4 mm ≤ L/300 = 20 mm. Flèche vérifiée avec une marge très large. Le profilé pourrait même être
+  réduit.
+
+  '
+page: https://aiprofessions.ai/fr/ingenieurs/prompts/#eng-fr-verif-poutre-01
+results_file: results/eng-fr-verif-poutre-01.yaml

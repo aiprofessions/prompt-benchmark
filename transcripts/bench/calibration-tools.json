@@ -1,0 +1,240 @@
+{
+ "seed": 20261021,
+ "langs": [
+  "en",
+  "es",
+  "fr",
+  "pt"
+ ],
+ "models": [
+  "claude-opus-5-5",
+  "claude-sonnet-5",
+  "claude-fable-5-1",
+  "gpt-6-astra",
+  "gemini-4-argon-medium"
+ ],
+ "per_family": 6,
+ "summary": {
+  "anthropic": {
+   "runs": 6,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.933,
+   "swap_share": 0.967
+  },
+  "openai": {
+   "runs": 6,
+   "published_judge": "claude-opus-5-5",
+   "swap_judge": "gpt-6-astra",
+   "published_share": 0.867,
+   "swap_share": 0.9
+  },
+  "google": {
+   "runs": 6,
+   "published_judge": "gpt-6-astra",
+   "swap_judge": "claude-opus-5-5",
+   "published_share": 0.933,
+   "swap_share": 0.967
+  }
+ },
+ "rows": [
+  {
+   "prompt_id": "m365-fr-compte-rendu-chantier-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-es-correo-descuento-01",
+   "model_key": "claude-sonnet-5",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 4,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-pt-procx-nfe-01",
+   "model_key": "claude-opus-5-5",
+   "run": 3,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-en-xlookup-01",
+   "model_key": "claude-opus-5-5",
+   "run": 2,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-es-correo-descuento-01",
+   "model_key": "claude-sonnet-5",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-es-correo-descuento-01",
+   "model_key": "claude-fable-5-1",
+   "run": 1,
+   "family": "anthropic",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-en-minutes-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 4,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-fr-recherchex-tva-01",
+   "model_key": "gpt-6-astra",
+   "run": 3,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 3,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-pt-resumo-locacao-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-en-pivot-explain-01",
+   "model_key": "gpt-6-astra",
+   "run": 2,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-es-correo-descuento-01",
+   "model_key": "gpt-6-astra",
+   "run": 1,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 5,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-es-buscarx-mx-01",
+   "model_key": "gpt-6-astra",
+   "run": 1,
+   "family": "openai",
+   "published_judge": "claude-opus-5-5",
+   "published_score": 4,
+   "swap_judge": "gpt-6-astra",
+   "swap_score": 4,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-es-buscarx-mx-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-en-xlookup-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-en-pivot-explain-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-pt-resumo-locacao-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "xl-en-xlookup-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 2,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 5,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 5,
+   "criteria": 5
+  },
+  {
+   "prompt_id": "m365-fr-compte-rendu-chantier-01",
+   "model_key": "gemini-4-argon-medium",
+   "run": 1,
+   "family": "google",
+   "published_judge": "gpt-6-astra",
+   "published_score": 3,
+   "swap_judge": "claude-opus-5-5",
+   "swap_score": 4,
+   "criteria": 5
+  }
+ ]
+}

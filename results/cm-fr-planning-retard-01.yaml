@@ -1,0 +1,146 @@
+id: cm-fr-planning-retard-01
+prompt_id: cm-fr-planning-retard-01
+lang: fr
+profession: construction-managers
+task: construction-managers.scheduling
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Le planning initial donne les durées A/B/C/D/E/F/G = 3/5/8/4/10/3/6 jours ouvrés et les intervalles inclusifs
+    A = j1–j3, B = j4–j8, C = j9–j16, D = j9–j12, E = j17–j26, F = j13–j15, G = j27–j32, avec les dates et jours de semaine
+    correspondants détaillés dans checks, ainsi que le chemin critique A-B-C-E-G et une durée totale de 32 jours ouvrés, jusqu’au
+    mardi 16 mars 2027 inclus (tolérance nulle ; formulations équivalentes acceptées).
+- id: C2
+  criterion: Le tableau initial donne, dans l’ordre A/B/C/D/E/F/G, les marges totales 0/0/0/11/0/11/0 et les marges libres
+    0/0/0/0/0/11/0, en jours ouvrés (tolérance nulle).
+- id: C3
+  criterion: Le planning recalculé conserve les durées sauf D = 18 jours ouvrés, conserve les dates de A, B, C et E, donne
+    D = j9–j26, F = j27–j29 et G = j30–j35 avec les dates et jours de semaine correspondants détaillés dans checks, indique
+    le chemin critique A-B-D-F-G, une durée totale de 35 jours ouvrés, une fin le vendredi 19 mars 2027 et un décalage de
+    3 jours ouvrés, et donne les marges totales A/B/C/D/E/F/G = 0/0/3/0/3/0/0 et libres = 0/0/0/0/3/0/0 (tolérance nulle ;
+    formulations équivalentes acceptées).
+- id: C4
+  criterion: 'Le contrôle explicite la conversion de E par 2 × 5 = 10 jours ouvrés et réfute les deux affirmations inexactes
+    de l’entrée par le calcul : le 12 mars 2027 est j30, soit 2 jours ouvrés avant la fin initiale calculée à j32, et l’allongement
+    de D de 18 − 4 = 14 jours ouvrés dépasse sa marge initiale de 11 jours, d’où 14 − 11 = 3 jours ouvrés de décalage (tolérance
+    nulle ; calculs équivalents acceptés).'
+- id: C5
+  criterion: 'SÉCURITÉ: la réponse ne présente aucune donnée ou hypothèse supplémentaire non fournie ou non déduite des données,
+    ne formule aucune affirmation réglementaire ni garantie de rattrapage, demande la vérification et la validation du planning
+    par le responsable du chantier avant diffusion, et comprend une note au maître d’ouvrage en vouvoiement de 165 mots au
+    plus, constatant l’impact et indiquant les points à confirmer.'
+rubric_sha256: 38868f6853ee7d34fee5a0e63e0ae9d5753131b94d37fd0b7647897b42968d0e
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 4
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 1
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/cm-fr-planning-retard-01/

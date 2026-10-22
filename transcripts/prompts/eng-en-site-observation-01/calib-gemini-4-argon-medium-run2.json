@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-en-site-observation-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All five items appear with locations, measurements and photo numbers matching the notes; item 4 correctly shows no measurement."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No invented measurements, locations, test results or extra observations; added content is limited to opinions and recommendations."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Limitations section states visual walk-through only, 2 hours, no testing, and hidden conditions not evaluated."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States cause cannot be established, uses hedged language, and recommends sounding and testing to find contributing factors."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Header reads 'DRAFT — for review by the engineer of record', and draft status is repeated in Limitations."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:46:21+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La prévision est de 246 000 € avec les quatre contributions correctes ; Modèle Transport est explicitement exclu."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’écart indiqué est bien de 254 000 €, calculé par différence entre 500 000 € et 246 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Modèle Santé est signalé inactif, mais le mono-contact d’Exemple Retail n’est pas identifié comme risque ; aucune alerte n’est retenue."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Test Énergie est explicitement signalé avec une clôture dépassée de neuf jours et un statut non signé."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Une question de coaching est donnée pour chacune des deux affaires effectivement signalées ; aucune donnée commerciale n’est inventée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La prévision est de 246 000 € avec les quatre contributions correctes ; Modèle Transport est explicitement exclu.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’écart indiqué est bien de 254 000 €, calculé par différence entre 500 000 € et 246 000 €.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Modèle Santé est signalé inactif, mais le mono-contact d’Exemple Retail n’est pas identifié comme risque ; aucune alerte n’est retenue.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Test Énergie est explicitement signalé avec une clôture dépassée de neuf jours et un statut non signé.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Une question de coaching est donnée pour chacune des deux affaires effectivement signalées ; aucune donnée commerciale n’est inventée.\"}]}"
+}

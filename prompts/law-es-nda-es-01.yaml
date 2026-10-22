@@ -1,0 +1,52 @@
+id: law-es-nda-es-01
+lang: es
+translation_key: law-nda-redline
+title: Revisión de un acuerdo de confidencialidad contra la política del cliente (España)
+scenario: 'Cláusulas del NDA de la contraparte frente a las posiciones de tu cliente: tabla de incidencias, riesgo y redacción
+  alternativa, más lo que falta. Con la protección de datos en mente.'
+profession: lawyers
+task: lawyers.contract-drafting
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- ES
+prompt: 'Asistes al abogado de la parte indicada en el playbook. Revisa las cláusulas del acuerdo de confidencialidad frente
+  al playbook.
+
+  Entrega una tabla: Cláusula | Incidencia | Riesgo (Alto/Medio/Bajo) | Redacción alternativa propuesta.
+
+  Después, lista lo que falta según el playbook.
+
+  Redacción breve y coherente con el playbook. No asumas hechos; señala lo que debe decidir el abogado responsable. No cites
+  jurisprudencia.
+
+  Material:
+
+  [Pega las cláusulas del acuerdo y las posiciones (playbook) de tu cliente]
+
+  '
+sample_input: 'Nuestro cliente: Ejemplo Robótica, S.L. (ficticia), parte reveladora y receptora (acuerdo mutuo). Objeto: evaluar
+  un piloto conjunto.
+
+  Borrador de la contraparte:
+
+  Cl. 2 Información Confidencial: la marcada como "Confidencial" en el momento de su entrega.
+
+  Cl. 4 Duración: las obligaciones subsisten 1 año desde la entrega.
+
+  Cl. 6 Responsabilidad: la responsabilidad total de cada parte no excederá de 5.000 €.
+
+  Cl. 8 La parte receptora podrá compartir la información con cualquier sociedad de su grupo y con proveedores.
+
+  Cl. 9 Ley aplicable: española; tribunales de Madrid.
+
+  Playbook: incluir información oral/visual si se resume por escrito en 30 días; duración 3 años y secretos empresariales
+  mientras conserven tal condición; sin límite de responsabilidad por incumplimiento de confidencialidad; terceros solo con
+  necesidad de conocer y obligados por escrito a confidencialidad equivalente; si se intercambian datos personales, cláusula
+  conforme al RGPD (encargo de tratamiento si procede); ley española y Madrid aceptables; devolución/destrucción a solicitud.
+
+  '
+page: https://aiprofessions.ai/es/abogados/prompts/#law-es-nda-es-01
+results_file: results/law-es-nda-es-01.yaml

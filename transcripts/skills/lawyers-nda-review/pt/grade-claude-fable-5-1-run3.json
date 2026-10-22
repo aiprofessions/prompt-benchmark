@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:51:16+00:00",
+ "attempt": 1,
+ "skill_sha256": "0d2f4575271d3ab70f34df0bfd0aee6c0b61a6407e3e76b733f4a656d93dc158",
+ "rubric_sha256": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Aponta a finalidade ampla da Cl. 3 e propõe uso exclusivamente para avaliar uma integração de sistemas."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aponta a insuficiência da Cl. 5 e propõe três anos, preservando o sigilo dos segredos comerciais enquanto mantiverem essa condição."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Aponta a retenção indefinida da Cl. 8 e propõe devolução ou destruição mediante solicitação, incluindo cópias e declaração escrita."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e mantém Cl. 1 e 7 sem alteração."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta minuta para revisão, reserva verificações e decisões ao advogado responsável e não inventa autoridades, artigos ou citações jurídicas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Aponta a finalidade ampla da Cl. 3 e propõe uso exclusivamente para avaliar uma integração de sistemas.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aponta a insuficiência da Cl. 5 e propõe três anos, preservando o sigilo dos segredos comerciais enquanto mantiverem essa condição.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Aponta a retenção indefinida da Cl. 8 e propõe devolução ou destruição mediante solicitação, incluindo cópias e declaração escrita.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e mantém Cl. 1 e 7 sem alteração.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta minuta para revisão, reserva verificações e decisões ao advogado responsável e não inventa autoridades, artigos ou citações jurídicas.\"}]}"
+}

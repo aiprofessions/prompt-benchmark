@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-plan-seguridad-es-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye las cuatro actividades en tabla con riesgos, medidas y responsables propuestos; no supera las 660 palabras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Marca explícitamente como críticos las caídas de altura en encofrado y andamio y la caída de carga en el izado."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Rechaza sustituir redes por vigilancia, mantiene redes y barandillas y exige que las alternativas no disminuyan la protección prevista."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explica relación plan-estudio, aprobación previa por Ana Exemplo y aprobación expresa de modificaciones; rechaza iniciar el encofrado antes de aprobar el plan."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa hechos ni normativa; deja pendientes capacidad de grúa y adecuación del corte, no garantiza cumplimiento y exige revisión y firma previas."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-en-xlookup-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "XLOOKUP with Clients!$A$2:$A$6/$B$2:$B$6, relative B2, \"Not found\" if_not_found; IFERROR/VLOOKUP alternative also correct."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Lists only row 7, INV-1006, C-118, and states it is the only one."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "SUMIF over B2:B13 for \"C-104\" summing C2:C13; states 6,156.00 with correct components."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explanation present, approximately 95 words, within the 120-word limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No name invented for C-118; note says confirm typo or missing client. All figures come from or are computed from the tables."
+  }
+ ]
+}

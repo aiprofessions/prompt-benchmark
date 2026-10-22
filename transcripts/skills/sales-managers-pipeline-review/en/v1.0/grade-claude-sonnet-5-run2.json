@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:23:42+00:00",
+ "attempt": 1,
+ "skill_sha256": "4a6b2f2bc158740a377dcf2b462eaa55ad32e955efd247262dfb2c26181e8905",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Withholds the weighted forecast instead of reporting $247,000, although individual weighted amounts and Elm's exclusion are correct."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Withholds the quota gap rather than reporting $153,000."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags Bluefin's 39-day inactivity and identifies Orion's CFO-only contact coverage, asking how additional stakeholders are being engaged."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar's January 10 close date as past while the deal remains unsigned."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides coaching questions for every flagged deal and distinguishes missing information and assumptions from supplied deal facts."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Withholds the weighted forecast instead of reporting $247,000, although individual weighted amounts and Elm's exclusion are correct.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Withholds the quota gap rather than reporting $153,000.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags Bluefin's 39-day inactivity and identifies Orion's CFO-only contact coverage, asking how additional stakeholders are being engaged.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar's January 10 close date as past while the deal remains unsigned.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides coaching questions for every flagged deal and distinguishes missing information and assumptions from supplied deal facts.\"}]}"
+}

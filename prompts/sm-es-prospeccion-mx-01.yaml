@@ -1,0 +1,42 @@
+id: sm-es-prospeccion-mx-01
+lang: es
+translation_key: sm-cold-email
+title: Secuencia de 3 correos de prospección B2B con baja voluntaria (México)
+scenario: 'Datos de la cuenta y pruebas aprobadas: tres correos personalizados sin cifras inventadas, con opción clara para
+  dejar de recibir mensajes y aviso de privacidad.'
+profession: sales-managers
+task: sales-managers.outreach
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- MX
+prompt: 'Escribe una secuencia de 3 correos de prospección (día 1, día 4 y día 10) para el prospecto de abajo, en español
+  de México, trato de "usted".
+
+  Cada correo: asunto (máx. 6 palabras) y cuerpo (máx. 110 palabras). Una sola petición por correo.
+
+  Reglas: usa solo los datos y pruebas de las notas, sin inventar cifras, clientes ni resultados. Personaliza con las notas.
+  Incluye en cada correo una línea para dejar de recibir mensajes y un enlace a su aviso de privacidad (usa [ENLACE AVISO
+  DE PRIVACIDAD]). Sin urgencia falsa.
+
+  Notas:
+
+  [Pega tu propuesta de valor, el rol y datos de la empresa prospecto y las pruebas que puedes usar]
+
+  '
+sample_input: 'Nuestro producto: Rutas Ejemplo (ficticio), software de planeación de rutas para flotas de reparto de última
+  milla.
+
+  Prueba aprobada: "Nuestros clientes suelen reducir la planeación de rutas de horas a minutos" (no hay porcentajes aprobados).
+
+  Prospecto: Andrea Muestra, Directora de Operaciones, Abarrotes Muestra (ficticia), 45 camionetas en Monterrey y Saltillo.
+
+  Disparador: anunciaron apertura en Querétaro en el primer trimestre de 2027 (comunicado de prensa).
+
+  Andrea habló en un foro sobre rotación de choferes el mes pasado.
+
+  '
+page: https://aiprofessions.ai/es/gerentes-de-ventas/prompts/#sm-es-prospeccion-mx-01
+results_file: results/sm-es-prospeccion-mx-01.yaml

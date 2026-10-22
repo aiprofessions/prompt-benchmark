@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-reporte-diario-mx-01",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Personnel appears as indented lists, not a table. It shows subtotals of 12 and 14 without correcting to 12, and leaves the difference 'pendiente de verificación'."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States 35 m³ programmed, 28 m³ received, 7 m³ missing. Rebar complete per remisión 0000-EJ. No invented cause."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Records time, place, height, facts, stoppage, harness, lifeline check, 12:10 resumption and no injury. Classifies it as work at height."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Includes general data, weather, activities and all three pendientes. Flags missing data such as precipitation and the tramo dimension. About 450 words."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Marks the R. Muestra comment as unverified without attributing blame. Normative claim limited to the authorized definition. Includes a signature line."
+  }
+ ]
+}

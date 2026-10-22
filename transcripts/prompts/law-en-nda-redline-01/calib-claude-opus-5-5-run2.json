@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-nda-redline-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags marking-only §2 and proposes covering oral/visual disclosures summarized in writing within 30 days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §4 one-year term; proposes three years plus trade-secret protection for as long as they remain trade secrets."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "§6 cap and §7 residuals both rated High; proposes no cap for confidentiality breaches and deleting §7 entirely."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifies missing return/destruction and injunctive relief; treats Delaware law as acceptable, no change."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No case law or citations; brackets open terms and lists judgment calls for the supervising attorney."
+  }
+ ]
+}

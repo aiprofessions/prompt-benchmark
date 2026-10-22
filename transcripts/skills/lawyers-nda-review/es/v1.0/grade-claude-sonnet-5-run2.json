@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:19:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "6d346a4ad27c8e7ce9691097288405e614773dece2a879e7090aa2dfb0183018",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Señala la cláusula 3 y propone uso exclusivo para el Propósito de evaluar la integración tecnológica."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala la cláusula 5 y propone tres años desde la firma, con protección de secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala la cláusula 8 y propone devolución o destrucción a solicitud de la Reveladora, incluyendo copias y constancia por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ambas previsiones faltantes, condiciona datos personales a su transferencia y declara conformes las cláusulas 1 y 7, sin cambios."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Aunque presenta un borrador sujeto al abogado, introduce una cita no sustentada al Amparo directo 6/2025 sobre IA; no puede confirmarse que no invente citas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Señala la cláusula 3 y propone uso exclusivo para el Propósito de evaluar la integración tecnológica.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Señala la cláusula 5 y propone tres años desde la firma, con protección de secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala la cláusula 8 y propone devolución o destrucción a solicitud de la Reveladora, incluyendo copias y constancia por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ambas previsiones faltantes, condiciona datos personales a su transferencia y declara conformes las cláusulas 1 y 7, sin cambios.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Aunque presenta un borrador sujeto al abogado, introduce una cita no sustentada al Amparo directo 6/2025 sobre IA; no puede confirmarse que no invente citas.\"}]}"
+}

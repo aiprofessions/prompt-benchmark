@@ -1,0 +1,85 @@
+id: cm-pt-diario-obra-01
+lang: pt
+translation_key: cm-daily-report
+title: Diário de obra (RDO) do dia a partir das anotações do mestre de obras
+scenario: 'Cole as anotações do mestre de obras e receba o RDO do dia: clima, efetivo somado por função, serviços, materiais,
+  ocorrências de segurança e pendências, sem fatos inventados.'
+profession: construction-managers
+task: construction-managers.site-reports
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Prepare uma minuta do diário de obra (RDO) de uma obra residencial no Brasil, com base nas anotações abaixo, em no
+  máximo 450 palavras.
+
+  1. Cabeçalho: obra, data, responsável pelas anotações e condições do tempo por período (manhã/tarde), com impacto informado
+  nos serviços.
+
+  2. Efetivo em tabela por função, com subtotal de próprios, subtotal de terceirizados e total. Mostre a soma e aponte eventuais
+  divergências em relação às anotações.
+
+  3. Serviços executados e materiais recebidos: preserve quantidades, unidades e informações de conferência; calcule e registre
+  eventuais diferenças entre o documentado e o recebido.
+
+  4. Ocorrências: registre os quase-acidentes como ocorrências de segurança, com fato, local, horário, existência ou ausência
+  de lesões e ações tomadas. Identifique relatos não confirmados como tais, sem tratá-los como causas comprovadas.
+
+  5. Pendências e próximos passos, cada um com responsável apenas se ele constar nas anotações.
+
+  6. "A verificar antes de assinar": liste dados ausentes e inconsistências; indique que a minuta deve ser revisada e assinada
+  pelo responsável técnico antes de seu uso como registro final.
+
+  Regras: use apenas as anotações e os cálculos derivados delas. Não invente números, datas, nomes, causas, leis, normas,
+  jurisprudência, prazos ou valores. Escreva "não informado" quando faltar um dado solicitado.
+
+  Anotações do dia:
+
+  [Cole as anotações do dia: obra, data, clima, efetivo por função, serviços, materiais, ocorrências e pendências. Anonimize
+  nomes, endereço, empresa e demais identificadores]
+
+  '
+sample_input: 'Obra: Residencial Jardim Exemplo (fictício), Rua Fictícia, 100. Construtora Exemplo Engenharia Ltda. (fictícia).
+
+  Data: 19/10/2026 (segunda). Anotações: Martin Exemple, mestre de obras.
+
+  Tempo: manhã sol. Tarde choveu das 15h às 16h30, paramos o assentamento de bloco na área externa nesse período.
+
+  Efetivo:
+
+  - pedreiros 6
+
+  - serventes 8
+
+  - carpinteiros 4
+
+  - armadores 3
+
+  - eletricista 1
+
+  - encanador 1
+
+  - mestre (eu) 1
+
+  - impermeabilização (terceirizada Impermeabiliza Exemplo, fictícia) 2
+
+  Total hoje: 28
+
+  Serviços: forma e armação da laje do 3º pavimento (lado A, uns 70%). Alvenaria de bloco 2º pav. Eletroduto embutido no 2º
+  pav. Impermeabilização da caixa d''água inferior.
+
+  Materiais recebidos: cimento CP II 120 sacos de 50 kg (a NF fala 150 sacos, conferimos 120, faltou). Aço CA-50 10 mm, 1,2
+  t. Bloco cerâmico 3.000 un.
+
+  Ocorrência: 10h20, Ana Exemplo (técnica de segurança) viu o armador J. Exemplo trabalhando na periferia da laje do 3º sem
+  cinto preso. Ninguém se feriu. Ela parou a atividade na hora, ele desceu, foi orientado e só voltou com o cinto preso na
+  linha de vida. O servente Bruno Exemplo disse que "talvez a linha de vida tinha sido tirada de manhã", mas ninguém confirmou.
+
+  Pendências: cobrar fornecedor dos 30 sacos que faltaram. Concretagem da laje do 3º: falta confirmar data com a concreteira.
+  Ana vai fazer o registro da ocorrência.
+
+  '
+page: https://aiprofessions.ai/pt/gestores-de-obras/prompts/#cm-pt-diario-obra-01
+results_file: results/cm-pt-diario-obra-01.yaml

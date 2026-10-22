@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-fr-relance-dsn-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tous les éléments attendus sont correctement attribués ; le RIB est indiqué déjà reçu et à redéposer, sans redemander planning ni congés."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "La date limite interne du jeudi 22/10/2026 à 12 h et le dépôt sur l’espace client sécurisé sont explicitement indiqués."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L’interdiction couvre explicitement les trois catégories sensibles et les deux canaux non sécurisés ; aucune donnée bancaire, numéro ou identifiant n’est reproduit."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucun fait ni règle inventé ; aucune échéance légale ou pénalité donnée. Le post-it non vérifié et la validation obligatoire restent en note interne."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "E-mail avec objet, vouvoiement et puces, sous 198 mots ; note distincte de cinq puces signalant le RIB reçu par messagerie et son redépôt sécurisé."
+  }
+ ]
+}

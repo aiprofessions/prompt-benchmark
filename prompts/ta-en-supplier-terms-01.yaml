@@ -1,0 +1,51 @@
+id: ta-en-supplier-terms-01
+lang: en
+translation_key: ta-supplier-terms
+title: 'Supplier cancellation terms: dated penalty schedule for the client'
+scenario: Turn a hotel group contract's cancellation and attrition terms into a dated penalty schedule with computed amounts,
+  then a plain-English summary for the client.
+profession: travel-agents
+task: travel-agents.supplier-terms
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'From the supplier terms below:
+
+  1. Build a table: Cancel on or after (date) | Penalty | Amount (computed from the booking value).
+
+  2. Compute the attrition allowance (how many rooms can be released without penalty and by when).
+
+  3. Write a 120-word plain-English summary for the client.
+
+  4. List ambiguities to clarify with the supplier in writing.
+
+  Show arithmetic; compute dates from the arrival date; do not assume terms not written.
+
+  Terms:
+
+  [Paste the supplier''s cancellation/attrition clauses, booking value and arrival date]
+
+  '
+sample_input: 'Hotel: Example Harbor Hotel (fictional). Group block: 20 rooms x 4 nights, arrival June 10, 2027. Total room
+  revenue: $36,000.
+
+  Deposit: 25% non-refundable at signing.
+
+  Cancellation of the whole group:
+
+  - 60 or more days before arrival: deposit retained only.
+
+  - 59–30 days before arrival: 50% of total room revenue.
+
+  - 29 days or fewer: 100% of total room revenue.
+
+  Attrition: client may reduce the block by up to 10% without penalty until 45 days before arrival.
+
+  "Taxes may apply." (no rate given)
+
+  '
+page: https://aiprofessions.ai/travel-agents/prompts/#ta-en-supplier-terms-01
+results_file: results/ta-en-supplier-terms-01.yaml

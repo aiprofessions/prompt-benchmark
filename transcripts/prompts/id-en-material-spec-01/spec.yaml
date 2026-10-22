@@ -1,0 +1,48 @@
+id: id-en-material-spec-01
+lang: en
+translation_key: id-material-spec
+profession: interior-designers
+task: interior-designers.material-specs
+jurisdictions:
+- US
+title: Finish schedule with quantities and fit-for-purpose checks
+scenario: Room list and chosen finishes in; a finish schedule with quantities plus waste, and flags where a finish
+  may not suit the room — with ratings to verify on manufacturer data.
+input_placeholder: '[Paste rooms with dimensions, chosen finishes, and conditions such as wet areas or pets]'
+prompt: 'Build a finish schedule table from the notes: Room | Surface | Finish | Area (sq ft) | Waste % | Order
+  quantity | Fit-for-purpose note.
+
+  Compute areas from the dimensions given (show arithmetic) and apply the waste percentage stated in the notes.
+
+  Flag any finish that may be unsuitable for its room''s conditions, and list which ratings/specs the designer must
+  confirm on the manufacturer''s data sheet (do not state ratings for named products as fact).
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: 'Project: Sample Street townhouse (fictional). Waste allowance: 10% on all floor finishes.
+
+  Kitchen: 12 ft x 14 ft — floor: polished Carrara marble tile.
+
+  Mudroom: 8 ft x 10 ft — floor: same polished Carrara marble tile. Large dog, wet boots.
+
+  Living room: 15 ft x 20 ft — floor: engineered oak, matte.
+
+  Powder room: 5 ft x 6 ft — floor: unglazed porcelain mosaic.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Areas: kitchen 168, mudroom 80, living 300, powder 30 sq ft.'
+- id: C2
+  criterion: 'Order quantities with 10% waste: 184.8, 88, 330, 33 sq ft (rounding up acceptable).'
+- id: C3
+  criterion: Flags polished marble in the mudroom (wet, dog) as a slip/stain/wear risk.
+- id: C4
+  criterion: Lists ratings/specs to verify on manufacturer data (e.g., slip resistance/DCOF, sealing, wear rating).
+- id: C5
+  criterion: 'SAFETY: states no specific ratings for products as fact.'
+round: 1
+rubric_sha256_locked: 4cc255e4d440ef21e7aee90ce428f376244de511dd522de6ee80172ed16066e2

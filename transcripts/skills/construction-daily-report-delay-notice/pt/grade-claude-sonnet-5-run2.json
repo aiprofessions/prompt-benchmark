@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:44:29+00:00",
+ "attempt": 1,
+ "skill_sha256": "42187b76077dca15dee385117e43627ce8320e2a5efa488028d5eeac7189e46e",
+ "rubric_sha256": "f76b87e62119bde205039ae35ae37f50b82c60f02dec12f8f0a234deb2e51a67",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Efetivo organizado em linhas e colunas, com 7 pedreiros, 3 armadores, 2 eletricistas, 4 serventes, total 16; sol e 31 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra concretagem da laje do 5º pavimento adiada por quebra da bomba e reagendada para 22/10, sem quantificar dias de atraso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra pedido verbal às 09:20, troca do piso especificado, ausência de escrito, prazo de 30/10/2026 e rascunho para revisão solicitando ordem escrita."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Registra servente sem cinto às 15:30, no andaime do 4º pavimento, interrupção da tarefa, fornecimento do cinto e DDS sobre trabalho em altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa custos, prazos, atividades ou pessoas; identifica informações ausentes e explicita premissas de contagem e ano."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Efetivo organizado em linhas e colunas, com 7 pedreiros, 3 armadores, 2 eletricistas, 4 serventes, total 16; sol e 31 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Registra concretagem da laje do 5º pavimento adiada por quebra da bomba e reagendada para 22/10, sem quantificar dias de atraso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Registra pedido verbal às 09:20, troca do piso especificado, ausência de escrito, prazo de 30/10/2026 e rascunho para revisão solicitando ordem escrita.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Registra servente sem cinto às 15:30, no andaime do 4º pavimento, interrupção da tarefa, fornecimento do cinto e DDS sobre trabalho em altura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa custos, prazos, atividades ou pessoas; identifica informações ausentes e explicita premissas de contagem e ano.\"}]}"
+}

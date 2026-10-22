@@ -1,0 +1,542 @@
+{
+ "prompt_id": "xl-es-buscarx-mx-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "La fórmula de B3 usa BUSCARX (nombre en español) buscando Resumen!B2 en la columna de RFC de Facturas y devolviendo la columna Cliente, con \"No encontrado\" como cuarto argumento (o SI.ERROR alrededor). Se acepta INDICE/COINCIDIR con SI.ERROR. No vale XLOOKUP/VLOOKUP en inglés."
+  },
+  {
+   "id": "C2",
+   "criterion": "La fórmula de B4 usa SUMAR.SI.CONJUNTO (en español) sobre la columna Subtotal con dos criterios: RFC = B2 y Estado = \"Pendiente\"."
+  },
+  {
+   "id": "C3",
+   "criterion": "Indica que B4 devuelve 1760.00 (640.00 + 1120.00; la F-2026-036 está pagada), IVA 281.60 (1760.00 × 0.16) y total 2041.60 (1760.00 + 281.60). Se aceptan formatos 1,760.00 / 2,041.60."
+  },
+  {
+   "id": "C4",
+   "criterion": "Las fórmulas usan la coma como separador de argumentos, como pidió el usuario (no punto y coma), y los importes usan punto decimal."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no menciona retenciones de ISR o IVA, otras tasas de IVA, ni afirma nada sobre el CFDI/timbrado o la validez de los RFC; ningún importe que no esté en la tabla o no se derive correctamente de ella."
+  }
+ ],
+ "rubric_sha256": "43a1c2c3aedc277e216be3fd3e9e306fb4dfb04e41bb223f2b9dc00e0c2fbfd2",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye una fórmula BUSCARX que busca B2 en RFC, devuelve Cliente y utiliza \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Subtotal con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica subtotal 1,760.00, IVA 281.60 y total 2,041.60; excluye correctamente la factura pagada F-2026-036."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Las fórmulas utilizan comas como separadores de argumentos y los importes presentan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes proceden de la tabla o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye una fórmula alternativa BUSCARX que busca B2 en RFC, devuelve Cliente y usa \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Subtotal, con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica B4 de 1,760.00, IVA de 281.60 y total de 2,041.60; excluye correctamente la factura pagada."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes provienen de la tabla o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Usa BUSCARX con B2, la columna RFC, la columna Cliente y \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Subtotal con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica subtotal 1760.00, IVA 281.60 y total 2041.60; excluye correctamente la factura pagada F-2026-036."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC. Los importes proceden de la tabla o se derivan correctamente."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa BUSCARV con SI.ERROR, no BUSCARX ni INDICE/COINCIDIR, que son las alternativas admitidas por el criterio."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Facturas!D2:D7 con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Corrige explícitamente su confusión inicial e indica B4 = 1760.00, IVA = 281.60 y total = 2041.60, excluyendo la factura pagada."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y los importes tienen punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes están en la tabla o se derivan correctamente."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa BUSCARV con SI.ERROR, no BUSCARX ni INDICE/COINCIDIR con SI.ERROR, que son las alternativas admitidas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Subtotal con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica correctamente subtotal pendiente de 1,760.00, IVA de 281.60 y total de 2,041.60."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Las fórmulas separan argumentos con comas y todos los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes proceden de la tabla o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Usa BUSCARV con SI.ERROR, no BUSCARX ni INDICE/COINCIDIR con SI.ERROR, las alternativas admitidas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Subtotal con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Indica 1120.00, 179.20 y 1299.20; excluye erróneamente la fila 3. Debía indicar 1760.00, 281.60 y 2041.60."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "El IVA de 179.20 y total de 1299.20 parten de excluir incorrectamente una factura pendiente; no se derivan correctamente de la tabla."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses BUSCARV with SI.ERROR. The criterion requires BUSCARX or INDICE/COINCIDIR; BUSCARV is not listed as accepted."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO over Facturas!D2:D7 with criteria RFC=B2 and Estado=\"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States 1760.00, IVA 281.60, total 2041.60, and notes the paid 415.80 invoice is excluded."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Comma argument separators throughout; amounts use decimal point."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No retentions, other rates, CFDI or RFC validity claims; all amounts derived correctly from the table."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses BUSCARV with SI.ERROR; the criterion accepts only BUSCARX or INDICE/COINCIDIR, and BUSCARV is not listed as acceptable."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO sums Facturas!D2:D7 with criteria RFC = B2 and Estado = \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States 1760.00, IVA 281.60, total 2041.60, and explains why the paid 415.80 invoice is excluded."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Both formulas use commas as argument separators; amounts use decimal points."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No retentions, other rates, CFDI or RFC validity claims; all amounts come from or derive correctly from the table."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses BUSCARV with SI.ERROR; the criterion requires BUSCARX, or accepts only INDICE/COINCIDIR with SI.ERROR as the alternative."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO sums Facturas!D2:D7 with criteria RFC=B2 and Estado=\"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Gives 1760.00, IVA 281.60 and total 2041.60, and notes the paid 415.80 invoice is excluded."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Formulas use comma separators; amounts use decimal points."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No retentions, other IVA rates, CFDI or RFC validity claims; all amounts come from the table."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye una fórmula alternativa con BUSCARX que busca B2 en RFC, devuelve Cliente y usa \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Facturas!D2:D7 con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica subtotal 1,760.00, IVA 281.60 y total 2,041.60; excluye correctamente la factura pagada F-2026-036."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes provienen de la tabla o se derivan correctamente."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye una alternativa aceptada con INDICE/COINCIDIR y SI.ERROR, buscando B2 en RFC y devolviendo Cliente o \"No encontrado\"."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Facturas!D2:D7 con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica B4 = 1760.00, IVA = 281.60 y total = 2041.60; excluye correctamente la factura pagada F-2026-036."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes proceden de la tabla o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye INDICE/COINCIDIR con SI.ERROR y BUSCARX con \"No encontrado\" como cuarto argumento; ambas buscan el RFC y devuelven Cliente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Facturas!D2:D7 con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica B4 de 1,760.00, IVA de 281.60 y total de 2,041.60; excluye correctamente la factura pagada de 415.80."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y todos los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes provienen de la tabla o se calculan correctamente."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye BUSCARX con B2 como búsqueda, columna RFC como rango, columna Cliente como devolución y \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Facturas!D2:D7 con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica subtotal 1760.00, IVA 281.60 y total 2041.60; excluye correctamente la factura pagada de 415.80."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, tasas adicionales, CFDI, timbrado ni validez de RFC; todos los importes provienen de la tabla o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "BUSCARX busca B2 en Facturas!B2:B7, devuelve Cliente desde C2:C7 y usa \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "SUMAR.SI.CONJUNTO suma Facturas!D2:D7 con los criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica subtotal 1760.00, IVA 281.60 y total 2041.60; excluye explícitamente la factura pagada de la fila 7."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas utilizan comas como separadores de argumentos y los importes muestran punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, otras tasas, CFDI, timbrado ni validez de RFC; todos los importes proceden de la tabla o están correctamente calculados."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye BUSCARX con B2, el rango de RFC, la columna Cliente y \"No encontrado\" como cuarto argumento."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Usa SUMAR.SI.CONJUNTO sobre Facturas!D2:D7 con criterios RFC igual a B2 y Estado igual a \"Pendiente\"."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica B4 de 1760.00, IVA de 281.60 y total de 2041.60; excluye correctamente la factura pagada."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Todas las fórmulas usan comas como separadores de argumentos y los importes usan punto decimal."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona retenciones, tasas adicionales, CFDI, timbrado ni validez de RFC; todos los importes corresponden a datos o cálculos correctos."
+    }
+   ],
+   "transcript": "prompts/xl-es-buscarx-mx-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

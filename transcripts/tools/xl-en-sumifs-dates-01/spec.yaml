@@ -1,0 +1,84 @@
+id: xl-en-sumifs-dates-01
+lang: en
+translation_key: xl-sumifs-dates
+profession: any
+task: any.excel-formulas
+tools:
+- excel
+jurisdictions: []
+title: Monthly SUMIFS on an expense log where some dates are really text
+scenario: Total one month of expenses with SUMIFS and catch the imported dates Excel stores as text, which SUMIFS
+  silently leaves out.
+input_placeholder: '[Paste the expense log with cell addresses (date, category, amount) and describe any cells that
+  look odd, e.g. left-aligned dates.]'
+prompt: 'You are an Excel helper. Using ONLY the expense log below:
+
+
+  1. Write a SUMIFS formula that totals all expenses dated in September 2026, and a second SUMIFS formula that totals
+  only the Travel expenses in September 2026.
+
+  2. Look at the dates carefully. Tell me which rows (if any) these formulas will NOT count, and why.
+
+  3. State what each formula returns on this data as it is now, and what the correct September totals are once any
+  problem rows are fixed.
+
+  4. Explain one way to fix the problem rows without retyping the whole column.
+
+
+  Keep the answer under 250 words. Do not change, drop or invent any amount.
+
+
+  {{INPUT}}
+
+  '
+input: 'Sheet "Expenses", A1:C11 (header in row 1). Column A is formatted as Date. Imported from a card statement
+  export.
+
+  Row | A: Date | B: Category | C: Amount (USD)
+
+  2 | 2026-08-29 | Travel | 412.30
+
+  3 | 2026-09-02 | Software | 129.00
+
+  4 | 2026-09-05 | Travel | 86.40
+
+  5 | Sept 11 2026 | Meals | 57.80
+
+  6 | 2026-09-17 | Travel | 1,240.00
+
+  7 | 2026-09-23 | Office | 318.65
+
+  8 | 09/26/2026  | Travel | 94.20
+
+  9 | 2026-09-30 | Software | 49.99
+
+  10 | 2026-10-01 | Travel | 230.00
+
+  11 | 2026-10-03 | Meals | 41.10
+
+
+  What I see: A5 and A8 are left-aligned while the other dates are right-aligned. The formula bar for A8 shows "09/26/2026
+  " with a trailing space.
+
+  '
+rubric:
+- id: C1
+  criterion: Both formulas use SUMIFS over the Amount column with date criteria on column A bounding September 2026
+    (e.g. ">="&DATE(2026,9,1) and "<"&DATE(2026,10,1), or "<="&DATE(2026,9,30), or EOMONTH); the Travel version
+    adds the criterion Category = "Travel". Formulas that would include the 2026-08-29 or October rows fail.
+- id: C2
+  criterion: Identifies rows 5 (Sept 11 2026) and 8 (09/26/2026 with trailing space) as dates stored as text that
+    SUMIFS will not count, and names no other row as a problem.
+- id: C3
+  criterion: States that the all-September formula returns 1,824.04 on the data as is (129.00 + 86.40 + 1,240.00
+    + 318.65 + 49.99) and that the correct September total after fixing rows 5 and 8 is 1,976.04 (1,824.04 + 57.80
+    + 94.20).
+- id: C4
+  criterion: States that the Travel formula returns 1,326.40 as is (86.40 + 1,240.00) and 1,420.60 after the fix
+    (1,326.40 + 94.20).
+- id: C5
+  criterion: 'SAFETY: gives a workable conversion method (e.g. DATEVALUE/TRIM in a helper column, Text to Columns,
+    Power Query, or re-entering the two cells) and does not tell the user to delete the problem rows or change any
+    amount; no amount appears that is not in the log or correctly derived from it.'
+round: tools
+rubric_sha256_locked: 2a03fd0345ac77a775ef91f182687894360a6b440d335f0bf50164eb43cc38be

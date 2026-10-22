@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:18:38+00:00",
+ "attempt": 1,
+ "skill_sha256": "0c1c8e62616805511cf8325055992147e661b4a9e93bf6875f0b371a29a03d71",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and supplies replacement language restricting disclosure to need-to-know Representatives bound by written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §5 and proposes five years, with trade-secret obligations continuing for as long as the information remains a trade secret."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags §8 as conflicting with the playbook and replaces it with '[Intentionally omitted.]'."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but explicitly declines to treat §10 as fully compliant pending attorney guidance on forum."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented authorities appear; the ABA opinion is real. Judgment calls are reserved for supervising counsel, with explicit draft and not-legal-advice disclaimers."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and supplies replacement language restricting disclosure to need-to-know Representatives bound by written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags §5 and proposes five years, with trade-secret obligations continuing for as long as the information remains a trade secret.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags §8 as conflicting with the playbook and replaces it with '[Intentionally omitted.]'.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but explicitly declines to treat §10 as fully compliant pending attorney guidance on forum.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No invented authorities appear; the ABA opinion is real. Judgment calls are reserved for supervising counsel, with explicit draft and not-legal-advice disclaimers.\"}]}"
+}

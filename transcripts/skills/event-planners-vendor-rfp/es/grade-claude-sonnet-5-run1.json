@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:16:05+00:00",
+ "attempt": 1,
+ "skill_sha256": "3a4c08583cf16645cf8a45cfcf90f60600dd4eba87e7e284751fbfb3fe93c986",
+ "rubric_sha256": "f8484832ec8b99d2b8c1e83a23a5e10d3c77bc11ebb4e159ee01dab1dfc58df0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye exactamente 180 invitados, los cuatro conteos dietéticos y los horarios 18:00–19:00, 20:00 y 00:30."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicita que no hay cocina, solo área de servicio con agua y 110 V, y excluye bebidas alcohólicas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Solicita protocolo escrito de manejo de alérgenos y prevención de contacto cruzado para mariscos y gluten."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Solicita alimentos, personal, traslado, montaje e IVA separados; incluye ambas fechas correctas y criterios de evaluación propuestos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa presupuesto, precios, nombres, contactos ni capacidades del lugar; señala los datos desconocidos como POR CONFIRMAR."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye exactamente 180 invitados, los cuatro conteos dietéticos y los horarios 18:00–19:00, 20:00 y 00:30.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Explicita que no hay cocina, solo área de servicio con agua y 110 V, y excluye bebidas alcohólicas.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Solicita protocolo escrito de manejo de alérgenos y prevención de contacto cruzado para mariscos y gluten.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Solicita alimentos, personal, traslado, montaje e IVA separados; incluye ambas fechas correctas y criterios de evaluación propuestos.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa presupuesto, precios, nombres, contactos ni capacidades del lugar; señala los datos desconocidos como POR CONFIRMAR.\"}]}"
+}

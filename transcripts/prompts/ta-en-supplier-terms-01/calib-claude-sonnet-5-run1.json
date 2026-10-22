@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-en-supplier-terms-01",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Deposit $9,000, 50% tier $18,000, 100% tier $36,000, each with arithmetic shown."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Apr 11, May 11 and May 12, 2027 are correct, with day-count arithmetic shown."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "2 rooms (10% of 20) releasable by Apr 26, 2027; correct, with arithmetic shown."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Flags deposit netting, tax rate/base, rooms vs nights, and notice timing as written clarifications."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No tax rate invented; tax items raised only as questions; summary about 106 words, within limit."
+  }
+ ]
+}

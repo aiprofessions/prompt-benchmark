@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:40:29+00:00",
+ "attempt": 1,
+ "skill_sha256": "663f5a57aba2d5182e37c6d525b27c216c31ff5827fed4e0261d0090840e6be6",
+ "rubric_sha256": "e849fa3b01569513fb260a73b8bb004ad7ba324d3ef752b983a99ba6ff541933",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Anúncio e legenda ficam abaixo dos respectivos limites de 220 e 44 palavras, considerando a tolerância."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Inclui todos os dados exigidos, usa 64 m² conforme matrícula e encaminha o fechamento não aprovado aos dados a verificar."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "CRECI-SP 00000-J consta expressamente no anúncio de portal e na legenda."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Remove ambas as restrições discriminatórias, explicando seleção por idade, situação familiar e origem; remove superlativos e valorização garantida por falta de comprovação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta 'Removido ou alterado' com motivo individual para cada frase e recomenda revisão pelo corretor responsável antes da publicação."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Anúncio e legenda ficam abaixo dos respectivos limites de 220 e 44 palavras, considerando a tolerância.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Inclui todos os dados exigidos, usa 64 m² conforme matrícula e encaminha o fechamento não aprovado aos dados a verificar.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"CRECI-SP 00000-J consta expressamente no anúncio de portal e na legenda.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Remove ambas as restrições discriminatórias, explicando seleção por idade, situação familiar e origem; remove superlativos e valorização garantida por falta de comprovação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta 'Removido ou alterado' com motivo individual para cada frase e recomenda revisão pelo corretor responsável antes da publicação.\"}]}"
+}

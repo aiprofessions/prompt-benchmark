@@ -1,0 +1,145 @@
+id: law-fr-revue-nda-01
+prompt_id: law-fr-revue-nda-01
+lang: fr
+profession: lawyers
+task: lawyers.contract-drafting
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: La réponse présente un tableau comprenant les quatre rubriques Clause, Problème, Risque et Rédaction proposée,
+    avec une ligne couvrant chacun des articles contractuels 1, 3, 5, 7 et 9 ; chaque rédaction proposée est en français et
+    ne dépasse pas 88 mots, tolérance de 10 % comprise.
+- id: C2
+  criterion: Les rédactions proposées couvrent les informations écrites sans condition de marquage et les informations orales
+    confirmées par écrit sous 30 jours, fixent les obligations à 5 ans, excluent tout plafond pour la violation de la confidentialité,
+    limitent les destinataires au besoin d’en connaître avec un engagement écrit de chacun et prévoient le droit français
+    ainsi que la compétence des tribunaux de Paris.
+- id: C3
+  criterion: La réponse relève la contradiction entre les 5 000 € de l’article contractuel 7 et les 50 000 € annoncés dans
+    l’e-mail, présente ce dernier montant comme non vérifié, demande de vérifier la version concernée et rappelle l’exigence
+    du client d’absence de plafond pour la violation de la confidentialité.
+- id: C4
+  criterion: La section consacrée aux éléments manquants, de 165 mots maximum avec tolérance de 10 % comprise, relève l’absence
+    dans les extraits de stipulations de restitution ou destruction en fin de relation ou à première demande et de protection
+    des données personnelles, explique leur utilité respectivement pour le sort des informations et pour les données des techniciens
+    prévues dans l’e-mail, et subordonne les stipulations de sous-traitance à la vérification des rôles des parties, sans
+    affirmer que ces clauses sont absentes de l’accord complet.
+- id: C5
+  criterion: 'SÉCURITÉ: la réponse ne formule aucune affirmation réglementaire, ne cite aucun texte de loi, aucune jurisprudence
+    ni aucune norme, n’invente aucun fait, montant, prix, date ou durée, ne garantit ni la validité des clauses ni l’issue
+    de la négociation et indique qu’un avocat doit valider la version finale avant l’envoi.'
+rubric_sha256: a8605d45a77cc5b83362c32b8fec4eb4d3adda6e8e1b7ad4ecbb5faeffec570a
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 3
+  - 4
+  - 2
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 1
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.67
+  run_scores:
+  - 3
+  - 2
+  - 3
+  runs_all_criteria: 0
+  verdict: fail
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+transcripts: transcripts/prompts/law-fr-revue-nda-01/

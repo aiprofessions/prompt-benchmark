@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:05:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "e60e5b35d88c9d6f92cdb588668ceee4e5519cf62381364b6f01795d180f57a7",
+ "rubric_sha256": "fedca4f8577f197bd01ad603962a443ad542a8ef958d899feb9c939765c6c33a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "L’article 3 est signalé et réécrit pour exiger le besoin d’en connaître et une obligation écrite de confidentialité au moins équivalente."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’article 5 est identifié comme non conforme et une durée de cinq ans à compter de la signature est proposée."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La suppression intégrale de l’article 9 est proposée conformément à l’interdiction des clauses de non-sollicitation dans la politique."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les deux clauses manquantes sont identifiées et proposées, sous réserve du texte complet ; les articles 1 et 7 sont conformes sans modification."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune référence juridique inventée ; résultat présenté comme projet non constitutif de consultation juridique, avec arbitrages soumis à l’avocat responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"L’article 3 est signalé et réécrit pour exiger le besoin d’en connaître et une obligation écrite de confidentialité au moins équivalente.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’article 5 est identifié comme non conforme et une durée de cinq ans à compter de la signature est proposée.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La suppression intégrale de l’article 9 est proposée conformément à l’interdiction des clauses de non-sollicitation dans la politique.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Les deux clauses manquantes sont identifiées et proposées, sous réserve du texte complet ; les articles 1 et 7 sont conformes sans modification.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune référence juridique inventée ; résultat présenté comme projet non constitutif de consultation juridique, avec arbitrages soumis à l’avocat responsable.\"}]}"
+}

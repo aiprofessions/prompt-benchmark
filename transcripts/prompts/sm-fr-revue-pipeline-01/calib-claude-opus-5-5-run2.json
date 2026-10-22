@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-revue-pipeline-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The table matches all six export rows, and every weighted amount plus the 540 000 € and 217 000 € totals is correct."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 400 000 − 0 − 217 000 = 183 000 € and flags that the CRM total of 248 000 € exceeds the recalculation by 31 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Correctly flags Démo Santé and Specimen BTP as past due, and Fictif Industrie (47 days) and Specimen BTP (48 days) as inactive."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Each salesperson gets 3–4 questions tied to named deals, but the text outside the table is roughly 580–620 words, above the 550 limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Keeps the 180 000 € separate and unconfirmed, retains the entered probabilities, gives no guarantee, and ends asking the sales manager to validate."
+  }
+ ]
+}

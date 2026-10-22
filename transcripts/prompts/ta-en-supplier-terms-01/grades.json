@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ta-en-supplier-terms-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Deposit = $9,000; 50% tier = $18,000; 100% tier = $36,000."
+  },
+  {
+   "id": "C2",
+   "criterion": "Dates computed from June 10, 2027: 60 days before = April 11, 2027; 30 days before = May 11, 2027; 29 days = May 12, 2027 (±1 day if the counting rule is stated)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Attrition: up to 2 rooms (10% of 20) released without penalty until 45 days before arrival = April 26, 2027 (±1 day with stated rule)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Flags ambiguity (e.g., whether penalties are net of deposit, tax rate/base, counting rule, room-nights vs rooms) to clarify in writing."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: invents no tax rate or terms not written; client summary ~120 words or less (allow ±10%)."
+  }
+ ],
+ "rubric_sha256": "ed003cd74036c45a16762b5e15316e8b55a4d7a02e69e0b5d4183a223a86f399",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% tier as $18,000, and the 100% tier as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly gives April 11, May 11, and May 12, 2027, for 60, 30, and 29 days before arrival."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 10% of 20 rooms as 2 rooms, with an April 26, 2027 deadline, 45 days before arrival."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists written clarification questions covering deposit crediting, taxes, day counting, deadline inclusivity, and rooms versus room-nights."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Invents no tax rate or contractual terms; conditional scenarios are identified, and the client summary is approximately 120 words."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists April 11, May 11, and May 12, 2027 as the respective 60-, 30-, and 29-day dates."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 20 × 10% = 2 rooms and the 45-day deadline as April 26, 2027."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit credit, taxes, date counting, attrition basis, and other unspecified provisions."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Invents no tax rate or contractual terms; labels uncertain interpretations and conditional calculations. Client summary is approximately 121 words."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% tier as $18,000, and the 100% tier as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, using calendar days counted backward from arrival."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 10% of 20 as 2 rooms and identifies April 26, 2027, as the 45-day deadline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit crediting, taxes, deadline inclusivity, counting rules, and rooms versus room-nights."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Despite an earlier caveat, the attrition result asserts a $3,600 release value unsupported by the unspecified room rates. Summary length meets tolerance."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, with date arithmetic and cancellation brackets."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States that 10% of 20 rooms equals 2 rooms, releasable without penalty by April 26, 2027; shows deadline arithmetic."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists supplier clarification questions covering deposit credit, tax rate and base, attrition interpretation, notice timing, and cancellation scope."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Invents no tax rate or additional contractual terms; presents uncertain issues as questions. The client summary is approximately 109 words."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11 as 60 days before arrival, May 11 as 30 days before, and May 12 as 29 days before."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 10% of 20 rooms as 2 rooms and the 45-day attrition deadline as April 26, 2027."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly lists written clarifications concerning deposit offsets, tax rates and bases, counting rules, partial reductions, and other ambiguities."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "The summary assumes the deposit was already paid at signing; the supplied terms specify when it is due, not whether payment occurred."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, as 60, 30, and 29 days before arrival."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calculates 10% of 20 rooms as 2 rooms and correctly sets the penalty-free attrition deadline at April 26, 2027."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit offsets, tax rates and bases, room-versus-night attrition, and notice requirements."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary meets length limits, but invents payment timing ('paid now') and suggests post-deadline unused rooms are billed as attrition without stated terms."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table shows $9,000 deposit, $18,000 at 50%, and $36,000 at 100%, with arithmetic."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Dates are April 11, May 11 and May 12, 2027, correctly computed using a stated calendar-day rule."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Attrition is 2 rooms (20 × 10%) until April 26, 2027, computed correctly."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags deposit crediting, tax rates and base, inclusivity and counting, and rooms versus room-nights, all to clarify in writing."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No tax rate or extra terms invented; client summary is about 120 words."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows deposit $9,000, 50% tier $18,000, and 100% tier $36,000, with arithmetic for each."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly computes April 11, May 11, and May 12, 2027 from June 10, 2027."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 2 rooms (10% of 20) releasable without penalty until April 26, 2027, which is correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Flags deposit crediting, tax rate/base, deadline inclusivity, and rooms vs room-nights for written clarification."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No tax rate or unwritten terms invented; summary is about 121 words, within tolerance."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows 25%×$36,000=$9,000, 50%×$36,000=$18,000, and 100%×$36,000=$36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Lists April 11, May 11, and May 12, 2027, all correctly computed from June 10, 2027."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "10%×20=2 rooms; June 10, 2027 minus 45 days = April 26, 2027, correctly stated."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists deposit crediting, tax rate/base, date inclusivity, and rooms vs room-nights as written clarifications."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No tax rate or unwritten terms invented; summary is about 120 words."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% tier as $18,000, and the 100% tier as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, with explicit calendar-day arithmetic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calculates 10% of 20 rooms as 2 rooms and correctly gives the deadline as April 26, 2027."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit treatment, taxes, counting rules, attrition basis, and other uncertainties."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary meets the length limit, but the asserted $3,600 allowance value and $32,400 remaining revenue assume uniform pricing not specified in the terms."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% tier as $18,000, and the 100% tier as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly computes April 11, May 11, and May 12, 2027, using a stated calendar-day counting convention."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 10% of 20 rooms as 2 rooms and identifies April 26, 2027, as the attrition deadline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists written clarification questions covering deposit credit, taxes, counting rules, attrition basis, deadline inclusivity, and other unspecified conditions."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Although the summary meets the length limit, it instructs assuming full charges for unspecified attrition penalties and budgeting tax on every figure."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% tier as $18,000, and the 100% tier as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, as the 60-, 30-, and 29-day boundaries."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calculates 10% of 20 rooms as 2 rooms and correctly sets the 45-day deadline at April 26, 2027."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly lists deposit treatment, tax applicability, counting conventions, and rooms versus room-nights among ambiguities to confirm in writing."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary exceeds 132 words and instructs clients to assume payment for excess or late reductions despite no written charge being specified."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly calculates April 11, May 11, and May 12, 2027, as 60, 30, and 29 days before arrival."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calculates 10% of 20 rooms as two rooms and correctly identifies April 26, 2027, as the attrition deadline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit credits, tax applicability, attrition structure, cancellation bases, and deadline inclusivity."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Summary meets the length limit, but the output asserts a $3,600 commitment reduction without written terms establishing uniform room rates or revenue adjustment."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the $9,000 deposit, $18,000 50% penalty, and $36,000 100% penalty with arithmetic."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly identifies April 11, May 11, and May 12, 2027, as the 60-, 30-, and 29-day dates."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Computes 10% of 20 as two rooms across four nights, with the correct April 26, 2027 deadline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit crediting, taxes, attrition measurement, penalty bases, and deadline cutoffs."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Assumes revenue is before taxes and guarantees a $3,600 attrition reduction and interchangeable room-night allowance, although those terms are not established."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Correctly computes the deposit as $9,000, the 50% penalty as $18,000, and the 100% penalty as $36,000."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Correctly calculates April 11, May 11, and May 12, 2027, as the 60-, 30-, and 29-day boundaries."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Calculates 10% of 20 rooms as 2 rooms across four nights and correctly identifies April 26, 2027, as the deadline."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Explicitly requests written clarification of deposit crediting, tax applicability, attrition measurement, and deadline inclusivity."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Although the summary meets the length limit, it asserts an eight-room-night allowance and $3,600 revenue reduction without contractual confirmation."
+    }
+   ],
+   "transcript": "prompts/ta-en-supplier-terms-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

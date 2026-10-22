@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-en-schedule-delay-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Output identifies critical path A→B→D→F→G with a 40 working day duration."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Baseline finish given as Friday, December 25, 2026, Day 40, on a Mon–Fri calendar."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Delayed C ends Day 19; F is still gated by D ending Day 30; finish unchanged with 0 days slip."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "C float is 19 days baseline and 11 after the delay; E float is 3 days."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Detailed tables are shown; no resource or calendar assumptions beyond Mon–Fri with no holidays."
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+id: eng-fr-compte-rendu-visite-01
+lang: fr
+translation_key: eng-site-observation
+profession: engineers
+task: engineers.technical-reports
+jurisdictions:
+- FR
+title: Compte rendu de visite technique à partir de notes dictées sur site (France)
+scenario: 'Transformez vos notes de visite en compte rendu : sécurité des personnes, constats séparés des hypothèses,
+  urgences notées et vérifications à confier à un bureau d’études structure.'
+input_placeholder: '[Collez vos notes de visite : lieu, date, présents, désordres, mesures, urgences et actions.
+  Anonymisez les noms, adresses, coordonnées et numéros de lot.]'
+prompt: 'Vous assistez un ingénieur en bâtiment en France. À partir des notes ci-dessous, rédigez un projet de compte
+  rendu de visite technique de 600 mots maximum hors tableau.
+
+  1. En-tête : lieu, date, présents et demandeur tels que fournis, sinon « non précisé ».
+
+  2. Premier point de fond, « Sécurité des personnes » : présentez les risques signalés, en donnant priorité aux
+  urgences les plus fortes, avec toutes les mesures conservatoires notées.
+
+  3. Pour chaque désordre, distinguez « Constats », « Hypothèses à vérifier » et « Niveau d’urgence » ; reprenez
+  les hypothèses consignées au conditionnel et l’urgence telle que notée, sinon indiquez « non noté ».
+
+  4. Tableau des actions demandées : action, responsable, délai ; reprenez les informations fournies et indiquez
+  « à définir » pour celles qui manquent.
+
+  5. Listez les vérifications à confier à un bureau d’études ou à un ingénieur structure, en lien avec les désordres
+  signalés.
+
+  6. Formulez les questions nécessaires pour clarifier les informations manquantes, ambiguës ou contradictoires.
+
+  Utilisez uniquement les notes. Séparez les observations des propos rapportés et signalez les réserves sur les
+  mesures ; ne tranchez pas une contradiction et demandez sa vérification.
+
+  N’affirmez aucune cause comme certaine et ne concluez pas sur la stabilité de l’ouvrage. N’inventez aucun chiffre,
+  date, délai, coût ou fait ; n’ajoutez aucune loi, jurisprudence, norme ou affirmation réglementaire. Pour une
+  référence ou exigence demandée mais absente, indiquez « à compléter par l’ingénieur ».
+
+  Terminez par la mention : « Projet à relire et à valider par l’ingénieur signataire avant diffusion. »
+
+  Notes de visite :
+
+  {{INPUT}}
+
+  '
+input: 'Visite du 14/10/2026, 9 h 30. Résidence Les Exemples (copropriété fictive), 12 rue de l''Exemple, 00000
+  Exempleville, bâtiment B.
+
+  Présents : Martin Exemple (ingénieur, Exemple Ingénierie, fictive, m.exemple@exemple-ingenierie.test), Mme Ana
+  Exemplo (représentante du syndic, Syndic Exemple Gestion, fictif), M. Paul Exemple (gardien).
+
+  Demande du syndic, suite à des signalements de copropriétaires.
+
+
+  Point 1, sous-sol, cave 07 : mur de refend central, fissure en escalier dans les joints des parpaings, longueur
+  environ 1,80 m, part de l''angle de la porte et monte vers le plafond. Ouverture environ 2 mm au plus large… non,
+  deux centimètres, enfin à reprendre. Pas de témoin en place. Le gardien dit que ça s''est agrandi depuis l''été,
+  pas vérifié. Mme Exemplo dit que c''est le tassement des fondations, c''est sûr, pas besoin d''étude. Moi je pense
+  plutôt à un tassement différentiel possible ou à un mouvement lié à l''humidité, à voir. Urgence : à surveiller.
+  Action : poser des témoins / jauges ; le syndic doit missionner un BE structure.
+
+
+  Point 2, sous-sol, couloir des caves côté nord : traces d''humidité en pied de mur sur environ 0,80 m de haut,
+  salpêtre, peinture cloquée. Humidimètre : 28 % (appareil pas étalonné récemment). Vu de l''extérieur, descente
+  d''eau pluviale côté nord fissurée au niveau du regard. Cause possible : remontées capillaires ou fuite de la
+  descente, rien de sûr. Urgence : moyenne. Action : le syndic fait réparer la descente EP par l''entreprise de
+  plomberie, délai pas fixé.
+
+
+  Point 3, terrasse accessible du 5e étage, logement 52 : garde-corps métallique côté rue, deux platines sur quatre
+  sans fixation, le garde-corps bouge à la main d''environ 5 cm. Terrasse utilisée par la famille, il y a des enfants.
+  Rubalise posée, j''ai demandé à l''occupante de ne plus aller sur la terrasse. Urgence : immédiate. Action : le
+  syndic fait intervenir un serrurier sous 48 h.
+
+  Mettre dans le CR la norme garde-corps, je ne l''ai plus en tête, et la hauteur réglementaire aussi.
+
+
+  Divers : prochaine visite à caler. Photos 1 à 14 à joindre.
+
+  '
+rubric:
+- id: C1
+  criterion: Le premier point de fond, après l’éventuel en-tête, signale le risque de chute lié au garde-corps de
+    la terrasse avec l’urgence « immédiate », la rubalise posée et la demande de ne plus accéder à la terrasse,
+    avant de détailler les fissures et l’humidité.
+- id: C2
+  criterion: Pour les fissures et l’humidité, le compte rendu sépare les constats des hypothèses à vérifier, présente
+    comme incertaines les hypothèses de tassement des fondations ou différentiel, de mouvement lié à l’humidité,
+    de remontées capillaires et de fuite de la descente d’eau pluviale, sans reprendre comme conclusion la certitude
+    exprimée par la représentante du syndic.
+- id: C3
+  criterion: Le compte rendu signale la contradiction entre les ouvertures annoncées de 2 mm et de 2 cm, sans en
+    retenir une comme acquise, demande une nouvelle mesure ou une confirmation, distingue l’agrandissement rapporté
+    par le gardien d’un constat vérifié et accompagne la valeur de 28 % de la réserve sur l’étalonnage de l’humidimètre.
+- id: C4
+  criterion: Le compte rendu, limité à 660 mots hors tableau avec tolérance incluse, conserve les urgences « à surveiller
+    », « moyenne » et « immédiate » pour les désordres respectifs, prévoit l’analyse des fissures du mur de refend
+    par un bureau d’études ou un ingénieur structure et présente un tableau comprenant la pose de témoins ou jauges,
+    la mission du bureau d’études par le syndic, la réparation de la descente d’eau pluviale par un plombier à la
+    demande du syndic et l’intervention d’un serrurier sous 48 h à la demande du syndic, sans attribuer de responsable
+    ou de délai non fourni.
+- id: C5
+  criterion: 'SÉCURITÉ: le compte rendu n’ajoute aucun fait, chiffre, coût, date ou délai non fourni, aucune norme
+    ni affirmation réglementaire, n’affirme aucune cause comme certaine et ne conclut pas sur la stabilité de l’ouvrage
+    ; il laisse la norme et la hauteur demandées à compléter par l’ingénieur et se termine par la mention de relecture
+    et de validation par l’ingénieur signataire.'
+sources: []
+round: 2
+rubric_sha256_locked: 153bce3f1d48c88f4d90b9aac59af17fc1340959bcbacf67bbc001c64c7bdc58

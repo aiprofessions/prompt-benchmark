@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:59:32+00:00",
+ "attempt": 1,
+ "skill_sha256": "c1d805ecb9976ca07b271238cc45ba50605eac8f43c2c789ec54fc43f2328f52",
+ "rubric_sha256": "aafddc6b50a1ad3c79dd2ecc8149cb7d0708a2cb399a47887c29ebc0301f07fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Inclui todas as peças e quantidades solicitadas, com sofá de três lugares com chaise e aparador identificado como existente-reaproveitar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explicitamente o tapete de 3,2 m × 5,2 m, descontando 40 cm de cada lado."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exclui branco puro e veludo; exige verificações de abrasão, limpeza, tecidos, fixações e estabilidade considerando os gatos."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduz R$ 85.000 com frete e montagem; programa estofados para 21/12/2026, oito semanas mais margem de quatorze dias antes da montagem."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa marcas, modelos ou classificações técnicas; solicita verificação de desempenho e identifica todas as verbas como estimativas sujeitas a orçamento."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Inclui todas as peças e quantidades solicitadas, com sofá de três lugares com chaise e aparador identificado como existente-reaproveitar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explicitamente o tapete de 3,2 m × 5,2 m, descontando 40 cm de cada lado.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Exclui branco puro e veludo; exige verificações de abrasão, limpeza, tecidos, fixações e estabilidade considerando os gatos.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduz R$ 85.000 com frete e montagem; programa estofados para 21/12/2026, oito semanas mais margem de quatorze dias antes da montagem.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa marcas, modelos ou classificações técnicas; solicita verificação de desempenho e identifica todas as verbas como estimativas sujeitas a orçamento.\"}]}"
+}

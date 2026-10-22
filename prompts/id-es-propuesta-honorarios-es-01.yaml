@@ -1,0 +1,83 @@
+id: id-es-propuesta-honorarios-es-01
+lang: es
+translation_key: id-proposal
+title: Propuesta de honorarios de interiorismo por fases, con IVA y pagos por hitos (España)
+scenario: 'Reforma de un piso: convierte tus notas en una propuesta para el cliente con fases, honorarios por m² y por visita,
+  IVA, pagos por hitos y exclusiones, sin prometer coste ni plazo de obra.'
+profession: interior-designers
+task: interior-designers.client-proposals
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-21'
+jurisdictions:
+- ES
+prompt: 'Actúa como interiorista en España y redacta una propuesta de honorarios para un cliente particular a partir de estas
+  notas. Dirígete al cliente de «usted»; máximo de 600 palabras para el texto dirigido al cliente.
+
+  1. Describe el alcance de cada fase y sus entregables según las notas.
+
+  2. Presenta una tabla de honorarios con concepto, base de cálculo, precio unitario e importe; muestra los cálculos, el total
+  sin IVA, la cuota de IVA al tipo indicado y el total con IVA. Identifica los importes estimados y las condiciones de los
+  servicios adicionales.
+
+  3. Detalla los hitos de pago con porcentajes e importes, indicando si estos incluyen IVA y sobre qué honorarios se calculan.
+  Comprueba la suma de porcentajes y explica la facturación de los servicios que quedan fuera de los hitos.
+
+  4. Recoge todas las exclusiones y los conceptos no cotizados, sin convertirlos en servicios incluidos.
+
+  5. Responde a las peticiones del cliente distinguiendo lo confirmado, lo provisional y lo que no puede comprometerse con
+  la información disponible.
+
+  6. Añade, separado del texto para el cliente y sin contar para su extensión, un apartado interno con datos pendientes, ambigüedades,
+  discrepancias cuantificadas y puntos que el profesional debe verificar y aprobar antes del envío.
+
+  Usa solo las notas y los cálculos derivados de ellas; no inventes hechos, importes, precios, fechas, plazos ni servicios.
+
+  No añadas afirmaciones normativas, leyes, jurisprudencia ni requisitos administrativos. No resuelvas datos ausentes mediante
+  suposiciones.
+
+  Notas del encargo:
+
+  [Pega tus notas del encargo: superficie, fases, precios por m² y por visita, visitas estimadas, IVA, hitos de pago, exclusiones
+  y peticiones del cliente; anonimiza nombres, direcciones y contactos]
+
+  '
+sample_input: 'Ejemplo totalmente ficticio: todos los nombres, entidades, contactos, direcciones y datos del encargo son inventados.
+
+  Estudio: Estudio Exemple Interiorismo (ficticio) · Martin Exemple · estudio@exemple.test
+
+  Cliente: Ana Exemplo · ana.exemplo@correo.test
+
+  Inmueble: piso en Valencia, calle Ejemplo 0, 3.º (dirección ficticia). Superficie útil: 95 m². Reforma integral de cocina,
+  dos baños, suelos y distribución de salón.
+
+  Fases y honorarios (sin IVA):
+
+  - Anteproyecto (2 propuestas de distribución, 1 ronda de cambios, panel de referencias visuales): 18 €/m².
+
+  - Proyecto de ejecución de interiorismo (planos de distribución, alzados de cocina y baños, mediciones, memoria de acabados):
+  32 €/m².
+
+  - Dirección/seguimiento de obra: 150 € por visita. Estimamos 12 visitas. Las visitas adicionales se facturan al mismo precio.
+
+  IVA: 21 %.
+
+  Forma de pago de las fases 1 y 2: 30 % a la firma, 30 % a la aprobación del anteproyecto y 40 % a la entrega del proyecto
+  de ejecución. Las visitas se facturan a mes vencido según las visitas realmente realizadas.
+
+  No incluido: licencias y permisos municipales y su gestión; proyecto de instalaciones (electricidad, fontanería, climatización)
+  firmado por técnico competente; coordinación de seguridad y salud; coste de la obra, mobiliario, electrodomésticos y compras;
+  renders adicionales a los del anteproyecto.
+
+  Nota interna: por teléfono le dije a Ana «unos 6.000 € + IVA en total» de honorarios, más o menos.
+
+  Nota interna: el contratista que propone la clienta (Reformas Muestra S.L., ficticia) aún no ha presentado presupuesto.
+  A ojo habló de 10–12 semanas de obra, sin confirmar.
+
+  Mensaje de la clienta: «Quiero que en la propuesta me garanticéis que la obra no pasa de 60.000 € y que dura 8 semanas como
+  máximo, si no, no firmo.»
+
+  '
+page: https://aiprofessions.ai/es/disenadores-de-interiores/prompts/#id-es-propuesta-honorarios-es-01
+results_file: results/id-es-propuesta-honorarios-es-01.yaml

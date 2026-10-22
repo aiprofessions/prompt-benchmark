@@ -1,0 +1,57 @@
+id: acc-en-bank-rec-01
+lang: en
+translation_key: acc-bank-rec
+title: Month-end bank reconciliation with proposed adjusting entries
+scenario: Paste the bank and ledger balances plus the unmatched items; get a two-sided reconciliation, the adjusting entries
+  for the book side only, and a list of what still needs evidence.
+profession: accountants
+task: accountants.reconciliation
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Act as a careful staff accountant. Prepare a month-end bank reconciliation from the data below.
+
+  1. Show a two-sided reconciliation: adjusted bank balance and adjusted book balance, with every reconciling item on the
+  correct side.
+
+  2. Confirm whether the two adjusted balances agree; if not, show the unexplained difference — never force it.
+
+  3. Propose journal entries ONLY for items that must be recorded in the books (not for timing items that will clear the bank).
+
+  4. List anything that needs supporting evidence before posting.
+
+  Use only the figures given. Show your arithmetic.
+
+  Data:
+
+  [Paste bank statement ending balance, ledger (book) cash balance, and every unmatched item with amount and what you know
+  about it]
+
+  '
+sample_input: 'Company: Maple Example LLC (fictional). Period ending June 30, 2026.
+
+  Bank statement ending balance: $18,420.50
+
+  General ledger cash balance: $19,737.30
+
+  Unmatched items:
+
+  - Check #1047 to Office Sample Supply, $1,250.00, written June 29, not on the bank statement.
+
+  - Deposit of $2,100.00 made after bank cut-off on June 30, recorded in the books June 30.
+
+  - Bank service fee $35.00 on the statement, not in the books.
+
+  - Customer check from Sample Retail Co. returned NSF, $480.00, deducted by the bank, not in the books.
+
+  - Check #1039 to a supplier: recorded in the books as $1,284.00; cleared the bank as $1,248.00. The supplier invoice says
+  $1,248.00.
+
+  - Interest credited by the bank $12.20, not in the books.
+
+  '
+page: https://aiprofessions.ai/accountants/prompts/#acc-en-bank-rec-01
+results_file: results/acc-en-bank-rec-01.yaml

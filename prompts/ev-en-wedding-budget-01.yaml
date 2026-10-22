@@ -1,0 +1,42 @@
+id: ev-en-wedding-budget-01
+lang: en
+translation_key: ev-wedding-budget
+title: Event budget check with service charge and tax, plus cut options
+scenario: Vendor quotes plus contract terms in; a correct total with service charge and tax, the gap to the client's budget,
+  and quantified ways to close it.
+profession: event-planners
+task: event-planners.budgeting
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Build a budget table from the quotes below (Line item | Basis | Amount), apply the venue''s service charge and tax
+  exactly as the contract terms say, and give the grand total.
+
+  State how far over or under the client''s budget it is.
+
+  Then propose three ways to close any gap, each with the saving computed from the given figures. If a saving depends on a
+  vendor''s new quote, label it "estimate — confirm with vendor".
+
+  Show arithmetic; round to cents.
+
+  Data:
+
+  [Paste each vendor quote, the venue''s service-charge and tax terms, guest count and the client''s total budget]
+
+  '
+sample_input: 'Client total budget: $38,000. Guests: 110. (Fictional couple.)
+
+  Venue rental: $6,500.
+
+  Food & beverage: $95 per person.
+
+  Venue contract: 22% service charge on food & beverage; 8.25% sales tax applies to food & beverage PLUS the service charge.
+
+  Photographer: $4,200. Florals: $3,600. Band: $5,800. Rentals (chairs/linens): $2,150. Cake: $850. Planner fee: $4,500.
+
+  '
+page: https://aiprofessions.ai/event-planners/prompts/#ev-en-wedding-budget-01
+results_file: results/ev-en-wedding-budget-01.yaml

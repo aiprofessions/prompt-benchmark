@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:42+00:00",
+ "attempt": 1,
+ "skill_sha256": "0155cc7b3d265d962b835ef0071482fa4415c7d41fd09d0e32cc03aeb1addf68",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No observation table is provided; all five items and their required details are not listed."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No measurements, test results, code sections, extra site observations, or factual causes are invented."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No Limitations section states visual-only inspection, 90-minute duration, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Defers tournament usability to the engineer of record but does not flag J-14 or ponding for prompt evaluation."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "No report is marked DRAFT for review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No observation table is provided; all five items and their required details are not listed.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No measurements, test results, code sections, extra site observations, or factual causes are invented.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No Limitations section states visual-only inspection, 90-minute duration, and no testing.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Defers tournament usability to the engineer of record but does not flag J-14 or ponding for prompt evaluation.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"No report is marked DRAFT for review and seal/signature by the engineer of record.\"}]}"
+}

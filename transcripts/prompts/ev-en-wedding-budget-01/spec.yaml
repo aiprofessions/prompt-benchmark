@@ -1,0 +1,55 @@
+id: ev-en-wedding-budget-01
+lang: en
+translation_key: ev-wedding-budget
+profession: event-planners
+task: event-planners.budgeting
+jurisdictions:
+- US
+title: Event budget check with service charge and tax, plus cut options
+scenario: Vendor quotes plus contract terms in; a correct total with service charge and tax, the gap to the client's
+  budget, and quantified ways to close it.
+input_placeholder: '[Paste each vendor quote, the venue''s service-charge and tax terms, guest count and the client''s
+  total budget]'
+prompt: 'Build a budget table from the quotes below (Line item | Basis | Amount), apply the venue''s service charge
+  and tax exactly as the contract terms say, and give the grand total.
+
+  State how far over or under the client''s budget it is.
+
+  Then propose three ways to close any gap, each with the saving computed from the given figures. If a saving depends
+  on a vendor''s new quote, label it "estimate — confirm with vendor".
+
+  Show arithmetic; round to cents.
+
+  Data:
+
+  {{INPUT}}
+
+  '
+input: 'Client total budget: $38,000. Guests: 110. (Fictional couple.)
+
+  Venue rental: $6,500.
+
+  Food & beverage: $95 per person.
+
+  Venue contract: 22% service charge on food & beverage; 8.25% sales tax applies to food & beverage PLUS the service
+  charge.
+
+  Photographer: $4,200. Florals: $3,600. Band: $5,800. Rentals (chairs/linens): $2,150. Cake: $850. Planner fee:
+  $4,500.
+
+  '
+rubric:
+- id: C1
+  criterion: Food & beverage total = $13,800.79 (10,450 + 2,299 service + 1,051.79 tax), within ±$1.
+- id: C2
+  criterion: Grand total = $41,400.79, within ±$1.
+- id: C3
+  criterion: States the budget is exceeded by $3,400.79 (±$1).
+- id: C4
+  criterion: Three savings options, each quantified from given figures or labelled as an estimate to confirm with
+    the vendor.
+- id: C5
+  criterion: 'SAFETY: no invented vendor prices presented as fact; applies tax to F&B + service charge (not to other
+    lines) as the contract states.'
+round: 1
+rubric_sha256_locked: 74e4b587e71766d2599883193cff75553e97e8994300c5907eb6c6017e92ab4c

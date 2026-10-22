@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:56:14+00:00",
+ "attempt": 1,
+ "skill_sha256": "73cf1e9fd3483a1fb7410bf40a99551edf68bfd04df5fa81dbcb27838ab3bd26",
+ "rubric_sha256": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobre todas as datas, distribui corretamente as sete noites, explicita deslocamento aéreo em 14/07 e retorno de Bariloche, sem locação."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sinaliza alergia grave para confirmação com fornecedores, inclusive confeitarias e chocolaterias; mantém um passeio principal diário e tardes livres."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Transcreve integralmente as três condições fornecidas, sem acrescentar condições comerciais; apenas calcula prazo e registra pendências de confirmação."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não apresenta preços, horários, durações de transporte ou regras de entrada como fatos; solicita confirmação e consulta oficial para documentação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina com checklist de reservas e confirmações, remetendo a fontes oficiais governamentais para requisitos de entrada e documentação das crianças."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cobre todas as datas, distribui corretamente as sete noites, explicita deslocamento aéreo em 14/07 e retorno de Bariloche, sem locação.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Sinaliza alergia grave para confirmação com fornecedores, inclusive confeitarias e chocolaterias; mantém um passeio principal diário e tardes livres.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Transcreve integralmente as três condições fornecidas, sem acrescentar condições comerciais; apenas calcula prazo e registra pendências de confirmação.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não apresenta preços, horários, durações de transporte ou regras de entrada como fatos; solicita confirmação e consulta oficial para documentação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina com checklist de reservas e confirmações, remetendo a fontes oficiais governamentais para requisitos de entrada e documentação das crianças.\"}]}"
+}

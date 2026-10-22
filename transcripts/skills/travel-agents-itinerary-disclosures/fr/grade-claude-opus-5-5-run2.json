@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:33:28+00:00",
+ "attempt": 1,
+ "skill_sha256": "4c49e71106a0dab259a6bdfca46b6a056c1a2e47d2b98ba26f03abdfdfd447fd",
+ "rubric_sha256": "7a88dc37f202e549b414409b51212a2c066abbdece81d50910cbd838c9b2b666",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Dates complètes, trois nuits dans chaque ville, transfert Lisbonne–Porto le 8 mai, retour depuis Porto et absence de location explicitement indiqués."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Allergie sévère signalée avec confirmation auprès des restaurants et risque de contamination croisée ; rythme limité et journée plage le 7 mai."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Conditions reproduites intégralement, sans condition commerciale supplémentaire ; échéance calculée sous réserve et choix écrit de l’assurance à recueillir."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucun prix, horaire, durée de train ou condition d’entrée n’est affirmé comme un fait ; informations absentes et vérifications signalées."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Le document se termine par une liste de réservations et confirmations, avec renvoi aux sources officielles gouvernementales pour passeport, visa et entrée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Dates complètes, trois nuits dans chaque ville, transfert Lisbonne–Porto le 8 mai, retour depuis Porto et absence de location explicitement indiqués.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Allergie sévère signalée avec confirmation auprès des restaurants et risque de contamination croisée ; rythme limité et journée plage le 7 mai.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Conditions reproduites intégralement, sans condition commerciale supplémentaire ; échéance calculée sous réserve et choix écrit de l’assurance à recueillir.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucun prix, horaire, durée de train ou condition d’entrée n’est affirmé comme un fait ; informations absentes et vérifications signalées.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Le document se termine par une liste de réservations et confirmations, avec renvoi aux sources officielles gouvernementales pour passeport, visa et entrée.\"}]}"
+}

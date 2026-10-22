@@ -1,0 +1,542 @@
+{
+ "prompt_id": "acc-es-cfdi-cliente-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "La lista incluye los cuatro documentos (XML de CFDI de ingresos, CFDI de gastos de la camioneta, estado de cuenta empresarial de septiembre, constancia de retenciones de la plataforma) y no agrega otros."
+  },
+  {
+   "id": "C2",
+   "criterion": "Indica la fecha interna 10 de octubre de 2026 vinculada a la declaración del 17 de octubre de 2026."
+  },
+  {
+   "id": "C3",
+   "criterion": "Pide usar el portal seguro y no enviar contraseña del SAT / e.firma por correo o WhatsApp."
+  },
+  {
+   "id": "C4",
+   "criterion": "Español claro y cordial (México), explica CFDI/XML y no excede ~220 palabras (±10 %)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no menciona montos, tasas, multas ni fechas que no estén en las notas."
+  }
+ ],
+ "rubric_sha256": "3bc248bea7e99ed2b46753c7e72b59e35aaa14f4368dfcbbd7968d12220739c7",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula la fecha interna del 10 de octubre de 2026 con presentar a tiempo la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Pide usar el portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Aunque el español es claro y cordial y explica CFDI/XML, la salida completa, incluida la nota adicional, supera las 242 palabras permitidas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota adicional introduce el 19 de octubre de 2026, fecha que no aparece en las notas proporcionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye los cuatro documentos solicitados, con sus detalles, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula explícitamente la fecha interna del 10 de octubre de 2026 con presentar a tiempo la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar el portal seguro indicado y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Aunque usa español claro y cordial y explica CFDI/XML, el texto completo, incluida la nota final, supera las 242 palabras permitidas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota final introduce el 19 de octubre de 2026, fecha que no aparece en las notas proporcionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula expresamente la fecha interna del 10 de octubre de 2026 con presentar la declaración el 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar el portal seguro indicado y no enviar contraseña del SAT ni e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Aunque explica CFDI/XML y mantiene claridad y cordialidad, la salida completa tiene aproximadamente 280 palabras, superando 242 con tolerancia."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota previa introduce el 19 de octubre de 2026, fecha que no aparece en las notas proporcionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye los cuatro documentos solicitados, con sus detalles, y no agrega otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala el 10 de octubre de 2026 como fecha interna para revisar y preparar la declaración antes del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita subir documentos al portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa español claro y cordial, explica CFDI y XML, y contiene aproximadamente 229 palabras, dentro de la tolerancia permitida."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas ni multas; todas las fechas indicadas aparecen en las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista incluye exactamente los cuatro documentos solicitados, con sus detalles, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifica el 10 de octubre de 2026 como fecha interna y lo vincula con presentar la declaración antes del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Pide subir documentos al portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa español claro y cordial, explica XML y CFDI, y sus aproximadamente 230 palabras están dentro de la tolerancia permitida."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas ni multas; todas las fechas mencionadas aparecen en las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Incluye los cuatro documentos, pero añade la exigencia del PDF al indicar que necesita ambos formatos, aunque ya recibió los PDF."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula el 10 de octubre de 2026 con la preparación y presentación oportuna de la declaración del 17 de octubre del mismo año."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Pide subir documentos al portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo electrónico o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "El tono es claro y cordial y explica XML, pero no explica CFDI y supera las 242 palabras permitidas con tolerancia."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas, multas ni fechas ajenas a las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Numbered list has exactly the four documents from the notes, worded as given, with none added."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the internal date of 10 October 2026, linked to filing the declaration due 17 October 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Asks to upload via portal.despacho-ejemplo.test and not to send the SAT password or e.firma by email or WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Clear, friendly Spanish; explains CFDI and XML briefly; about 170 words, under the limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No amounts, rates, penalties, or dates beyond those in the notes; no tax advice."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The numbered list has exactly the four documents from the notes, in their original wording, with nothing added or removed."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the internal date of 10 de octubre de 2026 and links it to filing the 17 de octubre de 2026 declaration on time."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Asks her to upload to the secure portal and not send her SAT password or e.firma by email or WhatsApp; mentions last month's slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Clear, friendly Mexican Spanish; briefly explains CFDI and XML; roughly 180 words, under the 220 limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No amounts, rates, fines or extra dates; only dates from the notes appear."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Numbered list contains exactly the four documents from the notes, worded as given, with none added."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the internal date of 10 October 2026 for filing the 17 October 2026 declaration on time."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Asks for uploads to the secure portal and says not to send the SAT password or e.firma by email or WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Clear, cordial Spanish; explains CFDI and XML briefly; about 170 words, under the 220 limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No amounts, rates, fines or dates beyond those in the notes; no tax advice."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, con sus detalles y sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula el plazo interno del 10 de octubre de 2026 con presentar a tiempo la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar el portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "El español es claro y cordial y explica CFDI/XML, pero la respuesta completa supera las 242 palabras permitidas con tolerancia."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota final introduce el 20 de octubre de 2026, fecha que no aparece en las notas proporcionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye los cuatro documentos solicitados, con sus detalles, y no agrega otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula el 10 de octubre de 2026 con la revisión y presentación oportuna de la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar el portal seguro indicado y no enviar contraseña del SAT ni e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Aunque usa español cordial y explica CFDI y XML, el texto completo, incluida la nota final, supera las 242 palabras toleradas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota final introduce el 20 de octubre de 2026, fecha que no aparece en las notas originales."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye los cuatro documentos solicitados, con sus detalles, y no agrega otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula el límite interno del 10 de octubre de 2026 con presentar puntualmente la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Pide subir los archivos al portal seguro y no volver a compartir contraseña del SAT ni e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "El español es claro y cordial y explica CFDI/XML, pero la respuesta completa supera las 242 palabras permitidas con tolerancia."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La nota aparte introduce el 20 de octubre, fecha que no aparece en las notas proporcionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, con sus detalles, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Indica el 10 de octubre de 2026 como fecha interna para presentar a tiempo la declaración del 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita subir archivos al portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa español claro y cordial, explica CFDI y XML brevemente y tiene aproximadamente 219 palabras, dentro del límite permitido."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas ni multas; todas las fechas mencionadas provienen de las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye los cuatro documentos solicitados, con sus detalles, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula expresamente la fecha interna del 10 de octubre de 2026 con presentar la declaración el 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar el portal seguro indicado y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa español claro y cordial, explica CFDI y XML brevemente y tiene aproximadamente 222 palabras, dentro de la tolerancia permitida."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas ni multas; todas las fechas mencionadas proceden de las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, con sus detalles, sin agregar otros."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vincula expresamente la fecha interna del 10 de octubre de 2026 con presentar la declaración el 17 de octubre de 2026."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Solicita usar exclusivamente el portal seguro y nunca enviar contraseña del SAT ni e.firma por correo o WhatsApp."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Usa español claro y cordial, explica CFDI y XML en pocas palabras y tiene aproximadamente 218 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No menciona montos, tasas ni multas; todas las fechas aparecen en las notas."
+    }
+   ],
+   "transcript": "prompts/acc-es-cfdi-cliente-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

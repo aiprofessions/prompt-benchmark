@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:44:22+00:00",
+ "attempt": 1,
+ "skill_sha256": "3c11500efa35f33c2c1bd3b6e420ef7ff965b573a564adcdc9a83b8b0d63eb84",
+ "rubric_sha256": "bf7fef2700a801368eccbe2ac3e90173e94335bcf1cc2c57ef3aad0dba1cb8d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les effectifs sont présentés en lignes structurées : 6 maçons, 4 coffreurs, 2 électriciens, 3 manœuvres, total 15. Météo conforme."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le report du coulage du plancher haut R+1 du bâtiment B pour pluie et sa reprogrammation au 21/10 sont consignés sans retard inventé."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Demande orale à 10h40, déplacement de 40 cm, absence d’OS écrit, échéance au 03/11/2026 et brouillon demandant une instruction écrite, à valider."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont tous consignés."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun coût, délai, activité ou personne n’est inventé ; les informations absentes sont signalées comme non fournies ou à confirmer."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les effectifs sont présentés en lignes structurées : 6 maçons, 4 coffreurs, 2 électriciens, 3 manœuvres, total 15. Météo conforme.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Le report du coulage du plancher haut R+1 du bâtiment B pour pluie et sa reprogrammation au 21/10 sont consignés sans retard inventé.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Demande orale à 10h40, déplacement de 40 cm, absence d’OS écrit, échéance au 03/11/2026 et brouillon demandant une instruction écrite, à valider.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont tous consignés.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun coût, délai, activité ou personne n’est inventé ; les informations absentes sont signalées comme non fournies ou à confirmer.\"}]}"
+}

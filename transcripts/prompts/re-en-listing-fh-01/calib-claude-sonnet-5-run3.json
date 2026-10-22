@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-listing-fh-01",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "MLS remarks are about 68 words and the caption about 37 words; both are within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "All listed facts appear, including the 2024 roof and 2021 quartz kitchen. Hardwood is never stated as fact."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Young families, safe, and church references are removed from the copy. 'Quiet residential street' is a neutral property description."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "'No Section 8' is absent from the copy and flagged as a source-of-income restriction with legal and fair-housing risk."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "The 'Removed or changed' list gives a reason for each item and explicitly says to flag to broker/compliance."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:31:03+00:00",
+ "attempt": 1,
+ "skill_sha256": "80943af770284153d68a16e287e1c54b0dc76023cc773af4dabcd9aa637ed196",
+ "rubric_sha256": "be809fa3846bf99dbf3cad0c4d5bc6433b12569d48eee7045eae4ea7f774d87c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Usa linguagem simples, explica LDL como um tipo de colesterol e reproduz PA 150/95, LDL 171 mg/dL e peso 92 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Reproduz exatamente a mudança da losartana, início da sinvastatina, retorno, perfil lipídico e orientação para ligar ao consultório se houver tontura forte."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "A parte destinada ao paciente não acrescenta medicamentos, doses, metas, diagnósticos, destinos ou alertas ausentes da nota."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "A Parte B, exclusiva para o profissional, identifica ausência de conduta para o inchaço e pergunta sobre avaliação ou orientação documentada."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está marcado como RASCUNHO para revisão profissional antes da entrega e inclui a lista 'Faltando / a confirmar'."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Usa linguagem simples, explica LDL como um tipo de colesterol e reproduz PA 150/95, LDL 171 mg/dL e peso 92 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Reproduz exatamente a mudança da losartana, início da sinvastatina, retorno, perfil lipídico e orientação para ligar ao consultório se houver tontura forte.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"A parte destinada ao paciente não acrescenta medicamentos, doses, metas, diagnósticos, destinos ou alertas ausentes da nota.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"A Parte B, exclusiva para o profissional, identifica ausência de conduta para o inchaço e pergunta sobre avaliação ou orientação documentada.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está marcado como RASCUNHO para revisão profissional antes da entrega e inclui a lista 'Faltando / a confirmar'.\"}]}"
+}

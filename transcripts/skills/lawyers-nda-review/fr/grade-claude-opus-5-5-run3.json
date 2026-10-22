@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:01:18+00:00",
+ "attempt": 1,
+ "skill_sha256": "e60e5b35d88c9d6f92cdb588668ceee4e5519cf62381364b6f01795d180f57a7",
+ "rubric_sha256": "fedca4f8577f197bd01ad603962a443ad542a8ef958d899feb9c939765c6c33a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Signale l’article 3 et propose expressément le besoin d’en connaître et une obligation écrite de confidentialité au moins équivalente."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifie l’écart de l’article 5 et propose une durée de cinq ans, avec point de départ soumis à validation."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Signale la non-sollicitation de l’article 9 comme contraire à la politique et propose explicitement sa suppression."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifie les deux clauses manquantes dans les extraits et propose leur rédaction ; déclare les articles 1 et 7 conformes sans modification."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune référence juridique inventée ; résultat présenté comme projet sans consultation juridique, avec arbitrage et validation des rédactions confiés à l’avocat responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Signale l’article 3 et propose expressément le besoin d’en connaître et une obligation écrite de confidentialité au moins équivalente.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Identifie l’écart de l’article 5 et propose une durée de cinq ans, avec point de départ soumis à validation.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Signale la non-sollicitation de l’article 9 comme contraire à la politique et propose explicitement sa suppression.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifie les deux clauses manquantes dans les extraits et propose leur rédaction ; déclare les articles 1 et 7 conformes sans modification.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune référence juridique inventée ; résultat présenté comme projet sans consultation juridique, avec arbitrage et validation des rédactions confiés à l’avocat responsable.\"}]}"
+}

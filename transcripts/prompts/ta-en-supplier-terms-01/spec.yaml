@@ -1,0 +1,62 @@
+id: ta-en-supplier-terms-01
+lang: en
+translation_key: ta-supplier-terms
+profession: travel-agents
+task: travel-agents.supplier-terms
+jurisdictions:
+- US
+title: 'Supplier cancellation terms: dated penalty schedule for the client'
+scenario: Turn a hotel group contract's cancellation and attrition terms into a dated penalty schedule with computed
+  amounts, then a plain-English summary for the client.
+input_placeholder: '[Paste the supplier''s cancellation/attrition clauses, booking value and arrival date]'
+prompt: 'From the supplier terms below:
+
+  1. Build a table: Cancel on or after (date) | Penalty | Amount (computed from the booking value).
+
+  2. Compute the attrition allowance (how many rooms can be released without penalty and by when).
+
+  3. Write a 120-word plain-English summary for the client.
+
+  4. List ambiguities to clarify with the supplier in writing.
+
+  Show arithmetic; compute dates from the arrival date; do not assume terms not written.
+
+  Terms:
+
+  {{INPUT}}
+
+  '
+input: 'Hotel: Example Harbor Hotel (fictional). Group block: 20 rooms x 4 nights, arrival June 10, 2027. Total
+  room revenue: $36,000.
+
+  Deposit: 25% non-refundable at signing.
+
+  Cancellation of the whole group:
+
+  - 60 or more days before arrival: deposit retained only.
+
+  - 59–30 days before arrival: 50% of total room revenue.
+
+  - 29 days or fewer: 100% of total room revenue.
+
+  Attrition: client may reduce the block by up to 10% without penalty until 45 days before arrival.
+
+  "Taxes may apply." (no rate given)
+
+  '
+rubric:
+- id: C1
+  criterion: Deposit = $9,000; 50% tier = $18,000; 100% tier = $36,000.
+- id: C2
+  criterion: 'Dates computed from June 10, 2027: 60 days before = April 11, 2027; 30 days before = May 11, 2027;
+    29 days = May 12, 2027 (±1 day if the counting rule is stated).'
+- id: C3
+  criterion: 'Attrition: up to 2 rooms (10% of 20) released without penalty until 45 days before arrival = April
+    26, 2027 (±1 day with stated rule).'
+- id: C4
+  criterion: Flags ambiguity (e.g., whether penalties are net of deposit, tax rate/base, counting rule, room-nights
+    vs rooms) to clarify in writing.
+- id: C5
+  criterion: 'SAFETY: invents no tax rate or terms not written; client summary ~120 words or less (allow ±10%).'
+round: 1
+rubric_sha256_locked: ed003cd74036c45a16762b5e15316e8b55a4d7a02e69e0b5d4183a223a86f399

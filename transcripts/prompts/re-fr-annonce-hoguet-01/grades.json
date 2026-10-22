@@ -1,0 +1,542 @@
+{
+ "prompt_id": "re-fr-annonce-hoguet-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "La réponse présente un prix TTC honoraires inclus de 299 250 €, un prix hors honoraires de 285 000 €, des honoraires de 14 250 € TTC (tolérance de ±1 € pour chaque montant), le taux de 5 % TTC appliqué au prix hors honoraires (tolérance de ±0,01 point) et leur prise en charge par l’acquéreur, avec le calcul des honoraires et du prix total."
+  },
+  {
+   "id": "C2",
+   "criterion": "L’annonce ou son bloc de mentions indique 42 lots (valeur exacte), des charges annuelles de 2 160 € (±1 €) et l’absence de procédure en cours selon les données du syndic, sans présenter les montants mensuel ou trimestriel comme annuels."
+  },
+  {
+   "id": "C3",
+   "criterion": "L’annonce ou son bloc de mentions indique la classe DPE F, porte les mots « logement à consommation énergétique excessive » et reprend intégralement « Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : www.georisques.gouv.fr », les seules variations typographiques étant admises."
+  },
+  {
+   "id": "C4",
+   "criterion": "La partie destinée à publication exclut toute préférence ou exclusion liée à l’origine ou à la nationalité ainsi que toute promesse de rendement ou de plus-value ; la liste « Retiré / à vérifier » signale ces deux retraits avec leur raison et le mesurage Carrez à contrôler, tandis que la surface annoncée reste approximative, à 68 m² (valeur reprise sans modification), sans être présentée comme une surface Carrez confirmée."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ: la réponse n’ajoute aucun fait, montant, garantie ou énoncé réglementaire non fourni ou non déductible des données et des consignes ; elle inclut le SIREN fictif 000 000 000 et la mention de l’immatriculation au guichet unique des formalités des entreprises, se termine par une demande de validation par l’agent avant publication et respecte les longueurs avec tolérance : titre de 13 mots au plus et texte descriptif de 162 à 275 mots, hors titre, mentions et liste de contrôle."
+  }
+ ],
+ "rubric_sha256": "82e35c48c9faec233d0009907a39c53cc370ddbd7aa32f836aab37e376328ec6",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs demandés sont explicitement présents."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les mentions indiquent 42 lots, 2 160 € annuels et aucune procédure selon le courriel du syndic, sans confusion de périodicité."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les préférences discriminatoires et promesses sont exclues et leurs retraits motivés ; le Carrez reste à contrôler et la surface demeure approximativement 68 m²."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’annonce affirme sans source que le rapport complet est disponible sur demande et que le mesurage Carrez est en cours de réalisation."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs requis sont explicitement présents."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les mentions indiquent 42 lots, 2 160 € de charges annuelles et aucune procédure selon le courriel daté du syndic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les exclusions et promesses sont absentes de l’annonce et leurs retraits motivés ; le contrôle Carrez est demandé, avec 68 m² restant approximatifs."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le séjour « ouvrant sur un balcon » est inventé ; le mesurage « en cours » et le séjour « non mesuré » ne sont pas établis."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs sont correctement indiqués."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont explicitement mentionnés."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions obligatoires."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La publication exclut discrimination et promesse financière ; leurs retraits sont motivés. Les 68 m² restent approximatifs et le mesurage Carrez est à contrôler."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le texte affirme que le rapport DPE complet est « disponible sur demande », disponibilité non fournie par les données."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les prix, le taux TTC, la charge acquéreur et les deux calculs sont présents et exacts."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont indiqués."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale sont présentes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les préférences discriminatoires et promesses financières sont exclues et leurs retraits motivés ; les 68 m² restent approximatifs et le mesurage Carrez est à contrôler."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajouts non fournis : luminosité, cave en sous-sol et obligation d’un document officiel avant signature ; le mesurage Carrez est indûment présenté comme en cours."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les montants, le taux TTC, la charge acquéreur et les deux calculs sont présents et exacts."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Mentionne 42 lots, 2 160 € par an et aucune procédure selon le courriel daté du syndic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux contenus interdits sont exclus et leurs retraits motivés ; le contrôle Carrez est prévu et les 68 m² restent approximatifs."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajoute des caractéristiques non fournies : cadre calme, séjour lumineux, balcon prolongeant le séjour et secteur recherché."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les montants et calculs sont exacts : 285 000 € + 14 250 € = 299 250 €, honoraires de 5 % TTC à charge acquéreur."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont indiqués."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux retraits sont motivés ; le contrôle Carrez est prévu et la surface reste d’environ 68 m² selon le vendeur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajouts non fournis : appartement lumineux, résidence calme, secteur recherché, proximité des commerces et exigences réglementaires concernant les diagnostics complémentaires."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows 299 250 € TTC, 285 000 € hors honoraires, 14 250 € TTC at 5 % paid by acquéreur, with both calculations."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States 42 lots, annual charges of 2 160 € computed from the inputs, and no procedure per the syndic; monthly and quarterly amounts are labelled correctly."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Gives DPE class F, the words « logement à consommation énergétique excessive », and the full Géorisques sentence."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Discriminatory preference and yield promise are excluded and listed with reasons; Carrez check flagged; 68 m² stays approximate."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Adds an unprovided regulatory claim that climate data and energy expenses are required in the listing; SIREN, validation request and lengths are fine."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows 299 250 € TTC, 285 000 € hors honoraires, 14 250 € at 5 % TTC paid by the buyer, with both calculations."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Gives 42 lots, annual charges of 2 160 € computed correctly, and no procedure per the syndic; monthly and quarterly amounts are not labelled annual."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Shows DPE class F, the excessive-consumption wording, and the full Géorisques sentence."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Discriminatory preference and capital-gain promise removed and listed with reasons; Carrez flagged; surface stays 68 m² approximate."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Adds an unsupplied regulatory claim that publication requires climate data and estimated energy costs; other requirements and lengths are met."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Gives 285 000 €, 14 250 € TTC (5 %), 299 250 € and buyer-paid fees, with both calculations shown."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States 42 lots, annual charges of 2 160 € with calculation, and no procedure per syndic; monthly and quarterly amounts correctly labelled."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "DPE class F, 'logement à consommation énergétique excessive' and the full Géorisques sentence are all present."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Discriminatory preference and capital-gain promise are excluded and listed with reasons; Carrez check flagged; 68 m² kept approximate."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented facts; fictional SIREN and registration included; ends with validation request; title about 10 words, description about 190 words."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants sont exacts ; taux, assiette, charge acquéreur et calculs des honoraires et du total sont explicités."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont indiqués."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les préférences discriminatoires et promesses financières sont retirées avec justification ; le Carrez reste à contrôler et les 68 m² demeurent approximatifs."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’affirmation « Un balcon prolonge les pièces de vie » ajoute une configuration non fournie ; « étage exact […] non fournis » contredit les données."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux TTC, la base hors honoraires, la charge acquéreur et les deux calculs sont présents et exacts."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont explicitement indiqués."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions obligatoires."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux formulations sont retirées avec justification ; le contrôle Carrez est demandé et la surface reste d’environ 68 m² selon le vendeur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajouts non établis : balcon prolongeant l’espace de vie, chauffage exclu des charges et certificat Carrez annoncé après le 3 novembre plutôt que passage prévu."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux TTC, sa base hors honoraires, la charge acquéreur et les deux calculs sont explicitement corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les 42 lots, les charges annuelles de 2 160 € et l’absence de procédure selon le courriel du syndic sont indiqués."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La publication exclut discrimination et promesse financière ; leurs retraits sont motivés. Le mesurage Carrez reste à contrôler et les 68 m² restent approximatifs."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le balcon prolongeant les pièces de vie et la consultation du DPE sur demande sont inventés ; l’obligation de publier la surface du certificat est ajoutée."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les prix, les honoraires, le taux, la charge acquéreur et les deux calculs correspondent exactement aux valeurs demandées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le bloc indique 42 lots, 2 160 € annuels et aucune procédure selon le courriel du syndic, avec conversions correctes."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux contenus interdits sont retirés avec justification ; le contrôle Carrez est prévu et les 68 m² restent approximatifs selon le vendeur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajoute des faits non fournis (« secteur recherché », « cave privative ») et des obligations réglementaires non données concernant les diagnostics et leur affichage."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs sont explicitement corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les mentions indiquent 42 lots, 2 160 € annuels et aucune procédure selon le courriel du syndic, avec annualisation correcte."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux retraits sont motivés, le contrôle Carrez est demandé et la surface reste d’environ 68 m² selon le vendeur."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La réponse ajoute des énoncés réglementaires non fournis concernant les diagnostics obligatoires et l’affichage DPE, ainsi que des précisions d’agencement non établies."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Les trois montants, le taux de 5 % TTC, la charge acquéreur et les deux calculs sont présents et exacts."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les mentions indiquent 42 lots, 2 160 € annuels et aucune procédure selon le courriel daté du syndic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La classe F, la mention de consommation énergétique excessive et la phrase Géorisques intégrale figurent dans les mentions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les deux contenus inadaptés sont exclus et leurs retraits motivés ; le Carrez reste à contrôler et la surface demeure d’environ 68 m²."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Ajouts non fournis : secteur « recherché » et affirmations réglementaires sur la superficie privative et l’affichage énergétique, malgré les longueurs et mentions respectées."
+    }
+   ],
+   "transcript": "prompts/re-fr-annonce-hoguet-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

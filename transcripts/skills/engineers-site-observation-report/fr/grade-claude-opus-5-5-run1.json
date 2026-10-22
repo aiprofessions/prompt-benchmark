@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:58:24+00:00",
+ "attempt": 1,
+ "skill_sha256": "94092c8b4aecd822b17aad877a76a0591d57086796cf5a9f79b9306a2269b3c2",
+ "rubric_sha256": "318dafad1f31559a272ea19d42db6ffec988f5de19e7aa756565970f3ea86a8e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les cinq constats, leurs localisations, dimensions fournies et photos exactes figurent au tableau, y compris EP-3 et sa hauteur dans le constat."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aucune mesure, aucun essai, article normatif ou constat supplémentaire inventé ; les causes possibles restent prudentes et la qualification de retrait est à confirmer."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La partie « LIMITES DE LA VISITE » précise le caractère visuel, la durée de 1 h 30 et « sans essai ni sondage »."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucune réponse affirmative ou négative ; les décisions sont renvoyées à l’ingénieur responsable et une évaluation complémentaire du poteau P-4 est recommandée."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Le bandeau indique explicitement « BROUILLON — À relire et signer par l'ingénieur responsable »."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les cinq constats, leurs localisations, dimensions fournies et photos exactes figurent au tableau, y compris EP-3 et sa hauteur dans le constat.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aucune mesure, aucun essai, article normatif ou constat supplémentaire inventé ; les causes possibles restent prudentes et la qualification de retrait est à confirmer.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La partie « LIMITES DE LA VISITE » précise le caractère visuel, la durée de 1 h 30 et « sans essai ni sondage ».\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucune réponse affirmative ou négative ; les décisions sont renvoyées à l’ingénieur responsable et une évaluation complémentaire du poteau P-4 est recommandée.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Le bandeau indique explicitement « BROUILLON — À relire et signer par l'ingénieur responsable ».\"}]}"
+}

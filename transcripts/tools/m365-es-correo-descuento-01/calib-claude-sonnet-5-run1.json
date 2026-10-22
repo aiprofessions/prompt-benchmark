@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-es-correo-descuento-01",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "It never accepts or promises the 15 %; it only offers 5 % and refers a larger discount for review."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "It offers 5 % explicitly conditioned on paying the full year in advance."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "The larger discount goes to the commercial director's office for review, with no definitive rejection and no response date."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Has a subject line, uses usted, the body is about 95 words, and it is signed by Carmen Ejemplo."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No margin, internal rate, other percentages, or unauthorized dates; it does not promise a reply on Monday."
+  }
+ ]
+}

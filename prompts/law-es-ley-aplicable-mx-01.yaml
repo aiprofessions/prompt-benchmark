@@ -1,0 +1,44 @@
+id: law-es-ley-aplicable-mx-01
+lang: es
+translation_key: law-research-memo
+title: Plan de investigación jurídica sin citas inventadas (México)
+scenario: 'Antes de buscar en el Semanario Judicial: problemas jurídicos, elementos a acreditar y plan de búsqueda. El prompt
+  prohíbe tesis y artículos concretos para que nada inventado llegue al escrito.'
+profession: lawyers
+task: lawyers.case-research
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- MX
+prompt: 'Asistes a un abogado litigante en México al inicio de una investigación.
+
+  Con los hechos de abajo entrega: (1) los problemas jurídicos en forma de pregunta; (2) para cada uno, los elementos que
+  habría que acreditar en términos generales; (3) los hechos que faltan por preguntar al cliente; (4) un plan de investigación:
+  fuentes (leyes aplicables por materia, Semanario Judicial de la Federación, criterios de la SCJN y tribunales colegiados)
+  y términos de búsqueda.
+
+  REGLA ESTRICTA: no cites ninguna tesis, jurisprudencia, registro digital ni número de artículo. Donde haga falta, escribe
+  [FUENTE POR LOCALIZAR]. Indica que todo debe verificarse en fuentes primarias por un abogado con cédula.
+
+  Hechos:
+
+  [Pega los hechos en forma neutral y la entidad federativa]
+
+  '
+sample_input: 'Entidad: Ciudad de México.
+
+  Cliente: "Panadería Muestra, S.A. de C.V." (ficticia).
+
+  Un exempleado de ventas ("R. Ejemplo") firmó al ingresar en 2022 una cláusula de no competencia: 2 años, todo el país, cualquier
+  venta de pan.
+
+  Renunció en agosto de 2026 y ahora vende para una panadería competidora, contactando a las cafeterías clientes. Se llevó
+  una lista de clientes en una memoria USB.
+
+  El cliente quiere saber si puede impedirlo y reclamar daños.
+
+  '
+page: https://aiprofessions.ai/es/abogados/prompts/#law-es-ley-aplicable-mx-01
+results_file: results/law-es-ley-aplicable-mx-01.yaml

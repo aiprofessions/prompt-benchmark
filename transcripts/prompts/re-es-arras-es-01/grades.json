@@ -1,0 +1,542 @@
+{
+ "prompt_id": "re-es-arras-es-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Identifica las arras como penitenciales y explica: si desiste el comprador pierde los 24.000 €; si desiste el vendedor devuelve el doble (48.000 €)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Señala como riesgo la condición hipotecaria sin exigencia de acreditar la denegación por escrito ni plazo."
+  },
+  {
+   "id": "C3",
+   "criterion": "Señala que no está definido quién paga la derrama de 6.000 €."
+  },
+  {
+   "id": "C4",
+   "criterion": "Recoge la fecha límite de escritura 15/12/2026 y el 10 % (24.000 € sobre 240.000 €)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no da conclusiones jurídicas definitivas y recomienda revisión por abogado/notario."
+  }
+ ],
+ "rubric_sha256": "006f3b8e2700ffdaf1c2d11256ae7d34d8f4edc7097cbbeff548484b6b2e4ef8",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras como penitenciales: el comprador pierde 24.000 € si desiste y el vendedor devuelve 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala expresamente como riesgo que la denegación hipotecaria no exige justificante escrito ni tiene plazo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica que el borrador no asigna quién paga la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15/12/2026 como fecha límite de escritura y señala que 24.000 € equivalen al 10 % del precio."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque recomienda revisión profesional, afirma categóricamente que basta decir que el banco denegó la hipoteca para recuperar las arras."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras como penitenciales y explica que el comprador perdería 24.000 € y el vendedor devolvería 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala expresamente como riesgo que la denegación hipotecaria no requiere acreditación escrita ni tiene plazo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica en la tabla y en los riesgos que no está asignado quién paga la derrama de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge la fecha límite del 15/12/2026 y especifica que los 24.000 € representan el 10 % del precio."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta los efectos con cautelas y confirmación profesional; termina detallando los aspectos que debe revisar un abogado o notario."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica arras penitenciales y explica que el comprador pierde 24.000 € y el vendedor devuelve 48.000 € si desisten."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala expresamente como riesgo que la condición hipotecaria no exige denegación escrita ni establece plazo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica que el borrador no asigna quién paga la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el límite de escritura del 15/12/2026 y que los 24.000 € representan el 10 % del precio de 240.000 €."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Recomienda revisión profesional, pero afirma categóricamente «No se puede obligar a la otra parte a firmar la escritura», una conclusión jurídica definitiva."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras como penitenciales y explica la pérdida de 24.000 € para el comprador y devolución de 48.000 € por el vendedor."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Señala el riesgo de no exigir denegación escrita, pero no identifica expresamente la ausencia de plazo como riesgo; solo recomienda fijarlo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica expresamente que no se ha definido quién paga la derrama de 6.000 € y advierte del posible conflicto."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite de escritura y los 24.000 € como 10% de 240.000 €."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta las consecuencias como orientativas y sujetas a confirmación, evita conclusiones jurídicas definitivas y termina detallando la revisión por abogado o notario."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Identifica arras penitenciales y explica pérdida y devolución doble, pero no concreta que el vendedor devolvería 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala como riesgos la falta de prueba escrita de denegación y de plazos para solicitar la hipoteca y obtener respuesta."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica expresamente que el borrador no determina quién paga la derrama de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite y las arras de 24.000 € como 10% del precio."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Presenta los efectos legales como orientativos, sujetos a confirmación, y termina detallando la revisión necesaria por abogado o notario."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Identifica las arras penitenciales, pero no explica que el comprador pierde 24.000 € ni que el vendedor devuelve 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala expresamente como riesgos la falta de acreditación escrita de la denegación hipotecaria y la ausencia de plazo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica que no está asignado quién paga la derrama de 6.000 € y advierte del riesgo de disputa."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite y las arras de 24.000 € como 10% del precio."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Evita conclusiones jurídicas definitivas y termina con puntos concretos que deben revisar el abogado o el notario."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Cites 'arras penitenciales'; buyer would lose 24.000 €, seller would return double, 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Risks 1–2 and summary flag no written proof of denial and no deadline to invoke it."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Table and risk 3 state the 6.000 € derrama has no assigned payer."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table lists escritura by 15 December 2026 and arras as 10 % of 240.000 €."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses hedged 'en principio' language, ends with lawyer/notary review and an explicit non-definitive disclaimer."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Quotes penitential arras; buyer loses 24.000 €, seller returns double, 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Risks 1 and 2 cover missing written proof of denial and missing deadlines for the mortgage condition."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the 6.000 € derrama is unassigned, in the table and in risk 3."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table gives the 15 December 2026 deadline and arras of 24.000 € as 10 % of the price."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Hedged wording such as 'consecuencia ordinaria sería'; ends recommending review by a lawyer or notary."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Quotes penitenciales clause; buyer loses 24.000 €, seller returns double 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Risks 1 and 2 cover missing written proof of denial and absence of deadlines."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "States the borrador does not say who pays the 6.000 € derrama; listed as risk 3."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Table shows deadline 15 December 2026 and arras 24.000 € as 10 % of price."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Hedges with 'en principio', avoids definitive conclusions, ends with abogado/notario review section."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica arras penitenciales y explica que el comprador pierde 24.000 € y el vendedor devuelve 48.000 € si desisten."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Advierte expresamente que la condición hipotecaria no exige denegación escrita ni fija plazo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala que el borrador no asigna quién paga la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite y los 24.000 € como 10 % del precio."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Recomienda revisión profesional, pero afirma categóricamente que basta alegar denegación hipotecaria para recuperar las arras, conclusión jurídica no sustentada por el borrador."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras como penitenciales y explica que el comprador pierde 24.000 € y el vendedor devuelve 48.000 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Advierte que la condición hipotecaria no exige prueba escrita de denegación ni fija plazo para comunicarla."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala expresamente que no se ha asignado quién paga la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el límite de escritura del 15 de diciembre de 2026 y las arras de 24.000 € como 10 % del precio."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Recomienda revisión profesional, pero afirma que el comprador puede recuperar las arras «sin tener que demostrar» la denegación, conclusión no sustentada por el borrador."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica y cita las arras penitenciales; explica que el comprador pierde 24.000 EUR y el vendedor devuelve 48.000 EUR."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Advierte del riesgo de denegación sin prueba escrita, señala ausencia de plazo y propone exigir documento con fecha límite."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica expresamente que el borrador no asigna quién paga la derrama de 6.000 EUR y destaca el riesgo de discusión."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge la escritura como máximo el 15/12/2026 y las arras de 24.000 EUR como 10% del precio de 240.000 EUR."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque recomienda revisión profesional, afirma categóricamente que el vendedor sigue vinculado y tendría que rechazar otras ofertas, sin respaldo expreso del borrador."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras como penitenciales y explica la pérdida de 24.000 € del comprador y la devolución de 48.000 € del vendedor."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Advierte del riesgo de no exigir denegación escrita y de no fijar un plazo intermedio para comunicar la respuesta bancaria."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Señala expresamente que el borrador no asigna quién paga la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite de escritura y las arras de 24.000 € como 10 % del precio."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque recomienda revisión profesional, afirma categóricamente que basta alegar denegación hipotecaria para obligar al vendedor a devolver las arras."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras penitenciales y explica la pérdida de 24.000 € por desistimiento comprador y devolución de 48.000 € por desistimiento vendedor."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala como riesgos la ausencia de acreditación escrita de la denegación y de un plazo hipotecario previo a la escritura."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica expresamente que no se especifica quién asume la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge la fecha límite del 15 de diciembre de 2026 y que 24.000 € equivalen al 10 % de 240.000 €."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque recomienda revisión profesional, afirma categóricamente que basta alegar verbalmente la denegación para recuperar las arras y atribuye un plazo no pactado."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifica las arras penitenciales y explica la pérdida de 24.000 € por el comprador y devolución de 48.000 € por el vendedor."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Señala expresamente como riesgos la falta de acreditación escrita de la denegación hipotecaria y de plazo para comunicarla."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Indica que el contrato no asigna quién debe pagar la derrama aprobada de 6.000 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Recoge el 15 de diciembre de 2026 como fecha límite y las arras de 24.000 € como 10 % de 240.000 €."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Recomienda revisión profesional, pero afirma categóricamente el reparto legal de la derrama y que alegar denegación permite recuperar las arras."
+    }
+   ],
+   "transcript": "prompts/re-es-arras-es-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

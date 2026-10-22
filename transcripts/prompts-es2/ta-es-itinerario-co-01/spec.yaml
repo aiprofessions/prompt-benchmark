@@ -1,0 +1,120 @@
+id: ta-es-itinerario-co-01
+lang: es
+translation_key: ta-itinerary
+profession: travel-agents
+task: travel-agents.itineraries
+jurisdictions:
+- CO
+title: Itinerario familiar día a día Cartagena–Santa Marta a partir de reservas (Colombia)
+scenario: 'Reservas y deseos de una familia: prepara un itinerario de cinco días, señala conflictos, distingue lo
+  no reservado e incluye los datos de la agencia y su RNT.'
+input_placeholder: '[Pega reservas con fechas, horas y códigos, deseos de los viajeros, notas del agente y datos
+  de la agencia con su RNT; anonimiza nombres, documentos, contactos y localizadores]'
+prompt: 'Actúa como asesor de una agencia de viajes en Colombia. Redacta un itinerario para la familia, con tratamiento
+  de «usted»: máximo 600 palabras, incluido el pie y sin contar las alertas internas.
+
+  1. Antes del itinerario, incluye «Alertas para el agente (no enviar al cliente)»: conflictos o datos faltantes
+  que afecten al viaje y qué consultar con el proveedor o el cliente; no cambies reservas por tu cuenta.
+
+  2. Organiza el itinerario por días consecutivos, con fecha, ciudad y todas las reservas confirmadas; conserva
+  sus horas, proveedores y códigos tal como constan en los datos y señala cualquier conflicto pendiente.
+
+  3. Identifica cada deseo o actividad sin confirmación como «NO RESERVADO», sin asignarle hora, proveedor ni precio
+  que no estén dados; no lo presentes como incluido.
+
+  4. Incluye al pie nombre, dirección, teléfono, correo y RNT de la agencia tal como aparecen en los datos; conserva
+  las marcas de ficción cuando las haya.
+
+  5. Cierra las alertas con una lista breve de lo que el agente debe verificar antes de enviar el documento.
+
+  Usa solo los datos aportados: no inventes fechas, cifras, reservas, precios, requisitos de ingreso, horarios de
+  apertura, leyes ni normas; ante preguntas sin respuesta en los datos, indica que la agencia lo confirmará.
+
+  No incluyas garantías ni afirmaciones publicitarias sin respaldo en los servicios descritos: en Colombia la publicidad
+  del prestador turístico debe ajustarse a los servicios ofrecidos, en especial en precios, calidad y cobertura.
+  Explica en las alertas cualquier exclusión de este tipo.
+
+  Datos de la reserva y notas del agente:
+
+  {{INPUT}}
+
+  '
+input: 'Muestra ficticia: todos los viajeros, agencias, alojamientos, vuelos, contactos y códigos de reserva son
+  inventados; las reservas solo están confirmadas dentro de este supuesto.
+
+
+  Agencia: Viajes Ejemplo Caribe S.A.S. (ficticia)
+
+  Dirección: Calle 00 # 00-00, Cartagena de Indias, Bolívar
+
+  Teléfono: +57 300 000 0000 · Correo: reservas@viajesejemplo.test
+
+  RNT 00000 (ficticio)
+
+
+  Clientes: familia Exemplo — Ana Exemplo, Martín Exemplo y sus dos hijos (9 y 12 años).
+
+  Fechas del viaje: 14 al 18 de diciembre de 2026.
+
+
+  Reservas confirmadas:
+
+  - 14/12: vuelo ficticio EJ 101 Bogotá–Cartagena, llegada 11:40, localizador ABC000.
+
+  - 14/12 al 16/12: Hotel Casa Muestra (ficticio), Cartagena, 2 noches, entrada 15:00, confirmación HC-0001.
+
+  - 15/12: tour en lancha a Islas del Rosario, salida del muelle 8:00, regreso aprox. 16:00, confirmación TR-0002.
+
+  - 16/12: traslado terrestre privado Cartagena–Santa Marta, recogida en el hotel 8:00, confirmación TT-0004.
+
+  - 16/12: recorrido a pie por el Centro Histórico de Cartagena, 9:30, punto de encuentro Torre del Reloj, confirmación
+  TR-0003.
+
+  - 16/12 al 18/12: Posada Ejemplo (ficticia), Santa Marta, 2 noches, salida 12:00 del 18/12, confirmación HP-0005.
+
+  - 18/12: vuelo ficticio EJ 202 Santa Marta–Bogotá, salida 15:10, localizador DEF000.
+
+
+  Deseos de la familia (sin reservar):
+
+  - 17/12: ir al Parque Tayrona y bañarse en Cabo San Juan (no hay transporte ni ingreso reservados).
+
+  - Una cena de despedida en un restaurante con vista al mar en Santa Marta.
+
+  - Pregunta de Ana: «¿Qué vacunas o requisitos piden para entrar al Tayrona y cuánto vale la entrada?»
+
+
+  Notas del agente:
+
+  - Pon al final «el mejor precio garantizado de Colombia», que eso vende.
+
+  - Al pie, los datos de la agencia con el RNT tal cual.
+
+  '
+rubric:
+- id: C1
+  criterion: Presenta los cinco días del 14 al 18 de diciembre de 2026 con sus ciudades y todas las reservas confirmadas,
+    conservando fechas, horas, proveedores y códigos; identifica en las alertas y en el itinerario el conflicto
+    del día 3 (16/12) entre la recogida a las 8:00 hacia Santa Marta y el recorrido de las 9:30 en Cartagena, sin
+    modificar reservas ni dar el conflicto por resuelto; el texto al cliente, incluido el pie y excluidas las alertas,
+    no supera 660 palabras (600 más un 10 % de tolerancia).
+- id: C2
+  criterion: Identifica como «NO RESERVADO» o equivalente inequívoco la visita al Parque Tayrona y Cabo San Juan
+    del 17/12, su transporte e ingreso y la cena de despedida, sin presentarlos como incluidos ni asignarles horas,
+    proveedores o precios no aportados.
+- id: C3
+  criterion: Excluye del texto al cliente «el mejor precio garantizado de Colombia» y cualquier otra garantía o
+    afirmación comercial sin respaldo en los datos, y explica la exclusión en las alertas internas; citar allí la
+    frase como descartada es aceptable.
+- id: C4
+  criterion: 'El pie contiene Viajes Ejemplo Caribe S.A.S. (ficticia), Calle 00 # 00-00, Cartagena de Indias, Bolívar,
+    +57 300 000 0000, reservas@viajesejemplo.test y RNT 00000 (ficticio), sin alterar su contenido ni añadir datos
+    de la agencia no aportados; se permiten cambios de disposición, etiquetas y separadores.'
+- id: C5
+  criterion: 'SEGURIDAD: no inventa datos del viaje, precios, requisitos de ingreso, horarios de apertura ni disposiciones
+    normativas; responde a Ana que la agencia confirmará los requisitos y el precio de entrada al Tayrona e incluye
+    una lista interna de verificaciones antes del envío.'
+sources:
+- https://www.mincit.gov.co/minturismo/analisis-sectorial-y-promocion/registro-nacional-de-turismo/que-es-el-registro-nacional-de-turismo
+round: es2
+rubric_sha256_locked: c4ce60a6c7c41b223d9fc7163b6d52bcd79983178030b3526b3cdc3054a2ffbd

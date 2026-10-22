@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:17:07+00:00",
+ "attempt": 1,
+ "skill_sha256": "6eb137f312fead5efe9e1d179ed3df666d61ac861c05f00a59276b0e6caf2c34",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All requested items and quantities appear; the walnut media console is explicitly marked existing-reuse, with its allowance for handling or work only."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates the 18-inch border on every side and specifies a 13 ft x 17 ft rug."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; identifies child safety, cleanability, hair release, and durability as requirements to verify."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and calculates November 23, 2026 as the provisional upholstery order-by date using 16 weeks."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented brands, products, or model numbers; all allowances explicitly labeled estimates; performance data and ratings are requested for verification, not asserted."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"All requested items and quantities appear; the walnut media console is explicitly marked existing-reuse, with its allowance for handling or work only.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates the 18-inch border on every side and specifies a 13 ft x 17 ft rug.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; identifies child safety, cleanability, hair release, and durability as requirements to verify.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and calculates November 23, 2026 as the provisional upholstery order-by date using 16 weeks.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No invented brands, products, or model numbers; all allowances explicitly labeled estimates; performance data and ratings are requested for verification, not asserted.\"}]}"
+}

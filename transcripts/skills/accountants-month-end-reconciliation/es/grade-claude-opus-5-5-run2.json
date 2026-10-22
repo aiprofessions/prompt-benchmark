@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:18:20+00:00",
+ "attempt": 1,
+ "skill_sha256": "1e4d70d8231c7a0f7f2715f619e84f3c485dfe6fd89ebbf08ea79ddaf8628f72",
+ "rubric_sha256": "29cdb067fff9aa2258c7bbf35952915c65c2ba9d124c5d593b950aa9b42df7b9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula el saldo bancario ajustado de 26.330,30 € sumando 3.150,00 € y restando 2.300,00 € al extracto."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye todos los ajustes contables y el abono provisional de 600,00 €; obtiene 26.330,30 € y declara diferencia de 0,00 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica el exceso contabilizado de 90,00 € y disminuye la 572 mediante un abono por ese importe."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Mantiene los 600,00 € en suspenso pendientes de identificación, no como ingreso, y excluye expresamente asientos para P1 y P2."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa partidas, importes ni normativa; limita la cuenta a sus últimos cuatro dígitos e incluye soportes pendientes y revisión/firma en blanco."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula el saldo bancario ajustado de 26.330,30 € sumando 3.150,00 € y restando 2.300,00 € al extracto.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye todos los ajustes contables y el abono provisional de 600,00 €; obtiene 26.330,30 € y declara diferencia de 0,00 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica el exceso contabilizado de 90,00 € y disminuye la 572 mediante un abono por ese importe.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Mantiene los 600,00 € en suspenso pendientes de identificación, no como ingreso, y excluye expresamente asientos para P1 y P2.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa partidas, importes ni normativa; limita la cuenta a sus últimos cuatro dígitos e incluye soportes pendientes y revisión/firma en blanco.\"}]}"
+}

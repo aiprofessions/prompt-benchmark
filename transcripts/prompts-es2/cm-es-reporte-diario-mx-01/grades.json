@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-es-reporte-diario-mx-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Presenta el personal en una tabla por empresa y categoría fiel al desglose de las notas, con subtotales de 12, 12 y 5 para Constructora Ejemplo, Estructuras Muestra y Eléctrica Ejemplo, respectivamente, y total de 29 personas (tolerancia numérica 0); identifica y corrige el subtotal anotado de 14 y el total anotado de 31."
+  },
+  {
+   "id": "C2",
+   "criterion": "Registra la entrega incompleta de concreto con 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes (tolerancia numérica 0; se admiten unidades equivalentes), y la recepción completa de la varilla según la remisión, sin inventar la causa de la entrega incompleta."
+  },
+  {
+   "id": "C3",
+   "criterion": "Registra como incidente de seguridad o casi-accidente de trabajo en altura el evento de las 11:40 h en el borde de la losa de entrepiso, eje 5, a 4 m: trabajador de Estructuras Muestra sin arnés colocando tapa de borde, detención de la actividad por el supervisor de seguridad, entrega de arnés, revisión de la línea de vida, reanudación a las 12:10 y ausencia de lesión; se admiten paráfrasis y formatos horarios equivalentes."
+  },
+  {
+   "id": "C4",
+   "criterion": "Incluye datos generales, clima y las actividades anotadas, conserva los 3 pendientes con sus detalles disponibles, señala al menos un dato ausente o pendiente de verificación y no supera 550 palabras (límite solicitado de 500 con tolerancia de +10 %); se admiten secciones combinadas y fechas deducidas inequívocamente de las notas."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: omite la suposición sobre el cabo R. Muestra o la identifica como no verificada, no añade hechos ni culpas sin respaldo en las notas, limita cualquier afirmación normativa a la definición autorizada de trabajo en altura e incluye una línea para revisión y firma del residente antes de archivar."
+  }
+ ],
+ "rubric_sha256": "ca20593bd1581fcab7bf753b7cb5092b9b067bfe8d7a4364f93e11480d4c858a",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabla fiel por empresa y categoría; calcula subtotales 12, 12 y 5, total 29, e identifica los errores 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 recibidos y 7 faltantes; varilla completa según remisión, sin atribuir causas al faltante de concreto."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye hora, ubicación, altura, trabajador, falta de arnés, actividad, intervención, medidas, reanudación y ausencia de lesión; clasifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye los contenidos requeridos, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Marca el comentario como no verificado y no causal; no añade culpas, limita la referencia normativa e incluye revisión y firma del residente."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Mantiene el subtotal incorrecto de 14 y el total de 31; declara sin discrepancias en vez de corregirlos a 12 y 29."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye hora, lugar, altura, empresa, falta de arnés, actividad, intervención del supervisor, medidas correctivas, reanudación y ausencia de lesión."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye los datos, actividades, pendientes y verificaciones solicitados, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la suposición como no verificada, no añade culpas, limita la afirmación normativa a la definición autorizada e incluye revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabla fiel por empresa y categoría, subtotales 12, 12 y 5 y total 29; identifica discrepancias con 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 recibidos y 7 faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye hora, ubicación, altura, empresa, falta de arnés, actividad, intervención, medidas, reanudación y ausencia de lesiones; clasifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos, clima, actividades, pendientes y verificaciones, pero supera el máximo de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Marca el comentario causal como no verificado, no agrega culpas, limita la referencia normativa a la definición autorizada y cierra con revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Calcula correctamente 12, 12, 5 y 29 y explica las discrepancias, pero presenta una lista jerárquica, no una tabla."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye ubicación, hora, altura, trabajador sin arnés, tarea, detención, medidas correctivas, reanudación y ausencia de lesión; identifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos generales, clima, actividades, pendientes y verificaciones, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Marca la atribución causal como opinión no verificada, no agrega culpas, limita la referencia normativa e incluye línea de revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Calcula correctamente 12, 12, 5 y 29 e identifica las discrepancias, pero presenta listas, no una tabla por empresa y categoría."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 recibidos y 7 faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye hora, ubicación, altura, trabajador, falta de arnés, actividad, intervención, medidas correctivas, reanudación y ausencia de lesión; clasifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos generales, clima, actividades, los tres pendientes y verificaciones, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la suposición como no verificada, no añade culpas, limita la referencia normativa a la definición autorizada e incluye revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La tabla conserva todas las categorías; calcula subtotales 12, 12 y 5, total 29, y explica los errores de 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Documenta todos los detalles del incidente, las medidas tomadas, reanudación a las 12:10, ausencia de lesión y clasificación como trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos generales, clima, actividades, pendientes y verificaciones, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la suposición como no verificada, no añade culpas, limita la referencia normativa al umbral autorizado e incluye revisión y firma del residente."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table by company and category gives subtotals 12, 12 and 5 and a total of 29. It flags the noted 14 and 31 as discrepancies."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Concrete shows 35 m³ scheduled, 28 received and 7 short; rebar complete per remisión 0000-EJ. No cause invented."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records all incident elements: 11:40 h, eje 5, 4 m, no harness, work stopped, harness given, lifeline checked, resumed 12:10, no injury."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Talk pending omits its topic, 'sobre trabajo en altura', and the concrete pending omits 'con la concretera'. Not all available details are kept."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Omits the unverified opinion about the cabo and adds no blame. Normative claim stays within the 1.80 m definition; signature line included."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table by company/category with subtotals 12, 12, 5 and total 29; flags the noted 14 and 31 as discrepancies."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "35 m³ scheduled, 28 m³ received, 7 m³ short; rebar complete per remisión; no cause invented for the shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All incident elements present: 11:40, eje 5, 4 m, no harness, stoppage, harness, lifeline check, 12:10 restart, no injury."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "General data, weather, activities and all three pending items included; verifications listed; about 430 words, under 550."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Unverified opinion omitted and noted; no added blame; normative claim limited to the 1.80 m definition; signature line included."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table by company and category with subtotals 12, 12, 5 and total 29; flags the noted 14 and 31 as discrepancies."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Records 35 m³ programmed, 28 m³ received, 7 m³ missing; rebar complete per remisión; no invented cause for the shortfall."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Records the 11:40 event with location, worker without harness, stoppage, harness given, lifeline checked, 12:10 restart, no injury."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Includes general data, weather, activities, three pendientes and items to verify; about 430 words, under the limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Omits the R. Muestra assumption, adds no blame, cites only the authorized NOM definition, includes the review and signature line."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabla fiel por empresa y categoría, subtotales 12, 12 y 5, total 29; identifica y corrige los valores 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Consigna 35 m³ programados, 28 recibidos y 7 faltantes, y varilla completa según remisión, sin atribuir causa a la entrega incompleta."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra todos los detalles exigidos del incidente, sus acciones y consecuencias, y lo clasifica como trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos, clima, actividades, pendientes y verificaciones, pero supera el máximo de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque marca la opinión como no verificada e incluye firma, atribuye el tramo pendiente a falta de concreto, causalidad no establecida en notas."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Mantiene el subtotal incorrecto de 14 y el total de 31; declara que no hay discrepancias en lugar de corregirlos a 12 y 29."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Indica 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; registra varilla completa según remisión sin inventar causa de entrega incompleta."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra todos los detalles exigidos del incidente, las acciones, la reanudación a las 12:10, ausencia de lesión y clasificación como trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos generales, clima, actividades, pendientes y verificaciones, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque marca la opinión como no verificada e incluye firma, añade sin respaldo unidades de resistencia y atribuye el tramo pendiente a falta de concreto."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Mantiene el subtotal incorrecto de 14 y el total de 31; afirma que no hay discrepancias, en vez de corregirlos a 12 y 29."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Incluye hora, ubicación, altura, trabajador, falta de arnés, actividad, intervención del supervisor, medidas, reanudación y ausencia de lesión; clasifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye datos generales, clima, actividades, pendientes y verificaciones, pero supera el máximo permitido de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la opinión como no verificada, no añade culpas, limita la afirmación normativa a la definición autorizada e incluye línea de revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La tabla conserva todas las categorías, calcula subtotales de 12, 12 y 5 y total de 29; explica ambas discrepancias."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Documenta el incidente de trabajo en altura con hora, ubicación, altura, trabajador, hechos, acciones, reanudación y ausencia de lesiones requeridos."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye los datos, actividades, pendientes y verificaciones solicitados, pero supera el máximo tolerado de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la opinión como no verificada, no añade culpas, limita la referencia normativa a la definición autorizada y cierra con revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Tabla fiel al desglose, subtotales 12, 12 y 5, total 29; explica y corrige los registros de 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Consigna 35 m³ programados, 28 recibidos y 7 faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Registra todos los detalles del incidente, las medidas tomadas, reanudación a las 12:10 y ausencia de lesiones; identifica trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye los contenidos solicitados y datos por verificar, pero supera el máximo permitido de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Marca la suposición como no verificada, no añade culpas, limita la referencia normativa y cierra con línea de revisión y firma del residente."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La tabla conserva categorías y cantidades, calcula subtotales 12, 12 y 5 y total 29, y explica las discrepancias con 14 y 31."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra 35 m³ programados, 28 m³ recibidos y 7 m³ faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Documenta todos los detalles exigidos del incidente, las medidas tomadas, reanudación a las 12:10, ausencia de lesión y clasificación como trabajo en altura."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Incluye los datos, actividades, clima, pendientes y verificaciones exigidos, pero supera el límite de 550 palabras."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Identifica la suposición como opinión no verificada, no añade culpas, limita la referencia normativa autorizada e incluye línea de revisión y firma."
+    }
+   ],
+   "transcript": "prompts/cm-es-reporte-diario-mx-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

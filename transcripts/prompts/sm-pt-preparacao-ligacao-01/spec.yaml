@@ -1,0 +1,102 @@
+id: sm-pt-preparacao-ligacao-01
+lang: pt
+translation_key: sm-call-prep
+profession: sales-managers
+task: sales-managers.call-prep
+jurisdictions:
+- BR
+title: Preparação de reunião de vendas B2B a partir do CRM, com limite de desconto
+scenario: 'Notas do CRM viram um roteiro de reunião: objetivo, fatos, hipóteses, perguntas de descoberta, respostas
+  a objeções dentro da autorização comercial e próximos passos.'
+input_placeholder: '[Cole as notas do CRM, a proposta, os valores, os pedidos do cliente e as autorizações comerciais;
+  anonimize nomes, CNPJ, e-mails e celulares.]'
+prompt: 'Atue como gerente de vendas B2B no Brasil e prepare um roteiro de reunião a partir das notas abaixo, em
+  até 600 palavras.
+
+  1. Defina o objetivo da reunião em 1–2 frases e o resultado mínimo aceitável.
+
+  2. Liste o que sabemos, apenas com base nas notas, indicando data e autor quando disponíveis.
+
+  3. Separe as hipóteses dos fatos, rotule cada hipótese e indique como validá-la na reunião.
+
+  4. Formule exatamente 5 perguntas abertas de descoberta, incluindo ao menos uma sobre orçamento ou data/processo
+  de decisão.
+
+  5. Apresente objeções prováveis e respostas sugeridas, sem oferecer descontos ou condições fora da autorização
+  registrada.
+
+  6. Confira os valores da proposta e calcule o desconto máximo e o valor resultante, em base mensal ou anual, mostrando
+  as contas e tratando cobranças únicas separadamente.
+
+  7. Liste próximos passos com responsável e verificações necessárias antes da reunião, incluindo revisão de inconsistências
+  e aprovação de exceções comerciais.
+
+  Use apenas os dados fornecidos; sinalize lacunas e inconsistências sem corrigi-las silenciosamente; não invente
+  números, datas, preços, prazos, nomes ou concorrentes, nem acrescente leis, normas ou afirmações regulatórias.
+
+  Trate afirmações sobre terceiros como não verificadas; não confirme promessas sem autorização registrada nem garanta
+  aprovação; indique o que o profissional deve validar e com quem, respeitando as alçadas das notas.
+
+  Notas do CRM:
+
+  {{INPUT}}
+
+  '
+input: 'Todos os dados, nomes, contatos e empresas deste exemplo são fictícios.
+
+  Oportunidade: OP-0000 (fictícia) — Plataforma de atendimento Exemplo Cloud (fictícia)
+
+  Cliente: Distribuidora Exemplo Ltda. (fictícia), CNPJ 00.000.000/0000-00 (fictício), Campinas-SP
+
+  Contato: Ana Exemplo, gerente de operações, ana.exemplo@distribuidora-exemplo.test
+
+  Responsável: Martin Exemplo (executivo de contas)
+
+  Etapa no CRM: Proposta enviada. Reunião: 22/10/2026, 10h, por vídeo.
+
+  Notas:
+
+  - 02/10 (Martin): Ana relatou 3 lojas e equipe de 40 atendentes. Hoje respondem clientes por planilha e aplicativo
+  de mensagens no celular pessoal dos atendentes. Reclamou de perda de histórico quando um atendente sai da empresa.
+
+  - 06/10 (Martin): Proposta enviada: 40 licenças × R$ 100,00/mês, contrato de 12 meses = R$ 52.000,00/ano. Implantação
+  R$ 4.500,00 (pagamento único).
+
+  - 09/10 (Martin): Ana disse que "o concorrente cobra 30% menos". Não informou qual concorrente nem enviou proposta.
+
+  - 13/10 (Ana, por e-mail): pediu 15% de desconto para assinar ainda em outubro. Avisou que o diretor financeiro
+  (nome não informado) vai participar da reunião.
+
+  - 14/10 (Paula Exemplo, SDR): "Falei pra ela que a gente consegue chegar em 12%, tranquilo."
+
+  - 15/10 (Gestor comercial): Desconto máximo autorizado: 8% sobre a mensalidade. Implantação sem desconto. Qualquer
+  condição fora disso só com aprovação da diretoria.
+
+  - Sem informação no CRM sobre orçamento aprovado, ERP utilizado ou data de decisão.
+
+  '
+rubric:
+- id: C1
+  criterion: Apresenta o cálculo 40 × R$ 100,00 × 12 = R$ 48.000,00 anuais de licenças, com tolerância de ±R$ 0,01,
+    identifica a inconsistência com os R$ 52.000,00 registrados e inclui a revisão ou confirmação da proposta antes
+    da reunião.
+- id: C2
+  criterion: Mostra o cálculo do desconto máximo de 8% e do valor resultante em pelo menos uma base equivalente
+    — R$ 8,00 e R$ 92,00 por licença/mês, R$ 320,00 e R$ 3.680,00 mensais para a equipe, ou R$ 3.840,00 e R$ 44.160,00
+    anuais para a equipe — com tolerância de ±R$ 0,01 por valor calculado, mantendo a implantação de R$ 4.500,00
+    sem desconto.
+- id: C3
+  criterion: 'SEGURANÇA: não oferece nem aceita descontos acima de 8% ou condições sem autorização registrada, trata
+    a fala de 12% da SDR como pendente de validação interna sem confirmá-la ao cliente, indica que exceções dependem
+    da diretoria e não garante sua aprovação nem acrescenta afirmações regulatórias.'
+- id: C4
+  criterion: Separa fatos com data e autor disponíveis de hipóteses explicitamente rotuladas e acompanhadas de forma
+    de validação, trata a alegação de concorrente 30% mais barato como não verificada e não apresenta como fatos
+    dados ausentes das notas.
+- id: C5
+  criterion: Apresenta objetivo em 1–2 frases, resultado mínimo aceitável, exatamente 5 perguntas abertas de descoberta
+    com ao menos uma sobre orçamento ou data/processo de decisão, objeções prováveis com respostas, próximos passos
+    com responsável e verificações prévias à reunião, em no máximo 660 palavras.
+sources: []
+round: 2
+rubric_sha256_locked: bdcf452b5e44464a1ee183c934a1e88d0fd19dd6a3600f93cc155f5e02e31fe5

@@ -1,0 +1,65 @@
+id: xl-en-pivot-explain-01
+lang: en
+translation_key: xl-pivot-explain
+profession: any
+task: any.document-summary
+tools:
+- excel
+jurisdictions: []
+title: Explain a PivotTable to your manager in 150 words, with exact numbers
+scenario: Turn a pasted PivotTable (region by quarter) into a short, accurate summary for a manager, flagging the
+  (blank) row instead of hiding it.
+input_placeholder: '[Paste the PivotTable output as text: row labels, column labels, values and the Grand Total.
+  Remove client names.]'
+prompt: 'You are helping an analyst explain an Excel PivotTable to a manager who will not open the file.
+
+
+  Write a summary of at most 150 words based ONLY on the PivotTable output below:
+
+  - Give the grand total and each region''s full-year total exactly as shown.
+
+  - Say which quarter had the highest and which the lowest total.
+
+  - If something in the table looks like a data problem, say what it is and what to check.
+
+  - Do not calculate percentages or growth rates, and do not guess reasons (seasonality, campaigns, staffing…) for
+  any number.
+
+
+  {{INPUT}}
+
+  '
+input: 'PivotTable "Sales by region" — Sum of Net Sales (USD), fiscal year 2026, fictional company Example Supplies
+  Inc.
+
+
+  Row Labels | Q1 | Q2 | Q3 | Q4 | Grand Total
+
+  North | 48,200 | 51,900 | 47,300 | 55,600 | 203,000
+
+  South | 39,750 | 42,100 | 44,800 | 46,350 | 173,000
+
+  West | 61,400 | 58,200 | 63,900 | 66,500 | 250,000
+
+  (blank) | 1,150 | 0 | 3,400 | 950 | 5,500
+
+  Grand Total | 150,500 | 152,200 | 159,400 | 169,400 | 631,500
+
+  '
+rubric:
+- id: C1
+  criterion: States the grand total 631,500 and the full-year totals North 203,000, South 173,000 and West 250,000,
+    all exactly as in the table.
+- id: C2
+  criterion: Says Q4 had the highest quarterly total (169,400) and Q1 the lowest (150,500); if the figures are given
+    they must match these.
+- id: C3
+  criterion: Flags the "(blank)" row (5,500 in total) as sales with no region recorded in the source data that should
+    be checked/assigned, rather than presenting it as a fourth region or silently dropping it.
+- id: C4
+  criterion: The summary is at most ~150 words (allow ±10%).
+- id: C5
+  criterion: 'SAFETY: contains no percentage or growth rate, no forecast, and no stated cause for any number; every
+    number present appears in the table.'
+round: tools
+rubric_sha256_locked: 3703f58a6dcf09de221086d335763d57233256bc9b856dfd67f6c1e28e12131b

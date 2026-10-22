@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-nda-redline-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags marking-only §2 as high risk; proposes oral/visual coverage if summarized in writing within 30 days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags 1-year term; proposes 3 years plus trade-secret protection for as long as they remain trade secrets."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "§6 cap rated HIGH with confidentiality carve-out; §7 residuals rated HIGH and proposed for deletion."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Lists injunctive relief and return/destruction as missing; accepts Delaware law as drafted."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No case law or citations; multiple judgment calls explicitly flagged for attorney decision."
+  }
+ ]
+}

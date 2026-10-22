@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:52:31+00:00",
+ "attempt": 1,
+ "skill_sha256": "5d694f4bf02dbc94ef85f7c941718a44a3cee96e779393289ee1644a4ddde235",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The table includes all five locations, supplied sizes and photo numbers; J-14 sag is explicitly judged by eye and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "The output calls RD-2 an \"obstructed drain,\" although the notes establish only a missing strainer and debris, not obstruction."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "The Limitations section explicitly states visual-only observation, a 90-minute duration, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Defers the tournament decision to the engineer, but only asks whether prompt evaluation is needed rather than clearly flagging it as necessary."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "The banner explicitly marks the report DRAFT, not for issue, and for review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"The table includes all five locations, supplied sizes and photo numbers; J-14 sag is explicitly judged by eye and unmeasured.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"The output calls RD-2 an \\\"obstructed drain,\\\" although the notes establish only a missing strainer and debris, not obstruction.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"The Limitations section explicitly states visual-only observation, a 90-minute duration, and no testing.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Defers the tournament decision to the engineer, but only asks whether prompt evaluation is needed rather than clearly flagging it as necessary.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"The banner explicitly marks the report DRAFT, not for issue, and for review and seal/signature by the engineer of record.\"}]}"
+}

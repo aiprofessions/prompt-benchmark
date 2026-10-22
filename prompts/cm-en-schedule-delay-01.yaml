@@ -1,0 +1,50 @@
+id: cm-en-schedule-delay-01
+lang: en
+translation_key: cm-schedule-delay
+title: Delay impact on the critical path from an activity list
+scenario: Paste an activity list with dependencies and a delay. Get the critical path, the new finish date and which activities
+  have float — with the arithmetic shown.
+profession: construction-managers
+task: construction-managers.scheduling
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Using the activity list below (finish-to-start dependencies, working days Monday–Friday, no holidays):
+
+  1. Compute early start/finish for each activity and identify the critical path and baseline project finish date.
+
+  2. Apply the delay and recompute. State the new finish date and the slip in working days.
+
+  3. List the activities with float and how much.
+
+  Show your work in a table. Do not assume resources or calendars beyond what is given.
+
+  Data:
+
+  [Paste activities with durations (working days), predecessors, start date and the delay]
+
+  '
+sample_input: 'Project start: Monday, November 2, 2026 (day 1). (Fictional project.)
+
+  A Site prep — 5 days — no predecessor
+
+  B Foundations — 10 days — after A
+
+  C Underground utilities — 6 days — after A
+
+  D Framing — 15 days — after B
+
+  E Roofing — 5 days — after D
+
+  F MEP rough-in — 8 days — after C and D
+
+  G Inspections — 2 days — after E and F
+
+  Delay: activity C (utilities) takes 14 days instead of 6.
+
+  '
+page: https://aiprofessions.ai/construction-managers/prompts/#cm-en-schedule-delay-01
+results_file: results/cm-en-schedule-delay-01.yaml

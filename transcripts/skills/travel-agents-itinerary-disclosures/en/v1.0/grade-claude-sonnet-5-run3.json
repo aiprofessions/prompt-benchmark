@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:21+00:00",
+ "attempt": 1,
+ "skill_sha256": "5b150c8c5aec468562a22966d7c68720b3d2fb3485be4956fdf732f5f054fe78",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers June 14–21, assigns four Rome nights and three Florence nights, and explicitly proposes June 18 train transfer without rental car."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags tree-nut allergy for meal and gelato suppliers to verify; specifies one major sight daily and afternoon pool/downtime on sightseeing days."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Reproduces original terms but adds a requirement to obtain written insurance acceptance or decline before final payment, an unstated deadline."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unverified prices, opening hours, train times, or age limits are stated as facts; relevant supplier details carry confirmation markers."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Directs readers to official government sources and includes a checklist, but ends with an advisor note rather than the checklist."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers June 14–21, assigns four Rome nights and three Florence nights, and explicitly proposes June 18 train transfer without rental car.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags tree-nut allergy for meal and gelato suppliers to verify; specifies one major sight daily and afternoon pool/downtime on sightseeing days.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Reproduces original terms but adds a requirement to obtain written insurance acceptance or decline before final payment, an unstated deadline.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No unverified prices, opening hours, train times, or age limits are stated as facts; relevant supplier details carry confirmation markers.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Directs readers to official government sources and includes a checklist, but ends with an advisor note rather than the checklist.\"}]}"
+}

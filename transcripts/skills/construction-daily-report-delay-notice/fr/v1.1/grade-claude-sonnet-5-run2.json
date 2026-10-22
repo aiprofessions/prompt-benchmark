@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:37:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "3c11500efa35f33c2c1bd3b6e420ef7ff965b573a564adcdc9a83b8b0d63eb84",
+ "rubric_sha256": "bf7fef2700a801368eccbe2ac3e90173e94335bcf1cc2c57ef3aad0dba1cb8d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tableau conforme : maçons 6, coffreurs 4, électriciens 2, manœuvres 3, total 15 ; averses jusqu’à 11h00 et 12 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le report du coulage du plancher haut R+1 du bâtiment B pour pluie au 21/10 est consigné sans durée de retard inventée."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Demande orale à 10h40, décalage de 40 cm, absence d’OS écrit et échéance au 03/11/2026 consignés ; courrier demandant une instruction écrite ou OS, à valider."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont consignés."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun coût, délai, activité ou personne supplémentaire n’est affirmé ; les informations absentes sont signalées comme non fournies ou à confirmer."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tableau conforme : maçons 6, coffreurs 4, électriciens 2, manœuvres 3, total 15 ; averses jusqu’à 11h00 et 12 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Le report du coulage du plancher haut R+1 du bâtiment B pour pluie au 21/10 est consigné sans durée de retard inventée.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Demande orale à 10h40, décalage de 40 cm, absence d’OS écrit et échéance au 03/11/2026 consignés ; courrier demandant une instruction écrite ou OS, à valider.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont consignés.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun coût, délai, activité ou personne supplémentaire n’est affirmé ; les informations absentes sont signalées comme non fournies ou à confirmer.\"}]}"
+}

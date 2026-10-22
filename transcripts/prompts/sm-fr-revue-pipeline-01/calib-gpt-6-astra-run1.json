@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-revue-pipeline-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les six lignes respectent l’export ; les montants pondérés et les totaux brut de 540 000 € et pondéré de 217 000 € sont exacts."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le calcul 400 000 − 0 − 217 000 = 183 000 € est détaillé ; la surestimation CRM de 31 000 € est explicitée."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Les seules signatures dépassées sont Démo Santé et Specimen BTP ; seules Fictif Industrie et Specimen BTP dépassent 30 jours, avec les durées exactes."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Chaque commercial reçoit trois questions explicitement rattachées à ses affaires ; le texte hors tableaux reste sous 550 mots."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Budget oral isolé, simulation explicitement conditionnelle, valeurs export conservées ; aucun fait inventé, affirmation réglementaire ou garantie ; validation avant diffusion demandée en conclusion."
+  }
+ ]
+}

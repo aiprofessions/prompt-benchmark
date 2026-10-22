@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:55:07+00:00",
+ "attempt": 1,
+ "skill_sha256": "94092c8b4aecd822b17aad877a76a0591d57086796cf5a9f79b9306a2269b3c2",
+ "rubric_sha256": "318dafad1f31559a272ea19d42db6ffec988f5de19e7aa756565970f3ea86a8e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les cinq constats, localisations, dimensions fournies et photos exactes figurent dans le tableau, y compris EP-3 et 1,2 m dans le constat."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aucune mesure, aucun essai réalisé, article normatif ou constat supplémentaire inventé ; les causes et interprétations restent explicitement incertaines."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La partie LIMITES DE LA VISITE précise le caractère visuel, la durée de 1 h 30 et cite « sans essai ni sondage »."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Aucun oui ou non ; les deux décisions sont renvoyées à l'ingénieur responsable après évaluation, avec recommandation d'évaluation complémentaire de P-4."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "La première ligne indique BROUILLON et demande explicitement relecture et signature de l'ingénieur responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les cinq constats, localisations, dimensions fournies et photos exactes figurent dans le tableau, y compris EP-3 et 1,2 m dans le constat.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aucune mesure, aucun essai réalisé, article normatif ou constat supplémentaire inventé ; les causes et interprétations restent explicitement incertaines.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La partie LIMITES DE LA VISITE précise le caractère visuel, la durée de 1 h 30 et cite « sans essai ni sondage ».\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Aucun oui ou non ; les deux décisions sont renvoyées à l'ingénieur responsable après évaluation, avec recommandation d'évaluation complémentaire de P-4.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"La première ligne indique BROUILLON et demande explicitement relecture et signature de l'ingénieur responsable.\"}]}"
+}

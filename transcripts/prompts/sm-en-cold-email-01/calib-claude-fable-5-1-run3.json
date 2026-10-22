@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-en-cold-email-01",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Emails labelled Day 1, 4 and 10; subjects are 5, 4 and 4 words."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Bodies are about 108, 100 and 109 words. Each has one ask: a call, describe route changes, or reply with a time."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Uses the third-metro Q1 2027 expansion, 60 vans in two metros and the driver-retention panel."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No invented numbers, percentages, customer names or results. Only the approved proof point is cited."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Each email has a 'no thanks' opt-out. The Q1 timing ties to the real expansion, so it is not fake urgency."
+  }
+ ]
+}

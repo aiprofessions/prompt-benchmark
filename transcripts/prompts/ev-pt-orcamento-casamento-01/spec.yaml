@@ -1,0 +1,109 @@
+id: ev-pt-orcamento-casamento-01
+lang: pt
+translation_key: ev-wedding-budget
+profession: event-planners
+task: event-planners.budgeting
+jurisdictions:
+- BR
+title: Orçamento de casamento para 150 convidados a partir de orçamentos de fornecedores
+scenario: Cole os orçamentos de buffet, espaço, DJ, decoração e foto/vídeo e receba o total em reais, a diferença
+  para o orçamento dos noivos e três economias calculadas.
+input_placeholder: '[Cole os orçamentos dos fornecedores, valores, unidades, alternativas, número de convidados,
+  orçamento dos noivos e cláusulas de taxas. Anonimize nomes, CPF e contatos.]'
+prompt: 'Atue como profissional de planejamento de eventos no Brasil. Monte o orçamento consolidado do casamento
+  com os dados abaixo.
+
+  1. Apresente uma tabela por item, com cálculo e valor em reais com centavos; aplique as taxas sobre as bases previstas
+  nos contratos.
+
+  2. Inclua a linha "Direitos autorais de execução musical (ECAD) — valor a confirmar", sem atribuir valor.
+
+  3. Informe o total dos itens com valor definido, deixando claro que exclui o ECAD, e a diferença para o orçamento
+  dos noivos, indicando se está acima ou abaixo.
+
+  4. Apresente três formas de economizar, priorizando as alternativas fornecidas; calcule cada economia separadamente
+  em relação à proposta original, incluindo os efeitos nas taxas.
+
+  5. Se uma economia depender de hipóteses sustentadas pelos dados, identifique-a como estimativa e explique a base;
+  sem base de cálculo, deixe o valor a confirmar.
+
+  6. Liste o que deve ser validado com fornecedores e noivos antes de fechar contratos, incluindo valores pendentes
+  e divergências encontradas.
+
+  Use apenas os dados fornecidos, confira sua consistência e mostre os cálculos; sinalize divergências e explique
+  quais dados adotou.
+
+  Não invente números, preços, datas, leis, jurisprudência ou normas. Sinalize informações ausentes ou não confirmadas
+  e não garanta o valor final.
+
+  Escreva até 450 palavras. Use o formato monetário brasileiro, como R$ 1.234,56.
+
+  Dados:
+
+  {{INPUT}}
+
+  '
+input: 'Casamento de Ana Exemplo e Martin Exemple (dados fictícios). Data: sábado, 12/06/2027. Convidados confirmados
+  para orçamento: 150.
+
+  Orçamento total definido pelos noivos: R$ 90.000,00.
+
+
+  1) Buffet Sabor Exemplo (fictício), contato@saborexemplo.test
+
+  - Cardápio "Clássico": R$ 285,00 por pessoa (alimentos e bebidas não alcoólicas).
+
+  - Subtotal impresso na proposta: "150 convidados = R$ 41.750,00".
+
+  - Alternativa oferecida: cardápio "Essencial" a R$ 259,00 por pessoa.
+
+  - Contrato, cláusula 7 (nas notas): "A taxa de serviço de 10 % incide exclusivamente sobre o valor do buffet."
+
+
+  2) Espaço Jardim Exemplo (fictício): locação do salão e jardim, R$ 18.500,00.
+
+
+  3) DJ Som Exemplo (fictício): R$ 4.800,00 (som, iluminação básica, 6 horas). Observação do DJ: "não inclui ECAD".
+
+
+  4) Decoração Flor Exemplo (fictícia): R$ 14.200,00 no total, incluindo 15 arranjos de mesa a R$ 380,00 cada.
+
+  - Alternativa: arranjos baixos a R$ 220,00 cada (mesma quantidade).
+
+
+  5) Foto e vídeo Lente Exemplo (fictícia): pacote foto + vídeo R$ 9.900,00.
+
+  - Alternativa: somente foto, R$ 6.400,00.
+
+
+  6) Direitos autorais de execução musical (ECAD): ainda não consultado.
+
+  Mensagem de WhatsApp da decoradora: "ECAD deve dar uns R$ 1.500, acho, coloca isso aí."
+
+  '
+rubric:
+- id: C1
+  criterion: Apresenta a tabela por item com cálculos, obtém buffet de R$ 42.750,00 e taxa de serviço de R$ 4.275,00
+    exclusivamente sobre o buffet, aponta a divergência do subtotal impresso de R$ 41.750,00 e adota o subtotal
+    recalculado; tolerância de ±R$ 0,01 nos valores calculados.
+- id: C2
+  criterion: Apresenta total de R$ 94.425,00, explicitamente sem ECAD, e diferença de R$ 4.425,00 acima do orçamento
+    dos noivos de R$ 90.000,00; tolerância de ±R$ 0,01 nos valores calculados.
+- id: C3
+  criterion: 'Apresenta três economias calculadas separadamente em relação à proposta original: R$ 4.290,00 com
+    o cardápio Essencial, incluindo a redução da taxa de serviço, R$ 3.500,00 com somente foto e R$ 2.400,00 com
+    arranjos baixos; tolerância de ±R$ 0,01 em cada economia.'
+- id: C4
+  criterion: Inclui a linha de direitos autorais de execução musical (ECAD) com valor a confirmar, sem atribuir
+    valor numérico nem incorporar a sugestão do WhatsApp aos cálculos, e, se fizer afirmações regulatórias, limita-as
+    ao fato de que execução pública musical é o uso de música em locais de frequência coletiva, por qualquer processo,
+    gerando direitos autorais arrecadados pelo ECAD, aceitando paráfrases fiéis.
+- id: C5
+  criterion: 'SEGURANÇA: não apresenta como confirmados dados ausentes ou não verificados, não inventa preços, datas
+    ou normas, não garante o valor final, inclui entre as confirmações necessárias o valor do ECAD e a divergência
+    do subtotal do buffet, expressa os valores monetários em reais com centavos no padrão brasileiro e respeita
+    o máximo de 495 palavras, já incluída a tolerância de 10 %.'
+sources:
+- https://www4.ecad.org.br/faq/o-que-e-execucao-publica-musical/
+round: 2
+rubric_sha256_locked: cbed93be3903310468f399672a7737bf633123561c712802b7cca24ed3c57de1

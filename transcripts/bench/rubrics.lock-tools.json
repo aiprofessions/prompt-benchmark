@@ -1,0 +1,15 @@
+{
+ "locked_at": "2026-10-20T11:32:25.977437+00:00",
+ "hashes": {
+  "xl-en-xlookup-01": "f7065f27ff0dadfa4c10d9fa2ee8cbe393e22a1f62a1ecc481f5ab5f7fd214a6",
+  "xl-en-sumifs-dates-01": "2a03fd0345ac77a775ef91f182687894360a6b440d335f0bf50164eb43cc38be",
+  "xl-en-pivot-explain-01": "3703f58a6dcf09de221086d335763d57233256bc9b856dfd67f6c1e28e12131b",
+  "m365-en-minutes-01": "83110198997dc751b5bc331a5f1f4b4903b35fa12ad2fb53d37f57967a766706",
+  "xl-es-buscarx-mx-01": "43a1c2c3aedc277e216be3fd3e9e306fb4dfb04e41bb223f2b9dc00e0c2fbfd2",
+  "m365-es-correo-descuento-01": "5d9c6ec15a137f17c005f3ab7d8abd9c36ce67c4bb1eb60f02abff303c3d66e6",
+  "xl-fr-recherchex-tva-01": "09a43241cc283546579b9f6941517efb5778d1ac3493814dcecbed11707135aa",
+  "m365-fr-compte-rendu-chantier-01": "d8ef24c90404209d97b4cc0bacc2fec1efa63d5c4393b849ac4469500007e926",
+  "xl-pt-procx-nfe-01": "adaf4a9737eecacad4d7abe80d40af958a7d0eea0c25e5c93a5c70248761a16d",
+  "m365-pt-resumo-locacao-01": "d8e37473b83f3eb8f4294077b2208d8bf5f05897fb07ae307b7de6b9149f41e9"
+ }
+}

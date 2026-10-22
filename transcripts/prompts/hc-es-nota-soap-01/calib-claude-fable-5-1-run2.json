@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-es-nota-soap-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Clear S, O, A, and P sections present in order."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Records 38.4 °C, FC 96, TA 122/78, SpO2 99 % al aire ambiente exactly."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Rapid test result marked as not documented; no diagnosis added; 'urticaria' and 'odinofagia' only restate transcript terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Penicillin allergy highlighted in a banner; plan covers rapid test, non-penicillin antibiotic, ibuprofen PRN with food, and alarm signs."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Includes FALTANTE / POR CONFIRMAR section and labels note as a draft requiring physician review and signature."
+  }
+ ]
+}

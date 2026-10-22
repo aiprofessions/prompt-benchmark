@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-research-memo-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Addresses legitimate business interests, duration, geography, activity scope, separate customer non-solicitation covenants, and emergency and final injunctive relief."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly flags Illinois earnings eligibility restrictions and requires checking the $48,000 salary and qualifying earnings against the threshold applicable in 2022."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Names no case and provides no statute section or citation; consistently uses [AUTHORITY TO FIND] placeholders."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Requests complete contract text, consideration, compensation, customer relationships, confidential information, execution dates, notice, and written attorney-consultation advice."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides official primary sources, named research databases, specific search terms, and an explicit requirement for licensed-attorney verification of every point."
+  }
+ ]
+}

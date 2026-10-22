@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-tax-intake-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Checklist requests all six required forms or records, including separate Schedule C income and expense records and rental income and expenses."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Requests exact move date and work locations; identifies New York and North Carolina residency, filing obligations, income allocation, and interstate credits."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Includes questions about marital status, dependents, employment changes, home purchases or sales, health coverage, and other life changes."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States no current-year dollar limits, thresholds, rates, or deadlines as facts; explicitly marks applicable numerical dependencies for verification."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Lists preparer judgment issues including home-office eligibility and method, rental depreciation, state residency and allocation, without deciding them."
+  }
+ ]
+}

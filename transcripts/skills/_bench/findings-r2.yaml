@@ -1,0 +1,12 @@
+# Round-2 revision findings (v1.1 -> v1.2), 2026-10-19. Only the listed skill × lang pairs are revised.
+sales-managers-pipeline-review:
+  en: |
+    BENCH FINDING (v1.1, 6 runs): the single-pass fix worked for Sonnet but Opus still declared the forecast and gap "unavailable/conditional" because deal status was not stated, and treated a one-contact deal as context instead of a risk.
+    REQUIRED FIX (general rules): (a) deals in a pasted pipeline are OPEN unless marked won/lost/closed — never make the forecast conditional on that; (b) a close date without a year takes the year that places it nearest to today within the quarter context — state it once as an assumption and compute; (c) ALWAYS print a definite weighted forecast and gap figure (assumptions listed below them), never "not calculable", "unavailable" or "conditional" when amounts and probabilities are given; (d) add a risk rule: single-threaded — only one contact/stakeholder recorded on the deal.
+  es: |
+    HALLAZGO (v1.1, 6 ejecuciones): la skill siguió declarando la previsión «no calculable» porque las fechas de cierre no traían año y no constaba el estado de las oportunidades.
+    CORRECCIÓN OBLIGATORIA (reglas generales): (a) las oportunidades de un pipeline pegado están ABIERTAS salvo que se marquen ganadas/perdidas/cerradas; nunca condiciones el cálculo a eso; (b) una fecha de cierre sin año toma el año que la sitúa más cerca de hoy en el contexto del trimestre: decláralo una vez como supuesto y calcula; (c) imprime SIEMPRE una cifra concreta de previsión ponderada y de brecha (con los supuestos debajo), nunca «no calculable», «no disponible» ni «condicional» si hay importes y probabilidades; (d) añade la regla de riesgo «un solo contacto»: solo consta un interlocutor en la oportunidad.
+lawyers-nda-review:
+  es: |
+    HALLAZGO (v1.1, 6 ejecuciones): en 4 de 6 ejecuciones la skill se detuvo a pedir autorización del despacho y confirmación de anonimización antes de revisar, y no entregó la tabla.
+    CORRECCIÓN OBLIGATORIA: la privacidad es un RECORDATORIO en la salida, no una condición previa: quien pega el texto es responsable de su política de confidencialidad. Entrega siempre la revisión completa en la primera respuesta e incluye en «Límites» una línea recordando anonimizar y usar herramientas aprobadas. Solo detente si el texto contiene datos personales sensibles evidentes de personas físicas reales, y aun así entrega la revisión con esos datos sustituidos por [OMITIDO]. Mantén la regla de no citar resoluciones ni normas en la salida.

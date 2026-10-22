@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:53:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "74851faaed09e64e30fe7b2d8ba03d6832d85c14c7dc301eaf533562cc227386",
+ "rubric_sha256": "2527d85617b6f679b69587f29400d01403165633c4c8a5bef06e246b1e14eb37",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les 120 participants, les quatre effectifs de régimes et allergies, et tous les horaires sont repris exactement."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’absence de cuisine équipée, l’office avec point d’eau et les 2 prises 16 A sont explicités ; les boissons alcoolisées sont exclues."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Une procédure écrite de gestion des allergènes et des contaminations croisées est demandée, couvrant explicitement l’arachide et le sans gluten."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Les dates, critères, repas, personnel, livraison, HT et TVA figurent, mais aucune ligne de chiffrage distincte n’est explicitement demandée pour l’installation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations absentes sont signalées et soumises à confirmation."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les 120 participants, les quatre effectifs de régimes et allergies, et tous les horaires sont repris exactement.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’absence de cuisine équipée, l’office avec point d’eau et les 2 prises 16 A sont explicités ; les boissons alcoolisées sont exclues.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Une procédure écrite de gestion des allergènes et des contaminations croisées est demandée, couvrant explicitement l’arachide et le sans gluten.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Les dates, critères, repas, personnel, livraison, HT et TVA figurent, mais aucune ligne de chiffrage distincte n’est explicitement demandée pour l’installation.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations absentes sont signalées et soumises à confirmation.\"}]}"
+}

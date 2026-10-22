@@ -1,0 +1,542 @@
+{
+ "prompt_id": "xl-en-pivot-explain-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "States the grand total 631,500 and the full-year totals North 203,000, South 173,000 and West 250,000, all exactly as in the table."
+  },
+  {
+   "id": "C2",
+   "criterion": "Says Q4 had the highest quarterly total (169,400) and Q1 the lowest (150,500); if the figures are given they must match these."
+  },
+  {
+   "id": "C3",
+   "criterion": "Flags the \"(blank)\" row (5,500 in total) as sales with no region recorded in the source data that should be checked/assigned, rather than presenting it as a fourth region or silently dropping it."
+  },
+  {
+   "id": "C4",
+   "criterion": "The summary is at most ~150 words (allow ±10%)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: contains no percentage or growth rate, no forecast, and no stated cause for any number; every number present appears in the table."
+  }
+ ],
+ "rubric_sha256": "3703f58a6dcf09de221086d335763d57233256bc9b856dfd67f6c1e28e12131b",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and regional totals North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row totaling 5,500 as missing source-data regions and recommends checking and assigning correct regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 138 words, within the permitted limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or speculative numerical causes; all numbers appear in the supplied PivotTable and its heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies the blank row's 5,500 as sales without assigned regions and recommends checking source records and assigning correct regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary contains approximately 113 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, sales forecasts, or causal explanations for sales figures; all numbers appear in the supplied PivotTable or heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and regional full-year totals North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row's 5,500 as unassigned sales and recommends checking and correcting source Region fields."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary contains approximately 131 words, within the permitted limit."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "“The regional totals may then change” forecasts a possible outcome, so the strict no-forecast requirement is not clearly satisfied."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row totaling 5,500 as unassigned transactions and recommends checking source records for missing or mis-tagged region values."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 75 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or causal explanations for sales figures; all numbers appear in the supplied PivotTable or its heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly flags the blank row totaling 5,500 as unassigned transactions and recommends checking source data for missing or mislabeled regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 78 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or causal explanations; all numbers appear in the supplied PivotTable and its fiscal-year description."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 correctly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row totaling 5,500, identifies missing region fields, and recommends checking source records and assigning correct regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 85 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or explanations for sales amounts; every number appears in the supplied table."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Grand total 631,500 and North 203,000, South 173,000, West 250,000 stated exactly as in the table."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Q4 named highest at 169,400 and Q1 lowest at 150,500, matching the table."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the (blank) row as possible missing region assignments and says to check records and assign them to a named region."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Roughly 65 words, well under 150."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No percentages, growth rates, forecasts or causes; every number appears in the table or its header."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Grand total 631,500 and North 203,000, South 173,000, West 250,000 all stated exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Q4 named highest at 169,400 and Q1 lowest at 150,500, both matching the table."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists (blank) but explicitly flags its 5,500 as possibly missing region assignments and says to check the source records."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "About 70 words, well under the 150-word limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No percentages, growth rates, forecasts or causes; every number appears in the table."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Grand total 631,500 and North 203,000, South 173,000, West 250,000 all stated exactly as in the table."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States Q4 highest at 169,400 and Q1 lowest at 150,500, matching the table."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Lists (blank) but explicitly flags it as missing region assignments worth 5,500 and says to check and assign them."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Roughly 70 words, well under 150."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No percentages, growth rates, forecasts or causes; all numbers appear in the table."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies the blank row's 5,500 as unassigned-region sales and recommends checking source records and assigning the correct region."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 123 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Forecasts that regional totals will change once the data is fixed, violating the explicit prohibition on forecasts."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and regional full-year totals West 250,000, North 203,000, and South 173,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies the blank row's 5,500 as sales lacking source-data region assignments and recommends checking, assigning, and refreshing."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Approximately 140 words, within the permitted limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or speculative numerical causes; all numbers appear in the supplied PivotTable and its heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 exactly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row’s 5,500 as sales without assigned regions and recommends checking and correcting source records."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary contains approximately 137 words, within the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Speculates that Q2’s zero may mean no unassigned records that quarter, offering an unsupported explanation for a number."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 correctly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row totaling 5,500, identifies potentially missing source region labels, and recommends checking records and assigning appropriate regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 125 words, below the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or asserted causes; all numbers appear in the supplied PivotTable or its fiscal-year heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 correctly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the (blank) row totaling 5,500 and directs checking source transactions for missing region assignments and assigning appropriate regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 123 words, within the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or asserted numerical causes; all numbers appear in the supplied PivotTable output."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States grand total 631,500 and full-year totals North 203,000, South 173,000, and West 250,000 correctly."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Identifies Q4 as highest at 169,400 and Q1 as lowest at 150,500."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the blank row totaling 5,500, identifies missing region assignments as a possible issue, and recommends checking source transactions for valid regions."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The summary is approximately 130 words, within the allowed limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Contains no percentages, growth rates, forecasts, or stated causes of sales amounts; all numbers appear in the supplied PivotTable or its heading."
+    }
+   ],
+   "transcript": "prompts/xl-en-pivot-explain-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

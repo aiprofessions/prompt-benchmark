@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:13:24+00:00",
+ "attempt": 1,
+ "skill_sha256": "fcf6f6bd58100350217913780a449c429429893361c0bd7e020b5ec78fb5b992",
+ "rubric_sha256": "e115806a7c26228bf311ae90494110ac918c84a4f2f53d61d90fb44083c90ba2",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "L’annonce portail reste sous 220 mots et le texte réseaux sociaux sous 44 mots, conformément aux limites avec tolérance."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Toutes les caractéristiques demandées sont présentes ; les 75 m² sont écartés et le conflit de surface figure explicitement parmi les vérifications."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L’annonce portail contient la mention énergétique exacte, la phrase Géorisques, les prix, les honoraires et toutes les informations de copropriété demandées."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les ciblages sont supprimés avec motifs de situation familiale et discrimination d’origine/nationalité ; les trois allégations invérifiables sont également supprimées."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "La liste « Supprimé ou modifié » motive chaque suppression ; une validation par le responsable de l’agence avant publication est explicitement demandée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"L’annonce portail reste sous 220 mots et le texte réseaux sociaux sous 44 mots, conformément aux limites avec tolérance.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Toutes les caractéristiques demandées sont présentes ; les 75 m² sont écartés et le conflit de surface figure explicitement parmi les vérifications.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"L’annonce portail contient la mention énergétique exacte, la phrase Géorisques, les prix, les honoraires et toutes les informations de copropriété demandées.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Les ciblages sont supprimés avec motifs de situation familiale et discrimination d’origine/nationalité ; les trois allégations invérifiables sont également supprimées.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"La liste « Supprimé ou modifié » motive chaque suppression ; une validation par le responsable de l’agence avant publication est explicitement demandée.\"}]}"
+}

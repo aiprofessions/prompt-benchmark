@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:24:51+00:00",
+ "attempt": 1,
+ "skill_sha256": "b681b56b673159271f0369c3a40739d57fc86e503b94544859222ae41d262a82",
+ "rubric_sha256": "97ac72d08175cf5ad204a1273025ff85553bbb55a79fbac8d5aba375b13dd779",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye todas las piezas y cantidades solicitadas, con sofá de tres plazas con chaise longue y aparador identificado como existente-reutilizar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente la alfombra de 5,6 × 4,2 m descontando 0,8 m a cada dimensión de la estancia."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye expresamente blanco puro y terciopelo; presenta resistencia al rasguño, limpieza y durabilidad como requisitos pendientes de verificar."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduce 18.000 € con IVA, transporte y montaje; calcula el 7 de diciembre de 2026 usando el plazo máximo de doce semanas."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa marcas, modelos ni clasificaciones verificadas; identifica las asignaciones como estimadas y pendientes, sin presentar precios comerciales como hechos."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye todas las piezas y cantidades solicitadas, con sofá de tres plazas con chaise longue y aparador identificado como existente-reutilizar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente la alfombra de 5,6 × 4,2 m descontando 0,8 m a cada dimensión de la estancia.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Excluye expresamente blanco puro y terciopelo; presenta resistencia al rasguño, limpieza y durabilidad como requisitos pendientes de verificar.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduce 18.000 € con IVA, transporte y montaje; calcula el 7 de diciembre de 2026 usando el plazo máximo de doce semanas.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa marcas, modelos ni clasificaciones verificadas; identifica las asignaciones como estimadas y pendientes, sin presentar precios comerciales como hechos.\"}]}"
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:15:06+00:00",
+ "attempt": 1,
+ "skill_sha256": "bb523c284d74344fbd1b98466c3ef6b7cdf4e2e1f82a6f5f9478c7dbe8c2cef4",
+ "rubric_sha256": "0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Inclui dimensões exatas do palco, dois telões, seis microfones de mão sem fio, três lapelas, retorno e transmissão somente das palestras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige rigging pela equipe do próprio local e registra montagem a partir das 06:00 e desmontagem concluída até 02:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exige linhas separadas para equipamentos, mão de obra, frete, montagem, taxa e impostos; solicita certificado de seguro e condições de sinal e cancelamento."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Informa corretamente os prazos, mas deixa os critérios de avaliação como não informados; exemplos nas pendências não estabelecem critérios efetivos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações desconhecidas e explicita a premissa de desmontagem para confirmação."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Inclui dimensões exatas do palco, dois telões, seis microfones de mão sem fio, três lapelas, retorno e transmissão somente das palestras.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige rigging pela equipe do próprio local e registra montagem a partir das 06:00 e desmontagem concluída até 02:00.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Exige linhas separadas para equipamentos, mão de obra, frete, montagem, taxa e impostos; solicita certificado de seguro e condições de sinal e cancelamento.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Informa corretamente os prazos, mas deixa os critérios de avaliação como não informados; exemplos nas pendências não estabelecem critérios efetivos.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações desconhecidas e explicita a premissa de desmontagem para confirmação.\"}]}"
+}

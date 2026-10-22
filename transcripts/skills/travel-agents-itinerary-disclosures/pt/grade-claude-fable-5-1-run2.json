@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-pt",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:24:15+00:00",
+ "attempt": 1,
+ "skill_sha256": "73cf1e9fd3483a1fb7410bf40a99551edf68bfd04df5fa81dbcb27838ab3bd26",
+ "rubric_sha256": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobre todas as datas, quatro noites em Buenos Aires, três em Bariloche, deslocamento aéreo em 14/07, retorno de Bariloche e ausência de locação."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sinaliza confirmação da alergia com fornecedores, incluindo lojas de doces, e organiza um passeio principal diário com tardes livres."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Transcreve integralmente as três condições fornecidas, sem acrescentar novas condições de reserva; observações posteriores apenas apontam informações pendentes."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não apresenta preços, horários, durações de voo ou traslado nem regras de entrada como fatos; informações operacionais ficam pendentes de confirmação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina com lista de reservas e confirmações, incluindo orientação para consultar fontes oficiais governamentais sobre documentos e requisitos de entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cobre todas as datas, quatro noites em Buenos Aires, três em Bariloche, deslocamento aéreo em 14/07, retorno de Bariloche e ausência de locação.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Sinaliza confirmação da alergia com fornecedores, incluindo lojas de doces, e organiza um passeio principal diário com tardes livres.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Transcreve integralmente as três condições fornecidas, sem acrescentar novas condições de reserva; observações posteriores apenas apontam informações pendentes.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não apresenta preços, horários, durações de voo ou traslado nem regras de entrada como fatos; informações operacionais ficam pendentes de confirmação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina com lista de reservas e confirmações, incluindo orientação para consultar fontes oficiais governamentais sobre documentos e requisitos de entrada.\"}]}"
+}

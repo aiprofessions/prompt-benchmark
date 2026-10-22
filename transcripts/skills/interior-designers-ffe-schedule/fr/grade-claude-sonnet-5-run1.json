@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:16:19+00:00",
+ "attempt": 1,
+ "skill_sha256": "d8d0799b051c268d42c5fb63acd6f1044427b10cb11abed7a63aef253fb18f6a",
+ "rubric_sha256": "ea7c361bc780b7b113a5f39623e158f7a87c25e44e9a3912575f3a40925b201a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement conservée et marquée « Existant – réemploi »."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le tapis mesure explicitement 4,9 m × 3,6 m, avec calcul du retrait de 30 cm sur chaque côté."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Verre et cuir sont explicitement exclus ; entretien, stabilité, angles arrondis, câblage et fixation sont formulés comme exigences à vérifier."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le budget de 22 000 € TTC inclut livraison et installation ; la commande du canapé est fixée au plus tard au 04/02/2027."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune marque, aucun modèle ni classement inventé ; les caractéristiques restent à vérifier et les enveloppes sont explicitement estimatives, à confirmer par devis."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement conservée et marquée « Existant – réemploi ».\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Le tapis mesure explicitement 4,9 m × 3,6 m, avec calcul du retrait de 30 cm sur chaque côté.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Verre et cuir sont explicitement exclus ; entretien, stabilité, angles arrondis, câblage et fixation sont formulés comme exigences à vérifier.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le budget de 22 000 € TTC inclut livraison et installation ; la commande du canapé est fixée au plus tard au 04/02/2027.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune marque, aucun modèle ni classement inventé ; les caractéristiques restent à vérifier et les enveloppes sont explicitement estimatives, à confirmer par devis.\"}]}"
+}

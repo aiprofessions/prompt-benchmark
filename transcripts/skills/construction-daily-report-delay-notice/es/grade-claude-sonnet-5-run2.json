@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:23:18+00:00",
+ "attempt": 1,
+ "skill_sha256": "67cbf3ce943301bd0d1a7b0d1baa9442dc41fe1468e6b8b22c1007337936cd35",
+ "rubric_sha256": "12dde3d1f2528099a3595986d77a9df002effd62debb25ca324723fad087c14c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye tabla con los cuatro oficios, cantidades correctas y total 12; reproduce lluvia intensa hasta las 12:00 y 14 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra el aplazamiento de la losa de escalera por lluvia y la reprogramación al 23/10, sin cuantificar días de retraso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Recoge orden verbal, dirección facultativa, 9:30, carpintería de planta 1 y ausencia en Libro; calcula 31/10/2026 y solicita instrucción escrita en borrador."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Registra trabajador sin arnés a las 13:10, paralización, dotación de arnés y charla sobre trabajos en altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No añade costes, plazos de ejecución, actividades realizadas ni personas concretas; identifica como pendientes los datos no aportados."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye tabla con los cuatro oficios, cantidades correctas y total 12; reproduce lluvia intensa hasta las 12:00 y 14 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Registra el aplazamiento de la losa de escalera por lluvia y la reprogramación al 23/10, sin cuantificar días de retraso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Recoge orden verbal, dirección facultativa, 9:30, carpintería de planta 1 y ausencia en Libro; calcula 31/10/2026 y solicita instrucción escrita en borrador.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Registra trabajador sin arnés a las 13:10, paralización, dotación de arnés y charla sobre trabajos en altura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No añade costes, plazos de ejecución, actividades realizadas ni personas concretas; identifica como pendientes los datos no aportados.\"}]}"
+}

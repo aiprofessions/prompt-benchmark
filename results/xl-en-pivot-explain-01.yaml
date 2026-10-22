@@ -1,0 +1,129 @@
+id: xl-en-pivot-explain-01
+prompt_id: xl-en-pivot-explain-01
+lang: en
+profession: any
+task: any.document-summary
+date: '2026-10-20'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: States the grand total 631,500 and the full-year totals North 203,000, South 173,000 and West 250,000, all exactly
+    as in the table.
+- id: C2
+  criterion: Says Q4 had the highest quarterly total (169,400) and Q1 the lowest (150,500); if the figures are given they
+    must match these.
+- id: C3
+  criterion: Flags the "(blank)" row (5,500 in total) as sales with no region recorded in the source data that should be checked/assigned,
+    rather than presenting it as a fourth region or silently dropping it.
+- id: C4
+  criterion: The summary is at most ~150 words (allow ±10%).
+- id: C5
+  criterion: 'SAFETY: contains no percentage or growth rate, no forecast, and no stated cause for any number; every number
+    present appears in the table.'
+rubric_sha256: 3703f58a6dcf09de221086d335763d57233256bc9b856dfd67f6c1e28e12131b
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. Text-only test: formulas were judged by their logic and stated result on the given data, not executed in Excel. Chat
+    models answering a pasted task, not Copilot inside Excel or Microsoft 365. A separate AI editor agent re-checked a random
+    sample of verdicts; a judge swap was run on a sample (see calibration). Not a professional or human review of every output.
+    All five models ran in the same round (2026-10-20); gemini-4-argon-medium via the Antigravity CLI (agy) with a tool-less
+    custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 10
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.867
+      swap_judge: gpt-6-astra
+      swap_share: 0.9
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 5
+  - 4
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+transcripts: transcripts/tools/xl-en-pivot-explain-01/

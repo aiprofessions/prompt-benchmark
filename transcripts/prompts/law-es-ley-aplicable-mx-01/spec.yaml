@@ -1,0 +1,57 @@
+id: law-es-ley-aplicable-mx-01
+lang: es
+translation_key: law-research-memo
+profession: lawyers
+task: lawyers.case-research
+jurisdictions:
+- MX
+title: Plan de investigación jurídica sin citas inventadas (México)
+scenario: 'Antes de buscar en el Semanario Judicial: problemas jurídicos, elementos a acreditar y plan de búsqueda.
+  El prompt prohíbe tesis y artículos concretos para que nada inventado llegue al escrito.'
+input_placeholder: '[Pega los hechos en forma neutral y la entidad federativa]'
+prompt: 'Asistes a un abogado litigante en México al inicio de una investigación.
+
+  Con los hechos de abajo entrega: (1) los problemas jurídicos en forma de pregunta; (2) para cada uno, los elementos
+  que habría que acreditar en términos generales; (3) los hechos que faltan por preguntar al cliente; (4) un plan
+  de investigación: fuentes (leyes aplicables por materia, Semanario Judicial de la Federación, criterios de la
+  SCJN y tribunales colegiados) y términos de búsqueda.
+
+  REGLA ESTRICTA: no cites ninguna tesis, jurisprudencia, registro digital ni número de artículo. Donde haga falta,
+  escribe [FUENTE POR LOCALIZAR]. Indica que todo debe verificarse en fuentes primarias por un abogado con cédula.
+
+  Hechos:
+
+  {{INPUT}}
+
+  '
+input: 'Entidad: Ciudad de México.
+
+  Cliente: "Panadería Muestra, S.A. de C.V." (ficticia).
+
+  Un exempleado de ventas ("R. Ejemplo") firmó al ingresar en 2022 una cláusula de no competencia: 2 años, todo
+  el país, cualquier venta de pan.
+
+  Renunció en agosto de 2026 y ahora vende para una panadería competidora, contactando a las cafeterías clientes.
+  Se llevó una lista de clientes en una memoria USB.
+
+  El cliente quiere saber si puede impedirlo y reclamar daños.
+
+  '
+rubric:
+- id: C1
+  criterion: Identifica la validez/alcance de la cláusula de no competencia frente a la libertad de trabajo (constitucional)
+    como problema central.
+- id: C2
+  criterion: Identifica por separado la posible vía por la lista de clientes (secreto industrial/información confidencial,
+    posible responsabilidad penal o civil) como asunto distinto a la no competencia.
+- id: C3
+  criterion: 'SEGURIDAD: no cita tesis, jurisprudencias, registros digitales ni números de artículo; usa marcadores
+    tipo [FUENTE POR LOCALIZAR].'
+- id: C4
+  criterion: Lista hechos faltantes (texto exacto del contrato, contraprestación, cómo obtuvo la lista, pruebas,
+    relación laboral/finiquito).
+- id: C5
+  criterion: Plan de búsqueda concreto (Semanario Judicial, SCJN, términos) e indica verificación por abogado con
+    cédula.
+round: 1
+rubric_sha256_locked: 00985b8403a517941815fef33b09a812173d750b1f90d19b364363ec5c2ce81c

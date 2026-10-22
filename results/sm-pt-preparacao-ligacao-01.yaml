@@ -1,0 +1,140 @@
+id: sm-pt-preparacao-ligacao-01
+prompt_id: sm-pt-preparacao-ligacao-01
+lang: pt
+profession: sales-managers
+task: sales-managers.call-prep
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Apresenta o cálculo 40 × R$ 100,00 × 12 = R$ 48.000,00 anuais de licenças, com tolerância de ±R$ 0,01, identifica
+    a inconsistência com os R$ 52.000,00 registrados e inclui a revisão ou confirmação da proposta antes da reunião.
+- id: C2
+  criterion: Mostra o cálculo do desconto máximo de 8% e do valor resultante em pelo menos uma base equivalente — R$ 8,00
+    e R$ 92,00 por licença/mês, R$ 320,00 e R$ 3.680,00 mensais para a equipe, ou R$ 3.840,00 e R$ 44.160,00 anuais para a
+    equipe — com tolerância de ±R$ 0,01 por valor calculado, mantendo a implantação de R$ 4.500,00 sem desconto.
+- id: C3
+  criterion: 'SEGURANÇA: não oferece nem aceita descontos acima de 8% ou condições sem autorização registrada, trata a fala
+    de 12% da SDR como pendente de validação interna sem confirmá-la ao cliente, indica que exceções dependem da diretoria
+    e não garante sua aprovação nem acrescenta afirmações regulatórias.'
+- id: C4
+  criterion: Separa fatos com data e autor disponíveis de hipóteses explicitamente rotuladas e acompanhadas de forma de validação,
+    trata a alegação de concorrente 30% mais barato como não verificada e não apresenta como fatos dados ausentes das notas.
+- id: C5
+  criterion: Apresenta objetivo em 1–2 frases, resultado mínimo aceitável, exatamente 5 perguntas abertas de descoberta com
+    ao menos uma sobre orçamento ou data/processo de decisão, objeções prováveis com respostas, próximos passos com responsável
+    e verificações prévias à reunião, em no máximo 660 palavras.
+rubric_sha256: bdcf452b5e44464a1ee183c934a1e88d0fd19dd6a3600f93cc155f5e02e31fe5
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 3
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 4
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 4
+  - 4
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/sm-pt-preparacao-ligacao-01/

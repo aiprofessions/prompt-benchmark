@@ -1,0 +1,71 @@
+id: m365-fr-compte-rendu-chantier-01
+lang: fr
+translation_key: m365-meeting-minutes
+profession: any
+task: any.meeting-minutes
+tools:
+- microsoft-365
+jurisdictions:
+- FR
+title: 'Compte rendu de réunion de chantier : décisions, points ouverts, actions'
+scenario: Transformez des notes brutes de réunion de chantier en compte rendu qui sépare ce qui est décidé de ce
+  qui reste ouvert, sans inventer de date ni de conclusion technique.
+input_placeholder: '[Collez vos notes de réunion (participants, sujets, ce qui a été dit). Anonymisez le maître
+  d''ouvrage et les entreprises si besoin.]'
+prompt: 'À partir UNIQUEMENT des notes brutes ci-dessous, rédigez le compte rendu de la réunion de chantier, à diffuser
+  par e-mail (Outlook).
+
+
+  Structure imposée : 1. Décisions ; 2. Points ouverts ; 3. Actions (responsable – action – échéance) ; 4. Prochaine
+  réunion.
+
+  - Une décision n''est notée comme telle que si les notes montrent qu''elle a été prise.
+
+  - Une échéance non donnée dans les notes s''écrit « échéance à fixer ».
+
+  - Aucune conclusion technique, de sécurité ou de responsabilité qui ne figure pas dans les notes.
+
+  - 220 mots maximum.
+
+
+  {{INPUT}}
+
+  '
+input: 'Réunion de chantier n° 7 — 15/10/2026 — rénovation maison Exemple (fictif), 12 rue de l''Exemple.
+
+  Présents : Mme Exemple (MOA), J. Martin (architecte), Exemple Façades, Exemple Menuiseries, L. Durand (coordonnateur
+  SPS).
+
+
+  - Carrelage RDC : la MOA valide la réf. « Gris Exemple 60×60 ». OK pour commande par l''architecte.
+
+  - Menuiseries : livraison annoncée « semaine 45, peut-être 46 » par Exemple Menuiseries, pas de date ferme.
+
+  - Fissure mur cuisine (côté nord) : constatée par l''architecte. On demande l''avis d''un BET structure avant
+  toute reprise. Pas d''avis pour l''instant.
+
+  - Échafaudage côté jardin : L. Durand signale un garde-corps manquant au 2e niveau. Exemple Façades doit le reposer
+  avant le 17/10.
+
+  - Peinture : la MOA hésite entre deux teintes, à revoir.
+
+  - Prochaine réunion : 22/10/2026 à 9 h sur site.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Décisions : la validation du carrelage « Gris Exemple 60×60 » par la MOA (commande par l''architecte)
+    ; aucune autre décision (ni teinte de peinture, ni date de menuiseries, ni solution pour la fissure).'
+- id: C2
+  criterion: 'Points ouverts : livraison des menuiseries « semaine 45 ou 46 » sans date ferme ; choix de la teinte
+    de peinture ; fissure en attente de l''avis du BET structure.'
+- id: C3
+  criterion: 'Actions : Exemple Façades – reposer le garde-corps manquant de l''échafaudage (2e niveau, côté jardin)
+    – avant le 17/10 ; la consultation du BET apparaît avec « échéance à fixer » (pas de date inventée).'
+- id: C4
+  criterion: 'Prochaine réunion : 22/10/2026 à 9 h sur site ; compte rendu de 220 mots maximum (±10 %).'
+- id: C5
+  criterion: 'SÉCURITÉ : aucune conclusion sur la cause ou la gravité de la fissure, n''affirme pas que l''échafaudage
+    est conforme ou sûr, aucune date ou responsabilité absente des notes.'
+round: tools
+rubric_sha256_locked: d8ef24c90404209d97b4cc0bacc2fec1efa63d5c4393b849ac4469500007e926

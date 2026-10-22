@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-follow-up-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Three distinct sections reference Priya’s HOA fence question, Marcus’s water-heater question, and the Testa family’s spring relocation and school question."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Every SMS is under 320 characters, and every email is under 120 words, including subject lines."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Marcus’s SMS is explicitly marked do not send; his email confirms email-only contact and makes no request for calls."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "School guidance points to official district boundaries and state education report cards without characterizing schools or the area as good, safe, or desirable."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No unsupported prices, rates, HOA rules, or water-heater ages are stated; unknown details are identified and documentation follow-up is offered."
+  }
+ ]
+}

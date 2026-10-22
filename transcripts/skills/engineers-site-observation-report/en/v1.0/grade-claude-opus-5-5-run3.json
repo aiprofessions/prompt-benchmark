@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:38+00:00",
+ "attempt": 1,
+ "skill_sha256": "0155cc7b3d265d962b835ef0071482fa4415c7d41fd09d0e32cc03aeb1addf68",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The proposed table includes all five locations, sizes where provided, and correct photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No measurements, tests, code sections, or observations are invented; possible relationships are framed tentatively, not as established causes."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "There is no Limitations section, and the 90-minute duration is omitted."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Declines to answer the principal, assigns safety determination to the engineer of record, and flags ponding and J-14 for prompt evaluation."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Only promises a future DRAFT watermark; the output is not marked for review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"The proposed table includes all five locations, sizes where provided, and correct photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No measurements, tests, code sections, or observations are invented; possible relationships are framed tentatively, not as established causes.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"There is no Limitations section, and the 90-minute duration is omitted.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Declines to answer the principal, assigns safety determination to the engineer of record, and flags ponding and J-14 for prompt evaluation.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Only promises a future DRAFT watermark; the output is not marked for review and seal/signature by the engineer of record.\"}]}"
+}

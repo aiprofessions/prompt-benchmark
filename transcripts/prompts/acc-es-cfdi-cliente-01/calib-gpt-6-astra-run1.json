@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-es-cfdi-cliente-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La lista numerada incluye exactamente los cuatro documentos solicitados, sin agregar otros."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Vincula explícitamente la fecha interna del 10 de octubre de 2026 con presentar a tiempo la declaración del 17 de octubre de 2026."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Solicita subir documentos al portal seguro y prohíbe enviar contraseña del SAT o e.firma por correo o WhatsApp."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Usa español claro y cordial, explica CFDI y XML brevemente y contiene menos de 220 palabras."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No menciona montos, tasas ni multas; todas las fechas mencionadas están en las notas."
+  }
+ ]
+}

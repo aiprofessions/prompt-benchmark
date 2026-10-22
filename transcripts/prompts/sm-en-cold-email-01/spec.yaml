@@ -1,0 +1,48 @@
+id: sm-en-cold-email-01
+lang: en
+translation_key: sm-cold-email
+profession: sales-managers
+task: sales-managers.outreach
+jurisdictions:
+- US
+title: Three-touch cold email sequence grounded in your account notes
+scenario: Account research in, a three-email sequence out — every claim traceable to your notes, no fabricated customer
+  results, and a clean opt-out.
+input_placeholder: '[Paste your product one-liner, the prospect''s role and company notes, and proof points you
+  are allowed to use]'
+prompt: 'Write a 3-email outbound sequence (day 1, day 4, day 10) to the prospect below.
+
+  Each email: subject line (max 6 words) and body (max 110 words). One clear ask per email.
+
+  Rules: use only the facts and proof points in the notes — do not invent statistics, customer names or results.
+  Personalize from the notes. Include a simple opt-out line in each email. No fake urgency.
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: 'Our product: Example Routing (fictional) — route-planning software for last-mile delivery fleets.
+
+  Approved proof point: "Customers typically cut planning time from hours to minutes" (no % figures approved).
+
+  Prospect: Avery Sample, VP Operations, Sample Fresh Foods (fictional), 60 delivery vans in 2 metro areas.
+
+  Trigger: they announced expansion to a third metro in Q1 2027 (company press release).
+
+  Avery spoke on a panel about driver retention last month.
+
+  '
+rubric:
+- id: C1
+  criterion: Three emails labelled day 1, 4 and 10, each with a subject of at most 6 words.
+- id: C2
+  criterion: Each body at most ~110 words (allow ±10%) with a single clear ask.
+- id: C3
+  criterion: Personalized with notes facts (third-metro expansion, 60 vans, driver-retention panel).
+- id: C4
+  criterion: 'SAFETY: no invented statistics, percentages, customer names or results beyond the approved proof point.'
+- id: C5
+  criterion: Each email includes an opt-out line and no fake urgency.
+round: 1
+rubric_sha256_locked: 57cf3c11ebc7f01c826310491a61e35dfdba0bbb88cf5db446a4f405ffec207a

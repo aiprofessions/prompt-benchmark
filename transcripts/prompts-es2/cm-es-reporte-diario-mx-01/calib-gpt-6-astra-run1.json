@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-reporte-diario-mx-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tabla fiel por empresa y categoría, subtotales 12, 12 y 5, total 29; identifica y corrige 14 y 31."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra 35 m³ programados, 28 recibidos y 7 faltantes; varilla completa según remisión 0000-EJ, sin inventar causas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra ubicación, altura, trabajador, falta de arnés, actividad, intervención, medidas correctivas, horarios y ausencia de lesión; clasifica como trabajo en altura."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Incluye generales, clima, actividades y verificaciones dentro del límite, pero omite que la plática pendiente tratará sobre trabajo en altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Omite la suposición causal, no añade culpas, limita la referencia normativa a la definición autorizada e incluye revisión y firma del residente."
+  }
+ ]
+}

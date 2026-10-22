@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-reporte-diario-mx-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Table matches the notes by company and category, with subtotals 12/12/5 and total 29; flags the noted 14 and 31 as discrepancies."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Concrete 35/28/7 m³ and rebar complete per remittance 0000-EJ; only states the supplier has not confirmed, no invented cause."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Records the 11:40 incident: location, 4 m height, no harness, stop, harness, lifeline check, 12:10 restart, no injury; classified as work at height."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "General data, weather, activities, three detailed pending items and data to verify are included; roughly 490 words, within the limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Supposition marked unverified and unnamed, normative claim limited to the NOM definition, review and signature line included."
+  }
+ ]
+}

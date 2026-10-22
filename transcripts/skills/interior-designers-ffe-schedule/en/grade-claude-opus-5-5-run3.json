@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:17+00:00",
+ "attempt": 1,
+ "skill_sha256": "6eb137f312fead5efe9e1d179ed3df666d61ac861c05f00a59276b0e6caf2c34",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes every requested item and quantity, with six-seat sectional and walnut media console explicitly marked existing-reuse."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates and specifies a 13 ft x 17 ft rug by subtracting 18 inches on each side."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; requires verification of child safety, cleanability, hair release, abrasion durability, and snag resistance."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and calculates November 23, 2026 as the 16-week upholstery order-by date."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no brands or models, labels all allowances as estimates, and requests verification rather than asserting performance ratings."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Includes every requested item and quantity, with six-seat sectional and walnut media console explicitly marked existing-reuse.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates and specifies a 13 ft x 17 ft rug by subtracting 18 inches on each side.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; requires verification of child safety, cleanability, hair release, abrasion durability, and snag resistance.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and calculates November 23, 2026 as the 16-week upholstery order-by date.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no brands or models, labels all allowances as estimates, and requests verification rather than asserting performance ratings.\"}]}"
+}

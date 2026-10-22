@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:24:27+00:00",
+ "attempt": 1,
+ "skill_sha256": "03879137d6a927c65f631b69d2754fbb9b269428ed7ff81551a42e4242125a26",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes all requested items and quantities, with six-seat sectional and walnut media console explicitly marked existing-reuse."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates the 18-inch border on every side and specifies a 13 ft x 17 ft rug."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; requires verification of cleanability, durability, stability, and slip resistance for children and shedding dog."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery; calculates November 23, 2026 for 16 weeks and recommends ordering at or before that date."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no brands or models; labels monetary allowances as provisional estimates and treats performance ratings as verification requirements, not facts."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Includes all requested items and quantities, with six-seat sectional and walnut media console explicitly marked existing-reuse.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates the 18-inch border on every side and specifies a 13 ft x 17 ft rug.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; requires verification of cleanability, durability, stability, and slip resistance for children and shedding dog.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery; calculates November 23, 2026 for 16 weeks and recommends ordering at or before that date.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no brands or models; labels monetary allowances as provisional estimates and treats performance ratings as verification requirements, not facts.\"}]}"
+}

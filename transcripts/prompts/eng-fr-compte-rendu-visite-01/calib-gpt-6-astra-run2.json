@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-fr-compte-rendu-visite-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La sécurité ouvre le fond : risque de chute, urgence immédiate, rubalise et interdiction d’accès précèdent les détails des fissures et de l’humidité."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Constats et hypothèses sont séparés ; les causes restent incertaines et l’affirmation de Mme Exemplo est explicitement présentée comme non établie."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Les ouvertures contradictoires nécessitent une nouvelle mesure ; l’agrandissement rapporté reste non vérifié et les 28 % comportent la réserve d’étalonnage."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Moins de 660 mots hors tableau ; urgences conservées, analyse structure prévue et actions requises présentes sans responsable ni délai inventé."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun ajout factuel interdit, aucune cause certaine ni conclusion de stabilité ; références à compléter par l’ingénieur et mention finale exigée présentes."
+  }
+ ]
+}

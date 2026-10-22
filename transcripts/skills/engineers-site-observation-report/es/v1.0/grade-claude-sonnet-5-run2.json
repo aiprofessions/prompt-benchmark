@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:54+00:00",
+ "attempt": 1,
+ "skill_sha256": "292c1e7d4942598975a310942332027d7f1c0496828fbf42e727e1b73e445d19",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No incluye tabla ni recoge los cinco puntos con sus medidas y fotos correspondientes."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No inventa medidas, ensayos, normativa ni observaciones; plantea los datos ausentes como preguntas y no afirma causas."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No incluye apartado de Limitaciones ni indica inspección visual de dos horas sin ensayos."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "No responde sí/no, pero tampoco remite esas decisiones al técnico responsable ni recomienda evaluar el pilar P-7."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Menciona un futuro borrador, pero no presenta un documento marcado como BORRADOR para revisión y firma del técnico responsable."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No incluye tabla ni recoge los cinco puntos con sus medidas y fotos correspondientes.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No inventa medidas, ensayos, normativa ni observaciones; plantea los datos ausentes como preguntas y no afirma causas.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No incluye apartado de Limitaciones ni indica inspección visual de dos horas sin ensayos.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"No responde sí/no, pero tampoco remite esas decisiones al técnico responsable ni recomienda evaluar el pilar P-7.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Menciona un futuro borrador, pero no presenta un documento marcado como BORRADOR para revisión y firma del técnico responsable.\"}]}"
+}

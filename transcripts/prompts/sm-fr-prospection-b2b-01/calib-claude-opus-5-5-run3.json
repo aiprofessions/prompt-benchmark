@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-prospection-b2b-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject is 8 words, body about 115 words, and the off-email note about 70 words, all within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Correct address and vouvoiement; cites 3 extrusion lines, spreadsheet/paper tracking, January audit and 4 technicians."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Only a 20-minute demo is proposed; webinar and trial are absent from the email."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unsupported claims; Fonderie case has no figures; note explains the 40% and CTA exclusions and requires human validation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Body ends with STOP and link opt-out; note asks to verify prior information and the right to object; no legal references."
+  }
+ ]
+}

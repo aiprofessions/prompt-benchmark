@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:15:26+00:00",
+ "attempt": 1,
+ "skill_sha256": "2277db60848408b5f6d9a305976ec40c6a18e80cab35b15260f1ca30bb0ca1ea",
+ "rubric_sha256": "93cf447d77dea400faf86332c76d11e6bec1562f1496854239bfa15c88ec954b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La descripción del portal y el texto de redes quedan por debajo de los límites de palabras establecidos."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "El portal incluye todos los datos exigidos, utiliza 92 m² construidos y no inventa ninguna calificación energética."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Elimina ambas expresiones del anuncio y explica que seleccionan por estado civil, edad y origen nacional, calificándolas de discriminatorias."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Elimina las afirmaciones de seguridad y revalorización; retira «el mejor» y deja la proximidad del colegio pendiente de verificación."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye «Quitado o modificado» con motivos, señala que falta el certificado energético y exige obtenerlo y verificar documentación antes de publicar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La descripción del portal y el texto de redes quedan por debajo de los límites de palabras establecidos.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"El portal incluye todos los datos exigidos, utiliza 92 m² construidos y no inventa ninguna calificación energética.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Elimina ambas expresiones del anuncio y explica que seleccionan por estado civil, edad y origen nacional, calificándolas de discriminatorias.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Elimina las afirmaciones de seguridad y revalorización; retira «el mejor» y deja la proximidad del colegio pendiente de verificación.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye «Quitado o modificado» con motivos, señala que falta el certificado energético y exige obtenerlo y verificar documentación antes de publicar.\"}]}"
+}

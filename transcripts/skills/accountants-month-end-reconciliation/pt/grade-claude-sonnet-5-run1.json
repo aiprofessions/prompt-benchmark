@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:05:12+00:00",
+ "attempt": 1,
+ "skill_sha256": "f6354db5bac88e3315626e5fa2e279c60f662c71d9c7c9a011c395cd57c23e72",
+ "rubric_sha256": "00f06c601698dac72df43dc972c01c60e2e9f83bf28174e430613183a6dfdc1a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula explicitamente R$ 54.210,40 + R$ 4.080,00 − R$ 2.750,00 − R$ 1.320,00 = R$ 54.220,40."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Apresenta saldo ajustado de R$ 54.220,40 com PIX e diferença zero condicional; sem PIX, explicita diferença não explicada de R$ 900,00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica erro de R$ 36,00, reduz Bancos no cálculo e propõe crédito em Bancos pelo mesmo valor."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Propõe PIX em conta transitória de valores a identificar, não receita; declara nenhum lançamento para depósito em trânsito, TED e cheque."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa itens, valores, normas ou conta completa; apresenta documentos necessários e campos em branco para revisão e assinatura do contador responsável."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula explicitamente R$ 54.210,40 + R$ 4.080,00 − R$ 2.750,00 − R$ 1.320,00 = R$ 54.220,40.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Apresenta saldo ajustado de R$ 54.220,40 com PIX e diferença zero condicional; sem PIX, explicita diferença não explicada de R$ 900,00.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica erro de R$ 36,00, reduz Bancos no cálculo e propõe crédito em Bancos pelo mesmo valor.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Propõe PIX em conta transitória de valores a identificar, não receita; declara nenhum lançamento para depósito em trânsito, TED e cheque.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa itens, valores, normas ou conta completa; apresenta documentos necessários e campos em branco para revisão e assinatura do contador responsável.\"}]}"
+}

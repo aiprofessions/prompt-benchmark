@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-missing-docs-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All four items are listed: 1099-NEC/1099-K, Form 1098, childcare name/address/EIN/total paid, and 5498-SA. No extra items added."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "States March 20, 2027 and ties it to filing by the April 15, 2027 deadline."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Directs uploads to portal.example-cpa.test and says not to attach documents to regular email."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Friendly, reassuring plain language. EIN is explained. Body is about 210 words, under the 220 limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No dollar amounts, rates, penalties, or limits. The only dates are those in the notes."
+  }
+ ]
+}

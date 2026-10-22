@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-es-solicitud-catering-co-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Day 1 shows 192 for all three services; day 2 shows 162, no PM. 220 marked unconfirmed; note explains 180/150 + 12."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exclusive breakdown matches: D1 veg 4, GF 2, maní 1; D2 veg 3, GF 3, maní 1; intersection 1; note explains anonymously."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No names or emails, but provider text adds an individual's anaphylaxis history beyond aggregate counts, contradicting the note's claim of exclusion."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Usted register, all logistics, protocol and decline option, deadline and email, conditions as requests, full blank table; within word limits."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented figures or tax rates; faithful Ley 1581 mention; electric capacity and budget pending; 220 distinguished; ends with review request."
+  }
+ ]
+}

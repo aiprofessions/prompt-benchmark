@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-en-offer-review-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Computes October 11 and October 22 deadlines using calendar days, with October 2 as day 1 and no weekend extensions."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Identifies the unlisted buyer home and sale contingency as the main closing risk, emphasizing missing deadlines and possible delays."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags unfinished post-closing occupancy terms, including rent, security deposit, insurance, damage responsibility, and liability."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Explains the $2,000 escalation and $512,000 cap, but asks about verification rather than explicitly recommending the seller require competing-offer proof."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Avoids definitive legal conclusions and ends with specific contract provisions for the seller’s attorney or managing broker to review."
+  }
+ ]
+}

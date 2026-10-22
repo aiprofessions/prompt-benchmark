@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-pt-evolucao-cfm-01",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All five vitals are correct with units. No invented values; weight is marked not measured. Home temperature is approximate and kept in S."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Dipirona reaction is highlighted before S, but the contradiction with the physician's initial dipirona suggestion is never explicitly flagged."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Pending list includes unmeasured weight, unspecified paracetamol posology, and hemograma/NS1 results unavailable with collection status unknown."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Approximately 420 words. First line identifies the AI draft for review and signature. Suggested AI-use record line included."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Says neighbors had 'dengue confirmada', adding confirmation not stated in the transcript; otherwise hypotheses, identifiers and communication pending are handled correctly."
+  }
+ ]
+}

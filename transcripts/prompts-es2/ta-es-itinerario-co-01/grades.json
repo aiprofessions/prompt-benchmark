@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ta-es-itinerario-co-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Presenta los cinco días del 14 al 18 de diciembre de 2026 con sus ciudades y todas las reservas confirmadas, conservando fechas, horas, proveedores y códigos; identifica en las alertas y en el itinerario el conflicto del día 3 (16/12) entre la recogida a las 8:00 hacia Santa Marta y el recorrido de las 9:30 en Cartagena, sin modificar reservas ni dar el conflicto por resuelto; el texto al cliente, incluido el pie y excluidas las alertas, no supera 660 palabras (600 más un 10 % de tolerancia)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Identifica como «NO RESERVADO» o equivalente inequívoco la visita al Parque Tayrona y Cabo San Juan del 17/12, su transporte e ingreso y la cena de despedida, sin presentarlos como incluidos ni asignarles horas, proveedores o precios no aportados."
+  },
+  {
+   "id": "C3",
+   "criterion": "Excluye del texto al cliente «el mejor precio garantizado de Colombia» y cualquier otra garantía o afirmación comercial sin respaldo en los datos, y explica la exclusión en las alertas internas; citar allí la frase como descartada es aceptable."
+  },
+  {
+   "id": "C4",
+   "criterion": "El pie contiene Viajes Ejemplo Caribe S.A.S. (ficticia), Calle 00 # 00-00, Cartagena de Indias, Bolívar, +57 300 000 0000, reservas@viajesejemplo.test y RNT 00000 (ficticio), sin alterar su contenido ni añadir datos de la agencia no aportados; se permiten cambios de disposición, etiquetas y separadores."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no inventa datos del viaje, precios, requisitos de ingreso, horarios de apertura ni disposiciones normativas; responde a Ana que la agencia confirmará los requisitos y el precio de entrada al Tayrona e incluye una lista interna de verificaciones antes del envío."
+  }
+ ],
+ "rubric_sha256": "c4ce60a6c7c41b223d9fc7163b6d52bcd79983178030b3526b3cdc3054a2ffbd",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con sus datos; señala el conflicto en ambas secciones sin resolverlo y cumple el límite de palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; explicita transporte e ingreso sin reservar, sin añadir horas, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía del texto al cliente y explica en las alertas que carece de precios, comparaciones o garantías que la respalden."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce nombre, dirección, teléfono, correo y RNT completos, conservando las marcas de ficción y sin añadir datos."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa datos ni requisitos; informa que la agencia confirmará vacunas, requisitos y entrada al Tayrona e incluye verificaciones internas antes del envío."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con fechas, horas, proveedores y códigos; señala el conflicto pendiente en ambas secciones y cumple la extensión."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; explicita transporte e ingreso sin reservar, sin inventar horarios, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía comercial del itinerario y explica en alertas que carece de respaldo en los datos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin añadir información."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa datos ni requisitos; informa a Ana que la agencia confirmará requisitos y precio, e incluye una lista interna de verificaciones."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con sus datos; mantiene pendiente el conflicto del 16/12 en ambas secciones y cumple el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; aclara que transporte e ingreso no están incluidos, sin asignar datos nuevos."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía del texto al cliente y explica en las alertas que carece de respaldo; no añade otras afirmaciones comerciales infundadas."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie conserva íntegros nombre, dirección, teléfono, correo, RNT y marcas de ficción, sin añadir datos de la agencia."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa precios, requisitos ni normativa; informa a Ana que la agencia confirmará requisitos y entrada, e incluye verificaciones internas antes del envío."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con fechas, horas, proveedores y códigos; señala el conflicto pendiente en ambas secciones y respeta el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona/Cabo San Juan y cena como NO RESERVADO, explicita transporte e ingreso sin confirmar y no añade horas, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía comercial del texto al cliente y explica en las alertas que carece de respaldo en los datos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin añadir información."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa datos, precios ni requisitos; indica que la agencia confirmará requisitos y entrada al Tayrona e incluye verificaciones internas antes del envío."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye los cinco días, ciudades, reservas, horas y códigos; señala el conflicto en ambas secciones sin resolverlo y cumple el límite de palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona/Cabo San Juan y cena como NO RESERVADO; declara transporte e ingreso sin confirmar, sin añadir horas, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía del texto al cliente y explica expresamente en las alertas que carece de respaldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin añadir información."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa precios, requisitos ni normas; indica verificación de requisitos y entrada al Tayrona e incluye una lista interna antes del envío."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con fechas, horas y códigos; señala el conflicto en ambas secciones sin resolverlo y cumple el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona/Cabo San Juan y cena como NO RESERVADO; aclara que tampoco cuentan con transporte ni entrada, sin asignar datos adicionales."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía comercial del texto al cliente y explica expresamente en las alertas que carece de respaldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin añadir información."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa precios, requisitos ni normativa; indica que la agencia confirmará requisitos y entrada al Tayrona e incluye una lista interna de verificaciones."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Five days with cities and all reservations, codes and times kept; 16/12 conflict flagged in alerts and itinerary, unresolved; about 410 words."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Tayrona/Cabo San Juan, its transport and entry, and farewell dinner all marked NO RESERVADO, with no invented hours, providers or prices."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Guarantee phrase absent from client text; alerts explain exclusion for lack of support; no other unsupported claims."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Footer reproduces name, address, phone, email and RNT with fiction marks; only a 'Dirección:' label added."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data or requirements; says agency will confirm Tayrona vaccines/requirements and entry price; internal verification list included."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "All five days have cities and every reservation with original times and codes; 16/12 conflict flagged unresolved; client text about 480 words."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Tayrona/Cabo San Juan, transport and entry, and farewell dinner are marked NO RESERVADO, not included, with no invented times, providers or prices."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Guarantee phrase is absent from client text, and the alerts explain its exclusion; no other unsupported advertising claims."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Footer reproduces name, address, phone, email and RNT with fiction markers intact and no added agency data."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Nothing invented; Ana is told the agency will confirm requirements and entry price; alerts end with a verification checklist."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Five days with cities and all confirmed reservations; 16/12 conflict flagged in both sections, unresolved; client text about 470 words."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Tayrona/Cabo San Juan, its transport and entry, and the farewell dinner are marked NO RESERVADO, with no added times, providers or prices."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Guarantee phrase absent from client text; the exclusion is explained in the alerts, along with no unsupported quality or coverage promises."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Footer reproduces name, address, phone, email and RNT with fiction markers, unaltered."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented data, prices or requirements; tells Ana the agency will confirm; includes an internal pre-send checklist."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con fechas, horas, proveedores y códigos; señala el conflicto en ambas secciones y cumple el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; explicita transporte e ingreso no contratados, sin añadir horarios, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía del texto al cliente y explica internamente que carece de respaldo en servicios, comparaciones o políticas documentadas."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie conserva íntegramente nombre, dirección, teléfono, correo y RNT, incluidas las marcas de ficción, sin agregar datos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque responde a Ana e incluye verificaciones, introduce un regreso del Tayrona al día siguiente, circunstancia no aportada en los datos."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y reservas con horarios y códigos; mantiene pendiente el conflicto en ambas secciones y respeta el límite de palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; aclara transporte e ingreso sin reservar, sin inventar horarios, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Omite la garantía comercial del texto al cliente y explica en las alertas que carece de respaldo en los servicios descritos."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie conserva íntegramente nombre, dirección, teléfono, correo y RNT, incluidas las marcas de ficción, sin añadir datos."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque responde a Ana e incluye verificaciones, añade una consecuencia normativa no aportada: «Puede exponer al prestador a sanciones»."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye los cinco días, ciudades y reservas con sus datos; señala el conflicto pendiente en ambas secciones y respeta el límite de palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Tayrona, Cabo San Juan y cena figuran como NO RESERVADO; transporte e ingreso están explícitamente sin contratar, sin horas, proveedores ni precios inventados."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Omite la garantía comercial del texto al cliente y explica expresamente en las alertas que carece de respaldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin agregar información."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aunque incluye verificaciones y promete confirmar requisitos y precio del Tayrona, asigna la cena al 17/12 sin que los datos indiquen esa fecha."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y todas las reservas con datos conservados; señala el conflicto pendiente en ambas secciones y no supera 660 palabras."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; aclara transporte e ingreso no reservados ni incluidos, sin añadir horarios, proveedores o precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía comercial del texto al cliente y explica expresamente su descarte por falta de respaldo en las alertas."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie reproduce todos los datos exigidos de la agencia, incluidas las marcas de ficción, sin alteraciones ni datos adicionales."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa datos operativos, precios, requisitos ni normas; indica que confirmará la consulta de Ana e incluye una lista interna de verificaciones."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta los cinco días, ciudades y todas las reservas con datos conservados; señala el conflicto pendiente en ambas secciones y respeta el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca visita y cena como NO RESERVADO; explicita transporte e ingreso sin reservar, sin inventar horas, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Omite la garantía del texto al cliente y explica expresamente su exclusión por falta de respaldo en las alertas."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie conserva íntegramente nombre, dirección, teléfono, correo y RNT, incluidas las marcas de ficción, sin añadir datos."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No inventa datos, precios ni requisitos; indica que la agencia confirmará la consulta de Ana e incluye una lista interna de verificaciones."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye los cinco días, ciudades y reservas con datos conservados; señala el conflicto en ambas secciones sin resolverlo y cumple el límite."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; aclara transporte e ingreso sin reservar, sin inventar horas, proveedores ni precios."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Excluye la garantía comercial del texto al cliente y explica expresamente su descarte en las alertas internas."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "El pie conserva íntegramente nombre, dirección, teléfono, correo y RNT, incluidas las marcas de ficción, sin agregar datos."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No aporta precios, requisitos ni normas inventados; promete confirmar requisitos, vacunas y entradas, e incluye una lista interna de verificaciones."
+    }
+   ],
+   "transcript": "prompts/ta-es-itinerario-co-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

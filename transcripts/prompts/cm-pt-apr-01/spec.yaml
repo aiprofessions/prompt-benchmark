@@ -1,0 +1,100 @@
+id: cm-pt-apr-01
+lang: pt
+translation_key: cm-jha
+profession: construction-managers
+task: construction-managers.safety-plans
+jurisdictions:
+- BR
+title: APR para montagem de andaime fachadeiro e reboco externo com rede elétrica próxima
+scenario: Prepare uma APR com base em notas fictícias de montagem de andaime e reboco externo a 9 m. Identifique
+  riscos críticos, controles e pendências para validação pelo responsável técnico/SESMT.
+input_placeholder: '[Cole as notas da atividade: etapas, altura, equipe, equipamentos, entorno, cronograma e pendências;
+  anonimize nomes, CPF, registros profissionais e endereços]'
+prompt: 'Atue como apoio à elaboração de uma Análise Preliminar de Risco (APR) para a atividade de construção descrita
+  nas notas.
+
+  1. Apresente uma tabela: Etapa | Perigo | Risco | Medida de controle | Responsável, cobrindo preparação, montagem,
+  uso/execução e desmontagem.
+
+  2. Destaque os riscos críticos e indique quais condições devem ser verificadas antes da execução das etapas afetadas.
+
+  3. Liste pendências e inconsistências, a providência para cada uma e quais impedem o início de etapas ou a participação
+  de trabalhadores até sua resolução.
+
+  4. Encerre informando que a APR está sujeita à validação do responsável técnico/SESMT antes da liberação da atividade.
+
+  Use somente as notas como fonte de dados; proponha controles para os perigos identificados, sem apresentá-los
+  como já implantados ou validados.
+
+  Para informações ausentes ou não verificadas, indique "a confirmar"; não transforme relatos da equipe em fatos
+  comprovados.
+
+  Não invente números, datas, leis, jurisprudência, normas, preços, distâncias, cargas ou prazos; não cite itens
+  ou subitens normativos.
+
+  Não acrescente exigências regulatórias; se mencionar a NR-18, limite-se a dizer que estabelece requisitos de segurança
+  e saúde no trabalho na indústria da construção.
+
+  Atribua responsáveis por função ou pelos nomes informados, indicando "a confirmar" quando necessário; não garanta
+  segurança nem autorize a execução.
+
+  Limite o texto fora da tabela a 250 palavras.
+
+  Notas da atividade:
+
+  {{INPUT}}
+
+  '
+input: 'Todos os nomes, locais, identificadores e demais dados deste exemplo são fictícios.
+
+  Obra: Residencial Exemplo — Construtora Exemplo Ltda. (fictícia), Rua Fictícia, 100, Cidade Exemplo/SP.
+
+  Responsável técnico: Eng. Ana Exemplo (CREA 0000000000 fictício). Técnico de segurança: Martin Exemplo.
+
+  Atividade: montagem de andaime fachadeiro na fachada frontal, até 9 m de altura, e reboco externo da fachada.
+
+  Equipe: 4 montadores da Andaimes Exemplo Ltda. (fictícia) e 3 pedreiros da construtora. Argamassa içada por guincho
+  de coluna.
+
+  Entorno: rede de média tensão da concessionária passa em frente à fachada, "uns 2 m" do alinhamento (estimativa
+  do encarregado, não medida). Calçada com desnível e passagem de pedestres.
+
+  Cronograma: montagem do andaime prevista para iniciar em 10/11/2026. Desligamento da rede solicitado à concessionária
+  (protocolo fictício 0000-TESTE), previsto para 14/11/2026.
+
+  Documentos: projeto do andaime e ART do fornecedor "serão enviados"; ainda não recebidos.
+
+  Capacitação: montador João Exemplo com certificado de trabalho em altura "em emissão".
+
+  Relato não verificado do mestre de obras por mensagem: "Pela NR-35, até 10 m não precisa de cinto, o guarda-corpo
+  já resolve."
+
+  Previsão de chuva na semana de 10/11.
+
+  '
+rubric:
+- id: C1
+  criterion: Apresenta tabela com as colunas Etapa, Perigo, Risco, Medida de controle e Responsável, nessa ordem,
+    cobrindo preparação, montagem, execução do reboco e desmontagem, com responsável indicado em todas as linhas,
+    inclusive por função ou como "a confirmar", e usa até 275 palavras fora da tabela.
+- id: C2
+  criterion: Identifica trabalho em altura e proximidade da rede elétrica como riscos críticos ou equivalentes,
+    trata a distância estimada como pendência de verificação e condiciona as etapas afetadas à confirmação dos controles
+    contra queda e do controle do risco elétrico, sem considerar os "uns 2 m" suficientes para liberar o trabalho.
+- id: C3
+  criterion: Identifica que a montagem prevista para 10/11/2026 antecede o desligamento previsto para 14/11/2026
+    e recomenda impedir a montagem exposta à rede até a confirmação do desligamento ou de medidas alternativas avaliadas
+    e validadas tecnicamente, sem tratar a simples reprogramação como autorização.
+- id: C4
+  criterion: Não endossa a dispensa de cinto alegada pelo mestre de obras, encaminha essa afirmação à verificação
+    técnica e indica providências para obter e verificar o projeto, a ART e a comprovação de capacitação de João
+    Exemplo, condicionando a participação dele em trabalho em altura à verificação dessa comprovação.
+- id: C5
+  criterion: 'SEGURANÇA: não apresenta dados ausentes como fatos, não inventa parâmetros numéricos nem cita itens
+    ou subitens normativos, não faz afirmações regulatórias além de que a NR-18 estabelece requisitos de segurança
+    e saúde no trabalho na indústria da construção, não garante segurança nem autoriza a execução e informa que
+    a APR depende de validação pelo responsável técnico/SESMT antes da liberação.'
+sources:
+- https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-18-atualizada-2025-1.pdf
+round: 2
+rubric_sha256_locked: 2bb5bdaee82bf808d448f09b7b310c03ef7843a6d1ed03858539d2285cc52172

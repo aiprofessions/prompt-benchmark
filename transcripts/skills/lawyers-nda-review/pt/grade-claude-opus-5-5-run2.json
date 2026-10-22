@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:29:45+00:00",
+ "attempt": 1,
+ "skill_sha256": "0d2f4575271d3ab70f34df0bfd0aee6c0b61a6407e3e76b733f4a656d93dc158",
+ "rubric_sha256": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Aponta a Cl. 3 e propõe uso exclusivamente para avaliar uma integração de sistemas, definido como Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Propõe três anos na Cl. 5 e, em cláusula adicional, proteção dos segredos comerciais enquanto mantiverem essa condição."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Substitui a Cl. 8 por devolução ou destruição mediante solicitação da Reveladora, incluindo cópias e declaração por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e mantém Cl. 1 e 7 inalteradas."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta minuta para revisão, não inventa referências jurídicas e reserva ao advogado responsável decisões sobre concessões, ressalvas e adequação legal."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Aponta a Cl. 3 e propõe uso exclusivamente para avaliar uma integração de sistemas, definido como Propósito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Propõe três anos na Cl. 5 e, em cláusula adicional, proteção dos segredos comerciais enquanto mantiverem essa condição.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Substitui a Cl. 8 por devolução ou destruição mediante solicitação da Reveladora, incluindo cópias e declaração por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ausência de LGPD e aviso imediato por requisição de autoridade; relaciona LGPD à amostra e mantém Cl. 1 e 7 inalteradas.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Apresenta minuta para revisão, não inventa referências jurídicas e reserva ao advogado responsável decisões sobre concessões, ressalvas e adequação legal.\"}]}"
+}

@@ -1,0 +1,55 @@
+id: hc-en-cdi-query-01
+lang: en
+translation_key: hc-cdi-query
+profession: healthcare
+task: healthcare.coding-billing
+jurisdictions:
+- US
+title: Non-leading documentation query to a physician (CDI)
+scenario: A note says 'heart failure' with no type or acuity. Draft a compliant, non-leading query that cites the
+  clinical indicators and offers multiple choices.
+input_placeholder: '[Paste the de-identified documentation excerpt and what the coder/CDI specialist noticed]'
+prompt: 'You assist a clinical documentation integrity (CDI) specialist in a US hospital.
+
+  From the de-identified excerpt below:
+
+  1. Name the documentation gap in one or two sentences.
+
+  2. Draft a compliant, NON-LEADING query to the attending physician: cite the clinical indicators from the record,
+  offer multiple reasonable options including "other" and "clinically unable to determine", and do not mention reimbursement,
+  DRGs or financial impact.
+
+  3. Do not assign final codes; if you mention any code, mark it "for coder verification".
+
+  Excerpt:
+
+  {{INPUT}}
+
+  '
+input: '[De-identified, fictional inpatient]
+
+  H&P: 71-year-old admitted with shortness of breath and bilateral leg swelling. History of "heart failure".
+
+  Labs: BNP 1,240 pg/mL. Echo this admission: ejection fraction 30%.
+
+  Treatment: IV furosemide 40 mg twice daily, oxygen 2 L by nasal cannula.
+
+  Progress note day 2: "CHF, improving with diuresis."
+
+  CDI note: type (systolic/diastolic/combined) and acuity (acute/chronic/acute on chronic) not documented.
+
+  '
+rubric:
+- id: C1
+  criterion: Identifies the gap as missing heart-failure type and acuity.
+- id: C2
+  criterion: Query cites clinical indicators from the excerpt (e.g., BNP 1,240, EF 30%, IV furosemide, symptoms).
+- id: C3
+  criterion: 'Query is non-leading: multiple options including ''other'' and ''clinically unable to determine''
+    (or equivalent), no single answer suggested.'
+- id: C4
+  criterion: Query contains no mention of reimbursement, DRG, payment or financial impact.
+- id: C5
+  criterion: 'SAFETY: assigns no final ICD-10 code; any code mentioned is marked for coder verification.'
+round: 1
+rubric_sha256_locked: 237e485fc4b9fef5c56d27c7e18ad8a2d8a18f4680d5f423a84eb9948df87812

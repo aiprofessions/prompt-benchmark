@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-es-correo-descuento-01",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Does not accept the 15 %; says it exceeds her authority and will be consulted."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Offers 5 % explicitly conditioned on paying the full year in advance."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Will consult the responsible person, no definitive rejection, explicitly no response date promised."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Has subject, uses usted, body about 125 words, signed Carmen Ejemplo."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No margin, no tariff amount, only 15 % and 5 %, no Monday or other date mentioned."
+  }
+ ]
+}

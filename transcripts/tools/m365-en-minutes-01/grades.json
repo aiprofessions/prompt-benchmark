@@ -1,0 +1,542 @@
+{
+ "prompt_id": "m365-en-minutes-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Records the go-live date as an OPEN question with both positions: November 16 (Priya) and November 23 (Marco); it does not appear as a decision."
+  },
+  {
+   "id": "C2",
+   "criterion": "Decisions contain the 90-day read-only period for the old system and no other decision (the licence budget is not presented as decided)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Action items include: Priya – send signed vendor contract to finance – October 28; Priya – ask the vendor about a training sandbox (no date set); Marco – book the large training room (no date set)."
+  },
+  {
+   "id": "C4",
+   "criterion": "The patient FAQ update appears as an action with the owner marked as not assigned (or TBD), not given to a named person; the minutes are at most ~250 words (allow ±10%)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: no invented date, amount, deadline or commitment (e.g. no due date for the room booking or FAQ, no budget figure, no go-live date chosen)."
+  }
+ ],
+ "rubric_sha256": "83110198997dc751b5bc331a5f1f4b4903b35fa12ad2fb53d37f57967a766706",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live is an open question listing November 16 for Priya and November 23 for Marco, not a decision."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The only decision is keeping the old system read-only for 90 days after go-live; the licence budget remains open."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions have the correct owners, tasks, and stated due date or no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with owner not assigned, and the minutes are within the allowed word limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No date, amount, deadline, or commitment is invented; before go-live is explicitly stated for the FAQ update in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live remains an open question, with November 16 attributed to Priya and November 23 to Marco."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The sole decision is keeping the old system read-only for 90 days after go-live; the licence budget remains open."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions have the correct owners and deadlines, including no date set for sandbox inquiry and room booking."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The patient FAQ update is an action marked owner not assigned, and the minutes are under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No dates, amounts, deadlines, or commitments are invented; the FAQ deadline of before go-live is explicitly stated in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live appears only as an open question, with November 16 attributed to Priya and November 23 to Marco."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The sole decision is keeping the old system read-only for 90 days after go-live; the licence budget remains open."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with correct owners and deadlines: October 28 for the contract, no date set for the others."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The patient FAQ update is an action marked Owner not assigned; the minutes are below 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented date, amount, deadline, or commitment appears. The FAQ deadline of before go-live is explicitly stated in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live is explicitly unresolved under Open questions, with November 16 attributed to Priya and November 23 to Marco."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The only decision is keeping the old system read-only for 90 days after go-live."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with correct owners and dates: contract October 28; sandbox and training room no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action marked Owner not assigned, and the minutes are under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Invents a Sam-owned budget follow-up commitment and Friday deadline; the transcript only parks the budget until finance replies Friday."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live is an open question with Priya's November 16 and Marco's November 23 positions; neither date appears as a decision."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions include sending the vendor contract to finance in addition to the agreed 90-day read-only period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with the correct owners and October 28 or no date set, respectively."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with owner not assigned, and the minutes are under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "The output invents a Sam / Finance action commitment to reply on the extra licence budget; the transcript only anticipates finance's reply."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live is explicitly unresolved under Open questions, with November 16 attributed to Priya and November 23 to Marco."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions includes contract delivery and licence budget deferral in addition to the confirmed 90-day read-only period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with the correct owners, tasks, and stated deadline or no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with owner not assigned, and the minutes are below 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Assigning Sam/Finance an action to reply on the licence budget invents ownership and a commitment not established in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Open questions lists Nov 16 (Priya) vs Nov 23 (Marco); the decision only says the date is not fixed yet."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions also include the licence budget deferral, the go-live deferral and the FAQ item, not only the 90-day read-only period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required action items are present with the correct owners and dates."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "FAQ update owner is 'owner not assigned'; total length is roughly 190 words, under 250."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented dates, amounts or commitments; 'before go-live' and 'next week' come from the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live is an open question with Priya's November 16 and Marco's November 23; Decisions only says the date is not fixed."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions include the 90-day read-only period plus three other items, including the licence budget deferral and the FAQ requirement."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three items present with the correct owners and dates: contract October 28, sandbox and room booking no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "FAQ update is listed as 'owner not assigned'; output is about 190 words, under the limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented dates, amounts or commitments; 'before go-live' and 'next week' both come from the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Open questions list November 16 (Priya) and November 23 (Marco); Decisions only note the date is not fixed, not chosen."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions also include the licence-budget deferral, the FAQ/ownership item and go-live not fixed, not only the 90-day read-only period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three actions appear: contract by October 28, vendor sandbox query with no date set, room booking with no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "FAQ update owner is marked 'owner not assigned'; total is about 190 words, under 250."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented dates, amounts or commitments; 'before go-live' and 'next week' both come from the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Open questions gives November 16 for Priya and November 23 for Marco; no go-live date is recorded as decided."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions includes the 90-day read-only period but also FAQ updating, deferring go-live selection, and parking the licence budget."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with the correct owners and October 28 or no date set, respectively."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action owned by 'Owner not assigned'; the output is within the allowed word limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Dates, deadlines, and commitments are supported by the transcript; 'before go-live' and 'next week' were explicitly stated."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Both positions appear under Open questions, but go-live scheduling also appears under Decisions, contrary to the criterion."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions includes the 90-day read-only period but also go-live deferral, licence budget deferral, and the patient FAQ update."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with the correct owners, tasks, and October 28 or no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with Owner not assigned, and the minutes are fewer than 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No dates, amounts, deadlines, or commitments are invented; the FAQ deadline of before go-live is explicitly stated in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live remains open, with November 16 attributed to Priya and November 23 to Marco; neither is recorded as decided."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions include the FAQ update and room booking in addition to the confirmed 90-day read-only period."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with correct owners and dates: contract October 28; sandbox and room booking no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with owner not assigned, and the minutes are within the allowed word limit."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Invents a commitment for Sam to follow up on the licence budget and assigns Friday as its due date."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Open questions records November 16 for Priya and November 23 for Marco; no go-live date is selected as a decision."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions includes the 90-day read-only period but also three other decisions, including parking the licence budget discussion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with the correct owners and October 28 or no date set, as specified."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The patient FAQ update is an action marked owner not assigned, and the output is under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No dates, amounts, deadlines, or commitments are invented; before go-live is explicitly stated for the FAQ in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live remains an open question, with November 16 attributed to Priya and November 23 to Marco."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "The only decision recorded is keeping the old system read-only for 90 days after go-live."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with correct owners and dates: contract October 28; sandbox inquiry and room booking no date set."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action with owner not assigned, and the minutes are under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No dates, amounts, deadlines, or commitments are invented. The FAQ timing, before go-live, is explicitly stated in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Go-live remains an open question with November 16 attributed to Priya and November 23 to Marco; neither date is decided."
+    },
+    {
+     "id": "C2",
+     "pass": false,
+     "reason": "Decisions includes the read-only period but also FAQ updating, go-live deferral, and parking the licence budget."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "All three required actions appear with correct owners and deadlines: October 28 for the contract, no date set for sandbox and room."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "The FAQ update is an action marked owner not assigned, and the output is under 250 words."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No unsupported date, amount, deadline, or commitment is introduced; the FAQ timing of before go-live is stated in the transcript."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-en-minutes-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

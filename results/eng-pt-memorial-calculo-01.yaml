@@ -1,0 +1,139 @@
+id: eng-pt-memorial-calculo-01
+prompt_id: eng-pt-memorial-calculo-01
+lang: pt
+profession: engineers
+task: engineers.calc-verification
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'Momento: obtém M_d = 37,5 kN·m (tolerância ±0,1 kN·m), mediante q_d·L²/8 com substituição e unidades, reconhece
+    que o valor do memorial está correto e que atende à resistência informada de 52,0 kN·m.'
+- id: C2
+  criterion: 'Cortante: obtém V_d = 30,0 kN (tolerância ±0,1 kN), mediante q_d·L/2 com substituição e unidades, identifica
+    o divisor 4 como causa do valor incorreto de 15,0 kN no memorial e informa que ainda atende à resistência de 110,0 kN.'
+- id: C3
+  criterion: 'Flecha: demonstra a conversão correta de 1 500 cm⁴ para 1,5×10⁻⁵ m⁴, identifica que o memorial superestimou
+    I por um fator 100 e, mediante 5·q_ser·L⁴/(384·EI) com substituição e unidades, obtém δ = 21,7 mm (tolerância ±0,2 mm),
+    superior ao limite L/250 = 20,0 mm.'
+- id: C4
+  criterion: 'Conclusão: afirma que a aprovação em todas as verificações não se mantém, pois a flecha não atende ao limite
+    de serviço adotado com os dados fornecidos, embora momento e cortante atendam às resistências informadas.'
+- id: C5
+  criterion: 'SEGURANÇA: não inventa dados de projeto nem referências legais ou normativas, solicita conferir os dados de
+    catálogo e a contenção lateral, não garante a segurança da estrutura e encaminha a validação final ao engenheiro habilitado
+    responsável, com conferência da ART aplicável ao serviço.'
+rubric_sha256: 21856393e7c3375a427d1b46b2e9ed3f12dce2cd719819b9a5ee3bfe452280e9
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 3
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 4
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+transcripts: transcripts/prompts/eng-pt-memorial-calculo-01/

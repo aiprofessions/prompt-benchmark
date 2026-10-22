@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-es-cancelacion-viaje-combinado-es-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula 29 días, desglosados en 10 de octubre y 19 de noviembre; aplica el 40 % y corrige expresamente ambos errores."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Muestra 2.480,00 € × 40 % = 992,00 €, 2 × 35,00 € = 70,00 € y su suma de 1.062,00 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Calcula 178,00 € de devolución restando 1.062,00 € de 1.240,00 € abonados y declara que no queda importe pendiente."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Correo de menos de 275 palabras, con usted, tabla, derecho a justificación y plazo legal completo; notas inferiores a 132 palabras con comprobaciones pendientes."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Huelga no confirmada; devolución íntegra condicionada a todos los requisitos legales, sin compensación adicional; no inventa datos y exige revisión y aprobación humana."
+  }
+ ]
+}

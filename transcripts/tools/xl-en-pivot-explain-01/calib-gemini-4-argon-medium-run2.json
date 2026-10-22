@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-en-pivot-explain-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States grand total 631,500 and North 203,000, South 173,000, West 250,000, all matching the table."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Q4 named highest at 169,400 and Q1 lowest at 150,500; both figures match."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Blank row (5,500) is flagged as records missing a region assignment, with a check-and-assign instruction; not presented as a real region."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Roughly 115 words, within the 150-word limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No percentages, growth rates, forecasts or business causes; every number appears in the table."
+  }
+ ]
+}

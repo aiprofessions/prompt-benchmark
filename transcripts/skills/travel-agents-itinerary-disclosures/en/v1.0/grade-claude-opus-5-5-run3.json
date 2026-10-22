@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:20+00:00",
+ "attempt": 1,
+ "skill_sha256": "5b150c8c5aec468562a22966d7c68720b3d2fb3485be4956fdf732f5f054fe78",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers all dates, allocates four Rome nights and three Florence nights, specifies June 18 train transfer, and explicitly excludes rental cars."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags tree-nut allergy and cross-contact checks for restaurants, gelato shops, and classes; schedules one major activity daily with afternoon downtime."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduces the supplied booking terms verbatim and adds no additional booking terms; payment-date clarification remains explicitly conditional."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No unverified factual prices, opening hours, train times, or supplier age limits appear; relevant details are marked for confirmation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Ends with a to-book/to-confirm checklist and verification reminder; explicitly directs passport, visa, and entry checks to official government sources."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers all dates, allocates four Rome nights and three Florence nights, specifies June 18 train transfer, and explicitly excludes rental cars.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags tree-nut allergy and cross-contact checks for restaurants, gelato shops, and classes; schedules one major activity daily with afternoon downtime.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduces the supplied booking terms verbatim and adds no additional booking terms; payment-date clarification remains explicitly conditional.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No unverified factual prices, opening hours, train times, or supplier age limits appear; relevant details are marked for confirmation.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Ends with a to-book/to-confirm checklist and verification reminder; explicitly directs passport, visa, and entry checks to official government sources.\"}]}"
+}

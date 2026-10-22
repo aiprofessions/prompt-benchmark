@@ -1,0 +1,85 @@
+id: id-fr-fiche-materiaux-01
+lang: fr
+translation_key: id-material-spec
+title: Fiche de spécification des matériaux pour une salle de bains et un séjour
+scenario: 'Transformez vos notes en fiche matériaux par pièce : mentions relevées, caractéristiques à vérifier, incohérences
+  et questions aux fournisseurs, sans inventer de classement.'
+profession: interior-designers
+task: interior-designers.material-specs
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- FR
+prompt: 'Vous êtes architecte d’intérieur en France. À partir des notes ci-dessous, établissez la fiche de spécification des
+  matériaux du projet.
+
+  1. Présentez un tableau avec les colonnes suivantes, dans cet ordre : Pièce | Élément | Produit (tel que noté) | Caractéristique
+  à vérifier auprès du fabricant | Statut. Reprenez tous les éléments sans en ajouter ; un produit prévu pour plusieurs usages
+  peut occuper une ligne par usage.
+
+  2. Reprenez les désignations, références et mentions fournies, avec leur source lorsqu’elle est indiquée. Identifiez les
+  caractéristiques manquantes nécessaires à la vérification de l’usage prévu et indiquez pour chacune « à demander au fabricant »,
+  dans la colonne correspondante ou dans le statut.
+
+  3. Attribuez un seul statut par ligne, par priorité : « Incohérence à lever » en cas de contradiction avec l’usage prévu,
+  « À demander au fabricant » si une information manque ou reste à confirmer, sinon « Noté ». Ce dernier statut ne vaut pas
+  validation de l’aptitude du produit.
+
+  4. Ajoutez une liste « Incohérences et points bloquants » (80 mots maximum) signalant les contradictions et les vérifications
+  bloquantes, sans trancher vous-même l’aptitude des produits.
+
+  5. Rédigez un message aux fournisseurs en vouvoiement (120 mots maximum), regroupant les questions et demandes de justificatifs.
+
+  Utilisez uniquement les notes pour les informations factuelles : n’inventez aucun classement, chiffre, date, norme, prix
+  ou délai et ne formulez aucune affirmation réglementaire.
+
+  Une information orale doit rester attribuée à sa source et être indiquée « à confirmer par écrit ». Ne proposez aucun produit
+  de remplacement et ne garantissez l’aptitude d’aucun produit.
+
+  Terminez par une ligne indiquant que l’architecte d’intérieur doit valider la fiche sur la base des documents du fabricant,
+  avant toute commande ou diffusion au client.
+
+  Réponse totale : 500 mots maximum. Pour chaque limite, une tolérance de 10 % est admise ; le comptage porte sur les unités
+  séparées par des espaces, tableau et titres compris, hors séparateurs de mise en forme.
+
+  Notes du projet :
+
+  [Collez vos notes produits par pièce, références, mentions d’emballage et propos des vendeurs ; anonymisez les noms, adresses
+  et coordonnées]
+
+  '
+sample_input: 'Cabinet : Atelier Exemple Intérieurs (fictif), contact@atelier-exemple.test
+
+  Projet : rénovation appartement de Mme Martin Exemple (fictive), 12 rue de l’Exemple, 00000 Villexemple
+
+  Visite fournisseurs du 14/10, notes en vrac :
+
+
+  SALLE DE BAINS (étage, douche à l’italienne 120 × 90, receveur carrelé de plain-pied)
+
+  - Sol pièce + sol douche italienne : grès cérame « Pierre Douce » 60 × 60, Céramiques Exemple (fictive), réf. PD-6060-EX.
+  Sur le carton : « usage intérieur sec ». Prévu en continu sur la pièce et dans la douche.
+
+  - Murs douche : faïence « Zellige Exemple » 10 × 10 vert, réf. ZE-10-V. Rien noté d’autre.
+
+  - Plafond : peinture « Satin Bain », Peintures Exemple (fictive). Le pot porte la mention « pièces humides ».
+
+  - Douche : mitigeur thermostatique « Thermo EX-200 ». Le commercial a dit au téléphone qu’il est « NF ». Pas vu sur le carton.
+
+  - Meuble vasque « Meuble Exemple 80 cm », chêne massif huilé. Rien noté.
+
+
+  SÉJOUR
+
+  - Sol : parquet contrecollé « Chêne Exemple Naturel », épaisseur 14 mm, pose flottante. Plancher chauffant existant, compatibilité
+  non notée.
+
+  - Fenêtres : rideaux velours « Velours Exemple » bleu nuit. La cliente voudrait « du non-feu », rien de noté sur le tissu.
+
+  - Mur du fond : papier peint intissé « Exemple Botanique ». Rien noté.
+
+  '
+page: https://aiprofessions.ai/fr/architectes-d-interieur/prompts/#id-fr-fiche-materiaux-01
+results_file: results/id-fr-fiche-materiaux-01.yaml

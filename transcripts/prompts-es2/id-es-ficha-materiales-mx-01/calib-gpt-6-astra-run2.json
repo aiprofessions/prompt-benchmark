@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-es-ficha-materiales-mx-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye las cinco columnas, todos los elementos y denominaciones originales; calcula 8.00, 8.80 y exceso de 3.70 m², marcado como Conflicto."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula 1.08 y 1.242 m² para regadera y 1.44 m² para cubierta; señala merma y medidas faltantes sin inventar totales."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica la contradicción entre “solo para muros” y uso en piso de regadera, asigna Conflicto y no acredita aptitud ni propiedades antiderrapantes."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Asigna Pendiente y solicita precisar el acabado, pero no identifica explícitamente la protección o sellado no documentados ni pide confirmar la protección necesaria."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No añade prestaciones sin respaldo; distingue datos anotados, incluido PEI 4, solicita fichas técnicas y reserva revisión, validación y firma a la diseñadora."
+  }
+ ]
+}

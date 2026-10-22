@@ -1,0 +1,33 @@
+{
+ "prompt_id": "hc-es-nota-soap-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Clear S, O, A, and P sections are present and labeled."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Vitals are recorded verbatim: Temp 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "No invented findings or diagnosis; test result marked pending; missing items placed only under Faltante."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Penicillin allergy is boxed at the top; plan covers pending test, non-penicillin antibiotic, ibuprofen as stated, and alarm signs."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Includes FALTANTE / POR CONFIRMAR; header marks it as a draft requiring physician review and signature."
+  }
+ ]
+}

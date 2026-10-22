@@ -1,0 +1,48 @@
+id: sm-es-pipeline-es-01
+lang: es
+translation_key: sm-pipeline-review
+title: 'Revisión semanal del pipeline: previsión ponderada y riesgos (España)'
+scenario: 'Pega la exportación del CRM: previsión ponderada bien calculada, brecha frente a la cuota y operaciones en riesgo
+  con la pregunta para cada comercial.'
+profession: sales-managers
+task: sales-managers.pipeline-review
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- ES
+prompt: 'Eres analista de un director comercial en España. Con el pipeline de abajo:
+
+  1. Calcula la previsión ponderada (importe × probabilidad de fase) por oportunidad y en total, solo para las que cierran
+  dentro del trimestre.
+
+  2. Compárala con la cuota pendiente e indica la brecha.
+
+  3. Señala las oportunidades en riesgo con el motivo (actividad parada, fecha de cierre vencida, sin interlocutor, etc.)
+  y una pregunta de coaching por oportunidad.
+
+  Muestra los cálculos. Usa solo los datos dados. Importes en euros.
+
+  Datos:
+
+  [Pega las oportunidades: nombre, importe, fase, probabilidad, fecha de cierre, última actividad y notas; cuota y fin de
+  trimestre]
+
+  '
+sample_input: 'El trimestre termina el 31/12/2026. Hoy: 19/10/2026. Cuota pendiente del trimestre: 200.000 €.
+
+  1) Muestra Industrial — 90.000 € — Propuesta (50 %) — cierre 15/12 — última actividad 16/10.
+
+  2) Clínicas Ejemplo — 70.000 € — Negociación (75 %) — cierre 30/11 — última actividad 18/09 — el director de compras que
+  la impulsaba se ha ido.
+
+  3) Logística Testa — 50.000 € — Descubrimiento (20 %) — cierre 20/12 — última actividad 12/10.
+
+  4) Grupo Retail Muestra — 40.000 € — Compromiso (90 %) — cierre 10/10 — última actividad 08/10 — sin firmar.
+
+  5) Alimentación Ejemplo — 120.000 € — Cualificación (10 %) — cierre 15/02/2027 — última actividad 17/10.
+
+  '
+page: https://aiprofessions.ai/es/gerentes-de-ventas/prompts/#sm-es-pipeline-es-01
+results_file: results/sm-es-pipeline-es-01.yaml

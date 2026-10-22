@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:33:26+00:00",
+ "attempt": 1,
+ "skill_sha256": "73cf1e9fd3483a1fb7410bf40a99551edf68bfd04df5fa81dbcb27838ab3bd26",
+ "rubric_sha256": "a913eedbbb4ac40828e54ffd415b38d62511be1abe3e245840e8ca7582468a39",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cobre todas as datas, distribui corretamente as sete noites, explicita voo em 14/07, retorno de Bariloche e deslocamentos sem carro alugado."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Sinaliza alergia diariamente, incluindo doces e contaminação cruzada; prevê um passeio principal por dia, tardes livres e descanso nos deslocamentos."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Transcreve integralmente as condições fornecidas, sem acrescentar condições comerciais; cálculos e pendências aparecem separados da transcrição."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não apresenta preços, horários, tempos de voo ou traslado nem regras de entrada como fatos; informações operacionais pendentes estão marcadas para confirmação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina com lista de reservas, confirmações e perguntas; remete às fontes oficiais do governo para documentos e requisitos de entrada, incluindo crianças."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cobre todas as datas, distribui corretamente as sete noites, explicita voo em 14/07, retorno de Bariloche e deslocamentos sem carro alugado.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Sinaliza alergia diariamente, incluindo doces e contaminação cruzada; prevê um passeio principal por dia, tardes livres e descanso nos deslocamentos.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Transcreve integralmente as condições fornecidas, sem acrescentar condições comerciais; cálculos e pendências aparecem separados da transcrição.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não apresenta preços, horários, tempos de voo ou traslado nem regras de entrada como fatos; informações operacionais pendentes estão marcadas para confirmação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina com lista de reservas, confirmações e perguntas; remete às fontes oficiais do governo para documentos e requisitos de entrada, incluindo crianças.\"}]}"
+}

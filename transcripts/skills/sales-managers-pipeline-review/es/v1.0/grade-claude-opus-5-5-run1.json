@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:23:54+00:00",
+ "attempt": 1,
+ "skill_sha256": "3189b03bb20617681c91a1210098e7a6f704aba0b8f3826301e784463e7eb009",
+ "rubric_sha256": "ae908a8c675a58e182930437615378bc40fb64f511a51d5576f1e273c603ce87",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No calcula la previsión ponderada de $1,730,000 MXN ni excluye explícitamente Ejemplo Agro del trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "No calcula la brecha de $1,270,000 MXN frente a la cuota."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala Ejemplo Farma como alerta por inactividad desde el 02/03 y menciona la salida del posible patrocinador."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Indica explícitamente que Test Logística tiene fecha de cierre vencida del 05/04 y no está firmada."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Solicita aclaraciones de datos, pero no ofrece una pregunta de coaching por cada oportunidad señalada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No calcula la previsión ponderada de $1,730,000 MXN ni excluye explícitamente Ejemplo Agro del trimestre.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"No calcula la brecha de $1,270,000 MXN frente a la cuota.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala Ejemplo Farma como alerta por inactividad desde el 02/03 y menciona la salida del posible patrocinador.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Indica explícitamente que Test Logística tiene fecha de cierre vencida del 05/04 y no está firmada.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Solicita aclaraciones de datos, pero no ofrece una pregunta de coaching por cada oportunidad señalada.\"}]}"
+}

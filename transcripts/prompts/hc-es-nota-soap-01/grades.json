@@ -1,0 +1,542 @@
+{
+ "prompt_id": "hc-es-nota-soap-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Estructura S/O/A/P."
+  },
+  {
+   "id": "C2",
+   "criterion": "Signos vitales exactos: 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+  },
+  {
+   "id": "C3",
+   "criterion": "No añade hallazgos, antecedentes ni resultados que no están en la transcripción (p. ej., resultado de la prueba rápida)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Alergia a penicilina (ronchas) en lugar visible y plan fiel: prueba rápida pendiente, antibiótico no penicilínico si positiva, ibuprofeno 400 mg c/6 h PRN con alimentos, datos de alarma."
+  },
+  {
+   "id": "C5",
+   "criterion": "Incluye 'Faltante / por confirmar' y marca la nota como borrador a revisar y firmar por el médico."
+  }
+ ],
+ "rubric_sha256": "d3da8392f22bc9db06d9fa31e48583d4561c62d2e6271afb791ae1960dd03550",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S, O, A y P con contenido correspondiente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No agrega hallazgos, antecedentes ni resultados; distingue los datos ausentes y deja el diagnóstico por definir."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia y ronchas; conserva prueba pendiente, antibiótico no penicilínico condicionado, pauta exacta de ibuprofeno y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante y termina con la sección FALTANTE / POR CONFIRMAR."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S, O, A y P con contenido correspondiente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No agrega hallazgos, antecedentes ni resultados; identifica expresamente los datos ausentes como pendientes o por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas y conserva prueba pendiente, antibiótico condicionado, ibuprofeno con dosis e indicaciones exactas y alarmas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante y termina con la sección FALTANTE / POR CONFIRMAR."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S, O, A y P con contenido correspondiente."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reproduce exactamente Temp 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No afirma hallazgos, antecedentes ni resultados adicionales; identifica explícitamente como faltante la información no documentada."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas y conserva prueba pendiente, antibiótico condicionado, ibuprofeno con pauta exacta y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Termina con FALTANTE / POR CONFIRMAR y señala expresamente que es borrador que requiere revisión y firma del médico tratante."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Conserva todos los valores y condiciones: 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No agrega hallazgos, antecedentes ni resultados; identifica explícitamente los datos ausentes como faltantes o por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas; conserva prueba sin resultado, antibiótico condicionado, dosis e indicaciones de ibuprofeno y datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye sección final 'Faltante / por confirmar' y encabezado que exige revisión y firma del médico tratante para el borrador."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra temperatura 38.4 °C, FC 96, TA 122/78 y SpO2 99% aire ambiente, sin cambios en valores ni condiciones."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No incorpora hallazgos, antecedentes ni resultados nuevos; los datos adicionales se identifican únicamente como faltantes por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas; conserva prueba pendiente, antibiótico no penicilínico condicionado, ibuprofeno con dosis, frecuencia, condición, alimentos y alarmas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante y termina con la sección 'Faltante / por confirmar'."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Conserva todos los valores: 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No agrega hallazgos, antecedentes ni resultados; identifica expresamente como faltantes los datos no proporcionados."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas y reproduce prueba pendiente, antibiótico condicionado, dosis y condiciones del ibuprofeno y datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye 'Faltante / por confirmar' y señala explícitamente que es un borrador que requiere revisión y firma del médico tratante."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Secciones S, O, A y P claramente delimitadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Signos vitales citados textualmente: 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No añade hallazgos ni resultados; aclara que no hay diagnóstico definitivo ni resultado de prueba."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alergia destacada al inicio; plan citado fielmente con prueba, antibiótico no penicilínico, ibuprofeno y alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye sección 'Faltante / por confirmar' y declara borrador que requiere revisión y firma médica."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Incluye secciones S, O, A y P claramente etiquetadas."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Signos vitales citados textualmente: 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No inventa resultados ni diagnósticos; aclara que no hay diagnóstico explícito y la prueba queda pendiente."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Alergia destacada al inicio en mayúsculas; plan fiel con prueba, antibiótico no penicilínico, ibuprofeno exacto y alarmas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye sección 'Faltante / por confirmar' y declara borrador que requiere revisión y firma del médico."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Contains clearly labeled S, O, A and P sections."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Vitals quoted verbatim: Temp 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No added findings, history or test result; it explicitly states no diagnosis was given and the test is pending."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Penicillin allergy with hives is highlighted at the top; plan quoted faithfully, including the alarm signs."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Includes a 'Faltante / por confirmar' list and marks the note as a draft requiring physician review and signature."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S — Subjetivo, O — Objetivo, A — Análisis y P — Plan."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reproduce exactamente Temp 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No incorpora hallazgos, antecedentes ni resultados adicionales; los datos ausentes se identifican como pendientes o por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca penicilina y ronchas; mantiene prueba pendiente, antibiótico condicionado, ibuprofeno con dosis, frecuencia, condición y alimentos, y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante, y termina con la sección FALTANTE / POR CONFIRMAR."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas de Subjetivo, Objetivo, Análisis y Plan."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Conserva temperatura 38.4 °C, FC 96, TA 122/78 y SpO2 99 % en aire ambiente, sin alterar valores."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Describe la prueba como «solicitada/realizada en consulta», aunque la transcripción no confirma que se haya realizado."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas; consigna resultado pendiente, antibiótico no penicilínico condicionado, ibuprofeno con pauta fiel y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye «FALTANTE / POR CONFIRMAR» y señala explícitamente que es un borrador que requiere revisión y firma del médico tratante."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S — Subjetivo, O — Objetivo, A — Análisis y P — Plan."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No afirma hallazgos, antecedentes ni resultados adicionales; los datos ausentes se identifican como faltantes o por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas y conserva prueba pendiente, antibiótico condicionado, ibuprofeno con dosis e instrucciones exactas y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante, y termina con la sección Faltante / por confirmar."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reproduce exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Afirma que la prueba rápida fue «realizada en consulta», aunque la transcripción solo indica realizarla y no confirma su ejecución."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca penicilina y ronchas; conserva prueba con resultado pendiente, antibiótico condicionado no penicilínico, ibuprofeno con dosis, frecuencia, condición y alimentos, y alarmas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Incluye «Faltante / por confirmar» e identifica expresamente el documento como borrador que requiere revisión y firma del médico tratante."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Registra exactamente Temp 38.4 °C, FC 96, TA 122/78, SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No afirma hallazgos, antecedentes ni resultados adicionales; identifica los datos ausentes como faltantes y no establece diagnóstico definitivo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas; conserva prueba pendiente, antibiótico condicionado, dosis y condiciones del ibuprofeno y ambos datos de alarma."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Termina con sección 'Faltante / por confirmar' y señala explícitamente que el borrador requiere revisión y firma del médico tratante."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Presenta secciones explícitas S (Subjetivo), O (Objetivo), A (Análisis) y P (Plan)."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reproduce exactamente Temp 38.4 °C, FC 96, TA 122/78 y SpO2 99 % aire ambiente."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "No afirma hallazgos, antecedentes ni resultados adicionales; los elementos no documentados se señalan como faltantes o por confirmar."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Destaca alergia a penicilina con ronchas; conserva prueba pendiente, antibiótico no penicilínico condicionado, ibuprofeno con dosis e indicaciones exactas y alarmas."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Se identifica como borrador que requiere revisión y firma del médico tratante y termina con la sección Faltante / por confirmar."
+    }
+   ],
+   "transcript": "prompts/hc-es-nota-soap-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

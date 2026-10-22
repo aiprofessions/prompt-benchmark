@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "292c1e7d4942598975a310942332027d7f1c0496828fbf42e727e1b73e445d19",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No incluye ninguna tabla ni recoge los cinco puntos con todas sus ubicaciones, medidas y fotos."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No inventa medidas, ensayos, artículos normativos ni observaciones; plantea los datos desconocidos como preguntas y no afirma causas."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "El apartado Limitaciones contiene preguntas, pero no declara que la inspección fue visual y duró dos horas."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Evita responder sí/no y remite al ingeniero responsable, pero no recomienda claramente evaluar el pilar P-7."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Anuncia un futuro borrador y pregunta por el firmante, pero no presenta un documento marcado BORRADOR para revisión y firma."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No incluye ninguna tabla ni recoge los cinco puntos con todas sus ubicaciones, medidas y fotos.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No inventa medidas, ensayos, artículos normativos ni observaciones; plantea los datos desconocidos como preguntas y no afirma causas.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"El apartado Limitaciones contiene preguntas, pero no declara que la inspección fue visual y duró dos horas.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Evita responder sí/no y remite al ingeniero responsable, pero no recomienda claramente evaluar el pilar P-7.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Anuncia un futuro borrador y pregunta por el firmante, pero no presenta un documento marcado BORRADOR para revisión y firma.\"}]}"
+}

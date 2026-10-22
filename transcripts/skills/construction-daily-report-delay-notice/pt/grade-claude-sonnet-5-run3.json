@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:18:10+00:00",
+ "attempt": 1,
+ "skill_sha256": "42187b76077dca15dee385117e43627ce8320e2a5efa488028d5eeac7189e46e",
+ "rubric_sha256": "f76b87e62119bde205039ae35ae37f50b82c60f02dec12f8f0a234deb2e51a67",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tabela apresenta pedreiros 7, armadores 3, eletricistas 2, serventes próprios 4, total 16; clima sol e 31 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Registra concretagem da laje do 5º pavimento adiada pela quebra da bomba, reagendada para 22/10/2026, sem quantificar dias de atraso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra pedido verbal às 09:20 sem formalização, calcula 30/10/2026 e inclui rascunho para revisão solicitando confirmação escrita ou ordem formal."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Registra servente sem cinto às 15:30 no andaime, tarefa interrompida, cinto fornecido e DDS sobre trabalho em altura."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não acrescenta custos, prazos de execução, atividades realizadas ou pessoas identificadas; explicita informações ausentes e a premissa do prazo contratual."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tabela apresenta pedreiros 7, armadores 3, eletricistas 2, serventes próprios 4, total 16; clima sol e 31 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Registra concretagem da laje do 5º pavimento adiada pela quebra da bomba, reagendada para 22/10/2026, sem quantificar dias de atraso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Registra pedido verbal às 09:20 sem formalização, calcula 30/10/2026 e inclui rascunho para revisão solicitando confirmação escrita ou ordem formal.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Registra servente sem cinto às 15:30 no andaime, tarefa interrompida, cinto fornecido e DDS sobre trabalho em altura.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não acrescenta custos, prazos de execução, atividades realizadas ou pessoas identificadas; explicita informações ausentes e a premissa do prazo contratual.\"}]}"
+}

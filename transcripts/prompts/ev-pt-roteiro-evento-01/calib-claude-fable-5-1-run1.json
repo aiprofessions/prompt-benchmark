@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-pt-roteiro-evento-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States 290 min (4h50), original end at 18h50, and 20 min past the 18h30 limit."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Cites the 15h30 start and 15h40 arrival, under 132 words, but never states the 10-minute early start."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Eight blocks in note order, continuous 14h00–18h50, correct intervals, responsibles given, missing cues marked 'A definir'."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Distinct alternatives totaling 260 and 270 min; consecutive times; ends 18h20/18h30; talk at 16h10/16h20; all minimums and orders kept."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Moderator kept pending, no regulatory claims, confirmations listed, client and technical-team validation stated."
+  }
+ ]
+}

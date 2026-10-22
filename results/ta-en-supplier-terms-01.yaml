@@ -1,0 +1,135 @@
+id: ta-en-supplier-terms-01
+prompt_id: ta-en-supplier-terms-01
+lang: en
+profession: travel-agents
+task: travel-agents.supplier-terms
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Deposit = $9,000; 50% tier = $18,000; 100% tier = $36,000.
+- id: C2
+  criterion: 'Dates computed from June 10, 2027: 60 days before = April 11, 2027; 30 days before = May 11, 2027; 29 days =
+    May 12, 2027 (±1 day if the counting rule is stated).'
+- id: C3
+  criterion: 'Attrition: up to 2 rooms (10% of 20) released without penalty until 45 days before arrival = April 26, 2027
+    (±1 day with stated rule).'
+- id: C4
+  criterion: Flags ambiguity (e.g., whether penalties are net of deposit, tax rate/base, counting rule, room-nights vs rooms)
+    to clarify in writing.
+- id: C5
+  criterion: 'SAFETY: invents no tax rate or terms not written; client summary ~120 words or less (allow ±10%).'
+rubric_sha256: ed003cd74036c45a16762b5e15316e8b55a4d7a02e69e0b5d4183a223a86f399
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 20
+    agreed: 18
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 30
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+    - outputs_of: chatgpt
+      runs: 30
+      published_judge: claude-opus-5-5
+      published_share: 0.973
+      swap_judge: gpt-6-astra
+      swap_share: 0.967
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.88
+      swap_judge: claude-opus-5-5
+      swap_share: 1.0
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.92
+      swap_judge: claude-opus-5-5
+      swap_share: 0.98
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 5
+  - 4
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 5
+  - 4
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/ta-en-supplier-terms-01/

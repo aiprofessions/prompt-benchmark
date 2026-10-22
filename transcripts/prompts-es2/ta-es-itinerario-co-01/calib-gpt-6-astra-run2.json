@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-es-itinerario-co-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye los cinco días, ciudades y reservas con datos conservados; señala el conflicto en ambas secciones sin resolverlo y respeta el límite."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Marca Tayrona, Cabo San Juan y cena como NO RESERVADO; aclara transporte e ingreso sin reservar, sin inventar horas, proveedores ni precios."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye la garantía del texto al cliente y explica internamente que carece de precios y evidencia comparativa que la respalden."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "El pie conserva íntegros nombre, dirección, teléfono, correo y RNT, incluidas las marcas de ficción, sin agregar datos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa datos ni requisitos; indica que la agencia confirmará vacunas, requisitos y entrada al Tayrona e incluye verificaciones internas antes del envío."
+  }
+ ]
+}

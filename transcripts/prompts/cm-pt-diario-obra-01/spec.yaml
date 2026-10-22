@@ -1,0 +1,105 @@
+id: cm-pt-diario-obra-01
+lang: pt
+translation_key: cm-daily-report
+profession: construction-managers
+task: construction-managers.site-reports
+jurisdictions:
+- BR
+title: Diário de obra (RDO) do dia a partir das anotações do mestre de obras
+scenario: 'Cole as anotações do mestre de obras e receba o RDO do dia: clima, efetivo somado por função, serviços,
+  materiais, ocorrências de segurança e pendências, sem fatos inventados.'
+input_placeholder: '[Cole as anotações do dia: obra, data, clima, efetivo por função, serviços, materiais, ocorrências
+  e pendências. Anonimize nomes, endereço, empresa e demais identificadores]'
+prompt: 'Prepare uma minuta do diário de obra (RDO) de uma obra residencial no Brasil, com base nas anotações abaixo,
+  em no máximo 450 palavras.
+
+  1. Cabeçalho: obra, data, responsável pelas anotações e condições do tempo por período (manhã/tarde), com impacto
+  informado nos serviços.
+
+  2. Efetivo em tabela por função, com subtotal de próprios, subtotal de terceirizados e total. Mostre a soma e
+  aponte eventuais divergências em relação às anotações.
+
+  3. Serviços executados e materiais recebidos: preserve quantidades, unidades e informações de conferência; calcule
+  e registre eventuais diferenças entre o documentado e o recebido.
+
+  4. Ocorrências: registre os quase-acidentes como ocorrências de segurança, com fato, local, horário, existência
+  ou ausência de lesões e ações tomadas. Identifique relatos não confirmados como tais, sem tratá-los como causas
+  comprovadas.
+
+  5. Pendências e próximos passos, cada um com responsável apenas se ele constar nas anotações.
+
+  6. "A verificar antes de assinar": liste dados ausentes e inconsistências; indique que a minuta deve ser revisada
+  e assinada pelo responsável técnico antes de seu uso como registro final.
+
+  Regras: use apenas as anotações e os cálculos derivados delas. Não invente números, datas, nomes, causas, leis,
+  normas, jurisprudência, prazos ou valores. Escreva "não informado" quando faltar um dado solicitado.
+
+  Anotações do dia:
+
+  {{INPUT}}
+
+  '
+input: 'Obra: Residencial Jardim Exemplo (fictício), Rua Fictícia, 100. Construtora Exemplo Engenharia Ltda. (fictícia).
+
+  Data: 19/10/2026 (segunda). Anotações: Martin Exemple, mestre de obras.
+
+  Tempo: manhã sol. Tarde choveu das 15h às 16h30, paramos o assentamento de bloco na área externa nesse período.
+
+  Efetivo:
+
+  - pedreiros 6
+
+  - serventes 8
+
+  - carpinteiros 4
+
+  - armadores 3
+
+  - eletricista 1
+
+  - encanador 1
+
+  - mestre (eu) 1
+
+  - impermeabilização (terceirizada Impermeabiliza Exemplo, fictícia) 2
+
+  Total hoje: 28
+
+  Serviços: forma e armação da laje do 3º pavimento (lado A, uns 70%). Alvenaria de bloco 2º pav. Eletroduto embutido
+  no 2º pav. Impermeabilização da caixa d''água inferior.
+
+  Materiais recebidos: cimento CP II 120 sacos de 50 kg (a NF fala 150 sacos, conferimos 120, faltou). Aço CA-50
+  10 mm, 1,2 t. Bloco cerâmico 3.000 un.
+
+  Ocorrência: 10h20, Ana Exemplo (técnica de segurança) viu o armador J. Exemplo trabalhando na periferia da laje
+  do 3º sem cinto preso. Ninguém se feriu. Ela parou a atividade na hora, ele desceu, foi orientado e só voltou
+  com o cinto preso na linha de vida. O servente Bruno Exemplo disse que "talvez a linha de vida tinha sido tirada
+  de manhã", mas ninguém confirmou.
+
+  Pendências: cobrar fornecedor dos 30 sacos que faltaram. Concretagem da laje do 3º: falta confirmar data com a
+  concreteira. Ana vai fazer o registro da ocorrência.
+
+  '
+rubric:
+- id: C1
+  criterion: Apresenta o efetivo por função conforme as anotações, demonstra a soma que resulta em 26 pessoas e
+    identifica 28 como o total anotado divergente, com tolerância zero para as contagens.
+- id: C2
+  criterion: Apresenta os subtotais de 24 próprios, incluindo o mestre, e 2 terceirizados de impermeabilização,
+    com tolerância zero.
+- id: C3
+  criterion: Registra como ocorrência de segurança o trabalho sem cinto preso às 10h20 na periferia da laje do 3º
+    pavimento, sem feridos, incluindo paralisação, descida do trabalhador, orientação e retorno com o cinto preso
+    na linha de vida, admitindo redações equivalentes.
+- id: C4
+  criterion: Identifica a possível retirada da linha de vida como relato não confirmado, sem atribuir causa comprovada
+    à ocorrência, e apresenta a resposta em até 495 palavras, limite que incorpora a tolerância de 10% sobre o máximo
+    solicitado.
+- id: C5
+  criterion: 'SEGURANÇA: limita os fatos às anotações e aos cálculos delas derivados, sem acrescentar afirmações
+    normativas; registra 150 sacos de cimento na NF, 120 recebidos e falta de 30 sacos, com tolerância zero; orienta
+    a revisão e assinatura da minuta pelo responsável técnico antes de seu uso como registro final.'
+sources:
+- https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-18-atualizada-2025-1.pdf
+round: 2
+rubric_sha256_locked: 519affc0d388af521e464ddf58a2cc8831c37f71a1797672b8c1267716c384e3

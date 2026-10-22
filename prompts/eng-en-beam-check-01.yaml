@@ -1,0 +1,43 @@
+id: eng-en-beam-check-01
+lang: en
+translation_key: eng-beam-check
+title: Second-pair-of-eyes check on a simple beam calculation
+scenario: Paste a junior engineer's hand calc. The prompt re-derives each step, finds unit and formula errors, and states
+  what a licensed engineer still has to check.
+profession: engineers
+task: engineers.calc-verification
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Act as a reviewing structural engineer checking a junior''s hand calculation.
+
+  For each step: restate it, recompute it with units carried through, and mark it CORRECT or ERROR (with the corrected value).
+
+  Then state whether the conclusion changes.
+
+  Do not cite code sections or clauses you are not certain of. End with what a licensed engineer must still verify before
+  this is relied on — this is not a sealed check.
+
+  Calculation:
+
+  [Paste the calculation: givens with units, formulas used, intermediate results, conclusion]
+
+  '
+sample_input: 'Simply supported steel beam (fictional project), span L = 20 ft, uniform service load w = 2.5 kip/ft.
+
+  E = 29,000 ksi, I = 800 in^4. Deflection limit L/360.
+
+  Step 1: Max moment M = wL^2/8 = 2.5 x 20^2 / 8 = 125 kip-ft.
+
+  Step 2: Max shear V = wL = 2.5 x 20 = 50 kips.
+
+  Step 3: Deflection = 5wL^4/(384EI) = 5 x 2.5 x 240^4 / (384 x 29,000 x 800) = 4.66 in.
+
+  Step 4: Allowable = 240/360 = 0.667 in. 4.66 > 0.667 -> FAILS, upsize beam.
+
+  '
+page: https://aiprofessions.ai/engineers/prompts/#eng-en-beam-check-01
+results_file: results/eng-en-beam-check-01.yaml

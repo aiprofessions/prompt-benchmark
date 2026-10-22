@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:34:55+00:00",
+ "attempt": 1,
+ "skill_sha256": "ff2fbf30ff6e058166a8b33a872d19c299eeb062c3381dc60c7bfb80759dadcd",
+ "rubric_sha256": "0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Inclui palco nas dimensões exatas, dois telões, seis microfones sem fio de mão, três lapelas, retorno e transmissão apenas das palestras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige equipe de rigging do próprio local para içamentos, montagem a partir das 06:00 e desmontagem concluída até 02:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exige preços separados para equipamentos, mão de obra, frete, montagem, taxa e impostos; solicita certificado de seguro, condições de sinal e cancelamento."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Informa propostas até 01/02/2027, decisão em 12/02/2027 e critérios de avaliação explicitamente propostos para confirmação."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações ausentes e condiciona cálculos às datas ainda não confirmadas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Inclui palco nas dimensões exatas, dois telões, seis microfones sem fio de mão, três lapelas, retorno e transmissão apenas das palestras.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige equipe de rigging do próprio local para içamentos, montagem a partir das 06:00 e desmontagem concluída até 02:00.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Exige preços separados para equipamentos, mão de obra, frete, montagem, taxa e impostos; solicita certificado de seguro, condições de sinal e cancelamento.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Informa propostas até 01/02/2027, decisão em 12/02/2027 e critérios de avaliação explicitamente propostos para confirmação.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações ausentes e condiciona cálculos às datas ainda não confirmadas.\"}]}"
+}

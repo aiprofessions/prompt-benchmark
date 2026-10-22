@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-intake-conflicts-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All six named persons/entities are listed, each with a role."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags lien deadlines for urgent attorney review without asserting a specific limitations or response period; the 20-day notice is a notice name."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "States no attorney-client relationship, firm has not agreed to represent, and no legal advice; the deadline caution is generic."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Requests the contract, payment proof, recorded lien, and the Example Home Bank letter."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Under 120 words and neutral, but calls Example Home Bank a 'mortgage lender', which the message never states (it says only 'lender')."
+  }
+ ]
+}

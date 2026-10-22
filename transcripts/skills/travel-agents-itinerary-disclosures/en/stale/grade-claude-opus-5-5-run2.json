@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:13+00:00",
+ "attempt": 1,
+ "skill_sha256": "5b150c8c5aec468562a22966d7c68720b3d2fb3485be4956fdf732f5f054fe78",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers all eight dates, assigns four Rome and three Florence nights, explicitly transfers June 18, and excludes self-driving."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Allergy checks and afternoon downtime are explicit, but Colosseum plus Forum and Pantheon plus Trevi exceed one major sight per day."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduces the supplied booking terms verbatim and adds no additional payment, cancellation, or insurance terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Prices, opening hours, train schedules, and age restrictions are consistently marked for confirmation rather than asserted as facts."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Concludes with a to-book/to-confirm checklist and directs passport, visa, and entry checks to official government sources."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers all eight dates, assigns four Rome and three Florence nights, explicitly transfers June 18, and excludes self-driving.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Allergy checks and afternoon downtime are explicit, but Colosseum plus Forum and Pantheon plus Trevi exceed one major sight per day.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduces the supplied booking terms verbatim and adds no additional payment, cancellation, or insurance terms.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Prices, opening hours, train schedules, and age restrictions are consistently marked for confirmation rather than asserted as facts.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Concludes with a to-book/to-confirm checklist and directs passport, visa, and entry checks to official government sources.\"}]}"
+}

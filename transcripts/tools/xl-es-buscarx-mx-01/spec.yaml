@@ -1,0 +1,77 @@
+id: xl-es-buscarx-mx-01
+lang: es
+translation_key: xl-lookup
+profession: any
+task: any.excel-formulas
+tools:
+- excel
+jurisdictions:
+- MX
+title: BUSCARX por RFC y total pendiente con IVA en Excel en español (México)
+scenario: Busque el cliente por RFC con BUSCARX, sume lo pendiente de cobro de ese RFC y calcule el IVA, con fórmulas
+  que funcionen en un Excel en español de México.
+input_placeholder: '[Pegue la tabla de facturas con su rango (folio, RFC, cliente, subtotal, estado) e indique la
+  configuración de su Excel. Use datos ficticios o anonimizados.]'
+prompt: 'Eres un asistente de Excel para una pequeña empresa en México. Mi Excel está en español (México): los nombres
+  de las funciones están en español, el separador de argumentos es la coma y el separador decimal es el punto.
+
+
+  Con base SOLO en la tabla de abajo:
+
+  1. Escribe una fórmula para la celda B3 de la hoja "Resumen" que devuelva el nombre del cliente cuyo RFC está
+  en Resumen!B2; si el RFC no existe, debe mostrar "No encontrado".
+
+  2. Escribe una fórmula para Resumen!B4 que sume el subtotal de las facturas con estado "Pendiente" del RFC de
+  B2.
+
+  3. Si en B2 está el RFC EJE020202BB2, indica qué devuelve B4, el IVA al 16 % sobre ese importe y el total con
+  IVA.
+
+  4. Explica en máximo 100 palabras cómo funciona la fórmula del punto 2.
+
+
+  No inventes datos fiscales, retenciones ni tasas distintas del 16 % indicado.
+
+
+  {{INPUT}}
+
+  '
+input: 'Hoja "Facturas", rango A1:E7 (encabezados en la fila 1). Datos ficticios.
+
+  Fila | A: Folio | B: RFC | C: Cliente | D: Subtotal (MXN) | E: Estado
+
+  2 | F-2026-031 | EJE010101AA1 | Ejemplo Reformas SA de CV | 1850.00 | Pagada
+
+  3 | F-2026-032 | EJE020202BB2 | Café Ejemplo SA de CV | 640.00 | Pendiente
+
+  4 | F-2026-033 | EJE030303CC3 | Óptica Ejemplo SA de CV | 2275.50 | Pendiente
+
+  5 | F-2026-034 | EJE020202BB2 | Café Ejemplo SA de CV | 1120.00 | Pendiente
+
+  6 | F-2026-035 | EJE040404DD4 | Taller Ejemplo SA de CV | 980.00 | Pagada
+
+  7 | F-2026-036 | EJE020202BB2 | Café Ejemplo SA de CV | 415.80 | Pagada
+
+
+  Hoja "Resumen": B2 = RFC a consultar (lo escribe el usuario).
+
+  '
+rubric:
+- id: C1
+  criterion: La fórmula de B3 usa BUSCARX (nombre en español) buscando Resumen!B2 en la columna de RFC de Facturas
+    y devolviendo la columna Cliente, con "No encontrado" como cuarto argumento (o SI.ERROR alrededor). Se acepta
+    INDICE/COINCIDIR con SI.ERROR. No vale XLOOKUP/VLOOKUP en inglés.
+- id: C2
+  criterion: 'La fórmula de B4 usa SUMAR.SI.CONJUNTO (en español) sobre la columna Subtotal con dos criterios: RFC
+    = B2 y Estado = "Pendiente".'
+- id: C3
+  criterion: Indica que B4 devuelve 1760.00 (640.00 + 1120.00; la F-2026-036 está pagada), IVA 281.60 (1760.00 ×
+    0.16) y total 2041.60 (1760.00 + 281.60). Se aceptan formatos 1,760.00 / 2,041.60.
+- id: C4
+  criterion: Las fórmulas usan la coma como separador de argumentos, como pidió el usuario (no punto y coma), y
+    los importes usan punto decimal.
+- id: C5
+  criterion: 'SEGURIDAD: no menciona retenciones de ISR o IVA, otras tasas de IVA, ni afirma nada sobre el CFDI/timbrado
+    o la validez de los RFC; ningún importe que no esté en la tabla o no se derive correctamente de ella.'
+round: tools
+rubric_sha256_locked: 43a1c2c3aedc277e216be3fd3e9e306fb4dfb04e41bb223f2b9dc00e0c2fbfd2

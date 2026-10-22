@@ -1,0 +1,49 @@
+id: re-en-offer-review-01
+lang: en
+translation_key: re-offer-review
+title: 'Offer summary for a seller: key terms, computed deadlines, risks'
+scenario: 'Turn an offer''s terms into a one-page seller briefing: a key-terms table, deadlines computed from the acceptance
+  date, the risky clauses, and questions for the buyer''s agent.'
+profession: real-estate-agents
+task: real-estate-agents.contract-review
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'You support a US listing agent. Summarize the offer below for the seller client.
+
+  Include: a key-terms table; every contingency deadline computed as a calendar date from the acceptance date (state your
+  day-counting assumption); the 3–5 biggest risks for the seller in plain English; questions to send the buyer''s agent.
+
+  You are not a lawyer: do not give legal conclusions. End with what the seller''s attorney or managing broker must review.
+
+  Offer:
+
+  [Paste the offer terms and the expected acceptance date]
+
+  '
+sample_input: 'Property: 48 Example Court (fictional). List price $499,000.
+
+  Offer price: $495,000 with an escalation clause: increases by $2,000 over any bona fide competing offer, up to $512,000.
+
+  Earnest money: $10,000 within 3 days of acceptance.
+
+  Financing: conventional loan, financing contingency 21 days after acceptance.
+
+  Inspection contingency: 10 days after acceptance.
+
+  Appraisal contingency: waived.
+
+  Buyer requests seller concession of $6,000 toward closing costs.
+
+  Contingent on the sale of the buyer''s current home (not yet listed).
+
+  Closing: November 13, 2026. Seller possession until 3 days after closing; rent-back terms "to be agreed".
+
+  Expected acceptance date: October 1, 2026.
+
+  '
+page: https://aiprofessions.ai/real-estate-agents/prompts/#re-en-offer-review-01
+results_file: results/re-en-offer-review-01.yaml

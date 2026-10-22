@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-fr",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:30:18+00:00",
+ "attempt": 1,
+ "skill_sha256": "fcf6f6bd58100350217913780a449c429429893361c0bd7e020b5ec78fb5b992",
+ "rubric_sha256": "e115806a7c26228bf311ae90494110ac918c84a4f2f53d61d90fb44083c90ba2",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "L’annonce portail et le texte destiné aux réseaux sociaux respectent les limites de mots, avec la tolérance autorisée."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Les caractéristiques et le conflit de surface sont repris, mais la qualification « loi Carrez » est explicitement retirée de l’annonce."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L’annonce contient toutes les mentions demandées : DPE F, consommation excessive, Géorisques, prix, honoraires et informations de copropriété."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les ciblages sont supprimés avec explication des critères discriminatoires concernés ; les trois allégations sont supprimées et motivées."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "La liste « Supprimé ou modifié » fournit les motifs et recommande explicitement la validation par le responsable de l’agence avant publication."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"L’annonce portail et le texte destiné aux réseaux sociaux respectent les limites de mots, avec la tolérance autorisée.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Les caractéristiques et le conflit de surface sont repris, mais la qualification « loi Carrez » est explicitement retirée de l’annonce.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"L’annonce contient toutes les mentions demandées : DPE F, consommation excessive, Géorisques, prix, honoraires et informations de copropriété.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Les ciblages sont supprimés avec explication des critères discriminatoires concernés ; les trois allégations sont supprimées et motivées.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"La liste « Supprimé ou modifié » fournit les motifs et recommande explicitement la validation par le responsable de l’agence avant publication.\"}]}"
+}

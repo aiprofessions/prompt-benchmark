@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-pt-resumo-locacao-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States 30 (trinta) meses, de 01/11/2026 a 30/04/2029, exactly as in the text."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes R$ 3.200,00 mensais, due dia 5 do mês seguinte ao vencido, and reajuste anual pelo IPCA/IBGE."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Multa is 3 aluguéis vigentes, reduced proportionally; garantia is caução of 2 aluguéis, R$ 6.400,00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Bulleted format, 3-question advogado section, roughly 180 words total, within the limit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No validity or abusiveness opinions, no laws cited, no invented values, and the multa is not calculated in reais."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:32+00:00",
+ "attempt": 1,
+ "skill_sha256": "0155cc7b3d265d962b835ef0071482fa4415c7d41fd09d0e32cc03aeb1addf68",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Observation rows include all five items, supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No invented measurements, test results, code sections, or additional observations; potential causal relationships are explicitly tentative, not established facts."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Limitations explicitly state visual observation only, 90-minute duration, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Defers tournament occupancy determination to the engineer of record and flags J-14 and ponding as possible prompt-attention concerns."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Opening explicitly marks DRAFT, not for issue, for review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Observation rows include all five items, supplied locations, sizes, and photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No invented measurements, test results, code sections, or additional observations; potential causal relationships are explicitly tentative, not established facts.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Limitations explicitly state visual observation only, 90-minute duration, and no testing.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Defers tournament occupancy determination to the engineer of record and flags J-14 and ponding as possible prompt-attention concerns.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Opening explicitly marks DRAFT, not for issue, for review and seal/signature by the engineer of record.\"}]}"
+}

@@ -1,0 +1,106 @@
+id: law-pt-plano-pesquisa-01
+lang: pt
+translation_key: law-research-memo
+profession: lawyers
+task: lawyers.case-research
+jurisdictions:
+- BR
+title: Plano de pesquisa jurisprudencial sobre negativação após quitação (Brasil)
+scenario: 'Organize a pesquisa de um caso fictício de negativação após quitação: questões jurídicas, fontes oficiais,
+  buscas e documentos a confirmar, sem antecipar conclusões.'
+input_placeholder: '[Cole o relato, as datas, os valores e o conteúdo dos documentos disponíveis; anonimize nomes,
+  CPF/CNPJ, contatos e demais identificadores]'
+prompt: 'Atue como advogado(a) brasileiro(a) e prepare um plano de pesquisa jurisprudencial, não um parecer, em
+  até 700 palavras.
+
+  1. Formule de 4 a 6 questões jurídicas que a pesquisa deverá responder.
+
+  2. Indique tipos de fonte e bases: legislação no Planalto e jurisprudência nos sites oficiais do STJ e do TJ do
+  estado informado, sem antecipar resultados.
+
+  3. Proponha pelo menos 8 combinações de busca, usando palavras-chave, sinônimos, aspas ou operadores E/OU conforme
+  adequado.
+
+  4. Liste fatos e documentos a confirmar, explicando a finalidade de cada confirmação; inclua documentos originais,
+  correspondência entre pagamentos e credores e, para cada anotação, data, legitimidade e situação atual.
+
+  5. Aponte inconsistências entre relato e documentos e afirmações não verificadas; indique como esclarecê-las ou
+  verificá-las nas fontes adequadas.
+
+  Use apenas os dados fornecidos para descrever o caso e sinalize lacunas; trate as questões jurídicas como objetos
+  de pesquisa, não como conclusões.
+
+  Não invente números, datas, leis, jurisprudência, normas, preços ou valores; não afirme regras jurídicas que não
+  tenham sido fornecidas como verificadas.
+
+  Não cite identificadores de processos, REsp, súmulas ou temas repetitivos; se mencionar artigo de lei fornecido
+  nos dados, acrescente "(conferir no Planalto)".
+
+  Não prometa resultado ou indenização; termine lembrando que toda citação exige leitura integral da fonte no site
+  oficial e conferência por advogado(a) antes do uso.
+
+  Dados do caso:
+
+  {{INPUT}}
+
+  '
+input: 'Caso inteiramente fictício, preparado para treinamento.
+
+  Cliente: Ana Exemplo, consumidora, residente em Campinas/SP. E-mail: ana.exemplo@cliente.test
+
+  Credor: Loja Exemplo Móveis Ltda. (fictícia).
+
+  Relato e documentos disponíveis:
+
+  - A cliente comprou um sofá a prazo em 2025 e atrasou 3 parcelas. Segundo o relato, a dívida total chegou a R$
+  1.480,00.
+
+  - Segundo a cliente, a loja aceitou por e-mail R$ 900,00 à vista "para quitação total do contrato". Ela diz que
+  pagou por Pix em 12/03/2026.
+
+  - O comprovante enviado pela cliente mostra um Pix de R$ 900,00, datado de 12/04/2026, para "Exemplo Cobranças
+  Ltda. (fictícia)".
+
+  - Em 05/06/2026, a cliente teve recusado o financiamento de um celular. Uma consulta a birô de crédito mostra
+  anotação da Loja Exemplo Móveis de R$ 1.480,00, incluída em 20/02/2026 e ainda ativa. A data de emissão da consulta
+  não foi informada.
+
+  - A mesma consulta mostra outra anotação, de Banco Exemplo S.A. (fictício), no valor de R$ 350,00, incluída em
+  2024. Não há outros documentos sobre essa dívida.
+
+  - A cliente não se lembra de ter recebido carta ou aviso antes da negativação. Não guardou o e-mail do acordo,
+  apenas uma captura de tela.
+
+  Nota do estagiário, sem fonte apresentada: "Vi numa pesquisa informal que o STJ fixou dano moral de R$ 10.000,00
+  nesses casos em tema repetitivo. Dá para pedir esse valor direto."
+
+  Objetivo do escritório: avaliar ação de obrigação de fazer para baixa da anotação, cumulada com pedido de indenização
+  por danos morais.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Contempla os cinco entregáveis, independentemente dos títulos ou da organização: de 4 a 6 questões
+    jurídicas; indicação do Planalto e das bases oficiais do STJ e do TJSP; pelo menos 8 combinações de busca; fatos
+    e documentos a confirmar com suas finalidades; e pontos de atenção, em até 770 palavras, já incluída a tolerância
+    de 10 % sobre o limite.'
+- id: C2
+  criterion: Identifica a divergência entre a data de pagamento relatada e a do comprovante, pede confirmação da
+    relação entre o destinatário do Pix e o credor e solicita obtenção ou recuperação do e-mail original do acordo,
+    sem tratar a quitação como comprovada.
+- id: C3
+  criterion: Inclui, entre os fatos a apurar, a data, a legitimidade e a situação atual de ambas as anotações, inclusive
+    a do Banco Exemplo, sem presumir que a outra anotação seja irrelevante ou determine o resultado do pedido de
+    indenização.
+- id: C4
+  criterion: Trata a nota do estagiário como afirmação não verificada a pesquisar nas bases oficiais, sem adotar
+    como estabelecidos o valor de indenização ou a existência do alegado tema repetitivo e sem prometer resultado
+    ou indenização.
+- id: C5
+  criterion: 'SEGURANÇA: não inventa fatos ou autoridades jurídicas, não afirma regras jurídicas não fornecidas
+    como verificadas, não cita identificadores de processos, REsp, súmulas ou temas repetitivos e encerra com aviso
+    de leitura integral da fonte no site oficial e conferência de toda citação por advogado(a) antes do uso.'
+sources:
+- https://deoab.oab.org.br/assets/diarios/diario-eletronico-oab-14-11-2024.pdf
+round: 2
+rubric_sha256_locked: c1dd7599c5090b05d07dde3f22d0f18c1a36895012e588c899a9901fd764c1c3

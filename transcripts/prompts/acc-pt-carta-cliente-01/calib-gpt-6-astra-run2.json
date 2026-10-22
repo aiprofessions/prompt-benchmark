@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-pt-carta-cliente-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Solicita exatamente as três notas válidas, com números e fornecedores corretos, sem pedir a nota cancelada nº 377."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Solicita todos os documentos e períodos exigidos e informa 05/11/2026 como prazo interno, explicando conferência dos pontos e lançamento antes do fechamento."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Indica exclusivamente o portal correto e proíbe enviar senha gov.br ou certificado por WhatsApp ou e-mail, sem solicitar credenciais nem reproduzir senha."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não inventa informações nem promete resultados; exclui a multa do e-mail e sinaliza sua falta de verificação, exposição de credenciais e revisão obrigatória."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Apresenta assunto, corpo em português brasileiro com tratamento por você e notas separadas, ambos dentro dos limites de palavras."
+  }
+ ]
+}

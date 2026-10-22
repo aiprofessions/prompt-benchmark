@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-en-schedule-delay-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Baseline critical path A-B-D-F-G with total duration 40 working days."
+  },
+  {
+   "id": "C2",
+   "criterion": "Baseline finish = Friday, December 25, 2026 (40th working day from Nov 2, Mon–Fri, no holidays) — or the output explicitly flags that holidays would change it while still computing the Mon–Fri date."
+  },
+  {
+   "id": "C3",
+   "criterion": "Correctly concludes the C delay (14 days) does NOT change the finish date because C had float (delayed C ends day 19; F cannot start before day 31 anyway because D ends day 30)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Reports float: C has 19 working days baseline (11 after the delay) and E has 3 days."
+  },
+  {
+   "id": "C5",
+   "criterion": "Shows work in a table and makes no assumptions beyond the data."
+  }
+ ],
+ "rubric_sha256": "e59f0c0aad4cc1ee7d5e395a7a988aab8e3b71ba7026d93fcffd1076eea689d5",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path and sums its duration to 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States baseline finish is day 40, Friday, December 25, 2026, using the specified no-holidays calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C finishes day 19; D finishes day 30, keeping F at day 31 and project slip at zero."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C total float as 19 working days baseline and 11 after delay, and E float as 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed scheduling tables with forward and backward calculations, using only supplied dependencies and the specified calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path totaling 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reports Friday, December 25, 2026 as day 40 and correctly treats Christmas as working under the no-holidays instruction."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C finishes day 19; D finishes day 30, keeping F at day 31 and project slip at zero."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lists C float as 19 working days baseline and 11 after delay, and E float as 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a schedule table with ES, EF, LS, LF, dates, and float, without introducing resource or calendar assumptions."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path with a total duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the baseline finish is Friday, December 25, 2026, day 40, using the specified no-holidays calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19; D ends day 30, keeping F's start at day 31 and project slip at zero."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C's baseline float as 19 working days, reduced to 11 after delay, and E's float as 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed tables with durations, dependencies, early and late dates, and float, without imposing additional resource or calendar assumptions."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path, totaling 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly gives Friday, December 25, 2026 as baseline finish, day 40, using weekdays with no holidays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19; D ends day 30 and controls F's day 31 start. Finish remains unchanged with zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float as 19 baseline and 11 delayed; explicitly corrects E's initial error to 3 days in both scenarios."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed early-start/finish tables and float tables, using only the supplied dependencies and Monday–Friday calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies A-B-D-F-G as the baseline critical path and correctly sums its duration to 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly gives baseline finish as Friday, December 25, 2026, day 40 under the specified calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Correctly reports delayed C finishing day 19, D gating F until day 31, unchanged project finish, and zero working-day slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C's baseline float as 19 working days and remaining float as 11; E has 3 days in both schedules."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Shows baseline and delayed schedules plus backward-pass calculations in tables, using only the supplied dependencies and Monday–Friday, no-holidays calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies baseline critical path A-B-D-F-G and total duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly states baseline finish is Friday, December 25, 2026, the 40th working day."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19; D ends day 30 and controls F starting day 31. Finish remains unchanged with zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float as 19 working days baseline and 11 after delay, and E float as 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed schedule tables with early and late dates and float, using only supplied dependencies and Monday–Friday calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies critical path A→B→D→F→G totaling 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Baseline finish Friday, December 25, 2026, explicitly counted as a working day under the no-holiday calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19, F still starts day 31 after D ends day 30; slip is 0."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float 19 baseline and 11 revised; E float 3."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Work shown in tables; no resources or calendars assumed beyond the given data."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies critical path A→B→D→F→G with total duration 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Baseline finish is Friday, December 25, 2026; output notes it is a working day since no holidays are given."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19, F still starts day 31 because D ends day 30, and slip is 0 days."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float of 19 days baseline and 11 after delay, and E float of 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Plain-text tabular schedules show the work; no assumptions about resources or calendars beyond the data."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "States critical path A→B→D→F→G with 5+10+15+8+2 = 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Baseline finish given as Friday, December 25, 2026, day 40; dates verified correct under Mon–Fri, no holidays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C ends day 19; F still starts day 31 since D ends day 30; slip 0, finish unchanged."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "C float 19 baseline, 11 after delay; E float 3 days; backward pass values correct."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Work shown in forward- and backward-pass tables; no resource or calendar assumptions beyond given data."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path with a duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reports baseline finish as Friday, December 25, 2026, counting December 25 as a working day under the specified calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reports zero slip; delayed C finishes day 19, while D finishes day 30 and governs F's day 31 start."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float of 19 working days baseline and 11 after delay, with E float of 3 days throughout."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed schedule tables using the given dependencies and calendar; the hypothetical holiday is explicitly not applied."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path with a total duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly reports baseline finish as Friday, December 25, 2026, day 40 under the stated no-holidays calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Delayed C finishes day 19; D finishes day 30, leaving F starting day 31 and project finish unchanged with zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float of 19 working days baseline and 11 after delay, and E float of 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Shows schedule tables, but asserts a real calendar would finish December 28, introducing an unsupported holiday-calendar assumption."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Identifies A-B-D-F-G as the baseline critical path and correctly totals its duration as 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly states baseline finish is Friday, December 25, 2026, counting that date as working because no holidays were given."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Shows delayed C finishing day 19, D finishing day 30, and F starting day 31; reports unchanged finish and zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float of 19 working days baseline and 11 after delay, and E float of 3 days in both schedules."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed schedule tables with early starts, finishes, and float, using only the specified dependencies and working-day calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies baseline critical path A-B-D-F-G and calculates its duration as 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States baseline finish as Friday, December 25, 2026, day 40, using Monday–Friday with no holidays."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Reports unchanged finish and zero slip; delayed C ends day 19, while D ends day 30 and gates F's day-31 start."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float as 19 working days baseline and 11 after delay, and E float as 3 days throughout."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and revised calculation tables with early and late dates and float, without adding resource or calendar assumptions."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path with a total duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Reports the baseline finish as Friday, December 25, 2026, working day 40."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Shows delayed C finishing day 19, D finishing day 30, and F starting day 31; finish remains unchanged with zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float as 19 working days baseline and 11 after delay, and E float as 3 days."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and recomputed tables with early and late dates and float, using only the supplied dependencies and working calendar."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Explicitly identifies A-B-D-F-G as the baseline critical path with a total duration of 40 working days."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "States the baseline finish is Friday, December 25, 2026, working day 40 under the specified calendar."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Shows delayed C finishing day 19, D finishing day 30, and F starting day 31; reports unchanged finish and zero slip."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Reports C float of 19 working days baseline and 11 after delay, and E float of 3 days in both schedules."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides baseline and delayed calculation tables using the given dependencies and Monday–Friday calendar without holidays or additional resource assumptions."
+    }
+   ],
+   "transcript": "prompts/cm-en-schedule-delay-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

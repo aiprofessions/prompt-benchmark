@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:50:46+00:00",
+ "attempt": 1,
+ "skill_sha256": "e44ff2e1596842c06a940bb6f03e6272f621c592a3014738e44a9beb4e74e036",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and limits permitted recipients to those needing to know and bound by written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Replaces the two-year term with five years and continues trade-secret obligations for as long as information remains a trade secret."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags the prohibited non-solicitation clause and replaces §8 with an intentional omission."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but expressly declines to treat all of §10 as compliant, leaving forum selection unassessed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Presents a draft for attorney review, disclaims legal advice, defers judgment calls to supervising counsel, and invents no authorities or citations."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and limits permitted recipients to those needing to know and bound by written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Replaces the two-year term with five years and continues trade-secret obligations for as long as information remains a trade secret.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags the prohibited non-solicitation clause and replaces §8 with an intentional omission.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but expressly declines to treat all of §10 as compliant, leaving forum selection unassessed.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Presents a draft for attorney review, disclaims legal advice, defers judgment calls to supervising counsel, and invents no authorities or citations.\"}]}"
+}

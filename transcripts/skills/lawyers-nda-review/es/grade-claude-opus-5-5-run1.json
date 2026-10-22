@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:14:57+00:00",
+ "attempt": 1,
+ "skill_sha256": "847a96e024d16caafb59caa3272aab8125ac95dc2d04802359674fe546f585e7",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Señala la Cl. 3 y propone uso exclusivo para el Propósito de evaluar una integración tecnológica."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala la Cl. 5 y propone tres años, con confidencialidad de secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala la Cl. 8 y propone devolver o destruir información y copias a solicitud de la Reveladora, con constancia escrita."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ambas previsiones como no localizadas y declara conformes las Cl. 1 y 7, sin proponer modificaciones."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Presenta un borrador para revisión, no inventa autoridades jurídicas y reserva al abogado responsable las decisiones de criterio y aprobación."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Señala la Cl. 3 y propone uso exclusivo para el Propósito de evaluar una integración tecnológica.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Señala la Cl. 5 y propone tres años, con confidencialidad de secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala la Cl. 8 y propone devolver o destruir información y copias a solicitud de la Reveladora, con constancia escrita.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ambas previsiones como no localizadas y declara conformes las Cl. 1 y 7, sin proponer modificaciones.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Presenta un borrador para revisión, no inventa autoridades jurídicas y reserva al abogado responsable las decisiones de criterio y aprobación.\"}]}"
+}

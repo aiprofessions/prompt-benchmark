@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:54:28+00:00",
+ "attempt": 1,
+ "skill_sha256": "77f862444a2cbbb0209de127f8b0f5d5ddba63b4db0f5efa120a1e89131559eb",
+ "rubric_sha256": "bf7fef2700a801368eccbe2ac3e90173e94335bcf1cc2c57ef3aad0dba1cb8d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tableau conforme : maçons 6, coffreurs 4, électriciens 2, manœuvres 3, total 15 ; averses jusqu’à 11h00 et 12 °C."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Report du coulage du plancher haut R+1 du bâtiment B pour pluie, reprogrammé au 21/10/2026, sans durée de retard inventée."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Demande orale à 10h40, décalage de 40 cm, absence d’ordre écrit, échéance au 03/11/2026 et brouillon demandant un ordre écrit à valider."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Garde-corps manquant à 14h15, zone balisée, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont consignés."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun coût, délai, activité ou personne inventé ; informations manquantes signalées et hypothèse de décompte explicitée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tableau conforme : maçons 6, coffreurs 4, électriciens 2, manœuvres 3, total 15 ; averses jusqu’à 11h00 et 12 °C.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Report du coulage du plancher haut R+1 du bâtiment B pour pluie, reprogrammé au 21/10/2026, sans durée de retard inventée.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Demande orale à 10h40, décalage de 40 cm, absence d’ordre écrit, échéance au 03/11/2026 et brouillon demandant un ordre écrit à valider.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Garde-corps manquant à 14h15, zone balisée, repose à 15h00 et quart d’heure sécurité sur le travail en hauteur sont consignés.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun coût, délai, activité ou personne inventé ; informations manquantes signalées et hypothèse de décompte explicitée.\"}]}"
+}

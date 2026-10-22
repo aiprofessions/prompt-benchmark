@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:43+00:00",
+ "attempt": 1,
+ "skill_sha256": "e44ff2e1596842c06a940bb6f03e6272f621c592a3014738e44a9beb4e74e036",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and proposes Representatives-only disclosure with need-to-know limits and written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §5 and replaces two years with five years, protecting trade secrets for as long as they remain trade secrets."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags §8 as contrary to the playbook and proposes deleting it in its entirety."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but explicitly declines to treat §10 as fully compliant, leaving exclusive jurisdiction unassessed."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Contains no invented authorities, expressly labels the output a draft rather than legal advice, and reserves judgment calls for supervising counsel."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and proposes Representatives-only disclosure with need-to-know limits and written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags §5 and replaces two years with five years, protecting trade secrets for as long as they remain trade secrets.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags §8 as contrary to the playbook and proposes deleting it in its entirety.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but explicitly declines to treat §10 as fully compliant, leaving exclusive jurisdiction unassessed.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Contains no invented authorities, expressly labels the output a draft rather than legal advice, and reserves judgment calls for supervising counsel.\"}]}"
+}

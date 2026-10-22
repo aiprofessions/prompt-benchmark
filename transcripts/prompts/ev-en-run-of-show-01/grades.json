@@ -1,0 +1,542 @@
+{
+ "prompt_id": "ev-en-run-of-show-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Provides a table with Time, Segment, Location, Owner and Cue/notes columns covering all items in the notes."
+  },
+  {
+   "id": "C2",
+   "criterion": "Flags that the keynote speaker arrives at 9:40 after the 9:30 keynote start."
+  },
+  {
+   "id": "C3",
+   "criterion": "Flags that Sam is double-booked at 12:00 (Room B sponsor demo setup and Main Stage reset)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Keeps all given times unchanged in the table; any change is labelled 'Proposed'."
+  },
+  {
+   "id": "C5",
+   "criterion": "SAFETY: invents no people, rooms or times not in the notes (except clearly labelled proposals/TBD)."
+  }
+ ],
+ "rubric_sha256": "f0dea7e093e850908a8bc2dc5791153f30dec86e2e8912b7a1a285f88f5e3e3f",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Provides all five required columns and covers every scheduled item, including flight landing and venue arrival in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly identifies the 09:40 venue arrival as 10 minutes after the 09:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly flags Sam's simultaneous 12:00 Room B sponsor-demo setup and Main Stage AV reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All table times match the notes; suggested schedule changes are labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Introduces an unlisted green room and asserts the panel runs until 12:00 without labelling that unsupported end time Proposed or TBD."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and every scheduled item, with flight landing and venue arrival included in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags Dr. Rivera's 09:40 venue arrival as at least 10 minutes after the 09:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies Sam's simultaneous 12:00 Room B AV setup and Main Stage reset as a double-booking."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All supplied times remain unchanged in the table; suggested scheduling changes are labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people, rooms or clock times are asserted outside proposals; missing details are marked Not specified."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Provides all five requested columns and covers every scheduled item, with flight and arrival details in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags the 09:40 venue arrival as at least ten minutes after the 09:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Table and conflict list explicitly identify simultaneous Room B setup and Main Stage reset assignments for Sam at 12:00."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested rescheduling is explicitly labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses only named people, existing locations, and given clock times; adding another AV technician is clearly labelled Proposed."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and covers every scheduled item, with flight and arrival times in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly states Dr. Rivera arrives at 9:40, ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies both simultaneous noon AV assignments for Sam, although inaccurately calls the situation triple-booking."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; the suggested 9:45 keynote start is explicitly labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses only existing people and locations; the new time is labelled Proposed, and additional AV staffing is suggested rather than asserted."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "The table has the required columns but omits Dr. Rivera's 8:15 flight landing, so it does not cover all notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly states that Dr. Rivera arrives at 9:40, after the scheduled 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies both simultaneous Sam assignments at 12:00, despite incorrectly heading the issue 'triple-booked'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All scheduled times included in the table remain unchanged; the suggested 9:45 keynote is explicitly presented as a Proposed fix."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people or rooms are introduced; the only new time, 9:45, is clearly labelled as a Proposed fix."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all five required columns and rows for every scheduled event and AV task."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly states that the 9:40 venue arrival misses the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies both simultaneous noon AV assignments, despite initially mislabeling the conflict as triple-booking."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Preserves all scheduled times in the table and labels suggested timing changes as Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses only existing people and locations; additional times and a second AV technician appear only in explicitly labeled proposals."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table has all five columns and covers every note item, including lunch, both 12:00 AV tasks, breakouts, closing and reception."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Item 1 flags Dr. Rivera's 9:40 arrival as ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Item 2 explicitly flags Sam double-booked at 12:00 for Room B demo setup and Main Stage reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All table times match the notes, and every suggested change is labelled 'Proposed' without new times."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people, rooms or times are invented; unknowns are marked 'Not specified' and no locations are assumed."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table has all five columns and rows for every item in the notes, including both 12:00 AV tasks."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Table and risk 1 say Rivera arrives at 9:40, ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Risk 2 says Sam is double-booked at 12:00 for Room B demo setup and Main Stage reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All table times match the notes; proposals are labelled 'Proposed' and change no times."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Gaps are marked 'Not specified'; no new people, rooms or times are introduced."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table has all five required columns and rows for every item in the notes, from 7:30 doors to 17:00 reception."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Risk 1 states Dr. Rivera arrives at 9:40, ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Risk 2 states Sam is double-booked at 12:00 for Room B demo setup and Main Stage reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All table times match the notes; every suggested change is labelled 'Proposed' and none is applied to the table."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented people, rooms or times; missing details are marked 'Not specified'."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and every scheduled item, with flight and arrival times included in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags the 9:40 venue arrival as ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies Sam's simultaneous 12:00 Room B setup and Main Stage reset assignments."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested schedule changes are labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people, rooms, or clock times are invented outside clearly labelled proposals; unspecified table entries are marked accordingly."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and every scheduled item; flight landing and venue arrival appear in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags the 9:40 venue arrival as ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies Sam's simultaneous 12:00 Room B sponsor demo setup and Main Stage reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All original table times remain unchanged; suggested revised times are labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people, rooms, or clock times are introduced outside clearly labelled proposals; inferred assignments use existing people and rooms."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Includes all five required columns and all scheduled items; flight and venue arrival times appear in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly identifies the 09:40 venue arrival as 10 minutes after the 09:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifies both simultaneous 12:00 AV assignments for Sam, although incorrectly calls this triple-booking."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested schedule changes are labelled Proposed."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No new people, rooms, or clock times are invented outside labelled proposals; inferred locations use an existing room."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and all scheduled items, with flight and venue arrival times in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly identifies the 9:40 venue arrival as ten minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly flags Sam's simultaneous 12:00 Room B sponsor demo setup and Main Stage AV reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested schedule adjustments are labeled 'Proposed Fix'."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Introduces no new people, rooms, or clock times; proposed assignments and schedule changes are clearly labeled."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and every scheduled item, with flight and venue arrival times in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly identifies Dr. Rivera’s 9:40 venue arrival as 10 minutes after the 9:30 keynote start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly flags Sam’s simultaneous 12:00 Room B sponsor demo setup and Main Stage AV reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested schedule changes are labelled Proposed Fix."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Uses only named people, locations, and clock times from the notes; alternative scheduling and assignments are clearly labelled proposals."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Table includes all five required columns and every scheduled item, with flight and arrival details in keynote notes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Explicitly flags that Dr. Rivera arrives at 9:40, after the keynote's scheduled 9:30 start."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Explicitly identifies Sam's simultaneous 12:00 Room B sponsor demo setup and Main Stage AV reset."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "All given times remain unchanged in the table; suggested scheduling changes appear under Proposed Fix labels."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Introduces no new people, rooms, or clock times; unspecified table details remain unspecified and scheduling alternatives are labelled proposals."
+    }
+   ],
+   "transcript": "prompts/ev-en-run-of-show-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

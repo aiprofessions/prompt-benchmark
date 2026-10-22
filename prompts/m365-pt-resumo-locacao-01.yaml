@@ -1,0 +1,60 @@
+id: m365-pt-resumo-locacao-01
+lang: pt
+translation_key: m365-lease-summary
+title: Resumo de contrato de locação comercial no Word, com valores exatos
+scenario: Resuma em tópicos um contrato de locação comercial (prazo, aluguel, reajuste, multa, garantia) com os valores exatos
+  do texto e sem dar parecer jurídico.
+profession: any
+task: any.document-summary
+tools:
+- microsoft-365
+model: claude
+tested_with: claude-sonnet-5
+tested_date: '2026-10-20'
+jurisdictions:
+- BR
+prompt: 'Você ajuda um gestor a entender um contrato antes de levá-lo ao advogado. Com base SOMENTE nas cláusulas abaixo,
+  faça um resumo em tópicos para colar num documento Word:
+
+  - partes, imóvel e finalidade;
+
+  - prazo (início e fim);
+
+  - aluguel, vencimento e reajuste;
+
+  - multa por rescisão antecipada;
+
+  - garantia.
+
+  Depois, uma seção "Perguntas para o advogado" com no máximo 3 itens.
+
+
+  Copie valores, datas e índices exatamente como no texto. Não dê parecer jurídico (não diga se uma cláusula é válida, abusiva
+  ou comum), não cite leis que não estejam no texto. Máximo 200 palavras no total.
+
+
+  [Cole as cláusulas do contrato. Substitua nomes de pessoas, CPF/CNPJ e endereços por dados fictícios antes de colar.]
+
+  '
+sample_input: 'CONTRATO DE LOCAÇÃO NÃO RESIDENCIAL (fictício)
+
+  Cláusula 1 — Partes: Locadora: Imobiliária Exemplo Ltda. Locatária: Café Exemplo Ltda.
+
+  Cláusula 2 — Imóvel: loja térrea na Rua Exemplo, 100, São Paulo/SP, destinada exclusivamente a cafeteria.
+
+  Cláusula 3 — Prazo: 30 (trinta) meses, de 01/11/2026 a 30/04/2029.
+
+  Cláusula 4 — Aluguel: R$ 3.200,00 (três mil e duzentos reais) mensais, vencendo todo dia 5 do mês seguinte ao vencido.
+
+  Cláusula 5 — Reajuste: anual, pelo IPCA/IBGE, a contar da data de início.
+
+  Cláusula 6 — Rescisão antecipada pela Locatária: multa equivalente a 3 (três) aluguéis vigentes, reduzida proporcionalmente
+  ao tempo de contrato já cumprido.
+
+  Cláusula 7 — Garantia: caução em dinheiro de 2 (dois) aluguéis, R$ 6.400,00, devolvida ao fim da locação após vistoria.
+
+  Cláusula 8 — Benfeitorias: dependem de autorização prévia e escrita da Locadora.
+
+  '
+page: https://aiprofessions.ai/pt/advogados/prompts/#m365-pt-resumo-locacao-01
+results_file: results/m365-pt-resumo-locacao-01.yaml

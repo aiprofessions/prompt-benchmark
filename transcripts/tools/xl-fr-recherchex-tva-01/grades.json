@@ -1,0 +1,542 @@
+{
+ "prompt_id": "xl-fr-recherchex-tva-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "La formule de E2 utilise RECHERCHEX (nom français) en deux étapes ou imbriquée : code article → code TVA (feuille Articles) → taux (feuille Taux), avec des plages figées ($) ou colonnes entières ; INDEX/EQUIV accepté. XLOOKUP/VLOOKUP en anglais = échec."
+  },
+  {
+   "id": "C2",
+   "criterion": "Les formules utilisent le point-virgule comme séparateur d'arguments (pas la virgule), et la TVA est arrondie au centime (ARRONDI(…;2))."
+  },
+  {
+   "id": "C3",
+   "criterion": "Valeurs ligne 2 : HT 220,80 (18,40 × 12), TVA 12,14 (220,80 × 5,5 % = 12,144), TTC 232,94."
+  },
+  {
+   "id": "C4",
+   "criterion": "Valeurs ligne 3 : HT 111,60 (27,90 × 4), TVA 22,32, TTC 133,92 ; ligne 4 : HT 145,00, TVA 14,50, TTC 159,50 ; montants écrits avec la virgule décimale."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ : n'affirme pas que tel produit relève légalement de tel taux (ni ne cite de texte fiscal) ; la note « À vérifier » renvoie la validation des taux à l'utilisateur ou à son expert-comptable ; aucun montant inventé."
+  }
+ ],
+ "rubric_sha256": "09a43241cc283546579b9f6941517efb5778d1ac3493814dcecbed11707135aa",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La formule utilise RECHERCHEV, alors que le critère exige RECHERCHEX ou INDEX/EQUIV."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 affiche HT 220,80 €, TVA 12,14 € et TTC 232,94 €, avec le calcul intermédiaire correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, écrits avec la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucun taux légal précis ni texte fiscal affirmé ; validation confiée à l’expert-comptable. Tous les montants proviennent des données et calculs."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "E2 imbrique deux RECHERCHEX reliant article, code TVA et taux, avec toutes les plages de recherche figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 affiche HT 220,80 €, TVA 12,14 € et TTC 232,94 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec des virgules décimales."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune qualification fiscale légale ni citation fiscale ; la note renvoie au comptable pour valider les taux. Les montants sont calculés correctement."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "E2 utilise deux RECHERCHEX imbriquées, du code article au code TVA puis au taux, avec toutes les plages figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 arrondit la TVA au centime avec ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique exactement HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec une virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune attribution légale ni citation fiscale ; la note renvoie la validation à l’expert-comptable. Tous les montants découlent des données fournies."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Utilise RECHERCHEV, non accepté par ce critère, et des références Articles.$… et Taux.$… incorrectes dans Excel."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique HT 220,80 €, TVA 12,14 € et TTC 232,94 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les montants des lignes 3 et 4 correspondent exactement aux valeurs attendues, avec virgules décimales."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aucune affirmation fiscale ni montant inventé, mais la note ne demande pas la validation des taux par l’utilisateur ou son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La formule utilise RECHERCHEV, alors que le critère exige RECHERCHEX ou INDEX/EQUIV."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique bien HT 220,80 €, TVA 12,14 € et TTC 232,94 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les montants des lignes 3 et 4 correspondent exactement aux valeurs attendues et utilisent la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aucune affirmation fiscale ni montant inventé, mais la note « À vérifier » ne demande pas la validation des taux par l’utilisateur ou son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La formule utilise RECHERCHEV, alors que le critère exige RECHERCHEX ou accepte INDEX/EQUIV."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 donne HT 220,80 €, TVA 12,14 € et TTC 232,94 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec une virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune affirmation juridique ni référence fiscale ; la note demande à l’utilisateur de confirmer le taux du traiteur. Aucun montant inventé."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses nested RECHERCHEV with fixed ranges; the criterion requires RECHERCHEX and accepts only INDEX/EQUIV as an alternative."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All formulas use semicolon separators; TVA is computed with ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Line 2 shows HT 220,80, TVA 12,14 and TTC 232,94, all correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lines 3 and 4 values are correct (111,60/22,32/133,92; 145,00/14,50/159,50) with decimal commas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "No legal claims, but the « À vérifier » note never refers rate validation to the user or an accountant."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Nested French lookup with $ ranges, but uses RECHERCHEV; criterion requires RECHERCHEX and accepts only INDEX/EQUIV as an alternative."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Every formula uses semicolon separators, and G2 uses ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Line 2 shows HT 220,80, TVA 12,14 and TTC 232,94, all correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Lines 3 and 4 values are correct (111,60/22,32/133,92 and 145,00/14,50/159,50) and use decimal commas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "No legal claims or invented amounts, but the note never assigns rate validation to the user or an expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Uses nested RECHERCHEV with frozen ranges; the criterion requires RECHERCHEX or INDEX/EQUIV and does not list RECHERCHEV as accepted."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All formulas use semicolons as separators, and G2 uses ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Row 2 shows HT 220,80, TVA 12,14 and TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Rows 3 and 4 match exactly (111,60/22,32/133,92 and 145,00/14,50/159,50) and use decimal commas."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "No legal claims or invented amounts, but the note only says 'reste à vérifier'; it never names the user or an expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La formule utilise RECHERCHEV, alors que le critère exige RECHERCHEX ou INDEX/EQUIV."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, écrits avec la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note « À vérifier » ne renvoie pas la validation des taux à l’utilisateur ou à son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La variante INDEX/EQUIV réalise les deux recherches code article → code TVA → taux, avec toutes les plages figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 affiche les montants attendus : HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 affichent tous les montants attendus, avec la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note « À vérifier » ne renvoie pas la validation des taux à l'utilisateur ou à son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "La variante INDEX/EQUIV acceptée effectue les deux recherches, du code article au taux, avec des plages figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique exactement HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, écrits avec une virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note « À vérifier » ne renvoie pas la validation des taux à l'utilisateur ou à son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’alternative E2 utilise deux RECHERCHEX imbriquées, reliant article, code TVA et taux avec des plages absolues."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise =ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique exactement HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note « À vérifier » ne demande pas la validation des taux par l’utilisateur ou son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’alternative RECHERCHEX imbriquée effectue les deux recherches requises avec des plages figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise =ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 affiche HT 220,80 €, TVA 12,14 € et TTC 232,94 €."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec la virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Aucune affirmation fiscale ni montant inventé, mais la note « À vérifier » ne demande pas la validation des taux."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "L’alternative RECHERCHEX imbriquée relie code article, code TVA et taux, avec toutes les plages de recherche figées."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les arguments sont séparés par des points-virgules et G2 utilise =ARRONDI(F2*E2;2)."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La ligne 2 indique HT 220,80, TVA 12,14 et TTC 232,94."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec une virgule décimale."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note « À vérifier » ne renvoie pas la validation des taux à l’utilisateur ou à son expert-comptable."
+    }
+   ],
+   "transcript": "prompts/xl-fr-recherchex-tva-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

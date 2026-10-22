@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:52:19+00:00",
+ "attempt": 1,
+ "skill_sha256": "d8d0799b051c268d42c5fb63acd6f1044427b10cb11abed7a63aef253fb18f6a",
+ "rubric_sha256": "ea7c361bc780b7b113a5f39623e158f7a87c25e44e9a3912575f3a40925b201a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement indiquée « Existant – réemploi »."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "La cible du tapis est bien 4,9 m × 3,6 m, avec calcul explicite retirant 30 cm de chaque côté."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Verre et cuir sont exclus ; entretien, stabilité, antidérapant et sécurité enfant sont des exigences à vérifier. Les ampoules restent à arbitrer."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le budget de 22 000 € TTC inclut livraison et installation ; la commande du canapé est prévue avant le 4 février 2027."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune marque, aucun modèle ni classement inventé ; les performances sont à vérifier et toutes les enveloppes sont explicitement estimatives."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement indiquée « Existant – réemploi ».\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"La cible du tapis est bien 4,9 m × 3,6 m, avec calcul explicite retirant 30 cm de chaque côté.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Verre et cuir sont exclus ; entretien, stabilité, antidérapant et sécurité enfant sont des exigences à vérifier. Les ampoules restent à arbitrer.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le budget de 22 000 € TTC inclut livraison et installation ; la commande du canapé est prévue avant le 4 février 2027.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune marque, aucun modèle ni classement inventé ; les performances sont à vérifier et toutes les enveloppes sont explicitement estimatives.\"}]}"
+}

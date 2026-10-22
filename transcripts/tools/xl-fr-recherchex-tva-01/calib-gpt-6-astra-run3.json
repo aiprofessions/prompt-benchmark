@@ -1,0 +1,33 @@
+{
+ "prompt_id": "xl-fr-recherchex-tva-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "La formule utilise RECHERCHEV, alors que le critère exige RECHERCHEX ou INDEX/EQUIV."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Les arguments sont séparés par des points-virgules et G2 utilise ARRONDI(F2*E2;2)."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La ligne 2 affiche exactement HT 220,80, TVA 12,14 et TTC 232,94."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Les lignes 3 et 4 présentent tous les montants attendus, avec la virgule décimale."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune affirmation fiscale ni montant inventé ; la note demande de vérifier la validité des taux et précise que les calculs ne déterminent pas leur légalité."
+  }
+ ]
+}

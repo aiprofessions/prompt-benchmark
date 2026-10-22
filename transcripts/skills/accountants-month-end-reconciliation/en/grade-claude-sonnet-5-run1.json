@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:17:51+00:00",
+ "attempt": 1,
+ "skill_sha256": "4dcfbee80358bd21532840700dddfa91551e9b14596a855ed3e861a610296c5b",
+ "rubric_sha256": "e5af919d713a29dad248b394abf604f5c0e8f1cba0dfebeb70369a19f8a16ac0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Shows adjusted bank balance of $40,280.50 using the supplied outstanding checks and deposit in transit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates adjusted books of $40,280.50 including the provisional ACH suspense adjustment and explicitly states zero numeric difference."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifies the payment as under-recorded by $45.00 and decreases book cash by that amount."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Holds ACH credit in suspense pending evidence, not revenue; explicitly proposes no entries for outstanding checks or deposit in transit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Uses supplied reconciling items and derived amounts, shows only account ending 4417, and includes evidence requirements and blank responsible-accountant sign-off."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Shows adjusted bank balance of $40,280.50 using the supplied outstanding checks and deposit in transit.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates adjusted books of $40,280.50 including the provisional ACH suspense adjustment and explicitly states zero numeric difference.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifies the payment as under-recorded by $45.00 and decreases book cash by that amount.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Holds ACH credit in suspense pending evidence, not revenue; explicitly proposes no entries for outstanding checks or deposit in transit.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Uses supplied reconciling items and derived amounts, shows only account ending 4417, and includes evidence requirements and blank responsible-accountant sign-off.\"}]}"
+}

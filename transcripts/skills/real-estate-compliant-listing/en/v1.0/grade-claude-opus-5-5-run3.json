@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:19:34+00:00",
+ "attempt": 1,
+ "skill_sha256": "9d3d51042c292300ba33a94809580e39d742331b5e702298612121e100607163",
+ "rubric_sha256": "9925732aa90f3483d1fb4354a85ae98bc82422c0cf4e5dc513ecc0c31b48a0bc",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "MLS remarks and Instagram caption are both comfortably below their respective word limits."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "The listing copy explicitly omits the required 2,310 sq ft, although the other required facts appear."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Both copy blocks omit the demographic preferences, church reference, exclusivity, safety claim, and school district superlative."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Voucher exclusion is absent from the copy and explicitly flagged as a source-of-income issue requiring broker review."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a Removed or Changed list with individual reasons and explicitly requires broker/compliance review before publication."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"MLS remarks and Instagram caption are both comfortably below their respective word limits.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"The listing copy explicitly omits the required 2,310 sq ft, although the other required facts appear.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Both copy blocks omit the demographic preferences, church reference, exclusivity, safety claim, and school district superlative.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Voucher exclusion is absent from the copy and explicitly flagged as a source-of-income issue requiring broker review.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a Removed or Changed list with individual reasons and explicitly requires broker/compliance review before publication.\"}]}"
+}

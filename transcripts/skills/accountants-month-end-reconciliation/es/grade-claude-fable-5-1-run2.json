@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-es",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:32+00:00",
+ "attempt": 1,
+ "skill_sha256": "1e4d70d8231c7a0f7f2715f619e84f3c485dfe6fd89ebbf08ea79ddaf8628f72",
+ "rubric_sha256": "29cdb067fff9aa2258c7bbf35952915c65c2ba9d124c5d593b950aa9b42df7b9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calcula el saldo bancario ajustado de 26.330,30 € sumando el cheque y restando la transferencia en tránsito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye el abono provisional de 600,00 €, obtiene saldo contable ajustado de 26.330,30 € y declara diferencia aritmética de 0,00 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifica un exceso contable de 90,00 €, reduce bancos y propone abonar la cuenta 572 por ese importe."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Mantiene los 600,00 € en suspenso, pendientes de aplicación, y declara expresamente que P1 y P2 no generan asiento."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa partidas, importes ni normativa; limita la cuenta a 0932 e incluye soportes necesarios y campos de revisión y firma en blanco."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calcula el saldo bancario ajustado de 26.330,30 € sumando el cheque y restando la transferencia en tránsito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye el abono provisional de 600,00 €, obtiene saldo contable ajustado de 26.330,30 € y declara diferencia aritmética de 0,00 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifica un exceso contable de 90,00 €, reduce bancos y propone abonar la cuenta 572 por ese importe.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Mantiene los 600,00 € en suspenso, pendientes de aplicación, y declara expresamente que P1 y P2 no generan asiento.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa partidas, importes ni normativa; limita la cuenta a 0932 e incluye soportes necesarios y campos de revisión y firma en blanco.\"}]}"
+}

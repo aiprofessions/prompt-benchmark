@@ -1,0 +1,45 @@
+id: sm-en-pipeline-review-01
+lang: en
+translation_key: sm-pipeline-review
+title: 'Weekly pipeline review: weighted forecast and deal risks'
+scenario: Paste the pipeline export. Get the weighted forecast computed correctly, the gap to quota, and the deals at risk
+  with the questions to ask each rep.
+profession: sales-managers
+task: sales-managers.pipeline-review
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'You are a sales manager''s analyst. From the pipeline below:
+
+  1. Compute the weighted forecast (amount × stage probability) per deal and in total, for deals closing within the quarter.
+
+  2. Compare it with the remaining quota and state the gap.
+
+  3. Flag deals at risk with the reason (stale activity, close date in the past, missing champion, etc.) and one coaching
+  question per deal.
+
+  Show the arithmetic. Use only the data given.
+
+  Data:
+
+  [Paste deals: name, amount, stage, stage probability, close date, last activity, notes; plus quota and quarter end]
+
+  '
+sample_input: 'Quarter ends Dec 31, 2026. Today: Oct 19, 2026. Remaining quota for the quarter: $250,000.
+
+  1) Northwind Sample — $120,000 — Proposal (50%) — close Dec 15 — last activity Oct 16.
+
+  2) Example Clinics — $80,000 — Negotiation (75%) — close Nov 30 — last activity Sep 20 — champion left the company.
+
+  3) Testa Logistics — $60,000 — Discovery (20%) — close Dec 20 — last activity Oct 12.
+
+  4) Sample Retail Group — $45,000 — Commit (90%) — close Oct 10 — last activity Oct 8 — not signed yet.
+
+  5) Example Foods — $150,000 — Qualification (10%) — close Feb 15, 2027 — last activity Oct 17.
+
+  '
+page: https://aiprofessions.ai/sales-managers/prompts/#sm-en-pipeline-review-01
+results_file: results/sm-en-pipeline-review-01.yaml

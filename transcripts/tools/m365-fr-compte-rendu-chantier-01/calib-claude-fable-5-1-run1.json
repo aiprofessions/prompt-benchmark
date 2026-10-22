@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-fr-compte-rendu-chantier-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Only the carrelage validation by the MOA, ordered by the architect, appears under Décisions."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Open points list the menuiseries delivery (week 45/46, no firm date), the paint colour choice, and the fissure awaiting BET advice."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exemple Façades reposes the garde-corps (2nd level, garden side) before 17/10; BET consultation is marked 'échéance à fixer'."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Next meeting is 22/10/2026 at 9 h on site; the text is about 190 words, under 220."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "No fissure or scaffold conclusions, but it adds actions not in the notes (Exemple Menuiseries confirming a date, MOA deciding)."
+  }
+ ]
+}

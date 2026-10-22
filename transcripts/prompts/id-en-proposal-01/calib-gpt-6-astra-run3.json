@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-en-proposal-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Table includes all four correct phase fees, labels procurement as estimated, explains its calculation, and gives the estimated $10,400 total."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Retainer is correctly stated as $1,860, representing 30% of $6,200, due at signing."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Includes two revision rounds per phase and charges additional rounds at $150/hour."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly excludes contractor and trade costs, permit fees, furnishings, shipping, and storage."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented fees or legal terms; recommends agreement review including by the designer’s attorney; comfortably under 450 words."
+  }
+ ]
+}

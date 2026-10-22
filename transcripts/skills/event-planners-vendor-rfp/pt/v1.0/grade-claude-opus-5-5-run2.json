@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:31:45+00:00",
+ "attempt": 1,
+ "skill_sha256": "bb523c284d74344fbd1b98466c3ef6b7cdf4e2e1f82a6f5f9478c7dbe8c2cef4",
+ "rubric_sha256": "0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Lista palco nas dimensões exigidas, dois telões, seis microfones sem fio de mão, três lapelas, retorno e transmissão somente das palestras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige equipe de rigging do próprio local, montagem a partir das 06:00 e desmontagem concluída até 02:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Solicita preços separados para equipamentos, mão de obra, frete, montagem, serviço e impostos, além de certificado de seguro e condições de sinal/cancelamento."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Informa corretamente ambas as datas, mas deixa critérios de avaliação como não informados, sem apresentar critérios concretos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações desconhecidas e solicita confirmação."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Lista palco nas dimensões exigidas, dois telões, seis microfones sem fio de mão, três lapelas, retorno e transmissão somente das palestras.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige equipe de rigging do próprio local, montagem a partir das 06:00 e desmontagem concluída até 02:00.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Solicita preços separados para equipamentos, mão de obra, frete, montagem, serviço e impostos, além de certificado de seguro e condições de sinal/cancelamento.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Informa corretamente ambas as datas, mas deixa critérios de avaliação como não informados, sem apresentar critérios concretos.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações desconhecidas e solicita confirmação.\"}]}"
+}

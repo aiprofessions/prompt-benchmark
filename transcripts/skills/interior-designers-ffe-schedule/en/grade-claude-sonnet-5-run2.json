@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:15+00:00",
+ "attempt": 1,
+ "skill_sha256": "6eb137f312fead5efe9e1d179ed3df666d61ac861c05f00a59276b0e6caf2c34",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes all requested items and quantities, including six-seat sectional; walnut media console is explicitly marked existing-reuse."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Correctly subtracts 18 inches on each side to specify a 13 ft x 17 ft rug."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; identifies child safety and pet-related cleanability and durability as requirements to verify."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and calculates upholstery order-by November 23, 2026, using 16 weeks before installation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented brands, products, or models; all line allowances labeled estimates; performance ratings and compliance require verification rather than being asserted."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Includes all requested items and quantities, including six-seat sectional; walnut media console is explicitly marked existing-reuse.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Correctly subtracts 18 inches on each side to specify a 13 ft x 17 ft rug.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; identifies child safety and pet-related cleanability and durability as requirements to verify.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and calculates upholstery order-by November 23, 2026, using 16 weeks before installation.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No invented brands, products, or models; all line allowances labeled estimates; performance ratings and compliance require verification rather than being asserted.\"}]}"
+}

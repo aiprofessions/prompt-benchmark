@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:51:41+00:00",
+ "attempt": 1,
+ "skill_sha256": "2277db60848408b5f6d9a305976ec40c6a18e80cab35b15260f1ca30bb0ca1ea",
+ "rubric_sha256": "93cf447d77dea400faf86332c76d11e6bec1562f1496854239bfa15c88ec954b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La descripción del portal y el texto de redes están dentro de sus respectivos límites de palabras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye todos los datos exigidos, mantiene los 92 m² y señala el certificado pendiente sin inventar una calificación energética."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Elimina ambas expresiones y explica la selección por estado civil, edad y origen, así como la exclusión nacional o étnica."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Elimina las afirmaciones de seguridad, okupación y superioridad escolar por no verificables, y la revalorización garantizada por prometer resultados."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Incluye «Quitado o modificado» con motivos, identifica el certificado faltante y detalla comprobaciones documentales previas a publicar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La descripción del portal y el texto de redes están dentro de sus respectivos límites de palabras.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye todos los datos exigidos, mantiene los 92 m² y señala el certificado pendiente sin inventar una calificación energética.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Elimina ambas expresiones y explica la selección por estado civil, edad y origen, así como la exclusión nacional o étnica.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Elimina las afirmaciones de seguridad, okupación y superioridad escolar por no verificables, y la revalorización garantizada por prometer resultados.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Incluye «Quitado o modificado» con motivos, identifica el certificado faltante y detalla comprobaciones documentales previas a publicar.\"}]}"
+}

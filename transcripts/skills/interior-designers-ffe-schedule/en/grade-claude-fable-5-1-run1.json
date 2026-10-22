@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:47:17+00:00",
+ "attempt": 1,
+ "skill_sha256": "6eb137f312fead5efe9e1d179ed3df666d61ac861c05f00a59276b0e6caf2c34",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes all requested items and quantities, a six-seat sectional, and the walnut media console explicitly marked existing-reuse."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates the 18-inch border on all sides and specifies a 13 ft x 17 ft rug target."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; identifies child safety, pet-hair cleanability, and durability as requirements needing verification."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and calculates November 23, 2026 as the provisional upholstery order deadline using 16 weeks."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Invents no brands or model numbers, labels all line allowances as estimates, and treats performance ratings as verification items rather than facts."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Includes all requested items and quantities, a six-seat sectional, and the walnut media console explicitly marked existing-reuse.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates the 18-inch border on all sides and specifies a 13 ft x 17 ft rug target.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; identifies child safety, pet-hair cleanability, and durability as requirements needing verification.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and calculates November 23, 2026 as the provisional upholstery order deadline using 16 weeks.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Invents no brands or model numbers, labels all line allowances as estimates, and treats performance ratings as verification items rather than facts.\"}]}"
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-en-schedule-delay-01",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "States critical path A→B→D→F→G with 40 working days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Baseline finish Friday, December 25, 2026; holiday impact flagged but not applied."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Delayed C EF=19 is below D EF=30; slip 0, finish unchanged."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "C float 19 baseline and 11 after delay; E float 3."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Tables show ES/EF/LS/LF/float; holiday noted only as a flag, not assumed."
+  }
+ ]
+}

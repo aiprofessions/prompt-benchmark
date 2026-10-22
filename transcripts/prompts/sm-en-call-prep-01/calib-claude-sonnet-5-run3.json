@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-en-call-prep-01",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Goal is agreement on a 2-clinic pilot; next step asks for verbal agreement, clinic names, and a target start date."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Treats the 2023 training concern as objection 1; the response asks probing questions and proposes small scope without promising features."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Open questions cover sign-off/decision process, budget, success criteria, competitor, and June 2027 timing."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Stakeholder map lists Robin Sample (COO) and Lee Example (IT manager)."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented price, features, competitor name or references; unknowns marked and the quote is deferred."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-en",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:17:51+00:00",
+ "attempt": 1,
+ "skill_sha256": "4dcfbee80358bd21532840700dddfa91551e9b14596a855ed3e861a610296c5b",
+ "rubric_sha256": "e5af919d713a29dad248b394abf604f5c0e8f1cba0dfebeb70369a19f8a16ac0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Shows adjusted bank balance of $40,280.50 after subtracting both outstanding checks and adding the deposit in transit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows adjusted books of $40,280.50 including provisional ACH suspense, and explicitly calculates a zero difference."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifies check #2201 as an under-recorded payment and decreases book cash by $45.00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Holds the ACH credit in unidentified-receipts suspense pending evidence, rejects revenue treatment, and explicitly excludes journal entries for timing items."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Introduces no unsupported reconciliation items or amounts, limits account identification to 4417, and includes evidence requirements and blank responsible-accountant sign-off."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Shows adjusted bank balance of $40,280.50 after subtracting both outstanding checks and adding the deposit in transit.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Shows adjusted books of $40,280.50 including provisional ACH suspense, and explicitly calculates a zero difference.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifies check #2201 as an under-recorded payment and decreases book cash by $45.00.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Holds the ACH credit in unidentified-receipts suspense pending evidence, rejects revenue treatment, and explicitly excludes journal entries for timing items.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Introduces no unsupported reconciliation items or amounts, limits account identification to 4417, and includes evidence requirements and blank responsible-accountant sign-off.\"}]}"
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ev-en-catering-rfp-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Section 3 lists exactly 14 vegetarian, 6 vegan, 3 gluten-free, 1 severe peanut allergy with EpiPen."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Section 5 requires separate lines for food, beverage, staffing, service charge, tax, and gratuity, and forbids bundling."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Section 4 requires a written allergen and cross-contact procedure for the peanut allergy; the warming-kitchen-only constraint is stated repeatedly."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States the January 15, 2027 deadline, the January 29, 2027 decision date, and evaluation criteria in section 8."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented prices, budget, contacts, or venue capabilities; unknowns marked TBD; the suggested evaluation criteria are flagged for client confirmation."
+  }
+ ]
+}

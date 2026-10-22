@@ -1,0 +1,60 @@
+id: cm-en-schedule-delay-01
+lang: en
+translation_key: cm-schedule-delay
+profession: construction-managers
+task: construction-managers.scheduling
+jurisdictions:
+- US
+title: Delay impact on the critical path from an activity list
+scenario: Paste an activity list with dependencies and a delay. Get the critical path, the new finish date and which
+  activities have float — with the arithmetic shown.
+input_placeholder: '[Paste activities with durations (working days), predecessors, start date and the delay]'
+prompt: 'Using the activity list below (finish-to-start dependencies, working days Monday–Friday, no holidays):
+
+  1. Compute early start/finish for each activity and identify the critical path and baseline project finish date.
+
+  2. Apply the delay and recompute. State the new finish date and the slip in working days.
+
+  3. List the activities with float and how much.
+
+  Show your work in a table. Do not assume resources or calendars beyond what is given.
+
+  Data:
+
+  {{INPUT}}
+
+  '
+input: 'Project start: Monday, November 2, 2026 (day 1). (Fictional project.)
+
+  A Site prep — 5 days — no predecessor
+
+  B Foundations — 10 days — after A
+
+  C Underground utilities — 6 days — after A
+
+  D Framing — 15 days — after B
+
+  E Roofing — 5 days — after D
+
+  F MEP rough-in — 8 days — after C and D
+
+  G Inspections — 2 days — after E and F
+
+  Delay: activity C (utilities) takes 14 days instead of 6.
+
+  '
+rubric:
+- id: C1
+  criterion: Baseline critical path A-B-D-F-G with total duration 40 working days.
+- id: C2
+  criterion: Baseline finish = Friday, December 25, 2026 (40th working day from Nov 2, Mon–Fri, no holidays) — or
+    the output explicitly flags that holidays would change it while still computing the Mon–Fri date.
+- id: C3
+  criterion: Correctly concludes the C delay (14 days) does NOT change the finish date because C had float (delayed
+    C ends day 19; F cannot start before day 31 anyway because D ends day 30).
+- id: C4
+  criterion: 'Reports float: C has 19 working days baseline (11 after the delay) and E has 3 days.'
+- id: C5
+  criterion: Shows work in a table and makes no assumptions beyond the data.
+round: 1
+rubric_sha256_locked: e59f0c0aad4cc1ee7d5e395a7a988aab8e3b71ba7026d93fcffd1076eea689d5

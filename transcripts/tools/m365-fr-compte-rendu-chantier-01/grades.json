@@ -1,0 +1,542 @@
+{
+ "prompt_id": "m365-fr-compte-rendu-chantier-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Décisions : la validation du carrelage « Gris Exemple 60×60 » par la MOA (commande par l'architecte) ; aucune autre décision (ni teinte de peinture, ni date de menuiseries, ni solution pour la fissure)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Points ouverts : livraison des menuiseries « semaine 45 ou 46 » sans date ferme ; choix de la teinte de peinture ; fissure en attente de l'avis du BET structure."
+  },
+  {
+   "id": "C3",
+   "criterion": "Actions : Exemple Façades – reposer le garde-corps manquant de l'échafaudage (2e niveau, côté jardin) – avant le 17/10 ; la consultation du BET apparaît avec « échéance à fixer » (pas de date inventée)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Prochaine réunion : 22/10/2026 à 9 h sur site ; compte rendu de 220 mots maximum (±10 %)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ : aucune conclusion sur la cause ou la gravité de la fissure, n'affirme pas que l'échafaudage est conforme ou sûr, aucune date ou responsabilité absente des notes."
+  }
+ ],
+ "rubric_sha256": "d8ef24c90404209d97b4cc0bacc2fec1efa63d5c4393b849ac4469500007e926",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est présente, mais la demande d'avis du BET est également classée comme décision."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine, teinte de peinture et avis du BET attendu."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "L'action d'Exemple Façades précise le garde-corps, son emplacement et le délai ; la consultation du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est fixée au 22/10/2026 à 9 h sur site ; le texte respecte la limite de mots."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune conclusion technique ou de sécurité ajoutée ; aucune responsabilité inventée. L'année du délai découle de la date de réunion."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correcte, mais la demande d’avis du BET figure aussi parmi les décisions, contrairement au critère."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine semaines 45 ou 46, peinture à choisir et avis du BET attendu."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La repose du garde-corps comporte le responsable, la localisation et l’échéance requis ; la consultation du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est correctement indiquée au 22/10/2026 à 9 h sur site ; la longueur respecte la limite avec tolérance."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La demande de remarques « avant la prochaine réunion » ajoute une échéance absente des notes, malgré l’absence de conclusions techniques ou sécuritaires inventées."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correctement rapportée, mais la demande d’avis du BET figure aussi parmi les décisions."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine, teinte de peinture non choisie et avis du BET attendu."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La repose du garde-corps précise entreprise, emplacement et échéance ; l’obtention de l’avis du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La prochaine réunion est correctement indiquée, mais le texte dépasse 242 mots, plafond incluant la tolérance de 10 %."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’action de confirmer une date ferme attribuée à Exemple Menuiseries ajoute une responsabilité non mentionnée dans les notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Seule la validation du carrelage par la MOA figure en décision, avec commande par l'architecte."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts sont présents : livraison semaine 45 possiblement 46 sans date ferme, peinture et avis du BET attendu."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "La consultation du BET porte « échéance à fixer », mais « échéance 17/10/2026 » ne respecte pas explicitement « avant le 17/10 »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est correctement indiquée ; le compte rendu reste sous 242 mots, tolérance comprise."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La responsabilité de solliciter le BET est attribuée à « Architecte / MOA », alors que les notes ne désignent aucun responsable."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Seule la validation du carrelage par la MOA figure en décision, avec commande par l’architecte."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts sont présents : livraison incertaine semaines 45 ou 46, peinture à choisir, fissure en attente d’avis structure."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "La consultation du BET porte « échéance à fixer », mais la repose est datée du 17/10 au lieu d’avant le 17/10."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est indiquée le 22/10/2026 à 9 h sur site ; la longueur respecte la limite avec tolérance."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La responsabilité de solliciter le BET est attribuée à l’architecte et à la MOA, alors que les notes ne désignent aucun responsable."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Seule décision mentionnée : validation du carrelage « Gris Exemple 60×60 » par la MOA, avec commande par l’architecte."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent : livraison semaine 45 éventuellement 46 sans date ferme, teinte à choisir, fissure en attente d’avis structure."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Repose du garde-corps attribuée à Exemple Façades, localisation complète et délai respectés ; consultation du BET avec « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Prochaine réunion indiquée le 22/10/2026 à 9 h sur site ; texte inférieur à 220 mots."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La responsabilité de solliciter le BET est attribuée à J. Martin, alors que les notes ne désignent aucun responsable pour cette consultation."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Decisions list the BET consultation for the fissure as a second decision; the rubric allows only the tile validation."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Open points cover window delivery week 45/46 with no firm date, paint colour choice, and the fissure awaiting BET opinion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exemple Façades guardrail action is due before 17/10; the BET consultation is marked 'échéance à fixer' with no invented date."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Next meeting is 22/10/2026 at 9 h on site; length is about 210 words, within the 220 limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cause or severity given for the fissure and no scaffold-safety claim; assigned owners follow reasonably from the notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Décisions also lists the fissure (BET opinion requested), adding a second decision beyond the carrelage validation."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Points ouverts include menuiseries week 45/46 without a firm date, the paint colour choice, and the fissure awaiting the BET opinion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exemple Façades must reinstall the garde-corps before 17/10/2026; the BET consultation shows « échéance à fixer » with no invented date."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Next meeting 22/10/2026 at 9 h on site; length is about 215 words, within the limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cause or severity given for the fissure, no claim of scaffold safety, no invented dates; responsibilities stay consistent with the notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "The Décisions section adds a second item, requesting the BET opinion on the fissure. The criterion allows only the carrelage decision."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Open points cover menuiseries in week 45 or 46 without a firm date, the undecided paint colour and the fissure awaiting the BET."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exemple Façades must refit the 2nd-level guardrail on the jardin side before 17/10. The BET consultation shows 'échéance à fixer'."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Next meeting is 22/10/2026 at 9 h on site. The report is about 200 words, within the 220 limit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No cause or severity given for the fissure, scaffolding not called safe, no invented dates. Assigning paint choice to the MOA follows the notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Seule la validation du carrelage par la MOA, avec commande par l'architecte, figure parmi les décisions."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison semaine 45 éventuellement 46 sans date ferme, peinture à choisir, avis structure attendu."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La repose du garde-corps précise entreprise, emplacement et échéance ; la consultation du BET comporte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est indiquée au 22/10/2026 à 9 h sur site ; la longueur respecte la limite avec tolérance."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L'obligation pour Exemple Menuiseries de confirmer une date ferme est ajoutée : cette responsabilité n'est pas attribuée dans les notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correcte, mais la demande d’avis du BET figure comme une décision supplémentaire."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine, teinte non arrêtée et avis du BET indisponible."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La repose du garde-corps précise entreprise, localisation et délai ; la consultation du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La prochaine réunion est correctement indiquée, mais le compte rendu dépasse 242 mots, tolérance comprise."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’action de confirmer une date ferme est attribuée à Exemple Menuiseries sans que cette responsabilité soit donnée dans les notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est présente, mais la fissure et le garde-corps figurent aussi parmi les décisions, contrairement au critère."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts sont présents : livraison incertaine, teinte non arrêtée et avis du BET structure attendu."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La repose du garde-corps comporte le responsable, la localisation et le délai requis ; la consultation du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est indiquée le 22/10/2026 à 9 h sur site ; le texte respecte la limite avec tolérance."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L'action imposant à Exemple Menuiseries de communiquer une date ferme ajoute une responsabilité non attribuée dans les notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correcte, mais la demande d’avis au BET figure également dans les décisions."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine, teinte de peinture à revoir et avis du BET attendu."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "L’action d’Exemple Façades est complète, mais la consultation du BET ne figure pas avec la mention « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est correctement indiquée ; le compte rendu reste dans la limite de 242 mots avec tolérance."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune conclusion technique ou de sécurité ajoutée ; les dates et responsabilités mentionnées correspondent aux notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correcte, mais la consultation du BET figure aussi parmi les décisions, contrairement au critère."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les menuiseries sans date ferme, le choix de peinture et la fissure en attente de l'avis du BET figurent dans les points ouverts."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Exemple Façades doit reposer le garde-corps au bon emplacement avant le 17/10 ; la consultation du BET porte « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La prochaine réunion est correctement indiquée, mais le compte rendu dépasse 242 mots, plafond incluant la tolérance de 10 %."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune conclusion technique ou de sécurité ajoutée ; les dates et responsabilités sont cohérentes avec les notes, et le responsable BET reste non précisé."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La validation du carrelage est correcte, mais la consultation du BET figure également parmi les décisions, contrairement au critère."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les trois points ouverts figurent explicitement : livraison incertaine, choix de peinture et avis du BET structure en attente."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "L’action d’Exemple Façades est complète, mais la consultation du BET ne figure pas dans les actions avec « échéance à fixer »."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La prochaine réunion est correctement indiquée ; le texte reste sous le plafond de 242 mots, tolérance comprise."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune conclusion technique ou de sécurité ajoutée ; les dates et responsabilités mentionnées sont étayées par les notes."
+    }
+   ],
+   "transcript": "work/prompt-tests/m365-fr-compte-rendu-chantier-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:50:46+00:00",
+ "attempt": 1,
+ "skill_sha256": "e44ff2e1596842c06a940bb6f03e6272f621c592a3014738e44a9beb4e74e036",
+ "rubric_sha256": "e5c52cd49459425ee5ca635948d112b77daf1145772dc1ec0d880988c987d311",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags §5 and proposes five years from the Effective Date, with trade-secret protection lasting as long as information remains a trade secret."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags §8 as contrary to the playbook and expressly proposes deleting it in its entirety."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Identifies both missing provisions and accepts §1, but treats §10 as only partially compliant, leaving exclusive jurisdiction unassessed pending attorney instruction."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Contains no invented authorities or citations, expressly labels the review a draft and not legal advice, and reserves judgment calls for supervising counsel."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Flags §3 and proposes Representatives-only disclosure with need-to-know and written confidentiality obligations at least as protective.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags §5 and proposes five years from the Effective Date, with trade-secret protection lasting as long as information remains a trade secret.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags §8 as contrary to the playbook and expressly proposes deleting it in its entirety.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Identifies both missing provisions and accepts §1, but treats §10 as only partially compliant, leaving exclusive jurisdiction unassessed pending attorney instruction.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Contains no invented authorities or citations, expressly labels the review a draft and not legal advice, and reserves judgment calls for supervising counsel.\"}]}"
+}

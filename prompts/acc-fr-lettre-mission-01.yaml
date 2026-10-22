@@ -1,0 +1,90 @@
+id: acc-fr-lettre-mission-01
+lang: fr
+translation_key: acc-engagement-letter
+title: Projet de lettre de mission d’expertise comptable à partir des notes d’entretien
+scenario: 'Notes d’entretien avec le gérant d’une SARL fictive : préparez une lettre de mission avec son périmètre, ses honoraires
+  et son calendrier, puis les points à arbitrer avant envoi.'
+profession: accountants
+task: accountants.client-letters
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- FR
+prompt: 'Vous êtes collaborateur d’un cabinet d’expertise comptable en France. À partir des seules notes ci-dessous, rédigez
+  un projet de lettre de mission en français, en vouvoyant le client.
+
+  1. Lettre de mission (700 mots maximum) : parties, objet et exercice concerné, missions incluses, missions exclues, honoraires
+  et options, calendrier des remises de pièces, obligations du client, mention finale « Projet – à valider par l’expert-comptable
+  ».
+
+  2. Honoraires : reprenez les montants des notes et le caractère facultatif des options ; si les notes le demandent, calculez
+  les totaux annuels HT et TTC ainsi que la TVA pour chaque configuration demandée, en montrant les calculs (format 1 234,56
+  €).
+
+  3. Note interne « Points à arbitrer » (150 mots maximum) : incohérences, informations manquantes, demandes du client non
+  reprises et motifs, éléments que l’expert-comptable doit vérifier avant signature.
+
+  Règles : utilisez uniquement les notes ; seuls les montants calculés à partir de leurs données peuvent être ajoutés. N’inventez
+  aucune date, aucun tarif ni aucun fait. N’ajoutez aucune affirmation réglementaire, norme professionnelle, référence juridique
+  ou pénalité. Ne promettez aucun résultat.
+
+  Marquez les informations manquantes par [à compléter]. Signalez les contradictions sans les trancher ; toute modalité concernée
+  reste à confirmer. Le document reste un projet à relire, valider et signer par l’expert-comptable.
+
+  Notes d’entretien :
+
+  [Collez vos notes d’entretien : société, exercice, missions incluses et exclues, honoraires HT, TVA, calendrier et demandes
+  du client. Anonymisez noms, identifiants et coordonnées.]
+
+  '
+sample_input: 'Cas entièrement fictif : tous les noms, coordonnées et identifiants ci-dessous sont fictifs.
+
+  Notes d’entretien du 12/10/2026 – Cabinet Exemple Conseil (fictif), collaboratrice : Ana Exemplo
+
+  Client : Menuiserie Exemple SARL (fictive), SIREN 000 000 000, gérant Martin Exemple, martin@menuiserie-exemple.test
+
+  Exercice : du 01/01/2026 au 31/12/2026 (clos le 31/12).
+
+  Activité : menuiserie bois, 2 salariés.
+
+  Missions voulues :
+
+  - tenue de la comptabilité à partir des pièces transmises ;
+
+  - établissement des comptes annuels au 31/12/2026 et de la liasse fiscale ;
+
+  - déclarations mensuelles de TVA.
+
+  Pas pour nous :
+
+  - paie et DSN : restent chez le prestataire paie actuel du client ;
+
+  - juridique annuel (AG d’approbation, dépôt) : c’est l’avocat du client qui s’en charge.
+
+  Honoraires (HT) :
+
+  - forfait annuel 4 200 € HT, facturé 350 € HT par mois ;
+
+  - option bilan prévisionnel 2027 : 900 € HT, seulement si le client la coche.
+
+  - TVA 20 %. Martin veut voir le total annuel HT et TTC, sans option et avec option.
+
+  Calendrier des remises de pièces :
+
+  - relevés bancaires et factures du mois : avant le 10 du mois suivant ;
+
+  - pièces de clôture (inventaire du stock au 31/12, état des créances et dettes) : au plus tard le 31/01/2027.
+
+  - Martin est absent du 05/01/2027 au 28/02/2027, il dit qu’il « enverra tout début mars ».
+
+  Obligations du client : transmettre des pièces complètes, signaler toute opération exceptionnelle, désigner un interlocuteur.
+
+  Divers : Martin demande qu’on écrive dans la lettre que le cabinet « garantit qu’il n’y aura aucun redressement fiscal ».
+
+  À compléter : date de début de la mission, nom de l’expert-comptable signataire.
+
+  '
+page: https://aiprofessions.ai/fr/experts-comptables/prompts/#acc-fr-lettre-mission-01
+results_file: results/acc-fr-lettre-mission-01.yaml

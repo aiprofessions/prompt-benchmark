@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-fr-relance-dsn-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All items correctly attributed; RIB re-deposit noted as received on 15/10; planning and congés acknowledged, not re-requested."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Deadline jeudi 22/10/2026 à 12 h, and 22/10/2026 is a Thursday; deposit on the cabinet's secure portal requested."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicit ban on ID, RIB and NIR via unsecured e-mail or instant messaging; no bank, NIR or login data reproduced."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No invented facts or DSN/URSSAF rules; post-it flagged only internally; expert-comptable validation required before sending."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Subject, vouvoiement and bullets present; body about 165 words; 5-bullet internal note flags RIB via messaging and portal re-deposit."
+  }
+ ]
+}

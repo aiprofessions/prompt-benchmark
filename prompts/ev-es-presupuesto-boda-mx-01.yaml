@@ -1,0 +1,75 @@
+id: ev-es-presupuesto-boda-mx-01
+lang: es
+translation_key: ev-wedding-budget
+title: Presupuesto de boda a partir de cotizaciones (México)
+scenario: 'Cotizaciones de banquete, salón, DJ, flores y fotografía para una boda ficticia en Guadalajara: calcula el presupuesto
+  y compara opciones de ahorro.'
+profession: event-planners
+task: event-planners.budgeting
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-21'
+jurisdictions:
+- MX
+prompt: 'Actúa como organizador de bodas en México. Prepara un presupuesto en pesos MXN, con importes al centavo, a partir
+  de los datos siguientes.
+
+  1. Presenta una tabla por proveedor y concepto con cantidad cobrada, precio unitario, subtotal, IVA agregado y total; muestra
+  los cálculos y las bases de los porcentajes.
+
+  2. Aplica las condiciones de cobro de cada cotización. Usa el 16 % para calcular el IVA cuando corresponda según los datos,
+  sin añadir afirmaciones fiscales.
+
+  3. Muestra el total general y cuánto excede o cuánto queda del presupuesto disponible. Si el tratamiento del IVA de algún
+  importe no está claro, presenta un escenario sin añadirlo y otro añadiendo el 16 %, ambos pendientes de confirmación.
+
+  4. Propón tres opciones de ahorro y evalúa también las sugerencias de los novios. Cuantifica al menos una opción usando
+  las alternativas cotizadas e incluye sus efectos sobre los conceptos vinculados; para opciones sin datos suficientes, escribe
+  "estimación por confirmar", sin asignar una cifra.
+
+  5. Redacta un mensaje para los novios de un máximo de 120 palabras, con tratamiento de usted, que resuma el resultado y
+  lo que deben confirmar con los proveedores.
+
+  Usa solo los datos proporcionados; señala lo que falta y no inventes precios, descuentos, proveedores, fechas ni normativa.
+
+  Identifica el presupuesto como provisional e indica que el organizador debe validarlo con contratos y facturas antes de
+  enviarlo a los novios.
+
+  Datos de la boda y cotizaciones:
+
+  [Pega las cotizaciones completas, sus condiciones de cobro e IVA, el número de invitados y el presupuesto disponible; sustituye
+  nombres y contactos reales por datos ficticios]
+
+  '
+sample_input: 'Boda (ficticia): Ana Exemplo y Martin Exemple. Guadalajara, Jalisco. Fecha: 13 de febrero de 2027.
+
+  Invitados confirmados: 120 personas.
+
+  Presupuesto total de los novios: $240,000.00 MXN.
+
+
+  Cotizaciones recibidas (todas ficticias):
+
+  - Banquete, de Banquetes Ejemplo (ficticia), ventas@banquetes-ejemplo.test: menú A de 3 tiempos a $890.00 por persona más
+  IVA. "Precio por persona, mínimo 130 personas." Ofrece también un menú B de 3 tiempos a $790.00 por persona más IVA, con
+  el mismo mínimo.
+
+  - Servicio de meseros (propina), según la misma cotización del banquete: 10 % sobre el subtotal del banquete antes de IVA.
+  La cotización indica que este concepto no lleva IVA.
+
+  - Salón: Jardín Muestra (ficticio). $48,720.00 por el evento, IVA incluido.
+
+  - DJ: Sonido Ejemplo (ficticio). Paquete de 6 horas a $14,500.00 más IVA. Ofrece también un paquete de 4 horas a $11,000.00
+  más IVA.
+
+  - Flores: Florería Exemplo (ficticia). Centros de mesa y arco a $18,600.00, IVA incluido.
+
+  - Fotografía: Estudio Muestra (ficticio). Cobertura completa a $26,800.00. La cotización no indica si incluye IVA.
+
+
+  Nota de los novios: "Si hace falta, podemos bajar a 110 invitados para ahorrar en el banquete."
+
+  '
+page: https://aiprofessions.ai/es/organizadores-de-eventos/prompts/#ev-es-presupuesto-boda-mx-01
+results_file: results/ev-es-presupuesto-boda-mx-01.yaml

@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-es",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:45:19+00:00",
+ "attempt": 1,
+ "skill_sha256": "3a4c08583cf16645cf8a45cfcf90f60600dd4eba87e7e284751fbfb3fe93c986",
+ "rubric_sha256": "f8484832ec8b99d2b8c1e83a23a5e10d3c77bc11ebb4e159ee01dab1dfc58df0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye exactamente 180 invitados, las cantidades de cada dieta y alergia, y los tres horarios solicitados."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicita que no hay cocina, solo área de servicio con agua y 110 V, y excluye las bebidas alcohólicas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Exige procedimiento escrito de alérgenos y prevención del contacto cruzado para mariscos y celíacos; también indica tratamiento médico sin gluten."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Solicita desglose de alimentos, personal, traslado, montaje e IVA separado; incluye ambas fechas y criterios de evaluación propuestos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa presupuesto, precios, contactos ni capacidades; conserva los nombres ficticios proporcionados y marca los datos desconocidos como por confirmar."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye exactamente 180 invitados, las cantidades de cada dieta y alergia, y los tres horarios solicitados.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Explicita que no hay cocina, solo área de servicio con agua y 110 V, y excluye las bebidas alcohólicas.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Exige procedimiento escrito de alérgenos y prevención del contacto cruzado para mariscos y celíacos; también indica tratamiento médico sin gluten.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Solicita desglose de alimentos, personal, traslado, montaje e IVA separado; incluye ambas fechas y criterios de evaluación propuestos.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa presupuesto, precios, contactos ni capacidades; conserva los nombres ficticios proporcionados y marca los datos desconocidos como por confirmar.\"}]}"
+}

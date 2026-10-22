@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-en",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:46:00+00:00",
+ "attempt": 1,
+ "skill_sha256": "3bb7803d82c4e33bfd86f758674c67ec8cbadb083685b0842938613de85fc6b3",
+ "rubric_sha256": "2ce59da7b61f221b7abd7bc6255179af620cb7d79c338cb021458384e8711987",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Covers June 14–21, assigns four Rome and three Florence nights, explicitly transfers June 18, and excludes rental cars."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags restaurant and gelato tree-nut allergy confirmation, caps daily major sights at one, and reserves afternoons for downtime."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduces all agency booking terms verbatim and adds no additional payment, cancellation, or insurance terms."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No prices, opening hours, train times, or supplier age limits are asserted as verified facts; relevant details carry confirmation markers."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Ends with a to-book/to-confirm checklist and explicitly directs passport, visa, and entry checks to official government sources."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Covers June 14–21, assigns four Rome and three Florence nights, explicitly transfers June 18, and excludes rental cars.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Flags restaurant and gelato tree-nut allergy confirmation, caps daily major sights at one, and reserves afternoons for downtime.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduces all agency booking terms verbatim and adds no additional payment, cancellation, or insurance terms.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No prices, opening hours, train times, or supplier age limits are asserted as verified facts; relevant details carry confirmation markers.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Ends with a to-book/to-confirm checklist and explicitly directs passport, visa, and entry checks to official government sources.\"}]}"
+}

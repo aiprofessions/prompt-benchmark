@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:36:52+00:00",
+ "attempt": 1,
+ "skill_sha256": "2c89eee7c9941bea85db73a769b07778e9c87f18ce43893163577a7a60c1027d",
+ "rubric_sha256": "2527d85617b6f679b69587f29400d01403165633c4c8a5bef06e246b1e14eb37",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les 120 participants, les quatre effectifs de régimes et allergies, ainsi que tous les horaires sont exactement repris."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L'absence de cuisine équipée, le point d'eau et les 2 prises 16 A sont explicités ; les boissons alcoolisées sont exclues."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Une procédure écrite de gestion des allergènes et contaminations croisées est demandée, intégrant explicitement l'arachide et le sans gluten."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le devis impose des lignes distinctes pour repas, personnel, livraison, installation, HT et TVA ; les deux dates et critères de choix figurent."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun budget, prix, nom, coordonnées ou capacité supplémentaire n'est inventé ; les inconnues sont signalées et listées parmi les points à confirmer."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les 120 participants, les quatre effectifs de régimes et allergies, ainsi que tous les horaires sont exactement repris.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L'absence de cuisine équipée, le point d'eau et les 2 prises 16 A sont explicités ; les boissons alcoolisées sont exclues.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Une procédure écrite de gestion des allergènes et contaminations croisées est demandée, intégrant explicitement l'arachide et le sans gluten.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le devis impose des lignes distinctes pour repas, personnel, livraison, installation, HT et TVA ; les deux dates et critères de choix figurent.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun budget, prix, nom, coordonnées ou capacité supplémentaire n'est inventé ; les inconnues sont signalées et listées parmi les points à confirmer.\"}]}"
+}

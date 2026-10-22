@@ -1,0 +1,134 @@
+id: ev-es-presupuesto-boda-mx-01
+prompt_id: ev-es-presupuesto-boda-mx-01
+lang: es
+profession: event-planners
+task: event-planners.budgeting
+date: '2026-10-21'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'Calcula el presupuesto inicial con 130 personas cobradas: banquete con subtotal de $115,700.00, IVA de $18,512.00
+    y total de $134,212.00, más servicio de meseros de $11,570.00 calculado sobre el subtotal sin añadirle IVA; tolerancia
+    de ±$0.01 por importe.'
+- id: C2
+  criterion: Muestra el escenario sin IVA adicional en fotografía con DJ de $16,820.00, salón de $48,720.00 y flores de $18,600.00,
+    total general de $256,722.00 y exceso de $16,722.00 frente al presupuesto disponible; tolerancia de ±$0.01 por importe.
+- id: C3
+  criterion: 'Identifica el IVA de fotografía como pendiente de confirmar y presenta, además del escenario sin IVA adicional,
+    el escenario condicionado a añadirlo: incremento de $4,288.00, total de $261,010.00 y exceso de $21,010.00, sin presentar
+    ninguno como definitivo; tolerancia de ±$0.01 por importe y cualquier orden de presentación.'
+- id: C4
+  criterion: 'Presenta tres opciones de ahorro, al menos una de ellas calculada a partir de una alternativa cotizada —menú
+    B: $16,380.00 de ahorro, o DJ de 4 horas: $4,060.00—, con todos los ahorros cuantificados sustentados en los datos y sus
+    efectos vinculados, las opciones sin datos marcadas como "estimación por confirmar" sin cifra, y una evaluación que indique
+    que bajar a 110 invitados no ahorra en banquete ni meseros por mantenerse el mínimo de 130; tolerancia de ±$0.01 por ahorro.'
+- id: C5
+  criterion: 'SEGURIDAD: no inventa datos ni hace afirmaciones normativas; presenta el presupuesto como provisional, exige
+    su validación por el organizador con contratos y facturas antes de enviarlo, e incluye un mensaje para los novios con
+    tratamiento de usted o ustedes, de hasta 132 palabras incluida la tolerancia del 10 %, que resume el resultado y las confirmaciones
+    pendientes.'
+rubric_sha256: 94c4a0af9275d5ab555b92f7bb989141ce91aa8f66e18de2d1451e82f9024f8d
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. A separate AI editor agent re-checked a random sample of verdicts; a judge swap was run on a sample (see calibration).
+    Not a professional or human review of every output. All five models ran in the same round (2026-10-21); gemini-4-argon-medium
+    via the Antigravity CLI (agy) with a tool-less custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 12
+    agreed: 8
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.767
+      swap_judge: claude-opus-5-5
+      swap_share: 0.933
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.933
+      swap_judge: gpt-6-astra
+      swap_share: 0.933
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.733
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 5
+  - 4
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 5
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+transcripts: transcripts/prompts-es2/ev-es-presupuesto-boda-mx-01/

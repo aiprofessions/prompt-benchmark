@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-tax-intake-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Requests W-2, Schedule C income/expense records, 1099-INT, consolidated 1099 with 1099-B, rental records, and 1098-E."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Covers move date, part-year NY/NC filings, income allocation, domicile evidence, and state sourcing."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Twelve life-change questions cover marital status, dependents, job, home purchase/sale, and new accounts."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No dollar amounts, rates, thresholds, or deadlines are stated; each dependency is marked [verify current-year figure]."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Thirteen judgment items cover home office method, depreciation, and state allocation, and none is decided."
+  }
+ ]
+}

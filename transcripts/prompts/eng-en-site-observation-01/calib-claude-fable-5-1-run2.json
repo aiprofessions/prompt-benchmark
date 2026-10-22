@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-en-site-observation-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All five items appear with the noted locations, approximate measurements and photos 01-05. Item 4 is correctly marked 'Not measured'."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No invented measurements, test results or extra observations. Added limitation wording is generic and hedged."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "The Limitations section states visual walk-through only, no testing, approximate 2-hour limited scope and Level P2 only."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States the cause is undetermined, uses hedged opinion language and recommends further investigation for the items."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "'DRAFT — for review by the engineer of record' appears at the top and bottom of the report."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:45:33+00:00",
+ "attempt": 1,
+ "skill_sha256": "5d694f4bf02dbc94ef85f7c941718a44a3cee96e779393289ee1644a4ddde235",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "The table includes all five locations, supplied sizes, and correct photo numbers; J-14 sag is explicitly visual and unmeasured."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No measurements, test results, code sections, or field observations are invented. Potential drainage relationships are qualified, not asserted as established causes."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "The Limitations section explicitly states visual-only observation, a 90-minute visit, and no testing."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Defers the tournament-use determination to the engineer of record and flags J-14 and ponding for possible prompt evaluation before the tournament."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "The opening banner states DRAFT — NOT FOR ISSUE and requires review and seal/signature by the engineer of record."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"The table includes all five locations, supplied sizes, and correct photo numbers; J-14 sag is explicitly visual and unmeasured.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No measurements, test results, code sections, or field observations are invented. Potential drainage relationships are qualified, not asserted as established causes.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"The Limitations section explicitly states visual-only observation, a 90-minute visit, and no testing.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Defers the tournament-use determination to the engineer of record and flags J-14 and ponding for possible prompt evaluation before the tournament.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"The opening banner states DRAFT — NOT FOR ISSUE and requires review and seal/signature by the engineer of record.\"}]}"
+}

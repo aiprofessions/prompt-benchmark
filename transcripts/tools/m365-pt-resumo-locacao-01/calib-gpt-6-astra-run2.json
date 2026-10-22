@@ -1,0 +1,33 @@
+{
+ "prompt_id": "m365-pt-resumo-locacao-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Reproduz 30 (trinta) meses e as datas 01/11/2026 a 30/04/2029 exatamente."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Informa R$ 3.200,00 mensais, vencimento todo dia 5 do mês seguinte ao vencido e reajuste anual pelo IPCA/IBGE."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Inclui multa de 3 aluguéis vigentes, redução proporcional ao tempo cumprido e caução de 2 aluguéis, R$ 6.400,00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Usa tópicos, apresenta a seção Perguntas para o advogado com três itens e fica abaixo de 200 palavras."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não emite parecer jurídico, cita leis ou acrescenta valores, datas ou índices ausentes; não calcula a multa em reais."
+  }
+ ]
+}

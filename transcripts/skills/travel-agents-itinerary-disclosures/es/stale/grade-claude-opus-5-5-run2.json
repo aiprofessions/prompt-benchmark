@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:34+00:00",
+ "attempt": 1,
+ "skill_sha256": "2984943e3fe8b610e32e71dc9e827bcfa8d41561c6edfae41df2f03b5e85a781",
+ "rubric_sha256": "d6b28ce786fc373ecdff6663dcaa7fe611130e4992b474b726071b2e94e311d9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cubre las fechas y distribución exacta de noches, explicita traslados con conductor o transporte público y salida desde Málaga, sin alquiler."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Marca la celiaquía para confirmación escrita con restaurantes, contempla descansos y jornadas ligeras e incluye un día dedicado al spa."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduce literalmente las tres condiciones de reserva sin agregar condiciones contractuales adicionales."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Horarios, precios, entradas de la Alhambra y tiempos de transporte aparecen pendientes de confirmación mediante marcas y lista de verificación."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Cierra con listas de reservas y confirmaciones, seguidas únicamente de una nota de revisión; remite a fuentes gubernamentales para pasaporte y entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cubre las fechas y distribución exacta de noches, explicita traslados con conductor o transporte público y salida desde Málaga, sin alquiler.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Marca la celiaquía para confirmación escrita con restaurantes, contempla descansos y jornadas ligeras e incluye un día dedicado al spa.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduce literalmente las tres condiciones de reserva sin agregar condiciones contractuales adicionales.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Horarios, precios, entradas de la Alhambra y tiempos de transporte aparecen pendientes de confirmación mediante marcas y lista de verificación.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Cierra con listas de reservas y confirmaciones, seguidas únicamente de una nota de revisión; remite a fuentes gubernamentales para pasaporte y entrada.\"}]}"
+}

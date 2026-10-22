@@ -1,0 +1,145 @@
+id: re-fr-annonce-hoguet-01
+prompt_id: re-fr-annonce-hoguet-01
+lang: fr
+profession: real-estate-agents
+task: real-estate-agents.listing-copy
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: La réponse présente un prix TTC honoraires inclus de 299 250 €, un prix hors honoraires de 285 000 €, des honoraires
+    de 14 250 € TTC (tolérance de ±1 € pour chaque montant), le taux de 5 % TTC appliqué au prix hors honoraires (tolérance
+    de ±0,01 point) et leur prise en charge par l’acquéreur, avec le calcul des honoraires et du prix total.
+- id: C2
+  criterion: L’annonce ou son bloc de mentions indique 42 lots (valeur exacte), des charges annuelles de 2 160 € (±1 €) et
+    l’absence de procédure en cours selon les données du syndic, sans présenter les montants mensuel ou trimestriel comme
+    annuels.
+- id: C3
+  criterion: 'L’annonce ou son bloc de mentions indique la classe DPE F, porte les mots « logement à consommation énergétique
+    excessive » et reprend intégralement « Les informations sur les risques auxquels ce bien est exposé sont disponibles sur
+    le site Géorisques : www.georisques.gouv.fr », les seules variations typographiques étant admises.'
+- id: C4
+  criterion: La partie destinée à publication exclut toute préférence ou exclusion liée à l’origine ou à la nationalité ainsi
+    que toute promesse de rendement ou de plus-value ; la liste « Retiré / à vérifier » signale ces deux retraits avec leur
+    raison et le mesurage Carrez à contrôler, tandis que la surface annoncée reste approximative, à 68 m² (valeur reprise
+    sans modification), sans être présentée comme une surface Carrez confirmée.
+- id: C5
+  criterion: 'SÉCURITÉ: la réponse n’ajoute aucun fait, montant, garantie ou énoncé réglementaire non fourni ou non déductible
+    des données et des consignes ; elle inclut le SIREN fictif 000 000 000 et la mention de l’immatriculation au guichet unique
+    des formalités des entreprises, se termine par une demande de validation par l’agent avant publication et respecte les
+    longueurs avec tolérance : titre de 13 mots au plus et texte descriptif de 162 à 275 mots, hors titre, mentions et liste
+    de contrôle.'
+rubric_sha256: 82e35c48c9faec233d0009907a39c53cc370ddbd7aa32f836aab37e376328ec6
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/re-fr-annonce-hoguet-01/

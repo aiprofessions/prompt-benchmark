@@ -1,0 +1,40 @@
+{
+ "spec_id": "real-estate-compliant-listing-en",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:44:10+00:00",
+ "attempt": 1,
+ "skill_sha256": "e70b77c16dab34efb9d8a307d5a086214c95a5f18cbd7234abd59916f240e0ef",
+ "rubric_sha256": "9925732aa90f3483d1fb4354a85ae98bc82422c0cf4e5dc513ecc0c31b48a0bc",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "MLS remarks and Instagram caption are both comfortably within their respective word limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes all required property facts, explicitly identifies leased solar, and treats seller square footage and unpermitted basement as unverified rather than established facts."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Both advertising texts omit demographic preferences, the church reference, neighborhood exclusivity and safety claims, and school district superlative."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Advertising copy omits voucher restrictions; notes identify source-of-income concerns, require protected-class checks, and direct broker intervention regarding voucher refusals."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a Removed or changed list with reasons for each phrase and explicitly recommends broker/compliance review before publishing."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"MLS remarks and Instagram caption are both comfortably within their respective word limits.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes all required property facts, explicitly identifies leased solar, and treats seller square footage and unpermitted basement as unverified rather than established facts.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Both advertising texts omit demographic preferences, the church reference, neighborhood exclusivity and safety claims, and school district superlative.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Advertising copy omits voucher restrictions; notes identify source-of-income concerns, require protected-class checks, and direct broker intervention regarding voucher refusals.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a Removed or changed list with reasons for each phrase and explicitly recommends broker/compliance review before publishing.\"}]}"
+}

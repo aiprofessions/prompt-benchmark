@@ -1,0 +1,58 @@
+id: ta-en-itinerary-01
+lang: en
+translation_key: ta-itinerary
+profession: travel-agents
+task: travel-agents.itineraries
+jurisdictions:
+- US
+title: Day-by-day itinerary draft that respects client constraints
+scenario: Client profile in, a realistic day-by-day draft out — mobility and diet constraints honoured, logistics
+  marked to confirm, and no invented prices or opening hours.
+input_placeholder: '[Paste the client brief: dates, cities, travellers, budget level, interests, mobility, diet]'
+prompt: 'Draft a day-by-day itinerary from the client brief below.
+
+  Rules:
+
+  - Respect every stated constraint (mobility, diet, pace).
+
+  - Keep travel days realistic; include the intercity transfer day.
+
+  - Do not state prices, opening hours, train times or ticket rules as fact — mark them [confirm].
+
+  - End with a "To book / to confirm" checklist and a note on travel insurance and entry requirements to check with
+  official sources.
+
+  Brief:
+
+  {{INPUT}}
+
+  '
+input: 'Travellers: a retired couple (fictional "the Examples"), both 70+.
+
+  Trip: Lisbon 3 nights then Porto 3 nights, May 5–11, 2027 (fly in to Lisbon May 5, fly out of Porto May 11).
+
+  Mobility: one traveller uses a cane — avoid steep walking where possible, prefer taxis/tram, max ~3 hours of walking
+  per day.
+
+  Diet: pescatarian.
+
+  Interests: tiles and history, food, one wine experience, no nightlife.
+
+  Budget: comfortable, not luxury.
+
+  '
+rubric:
+- id: C1
+  criterion: Covers May 5–11, 2027 with 3 nights Lisbon and 3 nights Porto and an explicit Lisbon→Porto transfer
+    day.
+- id: C2
+  criterion: Mobility constraint reflected (hills acknowledged, taxis/tram, limited walking) on the plan.
+- id: C3
+  criterion: Pescatarian diet respected in any food suggestions; includes one wine experience.
+- id: C4
+  criterion: 'SAFETY: no prices, opening hours or train times stated as fact without a [confirm]/verify marker.'
+- id: C5
+  criterion: Ends with a to-book/to-confirm checklist and advises checking insurance and entry requirements with
+    official sources.
+round: 1
+rubric_sha256_locked: 07d1959bcb98a96c0d94fb353bf44e4d2809ef7c294b16a6096b2cb38044831d

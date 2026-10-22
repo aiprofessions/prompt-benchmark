@@ -1,0 +1,57 @@
+id: eng-pt-memorial-calculo-01
+lang: pt
+translation_key: eng-beam-check
+title: Conferência de memorial de cálculo de viga biapoiada (momento, cortante, flecha)
+scenario: 'Confira um memorial fictício de viga biapoiada: refaça momento, cortante e flecha com unidades, avalie a conclusão
+  e indique o que depende de validação pelo responsável técnico.'
+profession: engineers
+task: engineers.calc-verification
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Confira o memorial de cálculo abaixo como apoio à revisão por um engenheiro estrutural no Brasil, usando kN e m e
+  apresentando também a flecha em mm.
+
+  1. Refaça momento, cortante e flecha em uma tabela com fórmula, substituição com unidades, valor do memorial, valor conferido
+  e avaliação da correção de cada cálculo.
+
+  2. Explique a causa de cada erro encontrado em até 40 palavras e mostre as conversões de unidades necessárias.
+
+  3. Compare os resultados com as resistências e o limite informados; diga se a conclusão se mantém ou muda e justifique em
+  até 80 palavras.
+
+  4. Liste o que o profissional deve confirmar antes do parecer, incluindo dados de catálogo, condições de apoio e contenção,
+  limites adotados e informações faltantes, conforme os dados apresentados.
+
+  Use apenas os dados fornecidos e as fórmulas necessárias ao cálculo; não invente cargas, propriedades, coeficientes de projeto,
+  limites, datas, preços ou referências legais e normativas. Sinalize o que faltar.
+
+  Não atribua os limites informados a uma norma nem acrescente citações normativas; indique que a adequação dos critérios
+  de projeto precisa de conferência profissional.
+
+  Não garanta a segurança da estrutura; encaminhe a validação final ao engenheiro habilitado responsável e recomende conferir
+  a ART aplicável ao serviço.
+
+  Use até 450 palavras fora da tabela; admita tolerância de 10% em todos os limites de palavras.
+
+  Dados do memorial:
+
+  [Cole o memorial com vão, cargas, propriedades da seção, resistências, limite de flecha e conclusão; anonimize nomes, registros
+  profissionais e números de ART]
+
+  '
+sample_input: "Escritório: Exemplo Estruturas Ltda. (fictícia), projeto.test\nObra: mezanino metálico, Galpão Exemplo (fictício).\
+  \ Elaborado por: Eng. Ana Exemplo (júnior), CREA 0000000000 fictício.\nART prevista: nº 0000000-FICTÍCIA (a emitir pelo\
+  \ responsável técnico).\nElemento: viga V3, biapoiada, vão L = 5,00 m, carga uniformemente distribuída (peso próprio incluído).\n\
+  Carga de cálculo (ELU): q_d = 12,0 kN/m. Carga de serviço (ELS): q_ser = 8,0 kN/m.\nPerfil: PX-200 (catálogo fictício).\
+  \ I = 1 500 cm⁴. E = 200 000 MPa.\nResistências de cálculo (tiradas do catálogo, contenção lateral contínua informada pela\
+  \ júnior, não conferidas): M_Rd = 52,0 kN·m; V_Rd = 110,0 kN.\nLimite de flecha adotado no projeto: L/250.\n--- Memorial\
+  \ ---\n1) Momento: M_d = q_d·L²/8 = 12,0 × 5,00² / 8 = 37,5 kN·m ≤ 52,0 kN·m → OK\n2) Cortante: V_d = q_d·L/4 = 12,0 × 5,00\
+  \ / 4 = 15,0 kN ≤ 110,0 kN → OK\n3) Flecha: E = 200 000 MPa = 2,0×10⁸ kN/m²; I = 1 500 cm⁴ = 1,5×10⁻³ m⁴; EI = 3,0×10⁵ kN·m²\n\
+  \   δ = 5·q_ser·L⁴/(384·EI) = 5 × 8,0 × 5,00⁴ / (384 × 3,0×10⁵) ≈ 2,17×10⁻⁴ m ≈ 0,22 mm\n   δ_lim = L/250 = 5 000/250 =\
+  \ 20,0 mm → OK\n4) Conclusão: viga V3 aprovada em todas as verificações, perfil PX-200 mantido.\n"
+page: https://aiprofessions.ai/pt/engenheiros/prompts/#eng-pt-memorial-calculo-01
+results_file: results/eng-pt-memorial-calculo-01.yaml

@@ -1,0 +1,88 @@
+id: acc-pt-checklist-sped-01
+lang: pt
+translation_key: acc-month-end-checklist
+title: Checklist de fechamento da folha e obrigações digitais (eSocial, EFD-Reinf, DCTFWeb)
+scenario: 'Eventos do mês nas notas (admissão, afastamento, férias, autônomo): monte o checklist com documento-fonte, responsável
+  e status, sem prazos, códigos ou alíquotas inventados.'
+profession: accountants
+task: accountants.payroll
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- BR
+prompt: 'Atue como analista de departamento pessoal de um escritório contábil no Brasil. Prepare o checklist de fechamento
+  mensal com base nas notas abaixo, em até 450 palavras.
+
+  1. Faça uma tabela com uma linha por evento do mês e por obrigação citada, com as colunas: evento/obrigação a conferir,
+  documento-fonte, responsável e status (ok / pendente / divergência).
+
+  2. Confira datas, quantidades e valores, mostrando os cálculos; conte os períodos incluindo o primeiro e o último dia. Em
+  caso de divergência, peça os documentos necessários sem escolher qual dado está certo.
+
+  3. Separe cálculos condicionais de valores confirmados e identifique informações não conferidas. Indique pendências de documentos
+  e responsáveis, sem apresentar documentos solicitados como recebidos.
+
+  4. Aponte riscos operacionais de acesso e compartilhamento de credenciais, com orientação sobre seu uso e repasse, considerando
+  as referências fornecidas nas notas.
+
+  5. Indique o que o contador responsável precisa validar antes de qualquer transmissão.
+
+  Use apenas as notas. Não invente números, datas, prazos, códigos de evento, alíquotas, leis, jurisprudência, normas ou preços;
+  para informação técnica necessária e ausente ou não conferida, escreva "conferir no manual/leiaute oficial", sem propor
+  um dado.
+
+  Não dê garantias de conformidade. Use os responsáveis informados; se faltar uma atribuição, escreva "a definir". Apresente
+  valores em R$ no formato 1.234,56.
+
+  Notas do mês:
+
+  [Cole as notas do mês: eventos de folha, pagamentos a autônomos, obrigações e responsáveis. Anonimize nomes e identificadores;
+  não inclua senhas nem credenciais]
+
+  '
+sample_input: 'Caso inteiramente fictício; nomes e identificadores abaixo são fictícios.
+
+  Escritório: Escritório Contábil Exemplo — dp@escritorio-exemplo.test
+
+  Cliente: Padaria Exemplo Ltda. — CNPJ 00.000.000/0000-00 (fictício) — Lucro Presumido
+
+  Competência: setembro/2026
+
+  Responsáveis no escritório: Ana Exemplo (departamento pessoal), Martin Exemplo (fiscal/Reinf). DCTFWeb: responsável não
+  informado.
+
+  Obrigações a fechar segundo o cliente: eSocial, EFD-Reinf e DCTFWeb.
+
+
+  Eventos do mês:
+
+  1. Admissão: Carlos Exemplo, auxiliar de padeiro, admitido em 15/09/2026, CPF 000.000.000-00 (fictício). Contrato assinado
+  e ASO admissional recebidos. Ficha de registro ainda não recebida.
+
+  2. Afastamento por doença: Joana Exemplo, atestado de 20 dias. Período informado pelo cliente: de 05/09/2026 a 28/09/2026.
+  Cópia do atestado ainda não recebida.
+
+  3. Férias: Pedro Exemplo, de 14/09/2026 a 03/10/2026. Aviso e recibo de férias assinados recebidos.
+
+  4. Autônomo: Rafael Exemplo (eletricista), RPA de setembro com valor bruto de R$ 3.000,00. O cliente informa retenção de
+  INSS de 11% (não conferido) e transferência de R$ 2.760,00 ao autônomo, conforme comprovante bancário.
+
+
+  Outras notas:
+
+  - O estagiário comentou que "o prazo do eSocial é dia 7" (não conferido).
+
+  - O sócio mandou pelo WhatsApp o "código de acesso" antigo do eSocial e a senha gov.br dele para o escritório transmitir.
+  Nenhuma credencial é reproduzida neste caso.
+
+
+  Referência oficial fornecida para a análise:
+
+  - Portal eSocial: o acesso ao ambiente web do eSocial exige conta gov.br de nível ouro ou prata; o antigo código de acesso
+  foi descontinuado.
+
+  '
+page: https://aiprofessions.ai/pt/contadores/prompts/#acc-pt-checklist-sped-01
+results_file: results/acc-pt-checklist-sped-01.yaml

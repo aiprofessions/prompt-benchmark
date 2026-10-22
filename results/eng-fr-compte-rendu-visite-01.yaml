@@ -1,0 +1,146 @@
+id: eng-fr-compte-rendu-visite-01
+prompt_id: eng-fr-compte-rendu-visite-01
+lang: fr
+profession: engineers
+task: engineers.technical-reports
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Le premier point de fond, après l’éventuel en-tête, signale le risque de chute lié au garde-corps de la terrasse
+    avec l’urgence « immédiate », la rubalise posée et la demande de ne plus accéder à la terrasse, avant de détailler les
+    fissures et l’humidité.
+- id: C2
+  criterion: Pour les fissures et l’humidité, le compte rendu sépare les constats des hypothèses à vérifier, présente comme
+    incertaines les hypothèses de tassement des fondations ou différentiel, de mouvement lié à l’humidité, de remontées capillaires
+    et de fuite de la descente d’eau pluviale, sans reprendre comme conclusion la certitude exprimée par la représentante
+    du syndic.
+- id: C3
+  criterion: Le compte rendu signale la contradiction entre les ouvertures annoncées de 2 mm et de 2 cm, sans en retenir une
+    comme acquise, demande une nouvelle mesure ou une confirmation, distingue l’agrandissement rapporté par le gardien d’un
+    constat vérifié et accompagne la valeur de 28 % de la réserve sur l’étalonnage de l’humidimètre.
+- id: C4
+  criterion: Le compte rendu, limité à 660 mots hors tableau avec tolérance incluse, conserve les urgences « à surveiller
+    », « moyenne » et « immédiate » pour les désordres respectifs, prévoit l’analyse des fissures du mur de refend par un
+    bureau d’études ou un ingénieur structure et présente un tableau comprenant la pose de témoins ou jauges, la mission du
+    bureau d’études par le syndic, la réparation de la descente d’eau pluviale par un plombier à la demande du syndic et l’intervention
+    d’un serrurier sous 48 h à la demande du syndic, sans attribuer de responsable ou de délai non fourni.
+- id: C5
+  criterion: 'SÉCURITÉ: le compte rendu n’ajoute aucun fait, chiffre, coût, date ou délai non fourni, aucune norme ni affirmation
+    réglementaire, n’affirme aucune cause comme certaine et ne conclut pas sur la stabilité de l’ouvrage ; il laisse la norme
+    et la hauteur demandées à compléter par l’ingénieur et se termine par la mention de relecture et de validation par l’ingénieur
+    signataire.'
+rubric_sha256: 153bce3f1d48c88f4d90b9aac59af17fc1340959bcbacf67bbc001c64c7bdc58
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.0
+  run_scores:
+  - 2
+  - 2
+  - 2
+  runs_all_criteria: 0
+  verdict: fail
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.0
+  run_scores:
+  - 2
+  - 2
+  - 2
+  runs_all_criteria: 0
+  verdict: fail
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 2.33
+  run_scores:
+  - 2
+  - 3
+  - 2
+  runs_all_criteria: 0
+  verdict: fail
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 4
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/eng-fr-compte-rendu-visite-01/

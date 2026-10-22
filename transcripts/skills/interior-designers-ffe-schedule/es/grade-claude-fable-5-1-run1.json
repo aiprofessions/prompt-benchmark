@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-es",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:47:30+00:00",
+ "attempt": 1,
+ "skill_sha256": "e3d41b0872712d66b53d1bc3c09d5899a1167547200f4e8eee8a27c75ea71419",
+ "rubric_sha256": "97ac72d08175cf5ad204a1273025ff85553bbb55a79fbac8d5aba375b13dd779",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye todas las piezas y cantidades solicitadas, las cortinas para dos ventanas y el aparador de roble como existente-reutilizar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente la alfombra en 5,6 × 4,2 m, descontando 40 cm por cada lado de la estancia."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye expresamente blanco puro y terciopelo; exige verificar resistencia a arañazos, limpieza y otros requisitos relacionados con el gato."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduce 18.000 € con IVA, transporte y montaje; fija el pedido provisional de tapicería para el 7 de diciembre de 2026."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa marcas, modelos ni clasificaciones; deja las prestaciones técnicas pendientes de verificación y etiqueta las partidas como estimadas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye todas las piezas y cantidades solicitadas, las cortinas para dos ventanas y el aparador de roble como existente-reutilizar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente la alfombra en 5,6 × 4,2 m, descontando 40 cm por cada lado de la estancia.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Excluye expresamente blanco puro y terciopelo; exige verificar resistencia a arañazos, limpieza y otros requisitos relacionados con el gato.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduce 18.000 € con IVA, transporte y montaje; fija el pedido provisional de tapicería para el 7 de diciembre de 2026.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa marcas, modelos ni clasificaciones; deja las prestaciones técnicas pendientes de verificación y etiqueta las partidas como estimadas.\"}]}"
+}

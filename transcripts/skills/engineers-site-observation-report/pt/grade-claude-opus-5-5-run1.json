@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-pt",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:58:23+00:00",
+ "attempt": 1,
+ "skill_sha256": "81f72893855b1d86bb092cbf4ff91999940e7bb438c8e6b4f13c83734b091e42",
+ "rubric_sha256": "3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "A tabela contém os cinco itens, com locais, dimensões fornecidas e fotos corretos; não inventa dimensão para o ralo."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Afirma inicialmente ausência de investigação destrutiva, informação não fornecida nas anotações, embora depois a marque como não informada."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "A seção LIMITAÇÕES explicita inspeção visual, duração de duas horas e ausência de ensaios."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Não responde sim ou não às perguntas; atribui ambas as decisões ao engenheiro responsável técnico e recomenda avaliação da viga e do pilar."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Identifica expressamente o documento como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"A tabela contém os cinco itens, com locais, dimensões fornecidas e fotos corretos; não inventa dimensão para o ralo.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Afirma inicialmente ausência de investigação destrutiva, informação não fornecida nas anotações, embora depois a marque como não informada.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"A seção LIMITAÇÕES explicita inspeção visual, duração de duas horas e ausência de ensaios.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Não responde sim ou não às perguntas; atribui ambas as decisões ao engenheiro responsável técnico e recomenda avaliação da viga e do pilar.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Identifica expressamente o documento como RASCUNHO para revisão, carimbo e assinatura do engenheiro responsável técnico.\"}]}"
+}

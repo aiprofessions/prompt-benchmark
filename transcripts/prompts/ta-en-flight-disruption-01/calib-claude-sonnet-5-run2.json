@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-en-flight-disruption-01",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Both options appear with arrival times (14:00, 23:55) and pros/cons, including B's 55-minute Madrid connection risk."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Names EU Regulation 261/2004 as possibly applicable because the flight departed an EU airport on an EU carrier."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly avoids promising amount or eligibility; cites reason, notice and extraordinary circumstances; says the airline decides."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Tells client to keep the boarding pass/ticket, cancellation notice and $189 hotel receipt until resolved."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "About 313 words is within limit, but 'comfortable connection buffer' for Option A invents a connection the notes don't mention."
+  }
+ ]
+}

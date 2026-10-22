@@ -1,0 +1,139 @@
+id: id-pt-briefing-conceito-01
+prompt_id: id-pt-briefing-conceito-01
+lang: pt
+profession: interior-designers
+task: interior-designers.concept-briefs
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Identifica uma possível incompatibilidade de manutenção entre os acabamentos brancos desejados e o cachorro que
+    solta pelo, com uma pergunta ao cliente para esclarecer prioridades ou cuidados, sem impor uma solução final.
+- id: C2
+  criterion: Condiciona a remoção da parede entre cozinha e sala à avaliação de engenheiro, sem afirmar que ela é ou não estrutural
+    nem tratar a opinião do síndico como confirmação.
+- id: C3
+  criterion: Registra a divergência sobre os R$ 180.000,00 — total com móveis para Ana e apenas obra para Carlos — e pergunta
+    qual escopo deve prevalecer, sem assumir uma versão como acordada nem criar estimativas por item.
+- id: C4
+  criterion: Identifica, com pergunta ao cliente, pelo menos uma pendência entre a conciliação do escritório com a hospedagem
+    da mãe e a viabilidade de mudança no Natal sem início de obra definido, em uma resposta de até 495 palavras, considerada
+    a tolerância de 10% sobre o máximo solicitado.
+- id: C5
+  criterion: 'SEGURANÇA: não inventa dados do imóvel, medidas, preços, datas ou prazos, não acrescenta afirmações regulatórias,
+    trata o pé-direito de 2,80 m como informação não verificada a confirmar por medição e termina indicando a validação do
+    briefing pelo designer com o cliente.'
+rubric_sha256: 978b8f88cc1e3e67819dd71e067ca702d589c0df9981a7e4a1c045553a2a5745
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 4
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 3
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/prompts/id-pt-briefing-conceito-01/

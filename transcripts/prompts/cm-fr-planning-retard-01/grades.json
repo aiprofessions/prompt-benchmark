@@ -1,0 +1,542 @@
+{
+ "prompt_id": "cm-fr-planning-retard-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Le planning initial donne les durées A/B/C/D/E/F/G = 3/5/8/4/10/3/6 jours ouvrés et les intervalles inclusifs A = j1–j3, B = j4–j8, C = j9–j16, D = j9–j12, E = j17–j26, F = j13–j15, G = j27–j32, avec les dates et jours de semaine correspondants détaillés dans checks, ainsi que le chemin critique A-B-C-E-G et une durée totale de 32 jours ouvrés, jusqu’au mardi 16 mars 2027 inclus (tolérance nulle ; formulations équivalentes acceptées)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Le tableau initial donne, dans l’ordre A/B/C/D/E/F/G, les marges totales 0/0/0/11/0/11/0 et les marges libres 0/0/0/0/0/11/0, en jours ouvrés (tolérance nulle)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Le planning recalculé conserve les durées sauf D = 18 jours ouvrés, conserve les dates de A, B, C et E, donne D = j9–j26, F = j27–j29 et G = j30–j35 avec les dates et jours de semaine correspondants détaillés dans checks, indique le chemin critique A-B-D-F-G, une durée totale de 35 jours ouvrés, une fin le vendredi 19 mars 2027 et un décalage de 3 jours ouvrés, et donne les marges totales A/B/C/D/E/F/G = 0/0/3/0/3/0/0 et libres = 0/0/0/0/3/0/0 (tolérance nulle ; formulations équivalentes acceptées)."
+  },
+  {
+   "id": "C4",
+   "criterion": "Le contrôle explicite la conversion de E par 2 × 5 = 10 jours ouvrés et réfute les deux affirmations inexactes de l’entrée par le calcul : le 12 mars 2027 est j30, soit 2 jours ouvrés avant la fin initiale calculée à j32, et l’allongement de D de 18 − 4 = 14 jours ouvrés dépasse sa marge initiale de 11 jours, d’où 14 − 11 = 3 jours ouvrés de décalage (tolérance nulle ; calculs équivalents acceptés)."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ: la réponse ne présente aucune donnée ou hypothèse supplémentaire non fournie ou non déduite des données, ne formule aucune affirmation réglementaire ni garantie de rattrapage, demande la vérification et la validation du planning par le responsable du chantier avant diffusion, et comprend une note au maître d’ouvrage en vouvoiement de 165 mots au plus, constatant l’impact et indiquant les points à confirmer."
+  }
+ ],
+ "rubric_sha256": "38868f6853ee7d34fee5a0e63e0ae9d5753131b94d37fd0b7647897b42968d0e",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours correspondent exactement ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial donne exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le planning recalculé fournit toutes les durées, dates, marges et conclusions attendues, dont une fin au 19 mars et trois jours de décalage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Les conversions et le dépassement de marge sont explicités, mais l’écart de deux jours ouvrés entre J30 et J32 n’est pas explicitement calculé."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse supplémentaire interdite ni garantie ; validation avant diffusion demandée ; note sous 165 mots, en vouvoiement, exposant impact et confirmations nécessaires."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours correspondent exactement ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial fournit exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Planning recalculé, dates, marges et chemin critique A-B-D-F-G exacts ; durée de 35 jours, fin le 19 mars et décalage de 3 jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Conversion 2 × 5 explicite ; J30 comparé à J32 ; allongement 18 − 4 et dépassement 14 − 11 calculés, réfutant les deux affirmations."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse indue ni garantie ; validation avant diffusion exigée ; note en vouvoiement sous 165 mots exposant impact et points à confirmer."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les marges totales et libres initiales correspondent exactement aux séries demandées, en jours ouvrés."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Durées, intervalles, dates, jours et marges recalculés sont exacts ; chemin A-B-D-F-G, 35 jours, fin le 19 mars et décalage de 3 jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Conversion 2 × 5 explicitée ; 12 mars identifié comme J30 contre J32 ; allongement de 14 jours moins marge de 11 démontré."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse ajoutée ni garantie ; vérification et validation avant diffusion exigées ; note sous 165 mots, avec vouvoiement, impact et points à confirmer."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les marges totales et libres du tableau initial correspondent exactement aux deux séries attendues."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le tableau recalculé fournit toutes les durées, dates et marges attendues, le chemin A-B-D-F-G et une fin à j35, décalée de trois jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La conversion 2×5=10 et les calculs 18−4=14 et 14−11=3 sont explicites ; l’écart entre j30 et j32 réfute l’annonce initiale."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse supplémentaire ni garantie ; validation avant diffusion externe demandée ; note de moins de 150 mots en vouvoiement, avec impact et confirmations."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial donne exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le tableau recalculé, les marges, le chemin critique A-B-D-F-G et la fin à j35, vendredi 19 mars, sont conformes."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La conversion 2 × 5, l’écart j30–j32 et le dépassement de marge 18 − 4 − 11 = 3 sont explicités."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La note respecte la longueur, indique l’impact et les confirmations, mais ne comporte aucune formulation explicite en vouvoiement."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les marges totales et libres initiales correspondent exactement aux valeurs exigées pour les sept tâches."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le recalcul fournit toutes les durées, dates, marges et chemin critique attendus, avec fin le 19 mars et décalage de trois jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Conversion équivalente de deux semaines de cinq jours explicitée ; J30 contre J32 et calculs 18 − 4 puis 14 − 11 réfutent les affirmations."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse ajoutée ni garantie ; validation avant diffusion exigée. Note sous 165 mots, en vouvoiement, exposant impact et méthode SCI à confirmer."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durations, intervals, dates and weekdays correct; critical path A-B-C-E-G, 32 working days, ending Tuesday 16 March 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total float 0/0/0/11/0/11/0 and free float 0/0/0/0/0/11/0 match exactly."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "D J9–J26, F J27–J29, G J30–J35 with correct dates; path A-B-D-F-G, 35 days, Fri 19/03, +3; float values match."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Shows 2×5=10; 12 March is J30, 2 days before J32; 14 exceeds the 11-day float, so 14−11=3 delay."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Note about 135 words, uses vous, states impact and items to confirm; validation requested; no added assumptions or guarantee."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durations, intervals J1–J32, dates and weekdays all correct; critical path A-B-C-E-G, 32 days, ending Tuesday 16 March 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Total floats 0/0/0/11/0/11/0 and free floats 0/0/0/0/0/11/0 match exactly."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "D J9–J26, F J27–J29, G J30–J35 with correct dates; path A-B-D-F-G; 35 days; Friday 19 March; delay 3; floats correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Shows 2×5=10, 12 March = J30 (2 days before J32), 18−4=14 and 14−11=3."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Formal 'vous' note of about 147 words; no added assumptions or guarantees; requires validation by the site manager."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durations, J intervals, dates and weekdays are all correct; critical path A-B-C-E-G, 32 working days, ending Tuesday 16 March 2027."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Initial total floats 0/0/0/11/0/11/0 and free floats 0/0/0/0/0/11/0, with calculations shown."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "D J9–J26, F J27–J29, G J30–J35 with correct dates; path A-B-D-F-G, 35 days, Friday 19 March, 3-day delay; floats correct."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Shows 2×5=10 and that 12 March is J30, two days before J32; 18−4=14 exceeds 11 days of float by 3."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No added assumptions or guarantees; validation by the site manager required; formal note of about 135 words stating impact and points to confirm."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours ouvrés et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial fournit exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Planning recalculé, dates, jours et marges exacts ; chemin critique A-B-D-F-G, durée de 35 jours, fin au 19 mars et décalage de trois jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Conversion 2 × 5 explicitée ; contradictions démontrées par J30 contre J32 et par l’allongement de 14 jours dépassant la marge de 11."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucun ajout non déductible ni garantie ; vérification et validation avant diffusion exigées. Note en vouvoiement sous 165 mots, avec impact et confirmations."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial fournit exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le planning révisé présente les durées, dates, marges et chemin critique attendus : 35 jours, fin le 19 mars, décalage de trois jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La conversion 2 × 5 = 10 est explicite ; les deux affirmations sont réfutées par j30 contre j32 et 14 − 11 = 3."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse supplémentaire appliquée ni garantie ; validation avant diffusion exigée. Note en vouvoiement sous 165 mots, avec impact et points à confirmer."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours correspondants sont exacts ; chemin critique A-B-C-E-G, durée 32 jours et fin au 16 mars conformes."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial présente exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Planning recalculé, dates, marges et chemin critique A-B-D-F-G exacts ; durée 35 jours, fin vendredi 19 mars et décalage de trois jours."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Conversion 2 × 5 explicitée ; j30 comparé à j32 ; allongement de 14 jours dépassant la marge de 11, soit trois jours."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse supplémentaire imposée ni garantie ; informations manquantes signalées, validation avant diffusion exigée ; note en vouvoiement sous 165 mots avec confirmations demandées."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Les dates de C, E et G sont erronées ; la fin initiale annoncée est le 22 mars au lieu du 16 mars."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial fournit exactement les marges totales 0/0/0/11/0/11/0 et libres 0/0/0/0/0/11/0."
+    },
+    {
+     "id": "C3",
+     "pass": false,
+     "reason": "Les indices et marges sont corrects, mais les dates recalculées sont erronées : fin annoncée le 25 mars au lieu du 19 mars."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "La conversion et le dépassement de marge sont corrects, mais le 12 mars est identifié comme J26, non J30 ; l’écart initial est faux."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’affirmation que le planning SCI omet les six jours de G est inventée : aucun détail de son calcul ne permet cette conclusion."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours concordent ; chemin critique A-B-C-E-G, durée de 32 jours ouvrés et fin au 16 mars corrects."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Les marges totales et libres du tableau initial correspondent exactement aux valeurs exigées pour les sept tâches."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Le tableau recalculé, ses dates et marges, le chemin critique A-B-D-F-G et le décalage de trois jours ouvrés sont exacts."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "La conversion 2 × 5 = 10 et les calculs J32 − J30 = 2, 18 − 4 = 14 et 14 − 11 = 3 sont explicités."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’avertissement identifie Martin Exemple comme responsable du chantier, alors que les données le désignent uniquement conducteur de travaux ; cette attribution supplémentaire est non établie."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Durées, intervalles inclusifs, dates et jours de semaine exacts ; chemin critique A-B-C-E-G, durée de 32 jours, fin au 16 mars."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Le tableau initial présente exactement les marges totales et libres demandées pour les sept tâches."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Planning recalculé, dates, marges et chemin critique conformes ; durée de 35 jours, fin vendredi 19 mars et décalage de trois jours ouvrés."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Conversions et dépassement de marge explicités, mais l’écart de deux jours ouvrés entre J30 et J32 n’est pas explicitement calculé ni indiqué."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune hypothèse indue ni garantie ; validation avant diffusion exigée ; note en vouvoiement sous 165 mots indiquant l’impact et les points à confirmer."
+    }
+   ],
+   "transcript": "prompts/cm-fr-planning-retard-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

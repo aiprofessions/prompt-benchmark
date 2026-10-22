@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:48:37+00:00",
+ "attempt": 1,
+ "skill_sha256": "4c49e71106a0dab259a6bdfca46b6a056c1a2e47d2b98ba26f03abdfdfd447fd",
+ "rubric_sha256": "7a88dc37f202e549b414409b51212a2c066abbdece81d50910cbd838c9b2b666",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Dates complètes, trois nuits dans chaque ville, transfert explicite le 8 mai, retour depuis Porto et aucune voiture de location."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Allergie signalée avec confirmation écrite des restaurants, contaminations croisées évoquées, rythme limité et journée plage prévue selon deux options."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Les conditions sont reproduites exactement, sans ajout de condition contractuelle ; les précisions concernent seulement leur application."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "L’accès libre aux sites d’azulejos de Porto est affirmé sans confirmation explicite ; la mention de confirmation porte seulement sur les horaires."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Le document se termine par une liste à réserver et à confirmer, renvoyant aux sources officielles gouvernementales pour passeport, visa et entrée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Dates complètes, trois nuits dans chaque ville, transfert explicite le 8 mai, retour depuis Porto et aucune voiture de location.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Allergie signalée avec confirmation écrite des restaurants, contaminations croisées évoquées, rythme limité et journée plage prévue selon deux options.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Les conditions sont reproduites exactement, sans ajout de condition contractuelle ; les précisions concernent seulement leur application.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"L’accès libre aux sites d’azulejos de Porto est affirmé sans confirmation explicite ; la mention de confirmation porte seulement sur les horaires.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Le document se termine par une liste à réserver et à confirmer, renvoyant aux sources officielles gouvernementales pour passeport, visa et entrée.\"}]}"
+}

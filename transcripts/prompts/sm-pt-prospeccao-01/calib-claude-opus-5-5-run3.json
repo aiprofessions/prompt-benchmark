@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-pt-prospeccao-01",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject has 7 words; email body is about 119 words, within the 132-word limit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Addresses Ana, uses several facts (3 CDs, planilha, retrabalho, contrato), and makes one request: a 20-min video call the week of 26/10."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Offers opt-out by replying 'remover' and uses 'você' throughout."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "The 30% claim is left out and flagged as unsourced; the case keeps 11% km in 4 months, stated as no guarantee; human approval is required."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Script is about 77 words; 0303 is stated outside it; number validation is pending before calling; no fines, deadlines or articles added."
+  }
+ ]
+}

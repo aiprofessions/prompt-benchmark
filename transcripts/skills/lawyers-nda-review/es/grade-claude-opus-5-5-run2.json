@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:15:12+00:00",
+ "attempt": 1,
+ "skill_sha256": "847a96e024d16caafb59caa3272aab8125ac95dc2d04802359674fe546f585e7",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Señala la Cl. 3 y propone uso exclusivo para evaluar una integración tecnológica, definido como el Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Señala la Cl. 5 y propone tres años desde la firma, con confidencialidad de secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Señala la Cl. 8 y propone devolver o destruir la información y sus copias a solicitud, con constancia por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ambos faltantes, condiciona datos personales a su transferencia y declara las cláusulas 1 y 7 conformes, sin cambios."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Presenta un borrador, no inventa autoridades ni citas jurídicas y reserva al abogado responsable las decisiones de criterio y aprobación."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Señala la Cl. 3 y propone uso exclusivo para evaluar una integración tecnológica, definido como el Propósito.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Señala la Cl. 5 y propone tres años desde la firma, con confidencialidad de secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Señala la Cl. 8 y propone devolver o destruir la información y sus copias a solicitud, con constancia por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ambos faltantes, condiciona datos personales a su transferencia y declara las cláusulas 1 y 7 conformes, sin cambios.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Presenta un borrador, no inventa autoridades ni citas jurídicas y reserva al abogado responsable las decisiones de criterio y aprobación.\"}]}"
+}

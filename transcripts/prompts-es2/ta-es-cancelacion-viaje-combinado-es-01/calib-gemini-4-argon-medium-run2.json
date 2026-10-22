@@ -1,0 +1,33 @@
+{
+ "prompt_id": "ta-es-cancelacion-viaje-combinado-es-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calculates 29 days (10 in October + 19 in November), applies the 40% tier and respectfully corrects the client's 31 days/15% claim."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Shows 2.480,00 € × 0,40 = 992,00 €, 35,00 € × 2 = 70,00 € and a total retained of 1.062,00 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Refund 1.240,00 € − 1.062,00 € = 178,00 €; states the unpaid balance is void and nothing remains payable."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Email ~248 words, formal usted, with table, justification right and 14-day refund; internal notes ~108 words list pending checks."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Strike treated as unconfirmed; 1.240,00 € conditioned on art. 160.2 without extra compensation; nothing invented; requires human approval before sending."
+  }
+ ]
+}

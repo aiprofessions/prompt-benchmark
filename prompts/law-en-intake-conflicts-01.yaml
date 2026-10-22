@@ -1,0 +1,43 @@
+id: law-en-intake-conflicts-01
+lang: en
+translation_key: law-intake-conflicts
+title: Intake summary with conflicts list and deadline flags
+scenario: Turn a prospective client's intake email into a structured summary, every name to run through conflicts, and the
+  urgent deadline you might otherwise miss — without promising representation.
+profession: lawyers
+task: lawyers.client-intake
+tools: []
+model: chatgpt
+tested_with: gpt-6-astra
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'You assist a US law firm''s intake team. From the prospective client''s message below produce:
+
+  1. A neutral matter summary (max 120 words).
+
+  2. A conflicts-check list of every person and entity named, with their role.
+
+  3. Key dates and any potential deadline the attorney must evaluate urgently — do not state a specific limitations period
+  as fact; flag it for attorney review.
+
+  4. Documents to request.
+
+  5. A short acknowledgement reply to the prospect that does NOT create an attorney-client relationship or give legal advice
+  and says the firm has not yet agreed to represent them.
+
+  Message:
+
+  [Paste the prospective client''s intake message]
+
+  '
+sample_input: 'From: Jamie Example (fictional)
+
+  "Hi, my contractor, Sample Builders LLC (owner Pat Sample), stopped work on my kitchen remodel in May 2026 after I paid
+  $28,000 of a $40,000 contract. The subcontractor, Example Electric, says it wasn''t paid and filed a mechanic''s lien on
+  my house on September 2, 2026. My lender, Example Home Bank, sent a letter about the lien. My neighbor Chris Testa saw the
+  crew leave. I live in Arizona. What can I do? Can you take my case?"
+
+  '
+page: https://aiprofessions.ai/lawyers/prompts/#law-en-intake-conflicts-01
+results_file: results/law-en-intake-conflicts-01.yaml

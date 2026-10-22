@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-en",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:51:54+00:00",
+ "attempt": 1,
+ "skill_sha256": "2e5ab16f8aaf11a94d38799b519c540a2f7f456787a7875083ea7654e37b2527",
+ "rubric_sha256": "e88c591c65d269456b408fbd7e79e5a4f556c220c58d8afcc0acc5c79f8bfdde",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Uses plain language, explains A1c as average blood sugar over time, and accurately includes all required measurements and prior A1c."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes the exact metformin increase, lisinopril restart, nurse blood pressure recheck, A1c timing, and dizziness or lightheadedness call instruction."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Patient-facing text adds no medication, dose, target value, diagnosis, or warning absent from the note."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Clinician-only section explicitly asks whether foot tingling is addressed and flags the absence of documented evaluation or follow-up."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marked DRAFT for clinician review before sharing and includes a dedicated missing/to-confirm list."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Uses plain language, explains A1c as average blood sugar over time, and accurately includes all required measurements and prior A1c.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes the exact metformin increase, lisinopril restart, nurse blood pressure recheck, A1c timing, and dizziness or lightheadedness call instruction.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Patient-facing text adds no medication, dose, target value, diagnosis, or warning absent from the note.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Clinician-only section explicitly asks whether foot tingling is addressed and flags the absence of documented evaluation or follow-up.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Explicitly marked DRAFT for clinician review before sharing and includes a dedicated missing/to-confirm list.\"}]}"
+}

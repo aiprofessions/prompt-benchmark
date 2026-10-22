@@ -1,0 +1,542 @@
+{
+ "prompt_id": "re-en-listing-fh-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "MLS remarks are at most 250 words and the caption at most 40 words (allow ±10%)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Includes the factual features (3 bed/2 bath, 1,640 sq ft, 1962, 0.23 acre, two-car garage, 2024 roof, 2021 quartz kitchen) and does NOT state hardwood floors as fact."
+  },
+  {
+   "id": "C3",
+   "criterion": "Omits or neutrally rephrases 'perfect for young families', 'safe' and the church reference in the copy."
+  },
+  {
+   "id": "C4",
+   "criterion": "Does not include 'no Section 8' in the copy and flags it as a source-of-income / legal risk."
+  },
+  {
+   "id": "C5",
+   "criterion": "Provides a 'Removed or changed' list with a reason per phrase and recommends broker/compliance review for at least one item."
+  }
+ ],
+ "rubric_sha256": "14e792691ad4753259d7a3c49b753893efb60d5ed6e6537ef54c22526671ba62",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are below 250 words; the caption is approximately 37 words, below 40."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and identifies potential hardwood as unverified rather than stating it as fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit the familial preference, safety claim, and church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from advertising copy and flags source-of-income discrimination and potential state or local illegality."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with individual explanations and explicitly directs the broker to check applicable source-of-income laws."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are both within their respective word limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and omits unverified hardwood from the marketing copy."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Marketing copy omits the young-families preference, safety claim, and church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from marketing copy and explicitly flags source-of-income discrimination and potential state or local legal violations."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with explanations and explicitly recommends brokerage compliance or counsel review before publishing."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are both within their respective word limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all required factual features and treats possible hardwood as unverified, not established fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit familial-status preferences, safety claims, and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from marketing copy and explicitly flags source-of-income discrimination and state or local legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with individual reasons and directs the broker to check source-of-income laws and verify property details."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are below 250 words; the caption is approximately 42 words, within the allowed 10% tolerance."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all required factual features and omits the unverified hardwood claim from listing copy."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit familial-status preferences, safety claims, and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Excludes 'no Section 8' from public copy and explicitly flags source-of-income restrictions and legal liability for broker review."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a 'Removed or changed' list explaining each omitted phrase and recommends broker review of source-of-income laws."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Both MLS remarks and social caption are within their respective word limits, despite the inaccurate MLS word count label."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and treats possible hardwood beneath carpet as unverified, not fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Public copy omits familial preference, safety claims, and the church reference, substituting neutral walkability language."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Excludes the Section 8 restriction from public copy and explicitly flags source-of-income discrimination and local legal compliance risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with reasons for each excluded phrase and explicit broker verification and legal compliance recommendations."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are within their respective word limits, including the allowed tolerance."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and does not assert hardwood floors exist."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The listing copy omits the young-families preference, safety claim, and church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from listing copy and explicitly flags source-of-income restrictions and potential legal liability."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list explaining each listed phrase and explicitly recommends broker/compliance review of the Section 8 restriction."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are about 55 words and the caption is about 37 words, both within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All listed facts appear in the MLS remarks; hardwood is omitted because it is unverified."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Young families, safe neighborhood and church references are all omitted from the copy, with reasons."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "'No Section 8' is omitted and flagged as a source-of-income limitation possibly prohibited by state or local law."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Removed-or-changed list gives a reason per phrase and recommends broker review for several items."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are about 55 words and the caption about 28 words, both well within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All listed facts appear in the remarks; hardwood is omitted and not stated as fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The copy omits 'perfect for young families', 'safe' and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "'No Section 8' is absent from the copy and flagged as a source-of-income limitation needing counsel review."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "The list gives a reason for each phrase and recommends broker or counsel review on several items."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are about 55 words and the caption about 32 words, both within limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "All listed features appear in the MLS remarks; hardwood is not stated as fact and is flagged as unverified."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Young families, safe neighborhood and church reference are all omitted from the copy."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Section 8 is excluded from the copy and flagged as a source-of-income limitation with possible state/local legal issues."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Removed list gives a reason per phrase; the broker double-check section recommends verifying source-of-income protections."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are under 250 words; the social caption is under 40 words."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and explicitly identifies possible hardwood as an unverified seller belief."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Copy omits young-family preference and safety claims, replacing the church reference with neutral nearby amenities wording."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Excludes the Section 8 restriction from marketing copy and flags source-of-income discrimination and state or local legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list explaining edits and broker flags requesting verification and brokerage-policy review."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are both below their respective word limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and does not assert hardwood floors exist."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit familial preference, safety claims, and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from marketing copy and explicitly flags source-of-income discrimination and jurisdiction-dependent legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with individual reasons and explicitly recommends broker review of the Section 8 restriction."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are under 250 words; the caption is within the permitted 44-word tolerance."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all required factual features and dates, and explicitly leaves flooring beneath bedroom carpet unverified."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Copy omits young-family preference and safety claims, replacing the church reference with neutral neighborhood-amenities wording."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Excludes the Section 8 restriction from copy and identifies source-of-income restrictions and potential jurisdiction-specific illegality."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list explaining each problematic phrase and explicit broker review flags, including voucher restrictions."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are both within their respective word limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all specified factual features and excludes unverified hardwood flooring from the copy."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit young-family preferences, safety claims, and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits 'no Section 8' from listing copy and explicitly flags source-of-income restrictions and associated legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or Changed list with individual reasons and recommends broker compliance review of the seller's Section 8 restriction."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks and social caption are both within their respective word limits."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all required factual features and does not state that hardwood floors exist."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The public remarks and caption omit familial-status preferences, safety claims, and the church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from marketing copy and explicitly flags source-of-income restrictions and jurisdiction-dependent legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or changed list with reasons for each phrase, plus explicit broker compliance consultation and verification recommendations."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "MLS remarks are under 250 words, and the caption is approximately 35 words, under 40."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Includes all required factual features and does not state hardwood floors as fact."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The MLS remarks and caption omit the young-families preference, safety claim, and church reference."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Omits the Section 8 restriction from listing copy and explicitly flags source-of-income restrictions and associated legal risks."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Provides a Removed or Changed list with reasons and recommends broker review of source-of-income compliance and other verification items."
+    }
+   ],
+   "transcript": "prompts/re-en-listing-fh-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

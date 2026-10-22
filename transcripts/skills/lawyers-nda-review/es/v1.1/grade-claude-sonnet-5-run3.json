@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-es",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:51:11+00:00",
+ "attempt": 1,
+ "skill_sha256": "b53ba5823de7bbc07ce67fe3ae57edadfb9fbdf2cd4ea6c2e66fb116c7b923bf",
+ "rubric_sha256": "ef4e51eda783038a5a8c010328660139ddb9feae6c9a24bfdaa2fa1f0963c21b",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No señala problemas de la Cl. 3 ni propone limitar el uso exclusivamente al Propósito."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "No propone modificar la Cl. 5 a tres años ni proteger secretos industriales mientras conserven ese carácter."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No propone para la Cl. 8 devolución o destrucción a solicitud con constancia por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Plantea preguntas sobre datos personales y autoridades, pero no identifica ambas previsiones como faltantes ni declara conformes las cláusulas 1 y 7."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "No inventa citas y menciona al abogado responsable, pero no presenta el resultado como borrador ni le reserva explícitamente las decisiones de criterio."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No señala problemas de la Cl. 3 ni propone limitar el uso exclusivamente al Propósito.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"No propone modificar la Cl. 5 a tres años ni proteger secretos industriales mientras conserven ese carácter.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No propone para la Cl. 8 devolución o destrucción a solicitud con constancia por escrito.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Plantea preguntas sobre datos personales y autoridades, pero no identifica ambas previsiones como faltantes ni declara conformes las cláusulas 1 y 7.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"No inventa citas y menciona al abogado responsable, pero no presenta el resultado como borrador ni le reserva explícitamente las decisiones de criterio.\"}]}"
+}

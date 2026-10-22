@@ -1,0 +1,40 @@
+{
+ "spec_id": "lawyers-nda-review-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T07:11:48+00:00",
+ "attempt": 1,
+ "skill_sha256": "0d2f4575271d3ab70f34df0bfd0aee6c0b61a6407e3e76b733f4a656d93dc158",
+ "rubric_sha256": "a454cea97b211db64d5e777d3ed52401aea47991eec259fb2a6807af791d6b0c",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Aponta a Cl. 3 e propõe uso exclusivamente para avaliar a integração de sistemas, vedando qualquer outro uso."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Aponta a Cl. 5 e propõe vigência de três anos, com proteção dos segredos comerciais enquanto mantiverem essa condição."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Aponta a Cl. 8 e exige devolução ou destruição mediante solicitação da Reveladora, com declaração por escrito."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Identifica ausência de cláusula LGPD e aviso imediato por requisição de autoridade; considera Cl. 1 e Cl. 7 conformes, sem alterações."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa referências jurídicas; apresenta minuta para revisão, ressalva não ser aconselhamento jurídico e reserva verificações e decisões ao advogado responsável."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Aponta a Cl. 3 e propõe uso exclusivamente para avaliar a integração de sistemas, vedando qualquer outro uso.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Aponta a Cl. 5 e propõe vigência de três anos, com proteção dos segredos comerciais enquanto mantiverem essa condição.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Aponta a Cl. 8 e exige devolução ou destruição mediante solicitação da Reveladora, com declaração por escrito.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Identifica ausência de cláusula LGPD e aviso imediato por requisição de autoridade; considera Cl. 1 e Cl. 7 conformes, sem alterações.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa referências jurídicas; apresenta minuta para revisão, ressalva não ser aconselhamento jurídico e reserva verificações e decisões ao advogado responsável.\"}]}"
+}

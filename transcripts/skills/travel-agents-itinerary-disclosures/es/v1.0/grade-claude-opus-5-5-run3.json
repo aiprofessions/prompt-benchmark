@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:41+00:00",
+ "attempt": 1,
+ "skill_sha256": "2984943e3fe8b610e32e71dc9e827bcfa8d41561c6edfae41df2f03b5e85a781",
+ "rubric_sha256": "d6b28ce786fc373ecdff6663dcaa7fe611130e4992b474b726071b2e94e311d9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cubre todas las fechas y noches indicadas, explicita traslados sin coche de alquiler y contempla el regreso desde el aeropuerto de Málaga."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige confirmar la celiaquía por escrito con proveedores, contempla contaminación cruzada, programa descansos e incluye un día exclusivo de spa."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Reproduce literalmente las tres condiciones sin añadir condiciones de reserva; el cálculo del saldo se presenta como interpretación pendiente de confirmar."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Precios, horarios, duraciones y entradas de la Alhambra aparecen pendientes de confirmación mediante marcas [confirm], sin datos operativos afirmados como hechos."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Remite a fuentes gubernamentales oficiales, pero no termina con la lista por reservar/confirmar: después incluye preguntas e instrucciones para el agente."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cubre todas las fechas y noches indicadas, explicita traslados sin coche de alquiler y contempla el regreso desde el aeropuerto de Málaga.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige confirmar la celiaquía por escrito con proveedores, contempla contaminación cruzada, programa descansos e incluye un día exclusivo de spa.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Reproduce literalmente las tres condiciones sin añadir condiciones de reserva; el cálculo del saldo se presenta como interpretación pendiente de confirmar.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Precios, horarios, duraciones y entradas de la Alhambra aparecen pendientes de confirmación mediante marcas [confirm], sin datos operativos afirmados como hechos.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Remite a fuentes gubernamentales oficiales, pero no termina con la lista por reservar/confirmar: después incluye preguntas e instrucciones para el agente.\"}]}"
+}

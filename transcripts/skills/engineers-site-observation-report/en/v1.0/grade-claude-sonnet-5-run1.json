@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:21:30+00:00",
+ "attempt": 1,
+ "skill_sha256": "0155cc7b3d265d962b835ef0071482fa4415c7d41fd09d0e32cc03aeb1addf68",
+ "rubric_sha256": "eabe861ae600f9abbe77f47ca9ba1f327ba6ff96216bca908d0a1ba07251bebe",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "No observation table is provided; only the bay 3 item is discussed, with no J-14 sag description or remaining item details."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No measurements, test results, code sections, extra observations, or factual causes are invented; possible inaccessible areas are explicitly hypothetical."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "No Limitations section is included, and the output does not state 90 minutes or no testing."
+  },
+  {
+   "id": "C4",
+   "pass": false,
+   "reason": "Does not answer yes/no, but neither assigns the tournament-use determination to the engineer of record nor flags structural conditions for prompt evaluation."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "The output is not marked DRAFT for engineer-of-record review and seal/signature; it only discusses preparing a future draft."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"No observation table is provided; only the bay 3 item is discussed, with no J-14 sag description or remaining item details.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No measurements, test results, code sections, extra observations, or factual causes are invented; possible inaccessible areas are explicitly hypothetical.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"No Limitations section is included, and the output does not state 90 minutes or no testing.\"},{\"id\":\"C4\",\"pass\":false,\"reason\":\"Does not answer yes/no, but neither assigns the tournament-use determination to the engineer of record nor flags structural conditions for prompt evaluation.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"The output is not marked DRAFT for engineer-of-record review and seal/signature; it only discusses preparing a future draft.\"}]}"
+}

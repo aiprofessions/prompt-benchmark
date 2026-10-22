@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:54:20+00:00",
+ "attempt": 1,
+ "skill_sha256": "e3d41b0872712d66b53d1bc3c09d5899a1167547200f4e8eee8a27c75ea71419",
+ "rubric_sha256": "97ac72d08175cf5ad204a1273025ff85553bbb55a79fbac8d5aba375b13dd779",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Incluye todas las piezas y cantidades solicitadas, cortinas para dos ventanas y aparador de roble existente para reutilizar."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calcula explícitamente la alfombra de 5,6 × 4,2 m descontando 40 cm por cada lado."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Excluye blanco puro y terciopelo; exige verificar resistencia a arañazos, limpieza, enganches y estabilidad por el gato."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reproduce 18.000 € con IVA, transporte y montaje; fija el pedido de tapicería para el 07/12/2026, doce semanas antes."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No inventa marcas, modelos ni clasificaciones técnicas; deja prestaciones pendientes de verificación y marca todas las partidas como estimadas."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Incluye todas las piezas y cantidades solicitadas, cortinas para dos ventanas y aparador de roble existente para reutilizar.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calcula explícitamente la alfombra de 5,6 × 4,2 m descontando 40 cm por cada lado.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Excluye blanco puro y terciopelo; exige verificar resistencia a arañazos, limpieza, enganches y estabilidad por el gato.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Reproduce 18.000 € con IVA, transporte y montaje; fija el pedido de tapicería para el 07/12/2026, doce semanas antes.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No inventa marcas, modelos ni clasificaciones técnicas; deja prestaciones pendientes de verificación y marca todas las partidas como estimadas.\"}]}"
+}

@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:53:00+00:00",
+ "attempt": 1,
+ "skill_sha256": "bbd34bd912fe7c36ce75edc79fc5075f99570905a8b8d31eba5218dd5c5af128",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "La tabla recoge los cinco puntos, sus ubicaciones, todas las medidas aportadas y las fotos 21 a 25 correctamente."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Introduce «soleras con malla», interpretando la malla de fisuración como una característica constructiva no aportada en las notas."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Incluye un apartado de Limitaciones que especifica inspección exclusivamente visual, duración de 2 horas y ausencia de ensayos."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No responde sí/no; remite ambas decisiones al ingeniero responsable y recomienda evaluar el pilar P-7 y las cargas previstas."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Marca explícitamente el documento como BORRADOR para revisión y firma del ingeniero responsable, al principio y al final."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"La tabla recoge los cinco puntos, sus ubicaciones, todas las medidas aportadas y las fotos 21 a 25 correctamente.\"},{\"id\":\"C2\",\"pass\":false,\"reason\":\"Introduce «soleras con malla», interpretando la malla de fisuración como una característica constructiva no aportada en las notas.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Incluye un apartado de Limitaciones que especifica inspección exclusivamente visual, duración de 2 horas y ausencia de ensayos.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"No responde sí/no; remite ambas decisiones al ingeniero responsable y recomienda evaluar el pilar P-7 y las cargas previstas.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Marca explícitamente el documento como BORRADOR para revisión y firma del ingeniero responsable, al principio y al final.\"}]}"
+}

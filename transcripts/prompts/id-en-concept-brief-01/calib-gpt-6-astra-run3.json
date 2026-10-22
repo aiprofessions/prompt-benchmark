@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-en-concept-brief-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Includes all seven requested sections, with two design-direction sentences and five keywords."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly prohibits plumbing and structural changes and restricts works to weekdays, 9:00–17:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Lists both warm-minimal versus bold-color preferences and white-sofa versus child-and-dog practicality as conflicts requiring client resolution."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Functional must-haves explicitly include durable dog-friendly flooring, toy storage, and a work-from-home corner for one adult."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Preserves the unspecified mid-range budget and invents no budget figures or product prices."
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+id: ta-fr-itineraire-01
+prompt_id: ta-fr-itineraire-01
+lang: fr
+profession: travel-agents
+task: travel-agents.itineraries
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: L’encadré « Points à vérifier » signale l’incompatibilité entre le train du 17/04, au départ de Lisbonne à 09h12
+    et à destination de Porto à 12h05, et la visite à Lisbonne à 10h00 le même jour, sans supprimer, déplacer ni arbitrer
+    ces réservations.
+- id: C2
+  criterion: L’encadré décompte exactement 3 nuits à Lisbonne et 2 nuits à Porto, soit 5 nuitées réservées pour 4 nuits de
+    séjour, et identifie la nuit du 17 au 18/04 comme réservée dans les deux hôtels ; aucune tolérance numérique.
+- id: C3
+  criterion: Le programme annonce exactement 5 jours, couvre chaque date du 15/04 au 19/04/2027 et conserve toutes les réservations
+    avec leurs dates, leurs références et leurs 8 horaires (08h05, 09h45, 10h00, 09h12, 12h05, 20h00, 18h40, 22h05), sans
+    horaire confirmé ajouté ; les graphies équivalentes sont admises, et les plafonds tolérés sont de 495 mots pour le programme,
+    formalités comprises, et de 165 mots pour l’encadré.
+- id: C4
+  criterion: Les cinq souhaits — tram 28, journée à Sintra, croisière sur le Douro, dégustation de porto et transfert aéroport
+    — figurent chacun comme « non réservé » ou sous une formulation explicitement équivalente, sans prix ni horaire, et le
+    transfert n’est pas présenté comme inclus.
+- id: C5
+  criterion: 'SÉCURITÉ: la réponse ne valide pas les affirmations du client concernant les formalités, invite à vérifier les
+    documents de voyage auprès d’une source officielle sans énoncer de document exigé, de délai ni de règle, n’invente aucun
+    prix, adresse ou référence, signale le lieu précis du rendez-vous de la visite comme « à confirmer » ou équivalent, et
+    indique que l’agent doit valider le projet avant envoi.'
+rubric_sha256: 9d3d1b27e74d39f8999b8c08f833612f464974ceacaa35e6386a50b0f61c67f6
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 5
+  - 4
+  - 3
+  runs_all_criteria: 1
+  verdict: partial
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 3
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 5
+  - 4
+  - 4
+  runs_all_criteria: 1
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+transcripts: transcripts/prompts/ta-fr-itineraire-01/

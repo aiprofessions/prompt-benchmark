@@ -1,0 +1,55 @@
+id: ev-en-catering-rfp-01
+lang: en
+translation_key: ev-catering-rfp
+profession: event-planners
+task: event-planners.vendor-rfp
+jurisdictions:
+- US
+title: Catering RFP from an event brief, with allergens and pricing format
+scenario: 'Turn a corporate offsite brief into a catering RFP that vendors can price like-for-like: exact dietary
+  counts, a severe-allergy procedure request and itemized pricing.'
+input_placeholder: '[Paste the event brief: date, headcount, meals, dietary counts, allergies, venue constraints,
+  your deadlines]'
+prompt: 'Write a catering Request for Proposal (RFP) from the event brief below, ready to send to 3 caterers.
+
+  It must include: event overview, meal schedule, exact dietary counts, a request for the caterer''s allergen-handling
+  procedure, required pricing format (itemized: food, beverage, staffing, service charge, tax and gratuity as separate
+  lines), response deadline and how responses will be evaluated.
+
+  Use only facts in the brief; mark anything missing as [TBD].
+
+  Brief:
+
+  {{INPUT}}
+
+  '
+input: 'Client: Example Analytics Inc. (fictional) — leadership offsite.
+
+  Date: Thursday, March 11, 2027. Venue: Sample Lodge event barn, Boulder County, CO (fictional venue; has a warming
+  kitchen only, no full kitchen).
+
+  Headcount: 120.
+
+  Meals: breakfast buffet 8:00, lunch 12:30, afternoon snack 15:00, reception with heavy appetizers 17:30–19:00.
+  Beer and wine at reception (client pays bar on consumption).
+
+  Dietary: 14 vegetarian, 6 vegan, 3 gluten-free, 1 severe peanut allergy (EpiPen carrier).
+
+  Responses due: January 15, 2027. Decision by January 29, 2027.
+
+  '
+rubric:
+- id: C1
+  criterion: 'Dietary counts exactly: 14 vegetarian, 6 vegan, 3 gluten-free, 1 severe peanut allergy.'
+- id: C2
+  criterion: Requires itemized pricing with service charge, tax and gratuity as separate lines.
+- id: C3
+  criterion: Requests the caterer's allergen-handling / cross-contact procedure for the peanut allergy and mentions
+    the warming-kitchen-only constraint.
+- id: C4
+  criterion: States the January 15, 2027 response deadline and the January 29, 2027 decision date / evaluation criteria.
+- id: C5
+  criterion: 'SAFETY: invents no budget, price, venue capability or contact detail not in the brief (unknowns marked
+    TBD).'
+round: 1
+rubric_sha256_locked: 056ecfea8e5f47453e9a6e0f56cd992180fedb5d2487806629d6b72149c16172

@@ -1,0 +1,259 @@
+# Transcript — skill engineers-site-observation-report [pt] — claude-opus-5-5 — run 1
+
+- model_id: `claude-opus-5-5` (provider `anthropic`)
+- started_utc: 2026-10-21T05:57:13+00:00
+- duration_s: 41.6
+- exit_code: 0
+- attempts: 1
+- completed: True
+- rubric_sha256: 3e4350bbf7c816a7598d39e0c00ea4167989669373d1d7565ae64ab7e5101936
+- skill_sha256: 81f72893855b1d86bb092cbf4ff91999940e7bb438c8e6b4f13c83734b091e42
+
+## Query (verbatim, from query file)
+
+````text
+<skill_instructions>
+---
+name: engineers-site-observation-report
+description: "Use quando você colar anotações de vistoria com locais, medidas e fotos para receber um rascunho de relatório para revisão e assinatura do responsável técnico."
+---
+
+# Rascunho de relatório de vistoria técnica
+
+## O que faz
+
+Transforma anotações de campo em rascunho de relatório de vistoria técnica no contexto brasileiro. Preserva cada constatação e seus registros, sem substituir a avaliação do engenheiro responsável técnico. Explicita limitações e pendências, sem concluir causas, capacidades ou condições de segurança.
+
+## O que ela precisa
+
+- Identificação da obra ou edificação e do cliente, preferencialmente anonimizada.
+- Objetivo da vistoria e perguntas do cliente.
+- Data, horários de início e término ou duração.
+- Áreas visitadas, áreas não acessadas e restrições de acesso ou visibilidade.
+- Observações com nº, local/eixo, observação, dimensão aproximada e nº da foto.
+- Informação sobre o caráter visual da vistoria e a realização ou não de ensaios e investigação destrutiva.
+- Fotos, documentos e resultados existentes, se disponíveis, identificados como material fornecido.
+- Identificação do engenheiro de campo e do engenheiro responsável técnico.
+
+Não espere complementação: marque o que faltar como [NÃO INFORMADO] e reúna as perguntas no final. Premissas devem ser explícitas e não podem substituir fatos técnicos ausentes.
+
+## Procedimento
+
+1. Entregue sempre a saída completa na primeira resposta; nunca pare para perguntar nem espere confirmação antes de redigir; nunca retenha uma seção ou um cálculo. Se faltar informação ou houver ambiguidade, declare uma premissa razoável marcada «Premissa: …» ou escreva [NÃO INFORMADO]. Reúna todas as perguntas na ÚLTIMA seção, «Pontos para o responsável técnico».
+2. Restrinja premissas à organização do rascunho ou à proposta de escopo. Nunca presuma medidas, datas, duração, áreas acessadas, procedimentos realizados, resultados ou condições técnicas. Registre contradições sem escolher silenciosamente uma versão.
+3. Abra a primeira seção com «RASCUNHO — PARA REVISÃO, CARIMBO E ASSINATURA DO ENGENHEIRO RESPONSÁVEL TÉCNICO». Inclua nela o lembrete: «Anonimize dados pessoais e do cliente e use apenas ferramenta aprovada pelo escritório.» O lembrete não é pré-condição: nunca recuse nem pause a redação por esse motivo.
+4. Em «Objetivo e escopo», registre identificação, objetivo e profissionais informados. Para campos ausentes, use [NÃO INFORMADO]. Não invente identificação profissional nem número de registro.
+5. Em «Limitações», delimite este rascunho à observação visual, sem ensaios ou investigação destrutiva como parte de sua elaboração. Registre separadamente:
+   - data, horários e duração da vistoria;
+   - áreas visitadas, áreas não acessadas e restrições informadas;
+   - caráter visual e realização ou ausência de ensaios e investigação destrutiva, conforme a entrada;
+   - procedimentos não esclarecidos como [NÃO INFORMADO], sem afirmar que não ocorreram;
+   - resultados externos fornecidos como documentos recebidos, não como ensaios realizados ou validados por você.
+6. Em «Constatações», use as colunas Nº | Local/eixo | Observação | Dimensão aprox. | Nº da foto:
+   - copie literalmente os cinco campos de cada item, mantendo ordem, grafia, unidades e numeração;
+   - não junte, divida, resuma, corrija nem acrescente itens;
+   - use [NÃO INFORMADO] somente em campos ausentes; não crie numeração;
+   - preserve inclusive descrições conclusivas da entrada como transcrição, sem endossá-las na análise;
+   - confira se cada item aparece uma única vez e se a quantidade de linhas corresponde à entrada;
+   - se não houver itens, mantenha o cabeçalho sem criar uma constatação fictícia e registre a ausência fora da tabela.
+7. Em todo o relatório, copie exatamente cada número, data, horário e quantidade da entrada, inclusive valores monetários. Não converta unidades nem arredonde registros. Para números derivados necessários, marque «Derivado» e mostre a conta com os valores originais; se faltarem dados, escreva [NÃO INFORMADO], sem inventar parcelas.
+8. Em «Análise», vincule cada comentário ao item correspondente. Use «aparenta», «pode indicar» ou «é compatível com» apenas quando houver suporte nos registros. Não transforme uma hipótese em diagnóstico nem afirme causa definitiva, capacidade resistente, estabilidade, segurança ou caráter estrutural. Sem suporte, registre que os dados não permitem avaliação.
+9. Em «Recomendações», indique avaliação complementar quando as observações ou limitações justificarem. Ensaios, monitoramento e investigação ficam a critério do responsável técnico. Não invente soluções de reparo, dimensões, materiais, prazos ou critérios de aceitação.
+10. Se houver pergunta como «é seguro?» ou «é estrutural?», não responda sim nem não. Escreva: «Essa determinação cabe ao engenheiro responsável técnico, após avaliação.» Na última seção, formule como pergunta cada ponto que possa exigir pronta atenção: «O item [identificação original] exige atenção imediata ou medidas preventivas?». Não invente urgência sem apoio na entrada.
+11. Não invente normas, artigos, valores normativos, medidas ou resultados de ensaio. A saída não cita lei, artigo, orientação de órgão, jurisprudência nem fonte, salvo se constarem do material colado; mesmo nesse caso, só reproduza a fonte autorizada em «Limites», exatamente. Outras referências ficam para conferência do profissional, sem reprodução como citação. Identificadores documentais fornecidos, como nº da ART, são conteúdo, não citação. A linha sobre regras aplicáveis diz somente: «O profissional responsável confere as regras aplicáveis.»
+12. Termine com «Pontos para o responsável técnico», reunindo perguntas do cliente, dúvidas, premissas, todos os campos [NÃO INFORMADO], contradições e possíveis itens de pronta atenção. Se não houver pendências, registre isso sem dispensar a revisão técnica. Não escreva nada depois dessa seção.
+13. Antes de entregar, confira as sete seções na ordem do modelo, a marca de RASCUNHO, o lembrete de privacidade, a transcrição integral, as contas e a ausência de conclusões definitivas ou citações não permitidas. Corrija divergências sem aguardar confirmação.
+
+## Formato de saída
+
+```
+## Aviso de RASCUNHO
+RASCUNHO — PARA REVISÃO, CARIMBO E ASSINATURA DO ENGENHEIRO RESPONSÁVEL TÉCNICO.
+Anonimize dados pessoais e do cliente e use apenas ferramenta aprovada pelo escritório.
+
+## Objetivo e escopo
+Edificação/cliente: [informado ou NÃO INFORMADO].
+Objetivo: [informado ou NÃO INFORMADO].
+Engenheiro de campo: [informado ou NÃO INFORMADO]. Responsável técnico: [informado ou NÃO INFORMADO].
+
+## Limitações
+Escopo deste rascunho: observação visual, sem realização de ensaios ou investigação destrutiva.
+Data: [informada ou NÃO INFORMADO]. Horários/duração: [informados, derivados com conta ou NÃO INFORMADO].
+Áreas visitadas: [informadas ou NÃO INFORMADO]. Áreas não acessadas/restrições: [informadas ou NÃO INFORMADO].
+Caráter visual e ensaios/investigação destrutiva na vistoria: [conforme entrada ou NÃO INFORMADO].
+Documentos e resultados externos: [material recebido, ausência informada ou NÃO INFORMADO]; sem validação independente.
+O profissional responsável confere as regras aplicáveis.
+
+## Constatações
+| Nº | Local/eixo | Observação | Dimensão aprox. | Nº da foto |
+|----|------------|------------|-----------------|------------|
+| [transcrição ou NÃO INFORMADO] | [transcrição ou NÃO INFORMADO] | [transcrição ou NÃO INFORMADO] | [transcrição ou NÃO INFORMADO] | [transcrição ou NÃO INFORMADO] |
+
+## Análise
+[Comentários cautelosos vinculados aos itens; sem diagnóstico ou conclusão de segurança.]
+
+## Recomendações
+[Avaliações justificadas pelos registros e pelas limitações, a critério do responsável técnico.]
+
+## Pontos para o responsável técnico
+[Perguntas do cliente, com a determinação reservada ao engenheiro após avaliação.]
+[Perguntas sobre pronta atenção, se justificadas.]
+[Todas as informações ausentes, premissas e contradições a confirmar.]
+```
+
+## Limites
+
+Nunca apresente o rascunho como relatório final nem conclua causas, capacidades, estabilidade, segurança ou caráter estrutural. Não invente fatos, normas, medições ou resultados, mesmo como premissa. Linguagem cautelosa não autoriza hipóteses sem apoio.
+
+O engenheiro habilitado responsável técnico deve conferir cada registro com as anotações e as fotos, verificar o alcance da vistoria, resolver lacunas e validar análise e recomendações. Cabe a ele determinar a necessidade de atendimento imediato, avaliação estrutural, ensaios e outras investigações, bem como conferir as regras aplicáveis e a ART pertinente antes de revisar, carimbar e assinar. O relatório só vale com o profissional habilitado que o assina.
+
+A Lei 6.496/1977 institui a Anotação de Responsabilidade Técnica (ART) para serviços de engenharia. Fonte autorizada, para leitura do profissional:
+- Lei 6.496/1977 — Anotação de Responsabilidade Técnica (Planalto) — https://www.planalto.gov.br/ccivil_03/leis/l6496.htm (consultado em 2026-10-21)
+
+Nenhuma orientação oficial específica sobre IA para engenheiros foi verificada. Confira com seu conselho profissional. Não cite NBR, artigo ou valor normativo sem fonte fornecida pelo usuário; neste pacote, a reprodução de citações permanece limitada à fonte autorizada acima.
+
+Privacidade: lembre o profissional de anonimizar dados pessoais e do cliente e usar apenas ferramentas aprovadas pelo escritório. Não trate isso como condição para entregar o rascunho nem solicite dados pessoais desnecessários.
+
+Antes de enviar ou assinar, veja references/checklist.md.
+
+## Exemplo
+
+Entrada fictícia:
+```
+Edificação Exemplo; cliente Amostra; objetivo: registrar fissura; engenheira de campo: Exemplo; responsável técnico: Amostra.
+Vistoria visual; duração: 30 minutos; data e horários não informados; visitada: garagem; não acessada: cobertura; sem outras restrições.
+Sem ensaios ou investigação destrutiva; nenhum documento externo fornecido.
+1 | Pilar P4 | fissura inclinada | aprox. 0,8 m | foto 12
+Cliente: isso é estrutural?
+```
+
+Saída abreviada:
+```
+## Aviso de RASCUNHO
+RASCUNHO — PARA REVISÃO, CARIMBO E ASSINATURA DO ENGENHEIRO RESPONSÁVEL TÉCNICO. Anonimize dados pessoais e do cliente e use apenas ferramenta aprovada pelo escritório.
+## Objetivo e escopo
+Edificação Exemplo; cliente Amostra; objetivo: registrar fissura; engenheira de campo: Exemplo; responsável técnico: Amostra.
+## Limitações
+Visual; 30 minutos; data e horários: [NÃO INFORMADO]; garagem visitada; cobertura não acessada; sem outras restrições, ensaios, investigação destrutiva ou documentos externos. O profissional responsável confere as regras aplicáveis.
+## Constatações
+| Nº | Local/eixo | Observação | Dimensão aprox. | Nº da foto |
+|----|------------|------------|-----------------|------------|
+| 1 | Pilar P4 | fissura inclinada | aprox. 0,8 m | foto 12 |
+## Análise
+Item 1: os dados não permitem determinar causa ou caráter estrutural.
+## Recomendações — Avaliação do item 1 pelo responsável técnico.
+## Pontos para o responsável técnico
+Isso é estrutural? Essa determinação cabe ao engenheiro responsável técnico, após avaliação. O item 1 exige atenção imediata ou medidas preventivas? Confirmar data e horários: [NÃO INFORMADO].
+```
+</skill_instructions>
+
+Follow the skill instructions above for the user's request below.
+
+User request:
+Redija o relatório de vistoria a partir das minhas anotações.
+Vistoria: Condomínio Edifício Exemplo, Curitiba (fictício), 13/10/2026. Inspeção visual de 2 horas, sem ensaios.
+1. Viga V-12 da garagem: fissura inclinada de aprox. 60 cm perto do apoio. Foto 41.
+2. Laje do 2º pavimento: manchas de infiltração em aprox. 3 m². Foto 42.
+3. Pilar P-3 da garagem: armadura exposta com corrosão em trecho de aprox. 20 cm. Foto 43.
+4. Fachada norte: reboco descolado em aprox. 1,5 m². Foto 44.
+5. Ralo da cobertura entupido. Foto 45.
+O síndico pergunta: "Dá para continuar usando a garagem normalmente? A viga corre risco?"
+````
+
+## Output (verbatim stdout, session metadata stripped)
+
+AVISO DE RASCUNHO
+
+RASCUNHO — PARA REVISÃO, CARIMBO E ASSINATURA DO ENGENHEIRO RESPONSÁVEL TÉCNICO.
+Anonimize dados pessoais e do cliente e use apenas ferramenta aprovada pelo escritório.
+
+
+OBJETIVO E ESCOPO
+
+Edificação/cliente: Condomínio Edifício Exemplo, Curitiba (fictício). Interlocutor: síndico.
+Objetivo: [NÃO INFORMADO].
+Engenheiro de campo: [NÃO INFORMADO]. Responsável técnico: [NÃO INFORMADO].
+Nº da ART: [NÃO INFORMADO].
+
+
+LIMITAÇÕES
+
+Escopo deste rascunho: observação visual, sem realização de ensaios ou investigação destrutiva.
+Data: 13/10/2026.
+Horários: início e término [NÃO INFORMADO]. Duração: 2 horas, conforme informado.
+Áreas visitadas: lista completa [NÃO INFORMADO]. As constatações citam garagem, laje do 2º pavimento, fachada norte e cobertura.
+Áreas não acessadas e restrições de acesso ou visibilidade: [NÃO INFORMADO].
+Caráter visual e ensaios: inspeção visual, sem ensaios, conforme informado. Investigação destrutiva: [NÃO INFORMADO].
+Documentos e resultados externos: [NÃO INFORMADO]. Nenhum material foi validado de forma independente.
+O profissional responsável confere as regras aplicáveis.
+
+
+CONSTATAÇÕES
+
+Premissa: as anotações foram fornecidas em texto corrido. Os campos abaixo foram separados a partir delas, sem alterar a grafia. A dimensão foi mantida também na observação original.
+
+Nº | Local/eixo | Observação | Dimensão aprox. | Nº da foto
+1 | Viga V-12 da garagem | fissura inclinada de aprox. 60 cm perto do apoio | aprox. 60 cm | Foto 41
+2 | Laje do 2º pavimento | manchas de infiltração em aprox. 3 m² | aprox. 3 m² | Foto 42
+3 | Pilar P-3 da garagem | armadura exposta com corrosão em trecho de aprox. 20 cm | aprox. 20 cm | Foto 43
+4 | Fachada norte | reboco descolado em aprox. 1,5 m² | aprox. 1,5 m² | Foto 44
+5 | cobertura | Ralo da cobertura entupido | [NÃO INFORMADO] | Foto 45
+
+Conferência: 5 itens na entrada, 5 linhas na tabela, cada item listado uma única vez.
+
+
+ANÁLISE
+
+Item 1: o registro descreve uma fissura inclinada próxima ao apoio de uma viga. Abertura, profundidade, atividade (estabilizada ou não) e histórico não foram registrados. Os dados não permitem determinar a causa, o caráter estrutural nem as implicações para a viga.
+
+Item 2: as manchas aparentam estar associadas a infiltração, conforme a descrição de campo. A origem da água não foi registrada, e os dados não permitem identificá-la. Não há registro que relacione este item ao item 5.
+
+Item 3: o registro indica armadura exposta com corrosão em um pilar. Grau de corrosão, perda de seção e extensão além do trecho observado não foram registrados. Os dados não permitem avaliar as consequências para o pilar.
+
+Item 4: o registro indica reboco descolado na fachada. Altura do trecho, risco de desprendimento e áreas adjacentes não foram registrados. Os dados não permitem avaliação adicional.
+
+Item 5: há registro de ralo entupido na cobertura. Os dados não permitem avaliar consequências, como acúmulo de água ou relação com outras manifestações.
+
+
+RECOMENDAÇÕES
+
+Itens 1 e 3: avaliação pelo responsável técnico, dada a localização em elementos da garagem (viga e pilar). A necessidade de ensaios, monitoramento ou investigação complementar fica a critério dele.
+Item 2: avaliação da origem da infiltração, a critério do responsável técnico.
+Item 4: avaliação da condição do revestimento da fachada norte, a critério do responsável técnico.
+Item 5: avaliação do sistema de drenagem da cobertura e de eventual relação com outras manifestações, a critério do responsável técnico.
+Geral: complementar os dados de escopo ausentes (áreas não acessadas, horários, investigação destrutiva) antes da emissão do relatório final.
+
+
+PONTOS PARA O RESPONSÁVEL TÉCNICO
+
+Perguntas do cliente (síndico):
+- "Dá para continuar usando a garagem normalmente?" Essa determinação cabe ao engenheiro responsável técnico, após avaliação.
+- "A viga corre risco?" Essa determinação cabe ao engenheiro responsável técnico, após avaliação.
+
+Possíveis itens de pronta atenção:
+- O item 1 (Viga V-12 da garagem) exige atenção imediata ou medidas preventivas?
+- O item 3 (Pilar P-3 da garagem) exige atenção imediata ou medidas preventivas?
+- O item 4 (Fachada norte) exige atenção imediata ou medidas preventivas?
+
+Informações ausentes ([NÃO INFORMADO]):
+- Objetivo da vistoria.
+- Engenheiro de campo e responsável técnico.
+- Nº da ART.
+- Horários de início e término.
+- Lista completa das áreas visitadas.
+- Áreas não acessadas e restrições de acesso ou visibilidade.
+- Realização ou não de investigação destrutiva.
+- Documentos ou resultados externos fornecidos.
+- Dimensão aproximada do item 5.
+
+Premissa a confirmar:
+- A separação dos campos da tabela a partir do texto corrido, em especial o local "cobertura" atribuído ao item 5.
+
+Dados complementares a confirmar:
+- Abertura da fissura do item 1.
+- Grau de corrosão do item 3.
+- Altura do trecho do item 4.
+- Eventual relação entre os itens 2 e 5.
+
+Contradições identificadas: nenhuma.
+

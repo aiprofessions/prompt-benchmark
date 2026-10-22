@@ -1,0 +1,33 @@
+{
+ "prompt_id": "re-pt-proposta-compra-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Shows sinal R$ 64.000,00 (10%), intermediária R$ 96.000,00 (15%) and recursos próprios R$ 160.000,00 (25%)."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Never presents R$ 480.000,00 (75%) as the computed saldo; it only shows the 650k sum and the 10k excess."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags the 30 vs 60 day mismatch, the sale with no deadline or consequence, and the undefined 'demais despesas'."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Treats credit as unproven, asks for a bank document, and asks the deadline for selling the current property."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Total length is roughly 680-700 words, exceeding the 660-word limit; otherwise compliant on safety."
+  }
+ ]
+}

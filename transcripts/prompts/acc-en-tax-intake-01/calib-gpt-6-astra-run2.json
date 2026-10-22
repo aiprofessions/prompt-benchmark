@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-en-tax-intake-01",
+ "model_key": "gpt-6-astra",
+ "run": 2,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Requests W-2s, consulting income and expense records, 1099-INT, 1099-B, rental income and expense records, and 1098-E."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Requests relocation dates and work-location records; identifies both states’ residency, part-year filing obligations, income sourcing, and allocation for review."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Includes questions about marital status, dependents, employer changes, new income, home transactions, health coverage, and business changes."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States no current-year dollar limits, thresholds, rates, or deadlines as facts; flags income restrictions and applicable figures for verification."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly lists undecided professional judgment items, including home-office eligibility and method, rental depreciation, state residency, and income allocation."
+  }
+ ]
+}

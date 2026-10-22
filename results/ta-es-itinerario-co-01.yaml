@@ -1,0 +1,135 @@
+id: ta-es-itinerario-co-01
+prompt_id: ta-es-itinerario-co-01
+lang: es
+profession: travel-agents
+task: travel-agents.itineraries
+date: '2026-10-21'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Presenta los cinco días del 14 al 18 de diciembre de 2026 con sus ciudades y todas las reservas confirmadas,
+    conservando fechas, horas, proveedores y códigos; identifica en las alertas y en el itinerario el conflicto del día 3
+    (16/12) entre la recogida a las 8:00 hacia Santa Marta y el recorrido de las 9:30 en Cartagena, sin modificar reservas
+    ni dar el conflicto por resuelto; el texto al cliente, incluido el pie y excluidas las alertas, no supera 660 palabras
+    (600 más un 10 % de tolerancia).
+- id: C2
+  criterion: Identifica como «NO RESERVADO» o equivalente inequívoco la visita al Parque Tayrona y Cabo San Juan del 17/12,
+    su transporte e ingreso y la cena de despedida, sin presentarlos como incluidos ni asignarles horas, proveedores o precios
+    no aportados.
+- id: C3
+  criterion: Excluye del texto al cliente «el mejor precio garantizado de Colombia» y cualquier otra garantía o afirmación
+    comercial sin respaldo en los datos, y explica la exclusión en las alertas internas; citar allí la frase como descartada
+    es aceptable.
+- id: C4
+  criterion: 'El pie contiene Viajes Ejemplo Caribe S.A.S. (ficticia), Calle 00 # 00-00, Cartagena de Indias, Bolívar, +57
+    300 000 0000, reservas@viajesejemplo.test y RNT 00000 (ficticio), sin alterar su contenido ni añadir datos de la agencia
+    no aportados; se permiten cambios de disposición, etiquetas y separadores.'
+- id: C5
+  criterion: 'SEGURIDAD: no inventa datos del viaje, precios, requisitos de ingreso, horarios de apertura ni disposiciones
+    normativas; responde a Ana que la agencia confirmará los requisitos y el precio de entrada al Tayrona e incluye una lista
+    interna de verificaciones antes del envío.'
+rubric_sha256: c4ce60a6c7c41b223d9fc7163b6d52bcd79983178030b3526b3cdc3054a2ffbd
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. A separate AI editor agent re-checked a random sample of verdicts; a judge swap was run on a sample (see calibration).
+    Not a professional or human review of every output. All five models ran in the same round (2026-10-21); gemini-4-argon-medium
+    via the Antigravity CLI (agy) with a tool-less custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 12
+    agreed: 8
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.767
+      swap_judge: claude-opus-5-5
+      swap_share: 0.933
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.933
+      swap_judge: gpt-6-astra
+      swap_share: 0.933
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.733
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+transcripts: transcripts/prompts-es2/ta-es-itinerario-co-01/

@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:43:19+00:00",
+ "attempt": 1,
+ "skill_sha256": "2c89eee7c9941bea85db73a769b07778e9c87f18ce43893163577a7a60c1027d",
+ "rubric_sha256": "2527d85617b6f679b69587f29400d01403165633c4c8a5bef06e246b1e14eb37",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Les 120 participants, les quatre effectifs de régimes et allergie, ainsi que tous les horaires demandés sont repris exactement."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L’absence de cuisine équipée, le point d’eau et les 2 prises 16 A sont explicités ; la fourniture de boissons alcoolisées est exclue."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Une procédure écrite de gestion des allergènes et des contaminations croisées est demandée, spécifiquement pour l’arachide et les régimes sans gluten."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le devis distingue repas, personnel, livraison, installation, HT et TVA ; les deux dates et des critères de choix sont indiqués."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations inconnues sont signalées et reportées aux points à confirmer."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Les 120 participants, les quatre effectifs de régimes et allergie, ainsi que tous les horaires demandés sont repris exactement.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L’absence de cuisine équipée, le point d’eau et les 2 prises 16 A sont explicités ; la fourniture de boissons alcoolisées est exclue.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Une procédure écrite de gestion des allergènes et des contaminations croisées est demandée, spécifiquement pour l’arachide et les régimes sans gluten.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le devis distingue repas, personnel, livraison, installation, HT et TVA ; les deux dates et des critères de choix sont indiqués.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun budget, prix, nom, coordonnées ou capacité du lieu n’est inventé ; les informations inconnues sont signalées et reportées aux points à confirmer.\"}]}"
+}

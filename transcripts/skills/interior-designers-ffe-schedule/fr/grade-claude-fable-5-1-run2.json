@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:27:17+00:00",
+ "attempt": 1,
+ "skill_sha256": "d8d0799b051c268d42c5fb63acd6f1044427b10cb11abed7a63aef253fb18f6a",
+ "rubric_sha256": "ea7c361bc780b7b113a5f39623e158f7a87c25e44e9a3912575f3a40925b201a",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement indiquée existante et en réemploi."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Le tapis cible mesure 3,6 m × 4,9 m, avec calcul explicite retirant 30 cm de chaque côté."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Verre et cuir sont exclus ; entretien, stabilité, angles arrondis et protections liés à l’enfant et au chien sont des exigences à vérifier."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Le budget de 22 000 € TTC inclut livraison et installation ; l’échéance défavorable du canapé est fixée au 4 février 2027, hors préparation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucune marque, modèle ou classement inventé ; performances à vérifier sur documentation fabricant et enveloppes explicitement estimatives, à confirmer par devis."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tous les éléments demandés et leurs quantités figurent ; la bibliothèque en chêne est explicitement indiquée existante et en réemploi.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Le tapis cible mesure 3,6 m × 4,9 m, avec calcul explicite retirant 30 cm de chaque côté.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Verre et cuir sont exclus ; entretien, stabilité, angles arrondis et protections liés à l’enfant et au chien sont des exigences à vérifier.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Le budget de 22 000 € TTC inclut livraison et installation ; l’échéance défavorable du canapé est fixée au 4 février 2027, hors préparation.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucune marque, modèle ou classement inventé ; performances à vérifier sur documentation fabricant et enveloppes explicitement estimatives, à confirmer par devis.\"}]}"
+}

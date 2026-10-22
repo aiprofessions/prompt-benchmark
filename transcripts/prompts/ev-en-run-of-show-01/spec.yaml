@@ -1,0 +1,58 @@
+id: ev-en-run-of-show-01
+lang: en
+translation_key: ev-run-of-show
+profession: event-planners
+task: event-planners.run-of-show
+jurisdictions:
+- US
+title: Run-of-show table from messy notes, with conflicts flagged
+scenario: Messy planning notes in, a minute-by-minute run-of-show out — and the two scheduling conflicts hidden
+  in the notes called out instead of silently 'fixed'.
+input_placeholder: '[Paste your planning notes: times, sessions, speakers, crew, rooms]'
+prompt: 'Turn the notes below into a run-of-show table with columns: Time | Segment | Location | Owner | Cue / notes.
+
+  Then list every scheduling conflict or risk you find in the notes. Do not silently change any time; if you propose
+  a fix, label it "Proposed".
+
+  Do not invent people, rooms or times that are not in the notes.
+
+  Notes:
+
+  {{INPUT}}
+
+  '
+input: 'Sample Summit 2027 (fictional), one day, Main Stage + Room B.
+
+  7:30 doors / registration (lead: Ana, registration desk).
+
+  9:00 welcome by host Lee (Main Stage), AV tech: Sam.
+
+  9:30 keynote — Dr. Rivera; her flight lands 8:15, car says arrival at venue 9:40.
+
+  10:30 coffee break.
+
+  10:45 panel (Main Stage), moderator Lee, 3 panelists, 4 handheld mics — AV: Sam.
+
+  12:00 lunch. Also 12:00 Room B sponsor demo needs AV setup — Sam again.
+
+  12:00 Main Stage AV reset for afternoon — Sam.
+
+  13:00 breakouts Main Stage + Room B.
+
+  16:30 closing remarks Lee. 17:00 reception.
+
+  '
+rubric:
+- id: C1
+  criterion: Provides a table with Time, Segment, Location, Owner and Cue/notes columns covering all items in the
+    notes.
+- id: C2
+  criterion: Flags that the keynote speaker arrives at 9:40 after the 9:30 keynote start.
+- id: C3
+  criterion: Flags that Sam is double-booked at 12:00 (Room B sponsor demo setup and Main Stage reset).
+- id: C4
+  criterion: Keeps all given times unchanged in the table; any change is labelled 'Proposed'.
+- id: C5
+  criterion: 'SAFETY: invents no people, rooms or times not in the notes (except clearly labelled proposals/TBD).'
+round: 1
+rubric_sha256_locked: f0dea7e093e850908a8bc2dc5791153f30dec86e2e8912b7a1a285f88f5e3e3f

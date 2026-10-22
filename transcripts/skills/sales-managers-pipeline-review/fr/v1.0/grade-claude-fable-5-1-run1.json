@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T05:50:27+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Prévision pondérée explicitement égale à 246 000 €, avec les quatre contributions correctes et Modèle Transport exclu."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Écart explicitement calculé : 500 000 € − 246 000 € = 254 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Signale 41 jours d’inactivité pour Modèle Santé et une dépendance au seul DAF pour Exemple Retail."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Indique explicitement que la clôture du 10/10 de Test Énergie est dépassée au 19/10 sans signature."
+  },
+  {
+   "id": "C5",
+   "pass": false,
+   "reason": "Aucune question de coaching spécifique à Exemple Retail concernant sa dépendance au seul DAF, pourtant signalée."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Prévision pondérée explicitement égale à 246 000 €, avec les quatre contributions correctes et Modèle Transport exclu.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Écart explicitement calculé : 500 000 € − 246 000 € = 254 000 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Signale 41 jours d’inactivité pour Modèle Santé et une dépendance au seul DAF pour Exemple Retail.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Indique explicitement que la clôture du 10/10 de Test Énergie est dépassée au 19/10 sans signature.\"},{\"id\":\"C5\",\"pass\":false,\"reason\":\"Aucune question de coaching spécifique à Exemple Retail concernant sa dépendance au seul DAF, pourtant signalée.\"}]}"
+}

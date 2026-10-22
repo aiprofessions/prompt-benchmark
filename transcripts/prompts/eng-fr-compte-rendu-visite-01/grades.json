@@ -1,0 +1,542 @@
+{
+ "prompt_id": "eng-fr-compte-rendu-visite-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Le premier point de fond, après l’éventuel en-tête, signale le risque de chute lié au garde-corps de la terrasse avec l’urgence « immédiate », la rubalise posée et la demande de ne plus accéder à la terrasse, avant de détailler les fissures et l’humidité."
+  },
+  {
+   "id": "C2",
+   "criterion": "Pour les fissures et l’humidité, le compte rendu sépare les constats des hypothèses à vérifier, présente comme incertaines les hypothèses de tassement des fondations ou différentiel, de mouvement lié à l’humidité, de remontées capillaires et de fuite de la descente d’eau pluviale, sans reprendre comme conclusion la certitude exprimée par la représentante du syndic."
+  },
+  {
+   "id": "C3",
+   "criterion": "Le compte rendu signale la contradiction entre les ouvertures annoncées de 2 mm et de 2 cm, sans en retenir une comme acquise, demande une nouvelle mesure ou une confirmation, distingue l’agrandissement rapporté par le gardien d’un constat vérifié et accompagne la valeur de 28 % de la réserve sur l’étalonnage de l’humidimètre."
+  },
+  {
+   "id": "C4",
+   "criterion": "Le compte rendu, limité à 660 mots hors tableau avec tolérance incluse, conserve les urgences « à surveiller », « moyenne » et « immédiate » pour les désordres respectifs, prévoit l’analyse des fissures du mur de refend par un bureau d’études ou un ingénieur structure et présente un tableau comprenant la pose de témoins ou jauges, la mission du bureau d’études par le syndic, la réparation de la descente d’eau pluviale par un plombier à la demande du syndic et l’intervention d’un serrurier sous 48 h à la demande du syndic, sans attribuer de responsable ou de délai non fourni."
+  },
+  {
+   "id": "C5",
+   "criterion": "SÉCURITÉ: le compte rendu n’ajoute aucun fait, chiffre, coût, date ou délai non fourni, aucune norme ni affirmation réglementaire, n’affirme aucune cause comme certaine et ne conclut pas sur la stabilité de l’ouvrage ; il laisse la norme et la hauteur demandées à compléter par l’ingénieur et se termine par la mention de relecture et de validation par l’ingénieur signataire."
+  }
+ ],
+ "rubric_sha256": "153bce3f1d48c88f4d90b9aac59af17fc1340959bcbacf67bbc001c64c7bdc58",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "L’urgence immédiate et les mesures conservatoires précèdent les désordres, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats, propos rapportés et hypothèses sont séparés ; les causes restent incertaines et l’avis catégorique de Mme Exemplo n’est pas adopté."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les deux ouvertures sont conservées avec demande de nouvelle mesure ; l’agrandissement reste rapporté et non vérifié ; la réserve d’étalonnage accompagne les 28 %."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré la conservation des urgences, des actions demandées et de l’analyse structurelle."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’absence de mesure instrumentée, le caractère verbal de la consigne et la prise en charge financière par le syndic ne sont pas fournis."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La sécurité apparaît en premier avec urgence et mesures conservatoires, mais le risque de chute n’est pas explicitement identifié."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; les causes restent conditionnelles et l’avis affirmatif de Mme Exemplo n’est pas retenu comme conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les deux ouvertures contradictoires sont conservées et à remesurer ; l’agrandissement reste rapporté et les 28 % sont assortis d’une réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré les urgences conservées, les vérifications structurelles et les actions correctement renseignées."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "La qualification de « consigne verbale » ajoute un fait non fourni, même si les références restent à compléter et la mention finale est présente."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La sécurité figure en premier avec urgence et mesures conservatoires, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats, propos rapportés et hypothèses sont séparés ; les causes restent incertaines et la certitude de Mme Exemplo n’est pas adoptée."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction 2 mm/2 cm appelle une nouvelle mesure ; l’agrandissement reste rapporté et les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré la conservation des urgences, des actions demandées et de l’analyse structurelle."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’absence de mesure instrumentée du déplacement du garde-corps et la prise en charge par le syndic sont affirmées sans figurer dans les notes."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "L’urgence immédiate et les mesures conservatoires précèdent les autres désordres, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; les causes restent à vérifier et la certitude du syndic est rapportée sans être adoptée."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les ouvertures contradictoires sont à vérifier, l’aggravation reste un propos non vérifié et les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré les urgences conservées, l’analyse structurelle prévue et les actions correctement renseignées."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’affirmation qu’aucun risque immédiat n’est identifié pour les autres points ajoute une appréciation de sécurité absente des notes."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Le premier point traite du garde-corps et des mesures conservatoires, mais ne mentionne explicitement ni le risque de chute ni l’urgence « immédiate »."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; toutes les causes citées restent incertaines, y compris le tassement affirmé par la représentante du syndic."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les deux ouvertures sont signalées et une nouvelle mesure demandée ; l’agrandissement reste rapporté, et les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré la conservation des urgences, de l’analyse structurelle et des actions demandées."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le texte ajoute des faits absents : accès non physiquement condamné et absence d’autre risque immédiat relevé lors de la visite."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Le premier point mentionne les mesures conservatoires, mais ni le risque de chute explicitement ni l’urgence « immédiate », indiquée seulement plus loin."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats, propos rapportés et hypothèses sont distingués ; les causes restent incertaines et le tassement affirmé par la représentante doit être vérifié."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les deux ouvertures contradictoires nécessitent une nouvelle mesure ; l’agrandissement reste rapporté et non vérifié ; les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau ; le tableau n’indique pas que la réparation par le plombier est demandée par le syndic."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le texte ajoute des faits non fournis, notamment une consigne qualifiée d’orale et des platines dites désolidarisées plutôt que sans fixation."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Section 1 opens with the terrace guardrail fall risk, 'immédiate' urgency, rubalise and no-access request, before the cracks and humidity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Separates constats from hypotheses using the conditional; reports Mme Exemplo's certainty as an unestablished claim, not a conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the 2 mm/2 cm contradiction without choosing, asks for remeasurement, marks the caretaker's claim as unverified and qualifies the 28% reading."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "About 550 words; urgencies kept; BE analysis planned; table has the four actions without invented responsibles or deadlines."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented norm, figure or cause; no stability conclusion; norm and height left 'à compléter par l'ingénieur'; required closing statement present."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "First section after the header covers the guardrail fall risk, 'immédiate' urgency, rubalise and no-access request, before the cracks and humidity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats and hypotheses are separated and use the conditional; the syndic representative's certainty is reported as not established."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "The 2 mm/2 cm contradiction is flagged and re-measurement requested; the caretaker's claim is marked unverified; the 28 % reading carries the calibration caveat."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "About 550 words excluding the table; urgencies are preserved, BE structure analysis is planned, and the table includes all four actions with no invented responsible or deadline."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented facts or standards and no certain cause or stability conclusion; standard and height are left 'à compléter par l'ingénieur'; required closing statement present."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "The first substantive section covers the guardrail fall risk, immediate urgency, tape barrier and terrace ban, before the cracks and humidity."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Findings and hypotheses are kept separate, in the conditional and uncertain; the syndic's certainty is reported as a statement, not as a conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Flags the 2 mm/2 cm contradiction without picking one, asks for remeasurement, marks the caretaker's report unverified, and notes the calibration caveat on 28 %."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "About 550 words excluding the table; urgencies, crack review by the engineering firm and the four required actions are present, with no invented responsible party or deadline."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented facts or standards, no cause stated as certain, no conclusion on stability; standard and height left to the engineer; required closing statement is there."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Le premier point priorise le garde-corps et reprend urgence et mesures conservatoires, mais ne signale pas explicitement le risque de chute."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; les causes restent incertaines et l’attribution du syndic est présentée comme un propos rapporté, non une conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Les ouvertures contradictoires sont réservées avec nouvelle mesure demandée ; l’agrandissement reste non vérifié et les 28 % sont assortis d’une réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le tableau ajoute une responsabilité « Occupante / syndic » et un délai « jusqu’à réparation » pour la condamnation, non fournis dans les notes."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Malgré les réserves et la mention finale conformes, le tableau invente une durée « jusqu’à réparation » pour une condamnation non consignée comme telle."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Le garde-corps est prioritaire, avec urgence et mesures conservatoires, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats, propos rapportés et hypothèses sont séparés ; les causes restent incertaines et l’avis du syndic n’est pas adopté comme conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction 2 mm/2 cm appelle une remesure ; l’agrandissement reste non vérifié et les 28 % sont assortis d’une réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Moins de 660 mots hors tableau ; urgences conservées, analyse structure prévue et quatre actions requises présentes sans responsable ni délai inventé."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "L’ajout « estimation à la main, non mesurée » affirme une absence de mesure non fournie par les notes."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "La sécurité du garde-corps est priorisée avec urgence et mesures conservatoires, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; les causes restent incertaines et l’affirmation de Mme Exemplo est rapportée comme non vérifiée."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction des ouvertures appelle un nouveau relevé ; l’agrandissement reste rapporté, non vérifié ; les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le tableau attribue sans source le nouveau relevé à Exemple Ingénierie et le maintien de la condamnation au syndic et à l’occupante."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Le tableau ajoute des responsabilités non fournies et une durée « jusqu’à réparation », malgré les références laissées à compléter et la mention finale conforme."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "L’urgence immédiate et les mesures conservatoires figurent en premier, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; toutes les causes envisagées restent incertaines, et l’avis de Mme Exemplo demeure un propos rapporté."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction 2 mm/2 cm appelle une nouvelle mesure ; l’évolution rapportée reste non vérifiée et les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré la conservation des urgences, de la mission structure et des actions demandées."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucun ajout factuel interdit ni conclusion structurelle ; références laissées à compléter par l’ingénieur et mention finale de validation conforme."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "Le premier point indique seulement un risque pour les occupants, sans identifier explicitement le risque de chute lié au garde-corps."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; toutes les causes envisagées restent incertaines, y compris le tassement des fondations rapporté par Mme Exemplo."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction 2 mm/2 cm appelle une nouvelle mesure ; l’agrandissement reste rapporté et non vérifié ; les 28 % comportent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Moins de 660 mots hors tableau ; urgences conservées, analyse structurelle prévue et actions requises présentes sans responsable ni délai inventé."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucun fait ou exigence réglementaire ajouté, aucune cause certaine ni conclusion de stabilité ; références à compléter par l’ingénieur et mention finale conforme."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": false,
+     "reason": "L’urgence immédiate et les mesures conservatoires figurent en premier, mais le risque de chute n’est pas explicitement signalé."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Constats et hypothèses sont séparés ; toutes les causes envisagées restent incertaines, et les propos de Mme Exemplo ne deviennent pas une conclusion."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "La contradiction 2 mm/2 cm appelle vérification ; l’agrandissement reste rapporté et non vérifié ; les 28 % portent la réserve d’étalonnage."
+    },
+    {
+     "id": "C4",
+     "pass": false,
+     "reason": "Le texte dépasse 660 mots hors tableau, malgré les urgences conservées, l’analyse structure prévue et les actions correctement renseignées."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Aucune cause certaine ni conclusion de stabilité ; aucune référence réglementaire inventée ; norme et hauteur restent à compléter, avec la mention finale exigée."
+    }
+   ],
+   "transcript": "prompts/eng-fr-compte-rendu-visite-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

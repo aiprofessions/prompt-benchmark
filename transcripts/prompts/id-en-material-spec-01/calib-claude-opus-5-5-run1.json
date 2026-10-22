@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-en-material-spec-01",
+ "model_key": "claude-opus-5-5",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Shows 12x14=168, 8x10=80, 15x20=300, 5x6=30 with arithmetic."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Order quantities 184.8 (rounded to 185), 88, 330, 33 sq ft."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flag 2 marks mudroom polished marble likely unsuitable: slip risk, dog-claw scratching, staining from water and salts."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Lists wet DCOF (ANSI A326.3), sealer and absorption, abrasion/wear layer, and acid/stain guidance to verify."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "States ratings are not given for named products; 0.5% absorption is cited as a general porcelain threshold only."
+  }
+ ]
+}

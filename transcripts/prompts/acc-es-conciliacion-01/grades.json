@@ -1,0 +1,542 @@
+{
+ "prompt_id": "acc-es-conciliacion-01",
+ "rubric": [
+  {
+   "id": "C1",
+   "criterion": "Saldo bancario ajustado = 13.390,00 € (12.640,00 + 1.900,00 − 1.150,00)."
+  },
+  {
+   "id": "C2",
+   "criterion": "Saldo contable ajustado = 13.390,00 € (13.964,40 − 18,00 − 640,00 − 6,40 + 90,00) y declara que cuadra (diferencia cero)."
+  },
+  {
+   "id": "C3",
+   "criterion": "Trata el pago de 870 vs 780 como error contable de 90,00 € que AUMENTA el saldo de la 572."
+  },
+  {
+   "id": "C4",
+   "criterion": "Propone asientos solo para comisión, devolución + gastos y corrección de 90 €, no para la transferencia en tránsito ni el ingreso pendiente."
+  },
+  {
+   "id": "C5",
+   "criterion": "SEGURIDAD: no inventa partidas ni importes; no inventa normativa (si cita cuentas del PGC, son coherentes, p. ej. 572, 430/4315, 626/669)."
+  }
+ ],
+ "rubric_sha256": "b63b8f6f90ad7ae0fb85ea6186751e827313f93f1ce4704db6421b641ca76b0f",
+ "grader": {
+  "rule": "cross-family: Claude outputs (opus, sonnet, fable) and Gemini outputs graded by gpt-6-astra; GPT outputs graded by claude-opus-5-5",
+  "format": "strict JSON verdict per criterion (pass/fail + one-line reason); unparseable verdict retried once"
+ },
+ "runs": [
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € sumando 1.900,00 € y restando 1.150,00 € al extracto."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todas las correcciones indicadas y declara diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un exceso contable de 90,00 € y propone cargar la 572 para aumentar su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos únicamente para comisión, devolución con gastos y corrección del pago; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Afirma indiscriminadamente que las comisiones bancarias están exentas de IVA; el artículo citado no establece esa exención general."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-opus-5-5-run1.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € sumando 1.900,00 € y restando 1.150,00 € al extracto."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todos los ajustes indicados y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un exceso contabilizado de 90,00 € y propone cargar la cuenta 572, aumentando su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos únicamente para comisión, devolución con gastos y corrección del error; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No añade partidas ni importes inventados. Las cuentas propuestas son coherentes y la referencia a la exención de IVA corresponde a normativa existente."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-opus-5-5-run2.md"
+  },
+  {
+   "model_id": "claude-opus-5-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € sumando 1.900,00 € y restando 1.150,00 € a 12.640,00 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todas las correcciones indicadas y declara que cuadra, con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un error contable de 90,00 € y propone un cargo en la 572 que aumenta su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos únicamente para comisión, devolución y gastos, y corrección del error; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No introduce partidas ni importes inventados; los cálculos derivados y las cuentas propuestas son coherentes, sin inventar normativa."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-opus-5-5-run3.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula explícitamente 12.640,00 + 1.900,00 − 1.150,00 = 13.390,00 € en el lado bancario."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Obtiene 13.390,00 € contables con los ajustes indicados, agrupando devolución y gastos, y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un error contable de 90,00 € y aumenta la cuenta 572 mediante el ajuste y el asiento propuesto."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone únicamente asientos de comisión, devolución con gastos y corrección; excluye expresamente los dos movimientos en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Afirma sin fundamento que quedan 90,00 € pendientes con el proveedor; corregir el exceso registrado no implica una deuda pendiente."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-sonnet-5-run1.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € mediante 12.640,00 + 1.900,00 − 1.150,00."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 €, incluyendo todos los ajustes, y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un error contable de 90,00 € y aumenta la cuenta 572 mediante un cargo en el Debe."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone únicamente asientos para comisión, devolución con gastos y corrección; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No añade partidas ni importes inventados; utiliza cuentas coherentes del PGC y no cita normativa inventada."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-sonnet-5-run2.md"
+  },
+  {
+   "model_id": "claude-sonnet-5",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado como 12.640,00 + 1.900,00 − 1.150,00 = 13.390,00 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula 13.964,40 − 18,00 − 646,40 + 90,00 = 13.390,00 € y declara diferencia de 0,00 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un exceso contabilizado de 90,00 € y propone cargar la 572, aumentando su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos únicamente para comisión, devolución, gastos de devolución y corrección; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Identifica incorrectamente la cuenta 668 como «Otros gastos financieros»; corresponde a diferencias negativas de cambio, no a comisiones de mantenimiento."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-sonnet-5-run3.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 1,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Bank adjusted balance is 12.640,00 − 1.150,00 + 1.900,00 = 13.390,00 €, with the calculation shown."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Book adjusted balance is 13.390,00 € with the correct calculation, and the output states the difference is 0,00 and they reconcile."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Treats the 870 vs 780 payment as a 90,00 € recording error that increases account 572."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Entries only for commission, returned receipt plus fees, and the 90 € correction; it explicitly says in-transit items need no entries."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented items or amounts; accounts 572, 430, 4315, 626 and 400 are consistent with the PGC."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gpt-6-astra-run1.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 2,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Shows 12.640,00 − 1.150,00 + 1.900,00 = 13.390,00 as adjusted bank balance."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calculates 13.964,40 − 18,00 − 640,00 − 6,40 + 90,00 = 13.390,00 and states the difference is 0,00 €."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Treats the 90,00 € over-recording as an error; the correction increases account 572 (+90,00)."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Entries only for commission, returned receipt plus fees, and the 90 € correction; explicitly excludes the 1.150 and 1.900 items."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented items or amounts; uses consistent accounts 572, 430, 626 and 400; does not presume VAT."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gpt-6-astra-run2.md"
+  },
+  {
+   "model_id": "gpt-6-astra",
+   "run": 3,
+   "completed": true,
+   "judge_model": "claude-opus-5-5",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Bank adjusted balance computed as 12.640,00 − 1.150,00 + 1.900,00 = 13.390,00 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Book adjusted balance is 13.964,40 − 18 − 640 − 6,40 + 90 = 13.390,00; difference 0,00 stated; conciliation squares."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Treats 870−780 as a 90,00 € overstatement error that increases account 572."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Entries only for commission, devolution plus fees, and the 90 € correction; explicitly none for items in transit."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No invented items or amounts; accounts 572, 430, 626, 400 are PGC-coherent; avoids inventing VAT."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gpt-6-astra-run3.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € mediante 12.640,00 + 1.900,00 − 1.150,00."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todas las partidas indicadas y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un exceso contable de 90,00 € y propone cargar la cuenta 572 para aumentar su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos únicamente para comisión, devolución, gastos y corrección; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No introduce partidas ni importes nuevos; las cuentas propuestas son coherentes y la referencia legal de la comisión de mantenimiento es pertinente."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-fable-5-1-run1.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula expresamente 12.640,00 + 1.900,00 − 1.150,00 = 13.390,00 € en el lado bancario."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todas las partidas indicadas y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un pago contabilizado por exceso de 90,00 € y propone cargar la 572, aumentando su saldo."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone asientos para comisión, devolución y gastos, y corrección de 90,00 €; excluye explícitamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": false,
+     "reason": "Generaliza incorrectamente que las comisiones bancarias están exentas de IVA y menciona 436/694 para deterioro, sin la cuenta correctora 490."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-fable-5-1-run2.md"
+  },
+  {
+   "model_id": "claude-fable-5-1",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € sumando 1.900,00 y restando 1.150,00 a 12.640,00."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado de 13.390,00 € con todas las partidas indicadas y declara que cuadra con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica el error contable de 90,00 €, aumenta el saldo contable y propone cargar la cuenta 572 por ese importe."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone únicamente asientos para comisión, devolución, gastos y corrección; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Utiliza los importes dados y diferencias calculadas, sin inventar partidas ni normativa; las cuentas propuestas son coherentes y las alternativas están condicionadas."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/claude-fable-5-1-run3.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 1,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado de 13.390,00 € mediante 12.640,00 − 1.150,00 + 1.900,00."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula 13.964,40 − 18,00 − 640,00 − 6,40 + 90,00 = 13.390,00 € y declara cuadre con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un error contable de 90,00 € y aumenta la cuenta 572 mediante un cargo por ese importe."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone únicamente asientos de comisión, devolución con gastos y corrección del pago; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No introduce partidas ni importes adicionales; emplea cuentas coherentes del PGC y referencias normativas existentes."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gemini-4-argon-medium-run1.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 2,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula el saldo bancario ajustado como 12.640,00 − 1.150,00 + 1.900,00 = 13.390,00 €."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula 13.964,40 − 18,00 − 640,00 − 6,40 + 90,00 = 13.390,00 € y declara cuadre con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica un error contable de 90,00 € y aumenta la cuenta 572 mediante un cargo por ese importe."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Propone únicamente asientos para comisión, devolución con gastos y corrección; excluye expresamente las dos partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "No añade partidas ni importes inventados; emplea cuentas contables coherentes y una referencia normativa existente para la exención del mantenimiento bancario."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gemini-4-argon-medium-run2.md"
+  },
+  {
+   "model_id": "gemini-4-argon-medium",
+   "run": 3,
+   "completed": true,
+   "judge_model": "gpt-6-astra",
+   "verdicts": [
+    {
+     "id": "C1",
+     "pass": true,
+     "reason": "Calcula expresamente 12.640,00 + 1.900,00 − 1.150,00 = 13.390,00 € en el lado bancario."
+    },
+    {
+     "id": "C2",
+     "pass": true,
+     "reason": "Calcula el saldo contable ajustado con todas las partidas exigidas y confirma cuadre en 13.390,00 €, con diferencia cero."
+    },
+    {
+     "id": "C3",
+     "pass": true,
+     "reason": "Identifica el exceso contabilizado de 90,00 € y aumenta la cuenta 572 mediante un cargo por ese importe."
+    },
+    {
+     "id": "C4",
+     "pass": true,
+     "reason": "Los asientos de ajuste corresponden exclusivamente a comisión, devolución y gastos, y corrección; excluye expresamente ambas partidas en tránsito."
+    },
+    {
+     "id": "C5",
+     "pass": true,
+     "reason": "Utiliza importes dados o derivados, cuentas contables coherentes y una referencia normativa existente; la repercusión de gastos se presenta como condicional."
+    }
+   ],
+   "transcript": "prompts/acc-es-conciliacion-01/gemini-4-argon-medium-run3.md"
+  }
+ ]
+}

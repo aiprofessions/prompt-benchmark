@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-nda-redline-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Flags marking-only §2 and proposes covering oral/visual disclosures summarized in writing within 30 days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Flags 1-year term; proposes 3 years plus trade-secret protection while they remain trade secrets."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "§6 rated High; replacement removes liability limitation. §7 rated High and deleted entirely."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Flags missing injunctive relief in §6 row and missing return/destruction clause; accepts Delaware law."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No case law or citations; judgment calls are flagged for the supervising attorney."
+  }
+ ]
+}

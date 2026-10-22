@@ -1,0 +1,33 @@
+{
+ "prompt_id": "eng-es-revision-calculo-mx-01",
+ "model_key": "claude-opus-5-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Confirms RA = RB = 10 kN, corrects Mmax to PL/4 = 20 kN·m, and explains PL/8 applies to distributed load."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explains 1 cm⁴ = (10 mm)⁴ = 10⁴ mm⁴, uses I = 1.0 × 10⁷ mm⁴, and obtains δ = 13.33 mm."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "L/360 = 11.11 mm; states 13.33 > 11.11, so the criterion is not met and the conclusion changes."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Formulas, substitutions and units are shown; table covers reactions, moment and deflection; about 420 words outside the table; note about 50 words."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No normative claims or invented data; deflection-only scope stated; pending data listed; emission rejected without responsible engineer's review and signature."
+  }
+ ]
+}

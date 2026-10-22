@@ -1,0 +1,40 @@
+{
+ "spec_id": "interior-designers-ffe-schedule-en",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:24:24+00:00",
+ "attempt": 1,
+ "skill_sha256": "03879137d6a927c65f631b69d2754fbb9b269428ed7ff81551a42e4242125a26",
+ "rubric_sha256": "eeadbfa66d32969297c2242b448d978eea04d8fcf0349b03628c502f7e5d29fd",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "All requested items appear with six-seat sectional, two chairs, two lamps, and walnut media console explicitly marked existing-reuse."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates an 18-inch border on every side and specifies the resulting 13 ft x 17 ft rug."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Explicitly excludes glass tabletops and velvet; requires verification of cleanability, durability, hair release, stability, and child-safe operation."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Restates $28,000 including tax and delivery and specifies November 23, 2026, minus buffer, using the 16-week upholstery lead time."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented brands, products, or model numbers; monetary allowances explicitly labeled estimates; performance ratings requested for verification rather than asserted."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"All requested items appear with six-seat sectional, two chairs, two lamps, and walnut media console explicitly marked existing-reuse.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates an 18-inch border on every side and specifies the resulting 13 ft x 17 ft rug.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Explicitly excludes glass tabletops and velvet; requires verification of cleanability, durability, hair release, stability, and child-safe operation.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Restates $28,000 including tax and delivery and specifies November 23, 2026, minus buffer, using the 16-week upholstery lead time.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"No invented brands, products, or model numbers; monetary allowances explicitly labeled estimates; performance ratings requested for verification rather than asserted.\"}]}"
+}

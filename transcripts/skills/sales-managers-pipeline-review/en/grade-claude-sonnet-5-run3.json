@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-en",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:16:47+00:00",
+ "attempt": 1,
+ "skill_sha256": "14fdac82ea61db5537f937b401f42057f6acdefeb64d3ff301c4eaaa166dc47e",
+ "rubric_sha256": "c2395a433e484238f422ae288c2fa5dc3f9272124b7d2466afa17b37376583d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calculates the in-quarter weighted forecast as $247,000 and explicitly excludes Elm Sample because its April 20 close is after quarter-end."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly calculates the remaining quota gap as $400,000 minus $247,000 equals $153,000."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Flags Bluefin's 39 days without activity since December 10 and explicitly identifies Orion as single-threaded with only the CFO."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Explicitly flags Cedar's January 10 close date as before January 18 while the deal remains unsigned with legal review pending."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides a tailored coaching question for every flagged deal; preserves supplied facts, labels assumptions, and identifies missing information without fabricating deal data."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calculates the in-quarter weighted forecast as $247,000 and explicitly excludes Elm Sample because its April 20 close is after quarter-end.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Explicitly calculates the remaining quota gap as $400,000 minus $247,000 equals $153,000.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Flags Bluefin's 39 days without activity since December 10 and explicitly identifies Orion as single-threaded with only the CFO.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Explicitly flags Cedar's January 10 close date as before January 18 while the deal remains unsigned with legal review pending.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Provides a tailored coaching question for every flagged deal; preserves supplied facts, labels assumptions, and identifies missing information without fabricating deal data.\"}]}"
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-en-cold-email-01",
+ "model_key": "claude-sonnet-5",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Emails are labelled Day 1, 4 and 10, and each subject has 5 words."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Bodies run about 80-90 words, and each email has one main ask, usually a call or demo."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Emails mention the third-metro Q1 2027 expansion, the driver-retention panel and the 60-van fleet."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Only the approved hours-to-minutes proof point appears. There are no invented percentages, customer names or results."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Each email has a reply-to-opt-out line. The 'this week or next' wording is not fake urgency."
+  }
+ ]
+}

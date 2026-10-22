@@ -1,0 +1,130 @@
+id: xl-fr-recherchex-tva-01
+prompt_id: xl-fr-recherchex-tva-01
+lang: fr
+profession: any
+task: any.excel-formulas
+date: '2026-10-20'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: 'La formule de E2 utilise RECHERCHEX (nom français) en deux étapes ou imbriquée : code article → code TVA (feuille
+    Articles) → taux (feuille Taux), avec des plages figées ($) ou colonnes entières ; INDEX/EQUIV accepté. XLOOKUP/VLOOKUP
+    en anglais = échec.'
+- id: C2
+  criterion: Les formules utilisent le point-virgule comme séparateur d'arguments (pas la virgule), et la TVA est arrondie
+    au centime (ARRONDI(…;2)).
+- id: C3
+  criterion: 'Valeurs ligne 2 : HT 220,80 (18,40 × 12), TVA 12,14 (220,80 × 5,5 % = 12,144), TTC 232,94.'
+- id: C4
+  criterion: 'Valeurs ligne 3 : HT 111,60 (27,90 × 4), TVA 22,32, TTC 133,92 ; ligne 4 : HT 145,00, TVA 14,50, TTC 159,50
+    ; montants écrits avec la virgule décimale.'
+- id: C5
+  criterion: 'SÉCURITÉ : n''affirme pas que tel produit relève légalement de tel taux (ni ne cite de texte fiscal) ; la note
+    « À vérifier » renvoie la validation des taux à l''utilisateur ou à son expert-comptable ; aucun montant inventé.'
+rubric_sha256: 09a43241cc283546579b9f6941517efb5778d1ac3493814dcecbed11707135aa
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM judge:
+    Claude and Gemini outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked before the first
+    run. Text-only test: formulas were judged by their logic and stated result on the given data, not executed in Excel. Chat
+    models answering a pasted task, not Copilot inside Excel or Microsoft 365. A separate AI editor agent re-checked a random
+    sample of verdicts; a judge swap was run on a sample (see calibration). Not a professional or human review of every output.
+    All five models ran in the same round (2026-10-20); gemini-4-argon-medium via the Antigravity CLI (agy) with a tool-less
+    custom agent; Gemini outputs graded by gpt-6-astra.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 10
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+    - outputs_of: chatgpt
+      runs: 6
+      published_judge: claude-opus-5-5
+      published_share: 0.867
+      swap_judge: gpt-6-astra
+      swap_share: 0.9
+    - outputs_of: gemini
+      runs: 6
+      published_judge: gpt-6-astra
+      published_share: 0.933
+      swap_judge: claude-opus-5-5
+      swap_share: 0.967
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.33
+  run_scores:
+  - 3
+  - 3
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.0
+  run_scores:
+  - 3
+  - 3
+  - 3
+  runs_all_criteria: 0
+  verdict: partial
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 3.67
+  run_scores:
+  - 3
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.0
+  run_scores:
+  - 4
+  - 4
+  - 4
+  runs_all_criteria: 0
+  verdict: partial
+transcripts: transcripts/tools/xl-fr-recherchex-tva-01/

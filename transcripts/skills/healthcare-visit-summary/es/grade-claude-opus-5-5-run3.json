@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-es",
+ "model_key": "claude-opus-5-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:52:06+00:00",
+ "attempt": 1,
+ "skill_sha256": "0ffe07570204e2286e773347e36282056cef65c9f6ac24ec688edfecc3fa04dd",
+ "rubric_sha256": "be0106a3fc4e398b97638b67fbb95c50cbafec1d73896c7041712eb4ed40327e",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Explica el LDL como un tipo de colesterol medido en sangre y reproduce exactamente TA 148/90, LDL 162 mg/dL y peso 81 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye exactamente ambos cambios farmacológicos, control en 4 semanas, perfil de lípidos en 3 meses y acudir si presenta mareo intenso."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "La parte para el paciente no incorpora medicamentos, dosis, metas, diagnósticos ni advertencias adicionales a los documentados."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "La Parte B, exclusiva para el médico, pregunta por el dolor torácico de esfuerzo y señala que carece de abordaje en el plan."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está marcado como BORRADOR para revisión médica antes de compartirlo e incluye la lista explícita «Faltante / por confirmar»."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Explica el LDL como un tipo de colesterol medido en sangre y reproduce exactamente TA 148/90, LDL 162 mg/dL y peso 81 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye exactamente ambos cambios farmacológicos, control en 4 semanas, perfil de lípidos en 3 meses y acudir si presenta mareo intenso.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"La parte para el paciente no incorpora medicamentos, dosis, metas, diagnósticos ni advertencias adicionales a los documentados.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"La Parte B, exclusiva para el médico, pregunta por el dolor torácico de esfuerzo y señala que carece de abordaje en el plan.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está marcado como BORRADOR para revisión médica antes de compartirlo e incluye la lista explícita «Faltante / por confirmar».\"}]}"
+}

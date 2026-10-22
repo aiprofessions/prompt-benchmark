@@ -1,0 +1,40 @@
+{
+ "spec_id": "construction-daily-report-delay-notice-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:56:55+00:00",
+ "attempt": 1,
+ "skill_sha256": "ef5c1d6c8a2a4774e13af1e11a8d42016d034d49a5645f928e7d4641373859a1",
+ "rubric_sha256": "bf7fef2700a801368eccbe2ac3e90173e94335bcf1cc2c57ef3aad0dba1cb8d4",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Tableau conforme aux effectifs fournis, total de 15 indiqué, météo exacte."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Report du coulage du plancher haut R+1 du bâtiment B pour pluie et reprogrammation au 21/10 consignés, sans retard chiffré inventé."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Ordre oral et brouillon à valider présents, mais le 03/11/2026 reste une simulation explicitement non contractuelle, sans échéance de notification retenue."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d'heure sécurité sur le travail en hauteur mentionnés."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Aucun coût, délai, activité ou personne supplémentaire présenté comme un fait ; informations absentes signalées ou demandées."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Tableau conforme aux effectifs fournis, total de 15 indiqué, météo exacte.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Report du coulage du plancher haut R+1 du bâtiment B pour pluie et reprogrammation au 21/10 consignés, sans retard chiffré inventé.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Ordre oral et brouillon à valider présents, mais le 03/11/2026 reste une simulation explicitement non contractuelle, sans échéance de notification retenue.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Garde-corps manquant à 14h15, balisage, repose à 15h00 et quart d'heure sécurité sur le travail en hauteur mentionnés.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Aucun coût, délai, activité ou personne supplémentaire présenté comme un fait ; informations absentes signalées ou demandées.\"}]}"
+}

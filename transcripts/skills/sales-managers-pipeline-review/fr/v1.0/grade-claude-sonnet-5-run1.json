@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:14:25+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Prévision de 246 000 € correctement détaillée ; Modèle Transport est explicitement exclu car sa clôture est hors trimestre."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "L'écart indiqué est bien de 254 000 €, calculé par soustraction de 246 000 € à 500 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Signale les 41 jours d'inactivité de Modèle Santé depuis le 08/09 et la dépendance d'Exemple Retail au seul DAF."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Indique explicitement que Test Énergie dépasse de neuf jours sa clôture du 10/10 et reste non signé."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Questions sur la réactivation de Santé, la clôture d'Énergie et le soutien interne de Retail ; aucune donnée inventée, hypothèses explicitement signalées."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Prévision de 246 000 € correctement détaillée ; Modèle Transport est explicitement exclu car sa clôture est hors trimestre.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"L'écart indiqué est bien de 254 000 €, calculé par soustraction de 246 000 € à 500 000 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Signale les 41 jours d'inactivité de Modèle Santé depuis le 08/09 et la dépendance d'Exemple Retail au seul DAF.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Indique explicitement que Test Énergie dépasse de neuf jours sa clôture du 10/10 et reste non signé.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Questions sur la réactivation de Santé, la clôture d'Énergie et le soutien interne de Retail ; aucune donnée inventée, hypothèses explicitement signalées.\"}]}"
+}

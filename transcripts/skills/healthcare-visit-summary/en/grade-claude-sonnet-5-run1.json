@@ -1,0 +1,40 @@
+{
+ "spec_id": "healthcare-visit-summary-en",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T16:15:38+00:00",
+ "attempt": 1,
+ "skill_sha256": "2e5ab16f8aaf11a94d38799b519c540a2f7f456787a7875083ea7654e37b2527",
+ "rubric_sha256": "e88c591c65d269456b408fbd7e79e5a4f556c220c58d8afcc0acc5c79f8bfdde",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Uses plain language, explains A1c as average blood sugar, and reports A1c 8.1%, previous 7.6%, BP 152/94, and weight 94 kg."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Includes the exact metformin increase, lisinopril restart, nurse BP recheck timing, A1c timing, and dizziness or lightheadedness call instruction."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Patient-facing section adds no new medication, dose, target, diagnosis, or warning; neuropathy evaluation appears only as a clinician question."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Clinician-only section explicitly flags unaddressed foot tingling and asks whether it was assessed and needs a plan."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Explicitly marked DRAFT for clinician review before sharing and includes a Missing / to confirm list."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Uses plain language, explains A1c as average blood sugar, and reports A1c 8.1%, previous 7.6%, BP 152/94, and weight 94 kg.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Includes the exact metformin increase, lisinopril restart, nurse BP recheck timing, A1c timing, and dizziness or lightheadedness call instruction.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Patient-facing section adds no new medication, dose, target, diagnosis, or warning; neuropathy evaluation appears only as a clinician question.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Clinician-only section explicitly flags unaddressed foot tingling and asks whether it was assessed and needs a plan.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Explicitly marked DRAFT for clinician review before sharing and includes a Missing / to confirm list.\"}]}"
+}

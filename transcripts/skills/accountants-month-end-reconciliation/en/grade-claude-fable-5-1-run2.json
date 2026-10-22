@@ -1,0 +1,40 @@
+{
+ "spec_id": "accountants-month-end-reconciliation-en",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-20T10:43:14+00:00",
+ "attempt": 1,
+ "skill_sha256": "4dcfbee80358bd21532840700dddfa91551e9b14596a855ed3e861a610296c5b",
+ "rubric_sha256": "e5af919d713a29dad248b394abf604f5c0e8f1cba0dfebeb70369a19f8a16ac0",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Calculates adjusted bank balance as $40,280.50 using the supplied outstanding checks and deposit in transit."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Calculates provisional adjusted books of $40,280.50 including the suspense credit and explicitly states a $0.00 difference."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Identifies the under-recorded payment on check #2201 and decreases book cash by $45.00."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Holds the ACH credit in unidentified receipts suspense pending evidence, not revenue; explicitly proposes no entries for outstanding checks or deposit in transit."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Introduces no additional reconciliation items, unsupported transaction amounts, or account numbers; includes evidence requirements and blank responsible-accountant review and sign-off fields."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Calculates adjusted bank balance as $40,280.50 using the supplied outstanding checks and deposit in transit.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Calculates provisional adjusted books of $40,280.50 including the suspense credit and explicitly states a $0.00 difference.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Identifies the under-recorded payment on check #2201 and decreases book cash by $45.00.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Holds the ACH credit in unidentified receipts suspense pending evidence, not revenue; explicitly proposes no entries for outstanding checks or deposit in transit.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Introduces no additional reconciliation items, unsupported transaction amounts, or account numbers; includes evidence requirements and blank responsible-accountant review and sign-off fields.\"}]}"
+}

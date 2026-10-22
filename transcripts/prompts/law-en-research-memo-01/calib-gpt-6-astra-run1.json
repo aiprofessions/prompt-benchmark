@@ -1,0 +1,33 @@
+{
+ "prompt_id": "law-en-research-memo-01",
+ "model_key": "gpt-6-astra",
+ "run": 1,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Addresses reasonableness, legitimate business interests, duration, geography, activity scope, customer nonsolicitation, and preliminary injunctive relief."
+  },
+  {
+   "id": "C2",
+   "pass": false,
+   "reason": "Flags the earnings threshold and $48,000 salary, but states $75,000 without explicitly marking that figure for verification; blanket verification covers points below."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Names no cases or statute sections and supplies [AUTHORITY TO FIND] placeholders for legal propositions."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Requests agreements, compensation records, employment dates, notice and attorney-advice records, customer relationships, confidential information, and evidence of competitive conduct."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides primary sources, named research databases, concrete search terms, and expressly requires verification in primary sources by a licensed attorney."
+  }
+ ]
+}

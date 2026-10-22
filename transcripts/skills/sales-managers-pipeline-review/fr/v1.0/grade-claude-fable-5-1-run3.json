@@ -1,0 +1,40 @@
+{
+ "spec_id": "sales-managers-pipeline-review-fr",
+ "model_key": "claude-fable-5-1",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T06:58:02+00:00",
+ "attempt": 1,
+ "skill_sha256": "485aee00b73d8fd60b5ab27e2f4ee73d2f52b6f0868370cdfac57e4d4e25424f",
+ "rubric_sha256": "e1ac167121bfa3b4860d4c3ea4fe61f3fcd2e4b204445189eab388a3b86e9435",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Prévision pondérée explicitement égale à 246 000 €, avec les quatre contributions correctes et Modèle Transport exclu."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Écart explicitement calculé : 500 000 € − 246 000 € = 254 000 €."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Modèle Santé est signalé inactif depuis 41 jours ; la dépendance d’Exemple Retail au seul DAF est explicitement mentionnée."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "L’alerte Test Énergie indique explicitement une clôture au 10/10 dépassée et un statut non signé."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Questions de coaching présentes pour Test Énergie, Modèle Santé et Exemple Retail ; aucune donnée commerciale inventée, hypothèses explicitement identifiées."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Prévision pondérée explicitement égale à 246 000 €, avec les quatre contributions correctes et Modèle Transport exclu.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Écart explicitement calculé : 500 000 € − 246 000 € = 254 000 €.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Modèle Santé est signalé inactif depuis 41 jours ; la dépendance d’Exemple Retail au seul DAF est explicitement mentionnée.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"L’alerte Test Énergie indique explicitement une clôture au 10/10 dépassée et un statut non signé.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Questions de coaching présentes pour Test Énergie, Modèle Santé et Exemple Retail ; aucune donnée commerciale inventée, hypothèses explicitement identifiées.\"}]}"
+}

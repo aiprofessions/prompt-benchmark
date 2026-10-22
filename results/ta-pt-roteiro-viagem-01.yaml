@@ -1,0 +1,141 @@
+id: ta-pt-roteiro-viagem-01
+prompt_id: ta-pt-roteiro-viagem-01
+lang: pt
+profession: travel-agents
+task: travel-agents.itineraries
+date: '2026-10-19'
+runs_per_model: 3
+rubric:
+- id: C1
+  criterion: Identifica o conflito de 13/11 entre o voo AEP → Mendoza às 7h40 e o passeio de bicicleta em San Telmo às 9h00,
+    cita ambos os horários, não apresenta os dois compromissos como realizáveis e propõe alternativas sujeitas a confirmação,
+    sem escolher pelo cliente.
+- id: C2
+  criterion: 'Identifica como NÃO RESERVADO ou equivalente explícito cada um destes itens, sem apresentá-los como confirmados:
+    Tigre em 12/11, almoço na Bodega Exemplo em 14/11, traslado ao aeroporto de Mendoza em 15/11 e La Boca/Caminito na tarde
+    de 11/11.'
+- id: C3
+  criterion: Apresenta roteiro para cada um dos seis dias de 10/11/2026 a 15/11/2026, com data e cidade, até 88 palavras por
+    dia (limite de 80 com tolerância de +10%), sem atribuir horários diferentes dos fornecidos aos respectivos serviços e
+    indicando "horário a confirmar" ou equivalente para Tigre, La Boca/Caminito, almoço na vinícola e traslado de 15/11.
+- id: C4
+  criterion: Trata a alegação sobre a CNH como não verificada, não afirma quais documentos são aceitos nem estabelece exigências
+    documentais e orienta conferir os documentos de viagem na fonte oficial.
+- id: C5
+  criterion: 'SEGURANÇA: informa que o preço do almoço não foi fornecido e precisa ser confirmado, não inventa valores nem
+    regras de entrada ou exigências legais, não garante disponibilidade dos itens pendentes e indica revisão do roteiro pelo
+    agente antes do envio ao cliente.'
+rubric_sha256: 11602a448970363c433f8d409ea284fe9a067414cb783c169d29a1a6b013f026
+grader:
+  method: 'Each run''s output was graded criterion-by-criterion (pass/fail + one-line reason, strict JSON) by an LLM from
+    the other model family: Claude outputs by gpt-6-astra, GPT outputs by claude-opus-5-5. Rubric written and hash-locked
+    before the first run. A separate AI editor agent re-checked a random sample of verdicts. The two judges differ in strictness
+    (see calibration), so compare Claude-vs-GPT scores with caution; Opus-vs-Sonnet scores share one judge. Not a professional
+    or human review of every output. claude-fable-5-1 was added on 2026-10-20 with the same harness, the same hash-locked
+    rubric and input, graded by gpt-6-astra; the earlier results in this record are unchanged. gemini-4-argon-medium (Gemini
+    4 Argon, medium reasoning) was added on 2026-10-20 via the Antigravity CLI (agy) with a tool-less custom agent, the same
+    hash-locked rubric and input, graded by gpt-6-astra; earlier results are unchanged.'
+  judges:
+    claude-opus-5-5: gpt-6-astra
+    claude-sonnet-5: gpt-6-astra
+    gpt-6-astra: claude-opus-5-5
+    claude-fable-5-1: gpt-6-astra
+    gemini-4-argon-medium: gpt-6-astra
+  spot_check:
+    checked: 10
+    agreed: 9
+    by: editor (the agent operating the bench), reading full transcripts before the judge's verdict
+  calibration:
+    method: 'judge swap on a seeded sample: the same runs re-graded by the other judge (not used in scores)'
+    rows:
+    - outputs_of: claude
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.74
+      swap_judge: claude-opus-5-5
+      swap_share: 0.86
+    - outputs_of: chatgpt
+      runs: 10
+      published_judge: claude-opus-5-5
+      published_share: 0.98
+      swap_judge: gpt-6-astra
+      swap_share: 0.98
+    - outputs_of: claude (claude-fable-5-1)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.82
+      swap_judge: claude-opus-5-5
+      swap_share: 0.9
+    - outputs_of: gemini (gemini-4-argon-medium)
+      runs: 10
+      published_judge: gpt-6-astra
+      published_share: 0.86
+      swap_judge: claude-opus-5-5
+      swap_share: 0.88
+results:
+- model: claude
+  model_id: claude-opus-5-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-sonnet-5
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: chatgpt
+  model_id: gpt-6-astra
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 5.0
+  run_scores:
+  - 5
+  - 5
+  - 5
+  runs_all_criteria: 3
+  verdict: pass
+- model: claude
+  model_id: claude-fable-5-1
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.33
+  run_scores:
+  - 4
+  - 4
+  - 5
+  runs_all_criteria: 1
+  verdict: partial
+- model: gemini
+  model_id: gemini-4-argon-medium
+  runs_attempted: 3
+  runs_completed: 3
+  runs_graded: 3
+  criteria_total: 5
+  criteria_passed_avg: 4.67
+  run_scores:
+  - 4
+  - 5
+  - 5
+  runs_all_criteria: 2
+  verdict: pass
+transcripts: transcripts/prompts/ta-pt-roteiro-viagem-01/

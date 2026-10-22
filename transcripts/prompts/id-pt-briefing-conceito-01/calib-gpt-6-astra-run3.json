@@ -1,0 +1,33 @@
+{
+ "prompt_id": "id-pt-briefing-conceito-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Relaciona linho branco e pelos do cachorro à manutenção e pergunta quais cuidados cotidianos aceitam, sem impor solução."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Condiciona eventual remoção à avaliação de engenheiro e esclarece que a opinião do síndico não confirma a função da parede."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Registra as duas interpretações dos R$ 180 mil, declara escopo não acordado e pergunta quais entregas o valor inclui."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Pergunta sobre trabalho durante a hospedagem e flexibilidade para o Natal sem início definido; a resposta está abaixo de 495 palavras."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa dados nem regras; identifica pé-direito como relato não verificado no levantamento dimensional pendente e termina exigindo validação pelo designer com o cliente."
+  }
+ ]
+}

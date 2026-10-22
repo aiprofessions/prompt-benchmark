@@ -1,0 +1,40 @@
+{
+ "spec_id": "travel-agents-itinerary-disclosures-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:22:30+00:00",
+ "attempt": 1,
+ "skill_sha256": "2984943e3fe8b610e32e71dc9e827bcfa8d41561c6edfae41df2f03b5e85a781",
+ "rubric_sha256": "d6b28ce786fc373ecdff6663dcaa7fe611130e4992b474b726071b2e94e311d9",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Cubre las fechas y las siete noches distribuidas correctamente, explicita traslados y regreso desde Málaga, sin coche de alquiler."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Incluye confirmación escrita de aptitud para celíacos, actividades con tiempo libre y un día de spa en Madrid."
+  },
+  {
+   "id": "C3",
+   "pass": false,
+   "reason": "Reproduce las condiciones exactas, pero añade que la decisión escrita sobre el seguro debe recabarse antes de presentar el viaje como confirmado."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Marca precios, horarios, trenes y entradas de la Alhambra como pendientes de confirmación; no proporciona valores concretos como hechos."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Termina con listas por reservar y confirmar, incluyendo consulta a fuentes oficiales de México y España sobre pasaporte, visa y entrada."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Cubre las fechas y las siete noches distribuidas correctamente, explicita traslados y regreso desde Málaga, sin coche de alquiler.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Incluye confirmación escrita de aptitud para celíacos, actividades con tiempo libre y un día de spa en Madrid.\"},{\"id\":\"C3\",\"pass\":false,\"reason\":\"Reproduce las condiciones exactas, pero añade que la decisión escrita sobre el seguro debe recabarse antes de presentar el viaje como confirmado.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Marca precios, horarios, trenes y entradas de la Alhambra como pendientes de confirmación; no proporciona valores concretos como hechos.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Termina con listas por reservar y confirmar, incluyendo consulta a fuentes oficiales de México y España sobre pasaporte, visa y entrada.\"}]}"
+}

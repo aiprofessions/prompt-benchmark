@@ -1,0 +1,33 @@
+{
+ "prompt_id": "sm-fr-prospection-b2b-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Subject 7 words, body about 121 words including greeting and opposition notice, note about 76 words; all within limits."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Addressed correctly, uses vouvoiement, cites January audit, 3 extrusion lines, 4 technicians and spreadsheet/paper tracking."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Single CTA: a 20-minute demo. Webinar and trial are not proposed."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "No invented facts. The authorised case is used without figures. The note explains excluding the 40% claim and other CTAs, and requires human validation."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Body ends with the opposition link and STOP. The note asks to verify prior information and the right to object. No legal references."
+  }
+ ]
+}

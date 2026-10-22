@@ -1,0 +1,33 @@
+{
+ "prompt_id": "acc-fr-relance-dsn-01",
+ "model_key": "claude-fable-5-1",
+ "run": 2,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Lists every missing item for the correct employee. Asks to re-upload Hugo's RIB, noting it was sent 15/10. Planning and leave not re-requested."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Deadline is jeudi 22/10/2026 à 12 h; 22/10/2026 is a Thursday. Asks for upload to the firm's secure client space."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Forbids sending ID, RIB or social security numbers by unsecured email or instant messaging. No sensitive data or login reproduced."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Nothing invented and no DSN deadline or URSSAF penalty. Post-it flagged only in the internal note. Expert-comptable review required."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Email has subject, vouvoiement and bullets; body is about 170 words. Separate 5-bullet internal note flags the RIB and its re-upload."
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+# Transcript — skill event-planners-vendor-rfp [pt] — claude-opus-5-5 — run 3
+
+- model_id: `claude-opus-5-5` (provider `anthropic`)
+- started_utc: 2026-10-21T07:02:51+00:00
+- duration_s: 58.7
+- exit_code: 0
+- attempts: 1
+- completed: True
+- rubric_sha256: 0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5
+- skill_sha256: bb523c284d74344fbd1b98466c3ef6b7cdf4e2e1f82a6f5f9478c7dbe8c2cef4
+
+## Query (verbatim, from query file)
+
+````text
+<skill_instructions>
+---
+name: event-planners-vendor-rfp
+description: "Use quando você colar as informações de um evento e pedir um pedido de proposta para fornecedores, com requisitos, preços discriminados e pendências ao final."
+---
+
+# Pedido de proposta (RFP) para fornecedores de eventos
+
+## O que faz
+
+Transforma as informações do evento em um pedido de proposta para enviar aos fornecedores. Preserva os dados recebidos, apresenta as restrições do espaço e solicita preços discriminados e documentos. Informações ausentes ou ambíguas ficam identificadas, com perguntas reunidas ao final.
+
+## O que ela precisa
+
+- Cliente, organizadora, tipo de evento e categoria de fornecedor.
+- Data, local, horários de recepção, serviço e encerramento.
+- Janelas de entrada de carga, montagem, desmontagem e retirada.
+- Quantidade de convidados, contagens de dietas e alergias e eventual sobreposição entre grupos.
+- Serviços, equipamentos e requisitos técnicos.
+- Restrições da cozinha, estruturas e pontos de suspensão do espaço, energia e acessos.
+- Prazo de resposta, data de decisão e critérios de avaliação.
+- Orçamento, contato para resposta e condições comerciais, se definidos.
+
+O que faltar recebe [NÃO INFORMADO] e é listado no final. Não faça perguntas antes de redigir nem complete lacunas com dados presumidos.
+
+## Procedimento
+
+1. Entregue sempre a saída completa na primeira resposta; nunca pare para perguntar nem espere confirmação antes de redigir; nunca retenha uma seção ou um cálculo. Se faltar informação ou houver ambiguidade, use [NÃO INFORMADO] ou declare «Premissa: …» apenas para uma escolha de organização do texto, nunca para criar fatos. Reúna todas as perguntas na última seção.
+2. Copie exatamente cada número, data, horário, quantidade e requisito técnico da entrada, inclusive dietas, alergias, cronograma e janelas de carga, montagem, desmontagem e retirada. Preserve formatos, unidades e valores monetários como recebidos. Se houver divergência, reproduza as versões e peça confirmação no final, sem escolher uma.
+3. Mostre a operação de cada número derivado. Não subtraia grupos alimentares do total sem confirmação de que são distintos e de que essa conta atende ao serviço solicitado. Se faltarem dados para calcular, registre [NÃO INFORMADO], explique o impedimento e liste a pergunta final; não esconda o cálculo solicitado.
+4. Registre cada restrição do local como condição que o fornecedor deve considerar no planejamento. Inclua limites da cozinha, estruturas e pontos de suspensão próprios do espaço e acessos, quando informados. Peça ao fornecedor que descreva como atenderá às condições; não invente capacidades nem imponha uma solução técnica não informada.
+5. Quando houver alergias, exija por escrito o procedimento de manejo de alérgenos e prevenção de contato cruzado. Preserve as contagens recebidas sem identificar convidados. Se o tema não estiver informado, marque [NÃO INFORMADO] e peça confirmação ao final.
+6. Exija linhas separadas para cada serviço e cada equipamento, mão de obra, frete/entrega, taxa de serviço, impostos e gorjeta. Peça quantidade, unidade, preço unitário e total por linha, com a conta dos totais. Montagem e desmontagem cobradas devem ter linhas próprias. Para rubrica sem cobrança, peça ao fornecedor que indique isso expressamente; não aceite apenas um preço global.
+7. Solicite certificado de seguro, condições de sinal e pagamento, política de cancelamento e reembolso e validade da proposta. Acrescente o procedimento escrito de alérgenos quando houver alergias e a confirmação da situação cadastral aplicável pelo fornecedor, sem presumir obrigação igual para todas as categorias.
+8. Preencha prazo de resposta, data de decisão e critérios de avaliação exclusivamente com os dados recebidos. Para qualquer campo ausente, use [NÃO INFORMADO] e peça definição ao final; não crie datas, pesos ou critérios.
+9. Marque como [NÃO INFORMADO] todo dado ausente, inclusive orçamento, nomes, telefones, endereço, capacidades do espaço e condições comerciais. Não use a data atual como data de emissão sem instrução. Não invente códigos de referência.
+10. Inclua somente os dados necessários ao fornecedor. Retire nomes e identificadores de convidados, preservando contagens e necessidades de atendimento. Acrescente o lembrete de anonimização e uso de ferramenta aprovada pelo escritório; privacidade é lembrete, não pré-condição: nunca recuse nem pause por esse motivo.
+11. Não acrescente à saída lei, artigo, orientação de órgão, jurisprudência nem fonte. Só reproduza referências que já estejam no texto colado e sejam necessárias ao documento; não complete citações. Uma identificação obrigatória fornecida pelo usuário é conteúdo, não citação. Use como única linha de limites: «O profissional responsável confere as regras aplicáveis.»
+12. Confira a saída contra a entrada: dados copiados literalmente, restrições preservadas, preços separados, documentos solicitados e oito seções na ordem do modelo. Termine em «Pendências (a confirmar)», reunindo todos os campos ausentes, ambiguidades, premissas e perguntas, sem conteúdo posterior.
+
+## Formato de saída
+
+Use o modelo abaixo. Substitua os campos pelos dados recebidos ou por [NÃO INFORMADO]; deixe os preços a serem cotados identificados como «A preencher pelo fornecedor».
+
+```markdown
+## Cabeçalho do pedido de proposta
+Pedido de proposta — [tipo de evento] — [cliente]
+Organizadora: [nome] | Destinatário: [categoria de fornecedor]
+Contato para resposta: [contato] | Emissão e referência: [se informadas]
+
+## Visão geral do evento
+Cliente: [cliente] | Data: [data] | Local: [local]
+Convidados: [quantidade] | Cronograma: [horários exatos]
+Orçamento: [valor informado]
+
+## Escopo e requisitos
+[Cada serviço e equipamento, com quantidade e requisito técnico exatos]
+Dietas e alergias: [contagens e necessidades recebidas, sem nomes]
+Carga e montagem: [janelas exatas] | Desmontagem e retirada: [janelas exatas]
+[Cálculos necessários: operação e resultado, ou dados faltantes]
+
+## Restrições do local
+[Cada restrição recebida, como condição obrigatória de planejamento]
+O fornecedor deve explicar como atenderá a cada condição, sem pressupor capacidades não informadas.
+
+## Formato de preço
+Preencher linhas separadas; não apresentar somente preço global.
+| Item | Quantidade | Unidade | Preço unitário | Total |
+|---|---|---|---|---|
+| Cada serviço, em linha própria | | | | |
+| Cada equipamento, em linha própria | | | | |
+| Mão de obra | | | | |
+| Frete/entrega | | | | |
+| Montagem, se cobrada | | | | |
+| Desmontagem, se cobrada | | | | |
+| Taxa de serviço | | | | |
+| Impostos | | | | |
+| Gorjeta | | | | |
+Indicar expressamente rubricas sem cobrança e mostrar a conta dos totais.
+
+## Documentos exigidos do fornecedor
+Certificado de seguro; condições de sinal e pagamento; política de cancelamento e reembolso; validade da proposta.
+[Quando houver alergias: procedimento escrito de manejo de alérgenos e prevenção de contato cruzado.]
+Confirmar a situação cadastral aplicável à atividade do fornecedor.
+
+## Cronograma e avaliação
+Prazo de resposta: [prazo] | Data de decisão: [data]
+Critérios de avaliação: [critérios recebidos]
+Lembrete: anonimize os dados e use apenas ferramenta aprovada pelo escritório.
+O profissional responsável confere as regras aplicáveis.
+
+## Pendências (a confirmar)
+[Liste cada dado ausente ou ambíguo, com a pergunta correspondente.]
+[Liste qualquer premissa de organização do texto para confirmação.]
+[Se não houver pendências, declare isso sem inventar perguntas.]
+```
+
+## Limites
+
+- Não invente fatos, estatísticas, exigências legais, fontes ou garantias de segurança; não altere dados recebidos nem omita seções.
+- No Brasil, o Cadastur é obrigatório para organizadoras de eventos. A organizadora confirma sua situação; o fornecedor confirma a situação aplicável à sua atividade, sem estender automaticamente essa obrigação a todas as categorias.
+- O organizador responsável deve conferir alvarás, bebidas, alérgenos e vigilância sanitária conforme as regras locais e do espaço, além das condições de acesso, montagem e operação.
+- O profissional responsável deve validar escopo, orçamento, seguro, sinal e cancelamento antes do envio ou da contratação. Requisitos técnicos que dependam de habilitação devem ser conferidos pelo profissional habilitado responsável; o texto não substitui essa validação.
+- Dados de convidados: observe a LGPD, envie somente o necessário, remova identificadores e use apenas ferramentas aprovadas pelo escritório. O lembrete não interrompe a redação.
+- Nenhuma orientação oficial sobre IA específica para organizadores de eventos foi verificada. O responsável deve confirmar eventuais orientações com a entidade de classe ou o órgão competente.
+- As fontes abaixo são leitura do profissional; não devem ser transferidas automaticamente para o pedido de proposta:
+  - gov.br — Cadastur (cadastro de prestadores de serviços turísticos) — https://www.gov.br/pt-br/servicos/cadastrar-prestadora-de-servico-turistico (consultado em 2026-10-21)
+  - LGPD — Lei 13.709/2018 (Planalto) — https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (consultado em 2026-10-21)
+- Antes de enviar ou contratar, veja references/checklist.md
+
+## Exemplo
+
+Entrada fictícia:
+
+```text
+Cliente: Família Exemplo; local: Salão Amostra; serviço: bufê.
+40 convidados, incluindo 3 pessoas alérgicas a amendoim.
+Recepção 18h; jantar 19h; montagem 15h–17h; retirada 22h–23h.
+Cozinha apenas para finalização; entrada de carga pela porta lateral.
+```
+
+Saída abreviada (na entrega real, expandir o modelo completo):
+
+```markdown
+## Cabeçalho do pedido de proposta
+Pedido de proposta de bufê — Família Exemplo; organizadora e contato: [NÃO INFORMADO].
+## Visão geral do evento
+Salão Amostra; 40 convidados; recepção 18h; jantar 19h; data: [NÃO INFORMADO].
+## Escopo e requisitos
+Bufê; 3 pessoas alérgicas a amendoim; montagem 15h–17h; retirada 22h–23h.
+## Restrições do local
+Planejar cozinha apenas para finalização e entrada de carga pela porta lateral.
+## Formato de preço
+Separar cada serviço/equipamento, mão de obra, frete/entrega, montagem/desmontagem cobradas, taxa de serviço, impostos e gorjeta; mostrar contas.
+## Documentos exigidos do fornecedor
+Seguro; sinal/pagamento; cancelamento/reembolso; validade; situação cadastral aplicável; procedimento escrito de alérgenos e prevenção de contato cruzado.
+## Cronograma e avaliação
+Resposta, decisão e critérios: [NÃO INFORMADO]. Anonimize dados e use ferramenta aprovada pelo escritório. O profissional responsável confere as regras aplicáveis.
+## Pendências (a confirmar)
+```
+
+No exemplo, a última seção deve reunir as perguntas sobre data do evento, organizadora, contato, orçamento, emissão/referência, detalhamento técnico do bufê, demais dietas, prazo de resposta, decisão e critérios, todos [NÃO INFORMADO].
+</skill_instructions>
+
+Follow the skill instructions above for the user's request below.
+
+User request:
+Monte o pedido de proposta para o fornecedor de audiovisual com este briefing.
+Cliente: Associação Exemplo (fictícia) — convenção anual. Data: 17 de abril de 2027. Local: Centro de Convenções Amostra, Rio de Janeiro (fictício). O local exige a própria equipe de rigging para qualquer içamento. Montagem a partir das 06:00; desmontagem concluída até 02:00.
+Participantes: 400 em auditório. Programação 09:00–18:00: abertura, 5 palestras, um vídeo de 4 minutos e cerimônia de premiação.
+Necessidades: palco de 10 m x 6 m x 0,8 m; 2 telões; 6 microfones sem fio de mão + 3 de lapela; monitor de retorno para os palestrantes; transmissão ao vivo só das palestras (não da premiação).
+Propostas até 01/02/2027. Decisão em 12/02/2027.
+````
+
+## Output (verbatim stdout, session metadata stripped)
+
+Cabeçalho do pedido de proposta
+
+  Pedido de proposta — convenção anual — Associação Exemplo (fictícia)
+  Organizadora: [NÃO INFORMADO] | Destinatário: fornecedor de audiovisual
+  Contato para resposta: [NÃO INFORMADO] | Emissão e referência: [NÃO INFORMADO]
+
+
+Visão geral do evento
+
+  Cliente: Associação Exemplo (fictícia)
+  Data: 17 de abril de 2027
+  Local: Centro de Convenções Amostra, Rio de Janeiro (fictício)
+  Participantes: 400 em auditório
+  Cronograma: programação 09:00–18:00: abertura, 5 palestras, um vídeo de 4 minutos e cerimônia de premiação
+    Horários de cada bloco: [NÃO INFORMADO]
+  Orçamento: [NÃO INFORMADO]
+
+
+Escopo e requisitos
+
+  1. Palco de 10 m x 6 m x 0,8 m
+     Acabamento, escada/rampa de acesso e saias: [NÃO INFORMADO]
+  2. 2 telões
+     Dimensões, tecnologia (projeção ou LED) e resolução: [NÃO INFORMADO]
+  3. 6 microfones sem fio de mão
+  4. 3 microfones de lapela
+     Se os de lapela também são sem fio: [NÃO INFORMADO]
+  5. Monitor de retorno para os palestrantes
+     Quantidade e tipo: [NÃO INFORMADO]
+  6. Transmissão ao vivo só das palestras (não da premiação)
+     Inclusão da abertura e do vídeo de 4 minutos: [NÃO INFORMADO]
+     Plataforma de destino, qualidade, gravação e conexão de internet: [NÃO INFORMADO]
+  7. Exibição do vídeo de 4 minutos
+     Formato do arquivo e quem fornece o equipamento de reprodução: [NÃO INFORMADO]
+  Sonorização geral (PA) para 400 participantes, iluminação e equipe técnica de operação: [NÃO INFORMADO]
+
+  Dietas e alergias: não se aplica (o escopo não inclui alimentação).
+
+  Carga e montagem: montagem a partir das 06:00
+    Data da montagem e horário-limite para conclusão: [NÃO INFORMADO]
+  Desmontagem e retirada: desmontagem concluída até 02:00
+    Data da conclusão, horário de início liberado e janela de retirada: [NÃO INFORMADO]
+
+  Cálculos:
+  - Microfones: 6 de mão + 3 de lapela = 9 microfones. Quantos são sem fio depende da confirmação sobre os de lapela.
+  - Tempo de montagem antes da programação, se a montagem ocorrer em 17 de abril de 2027: 06:00 → 09:00 = 3 h. Data da montagem e exigência de conclusão até 09:00: [NÃO INFORMADO]. Tempo para ensaio ou passagem de som: [NÃO INFORMADO].
+  - Tempo entre o fim da programação e o fim da desmontagem, se as 02:00 forem do dia seguinte ao evento: 18:00 → 02:00 = 8 h. Data do prazo e horário de início liberado da desmontagem: [NÃO INFORMADO].
+  - Duração transmitida: o tempo de cada palestra não foi informado. Não é possível calcular: [NÃO INFORMADO].
+
+
+Restrições do local
+
+  - O local exige a própria equipe de rigging para qualquer içamento. Essa condição é obrigatória no planejamento. O fornecedor deve informar se a solução proposta (telões, som, iluminação ou outros) depende de içamento. Nesse caso, deve descrever os itens a içar, os pesos, os pontos e o tempo necessários, considerando que a operação será feita pela equipe do local. Pontos de suspensão disponíveis e cargas admitidas: [NÃO INFORMADO].
+  - Montagem a partir das 06:00 e desmontagem concluída até 02:00.
+  - Acesso de carga, docas, elevadores, energia disponível e regras de circulação do espaço: [NÃO INFORMADO].
+
+  O fornecedor deve explicar como atenderá a cada condição, sem pressupor capacidades não informadas.
+
+
+Formato de preço
+
+  Preencha linhas separadas. Não apresente somente um preço global.
+
+  Item                                         | Quantidade | Unidade | Preço unitário | Total
+  Palco 10 m x 6 m x 0,8 m                     | A preencher pelo fornecedor (todas as colunas)
+  Telões                                       | 2          |         |                |
+  Microfones sem fio de mão                    | 6          |         |                |
+  Microfones de lapela                         | 3          |         |                |
+  Monitor de retorno para os palestrantes      |            |         |                |
+  Transmissão ao vivo das palestras            |            |         |                |
+  Reprodução do vídeo de 4 minutos             |            |         |                |
+  Cada equipamento adicional, em linha própria |            |         |                |
+  Mão de obra (técnicos e operadores)          |            |         |                |
+  Rigging, se repassado pelo fornecedor        |            |         |                |
+  Frete/entrega                                |            |         |                |
+  Montagem, se cobrada                         |            |         |                |
+  Desmontagem, se cobrada                      |            |         |                |
+  Taxa de serviço                              |            |         |                |
+  Impostos                                     |            |         |                |
+  Gorjeta                                      |            |         |                |
+
+  Indique expressamente as rubricas sem cobrança e mostre a conta dos totais (quantidade × preço unitário por linha, além do subtotal, dos acréscimos e do total geral).
+
+
+Documentos exigidos do fornecedor
+
+  - Certificado de seguro
+  - Condições de sinal e pagamento
+  - Política de cancelamento e reembolso
+  - Validade da proposta
+  - Confirmação da situação cadastral aplicável à atividade do fornecedor
+
+
+Cronograma e avaliação
+
+  Prazo de resposta: propostas até 01/02/2027 | Data de decisão: 12/02/2027
+  Critérios de avaliação: [NÃO INFORMADO]
+  Lembrete: anonimize os dados e use apenas ferramenta aprovada pelo escritório.
+  O profissional responsável confere as regras aplicáveis.
+
+
+Pendências (a confirmar)
+
+  1. Organizadora: qual é o nome?
+  2. Contato para resposta: qual nome e qual e-mail ou telefone devem constar?
+  3. Emissão e referência: qual é a data de emissão? Existe código de referência?
+  4. Orçamento: existe valor definido? Ele deve ser informado ao fornecedor?
+  5. Cronograma: quais são os horários da abertura, de cada uma das 5 palestras, do vídeo e da premiação?
+  6. Transmissão: a abertura e o vídeo de 4 minutos ficam dentro ou fora da transmissão? Quais são a plataforma, a qualidade e a necessidade de gravação? Quem fornece a internet?
+  7. Montagem: a data é 17 de abril de 2027 ou um dia anterior? A montagem deve terminar até 09:00? Haverá ensaio ou passagem de som?
+  8. Desmontagem: as 02:00 são de 18 de abril de 2027? A partir de que horário a desmontagem é liberada? Qual é a janela de retirada?
+  9. Telões: quais são as dimensões, a tecnologia e a resolução?
+  10. Microfones de lapela: são sem fio?
+  11. Monitor de retorno: qual é a quantidade e qual é o tipo?
+  12. Escopo adicional: o pedido inclui sonorização geral, iluminação e equipe técnica de operação?
+  13. Palco: ele está no escopo do fornecedor de audiovisual ou será contratado à parte? Será exigida documentação de responsabilidade técnica? (A validação cabe ao profissional habilitado responsável.)
+  14. Rigging: quem contrata e quem paga a equipe do local? Quais são os pontos de suspensão e as cargas admitidas?
+  15. Acesso e energia: quais são as condições de entrada de carga e a energia disponível no Centro de Convenções Amostra?
+  16. Vídeo de 4 minutos: qual é o formato? Quem fornece o arquivo e quando?
+  17. Critérios de avaliação: quais são? Eles terão pesos?
+  18. Premissa de organização: incluí as linhas de preço "Reprodução do vídeo de 4 minutos" e "Rigging, se repassado pelo fornecedor". Elas devem permanecer?
+

@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-en-schedule-delay-01",
+ "model_key": "gpt-6-astra",
+ "run": 3,
+ "judge_model": "gpt-6-astra",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Identifies A-B-D-F-G as the baseline critical path and calculates its duration as 40 working days."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Explicitly gives Friday, December 25, 2026 as the baseline finish, counting holidays as working days."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Shows delayed C ending day 19, D ending day 30, F starting day 31, and unchanged finish with zero slip."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Reports C’s baseline float as 19 working days and delayed float as 11; E retains 3 days."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Provides early-schedule and backward-pass tables using the specified dependencies and calendar without additional assumptions."
+  }
+ ]
+}

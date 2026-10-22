@@ -1,0 +1,45 @@
+id: re-en-follow-up-01
+lang: en
+translation_key: re-follow-up
+title: Open-house follow-ups from CRM notes, one per lead
+scenario: Three open-house visitors, three different situations. Get a short text and email for each that uses what they actually
+  said, respects 'don't call me', and answers a school question without steering.
+profession: real-estate-agents
+task: real-estate-agents.client-follow-up
+tools: []
+model: claude
+tested_with: claude-opus-5-5
+tested_date: '2026-10-19'
+jurisdictions:
+- US
+prompt: 'Write open-house follow-ups for each lead below: one SMS (max 320 characters) and one short email (max 120 words)
+  per lead.
+
+  Rules:
+
+  - Reference something specific each lead said. No pressure tactics.
+
+  - Respect stated contact preferences.
+
+  - Do not state prices, mortgage rates or property facts that are not in the notes.
+
+  - Fair housing: do not characterize neighborhoods or schools as good/bad or describe who lives there; point to objective
+  sources instead.
+
+  Leads:
+
+  [Paste your CRM notes for each lead: name, what they said, preferred contact, constraints]
+
+  '
+sample_input: 'Open house: 48 Example Court (fictional), Sunday.
+
+  1) Priya Sample — pre-approved, loved the backyard, asked whether the HOA allows a fence. Prefers text.
+
+  2) Marcus Example — "just looking, please don''t call me", wants email only. Asked about the age of the water heater (unknown
+  to agent).
+
+  3) The Testa family (fictional) — asked "Is it a good school area?" Relocating in spring. Prefer email.
+
+  '
+page: https://aiprofessions.ai/real-estate-agents/prompts/#re-en-follow-up-01
+results_file: results/re-en-follow-up-01.yaml

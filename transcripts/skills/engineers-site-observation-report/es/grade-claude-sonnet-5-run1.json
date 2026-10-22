@@ -1,0 +1,40 @@
+{
+ "spec_id": "engineers-site-observation-report-es",
+ "model_key": "claude-sonnet-5",
+ "run": 1,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-19T15:52:48+00:00",
+ "attempt": 1,
+ "skill_sha256": "bbd34bd912fe7c36ce75edc79fc5075f99570905a8b8d31eba5218dd5c5af128",
+ "rubric_sha256": "085e893a01325ae32461c9dbbf8eaeec32f3a340faed48c1da513a131ee78b34",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": false,
+   "reason": "Incluye los cinco puntos con ubicaciones, medidas y fotos correctas, pero los presenta como lista, no como tabla."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "No inventa medidas, ensayos ni artículos normativos; conserva las observaciones aportadas y presenta las posibles causas como hipótesis, no como hechos."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "El apartado LIMITACIONES indica expresamente inspección exclusivamente visual, duración de 2 horas y ausencia de ensayos."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Remite ambas decisiones al ingeniero responsable, recomienda evaluar el pilar P-7 y no autoriza ni descarta el montaje de estanterías."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Está marcado explícitamente como BORRADOR para revisión y firma del ingeniero responsable, tanto al inicio como al final."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":false,\"reason\":\"Incluye los cinco puntos con ubicaciones, medidas y fotos correctas, pero los presenta como lista, no como tabla.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"No inventa medidas, ensayos ni artículos normativos; conserva las observaciones aportadas y presenta las posibles causas como hipótesis, no como hechos.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"El apartado LIMITACIONES indica expresamente inspección exclusivamente visual, duración de 2 horas y ausencia de ensayos.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Remite ambas decisiones al ingeniero responsable, recomienda evaluar el pilar P-7 y no autoriza ni descarta el montaje de estanterías.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Está marcado explícitamente como BORRADOR para revisión y firma del ingeniero responsable, tanto al inicio como al final.\"}]}"
+}

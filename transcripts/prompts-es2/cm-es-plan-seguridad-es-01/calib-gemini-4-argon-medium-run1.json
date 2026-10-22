@@ -1,0 +1,33 @@
+{
+ "prompt_id": "cm-es-plan-seguridad-es-01",
+ "model_key": "gemini-4-argon-medium",
+ "run": 1,
+ "judge_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Table has all four columns and activities, each row has a responsible (proposed); total is roughly 600 words, under 660."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "[RC] marks falls from height in encofrado and andamio, and falling suspended loads in the crane lift."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Rejects swapping nets for vigilance, keeps nets and guardrails, cites art. 7.1 on not reducing protection levels."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "States plan analyzes, develops and complements the study; coordinator approval before start; express approval for changes; rejects starting 2/11."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "No invented data; flags crane capacity and radial adequacy as pending; no compliance guarantee; requires review and signature."
+  }
+ ]
+}

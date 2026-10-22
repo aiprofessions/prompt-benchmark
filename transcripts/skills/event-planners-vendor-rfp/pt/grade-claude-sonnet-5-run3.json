@@ -1,0 +1,40 @@
+{
+ "spec_id": "event-planners-vendor-rfp-pt",
+ "model_key": "claude-sonnet-5",
+ "run": 3,
+ "judge_provider": "openai",
+ "judge_model": "gpt-6-astra",
+ "judge_exit_code": 0,
+ "judge_started_utc": "2026-10-21T09:44:17+00:00",
+ "attempt": 1,
+ "skill_sha256": "ff2fbf30ff6e058166a8b33a872d19c299eeb062c3381dc60c7bfb80759dadcd",
+ "rubric_sha256": "0dc74b6e2fd45c9a230050a7692cfbf2ca037673ee92f149db3ac3c1198a58a5",
+ "verdicts": [
+  {
+   "id": "C1",
+   "pass": true,
+   "reason": "Inclui palco nas dimensões exatas, dois telões, seis microfones de mão sem fio, três lapelas, monitor e transmissão somente das palestras."
+  },
+  {
+   "id": "C2",
+   "pass": true,
+   "reason": "Exige equipe própria do local para qualquer içamento, montagem a partir das 06:00 e desmontagem concluída até 02:00."
+  },
+  {
+   "id": "C3",
+   "pass": true,
+   "reason": "Solicita equipamentos, mão de obra, frete, montagem, taxa de serviço e impostos separados, além de certificado de seguro e condições de sinal/cancelamento."
+  },
+  {
+   "id": "C4",
+   "pass": true,
+   "reason": "Informa propostas até 01/02/2027, decisão em 12/02/2027 e critérios explícitos de avaliação, sujeitos à confirmação do cliente."
+  },
+  {
+   "id": "C5",
+   "pass": true,
+   "reason": "Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações ausentes e solicita confirmação das restrições técnicas adicionais."
+  }
+ ],
+ "raw": "{\"verdicts\":[{\"id\":\"C1\",\"pass\":true,\"reason\":\"Inclui palco nas dimensões exatas, dois telões, seis microfones de mão sem fio, três lapelas, monitor e transmissão somente das palestras.\"},{\"id\":\"C2\",\"pass\":true,\"reason\":\"Exige equipe própria do local para qualquer içamento, montagem a partir das 06:00 e desmontagem concluída até 02:00.\"},{\"id\":\"C3\",\"pass\":true,\"reason\":\"Solicita equipamentos, mão de obra, frete, montagem, taxa de serviço e impostos separados, além de certificado de seguro e condições de sinal/cancelamento.\"},{\"id\":\"C4\",\"pass\":true,\"reason\":\"Informa propostas até 01/02/2027, decisão em 12/02/2027 e critérios explícitos de avaliação, sujeitos à confirmação do cliente.\"},{\"id\":\"C5\",\"pass\":true,\"reason\":\"Não inventa orçamento, preços, nomes, contatos ou capacidades do local; identifica informações ausentes e solicita confirmação das restrições técnicas adicionais.\"}]}"
+}
