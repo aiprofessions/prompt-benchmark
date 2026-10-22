@@ -8,6 +8,7 @@ authors:
     email: "nick@aiprofessions.ai"
 date-released: "2026-10-22"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.23577235"
 url: "https://aiprofessions.ai/methodology/"
 repository-code: "https://github.com/aiprofessions/prompt-benchmark"
 keywords: [llm, benchmark, prompts, evaluation, llm-as-a-judge, professions, claude, gpt, gemini]

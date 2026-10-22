@@ -1,5 +1,7 @@
 # Prompt benchmark: AI on real professional tasks
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23577235.svg)](https://doi.org/10.5281/zenodo.23577235)
+
 Open data behind the test results published on [AI Professions](https://aiprofessions.ai): **100 prompts** for real tasks in
 ten professions plus Excel / Microsoft 365, in four languages (34 EN, 22 ES, 22 FR, 22 PT), run on **5 models × 3 runs**
 and graded criterion by criterion: **1,500 runs, 7,500 verdicts**. Every transcript is here,
@@ -50,6 +52,10 @@ inputs. The judges are LLMs, checked by calibration and an AI editor spot-check,
 ## License and citation
 
 [CC BY 4.0](./LICENSE). Credit: **AI Professions (aiprofessions.ai)**. Citation metadata: [CITATION.cff](./CITATION.cff).
+
+> AI Professions (2026). *AI Professions prompt benchmark: profession prompts, hash-locked rubrics and graded LLM runs* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23577235
+
+Mirrors: [GitHub](https://github.com/aiprofessions/prompt-benchmark) · [Hugging Face](https://huggingface.co/datasets/aiprofessions/prompt-benchmark) · [Zenodo](https://doi.org/10.5281/zenodo.23577235).
 
 Related: [aiprofessions/claude-skills](https://github.com/aiprofessions/claude-skills) — 10 tested Claude Skills in 4 languages.
 Corrections: open an issue or write to nick@aiprofessions.ai.
